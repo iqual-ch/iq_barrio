@@ -1,0 +1,137 @@
+/**
+ * @file
+ * Subtheme specific CSS.
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body {
+  font-family: Open Sans;
+}
+
+.navbar {
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar>.c.navbar-dark .navbar-nav .nav-linkontainer,
+.navbar>.container-fluid {
+  display: block;
+}
+
+#navbar-top {
+  background: rgba(0, 0, 0, 0.02);
+  color: rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
+  max-height: 40px;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+#CollapsingNavbar {
+  background-color: rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -4px 0px 0px rgba(0, 0, 0, 0.03);
+  -webkit-box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -4px 0px 0px rgba(0, 0, 0, 0.03);
+  -moz-box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -4px 0px 0px rgba(0, 0, 0, 0.03);
+  box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -4px 0px 0px rgba(0, 0, 0, 0.03);
+}
+
+.region-header {
+  margin: 10px 0 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 0;
+  border-bottom: 1px solid #ae936a;
+  padding-bottom: 10px;
+  margin: 20px 0 30px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin: 20px 0 10px;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 20px 0 10px;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+h5 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.dropdown-toggle+.dropdown-menu {
+  margin-top: 0;
+  border-radius: 0;
+  background: #fff !important;
+  .dropdown-item {
+    background: #fff !important;
+  }
+}
+
+.dropdown-toggle:hover+.dropdown-menu,
+.dropdown-toggle+.dropdown-menu:hover {
+  @media only screen and (min-width: 992px) {
+    display: block;
+  }
+}
+
+.dropdown-toggle.active+.dropdown-menu {
+  @media only screen and (max-width: 991px) {
+    display: block;
+  }
+}
+
+.navbar-dark .navbar-toggler {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+.main-content,
+.region-content {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.breadcrumb {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+  background-color: transparent;
+  border-radius: 0;
+  justify-content: flex-end;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+  @media only screen and (max-width: 768px) {
+    justify-content: flex-start;
+    padding: 0;
+  }
+}

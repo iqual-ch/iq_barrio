@@ -1,0 +1,138 @@
+/* ---------- Color Module Styles ----------- */
+
+@import "definitions";
+body {
+  color: #3b3b3b;
+  background: #292929;
+}
+
+#page,
+#main-wrapper,
+.region-primary-menu .menu-item a.is-active,
+.region-primary-menu .menu-item--active-trail a {
+  background: #fff;
+}
+
+.tabs ul.primary li a.is-active {
+  background-color: #fff;
+}
+
+.tabs ul.primary li.is-active a {
+  background-color: #fff;
+  border-bottom-color: #fff;
+}
+
+#navbar-top {
+  background-color: #fff;
+}
+
+#navbar-main {
+  background-color: #fff;
+}
+
+a,
+.link,
+a:active,
+.link:active,
+a:focus,
+.link:focus,
+a:visited,
+.link:visited {
+  color: $color-text-links;
+}
+
+a:hover,
+a:focus,
+.link:hover,
+.link:focus {
+  color: $color-text-links;
+}
+
+a:active,
+.link:active {
+  color: $color-text-links;
+}
+
+.page-item.active .page-link {
+  background-color: #0071b3;
+  border-color: #0071b3;
+}
+
+.page-link,
+.page-link:hover {
+  color: #0071b3;
+}
+
+.sidebar .block {
+  background-color: #f6f6f2;
+  border-color: #f9f9f9;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #ae936a;
+  border-color: #ae936a;
+  box-shadow: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active {
+  color: #fff;
+  background-color: #ae936a;
+  border-color: #ae936a;
+  box-shadow: none !important;
+}
+
+.form-control {
+  box-shadow: none !important;
+  color: #3b3b3b !important;
+  border-radius: 0 !important;
+  border-color: #3b3b3b !important;
+}
+
+.site-footer {
+  background: #292929;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #000;
+}
+
+.region-header,
+.region-header a,
+.region-header li a.is-active,
+.region-header .site-branding__text,
+.region-header .site-branding,
+.region-header .site-branding__text a,
+.region-header .site-branding a,
+.region-secondary-menu .menu-item a,
+.region-secondary-menu .menu-item a.is-active {
+  color: #3b3b3b;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show>.nav-link {
+  color: #3b3b3b;
+}
+
+/* ---------- Color Form ----------- */
+
+[dir="rtl"] .color-form .color-palette {
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+[dir="rtl"] .color-form .form-item label {
+  float: right;
+}
+
+[dir="rtl"] .color-form .color-palette .lock {
+  right: -20px;
+  left: 0;
+}

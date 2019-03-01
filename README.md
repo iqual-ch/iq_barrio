@@ -1,1 +1,1 @@
-# iq_barrio
+# iqual barrio subtheme

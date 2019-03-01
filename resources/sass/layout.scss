@@ -1,0 +1,40 @@
+.pd-content .row {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu--main {
+  width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  .navbar-nav>.nav-item {
+    @media only screen and (max-width: 768px) {
+      padding-left: 15px;
+    }
+  }
+}
+
+.region-content .pd-content>.row:nth-child(n+2) {
+  margin-top: 50px;
+  @media only screen and (max-width: 991px) {
+    margin-top: 30px;
+  }
+  @media only screen and (max-width: 768px) {
+    margin-top: 10px;
+  }
+}
+
+.site-footer .block {
+  border: none !important;
+  padding: 0 !important;
+}
+
+.pd-content fieldset {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btn-primary {
+  border-radius: 0;
+}
