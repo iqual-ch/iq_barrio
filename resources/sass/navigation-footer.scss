@@ -1,0 +1,19 @@
+/* Footer navigation */
+@import "definitions";
+.menu--footer {
+	ul.menu {
+    	margin:0;
+	}
+	a{
+		color: $color-text-elements;
+	}
+	.menu-item {
+    	font-size:$font-size-small;
+    	list-style: none;
+    	margin-right: 10px;
+    	display: inline-block;
+    	a.is-active {
+ 	   		color: $color-text-elements;
+		}
+	}
+}

@@ -1,0 +1,135 @@
+/* Basic settings (Base theme) */
+
+@import "definitions";
+.layout-container {
+  margin: 0;
+}
+
+body {
+  background: $color-background-page;
+}
+
+body.adminimal {
+  background-color: $color-background-page;
+  font-family: $font-family-content;
+  font-size: $font-size-base;
+  color: $color-text-content;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.adminimal.toolbar-tray-open.toolbar-fixed.toolbar-horizontal {
+  padding-top: 79px !important;
+}
+
+@media only screen and (max-width:991px) {
+  #toolbar-administration {
+    display: none;
+  }
+  .adminimal.toolbar-fixed.toolbar-vertical {
+    padding-top: 0px !important;
+  }
+  body.toolbar-tray-open.toolbar-vertical.toolbar-fixed {
+    margin-left: 0px;
+  }
+}
+
+.adminimal {
+  .content-header {
+    background: transparent;
+    padding: 0;
+    overflow: visible;
+  }
+  .button {
+    background-color: $color-background-elements;
+    color: $color-text-elements;
+    font-size: $font-size-base;
+    border-color: $color-border-elements;
+    &:hover {
+      background-color: $color-background-elements-hover;
+      color: $color-text-elements-hover;
+    }
+    &:active {
+      background-color: $color-background-elements-active;
+      color: $color-text-elements-active;
+    }
+  }
+  .toolbar-tray-open.toolbar-fixed.toolbar-horizontal {
+    padding-top: 79px !important;
+  }
+}
+
+.ui-state-active {
+  background: transparent;
+  border: none;
+  color: inherit;
+}
+
+.page-content {
+  margin-bottom: 0;
+}
+
+.iqbm-column {
+  min-height: 1px;
+}
+
+.iqbm-column img {
+  max-width: 100%;
+  height: auto;
+}
+
+.block-iq-block-module>.container-fluid,
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.iqpt-page-content.layout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row-fluid {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+}
+
+.page-content {
+  padding: 0 0 $padding-base*2;
+}
+
+@media only screen and (max-width:1240px) {
+  .page-content {
+    margin: 0 15px;
+    padding: $padding-base 0 $padding-base;
+  }
+}
+
+.iqbm-image a[href=\#] {
+  pointer-events: none;
+}
+
+.iqbm-image>a {
+  display: block;
+  text-align: center;
+}
+
+/* Helpers (Base theme) */
+
+.iqbm-alternate-hide {
+  display: none !important;
+}
+
+.pager li>a,
+.pager li>span {
+  border: none;
+  border-radius: 0;
+}
+
+.sitemap-message h1,
+.sitemap-message h2,
+.sitemap-message h3,
+.sitemap-message h4 {
+  color: $color-text-titles;
+}

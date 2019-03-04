@@ -1,0 +1,39 @@
+@import 'definitions';
+/* Breadcrumb */
+.breadcrumb {
+    background: none;
+    text-align: center;
+    font-size: $font-size-base;
+    font-style: italic;
+    li {
+        a {
+            color:$color-text-content;
+        }
+        a:hover {
+            color:$color-text-links;
+        }
+        &:last-child a {
+            color:$color-text-links;
+        }
+        &:before {
+            content:"\f061";
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            color: $color-text-content;
+            font-size: 0.6em;
+            vertical-align: bottom;
+        }
+    }
+}
+
+.iqpt-landingpage {
+    .region-breadcrumb {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .breadcrumb {
+        margin-bottom:0;
+    }
+}

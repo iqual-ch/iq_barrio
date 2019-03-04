@@ -1,0 +1,41 @@
+@import 'definitions';
+
+footer {
+    color:$color-text-elements;
+    background: $color-background-page;
+    font-size: $font-size-h4;
+    padding: $padding-top-base 0 $padding-bottom-base;
+    .iqbm-text {
+         h4 {
+            color:$color-text-content;
+            font-size: $font-size-h4;
+        }
+        a{
+            color:$color-text-content;
+            &:visited{
+                color:#dbdbdb;
+            }
+        }
+        ul {
+            margin: 0;
+            list-style: none;
+            padding: 0;
+            li:before {
+                content:"\f101";
+                font-family: "FontAwesome";
+                padding-right: 5px;
+                color:#00829d;
+            }
+        }
+    }
+    a{
+        color:$color-text-links;
+        &:visited{
+           color:$color-text-links;
+        }
+        &:hover {
+            color:$color-text-links;
+            text-decoration: none;
+        }
+    }
+}
