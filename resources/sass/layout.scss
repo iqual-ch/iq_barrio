@@ -15,10 +15,10 @@
   }
 }
 
-.region-content .pd-content>.row:nth-child(n+2) {
-  margin-top: 50px;
+.region-content .pd-content>.row {
+  margin-top: 30px;
   @media only screen and (max-width: 991px) {
-    margin-top: 30px;
+    margin-top: 20px;
   }
   @media only screen and (max-width: 768px) {
     margin-top: 10px;
