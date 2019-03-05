@@ -1,0 +1,16 @@
+{
+  "name": "iqual/iq_barrio",
+  "description": "Generic barrio sub theme for iqual websites.",
+  "type": "drupal-module",
+  "keywords": [
+    "Drupal"
+  ],
+  "homepage": "https://github.com/iqual-ch/iq_barrio",
+  "support": {
+    "issues": "https://github.com/iqual-ch/iq_barrio/issues",
+    "source": "https://github.com/iqual-ch/iq_barrio"
+  },
+  "require": {
+    "drupal/bootstrap_barrio": "*"
+  }
+}
