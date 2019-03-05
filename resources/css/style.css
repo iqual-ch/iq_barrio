@@ -1,0 +1,199 @@
+/**
+ * @file
+ * Subtheme specific CSS.
+ */
+/*************** BASE DEFINITIONS ***************/
+/*************** COLOR DEFINITIONS ***************/
+/* Simple grey scale */
+/* Base colors */
+/* Content text colors */
+/* Elements colors normal state (e.g. button) */
+/* Elements colors hover state (e.g. button) */
+/* Elements colors active state (e.g. button) */
+/*************** FONT DEFINITIONS ***************/
+/* Font families */
+/* Font Sizes */
+/*************** MARGIN DEFINITIONS ***************/
+/* Template paddings */
+/* Title margins */
+/*************** BORDER DEFINITIONS ***************/
+/*************** OTHER DEFINITIONS ***************/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+/* line 9, ../sass/style.scss */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* line 14, ../sass/style.scss */
+h1 {
+  font-size: 48.82813px;
+  margin-top: 0px;
+  margin-bottom: 12.5px;
+}
+
+/* line 20, ../sass/style.scss */
+h2 {
+  font-size: 39.0625px;
+  margin-top: 0px;
+  margin-bottom: 12.5px;
+  line-height: 1.1;
+}
+
+/* line 27, ../sass/style.scss */
+h3 {
+  font-size: 31.25px;
+  margin-top: 0px;
+  margin-bottom: 12.5px;
+}
+
+/* line 33, ../sass/style.scss */
+h4 {
+  font-size: 25px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+/* line 39, ../sass/style.scss */
+h5 {
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+/* line 45, ../sass/style.scss */
+h6 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+/* line 52, ../sass/style.scss */
+p {
+  color: #004279;
+}
+
+/* line 56, ../sass/style.scss */
+#navbar-main {
+  max-height: none;
+  padding: .5rem 0rem;
+}
+
+/* line 61, ../sass/style.scss */
+#navbar-main .row {
+  max-width: none;
+}
+
+/* line 65, ../sass/style.scss */
+#navbar-main .col {
+  padding: 0;
+}
+
+/* line 70, ../sass/style.scss */
+.navbar {
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 76, ../sass/style.scss */
+.navbar > .c.navbar-dark .navbar-nav .nav-linkontainer,
+.navbar > .container-fluid {
+  display: block;
+}
+
+/* line 81, ../sass/style.scss */
+#navbar-top {
+  background: #fff;
+  color: #004279;
+  max-height: 40px;
+}
+@media only screen and (max-width: 768px) {
+  /* line 81, ../sass/style.scss */
+  #navbar-top {
+    display: none;
+  }
+}
+
+/* line 93, ../sass/style.scss */
+#CollapsingNavbar {
+  background-color: rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -4px 0px 0px rgba(0, 0, 0, 0.03);
+  -webkit-box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -4px 0px 0px rgba(0, 0, 0, 0.03);
+  -moz-box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -4px 0px 0px rgba(0, 0, 0, 0.03);
+  box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -4px 0px 0px rgba(0, 0, 0, 0.03);
+}
+
+/* line 101, ../sass/style.scss */
+.region-header {
+  margin: 10px 0 20px;
+}
+
+/* line 106, ../sass/style.scss */
+.dropdown-toggle + .dropdown-menu {
+  margin-top: 0;
+  border-radius: 0;
+  background: #fff !important;
+}
+/* line 110, ../sass/style.scss */
+.dropdown-toggle + .dropdown-menu .dropdown-item {
+  background: #fff !important;
+}
+
+@media only screen and (min-width: 992px) {
+  /* line 115, ../sass/style.scss */
+  .dropdown-toggle:hover + .dropdown-menu,
+  .dropdown-toggle + .dropdown-menu:hover {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  /* line 122, ../sass/style.scss */
+  .dropdown-toggle.active + .dropdown-menu {
+    display: block;
+  }
+}
+
+/* line 128, ../sass/style.scss */
+.navbar-dark .navbar-toggler {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* line 134, ../sass/style.scss */
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+/* line 138, ../sass/style.scss */
+.main-content,
+.region-content {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 144, ../sass/style.scss */
+.breadcrumb {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+  background-color: transparent;
+  border-radius: 0;
+  justify-content: flex-end;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media only screen and (max-width: 768px) {
+  /* line 144, ../sass/style.scss */
+  .breadcrumb {
+    justify-content: flex-start;
+    padding: 0;
+  }
+}

@@ -1,0 +1,232 @@
+/* Main navigation (navigation.sass)  */
+/*************** BASE DEFINITIONS ***************/
+/*************** COLOR DEFINITIONS ***************/
+/* Simple grey scale */
+/* Base colors */
+/* Content text colors */
+/* Elements colors normal state (e.g. button) */
+/* Elements colors hover state (e.g. button) */
+/* Elements colors active state (e.g. button) */
+/*************** FONT DEFINITIONS ***************/
+/* Font families */
+/* Font Sizes */
+/*************** MARGIN DEFINITIONS ***************/
+/* Template paddings */
+/* Title margins */
+/*************** BORDER DEFINITIONS ***************/
+/*************** OTHER DEFINITIONS ***************/
+/* line 6, ../sass/navigation.scss */
+.region-header .menu--main ul.menu {
+  clear: both;
+  margin-left: 0;
+}
+/* line 10, ../sass/navigation.scss */
+.region-header .menu--main .menu-item {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+  margin-right: 5%;
+  word-wrap: break-word;
+  position: relative;
+  color: #004279;
+}
+/* line 19, ../sass/navigation.scss */
+.region-header .menu--main .menu-item a {
+  color: #004279;
+  text-decoration: none;
+}
+/* line 23, ../sass/navigation.scss */
+.region-header .menu--main .menu-item:hover {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: normal;
+  list-style: none;
+  margin-right: 5%;
+  word-wrap: break-word;
+  position: relative;
+}
+/* line 31, ../sass/navigation.scss */
+.region-header .menu--main .menu-item:hover > a {
+  color: #004279;
+  text-decoration: none;
+}
+/* line 36, ../sass/navigation.scss */
+.region-header .menu--main .menu-item a.is-active {
+  color: #004279;
+}
+/* line 39, ../sass/navigation.scss */
+.region-header .menu--main .menu-item .menu {
+  position: absolute;
+  left: 0;
+  background: #fff;
+  padding: 20px;
+  min-width: 260px;
+  display: none;
+  z-index: 999;
+}
+
+/* line 51, ../sass/navigation.scss */
+.region-header .menu--main .menu-item:hover .menu, .region-header .menu--main .menu-item .menu:hover {
+  display: block;
+}
+
+/* line 55, ../sass/navigation.scss */
+.region-header .menu--main .menu-item .menu .menu-item {
+  float: none;
+  width: 100%;
+  text-align: left;
+  margin-top: 10px;
+}
+
+/* Mobile navigation (navigation.sass) */
+@media only screen and (max-width: 991px) {
+  /* line 64, ../sass/navigation.scss */
+  .responsive-navigation-list.row-fluid {
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: none;
+    min-height: 400px;
+    max-width: 40%;
+    z-index: 999;
+    min-width: 250px;
+  }
+
+  /* line 74, ../sass/navigation.scss */
+  .responsive-navigation-list.show-nav {
+    display: block;
+  }
+
+  /* line 78, ../sass/navigation.scss */
+  .region-header .menu--main ul.menu {
+    display: block;
+    float: none;
+  }
+  /* line 82, ../sass/navigation.scss */
+  .region-header .menu--main .menu-item {
+    display: block;
+    float: none;
+    text-align: left;
+    margin-left: 0px;
+    text-transform: uppercase;
+  }
+  /* line 88, ../sass/navigation.scss */
+  .region-header .menu--main .menu-item:hover {
+    float: left;
+    list-style: none;
+    margin-right: 5%;
+    word-wrap: break-word;
+    position: static;
+    display: block;
+    float: none;
+    text-align: left;
+    margin-left: 0px;
+  }
+
+  /* line 101, ../sass/navigation.scss */
+  .region-header .menu--main > .menu > .menu-item.menu-item--collapsed > a:after,
+  .region-header .menu--main > .menu > .menu-item.menu-item--expanded > a:after {
+    content: none;
+  }
+
+  /* line 106, ../sass/navigation.scss */
+  .region-header .menu--main .menu-item:hover .menu, .region-header .menu--main .menu-item .menu:hover {
+    display: none;
+  }
+
+  /* line 110, ../sass/navigation.scss */
+  .region-header .menu--main .menu-item.menu-item--active-trail .menu {
+    display: block;
+    position: static;
+    left: auto;
+    background: transparent;
+    padding: 0px 0 10px 20px;
+    min-width: 0;
+    z-index: 0;
+  }
+
+  /* line 120, ../sass/navigation.scss */
+  .region-header .menu--main .menu-item .menu .menu-item {
+    margin: 0;
+  }
+
+  /* line 124, ../sass/navigation.scss */
+  .region-header .menu--main .menu-item .menu-item {
+    font-weight: normal;
+    font-size: 20px;
+    margin: 50px 0;
+  }
+
+  /* line 130, ../sass/navigation.scss */
+  .region-header .menu--main .menu-item a {
+    color: #004279;
+  }
+}
+/* Sidebar navigation (navigation.sass) */
+/* line 137, ../sass/navigation.scss */
+.region-sidebar-left .block-page-title-block .page-title {
+  color: #004279;
+  font-size: 25px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+/* line 142, ../sass/navigation.scss */
+.region-sidebar-left .block-page-title-block .page-title span {
+  padding: 10px 0 10px 2px;
+}
+/* line 145, ../sass/navigation.scss */
+.region-sidebar-left .block-page-title-block .page-title:after {
+  content: '';
+  border-bottom: 1px solid black;
+  display: block;
+  width: 80px;
+  margin-top: 6px;
+}
+
+/* line 154, ../sass/navigation.scss */
+.region-sidebar-left .menu--main ul.menu {
+  float: none;
+  display: block;
+  margin: 0;
+}
+/* line 158, ../sass/navigation.scss */
+.region-sidebar-left .menu--main ul.menu ul.menu {
+  padding-left: 30px;
+}
+
+/* line 163, ../sass/navigation.scss */
+.region-sidebar-left .menu--main .menu-item {
+  float: none;
+  margin-left: 0;
+  text-align: left;
+  font-size: 16px;
+  width: auto;
+  text-transform: initial;
+}
+/* line 170, ../sass/navigation.scss */
+.region-sidebar-left .menu--main .menu-item .menu-item {
+  display: none;
+}
+/* line 173, ../sass/navigation.scss */
+.region-sidebar-left .menu--main .menu-item a {
+  color: #004279;
+  padding: 10px 0 10px 2px;
+  display: block;
+  text-decoration: none;
+}
+/* line 178, ../sass/navigation.scss */
+.region-sidebar-left .menu--main .menu-item a:hover, .region-sidebar-left .menu--main .menu-item a.is-active {
+  color: #004279;
+}
+
+/* line 184, ../sass/navigation.scss */
+.region-sidebar-left .menu--main .menu-item .menu-item.menu-item--active-trail,
+.region-sidebar-left .menu--main .menu-item.menu-item--active-trail > .menu > .menu-item {
+  display: block;
+}
+
+/* line 189, ../sass/navigation.scss */
+.menu--main .menu-item, .menu--main .menu-item:hover {
+  list-style: none;
+}

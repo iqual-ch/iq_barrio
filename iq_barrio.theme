@@ -1,45 +1,270 @@
 <?php
-
-/**
- * @file
- * Functions to support theming in the SASS Starterkit subtheme.
- */
-
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\taxonomy\Entity\Term;
 
 /**
- * Implements hook_form_system_theme_settings_alter() for settings form.
- *
- * Replace Barrio setting options with subtheme ones.
- *
- * Example on how to alter theme settings form
- *
+ *  Implements hook_theme().
  */
-function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
-  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = array(
-      'bg-primary' => t('Primary'),
-      'bg-secondary' => t('Secondary'),
-      'bg-light' => t('Light'),
-      'bg-dark' => t('Dark'),
-      'bg-white' => t('White'),
-      'bg-transparent' => t('Transparent'),
-  );
-  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = array(
-      'bg-primary' => t('Primary'),
-      'bg-secondary' => t('Secondary'),
-      'bg-light' => t('Light'),
-      'bg-dark' => t('Dark'),
-      'bg-white' => t('White'),
-      'bg-transparent' => t('Transparent'),
-  );
-
-  $form['fonts']['icons']['bootstrap_barrio_icons']['#options']['fontawesome_5'] = 'Font Awesome 5';
+function iq_barrio_theme($existing, $type, $theme, $path)
+{
+    return array();
 }
 
-function iq_barrio_preprocess_page(&$variables)
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function iq_barrio_theme_suggestions_page_alter(array &$suggestions, array $variables)
 {
-  $icons = theme_get_setting('bootstrap_barrio_icons');
-  if ($icons) {
-    $variables['#attached']['library'][] = ( $icons == 'fontawesome_5' ? 'iq_barrio' : 'bootstrap_barrio' ) . '/' . $icons;
-  }
+//    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+//        $vid = \Drupal::routeMatch()->getParameter('node_revision');
+//        if (is_numeric($node)) {
+//            $node = \Drupal::entityTypeManager()
+//                ->getStorage('node')
+//                ->loadRevision($vid);
+//        }
+//        if (!is_numeric($vid) && $node->access('update', \Drupal::currentUser())) {
+//            $node = \Drupal::service('iq_block_module.node_collector')->getLatestRevision($node->id(), $node->language()->getId(), true);
+//        }
+//        $baseTypes = \Drupal::configFactory()->get('pagebuilder.settings')->get('contentTypes');
+//        if (in_array($node->getType(), $baseTypes) && $node->hasField('field_template')) {
+//            $template = $node->field_template->value;
+//            $term = Term::load($node->field_template->target_id);
+//            if ($term != null) {
+//                $suggestions[] = 'page__' . $term->field_template->value;
+//            }
+//        }
+//    }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+
+function iq_barrio_form_user_login_form_alter(&$form, FormStateInterface $form_state, $form_id)
+{
+    // Alter login form and add own custom submit handler.
+    $form['#submit'][] = '_iq_barrio_user_login_form_submit';
+}
+
+/**
+ * Custom submit handler for login form.
+ */
+function _iq_barrio_user_login_form_submit($form, FormStateInterface $form_state)
+{
+    $form_state->setRedirect('<front>');
+}
+
+/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $form_state, $form_id = null)
+{
+
+    $arr_fonts = array('Normal Fonts' => array(
+        'Arial' => t('Arial'),
+        'Courier New' => t('Courier New'),
+        'Helvetica' => t('Helvetica'),
+        'Times New Roman' => t('Times New Roman'),
+        'Verdana' => t('Verdana'),
+        '\'Open Sans\', sans-serif' => t('Open Sans, sans-serif'),
+    ),
+    );
+
+    $moduleHandler = \Drupal::service('module_handler');
+
+    if ($moduleHandler->moduleExists('fontyourface')) {
+        $fonts = \Drupal\fontyourface\Entity\Font::loadActivatedFonts();
+
+        if (!empty($fonts)) {
+
+            foreach ($fonts as $font) {
+                //Get "regular" fonts only
+                if ($font->css_style->value == 'normal' && $font->css_weight->value == 'normal') {
+                    $fontname = $font->name->value;
+                    $arr_google_fonts[$fontname] = $fontname;
+                }
+            }
+            $arr_fonts['Google Fonts'] = $arr_google_fonts;
+        }
+    }
+
+    $form['iq_theme'] = [
+        '#type' => 'details',
+        '#title' => t('Custom Theme Settings'),
+        '#open' => true,
+    ];
+
+    $form['iq_theme']['radius'] = [
+        '#type' => 'textfield',
+        '#title' => t('Base Border Redius'),
+        '#default_value' => theme_get_setting('radius') ? theme_get_setting('radius') : '1',
+        '#description' => t("Enter border radius in pixels e.g. 1, 1.5, 2 etc."),
+    ];
+
+    $form['iq_theme']['darkset_color'] = [
+        '#type' => 'color',
+        '#title' => t('Select Darkset Color'),
+        '#default_value' => theme_get_setting('darkset_color') ? theme_get_setting('darkset_color') : '540505',
+    ];
+
+    $form['iq_theme']['bg_page_color'] = [
+        '#type' => 'color',
+        '#title' => t('Background Page Color'),
+        '#default_value' => theme_get_setting('bg_page_color') ? theme_get_setting('bg_page_color') : '756f75',
+    ];
+
+    $form['iq_theme']['text_link_color'] = [
+        '#type' => 'color',
+        '#title' => t('Text Link Color'),
+        '#default_value' => theme_get_setting('text_link_color') ? theme_get_setting('text_link_color') : 'ffffff',
+    ];
+
+    $form['iq_theme']['text_icon_color'] = [
+        '#type' => 'color',
+        '#title' => t('Text Icon Color'),
+        '#default_value' => theme_get_setting('text_icon_color') ? theme_get_setting('text_icon_color') : 'ffffff',
+    ];
+
+    $form['iq_theme']['text_element_color'] = [
+        '#type' => 'color',
+        '#title' => t('Text Element Color'),
+        '#default_value' => theme_get_setting('text_element_color') ? theme_get_setting('text_element_color') : 'ffffff',
+    ];
+
+    $form['iq_theme']['bg_element_color'] = [
+        '#type' => 'color',
+        '#title' => t('Elements Background Color'),
+        '#default_value' => theme_get_setting('bg_element_color') ? theme_get_setting('bg_element_color') : 'ffffff',
+    ];
+
+    $form['iq_theme']['elements_border_color'] = [
+        '#type' => 'color',
+        '#title' => t('Elements Border Color'),
+        '#default_value' => theme_get_setting('elements_border_color') ? theme_get_setting('elements_border_color') : 'ffffff',
+    ];
+
+    $form['iq_theme']['text_element_hover'] = [
+        '#type' => 'color',
+        '#title' => t('Text Elements Hover Color'),
+        '#default_value' => theme_get_setting('text_element_hover') ? theme_get_setting('text_element_hover') : 'ffffff',
+    ];
+
+    $form['iq_theme']['elements_bg_hover'] = [
+        '#type' => 'color',
+        '#title' => t('Elements Background Color On Hover'),
+        '#default_value' => theme_get_setting('elements_bg_hover') ? theme_get_setting('elements_bg_hover') : 'ffffff',
+    ];
+
+    $form['iq_theme']['border_color_hover'] = [
+        '#type' => 'color',
+        '#title' => t('Elements Border Color On Hover'),
+        '#default_value' => theme_get_setting('border_color_hover') ? theme_get_setting('border_color_hover') : 'ffffff',
+    ];
+
+    $form['iq_theme']['colorChooseText'] = [
+        '#type' => 'color',
+        '#title' => t('Content Text Color'),
+        '#default_value' => theme_get_setting('colorChooseText') ? theme_get_setting('colorChooseText') : 'ffffff',
+    ];
+
+    $form['iq_theme']['colorChooseTitle'] = [
+        '#type' => 'color',
+        '#title' => t('Title Color'),
+        '#default_value' => theme_get_setting('colorChooseTitle') ? theme_get_setting('colorChooseTitle') : 'ffffff',
+    ];
+
+    $form['iq_theme']['content_font'] = [
+        '#type' => 'select',
+        '#title' => ('Select Content Font'),
+        '#options' => $arr_fonts,
+        '#required' => true,
+        '#default_value' => theme_get_setting('content_font') ? theme_get_setting('content_font') : '',
+    ];
+
+    $form['iq_theme']['title_font'] = [
+        '#type' => 'select',
+        '#title' => ('Select Title Font'),
+        '#options' => $arr_fonts,
+        '#required' => true,
+        '#default_value' => theme_get_setting('title_font') ? theme_get_setting('title_font') : '',
+    ];
+
+    $form['iq_theme']['base_font_size'] = [
+        '#type' => 'textfield',
+        '#title' => t('Base Font Size'),
+        '#required' => true,
+        '#default_value' => theme_get_setting('base_font_size') ? theme_get_setting('base_font_size') : '',
+    ];
+
+    $form['iq_theme']['base_margin'] = [
+        '#type' => 'textfield',
+        '#title' => t('Base Margin'),
+        '#required' => true,
+        '#default_value' => theme_get_setting('base_margin') ? theme_get_setting('base_margin') : '',
+    ];
+
+    $form['iq_theme']['base_top_padding'] = [
+        '#type' => 'textfield',
+        '#title' => t('Base Top Padding'),
+        '#required' => true,
+        '#default_value' => theme_get_setting('base_top_padding') ? theme_get_setting('base_top_padding') : '',
+    ];
+
+    $form['iq_theme']['base_border_width'] = [
+        '#type' => 'textfield',
+        '#title' => t('Base Border Width'),
+        '#required' => true,
+        '#default_value' => theme_get_setting('base_border_width') ? theme_get_setting('base_border_width') : '',
+    ];
+
+    $form['#submit'][] = 'iq_barrio_form_system_theme_settings_submit';
+
+}
+
+/**
+ * Implements hook_form_system_theme_settings_submit().
+ */
+function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &$form_state)
+{
+    $title_font = $form_state->getValue('title_font');
+    $content_font = $form_state->getValue('content_font');
+
+    if (strpos(strtolower($form_state->getValue('title_font')), 'regular')) {
+        $title_font = trim(strstr($form_state->getValue('title_font'), 'regular', true));
+    }
+
+    if (strpos(strtolower($form_state->getValue('content_font')), 'regular')) {
+        $content_font = trim(strstr($form_state->getValue('content_font'), 'regular', true));
+    }
+
+    $arrKeywords = ['color-darkest' =>  $form_state->getValue('darkset_color'),
+        'color-background-page' =>  $form_state->getValue('bg_page_color'),
+        'color-text-titles' =>  $form_state->getValue('colorChooseTitle'),
+        'color-text-content' =>  $form_state->getValue('colorChooseText'),
+        'color-text-links' =>  $form_state->getValue('text_link_color'),
+        'color-text-icons' =>  $form_state->getValue('text_icon_color'),
+        'color-text-elements' =>  $form_state->getValue('text_element_color'),
+        'color-background-elements' =>  $form_state->getValue('bg_element_color'),
+        'color-border-elements' =>  $form_state->getValue('elements_border_color'),
+        'color-text-elements-hover' =>  $form_state->getValue('text_element_hover'),
+        'color-background-elements-hover' =>  $form_state->getValue('elements_bg_hover'),
+        'color-border-elements-hover' =>  $form_state->getValue('border_color_hover'),
+        'border-radius-base' => " " . $form_state->getValue('radius') . "%",
+        'font-family-content' => $content_font,
+        'font-family-titles' => $title_font,
+        'font-size-base' => " " . $form_state->getValue('base_font_size') . "px",
+        'margin-base' => " " . $form_state->getValue('base_margin') . "px",
+        'padding-top-base' => " " . $form_state->getValue('base_top_padding') . "px",
+        'border-width-base' => " " . $form_state->getValue('base_border_width') . "px",
+    ];
+    $filename = __DIR__ . "/resources/sass/_definitions.scss";
+
+    // $service = \Drupal::service('iq_barrio.update_theme');
+    // $service->set_pattern_theme($arrKeywords,$filename);
+
+    $service = new \Drupal\iq_barrio\Service\ThemeServices();
+    $service->set_pattern_theme($arrKeywords, $filename);
+
+    //Call hook
+    \Drupal::moduleHandler()->invokeAll('iq_theme_settings', array($arrKeywords, $service));
 }

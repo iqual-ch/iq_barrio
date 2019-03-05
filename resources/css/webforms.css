@@ -1,0 +1,239 @@
+/* Forms (definitions for webform -> webforms.sass) */
+/*************** BASE DEFINITIONS ***************/
+/*************** COLOR DEFINITIONS ***************/
+/* Simple grey scale */
+/* Base colors */
+/* Content text colors */
+/* Elements colors normal state (e.g. button) */
+/* Elements colors hover state (e.g. button) */
+/* Elements colors active state (e.g. button) */
+/*************** FONT DEFINITIONS ***************/
+/* Font families */
+/* Font Sizes */
+/*************** MARGIN DEFINITIONS ***************/
+/* Template paddings */
+/* Title margins */
+/*************** BORDER DEFINITIONS ***************/
+/*************** OTHER DEFINITIONS ***************/
+/* line 5, ../sass/webforms.scss */
+.page-content input {
+  border: 1px solid #004279;
+  color: #004279;
+  background: transparent;
+  height: 35px;
+  padding: 5px 20px;
+  max-width: 100%;
+}
+/* line 13, ../sass/webforms.scss */
+.page-content select {
+  border: 1px solid #004279;
+  color: #004279;
+  height: 35px;
+  padding: 5px 20px;
+  max-width: 100%;
+  background: transparent !important;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+}
+/* line 23, ../sass/webforms.scss */
+.page-content select::-ms-expand {
+  display: none;
+}
+/* line 27, ../sass/webforms.scss */
+.page-content textarea {
+  border: 1px solid #004279;
+  color: #004279;
+  background: transparent;
+  height: auto;
+  padding: 5px 20px;
+  max-width: 100%;
+}
+/* line 35, ../sass/webforms.scss */
+.page-content select[multiple] {
+  height: auto;
+}
+/* line 38, ../sass/webforms.scss */
+.page-content .form-type-select {
+  position: relative;
+}
+/* line 41, ../sass/webforms.scss */
+.page-content .form-type-select::after {
+  content: "\f078";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  color: #004279;
+  font-size: 16px;
+  position: absolute;
+  right: 9px;
+  top: 45%;
+  pointer-events: none;
+}
+/* line 54, ../sass/webforms.scss */
+.page-content .form-type-radio input,
+.page-content .form-radios input,
+.page-content .form-type-checkbox input {
+  padding: 0;
+  width: auto;
+  margin-right: 15px;
+  height: auto;
+}
+/* line 62, ../sass/webforms.scss */
+.page-content .form-type-radio input:checked,
+.page-content .form-radios input:checked {
+  background: #004279;
+}
+/* line 66, ../sass/webforms.scss */
+.page-content .form-type-checkbox input:checked {
+  background: #fff;
+}
+/* line 68, ../sass/webforms.scss */
+.page-content .form-type-checkbox input:checked::after {
+  content: "\f00c";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #004279;
+  font-size: 16px;
+  position: absolute;
+  left: 1px;
+  line-height: 17.6px;
+}
+/* line 81, ../sass/webforms.scss */
+.page-content .form-actions input,
+.page-content .form-actions input:hover {
+  color: #fff;
+  border: 1px solid #004279;
+  max-width: 30%;
+  min-width: 120px;
+  background-color: #004279;
+}
+/* line 89, ../sass/webforms.scss */
+.page-content .form-actions input.webform-button--previous,
+.page-content .form-actions input.webform-button--previous:hover {
+  background: none;
+  color: #004279;
+  border: 1px solid #004279;
+}
+/* line 95, ../sass/webforms.scss */
+.page-content fieldset:not(.fieldgroup) {
+  background: #fff;
+  padding-left: 0px;
+}
+/* line 99, ../sass/webforms.scss */
+.page-content fieldset:not(.fieldgroup) > legend {
+  /* Fix for width of legend */
+  width: calc(100% - 36px);
+}
+/* line 103, ../sass/webforms.scss */
+.page-content .form-type-radio {
+  height: 45px;
+}
+/* line 105, ../sass/webforms.scss */
+.page-content .form-type-radio label:after {
+  content: '';
+  clear: both;
+}
+/* line 110, ../sass/webforms.scss */
+.page-content .form-item .description {
+  /*Fix for description style */
+  font-size: 16px;
+  color: #004279;
+}
+/* line 115, ../sass/webforms.scss */
+.page-content .form-type-checkbox,
+.page-content .page-content .form-type-radio {
+  /* Fix for to wide options */
+  white-space: normal;
+}
+/* line 120, ../sass/webforms.scss */
+.page-content .form-item label.option {
+  /* Fix for to wide labels */
+  white-space: initial;
+}
+/* line 124, ../sass/webforms.scss */
+.page-content .form-type-webform-likert {
+  margin: 20px 0 20px;
+}
+/* line 127, ../sass/webforms.scss */
+.page-content .webform-likert-table thead th {
+  color: #fff;
+  background-color: #004279;
+}
+/* line 131, ../sass/webforms.scss */
+.page-content .webform-likert-table tr {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #004279;
+}
+/* line 135, ../sass/webforms.scss */
+.page-content .webform-likert-table tr label {
+  font-size: 14px;
+}
+/* line 138, ../sass/webforms.scss */
+.page-content .progress-step .progress-marker,
+.page-content .progress-step:hover .progress-marker {
+  background-color: #999999;
+}
+/* line 142, ../sass/webforms.scss */
+.page-content .progress-step.is-complete .progress-marker,
+.page-content .progress-step.is-complete:hover .progress-marker {
+  background-color: #666666;
+}
+/* line 146, ../sass/webforms.scss */
+.page-content .progress-step.is-active .progress-marker,
+.page-content .progress-step.is-active:hover .progress-marker {
+  background-color: #004279;
+}
+/* line 150, ../sass/webforms.scss */
+.page-content .messages.messages--info {
+  color: #004279;
+  border-color: #004279;
+}
+/* line 154, ../sass/webforms.scss */
+.page-content .webform-likert-table thead th {
+  font-size: 13px;
+}
+/* line 157, ../sass/webforms.scss */
+.page-content .webform-submission-form label {
+  margin-bottom: 5px;
+}
+/* line 160, ../sass/webforms.scss */
+.page-content .captcha {
+  float: left;
+  margin-right: 0.5em;
+  margin-top: 1em;
+}
+/* line 165, ../sass/webforms.scss */
+.page-content .form--inline .form-item {
+  float: none;
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* line 172, ../sass/webforms.scss */
+.adminimal label {
+  padding: 0;
+}
+
+/* Make sorting options go to next line */
+/* line 178, ../sass/webforms.scss */
+.form-item-sort-by {
+  clear: both;
+}
+
+/* line 182, ../sass/webforms.scss */
+fieldset legend {
+  /* Fix for line if label is visually hidden */
+  border-bottom: none;
+}
+
+/* line 187, ../sass/webforms.scss */
+fieldset legend span {
+  /* Fix for line if label is visually hidden */
+  border-bottom: 1px solid #004279;
+  width: 100%;
+  display: inline-block;
+}

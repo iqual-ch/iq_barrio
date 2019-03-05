@@ -1,0 +1,12 @@
+/* line 1, ../sass/layout.scss */
+.site-footer .block {
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* line 6, ../sass/layout.scss */
+.pd-content .row {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}

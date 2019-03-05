@@ -5,10 +5,67 @@
 
 @import 'definitions';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 body {
-  font-family: Open Sans;
-  font-size: $font-size-base;
+   font-family: $font-family-content;
+   font-size: $font-size-base;
+ }
+
+h1 {
+  font-size: $font-size-h1;
+  margin-top: $margin-top-h1;
+  margin-bottom: $margin-bottom-h1
 }
+
+h2 {
+  font-size: $font-size-h2;
+  margin-top: $margin-top-h2;
+  margin-bottom: $margin-bottom-h2;
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: $font-size-h3;
+  margin-top: $margin-top-h3;
+  margin-bottom: $margin-bottom-h3;
+}
+
+h4 {
+  font-size: $font-size-h4;
+  margin-top: $margin-top-h4;
+  margin-bottom: $margin-bottom-h4;
+}
+
+h5 {
+  font-size: $font-size-h5;
+  margin-top: $margin-top-h5;
+  margin-bottom: $margin-bottom-h5;
+}
+
+h6 {
+  font-size: $font-size-h6;
+  font-weight: $font-weight-h6;
+  margin-top: $margin-top-h6;
+  margin-bottom: $margin-bottom-h6;
+ }
+
+ p {
+  color: $color-text-content;
+}
+
+ #navbar-main {
+  max-height: none;
+  padding: .5rem 0rem;
+}
+
+ #navbar-main .row {
+  max-width: none;
+}
+
+ #navbar-main .col {
+  padding: 0;
+}
+
 
 .navbar {
   display: block;
@@ -22,11 +79,11 @@ body {
 }
 
 #navbar-top {
-  background: rgba(0, 0, 0, 0.02);
-  color: rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
-  -webkit-box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
-  -moz-box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
+  background: $color-background-header;
+  color: $color-text-content;
+  // box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
+  // -webkit-box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
+  // -moz-box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
   max-height: 40px;
   @media only screen and (max-width: 768px) {
     display: none;
@@ -45,54 +102,6 @@ body {
   margin: 10px 0 20px;
 }
 
-h1 {
-  font-size: $font-size-h1;
-  font-weight: $font-weight-h1;
-  color: $color-text-titles;
-  margin: 0;
-  padding-bottom: 10px;
-  margin: 20px 0 30px;
-}
-
-h2 {
-  font-size: $font-size-h2;
-  font-weight: $font-weight-h2;
-  color: $color-text-titles;
-  margin: 20px 0 10px;
-}
-
-h3 {
-  font-size: $font-size-h3;
-  font-weight: $font-weight-h3;
-  color: $color-text-titles;
-  font-weight: 500;
-  margin: 20px 0 10px;
-}
-
-h4 {
-  font-size: $font-size-h4;
-  font-weight: $font-weight-h4;
-  color: $color-text-titles;
-  margin: 0;
-}
-
-h5 {
-  font-size: $font-size-h5;
-  font-weight: $font-weight-h5;
-  color: $color-text-titles;
-  margin: 0;
-}
-
-h6 {
-  font-size: $font-size-h6;
-  font-weight: $font-weight-h6;
-  color: $color-text-titles;
-  margin: 0;
-}
-
-p {
-  color: $color-text-content;
-}
 
 .dropdown-toggle+.dropdown-menu {
   margin-top: 0;

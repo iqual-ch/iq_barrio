@@ -1,0 +1,3 @@
+services:
+  pagedesigner_theme.update_theme:
+    class: Drupal\iq_barrio\Service\ThemeServices

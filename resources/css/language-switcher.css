@@ -1,0 +1,43 @@
+/*************** BASE DEFINITIONS ***************/
+/*************** COLOR DEFINITIONS ***************/
+/* Simple grey scale */
+/* Base colors */
+/* Content text colors */
+/* Elements colors normal state (e.g. button) */
+/* Elements colors hover state (e.g. button) */
+/* Elements colors active state (e.g. button) */
+/*************** FONT DEFINITIONS ***************/
+/* Font families */
+/* Font Sizes */
+/*************** MARGIN DEFINITIONS ***************/
+/* Template paddings */
+/* Title margins */
+/*************** BORDER DEFINITIONS ***************/
+/*************** OTHER DEFINITIONS ***************/
+/* Language Switcher (language-switcher.sass) */
+/* line 5, ../sass/language-switcher.scss */
+.block-language ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+/* line 11, ../sass/language-switcher.scss */
+.block-language li {
+  display: inline-block;
+  text-transform: uppercase;
+  max-width: 16px;
+  overflow: hidden;
+  margin-right: 10px;
+  padding-right: 0 !important;
+}
+/* line 18, ../sass/language-switcher.scss */
+.block-language li a {
+  color: #fff;
+  font-size: 12px;
+}
+/* line 22, ../sass/language-switcher.scss */
+.block-language li.is-active a {
+  font-weight: 700;
+  color: #fff;
+}

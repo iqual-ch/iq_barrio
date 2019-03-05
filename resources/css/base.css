@@ -1,0 +1,172 @@
+/* Basic settings (Base theme) */
+/*************** BASE DEFINITIONS ***************/
+/*************** COLOR DEFINITIONS ***************/
+/* Simple grey scale */
+/* Base colors */
+/* Content text colors */
+/* Elements colors normal state (e.g. button) */
+/* Elements colors hover state (e.g. button) */
+/* Elements colors active state (e.g. button) */
+/*************** FONT DEFINITIONS ***************/
+/* Font families */
+/* Font Sizes */
+/*************** MARGIN DEFINITIONS ***************/
+/* Template paddings */
+/* Title margins */
+/*************** BORDER DEFINITIONS ***************/
+/*************** OTHER DEFINITIONS ***************/
+/* line 4, ../sass/base.scss */
+.layout-container {
+  margin: 0;
+}
+
+/* line 8, ../sass/base.scss */
+body {
+  background: #fff;
+}
+
+/* line 12, ../sass/base.scss */
+body.adminimal {
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #004279;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* line 20, ../sass/base.scss */
+.adminimal.toolbar-tray-open.toolbar-fixed.toolbar-horizontal {
+  padding-top: 79px !important;
+}
+
+@media only screen and (max-width: 991px) {
+  /* line 25, ../sass/base.scss */
+  #toolbar-administration {
+    display: none;
+  }
+
+  /* line 28, ../sass/base.scss */
+  .adminimal.toolbar-fixed.toolbar-vertical {
+    padding-top: 0px !important;
+  }
+
+  /* line 31, ../sass/base.scss */
+  body.toolbar-tray-open.toolbar-vertical.toolbar-fixed {
+    margin-left: 0px;
+  }
+}
+/* line 37, ../sass/base.scss */
+.adminimal .content-header {
+  background: transparent;
+  padding: 0;
+  overflow: visible;
+}
+/* line 42, ../sass/base.scss */
+.adminimal .button {
+  background-color: #004279;
+  color: #fff;
+  font-size: 16px;
+  border-color: #004279;
+}
+/* line 47, ../sass/base.scss */
+.adminimal .button:hover {
+  background-color: none;
+  color: #004279;
+}
+/* line 51, ../sass/base.scss */
+.adminimal .button:active {
+  background-color: none;
+  color: #004279;
+}
+/* line 56, ../sass/base.scss */
+.adminimal .toolbar-tray-open.toolbar-fixed.toolbar-horizontal {
+  padding-top: 79px !important;
+}
+
+/* line 61, ../sass/base.scss */
+.ui-state-active {
+  background: transparent;
+  border: none;
+  color: inherit;
+}
+
+/* line 67, ../sass/base.scss */
+.page-content {
+  margin-bottom: 0;
+}
+
+/* line 71, ../sass/base.scss */
+.iqbm-column {
+  min-height: 1px;
+}
+
+/* line 75, ../sass/base.scss */
+.iqbm-column img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 80, ../sass/base.scss */
+.block-iq-block-module > .container-fluid,
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 86, ../sass/base.scss */
+.iqpt-page-content.layout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* line 91, ../sass/base.scss */
+.row-fluid {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+}
+
+/* line 98, ../sass/base.scss */
+.page-content {
+  padding: 0 0 40px;
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 103, ../sass/base.scss */
+  .page-content {
+    margin: 0 15px;
+    padding: 20px 0 20px;
+  }
+}
+/* line 109, ../sass/base.scss */
+.iqbm-image a[href=\#] {
+  pointer-events: none;
+}
+
+/* line 113, ../sass/base.scss */
+.iqbm-image > a {
+  display: block;
+  text-align: center;
+}
+
+/* Helpers (Base theme) */
+/* line 120, ../sass/base.scss */
+.iqbm-alternate-hide {
+  display: none !important;
+}
+
+/* line 124, ../sass/base.scss */
+.pager li > a,
+.pager li > span {
+  border: none;
+  border-radius: 0;
+}
+
+/* line 130, ../sass/base.scss */
+.sitemap-message h1,
+.sitemap-message h2,
+.sitemap-message h3,
+.sitemap-message h4 {
+  color: #004279;
+}
