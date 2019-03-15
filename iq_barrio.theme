@@ -60,6 +60,9 @@ function _iq_barrio_user_login_form_submit($form, FormStateInterface $form_state
 function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $form_state, $form_id = null)
 {
 
+    $form['#attached']['library'][] = 'iq_barrio/admin-style';
+
+
     $arr_fonts = array('Normal Fonts' => array(
         'Arial' => t('Arial'),
         'Courier New' => t('Courier New'),
@@ -89,128 +92,507 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     }
 
     $form['iq_theme'] = [
-        '#type' => 'details',
+        '#type' => 'vertical_tabs',
         '#title' => t('Custom Theme Settings'),
-        '#open' => true,
     ];
 
-    $form['iq_theme']['radius'] = [
+    // section colors
+    $form['colors'] = [
+        '#type' => 'details',
+        '#title' => t('Colors'),
+        '#open' => TRUE, // Controls the HTML5 'open' attribute. Defaults to FALSE.
+        '#group' => 'iq_theme',
+    ];
+
+    $form['colors']['base_definitions'] = [
+        '#type' => 'details',
+        '#title' => t('Base color definitions'),
+    ];
+
+    $form['colors']['base_definitions']['grey_holder'] = [
+        '#type' => 'container',
+        '#attributes' => [
+            'class' => ['container-inline', 'unit-combo-field'],
+        ]
+    ];
+
+    $form['colors']['base_definitions']['grey_holder']['grey_1'] = [
+        '#type' => 'color',
+        '#title' => t('5 shades of grey'),
+        '#default_value' => theme_get_setting('grey_1') ? theme_get_setting('grey_1') : '#333333',
+    ];
+
+    $form['colors']['base_definitions']['grey_holder']['grey_2'] = [
+        '#type' => 'color',
+        '#default_value' => theme_get_setting('grey_2') ? theme_get_setting('grey_2') : '#666666',
+    ];
+
+    $form['colors']['base_definitions']['grey_holder']['grey_3'] = [
+        '#type' => 'color',
+        '#default_value' => theme_get_setting('grey_3') ? theme_get_setting('grey_3') :'#999999',
+    ];
+
+    $form['colors']['base_definitions']['grey_holder']['grey_4'] = [
+        '#type' => 'color',
+        '#default_value' => theme_get_setting('grey_4') ? theme_get_setting('grey_4') : '#cccccc',
+    ];
+
+    $form['colors']['base_definitions']['grey_holder']['grey_5'] = [
+        '#type' => 'color',
+        '#default_value' => theme_get_setting('grey_5') ? theme_get_setting('grey_5') : '#eeeeee',
+    ];
+
+
+    $form['colors']['base_definitions']['primary_color'] = [
+        '#type' => 'color',
+        '#title' => t('Primary color'),
+        '#default_value' => theme_get_setting('primary_color') ? theme_get_setting('primary_color') : '#e95e27',
+    ];
+
+    $form['colors']['base_definitions']['secondary_color'] = [
+        '#type' => 'color',
+        '#title' => t('Secondary color'),
+        '#default_value' => theme_get_setting('secondary_color') ? theme_get_setting('secondary_color') : '#009C82',
+    ];
+
+    $form['colors']['base_definitions']['tertiary_color'] = [
+        '#type' => 'color',
+        '#title' => t('Tertiary color'),
+        '#default_value' => theme_get_setting('tertiary_color') ? theme_get_setting('tertiary_color') : '#9C360D',
+    ];
+
+    $form['colors']['base_definitions']['quaternary_color'] = [
+        '#type' => 'color',
+        '#title' => t('Quaternary color'),
+        '#default_value' => theme_get_setting('quaternary_color') ? theme_get_setting('quaternary_color') : '#27E9C9',
+    ];
+
+    $form['colors']['section_definitions'] = [
+        '#type' => 'details',
+        '#title' => t('Color assignments'),
+    ];
+
+    $form['colors']['section_definitions']['color_icons'] = [
+        '#type' => 'select',
+        '#title' => t('Icons'),
+        '#options' => [
+            'primary_color' => t('Primary color'),
+            'secondary_color' => t('Secondary color'),
+            'tertiary_color' => t('Tertiary color'),
+            'quaternary_color' => t('Quaternary color'),
+        ],
+        '#default_value' => theme_get_setting('color_icons') ? theme_get_setting('color_icons') : 'primary_color',
+        '#suffix' => '<div class="line-break"></div>'
+    ];
+
+
+
+
+    // section typo
+    $form['typography'] = [
+        '#type' => 'details',
+        '#title' => t('Typography'),
+        '#summary' => t('Typography definitions.'),
+        '#group' => 'iq_theme',
+    ];
+
+    $form['typography']['headings'] = [
+        '#type' => 'details',
+        '#title' => t('Headings'),
+    ];
+
+    $headings = [
+        'h1' => 'Heading 1',
+        'h2' => 'Heading 2',
+        'h3' => 'Heading 3',
+        'h4' => 'Heading 4',
+        'h5' => 'Heading 5',
+        'h6' => 'Heading 6',
+    ];
+
+    foreach( $headings as $tag => $title){
+        $font_family_value = theme_get_setting($tag.'_font_family') ? theme_get_setting($tag.'_font_family') : '000000';
+        $color_value = theme_get_setting($tag.'_color') ? theme_get_setting($tag.'_color') : 'primary_color';
+        $font_size_value = theme_get_setting($tag.'_font_size') ? theme_get_setting($tag.'_font_size') : '2.5';
+        $font_size_unit_value = theme_get_setting($tag.'_font_size_unit') ? theme_get_setting($tag.'_font_size_unit') : 'rem';
+        $line_height_value = theme_get_setting($tag.'_line_height') ? theme_get_setting($tag.'_line_height') : '1.2';
+
+        $form['typography']['headings'][$tag.'_font_family'] = [
+            '#prefix' => '<div class="styling-row"><div class="styling-input">',
+            '#type' => 'select',
+            '#title' => t('Select font family'),
+            '#options' => $arr_fonts,
+            '#default_value' => $font_family_value,
+        ];
+
+        $form['typography']['headings'][$tag.'_color'] = [
+            '#type' => 'select',
+            '#title' => t('Select color'),
+            '#options' => [
+                'primary_color' => t('Primary color'),
+                'secondary_color' => t('Secondary color'),
+                'tertiary_color' => t('Tertiary color'),
+                'quaternary_color' => t('Quaternary color'),
+            ],
+            '#default_value' => $color_value,
+            '#suffix' => '<div class="line-break"></div>'
+        ];
+
+        $form['typography']['headings'][$tag.'_font_size_holder'] = [
+            '#type' => 'container',
+            '#attributes' => [
+                'class' => ['container-inline', 'unit-combo-field'],
+            ]
+        ];
+
+        $form['typography']['headings'][$tag.'_font_size_holder'][$tag.'_font_size'] = [
+            '#type' => 'textfield',
+            '#title' => t('Font size'),
+            '#default_value' => $font_size_value,
+        ];
+
+        $form['typography']['headings'][$tag.'_font_size_holder'][$tag.'_font_size_unit'] = [
+            '#type' => 'select',
+            '#options' => [
+                'px' => 'px',
+                'em' => 'em',
+                'rem' => 'rem',
+            ],
+            '#default_value' => $font_size_unit_value,
+        ];
+
+        $form['typography']['headings'][$tag.'_line_height'] = [
+            '#type' => 'textfield',
+            '#title' => t('Line height'),
+            '#default_value' => $line_height_value,
+        ];
+
+        $form['typography']['headings'][$tag.'_title'] = [
+            '#prefix' => '</div><div class="styling-preview">',
+            '#suffix' => '</div></div>',
+            '#type' => 'item',
+            '#markup' => '<'.$tag.' data-style="font-family: '.$font_family_value.'; color: '.theme_get_setting($color_value).'; font-size: '.$font_size_value.$font_size_unit_value.'; line-height: '.$line_height_value.';">'.$title.'</'.$tag.'><p>Next element<br/>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet</p>',
+        ];
+
+    }
+
+
+
+    $form['typography']['text_elements'] = [
+        '#type' => 'details',
+        '#title' => t('Text elements'),
+    ];
+
+    $text_elements = [
+        'standard' => 'Standard text font',
+        'lead' => 'Lead text font',
+    ];
+
+    foreach( $text_elements as $tag => $title){
+        $font_family_value = theme_get_setting($tag.'_font_family') ? theme_get_setting($tag.'_font_family') : '000000';
+        $color_value = theme_get_setting($tag.'_color') ? theme_get_setting($tag.'_color') : 'primary_color';
+        $font_size_value = theme_get_setting($tag.'_font_size') ? theme_get_setting($tag.'_font_size') : '2.5';
+        $font_size_unit_value = theme_get_setting($tag.'_font_size_unit') ? theme_get_setting($tag.'_font_size_unit') : 'rem';
+        $line_height_value = theme_get_setting($tag.'_line_height') ? theme_get_setting($tag.'_line_height') : '1.2';
+
+        $form['typography']['text_elements'][$tag.'_font_family'] = [
+            '#prefix' => '<div class="styling-row"><div class="styling-input">',
+            '#type' => 'select',
+            '#title' => t('Select font family'),
+            '#options' => $arr_fonts,
+            '#default_value' => $font_family_value,
+        ];
+
+        $form['typography']['text_elements'][$tag.'_color'] = [
+            '#type' => 'select',
+            '#title' => t('Select color'),
+            '#options' => [
+                'primary_color' => t('Primary color'),
+                'secondary_color' => t('Secondary color'),
+                'tertiary_color' => t('Tertiary color'),
+                'quaternary_color' => t('Quaternary color'),
+            ],
+            '#default_value' => $color_value,
+            '#suffix' => '<div class="line-break"></div>'
+        ];
+
+        $form['typography']['text_elements'][$tag.'_font_size_holder'] = [
+            '#type' => 'container',
+            '#attributes' => [
+                'class' => ['container-inline', 'unit-combo-field'],
+            ]
+        ];
+
+        $form['typography']['text_elements'][$tag.'_font_size_holder'][$tag.'_font_size'] = [
+            '#type' => 'textfield',
+            '#title' => t('Font size'),
+            '#default_value' => $font_size_value,
+        ];
+
+        $form['typography']['text_elements'][$tag.'_font_size_holder'][$tag.'_font_size_unit'] = [
+            '#type' => 'select',
+            '#options' => [
+                'px' => 'px',
+                'em' => 'em',
+                'rem' => 'rem',
+            ],
+            '#default_value' => $font_size_unit_value,
+        ];
+
+        $form['typography']['text_elements'][$tag.'_line_height'] = [
+            '#type' => 'textfield',
+            '#title' => t('Line height'),
+            '#default_value' => $line_height_value,
+        ];
+
+        $form['typography']['text_elements'][$tag.'_title'] = [
+            '#prefix' => '</div><div class="styling-preview">',
+            '#suffix' => '</div></div>',
+            '#type' => 'item',
+            '#markup' => '<p data-style="font-family: '.$font_family_value.'; color: '.theme_get_setting($color_value).'; font-size: '.$font_size_value.$font_size_unit_value.'; line-height: '.$line_height_value.';">'.$title.'<br/>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet</p>',
+        ];
+
+    }
+
+
+    $form['typography']['links'] = [
+        '#type' => 'details',
+        '#title' => t('Links'),
+    ];
+
+    $link_color_value = theme_get_setting('link_color') ? theme_get_setting('link_color') : 'primary_color';
+    $link_text_decoration_value = theme_get_setting('link_text_decoration') ? theme_get_setting('link_text_decoration') : 'underline';
+
+    $link_color_hover_value = theme_get_setting('link_color_hover') ? theme_get_setting('link_color_hover') : 'primary_color';
+    $link_text_decoration_hover_value = theme_get_setting('link_text_decoration_hover') ? theme_get_setting('link_text_decoration_hover') : 'underline';
+
+    $form['typography']['links']['link_color'] = [
+        '#prefix' => '<div class="styling-row"><div class="styling-input">',
+        '#type' => 'select',
+        '#title' => t('Standard: Color'),
+        '#options' => [
+            'primary_color' => t('Primary color'),
+            'secondary_color' => t('Secondary color'),
+            'tertiary_color' => t('Tertiary color'),
+            'quaternary_color' => t('Quaternary color'),
+        ],
+        '#default_value' => $link_color_value,
+
+    ];
+
+    $form['typography']['links']['link_text_decoration'] = [
+        '#type' => 'select',
+        '#title' => t('Text decoration'),
+        '#options' => [
+            'underline' => t('Underline'),
+            'underline dotted' => t('Dotted'),
+            'underline dashed' => t('Dashed'),
+            'none' => t('none'),
+        ],
+        '#default_value' => $link_text_decoration_value,
+        '#suffix' => '<div class="line-break"></div>'
+    ];
+
+
+    $form['typography']['links']['link_color_hover'] = [
+        '#type' => 'select',
+        '#title' => t('Hover: Color'),
+        '#options' => [
+            'primary_color' => t('Primary color'),
+            'secondary_color' => t('Secondary color'),
+            'tertiary_color' => t('Tertiary color'),
+            'quaternary_color' => t('Quaternary color'),
+        ],
+        '#default_value' => $link_color_hover_value,
+    ];
+
+    $form['typography']['links']['link_text_decoration_hover'] = [
+        '#type' => 'select',
+        '#title' => t('Text decoration'),
+        '#options' => [
+            'underline' => t('Underline'),
+            'underline dotted' => t('Dotted'),
+            'underline dashed' => t('Dashed'),
+            'none' => t('none'),
+        ],
+        '#default_value' => $link_text_decoration_hover_value,
+    ];
+
+
+
+    $form['typography']['links']['link_title'] = [
+        '#prefix' => '</div><div class="styling-preview">',
+        '#suffix' => '</div></div>',
+        '#type' => 'item',
+        '#markup' => '<p>Links: </p><p><a href="#" data-style="color: '.theme_get_setting($link_color_value).'; text-decoration: '.$link_text_decoration_value.'">Standard</a></p><p><a href="#" data-style="color: '.theme_get_setting($link_color_hover_value).'; text-decoration: '.$link_text_decoration_hover_value.'">Hovered</a></p><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor <a href="#">invidunt</a> ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd <a href="#">gubergren, no sea takimata sanctus est</a> Lorem ipsum dolor sit amet</p>',
+    ];
+
+
+
+    // section decorations
+
+    $form['decorations'] = [
+        '#type' => 'details',
+        '#title' => t('Decorations'),
+        '#summary' => t('Borders, shadows etc.'),
+        '#group' => 'iq_theme',
+    ];
+
+
+
+
+
+    // $form['layout'] = [
+    //     '#type' => 'details',
+    //     '#title' => t('Layout'),
+    //     '#summary' => t('Layout definitions.'),
+    //     '#group' => 'iq_theme',
+    // ];
+
+
+    $form['old'] = [
+        '#type' => 'details',
+        '#title' => t('Previous'),
+        '#summary' => t('Borders, shadows etc.'),
+        '#group' => 'iq_theme',
+    ];
+
+
+
+
+
+
+
+
+
+
+
+
+    $form['old']['content_font'] = [
+        '#type' => 'select',
+        '#title' => t('Select Content Font'),
+        '#options' => $arr_fonts,
+        '#required' => true,
+        '#default_value' => theme_get_setting('content_font') ? theme_get_setting('content_font') : '',
+    ];
+
+
+
+
+
+
+    $form['old']['radius'] = [
         '#type' => 'textfield',
         '#title' => t('Base Border Redius'),
         '#default_value' => theme_get_setting('radius') ? theme_get_setting('radius') : '1',
         '#description' => t("Enter border radius in pixels e.g. 1, 1.5, 2 etc."),
     ];
 
-    $form['iq_theme']['darkset_color'] = [
-        '#type' => 'color',
-        '#title' => t('Select Darkset Color'),
-        '#default_value' => theme_get_setting('darkset_color') ? theme_get_setting('darkset_color') : '540505',
-    ];
 
-    $form['iq_theme']['bg_page_color'] = [
+    $form['old']['bg_page_color'] = [
         '#type' => 'color',
         '#title' => t('Background Page Color'),
         '#default_value' => theme_get_setting('bg_page_color') ? theme_get_setting('bg_page_color') : '756f75',
     ];
 
-    $form['iq_theme']['text_link_color'] = [
-        '#type' => 'color',
-        '#title' => t('Text Link Color'),
-        '#default_value' => theme_get_setting('text_link_color') ? theme_get_setting('text_link_color') : 'ffffff',
-    ];
+    // $form['old']['text_link_color'] = [
+    //     '#type' => 'color',
+    //     '#title' => t('Text Link Color'),
+    //     '#default_value' => theme_get_setting('text_link_color') ? theme_get_setting('text_link_color') : 'ffffff',
+    // ];
 
-    $form['iq_theme']['text_icon_color'] = [
+    $form['old']['text_icon_color'] = [
         '#type' => 'color',
         '#title' => t('Text Icon Color'),
         '#default_value' => theme_get_setting('text_icon_color') ? theme_get_setting('text_icon_color') : 'ffffff',
     ];
 
-    $form['iq_theme']['text_element_color'] = [
-        '#type' => 'color',
-        '#title' => t('Text Element Color'),
-        '#default_value' => theme_get_setting('text_element_color') ? theme_get_setting('text_element_color') : 'ffffff',
-    ];
+    // $form['old']['text_element_color'] = [
+    //     '#type' => 'color',
+    //     '#title' => t('Text Element Color'),
+    //     '#default_value' => theme_get_setting('text_element_color') ? theme_get_setting('text_element_color') : 'ffffff',
+    // ];
 
-    $form['iq_theme']['bg_element_color'] = [
+    $form['old']['bg_element_color'] = [
         '#type' => 'color',
         '#title' => t('Elements Background Color'),
         '#default_value' => theme_get_setting('bg_element_color') ? theme_get_setting('bg_element_color') : 'ffffff',
     ];
 
-    $form['iq_theme']['elements_border_color'] = [
+    $form['old']['elements_border_color'] = [
         '#type' => 'color',
         '#title' => t('Elements Border Color'),
         '#default_value' => theme_get_setting('elements_border_color') ? theme_get_setting('elements_border_color') : 'ffffff',
     ];
 
-    $form['iq_theme']['text_element_hover'] = [
+    $form['old']['text_element_hover'] = [
         '#type' => 'color',
         '#title' => t('Text Elements Hover Color'),
         '#default_value' => theme_get_setting('text_element_hover') ? theme_get_setting('text_element_hover') : 'ffffff',
     ];
 
-    $form['iq_theme']['elements_bg_hover'] = [
+    $form['old']['elements_bg_hover'] = [
         '#type' => 'color',
         '#title' => t('Elements Background Color On Hover'),
         '#default_value' => theme_get_setting('elements_bg_hover') ? theme_get_setting('elements_bg_hover') : 'ffffff',
     ];
 
-    $form['iq_theme']['border_color_hover'] = [
+    $form['old']['border_color_hover'] = [
         '#type' => 'color',
         '#title' => t('Elements Border Color On Hover'),
         '#default_value' => theme_get_setting('border_color_hover') ? theme_get_setting('border_color_hover') : 'ffffff',
     ];
 
-    $form['iq_theme']['colorChooseText'] = [
-        '#type' => 'color',
-        '#title' => t('Content Text Color'),
-        '#default_value' => theme_get_setting('colorChooseText') ? theme_get_setting('colorChooseText') : 'ffffff',
-    ];
+    // $form['old']['colorChooseText'] = [
+    //     '#type' => 'color',
+    //     '#title' => t('Content Text Color'),
+    //     '#default_value' => theme_get_setting('colorChooseText') ? theme_get_setting('colorChooseText') : 'ffffff',
+    // ];
 
-    $form['iq_theme']['colorChooseTitle'] = [
-        '#type' => 'color',
-        '#title' => t('Title Color'),
-        '#default_value' => theme_get_setting('colorChooseTitle') ? theme_get_setting('colorChooseTitle') : 'ffffff',
-    ];
+    // $form['old']['colorChooseTitle'] = [
+    //     '#type' => 'color',
+    //     '#title' => t('Title Color'),
+    //     '#default_value' => theme_get_setting('colorChooseTitle') ? theme_get_setting('colorChooseTitle') : 'ffffff',
+    // ];
 
-    $form['iq_theme']['content_font'] = [
-        '#type' => 'select',
-        '#title' => ('Select Content Font'),
-        '#options' => $arr_fonts,
-        '#required' => true,
-        '#default_value' => theme_get_setting('content_font') ? theme_get_setting('content_font') : '',
-    ];
+    // $form['old']['content_font'] = [
+    //     '#type' => 'select',
+    //     '#title' => ('Select Content Font'),
+    //     '#options' => $arr_fonts,
+    //     '#required' => true,
+    //     '#default_value' => theme_get_setting('content_font') ? theme_get_setting('content_font') : '',
+    // ];
 
-    $form['iq_theme']['title_font'] = [
-        '#type' => 'select',
-        '#title' => ('Select Title Font'),
-        '#options' => $arr_fonts,
-        '#required' => true,
-        '#default_value' => theme_get_setting('title_font') ? theme_get_setting('title_font') : '',
-    ];
+    // $form['old']['title_font'] = [
+    //     '#type' => 'select',
+    //     '#title' => ('Select Title Font'),
+    //     '#options' => $arr_fonts,
+    //     '#required' => true,
+    //     '#default_value' => theme_get_setting('title_font') ? theme_get_setting('title_font') : '',
+    // ];
 
-    $form['iq_theme']['base_font_size'] = [
-        '#type' => 'textfield',
-        '#title' => t('Base Font Size'),
-        '#required' => true,
-        '#default_value' => theme_get_setting('base_font_size') ? theme_get_setting('base_font_size') : '',
-    ];
+    // $form['old']['base_font_size'] = [
+    //     '#type' => 'textfield',
+    //     '#title' => t('Base Font Size'),
+    //     '#required' => true,
+    //     '#default_value' => theme_get_setting('base_font_size') ? theme_get_setting('base_font_size') : '',
+    // ];
 
-    $form['iq_theme']['base_margin'] = [
+    $form['old']['base_margin'] = [
         '#type' => 'textfield',
         '#title' => t('Base Margin'),
         '#required' => true,
         '#default_value' => theme_get_setting('base_margin') ? theme_get_setting('base_margin') : '',
     ];
 
-    $form['iq_theme']['base_top_padding'] = [
+    $form['old']['base_top_padding'] = [
         '#type' => 'textfield',
         '#title' => t('Base Top Padding'),
         '#required' => true,
         '#default_value' => theme_get_setting('base_top_padding') ? theme_get_setting('base_top_padding') : '',
     ];
 
-    $form['iq_theme']['base_border_width'] = [
+    $form['old']['base_border_width'] = [
         '#type' => 'textfield',
         '#title' => t('Base Border Width'),
         '#required' => true,
@@ -267,4 +649,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
 
     //Call hook
     \Drupal::moduleHandler()->invokeAll('iq_theme_settings', array($arrKeywords, $service));
+}
+
+function iq_barrio_theme_rebuild(){
+    \Drupal::logger('iq_barrio')->notice('cache rebuild :)');
 }

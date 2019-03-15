@@ -24,7 +24,7 @@ class ThemeServices {
 
 			\Drupal::logger('theme')->notice("final css: " . $definition_content);
 
-			file_put_contents($definition_file, $definition_content);
+//			file_put_contents($definition_file, $definition_content);
 		}
 	}
 

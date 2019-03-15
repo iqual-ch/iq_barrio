@@ -1,0 +1,55 @@
+@import "definitions";
+
+.styling-row{
+  display: flex;
+  width: 100%;
+  margin-bottom: 45px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid #ccc;
+
+  &:last-child{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .styling-input{
+    width: 460px;
+    display: flex;
+    flex-flow: wrap;
+    > div{
+      display: inline;
+      padding-right: 30px;
+      width: 200px;
+      &.line-break{
+        height: 1px;
+        width: 100%;
+      }
+      label{
+        display: block;
+      }
+      input.form-text{
+        width: 100px;
+      }
+    }
+  }
+
+  .styling-preview{
+    width: calc( 100% - 485px );
+    border: 1px solid #eee;
+    padding: 10px;
+    background-color: #fff;
+    position: relative;
+
+
+
+    &:before{
+      content: 'Preview';
+      font-size: 10px;
+      display: block;
+      position: absolute;
+      top: -15px;
+      left: 0;
+    }
+  }
+}

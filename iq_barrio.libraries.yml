@@ -28,3 +28,10 @@ bootstrap_cdn:
   css:
     component:
       //stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css: {}
+
+admin-style:
+  js:
+    resources/js/admin.js: {}
+  css:
+    layout:
+      resources/css/admin.css: {}
