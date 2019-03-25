@@ -8,17 +8,18 @@
 /* Elements colors hover state (e.g. button) */
 /* Elements colors active state (e.g. button) */
 /*************** FONT DEFINITIONS ***************/
-/* Font families */
-/* Font Sizes */
-/*************** MARGIN DEFINITIONS ***************/
-/* Template paddings */
+/* Global settings */
+/* Headings */
+/* Content */
+/* Margins &  paddings */
 /* Title margins */
 /*************** BORDER DEFINITIONS ***************/
 /*************** OTHER DEFINITIONS ***************/
+/* Legacy variables */
 /* line 5, ../sass/webforms.scss */
 .page-content input {
   border: 1px solid #004279;
-  color: #004279;
+  color: #999999;
   background: transparent;
   height: 35px;
   padding: 5px 20px;
@@ -27,7 +28,7 @@
 /* line 13, ../sass/webforms.scss */
 .page-content select {
   border: 1px solid #004279;
-  color: #004279;
+  color: #999999;
   height: 35px;
   padding: 5px 20px;
   max-width: 100%;
@@ -43,7 +44,7 @@
 /* line 27, ../sass/webforms.scss */
 .page-content textarea {
   border: 1px solid #004279;
-  color: #004279;
+  color: #999999;
   background: transparent;
   height: auto;
   padding: 5px 20px;
@@ -64,8 +65,8 @@
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
-  color: #004279;
-  font-size: 16px;
+  color: #e95e27;
+  font-size: 1rem;
   position: absolute;
   right: 9px;
   top: 45%;
@@ -83,7 +84,7 @@
 /* line 62, ../sass/webforms.scss */
 .page-content .form-type-radio input:checked,
 .page-content .form-radios input:checked {
-  background: #004279;
+  background: #e95e27;
 }
 /* line 66, ../sass/webforms.scss */
 .page-content .form-type-checkbox input:checked {
@@ -96,11 +97,11 @@
   font-style: normal;
   font-weight: normal;
   text-decoration: inherit;
-  color: #004279;
-  font-size: 16px;
+  color: #999999;
+  font-size: 1rem;
   position: absolute;
   left: 1px;
-  line-height: 17.6px;
+  line-height: 1.1rem;
 }
 /* line 81, ../sass/webforms.scss */
 .page-content .form-actions input,
@@ -140,8 +141,8 @@
 /* line 110, ../sass/webforms.scss */
 .page-content .form-item .description {
   /*Fix for description style */
-  font-size: 16px;
-  color: #004279;
+  font-size: 1rem;
+  color: #999999;
 }
 /* line 115, ../sass/webforms.scss */
 .page-content .form-type-checkbox,
@@ -156,7 +157,7 @@
 }
 /* line 124, ../sass/webforms.scss */
 .page-content .form-type-webform-likert {
-  margin: 20px 0 20px;
+  margin: 30px 0 30px;
 }
 /* line 127, ../sass/webforms.scss */
 .page-content .webform-likert-table thead th {
@@ -165,7 +166,7 @@
 }
 /* line 131, ../sass/webforms.scss */
 .page-content .webform-likert-table tr {
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   border-bottom: 1px solid #004279;
 }
 /* line 135, ../sass/webforms.scss */
@@ -175,7 +176,7 @@
 /* line 138, ../sass/webforms.scss */
 .page-content .progress-step .progress-marker,
 .page-content .progress-step:hover .progress-marker {
-  background-color: #999999;
+  background-color: #cccccc;
 }
 /* line 142, ../sass/webforms.scss */
 .page-content .progress-step.is-complete .progress-marker,
@@ -185,11 +186,11 @@
 /* line 146, ../sass/webforms.scss */
 .page-content .progress-step.is-active .progress-marker,
 .page-content .progress-step.is-active:hover .progress-marker {
-  background-color: #004279;
+  background-color: #e95e27;
 }
 /* line 150, ../sass/webforms.scss */
 .page-content .messages.messages--info {
-  color: #004279;
+  color: #999999;
   border-color: #004279;
 }
 /* line 154, ../sass/webforms.scss */

@@ -7,32 +7,33 @@
 /* Elements colors hover state (e.g. button) */
 /* Elements colors active state (e.g. button) */
 /*************** FONT DEFINITIONS ***************/
-/* Font families */
-/* Font Sizes */
-/*************** MARGIN DEFINITIONS ***************/
-/* Template paddings */
+/* Global settings */
+/* Headings */
+/* Content */
+/* Margins &  paddings */
 /* Title margins */
 /*************** BORDER DEFINITIONS ***************/
 /*************** OTHER DEFINITIONS ***************/
+/* Legacy variables */
 /* Breadcrumb */
 /* line 3, ../sass/breadcrumbs.scss */
 .breadcrumb {
   background: none;
   text-align: center;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: italic;
 }
 /* line 9, ../sass/breadcrumbs.scss */
 .breadcrumb li a {
-  color: #004279;
+  color: #999999;
 }
 /* line 12, ../sass/breadcrumbs.scss */
 .breadcrumb li a:hover {
-  color: #004279;
+  color: #e95e27;
 }
 /* line 15, ../sass/breadcrumbs.scss */
 .breadcrumb li:last-child a {
-  color: #004279;
+  color: #e95e27;
 }
 /* line 18, ../sass/breadcrumbs.scss */
 .breadcrumb li:before {
@@ -41,7 +42,7 @@
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
-  color: #004279;
+  color: #999999;
   font-size: 0.6em;
   vertical-align: bottom;
 }

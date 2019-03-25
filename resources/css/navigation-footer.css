@@ -8,13 +8,14 @@
 /* Elements colors hover state (e.g. button) */
 /* Elements colors active state (e.g. button) */
 /*************** FONT DEFINITIONS ***************/
-/* Font families */
-/* Font Sizes */
-/*************** MARGIN DEFINITIONS ***************/
-/* Template paddings */
+/* Global settings */
+/* Headings */
+/* Content */
+/* Margins &  paddings */
 /* Title margins */
 /*************** BORDER DEFINITIONS ***************/
 /*************** OTHER DEFINITIONS ***************/
+/* Legacy variables */
 /* line 4, ../sass/navigation-footer.scss */
 .menu--footer ul.menu {
   margin: 0;
@@ -25,7 +26,7 @@
 }
 /* line 10, ../sass/navigation-footer.scss */
 .menu--footer .menu-item {
-  font-size: 12.8px;
+  font-size: 0.75rem;
   list-style: none;
   margin-right: 10px;
   display: inline-block;

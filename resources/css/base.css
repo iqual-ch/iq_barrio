@@ -8,13 +8,14 @@
 /* Elements colors hover state (e.g. button) */
 /* Elements colors active state (e.g. button) */
 /*************** FONT DEFINITIONS ***************/
-/* Font families */
-/* Font Sizes */
-/*************** MARGIN DEFINITIONS ***************/
-/* Template paddings */
+/* Global settings */
+/* Headings */
+/* Content */
+/* Margins &  paddings */
 /* Title margins */
 /*************** BORDER DEFINITIONS ***************/
 /*************** OTHER DEFINITIONS ***************/
+/* Legacy variables */
 /* line 4, ../sass/base.scss */
 .layout-container {
   margin: 0;
@@ -28,9 +29,9 @@ body {
 /* line 12, ../sass/base.scss */
 body.adminimal {
   background-color: #fff;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  color: #004279;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: #999999;
   image-rendering: -webkit-optimize-contrast;
 }
 
@@ -65,7 +66,7 @@ body.adminimal {
 .adminimal .button {
   background-color: #004279;
   color: #fff;
-  font-size: 16px;
+  font-size: 1rem;
   border-color: #004279;
 }
 /* line 47, ../sass/base.scss */
@@ -129,14 +130,14 @@ body.adminimal {
 
 /* line 98, ../sass/base.scss */
 .page-content {
-  padding: 0 0 40px;
+  padding: 0 0 60px;
 }
 
 @media only screen and (max-width: 1240px) {
   /* line 103, ../sass/base.scss */
   .page-content {
     margin: 0 15px;
-    padding: 20px 0 20px;
+    padding: 30px 0 30px;
   }
 }
 /* line 109, ../sass/base.scss */
@@ -168,5 +169,5 @@ body.adminimal {
 .sitemap-message h2,
 .sitemap-message h3,
 .sitemap-message h4 {
-  color: #004279;
+  color: #e95e27;
 }

@@ -8,13 +8,14 @@
 /* Elements colors hover state (e.g. button) */
 /* Elements colors active state (e.g. button) */
 /*************** FONT DEFINITIONS ***************/
-/* Font families */
-/* Font Sizes */
-/*************** MARGIN DEFINITIONS ***************/
-/* Template paddings */
+/* Global settings */
+/* Headings */
+/* Content */
+/* Margins &  paddings */
 /* Title margins */
 /*************** BORDER DEFINITIONS ***************/
 /*************** OTHER DEFINITIONS ***************/
+/* Legacy variables */
 /* line 4, ../sass/navigation-header.scss */
 .menu--header ul.menu {
   display: inline-block;
@@ -27,7 +28,7 @@
 /* line 12, ../sass/navigation-header.scss */
 .menu--header .menu-item {
   display: inline-block;
-  font-size: 12.8px;
+  font-size: 0.75rem;
   text-align: center;
   list-style: none;
   margin-left: 10px;

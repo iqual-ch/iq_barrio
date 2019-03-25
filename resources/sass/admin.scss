@@ -1,5 +1,24 @@
 @import "definitions";
 
+
+.container-inline{
+  position: relative;
+  padding-top: calc( 16px + 0.2em );
+  margin: 0.75em 0;
+  .form-item{
+    margin-top: 0;
+    margin-bottom: 0;
+    label{
+      display: block;
+      position: absolute;
+      top: 0;
+    }
+    input.form-text{
+      width:60px;
+    }
+  }
+}
+
 .styling-row{
   display: flex;
   width: 100%;
@@ -21,15 +40,10 @@
       display: inline;
       padding-right: 30px;
       width: 200px;
+      
       &.line-break{
         height: 1px;
         width: 100%;
-      }
-      label{
-        display: block;
-      }
-      input.form-text{
-        width: 100px;
       }
     }
   }
@@ -51,5 +65,14 @@
       top: -15px;
       left: 0;
     }
+  }
+}
+
+.unit-combo-field{
+  label{
+    display: block !important;
+  }
+  input[type="text"]{
+    width: 75px;
   }
 }

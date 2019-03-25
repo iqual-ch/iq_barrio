@@ -7,28 +7,29 @@
 /* Elements colors hover state (e.g. button) */
 /* Elements colors active state (e.g. button) */
 /*************** FONT DEFINITIONS ***************/
-/* Font families */
-/* Font Sizes */
-/*************** MARGIN DEFINITIONS ***************/
-/* Template paddings */
+/* Global settings */
+/* Headings */
+/* Content */
+/* Margins &  paddings */
 /* Title margins */
 /*************** BORDER DEFINITIONS ***************/
 /*************** OTHER DEFINITIONS ***************/
+/* Legacy variables */
 /* line 3, ../sass/footer.scss */
 footer {
   color: #fff;
   background: #fff;
-  font-size: 25px;
-  padding: 20px 0 20px;
+  font-size: 1.5rem;
+  padding: 30px 0 30px;
 }
 /* line 9, ../sass/footer.scss */
 footer .iqbm-text h4 {
-  color: #004279;
-  font-size: 25px;
+  color: #999999;
+  font-size: 1.5rem;
 }
 /* line 13, ../sass/footer.scss */
 footer .iqbm-text a {
-  color: #004279;
+  color: #999999;
 }
 /* line 15, ../sass/footer.scss */
 footer .iqbm-text a:visited {
@@ -49,14 +50,14 @@ footer .iqbm-text ul li:before {
 }
 /* line 31, ../sass/footer.scss */
 footer a {
-  color: #004279;
+  color: #e95e27;
 }
 /* line 33, ../sass/footer.scss */
 footer a:visited {
-  color: #004279;
+  color: #e95e27;
 }
 /* line 36, ../sass/footer.scss */
 footer a:hover {
-  color: #004279;
+  color: #e95e27;
   text-decoration: none;
 }

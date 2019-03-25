@@ -8,22 +8,23 @@
 /* Elements colors hover state (e.g. button) */
 /* Elements colors active state (e.g. button) */
 /*************** FONT DEFINITIONS ***************/
-/* Font families */
-/* Font Sizes */
-/*************** MARGIN DEFINITIONS ***************/
-/* Template paddings */
+/* Global settings */
+/* Headings */
+/* Content */
+/* Margins &  paddings */
 /* Title margins */
 /*************** BORDER DEFINITIONS ***************/
 /*************** OTHER DEFINITIONS ***************/
+/* Legacy variables */
 /* line 4, ../sass/colors.scss */
 body {
-  color: #004279;
+  color: #999999;
   background: #fff;
 }
 
 /* line 9, ../sass/colors.scss */
 .site-footer {
-  background: #fecc00;
+  background: #eeeeee;
   background-image: url("/de/media/69");
 }
 
@@ -65,7 +66,7 @@ a:focus,
 .link:focus,
 a:visited,
 .link:visited {
-  color: #004279;
+  color: #e95e27;
 }
 
 /* line 49, ../sass/colors.scss */
@@ -73,11 +74,11 @@ a:hover,
 a:focus,
 .link:hover,
 .link:focus {
-  color: #004279;
+  color: #e95e27;
 }
 
 /* line 56, ../sass/colors.scss */
 a:active,
 .link:active {
-  color: #004279;
+  color: #e95e27;
 }

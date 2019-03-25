@@ -8,13 +8,14 @@
 /* Elements colors hover state (e.g. button) */
 /* Elements colors active state (e.g. button) */
 /*************** FONT DEFINITIONS ***************/
-/* Font families */
-/* Font Sizes */
-/*************** MARGIN DEFINITIONS ***************/
-/* Template paddings */
+/* Global settings */
+/* Headings */
+/* Content */
+/* Margins &  paddings */
 /* Title margins */
 /*************** BORDER DEFINITIONS ***************/
 /*************** OTHER DEFINITIONS ***************/
+/* Legacy variables */
 /* line 6, ../sass/navigation.scss */
 .region-header .menu--main ul.menu {
   clear: both;
@@ -23,23 +24,23 @@
 /* line 10, ../sass/navigation.scss */
 .region-header .menu--main .menu-item {
   display: inline-block;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: normal;
   text-align: center;
   margin-right: 5%;
   word-wrap: break-word;
   position: relative;
-  color: #004279;
+  color: #999999;
 }
 /* line 19, ../sass/navigation.scss */
 .region-header .menu--main .menu-item a {
-  color: #004279;
+  color: #999999;
   text-decoration: none;
 }
 /* line 23, ../sass/navigation.scss */
 .region-header .menu--main .menu-item:hover {
   display: inline-block;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: normal;
   list-style: none;
   margin-right: 5%;
@@ -48,19 +49,19 @@
 }
 /* line 31, ../sass/navigation.scss */
 .region-header .menu--main .menu-item:hover > a {
-  color: #004279;
+  color: #e95e27;
   text-decoration: none;
 }
 /* line 36, ../sass/navigation.scss */
 .region-header .menu--main .menu-item a.is-active {
-  color: #004279;
+  color: #e95e27;
 }
 /* line 39, ../sass/navigation.scss */
 .region-header .menu--main .menu-item .menu {
   position: absolute;
   left: 0;
   background: #fff;
-  padding: 20px;
+  padding: 30px;
   min-width: 260px;
   display: none;
   z-index: 999;
@@ -154,22 +155,22 @@
   /* line 124, ../sass/navigation.scss */
   .region-header .menu--main .menu-item .menu-item {
     font-weight: normal;
-    font-size: 20px;
+    font-size: 1.25rem;
     margin: 50px 0;
   }
 
   /* line 130, ../sass/navigation.scss */
   .region-header .menu--main .menu-item a {
-    color: #004279;
+    color: #999999;
   }
 }
 /* Sidebar navigation (navigation.sass) */
 /* line 137, ../sass/navigation.scss */
 .region-sidebar-left .block-page-title-block .page-title {
-  color: #004279;
-  font-size: 25px;
+  color: #999999;
+  font-size: 1.5rem;
   font-weight: normal;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 /* line 142, ../sass/navigation.scss */
 .region-sidebar-left .block-page-title-block .page-title span {
@@ -210,14 +211,14 @@
 }
 /* line 173, ../sass/navigation.scss */
 .region-sidebar-left .menu--main .menu-item a {
-  color: #004279;
+  color: #999999;
   padding: 10px 0 10px 2px;
   display: block;
   text-decoration: none;
 }
 /* line 178, ../sass/navigation.scss */
 .region-sidebar-left .menu--main .menu-item a:hover, .region-sidebar-left .menu--main .menu-item a.is-active {
-  color: #004279;
+  color: #e95e27;
 }
 
 /* line 184, ../sass/navigation.scss */
