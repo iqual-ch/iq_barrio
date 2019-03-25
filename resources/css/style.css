@@ -6,10 +6,6 @@
 /*************** COLOR DEFINITIONS ***************/
 /* Base colors */
 /*************** FONT DEFINITIONS ***************/
-<<<<<<< HEAD
-=======
-/* Global settings */
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
 /* Headings */
 /* Content */
 /* Margins &  paddings */
@@ -17,13 +13,10 @@
 /*************** BORDER DEFINITIONS ***************/
 /*************** OTHER DEFINITIONS ***************/
 /* Legacy variables */
-<<<<<<< HEAD
 /* Content text colors */
 /* Elements colors normal state (e.g. button) */
 /* Elements colors hover state (e.g. button) */
 /* Elements colors active state (e.g. button) */
-=======
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 /* line 9, ../sass/style.scss */
 body {
@@ -39,13 +32,8 @@ h1 {
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
   color: #e95e27;
-<<<<<<< HEAD
   margin-top: 2.5rem;
   margin-bottom: 1.25rem;
-=======
-  margin-top: 0px;
-  margin-bottom: 30px;
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
 }
 
 /* line 25, ../sass/style.scss */
@@ -55,13 +43,8 @@ h2 {
   font-weight: 400;
   font-family: "Open Sans", sans-serif;
   color: #009c82;
-<<<<<<< HEAD
   margin-top: 2rem;
   margin-bottom: 1rem;
-=======
-  margin-top: 0px;
-  margin-bottom: 24px;
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
 }
 
 /* line 35, ../sass/style.scss */
@@ -71,13 +54,8 @@ h3 {
   font-weight: 900;
   font-family: "Open Sans", sans-serif;
   color: #9c360d;
-<<<<<<< HEAD
   margin-top: 1.75rem;
   margin-bottom: 0.875rem;
-=======
-  margin-top: 0px;
-  margin-bottom: 26px;
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
 }
 
 /* line 45, ../sass/style.scss */
@@ -87,13 +65,8 @@ h4 {
   font-weight: 100;
   font-family: "Open Sans", sans-serif;
   color: #27e9c9;
-<<<<<<< HEAD
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
-=======
-  margin-top: 0px;
-  margin-bottom: 12px;
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
 }
 
 /* line 55, ../sass/style.scss */
@@ -102,15 +75,9 @@ h5 {
   line-height: 1.2;
   font-weight: 100;
   font-family: "Open Sans", sans-serif;
-<<<<<<< HEAD
   color: #999999;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
-=======
-  color: #eeeeee;
-  margin-top: 0px;
-  margin-bottom: 6px;
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
 }
 
 /* line 65, ../sass/style.scss */
@@ -120,18 +87,12 @@ h6 {
   font-weight: 100;
   font-family: "Open Sans", sans-serif;
   color: #000;
-<<<<<<< HEAD
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-=======
-  margin-top: 30px;
-  margin-bottom: 6px;
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
 }
 
 /* line 75, ../sass/style.scss */
 p {
-<<<<<<< HEAD
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 100;
@@ -172,131 +133,4 @@ p {
 .iq-text a:hover, .iq-text a:focus, .iq-text a:active {
   color: #e95e27;
   text-decoration: underline dotted;
-=======
-  color: #999999;
-}
-
-/* line 79, ../sass/style.scss */
-#navbar-main {
-  max-height: none;
-  padding: .5rem 0rem;
-}
-
-/* line 84, ../sass/style.scss */
-#navbar-main .row {
-  max-width: none;
-}
-
-/* line 88, ../sass/style.scss */
-#navbar-main .col {
-  padding: 0;
-}
-
-/* line 93, ../sass/style.scss */
-.navbar {
-  display: block;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/* line 99, ../sass/style.scss */
-.navbar > .c.navbar-dark .navbar-nav .nav-linkontainer,
-.navbar > .container-fluid {
-  display: block;
-}
-
-/* line 104, ../sass/style.scss */
-#navbar-top {
-  background: #eeeeee;
-  color: #999999;
-  max-height: 40px;
-}
-@media only screen and (max-width: 768px) {
-  /* line 104, ../sass/style.scss */
-  #navbar-top {
-    display: none;
-  }
-}
-
-/* line 116, ../sass/style.scss */
-#CollapsingNavbar {
-  background-color: rgba(0, 0, 0, 0.02);
-  box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -4px 0px 0px rgba(0, 0, 0, 0.03);
-  -webkit-box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -4px 0px 0px rgba(0, 0, 0, 0.03);
-  -moz-box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -4px 0px 0px rgba(0, 0, 0, 0.03);
-  box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06), inset 0px -4px 0px 0px rgba(0, 0, 0, 0.03);
-}
-
-/* line 124, ../sass/style.scss */
-.region-header {
-  margin: 10px 0 20px;
-}
-
-/* line 129, ../sass/style.scss */
-.dropdown-toggle + .dropdown-menu {
-  margin-top: 0;
-  border-radius: 0;
-  background: #fff !important;
-}
-/* line 133, ../sass/style.scss */
-.dropdown-toggle + .dropdown-menu .dropdown-item {
-  background: #fff !important;
-}
-
-@media only screen and (min-width: 992px) {
-  /* line 138, ../sass/style.scss */
-  .dropdown-toggle:hover + .dropdown-menu,
-  .dropdown-toggle + .dropdown-menu:hover {
-    display: block;
-  }
-}
-
-@media only screen and (max-width: 991px) {
-  /* line 145, ../sass/style.scss */
-  .dropdown-toggle.active + .dropdown-menu {
-    display: block;
-  }
-}
-
-/* line 151, ../sass/style.scss */
-.navbar-dark .navbar-toggler {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-/* line 157, ../sass/style.scss */
-.navbar-dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-}
-
-/* line 161, ../sass/style.scss */
-.main-content,
-.region-content {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/* line 167, ../sass/style.scss */
-.breadcrumb {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 0;
-  list-style: none;
-  background-color: transparent;
-  border-radius: 0;
-  justify-content: flex-end;
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-@media only screen and (max-width: 768px) {
-  /* line 167, ../sass/style.scss */
-  .breadcrumb {
-    justify-content: flex-start;
-    padding: 0;
-  }
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
 }

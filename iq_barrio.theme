@@ -95,16 +95,10 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     ];
 
     $arr_units = [
-<<<<<<< HEAD
       'px'  => 'px',
       'em'  => 'em',
       'rem' => 'rem',
       '%'   => '%'
-=======
-      'px' => 'px',
-      'em' => 'em',
-      'rem' => 'rem',
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
     ];
 
     $arr_fonts = array('Normal Fonts' => array(
@@ -172,7 +166,6 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
         '#default_value' => theme_get_setting('color_white') ? theme_get_setting('color_white') : '#FFFFFF',
     ];
 
-<<<<<<< HEAD
     $form['colors']['base_definitions']['grey_holder']['color_black'] = [
         '#type' => 'hidden',
         '#default_value' => theme_get_setting('color_black') ? theme_get_setting('color_black') : '#000000',
@@ -183,8 +176,6 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
         '#default_value' => theme_get_setting('color_white') ? theme_get_setting('color_white') : '#FFFFFF',
     ];
 
-=======
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
     $form['colors']['base_definitions']['grey_holder']['color_grey1'] = [
         '#type' => 'color',
         '#default_value' => theme_get_setting('color_grey1') ? theme_get_setting('color_grey1') : '#333333',
@@ -270,18 +261,13 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
         '#default_value' => theme_get_setting('color_page_font_header') ? theme_get_setting('color_page_font_header') : 'grey3',
         '#suffix' => '<hr>'
     ];
-<<<<<<< HEAD
-
-=======
     
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
     $form['colors']['section_definitions']['color_page_background_navbar'] = [
       '#type' => 'select',
       '#title' => t('Background color navbar'),
       '#options' => $arr_colors,
       '#default_value' => theme_get_setting('color_page_background_navbar') ? theme_get_setting('color_page_background_navbar') : 'primary',
       '#suffix' => '<div class="line-break"></div>'
-<<<<<<< HEAD
     ];
 
     $form['colors']['section_definitions']['color_page_font_navbar'] = [
@@ -292,18 +278,6 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
         '#suffix' => '<hr>'
     ];
 
-=======
-    ];
-
-    $form['colors']['section_definitions']['color_page_font_navbar'] = [
-        '#type' => 'select',
-        '#title' => t('font color navbar'),
-        '#options' => $arr_colors,
-        '#default_value' => theme_get_setting('color_page_font_navbar') ? theme_get_setting('color_page_font_navbar') : 'grey3',
-        '#suffix' => '<hr>'
-    ];
-
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
     $form['colors']['section_definitions']['color_page_background_footer'] = [
       '#type' => 'select',
       '#title' => t('Background color footer'),
@@ -361,11 +335,6 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
         $margin_top_value = theme_get_setting($tag.'_margin_top') ? theme_get_setting($tag.'_margin_top') : '0';
         $margin_bottom_value = theme_get_setting($tag.'_margin_bottom') ? theme_get_setting($tag.'_margin_bottom') : '30';
         $margin_unit_value = theme_get_setting($tag.'_margin_unit') ? theme_get_setting($tag.'_margin_unit') : 'px';
-<<<<<<< HEAD
-=======
-
-
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
 
         $form['typography']['headings'][$tag.'_font_family'] = [
             '#prefix' => '<div class="styling-row"><div class="styling-input">',
@@ -390,12 +359,6 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
             '#default_value' => $font_weight_value,
         ];
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
         $form['typography']['headings'][$tag.'_font_size_holder'] = [
             '#type' => 'container',
             '#attributes' => [
@@ -422,43 +385,23 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
                 'class' => ['container-inline', 'unit-combo-field', 'multi-valule'],
             ],
           ];
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
           $form['typography']['headings'][$tag.'_margin_holder'][$tag.'_margin_top'] = [
             '#title' => t('Margin (top, bottom)'),
             '#type' => 'textfield',
             '#default_value' => $margin_top_value,
           ];
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
           $form['typography']['headings'][$tag.'_margin_holder'][$tag.'_margin_bottom'] = [
             '#type' => 'textfield',
             '#default_value' => $margin_bottom_value,
           ];
-<<<<<<< HEAD
 
 
-=======
-          
-        
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
           $form['typography']['headings'][$tag.'_margin_holder'][$tag.'_margin_unit'] = [
             '#type' => 'textfield',
             '#type' => 'select',
             '#options' => $arr_units,
             '#default_value' => $margin_unit_value,
           ];
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
 
         $form['typography']['headings'][$tag.'_line_height'] = [
             '#type' => 'textfield',
@@ -537,43 +480,23 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
             '#default_value' => $font_size_unit_value,
         ];
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
         $form['typography']['text_elements'][$tag.'_margin_holder'] = [
             '#type' => 'container',
             '#attributes' => [
                 'class' => ['container-inline', 'unit-combo-field', 'multi-valule'],
             ],
           ];
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
           $form['typography']['text_elements'][$tag.'_margin_holder'][$tag.'_margin_top'] = [
             '#title' => t('Margin (top, bottom)'),
             '#type' => 'textfield',
             '#default_value' => $margin_top_value,
           ];
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
           $form['typography']['text_elements'][$tag.'_margin_holder'][$tag.'_margin_bottom'] = [
             '#type' => 'textfield',
             '#default_value' => $margin_bottom_value,
           ];
-<<<<<<< HEAD
 
 
-=======
-          
-        
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
           $form['typography']['text_elements'][$tag.'_margin_holder'][$tag.'_margin_unit'] = [
             '#type' => 'textfield',
             '#type' => 'select',
@@ -581,13 +504,6 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
             '#default_value' => $margin_unit_value,
           ];
 
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
         $form['typography']['text_elements'][$tag.'_line_height'] = [
             '#type' => 'textfield',
             '#title' => t('Line height'),
@@ -671,7 +587,6 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
       '#title' => t('Buttons'),
   ];
 
-<<<<<<< HEAD
 
 
 
@@ -693,14 +608,6 @@ $form['typography']['buttons']['button_font_weight'] = [
 
 
 
-=======
-    $form['decorations'] = [
-        '#type' => 'details',
-        '#title' => t('Styling'),
-        '#summary' => t('Borders, shadows etc.'),
-        '#group' => 'iq_theme',
-    ];
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
 
 $form['typography']['buttons']['button_font_size_holder'] = [
     '#type' => 'container',
@@ -709,145 +616,11 @@ $form['typography']['buttons']['button_font_size_holder'] = [
     ]
 ];
 
-<<<<<<< HEAD
 $form['typography']['buttons']['button_font_size_holder']['button_font_size'] = [
     '#type' => 'textfield',
     '#title' => t('Font size'),
     '#default_value' => theme_get_setting('button_font_size'),
 ];
-=======
-  $form['decorations']['border'] = [
-      '#type' => 'details',
-      '#title' => t('Border'),
-  ];
-
-
-  $form['decorations']['border']['border_width_holder'] = [
-    '#type' => 'container',
-    '#attributes' => [
-        'class' => ['container-inline', 'unit-combo-field'],
-      ]
-  ];
-
-  $form['decorations']['border']['border_width_holder']['border_width'] = [
-    '#type' => 'textfield',
-    '#title' => t('Border Width'),
-    '#default_value' => theme_get_setting('border_width') ? theme_get_setting('border_width') : '1',
-  ];
-
-  $form['decorations']['border']['border_width_holder']['border_width_unit'] = [
-    '#type' => 'textfield',
-    '#type' => 'select',
-    '#options' => $arr_units,
-    '#default_value' => theme_get_setting('border_width_unit') ? theme_get_setting('border_width_unit') : '1',
-  ];
-
-  $form['decorations']['border']['border_color'] = [
-    '#type' => 'select',
-    '#title' => t('Border color'),
-    '#options' => $arr_colors,
-    '#default_value' => theme_get_setting('border_color') ? theme_get_setting('border_color') : 'primary',
-];
-
-  $form['decorations']['border']['radius_holder'] = [
-    '#type' => 'container',
-    '#attributes' => [
-        'class' => ['container-inline', 'unit-combo-field'],
-      ]
-  ];
-
-  $form['decorations']['border']['radius_holder']['radius'] = [
-    '#type' => 'textfield',
-    '#title' => t('Border Radius'),
-    '#default_value' => theme_get_setting('radius') ? theme_get_setting('radius') : '1',
-  ];
-
-  $form['decorations']['border']['radius_holder']['radius_unit'] = [
-    '#type' => 'textfield',
-    '#type' => 'select',
-    '#options' => $arr_units,
-    '#default_value' => theme_get_setting('radius_unit') ? theme_get_setting('radius_unit') : '1',
-  ];
-
-
-  $form['decorations']['margins_paddings'] = [
-    '#type' => 'details',
-    '#title' => t('Margins & Paddings'),
-  ];
-
-
-  $form['decorations']['margins_paddings']['margin'] = [
-    '#type' => 'container',
-    '#attributes' => [
-        'class' => ['container-inline', 'unit-combo-field', 'multi-valule'],
-    ],
-  ];
-
-  $form['decorations']['margins_paddings']['margin']['margin_top'] = [
-    '#title' => t('Margin (Top, right, bottom, left)'),
-    '#type' => 'textfield',
-    '#default_value' => theme_get_setting('margin_top') ? theme_get_setting('margin_top') : '30',
-  ];
-
-  $form['decorations']['margins_paddings']['margin']['margin_right'] = [
-    '#type' => 'textfield',
-    '#default_value' => theme_get_setting('margin_right') ? theme_get_setting('margin_right') : '30',
-  ];
-
-  $form['decorations']['margins_paddings']['margin']['margin_bottom'] = [
-    '#type' => 'textfield',
-    '#default_value' => theme_get_setting('margin_bottom') ? theme_get_setting('margin_bottom') : '30',
-  ];
-  
-  $form['decorations']['margins_paddings']['margin']['margin_left'] = [
-    '#type' => 'textfield',
-    '#default_value' => theme_get_setting('margin_left') ? theme_get_setting('margin_left') : '30',
-  ];
-
-  $form['decorations']['margins_paddings']['margin']['margin_unit'] = [
-    '#type' => 'textfield',
-    '#type' => 'select',
-    '#options' => $arr_units,
-    '#default_value' => theme_get_setting('margin_unit') ? theme_get_setting('margin_unit') : '1',
-  ];
-
-
-
-  $form['decorations']['margins_paddings']['padding'] = [
-    '#type' => 'container',
-    '#attributes' => [
-        'class' => ['container-inline', 'unit-combo-field', 'multi-valule'],
-    ],
-  ];
-
-  $form['decorations']['margins_paddings']['padding']['padding_top'] = [
-    '#title' => t('Padding (Top, right, bottom, left)'),
-    '#type' => 'textfield',
-    '#default_value' => theme_get_setting('padding_top') ? theme_get_setting('padding_top') : '30',
-  ];
-
-  $form['decorations']['margins_paddings']['padding']['padding_right'] = [
-    '#type' => 'textfield',
-    '#default_value' => theme_get_setting('padding_right') ? theme_get_setting('padding_right') : '30',
-  ];
-
-  $form['decorations']['margins_paddings']['padding']['padding_bottom'] = [
-    '#type' => 'textfield',
-    '#default_value' => theme_get_setting('padding_bottom') ? theme_get_setting('padding_bottom') : '30',
-  ];
-  
-  $form['decorations']['margins_paddings']['padding']['padding_left'] = [
-    '#type' => 'textfield',
-    '#default_value' => theme_get_setting('padding_left') ? theme_get_setting('padding_left') : '30',
-  ];
-
-  $form['decorations']['margins_paddings']['padding']['padding_unit'] = [
-    '#type' => 'textfield',
-    '#type' => 'select',
-    '#options' => $arr_units,
-    '#default_value' => theme_get_setting('padding_unit') ? theme_get_setting('padding_unit') : '1',
-  ];
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
 
 $form['typography']['buttons']['button_font_size_holder']['button_font_size_unit'] = [
     '#type' => 'select',
@@ -855,7 +628,6 @@ $form['typography']['buttons']['button_font_size_holder']['button_font_size_unit
     '#default_value' => theme_get_setting('button_font_size_unit'),
 ];
 
-<<<<<<< HEAD
 $form['typography']['buttons']['button_line_height'] = [
   '#type' => 'textfield',
   '#title' => t('Line height'),
@@ -1195,8 +967,6 @@ $form['typography']['buttons']['button_title'] = [
   ];
 
 
-=======
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
     $form['#submit'][] = 'iq_barrio_form_system_theme_settings_submit';
 
 }
@@ -1237,11 +1007,6 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
         'color_page_background_footer' => $form_state->getValue('color_page_background_footer'),
         'color_page_font_footer' => $form_state->getValue('color_page_font_footer'),
         'color_page_background_elements' => $form_state->getValue('color_page_background_elements'),
-<<<<<<< HEAD
-
-=======
-      
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
         'h1_font_family' => $form_state->getValue('h1_font_family'),
         'h1_color' => $form_state->getValue('h1_color'),
         'h1_font_size' => $form_state->getValue('h1_font_size'),
@@ -1330,18 +1095,13 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
         'lead_font_weight' => $form_state->getValue('lead_font_weight'),
         'lead_margin_top' => $form_state->getValue('lead_margin_top'),
         'lead_margin_bottom' => $form_state->getValue('lead_margin_bottom'),
-<<<<<<< HEAD
         'lead_margin_unit' => $form_state->getValue('lead_margin_unit'),
-=======
-        'lead_margin_unit' => $form_state->getValue('lead_margin_unit'),   
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
 
         'link_color' => $form_state->getValue('link_color'),
         'link_text_decoration' => $form_state->getValue('link_text_decoration'),
         'link_color_hover' => $form_state->getValue('link_color_hover'),
         'link_text_decoration_hover' => $form_state->getValue('link_text_decoration_hover'),
 
-<<<<<<< HEAD
 
 
         'button_font_family' => $form_state->getValue('button_font_family'),
@@ -1377,8 +1137,6 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
 
 
 
-=======
->>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
         'border_width' => $form_state->getValue('border_width'),
         'border_width_unit' => $form_state->getValue('border_width_unit'),
         'border_color' => $form_state->getValue('border_color'),
