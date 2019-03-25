@@ -1,0 +1,42 @@
+<<<<<<< HEAD
+=======
+/* Header navigation (navigation-header.sass) */
+/*************** BASE DEFINITIONS ***************/
+/*************** COLOR DEFINITIONS ***************/
+/* Simple grey scale */
+/* Base colors */
+/* Content text colors */
+/* Elements colors normal state (e.g. button) */
+/* Elements colors hover state (e.g. button) */
+/* Elements colors active state (e.g. button) */
+/*************** FONT DEFINITIONS ***************/
+/* Global settings */
+/* Headings */
+/* Content */
+/* Margins &  paddings */
+/* Title margins */
+/*************** BORDER DEFINITIONS ***************/
+/*************** OTHER DEFINITIONS ***************/
+/* Legacy variables */
+/* line 4, ../sass/navigation-header.scss */
+.menu--header ul.menu {
+  display: inline-block;
+  float: right;
+}
+/* line 8, ../sass/navigation-header.scss */
+.menu--header a {
+  color: #fff;
+}
+/* line 12, ../sass/navigation-header.scss */
+.menu--header .menu-item {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-align: center;
+  list-style: none;
+  margin-left: 10px;
+}
+/* line 18, ../sass/navigation-header.scss */
+.menu--header .menu-item a.is-active {
+  color: #fff;
+}
+>>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
