@@ -1,12 +1,34 @@
-/* line 1, ../sass/layout.scss */
-.site-footer .block {
-  border: none !important;
-  padding: 0 !important;
-}
-
-/* line 6, ../sass/layout.scss */
+/*************** BASE DEFINITIONS ***************/
+/*************** COLOR DEFINITIONS ***************/
+/* Base colors */
+/*************** FONT DEFINITIONS ***************/
+/* Headings */
+/* Content */
+/* Margins &  paddings */
+/* Title margins */
+/*************** BORDER DEFINITIONS ***************/
+/*************** OTHER DEFINITIONS ***************/
+/* Legacy variables */
+/* Content text colors */
+/* Elements colors normal state (e.g. button) */
+/* Elements colors hover state (e.g. button) */
+/* Elements colors active state (e.g. button) */
+/* line 4, ../sass/layout.scss */
 .pd-content .row {
   max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/* line 11, ../sass/layout.scss */
+.pd-content .row.fullwidth {
+  max-width: none;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+/* line 17, ../sass/layout.scss */
+.pd-content .row.nogutter [class*="col"] {
+  padding-left: 0;
+  padding-right: 0;
 }

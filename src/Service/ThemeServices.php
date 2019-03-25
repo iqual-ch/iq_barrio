@@ -6,25 +6,20 @@ class ThemeServices {
 		$definition_content = "";
 
 		if(file_exists($definition_file)) {
-			$handle = fopen($definition_file, "r+");
-			$definition_content = fread($handle, filesize($definition_file));
-			fclose($handle);
+
+			$definition_content = file_get_contents($definition_file.'.txt');
 
 
-
-
-
-			foreach ($settings_arr as $setting_param => $setting_value) {
-
-				\Drupal::logger('theme')->notice($setting_param . " | " . $setting_value);
-
-				$definition_content = preg_replace('/(\\$'.$setting_param.':)(.*)(;.*)/', "$1".$setting_value."$3", $definition_content);
-			}
+			$definition_content = preg_replace_callback('/\{{(\w+)}}/', function($match) use ($settings_arr){
+				$matched = $match[0];
+				$name = $match[1];
+				return isset($settings_arr[$name]) ? $settings_arr[$name] : $matched;
+			}, $definition_content);  
 
 
 			\Drupal::logger('theme')->notice("final css: " . $definition_content);
 
-//			file_put_contents($definition_file, $definition_content);
+			file_put_contents($definition_file, $definition_content);
 		}
 	}
 

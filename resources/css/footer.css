@@ -1,62 +1,33 @@
 /*************** BASE DEFINITIONS ***************/
 /*************** COLOR DEFINITIONS ***************/
-/* Simple grey scale */
 /* Base colors */
+/*************** FONT DEFINITIONS ***************/
+/* Headings */
+/* Content */
+/* Margins &  paddings */
+/* Title margins */
+/*************** BORDER DEFINITIONS ***************/
+/*************** OTHER DEFINITIONS ***************/
+/* Legacy variables */
 /* Content text colors */
 /* Elements colors normal state (e.g. button) */
 /* Elements colors hover state (e.g. button) */
 /* Elements colors active state (e.g. button) */
-/*************** FONT DEFINITIONS ***************/
-/* Font families */
-/* Font Sizes */
-/*************** MARGIN DEFINITIONS ***************/
-/* Template paddings */
-/* Title margins */
-/*************** BORDER DEFINITIONS ***************/
-/*************** OTHER DEFINITIONS ***************/
-/* line 3, ../sass/footer.scss */
-footer {
-  color: #fff;
-  background: #fff;
-  font-size: 25px;
-  padding: 20px 0 20px;
-}
-/* line 9, ../sass/footer.scss */
-footer .iqbm-text h4 {
-  color: #004279;
-  font-size: 25px;
-}
-/* line 13, ../sass/footer.scss */
-footer .iqbm-text a {
-  color: #004279;
-}
-/* line 15, ../sass/footer.scss */
-footer .iqbm-text a:visited {
-  color: #dbdbdb;
-}
-/* line 19, ../sass/footer.scss */
-footer .iqbm-text ul {
-  margin: 0;
-  list-style: none;
+/* line 8, ../sass/footer.scss */
+footer.site-footer .block {
   padding: 0;
+  border: none;
+  margin: 0;
 }
-/* line 23, ../sass/footer.scss */
-footer .iqbm-text ul li:before {
-  content: "\f101";
-  font-family: "FontAwesome";
-  padding-right: 5px;
-  color: #00829d;
+
+/* line 15, ../sass/footer.scss */
+.site-footer {
+  color: #fff;
+  background: #000;
+  padding: 30px 0 30px;
+  font-family: inherit;
 }
-/* line 31, ../sass/footer.scss */
-footer a {
-  color: #004279;
-}
-/* line 33, ../sass/footer.scss */
-footer a:visited {
-  color: #004279;
-}
-/* line 36, ../sass/footer.scss */
-footer a:hover {
-  color: #004279;
-  text-decoration: none;
+/* line 20, ../sass/footer.scss */
+.site-footer * {
+  color: #fff;
 }

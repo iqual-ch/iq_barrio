@@ -1,0 +1,241 @@
+/*************** BASE DEFINITIONS ***************/
+$min-viewport-width:                  320px;
+$max-viewport-width:                  1280px;
+$size-ratio:                          1.25; //Settable (selection, see http://type-scale.com/, scale)
+
+/*************** COLOR DEFINITIONS ***************/
+$color-black:                         #000;
+$color-white:                         #fff;
+$color-grey1:                         {{color_grey1}};
+$color-grey2:                         {{color_grey2}};
+$color-grey3:                         {{color_grey3}};
+$color-grey4:                         {{color_grey4}};
+$color-grey5:                         {{color_grey5}};
+$color-primary:                       {{color_primary}};
+$color-secondary:                     {{color_secondary}};
+$color-tertiary:                      {{color_tertiary}};
+$color-quaternary:                    {{color_quaternary}};
+
+/* Base colors */
+$color-background-page:               $color-{{color_page_background}};
+
+$color-background-header:             $color-{{color_page_background_header}};
+$color-font-header:                   $color-{{color_page_font_header}};
+
+$color-background-footer:             $color-{{color_page_background_footer}};
+$color-font-footer:                   $color-{{color_page_font_footer}};
+
+
+
+/*************** FONT DEFINITIONS ***************/
+
+/* Headings */
+$font-size-h1:                        {{h1_font_size}}{{h1_font_size_unit}};
+$line-height-h1:                      {{h1_line_height}};
+$font-weight-h1:                      {{h1_font_weight}};
+$color-h1:                            $color-{{h1_color}};
+$font-family-h1:                      {{h1_font_family}};
+$margin-top-h1:                       {{h1_margin_top}}{{h1_margin_unit}};
+$margin-bottom-h1:                    {{h1_margin_bottom}}{{h1_margin_unit}};
+
+$font-size-h2:                        {{h2_font_size}}{{h2_font_size_unit}};
+$line-height-h2:                      {{h2_line_height}};
+$font-weight-h2:                      {{h2_font_weight}};
+$color-h2:                            $color-{{h2_color}};
+$font-family-h2:                      {{h2_font_family}};
+$margin-top-h2:                       {{h2_margin_top}}{{h2_margin_unit}};
+$margin-bottom-h2:                    {{h2_margin_bottom}}{{h2_margin_unit}};
+
+$font-size-h3:                        {{h3_font_size}}{{h3_font_size_unit}};
+$line-height-h3:                      {{h3_line_height}};
+$font-weight-h3:                      {{h3_font_weight}};
+$color-h3:                            $color-{{h3_color}};
+$font-family-h3:                      {{h3_font_family}};
+$margin-top-h3:                       {{h3_margin_top}}{{h3_margin_unit}};
+$margin-bottom-h3:                    {{h3_margin_bottom}}{{h3_margin_unit}};
+
+$font-size-h4:                        {{h4_font_size}}{{h4_font_size_unit}};
+$line-height-h4:                      {{h4_line_height}};
+$font-weight-h4:                      {{h4_font_weight}};
+$color-h4:                            $color-{{h4_color}};
+$font-family-h4:                      {{h4_font_family}};
+$margin-top-h4:                       {{h4_margin_top}}{{h4_margin_unit}};
+$margin-bottom-h4:                    {{h4_margin_bottom}}{{h4_margin_unit}};
+
+$font-size-h5:                        {{h5_font_size}}{{h5_font_size_unit}};
+$line-height-h5:                      {{h5_line_height}};
+$font-weight-h5:                      {{h5_font_weight}};
+$color-h5:                            $color-{{h5_color}};
+$font-family-h5:                      {{h5_font_family}};
+$margin-top-h5:                       {{h5_margin_top}}{{h5_margin_unit}};
+$margin-bottom-h5:                    {{h5_margin_bottom}}{{h5_margin_unit}};
+
+$font-size-h6:                        {{h6_font_size}}{{h6_font_size_unit}};
+$line-height-h6:                      {{h6_line_height}};
+$font-weight-h6:                      {{h6_font_weight}};
+$color-h6:                            $color-{{h6_color}};
+$font-family-h6:                      {{h6_font_family}};
+$margin-top-h6:                       {{h6_margin_top}}{{h6_margin_unit}};
+$margin-bottom-h6:                    {{h6_margin_bottom}}{{h6_margin_unit}};
+
+
+/* Content */
+$font-size-standard:                      {{standard_font_size}}{{standard_font_size_unit}};
+$line-height-standard:                    {{standard_line_height}};
+$font-weight-standard:                    {{standard_font_weight}};
+$color-standard:                          $color-{{standard_color}};
+$font-family-standard:                    {{standard_font_family}};
+$margin-top-standard:                 {{standard_margin_top}}{{standard_margin_unit}};
+$margin-bottom-standard:              {{standard_margin_bottom}}{{standard_margin_unit}};
+
+$color-link:                         $color-{{link_color}};
+$color-link-hover:                   $color-{{link_color_hover}};
+$text-decoration-link:                {{link_text_decoration}};
+$text-decoration-link-hover:          {{link_text_decoration_hover}};
+
+$font-size-small:                     {{small_font_size}}{{small_font_size_unit}};
+$line-height-small:                   {{small_line_height}};
+$font-weight-small:                   {{small_font_weight}};
+$color-small:                         $color-{{small_color}};
+$font-family-small:                   {{small_font_family}};
+$margin-top-small:                    {{small_margin_top}}{{small_margin_unit}};
+$margin-bottom-small:                 {{small_margin_bottom}}{{small_margin_unit}};
+
+$font-size-lead:                      {{lead_font_size}}{{lead_font_size_unit}};
+$line-height-lead:                    {{lead_line_height}};
+$font-weight-lead:                    {{lead_font_weight}};
+$color-lead:                          $color-{{lead_color}};
+$font-family-lead:                    {{lead_font_family}};
+$margin-top-lead:                     {{lead_margin_top}}{{lead_margin_unit}};
+$margin-bottom-lead:                  {{lead_margin_bottom}}{{lead_margin_unit}};
+
+$font-size-buttons:                   {{button_font_size}}{{button_font_size_unit}};
+$line-height-buttons:                 {{standard_line_height}};
+$font-weight-buttons:                 {{button_font_weight}};
+$font-family-buttons:                 {{button_font_family}};
+$margin-buttons:                      {{button_margin_top}}{{button_margin_unit}} {{button_margin_right}}{{button_margin_unit}} {{button_margin_bottom}}{{button_margin_unit}} {{button_margin_left}}{{button_margin_unit}};
+$padding-buttons:                     {{button_padding_top}}{{button_padding_unit}} {{button_padding_right}}{{button_padding_unit}} {{button_padding_bottom}}{{button_padding_unit}} {{button_padding_left}}{{button_padding_unit}};
+$font-color-buttons:                  $color-{{button_font_color_standard}};
+$background-color-buttons:            $color-{{button_background_color_standard}};
+$border-color-buttons:                $color-{{button_border_color_standard}};
+$font-color-hover-buttons:            $color-{{button_font_color_hover}};
+$background-color-hover-buttons:      $color-{{button_background_color_hover}};
+$border-color-hover-buttons:          $color-{{button_border_color_hover}};
+$font-color-active-buttons:           $color-{{button_font_color_active}};
+$background-color-active-buttons:     $color-{{button_background_color_active}};
+$border-color-active-buttons:         $color-{{button_border_color_active}};
+
+
+
+/* Margins &  paddings */
+$base-margin-top:                     {{margin_top}}{{margin_unit}};
+$base-margin-bottom:                  {{margin_bottom}}{{margin_unit}};
+$base-margin-left:                    {{margin_left}}{{margin_unit}};
+$base-margin-right:                   {{margin_right}}{{margin_unit}};
+$base-margin:                         $base-margin-top $base-margin-right $base-margin-bottom $base-margin-left;
+
+$base-padding-top:                    {{padding_top}}{{padding_unit}};
+$base-padding-bottom:                 {{padding_bottom}}{{padding_unit}};
+$base-padding-left:                   {{padding_left}}{{padding_unit}};
+$base-padding-right:                  {{padding_right}}{{padding_unit}};
+$base-padding:                        $base-padding-top $base-padding-right $base-padding-bottom $base-padding-left;
+
+
+$padding-field-default: 5px 20px;
+
+// Helper function
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+// Fluid typography
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+/* Title margins */
+
+
+/*************** BORDER DEFINITIONS ***************/
+$border-radius-base:  {{radius}}{{radius_unit}}; //Settable (value, 0-50%)
+$border-width-base:   {{border_width}}{{border_width_unit}}; //Settable (value, 1-10px)
+$border-color-base:   $color-{{border_color}};
+
+/*************** OTHER DEFINITIONS ***************/
+$transition-default: all 0.2s ease;
+
+
+
+
+
+
+
+/* Legacy variables */
+$color-darkest:                       $color-black;
+$color-darker:                        $color-grey1;
+$color-dark:                          $color-grey2;
+$color-medium:                        $color-grey3;
+$color-light:                         $color-grey4;
+$color-lighter:                       $color-grey5;
+$color-lightest:                      $color-white;
+
+$margin-top-base:                     $base-margin-top;
+$margin-bottom-base:                  $base-margin-bottom;
+$margin-left-base:                    $base-margin-left;
+$margin-right-base:                   $base-margin-right;
+$margin-base:                         $margin-bottom-base;
+
+$padding-top-base:                    $base-padding-top;
+$padding-bottom-base:                 $base-padding-bottom;
+$padding-left-base:                   $base-padding-left;
+$padding-right-base:                  $base-padding-right;
+$padding-base:                        $padding-bottom-base;
+
+/* Content text colors */
+$color-text-titles:                   $color-{{h1_color}};
+$color-text-content:                  $color-{{standard_color}};
+$color-text-links:                    $color-{{link_color}};
+$color-text-icons:                    $color-{{color_icons}};
+
+/* Elements colors normal state (e.g. button) */
+$color-text-elements:                 $font-color-buttons; //Settable (value)
+$color-background-elements:           $background-color-buttons; //Settable (value)
+$color-border-elements:               $border-color-buttons; //Settable (value)
+
+/* Elements colors hover state (e.g. button) */
+$color-text-elements-hover:           $font-color-hover-buttons; //Settable (value)
+$color-background-elements-hover:     $background-color-hover-buttons; //Settable (value)
+$color-border-elements-hover:         $border-color-hover-buttons;; //Settable (value)
+
+/* Elements colors active state (e.g. button) */
+$color-text-elements-active:          $font-color-active-buttons;
+$color-background-elements-active:    $background-color-active-buttons;
+$color-border-elements-active:        $border-color-active-buttons;;
+
+$color-background-content:            $color-background-page;
+
+$font-size-base:                      $font-size-standard;
+$line-height-base:                    $line-height-standard;
+$font-weight-base:                    $font-weight-standard;
+$color-base:                          $color-standard;
+$font-family-base:                    $font-family-standard;
+
+$font-family-titles:                  $font-family-h1; 
+$font-family-content:                 $font-family-base; 

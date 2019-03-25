@@ -1,0 +1,100 @@
+/*************** BASE DEFINITIONS ***************/
+/*************** COLOR DEFINITIONS ***************/
+/* Base colors */
+/*************** FONT DEFINITIONS ***************/
+/* Headings */
+/* Content */
+/* Margins &  paddings */
+/* Title margins */
+/*************** BORDER DEFINITIONS ***************/
+/*************** OTHER DEFINITIONS ***************/
+/* Legacy variables */
+/* Content text colors */
+/* Elements colors normal state (e.g. button) */
+/* Elements colors hover state (e.g. button) */
+/* Elements colors active state (e.g. button) */
+/* line 4, ../sass/admin.scss */
+.container-inline {
+  position: relative;
+  padding-top: calc( 16px + 0.2em );
+  margin: 0.75em 0;
+}
+/* line 8, ../sass/admin.scss */
+.container-inline .form-item {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* line 11, ../sass/admin.scss */
+.container-inline .form-item label {
+  display: block;
+  position: absolute;
+  top: 0;
+}
+/* line 16, ../sass/admin.scss */
+.container-inline .form-item input.form-text {
+  width: 32px;
+  padding-right: 0;
+  padding-left: 0.25rem;
+}
+/* line 21, ../sass/admin.scss */
+.container-inline .form-item select {
+  width: 57px;
+}
+
+/* line 27, ../sass/admin.scss */
+.styling-row {
+  display: flex;
+  width: 100%;
+  margin-bottom: 45px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid #ccc;
+}
+/* line 34, ../sass/admin.scss */
+.styling-row:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+/* line 40, ../sass/admin.scss */
+.styling-row .styling-input {
+  width: 460px;
+  display: flex;
+  flex-flow: wrap;
+}
+/* line 44, ../sass/admin.scss */
+.styling-row .styling-input > div {
+  display: inline;
+  padding-right: 30px;
+  width: 200px;
+}
+/* line 49, ../sass/admin.scss */
+.styling-row .styling-input > div.line-break {
+  height: 1px;
+  width: 100%;
+}
+/* line 56, ../sass/admin.scss */
+.styling-row .styling-preview {
+  width: calc( 100% - 485px );
+  border: 1px solid #eee;
+  padding: 10px;
+  background-color: #fff;
+  position: relative;
+}
+/* line 65, ../sass/admin.scss */
+.styling-row .styling-preview:before {
+  content: 'Preview';
+  font-size: 10px;
+  display: block;
+  position: absolute;
+  top: -15px;
+  left: 0;
+}
+
+/* line 77, ../sass/admin.scss */
+.unit-combo-field label {
+  display: block !important;
+}
+/* line 80, ../sass/admin.scss */
+.unit-combo-field input[type="text"] {
+  width: 75px;
+}

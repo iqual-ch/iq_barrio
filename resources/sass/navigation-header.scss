@@ -1,22 +1,22 @@
-/* Header navigation (navigation-header.sass) */
-@import "definitions";
-.menu--header {
-	ul.menu {
-   		display: inline-block;
-    	float:right;
-   	}
-   	a{
-		color:#fff;
+// /* Header navigation (navigation-header.sass) */
+// @import "definitions";
+// .menu--header {
+// 	ul.menu {
+//    		display: inline-block;
+//     	float:right;
+//    	}
+//    	a{
+// 		color:#fff;
 
-	}
-    .menu-item {
-	  display: inline-block;
-	  font-size: $font-size-small;
-	  text-align: center;
-	  list-style: none;
-	  margin-left: 10px;
-	  a.is-active{
-	  	color:#fff;
-	  }
-	}
-}
+// 	}
+//     .menu-item {
+// 	  display: inline-block;
+// 	  font-size: $font-size-small;
+// 	  text-align: center;
+// 	  list-style: none;
+// 	  margin-left: 10px;
+// 	  a.is-active{
+// 	  	color:#fff;
+// 	  }
+// 	}
+// }
