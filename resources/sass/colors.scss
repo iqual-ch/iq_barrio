@@ -1,10 +1,10 @@
-// /* ---------- Color Module Styles ----------- */
+/* ---------- Color Module Styles ----------- */
+@import "definitions";
 
-// @import "definitions";
-// body {
-//   color: $color-text-content;
-//   background: $color-background-content;
-// }
+body {
+  color: $color-standard;
+  background: $color-background-page;
+}
 
 // .site-footer {
 //   background: $color-background-footer;
