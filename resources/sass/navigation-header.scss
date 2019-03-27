@@ -1,5 +1,31 @@
-// /* Header navigation (navigation-header.sass) */
-// @import "definitions";
+/* Header navigation (navigation-header.sass) */
+@import "definitions";
+
+nav.navbar{
+  background-color: $color-background-navbar;
+  *{
+    color: $color-font-navbar;
+  }
+  .dropdown-menu{
+    border-radius:    $border-radius-base;
+    border-width:     $border-width-base;
+    border-color:     $border-color-base;
+    background-color: $color-background-nav-dropdown;
+
+    *{
+      color: $color-font-nav-dropdown;
+    }
+
+    .dropdown-item:focus, .dropdown-item:hover {
+      background-color: $color-background-nav-dropdown-hover;
+      * {
+        color:  $color-font-nav-dropdown-hover;
+      }
+    }
+  }
+}
+
+
 // .menu--header {
 // 	ul.menu {
 //    		display: inline-block;

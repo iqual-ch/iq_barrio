@@ -22,6 +22,15 @@ $color-background-page:               $color-{{color_page_background}};
 $color-background-header:             $color-{{color_page_background_header}};
 $color-font-header:                   $color-{{color_page_font_header}};
 
+$color-background-navbar:             $color-{{color_page_background_navbar}};
+$color-font-navbar:                   $color-{{color_page_font_navbar}};
+
+$color-background-nav-dropdown:       $color-{{color_page_background_nav_dropdown}};
+$color-font-nav-dropdown:             $color-{{color_page_font_nav_dropdown}};
+
+$color-background-nav-dropdown-hover: $color-{{color_page_background_nav_dropdown_hover}};
+$color-font-nav-dropdown-hover:       $color-{{color_page_font_nav_dropdown_hover}};
+
 $color-background-footer:             $color-{{color_page_background_footer}};
 $color-font-footer:                   $color-{{color_page_font_footer}};
 
@@ -80,16 +89,16 @@ $margin-bottom-h6:                    {{h6_margin_bottom}}{{h6_margin_unit}};
 
 
 /* Content */
-$font-size-standard:                      {{standard_font_size}}{{standard_font_size_unit}};
-$line-height-standard:                    {{standard_line_height}};
-$font-weight-standard:                    {{standard_font_weight}};
-$color-standard:                          $color-{{standard_color}};
-$font-family-standard:                    {{standard_font_family}};
+$font-size-standard:                  {{standard_font_size}}{{standard_font_size_unit}};
+$line-height-standard:                {{standard_line_height}};
+$font-weight-standard:                {{standard_font_weight}};
+$color-standard:                      $color-{{standard_color}};
+$font-family-standard:                {{standard_font_family}};
 $margin-top-standard:                 {{standard_margin_top}}{{standard_margin_unit}};
 $margin-bottom-standard:              {{standard_margin_bottom}}{{standard_margin_unit}};
 
-$color-link:                         $color-{{link_color}};
-$color-link-hover:                   $color-{{link_color_hover}};
+$color-link:                          $color-{{link_color}};
+$color-link-hover:                    $color-{{link_color_hover}};
 $text-decoration-link:                {{link_text_decoration}};
 $text-decoration-link-hover:          {{link_text_decoration_hover}};
 
@@ -237,5 +246,5 @@ $font-weight-base:                    $font-weight-standard;
 $color-base:                          $color-standard;
 $font-family-base:                    $font-family-standard;
 
-$font-family-titles:                  $font-family-h1; 
-$font-family-content:                 $font-family-base; 
+$font-family-titles:                  $font-family-h1;
+$font-family-content:                 $font-family-base;
