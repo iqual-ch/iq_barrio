@@ -1,70 +1,147 @@
 /*************** BASE DEFINITIONS ***************/
-$min-viewport-width: 320px;
-$max-viewport-width: 1280px;
-$size-ratio: 1.25; //Settable (selection, see http://type-scale.com/, scale)
+$min-viewport-width:                  320px;
+$max-viewport-width:                  1280px;
+$size-ratio:                          1.25; //Settable (selection, see http://type-scale.com/, scale)
 
 /*************** COLOR DEFINITIONS ***************/
-/* Simple grey scale */
-$color-darkest: #000; //Settable (selection: 000, 000001, 000100, 010000)
-$color-darker: lighten($color-darkest, 20);
-$color-dark: lighten($color-darkest, 40);
-$color-medium: lighten($color-darkest, 50);
-$color-light: lighten($color-darkest, 60);
-$color-lighter: lighten($color-darkest, 80);
-$color-lightest: lighten($color-darkest, 100);
+$color-black:                         #000;
+$color-white:                         #fff;
+$color-grey1:                         #333333;
+$color-grey2:                         #666666;
+$color-grey3:                         #999999;
+$color-grey4:                         #cccccc;
+$color-grey5:                         #eeeeee;
+$color-primary:                       #e95e27;
+$color-secondary:                     #009c82;
+$color-tertiary:                      #9c360d;
+$color-quaternary:                    #27e9c9;
 
 /* Base colors */
-$color-background-page: #fff; //Settable (value)
+$color-background-page:               $color-white;
 
-/* Content text colors */
-$color-text-titles: blue; //Settable (value)
-$color-text-content:#000; //Settable (value)
-$color-text-links: rgb(180, 0, 180); //Settable (value)
-$color-text-icons: rgb(0, 180, 180); //Settable (value)
+$color-background-header:             $color-grey5;
+$color-font-header:                   $color-grey3;
 
-/* Elements colors normal state (e.g. button) */
-$color-text-elements: #fff; //Settable (value)
-$color-background-elements: rgb(180, 0, 0); //Settable (value)
-$color-border-elements: rgb(180, 0, 0); //Settable (value)
+$color-background-footer:             $color-black;
+$color-font-footer:                   $color-white;
 
-/* Elements colors hover state (e.g. button) */
-$color-text-elements-hover: rgb(180, 0, 0); //Settable (value)
-$color-background-elements-hover: #fff; //Settable (value)
-$color-border-elements-hover: #fff; //Settable (value)
-
-/* Elements colors active state (e.g. button) */
-$color-text-elements-active: $color-text-elements-hover;
-$color-background-elements-active: $color-background-elements-hover;
-$color-border-elements-active: $color-border-elements-hover;
-
-$color-background-header: #000;
-$color-background-content: #fff;
-$color-background-footer: #000;
-$color-font-header:#fff;
-$color-font-footer:#fff;
 
 
 /*************** FONT DEFINITIONS ***************/
-/* Font families */
-$font-family-titles: Times, sans-serif; //Settable (selection)
-$font-family-content: Helvetica, sans-serif; //Settable (selection)
 
-/* Font Sizes */
-$font-size-base: 14px; //Settable (value)
-$font-size-h6: $font-size-base;
-$font-size-h5: $font-size-h6 * $size-ratio;
-$font-size-h4: $font-size-h5 * $size-ratio;
-$font-size-h3: $font-size-h4 * $size-ratio;
-$font-size-h2: $font-size-h3 * $size-ratio;
-$font-size-h1: $font-size-h2 * $size-ratio;
-$font-size-small: $font-size-base / $size-ratio;
+/* Headings */
+$font-size-h1:                        2.5rem;
+$line-height-h1:                      1.2;
+$font-weight-h1:                      700;
+$color-h1:                            $color-primary;
+$font-family-h1:                      'Open Sans', sans-serif;
+$margin-top-h1:                       2.5rem;
+$margin-bottom-h1:                    1.25rem;
 
-$font-weight-h6:bold;
-$font-weight-h5:normal;
-$font-weight-h4:normal;
-$font-weight-h3:normal;
-$font-weight-h2:normal;
-$font-weight-h1:normal;
+$font-size-h2:                        2rem;
+$line-height-h2:                      1.2;
+$font-weight-h2:                      400;
+$color-h2:                            $color-secondary;
+$font-family-h2:                      'Open Sans', sans-serif;
+$margin-top-h2:                       2rem;
+$margin-bottom-h2:                    1rem;
+
+$font-size-h3:                        1.75rem;
+$line-height-h3:                      1.2;
+$font-weight-h3:                      900;
+$color-h3:                            $color-tertiary;
+$font-family-h3:                      'Open Sans', sans-serif;
+$margin-top-h3:                       1.75rem;
+$margin-bottom-h3:                    0.875rem;
+
+$font-size-h4:                        1.5rem;
+$line-height-h4:                      1.2;
+$font-weight-h4:                      100;
+$color-h4:                            $color-quaternary;
+$font-family-h4:                      'Open Sans', sans-serif;
+$margin-top-h4:                       1.5rem;
+$margin-bottom-h4:                    0.75rem;
+
+$font-size-h5:                        1.25rem;
+$line-height-h5:                      1.2;
+$font-weight-h5:                      100;
+$color-h5:                            $color-grey3;
+$font-family-h5:                      'Open Sans', sans-serif;
+$margin-top-h5:                       1.25rem;
+$margin-bottom-h5:                    0.625rem;
+
+$font-size-h6:                        1rem;
+$line-height-h6:                      1.2;
+$font-weight-h6:                      100;
+$color-h6:                            $color-black;
+$font-family-h6:                      'Open Sans', sans-serif;
+$margin-top-h6:                       1rem;
+$margin-bottom-h6:                    0.5rem;
+
+
+/* Content */
+$font-size-standard:                      1rem;
+$line-height-standard:                    1.5;
+$font-weight-standard:                    100;
+$color-standard:                          $color-grey3;
+$font-family-standard:                    'Open Sans', sans-serif;
+$margin-top-standard:                 1rem;
+$margin-bottom-standard:              0.5rem;
+
+$color-link:                         $color-primary;
+$color-link-hover:                   $color-primary;
+$text-decoration-link:                underline;
+$text-decoration-link-hover:          underline dotted;
+
+$font-size-small:                     0.75rem;
+$line-height-small:                   1.2;
+$font-weight-small:                   100;
+$color-small:                         $color-grey3;
+$font-family-small:                   'Open Sans', sans-serif;
+$margin-top-small:                    1rem;
+$margin-bottom-small:                 0.5rem;
+
+$font-size-lead:                      1rem;
+$line-height-lead:                    1.5;
+$font-weight-lead:                    700;
+$color-lead:                          $color-grey3;
+$font-family-lead:                    'Open Sans', sans-serif;
+$margin-top-lead:                     1rem;
+$margin-bottom-lead:                  0.5rem;
+
+$font-size-buttons:                   16px;
+$line-height-buttons:                 1.5;
+$font-weight-buttons:                 700;
+$font-family-buttons:                 'Open Sans', sans-serif;
+$margin-buttons:                      10px 10px 10px 10px;
+$padding-buttons:                     5px 20px 5px 20px;
+$font-color-buttons:                  $color-white;
+$background-color-buttons:            $color-primary;
+$border-color-buttons:                $color-black;
+$font-color-hover-buttons:            $color-white;
+$background-color-hover-buttons:      $color-secondary;
+$border-color-hover-buttons:          $color-black;
+$font-color-active-buttons:           $color-white;
+$background-color-active-buttons:     $color-tertiary;
+$border-color-active-buttons:         $color-black;
+
+
+
+/* Margins &  paddings */
+$base-margin-top:                     30px;
+$base-margin-bottom:                  30px;
+$base-margin-left:                    30px;
+$base-margin-right:                   30px;
+$base-margin:                         $base-margin-top $base-margin-right $base-margin-bottom $base-margin-left;
+
+$base-padding-top:                    30px;
+$base-padding-bottom:                 30px;
+$base-padding-left:                   30px;
+$base-padding-right:                  30px;
+$base-padding:                        $base-padding-top $base-padding-right $base-padding-bottom $base-padding-left;
+
+
+$padding-field-default: 5px 20px;
 
 // Helper function
 @function strip-unit($value) {
@@ -93,36 +170,72 @@ $font-weight-h1:normal;
   }
 }
 
-
-/*************** MARGIN DEFINITIONS ***************/
-$margin-base: 10px; //Settable (value)
-$margin-top-base: $margin-base * 2;
-$margin-bottom-base: $margin-base * 2;
-
-/* Template paddings */
-$padding-base:20px;
-$padding-top-base: $padding-base; //Settable (value)
-$padding-bottom-base: $padding-base;
-$padding-field-default: 5px 20px;
-
 /* Title margins */
-$margin-top-h6:0px;
-$margin-top-h5:0px;
-$margin-top-h4:0px;
-$margin-top-h3:0px;
-$margin-top-h2:0px;
-$margin-top-h1:0px;
 
-$margin-bottom-h6:0px;
-$margin-bottom-h5:0px;
-$margin-bottom-h4:0px;
-$margin-bottom-h3:$margin-base * $size-ratio;
-$margin-bottom-h2:$margin-base * $size-ratio;
-$margin-bottom-h1:$margin-base * $size-ratio;
 
 /*************** BORDER DEFINITIONS ***************/
-$border-radius-base: 0%; //Settable (value, 0-50%)
-$border-width-base: 1px; //Settable (value, 1-10px)
+$border-radius-base:  15%; //Settable (value, 0-50%)
+$border-width-base:   5px; //Settable (value, 1-10px)
+$border-color-base:   $color-tertiary;
 
 /*************** OTHER DEFINITIONS ***************/
 $transition-default: all 0.2s ease;
+
+
+
+
+
+
+
+/* Legacy variables */
+$color-darkest:                       $color-black;
+$color-darker:                        $color-grey1;
+$color-dark:                          $color-grey2;
+$color-medium:                        $color-grey3;
+$color-light:                         $color-grey4;
+$color-lighter:                       $color-grey5;
+$color-lightest:                      $color-white;
+
+$margin-top-base:                     $base-margin-top;
+$margin-bottom-base:                  $base-margin-bottom;
+$margin-left-base:                    $base-margin-left;
+$margin-right-base:                   $base-margin-right;
+$margin-base:                         $margin-bottom-base;
+
+$padding-top-base:                    $base-padding-top;
+$padding-bottom-base:                 $base-padding-bottom;
+$padding-left-base:                   $base-padding-left;
+$padding-right-base:                  $base-padding-right;
+$padding-base:                        $padding-bottom-base;
+
+/* Content text colors */
+$color-text-titles:                   $color-primary;
+$color-text-content:                  $color-grey3;
+$color-text-links:                    $color-primary;
+$color-text-icons:                    $color-primary;
+
+/* Elements colors normal state (e.g. button) */
+$color-text-elements:                 $font-color-buttons; //Settable (value)
+$color-background-elements:           $background-color-buttons; //Settable (value)
+$color-border-elements:               $border-color-buttons; //Settable (value)
+
+/* Elements colors hover state (e.g. button) */
+$color-text-elements-hover:           $font-color-hover-buttons; //Settable (value)
+$color-background-elements-hover:     $background-color-hover-buttons; //Settable (value)
+$color-border-elements-hover:         $border-color-hover-buttons;; //Settable (value)
+
+/* Elements colors active state (e.g. button) */
+$color-text-elements-active:          $font-color-active-buttons;
+$color-background-elements-active:    $background-color-active-buttons;
+$color-border-elements-active:        $border-color-active-buttons;;
+
+$color-background-content:            $color-background-page;
+
+$font-size-base:                      $font-size-standard;
+$line-height-base:                    $line-height-standard;
+$font-weight-base:                    $font-weight-standard;
+$color-base:                          $color-standard;
+$font-family-base:                    $font-family-standard;
+
+$font-family-titles:                  $font-family-h1; 
+$font-family-content:                 $font-family-base; 

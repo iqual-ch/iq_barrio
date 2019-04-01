@@ -2,7 +2,7 @@
 preferred_syntax = :scss
 
 # Where we want our CSS files to go
-css_dir = '../css'
+css_dir = '../../resources/css'
 
 # Where we want to put our source SASS Files
 sass_dir = '.'

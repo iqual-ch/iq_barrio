@@ -1,0 +1,153 @@
+/*************** BASE DEFINITIONS ***************/
+/*************** COLOR DEFINITIONS ***************/
+<<<<<<< HEAD
+/* Base colors */
+/*************** FONT DEFINITIONS ***************/
+=======
+/* Simple grey scale */
+/* Base colors */
+/* Content text colors */
+/* Elements colors normal state (e.g. button) */
+/* Elements colors hover state (e.g. button) */
+/* Elements colors active state (e.g. button) */
+/*************** FONT DEFINITIONS ***************/
+/* Global settings */
+>>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
+/* Headings */
+/* Content */
+/* Margins &  paddings */
+/* Title margins */
+/*************** BORDER DEFINITIONS ***************/
+/*************** OTHER DEFINITIONS ***************/
+/* Legacy variables */
+<<<<<<< HEAD
+/* Content text colors */
+/* Elements colors normal state (e.g. button) */
+/* Elements colors hover state (e.g. button) */
+/* Elements colors active state (e.g. button) */
+=======
+>>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
+/* line 4, ../sass/admin.scss */
+.container-inline {
+  position: relative;
+  padding-top: calc( 16px + 0.2em );
+  margin: 0.75em 0;
+}
+/* line 8, ../sass/admin.scss */
+.container-inline .form-item {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* line 11, ../sass/admin.scss */
+.container-inline .form-item label {
+  display: block;
+  position: absolute;
+  top: 0;
+}
+/* line 16, ../sass/admin.scss */
+.container-inline .form-item input.form-text {
+<<<<<<< HEAD
+  width: 32px;
+  padding-right: 0;
+  padding-left: 0.25rem;
+}
+/* line 21, ../sass/admin.scss */
+.container-inline .form-item select {
+  width: 57px;
+}
+
+/* line 27, ../sass/admin.scss */
+=======
+  width: 60px;
+}
+
+/* line 22, ../sass/admin.scss */
+>>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
+.styling-row {
+  display: flex;
+  width: 100%;
+  margin-bottom: 45px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid #ccc;
+}
+<<<<<<< HEAD
+/* line 34, ../sass/admin.scss */
+=======
+/* line 29, ../sass/admin.scss */
+>>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
+.styling-row:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+<<<<<<< HEAD
+/* line 40, ../sass/admin.scss */
+=======
+/* line 35, ../sass/admin.scss */
+>>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
+.styling-row .styling-input {
+  width: 460px;
+  display: flex;
+  flex-flow: wrap;
+}
+<<<<<<< HEAD
+/* line 44, ../sass/admin.scss */
+=======
+/* line 39, ../sass/admin.scss */
+>>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
+.styling-row .styling-input > div {
+  display: inline;
+  padding-right: 30px;
+  width: 200px;
+}
+<<<<<<< HEAD
+/* line 49, ../sass/admin.scss */
+=======
+/* line 44, ../sass/admin.scss */
+>>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
+.styling-row .styling-input > div.line-break {
+  height: 1px;
+  width: 100%;
+}
+<<<<<<< HEAD
+/* line 56, ../sass/admin.scss */
+=======
+/* line 51, ../sass/admin.scss */
+>>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
+.styling-row .styling-preview {
+  width: calc( 100% - 485px );
+  border: 1px solid #eee;
+  padding: 10px;
+  background-color: #fff;
+  position: relative;
+}
+<<<<<<< HEAD
+/* line 65, ../sass/admin.scss */
+=======
+/* line 60, ../sass/admin.scss */
+>>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
+.styling-row .styling-preview:before {
+  content: 'Preview';
+  font-size: 10px;
+  display: block;
+  position: absolute;
+  top: -15px;
+  left: 0;
+}
+
+<<<<<<< HEAD
+/* line 77, ../sass/admin.scss */
+.unit-combo-field label {
+  display: block !important;
+}
+/* line 80, ../sass/admin.scss */
+=======
+/* line 72, ../sass/admin.scss */
+.unit-combo-field label {
+  display: block !important;
+}
+/* line 75, ../sass/admin.scss */
+>>>>>>> f443772e12348ba82967bd064a9859eb6ec1a972
+.unit-combo-field input[type="text"] {
+  width: 75px;
+}

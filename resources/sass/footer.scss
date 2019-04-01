@@ -1,41 +1,63 @@
 @import 'definitions';
 
-footer {
-    color:$color-text-elements;
-    background: $color-background-page;
-    font-size: $font-size-h4;
-    padding: $padding-top-base 0 $padding-bottom-base;
-    .iqbm-text {
-         h4 {
-            color:$color-text-content;
-            font-size: $font-size-h4;
-        }
-        a{
-            color:$color-text-content;
-            &:visited{
-                color:#dbdbdb;
-            }
-        }
-        ul {
-            margin: 0;
-            list-style: none;
-            padding: 0;
-            li:before {
-                content:"\f101";
-                font-family: "FontAwesome";
-                padding-right: 5px;
-                color:#00829d;
-            }
-        }
-    }
-    a{
-        color:$color-text-links;
-        &:visited{
-           color:$color-text-links;
-        }
-        &:hover {
-            color:$color-text-links;
-            text-decoration: none;
-        }
-    }
+// section.region.region-footer-first{
+//   width: initial;
+//   float: none;
+// }
+
+footer.site-footer .block {
+    // width: 100%;
+    padding: 0;
+    border: none;
+    margin: 0;
 }
+
+.site-footer {
+   color: $color-font-footer;
+   background: $color-background-footer;
+  padding: $base-padding-top 0 $base-padding-bottom;
+    font-family: inherit;
+  * {
+    color: $color-font-footer;
+  }
+
+
+//   .col{
+//       background-color: rgba(255,255,255,0.05)
+//   }
+
+
+// //   .iqbm-text {
+// //     h4 {
+// //       color: $color-text-content;
+// //       font-size: $font-size-h4;
+// //     }
+// //     a {
+// //       color: $color-text-content;
+// //       &:visited {
+// //         color: #dbdbdb;
+// //       }
+// //     }
+// //     ul {
+// //       margin: 0;
+// //       list-style: none;
+// //       padding: 0;
+// //       li:before {
+// //         content: "\f101";
+// //         font-family: "FontAwesome";
+// //         padding-right: 5px;
+// //         color: #00829d;
+// //       }
+// //     }
+// //   }
+// //   a {
+// //     color: $color-text-links;
+// //     &:visited {
+// //       color: $color-text-links;
+// //     }
+// //     &:hover {
+// //       color: $color-text-links;
+// //       text-decoration: none;
+// //     }
+// //   }
+ }

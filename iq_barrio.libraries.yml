@@ -10,6 +10,14 @@ global-styling:
     component:
       resources/css/colors.css: {}
       resources/css/style.css: {}
+      resources/css/webforms.css: {}
+      resources/css/navigation.css: {}
+      resources/css/navigation-header.css: {}
+      resources/css/navigation-footer.css: {}
+      resources/css/language-switcher.css: {}
+      resources/css/footer.css: {}
+      resources/css/breadcrumbs.css: {}
+      resources/css/base.css: {}
   dependencies:
     - iq_barrio/bootstrap_cdn
 
@@ -20,3 +28,10 @@ bootstrap_cdn:
   css:
     component:
       //stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css: {}
+
+admin-style:
+  js:
+    resources/js/admin.js: {}
+  css:
+    layout:
+      resources/css/admin.css: {}

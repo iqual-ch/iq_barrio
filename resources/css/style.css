@@ -1,0 +1,136 @@
+/**
+ * @file
+ * Subtheme specific CSS.
+ */
+/*************** BASE DEFINITIONS ***************/
+/*************** COLOR DEFINITIONS ***************/
+/* Base colors */
+/*************** FONT DEFINITIONS ***************/
+/* Headings */
+/* Content */
+/* Margins &  paddings */
+/* Title margins */
+/*************** BORDER DEFINITIONS ***************/
+/*************** OTHER DEFINITIONS ***************/
+/* Legacy variables */
+/* Content text colors */
+/* Elements colors normal state (e.g. button) */
+/* Elements colors hover state (e.g. button) */
+/* Elements colors active state (e.g. button) */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+/* line 9, ../sass/style.scss */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* line 15, ../sass/style.scss */
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  color: #e95e27;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+/* line 25, ../sass/style.scss */
+h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  color: #009c82;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* line 35, ../sass/style.scss */
+h3 {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  font-weight: 900;
+  font-family: "Open Sans", sans-serif;
+  color: #9c360d;
+  margin-top: 1.75rem;
+  margin-bottom: 0.875rem;
+}
+
+/* line 45, ../sass/style.scss */
+h4 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 100;
+  font-family: "Open Sans", sans-serif;
+  color: #27e9c9;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* line 55, ../sass/style.scss */
+h5 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: 100;
+  font-family: "Open Sans", sans-serif;
+  color: #999999;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+/* line 65, ../sass/style.scss */
+h6 {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 100;
+  font-family: "Open Sans", sans-serif;
+  color: #000;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* line 75, ../sass/style.scss */
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 100;
+  font-family: "Open Sans", sans-serif;
+  color: #999999;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* line 85, ../sass/style.scss */
+.lead {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  color: #999999;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* line 95, ../sass/style.scss */
+.small, small {
+  font-size: 0.75rem;
+  line-height: 1.2;
+  font-weight: 100;
+  font-family: "Open Sans", sans-serif;
+  color: #999999;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* line 106, ../sass/style.scss */
+.iq-text a {
+  color: #e95e27;
+  text-decoration: underline;
+}
+/* line 110, ../sass/style.scss */
+.iq-text a:hover, .iq-text a:focus, .iq-text a:active {
+  color: #e95e27;
+  text-decoration: underline dotted;
+}
