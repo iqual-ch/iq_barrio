@@ -1,5 +1,16 @@
 @import "definitions";
 
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+    .row{
+        &.row-offcanvas{
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+
 .pd-content{
     .row {
         max-width: 1140px;
@@ -20,7 +31,7 @@
             }
         }
 
-        
+
         &.fullwidth-small{
             @media only screen and (max-width: 767px) {
                 max-width: none;

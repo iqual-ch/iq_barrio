@@ -26,8 +26,8 @@ bootstrap_cdn:
     //cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js: {}
     //stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js: {}
   css:
-    component:
-      //stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css: {}
+    layout:
+      //stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css: {weight: 0}
 
 admin-style:
   js:
