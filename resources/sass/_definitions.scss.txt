@@ -34,6 +34,8 @@ $color-font-nav-dropdown-hover:       $color-{{color_page_font_nav_dropdown_hove
 $color-background-footer:             $color-{{color_page_background_footer}};
 $color-font-footer:                   $color-{{color_page_font_footer}};
 
+$color-text-inverted:                 $color-{{color_text_inverted}};
+
 
 
 /*************** FONT DEFINITIONS ***************/
@@ -149,8 +151,35 @@ $base-padding-left:                   {{padding_left}}{{padding_unit}};
 $base-padding-right:                  {{padding_right}}{{padding_unit}};
 $base-padding:                        $base-padding-top $base-padding-right $base-padding-bottom $base-padding-left;
 
-
 $padding-field-default: 5px 20px;
+
+
+
+
+
+/*************** PATTERN SETTINGS ***************/
+
+/* Slider */
+$slider-arrow-font-size:              {{slider_arrow_size}}{{slider_arrow_size_unit}};
+$slider-arrow-color:                  $color-{{slider_arrow_color}};
+$slider-arrow-backgroundcolor:        $color-{{slider_arrow_backgroundcolor}};
+$slider-dot-font-size:                {{slider_dot_size}}{{slider_dot_size_unit}};
+$slider-dot-color:                    $color-{{slider_dot_color}};
+$slider-dot-color_active:             $color-{{slider_dot_color_active}};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Helper function
 @function strip-unit($value) {

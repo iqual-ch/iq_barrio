@@ -102,17 +102,17 @@ p {
   margin-bottom: $margin-bottom-small;
 }
 
-.iq-text{
-  a{
-    color: $color-link;
-    text-decoration: $text-decoration-link;
 
-    &:hover, &:focus, &:active{
-      color: $color-link-hover;
-      text-decoration: $text-decoration-link-hover;
-    }
+a{
+  color: $color-link;
+  text-decoration: $text-decoration-link;
+
+  &:hover, &:focus, &:active{
+    color: $color-link-hover;
+    text-decoration: $text-decoration-link-hover;
   }
 }
+
 
 //  #navbar-main {
 //   max-height: none;

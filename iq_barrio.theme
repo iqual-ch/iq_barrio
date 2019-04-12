@@ -287,6 +287,16 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '#suffix' => '<div class="line-break"></div>'
   ];
 
+
+  $form['colors']['section_definitions']['color_text_inverted'] = [
+    '#type' => 'select',
+    '#title' => t('inverted Text color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_text_inverted') ? theme_get_setting('color_text_inverted') : 'white',
+    '#suffix' => '<div class="line-break"></div>'
+  ];
+
+
   // section typo
   $form['typography'] = [
     '#type' => 'details',
@@ -1000,6 +1010,94 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
   ];
 
 
+
+  // section decorations
+
+  $form['components'] = [
+    '#type' => 'details',
+    '#title' => t('Patterns'),
+    '#summary' => t('Styling of patterns.'),
+    '#group' => 'iq_theme',
+  ];
+
+
+  $form['components']['slider'] = [
+    '#type' => 'details',
+    '#title' => t('Slider'),
+  ];
+
+
+
+  $form['components']['slider']['slider_arrow_size_holder'] = [
+    '#type' => 'container',
+    '#attributes' => [
+      'class' => ['container-inline', 'unit-combo-field'],
+    ]
+  ];
+
+   $form['components']['slider']['slider_arrow_size_holder']['slider_arrow_size'] = [
+    '#type' => 'textfield',
+    '#title' => t('Arrow size'),
+    '#default_value' => theme_get_setting('slider_arrow_size') ? theme_get_setting('slider_arrow_size') : '1',
+  ];
+
+   $form['components']['slider']['slider_arrow_size_holder']['slider_arrow_size_unit'] = [
+    '#type' => 'select',
+    '#options' => $arr_units,
+    '#default_value' => theme_get_setting('slider_arrow_size_unit') ? theme_get_setting('slider_arrow_size_unit') : 'rem',
+  ];
+
+  $form['components']['slider']['slider_arrow_color'] = [
+    '#type' => 'select',
+    '#title' => t('Arrow color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('slider_arrow_color') ? theme_get_setting('slider_arrow_color') : 'grey3',
+  ];
+
+  $form['components']['slider']['slider_arrow_backgroundcolor'] = [
+    '#type' => 'select',
+    '#title' => t('Arrow background color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('slider_arrow_backgroundcolor') ? theme_get_setting('slider_arrow_backgroundcolor') : 'white',
+  ];
+
+
+  $form['components']['slider']['slider_dot_size_holder'] = [
+    '#type' => 'container',
+    '#attributes' => [
+      'class' => ['container-inline', 'unit-combo-field'],
+    ]
+  ];
+
+  $form['components']['slider']['slider_dot_size_holder']['slider_dot_size'] = [
+    '#type' => 'textfield',
+    '#title' => t('Dot size'),
+    '#default_value' => theme_get_setting('slider_dot_size') ? theme_get_setting('slider_dot_size') : '1',
+  ];
+
+   $form['components']['slider']['slider_dot_size_holder']['slider_dot_size_unit'] = [
+    '#type' => 'select',
+    '#options' => $arr_units,
+    '#default_value' => theme_get_setting('slider_dot_size_unit') ? theme_get_setting('slider_dot_size_unit'): 'rem',
+  ];
+
+
+
+  $form['components']['slider']['slider_dot_color'] = [
+    '#type' => 'select',
+    '#title' => t('Dot color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('slider_dot_color') ? theme_get_setting('slider_dot_color') : 'grey3',
+  ];
+
+  $form['components']['slider']['slider_dot_color_active'] = [
+    '#type' => 'select',
+    '#title' => t('Dot color active'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('slider_dot_color_active') ? theme_get_setting('slider_dot_color_active') : 'grey1',
+  ];
+
+
   $form['#submit'][] = 'iq_barrio_form_system_theme_settings_submit';
 }
 
@@ -1043,6 +1141,9 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'color_page_background_nav_dropdown_hover' => $form_state->getValue('color_page_background_nav_dropdown_hover'),
     'color_page_font_footer' => $form_state->getValue('color_page_font_footer'),
     'color_page_background_elements' => $form_state->getValue('color_page_background_elements'),
+    'color_text_inverted' => $form_state->getValue('color_text_inverted'),
+
+
 
     'h1_font_family' => $form_state->getValue('h1_font_family'),
     'h1_color' => $form_state->getValue('h1_color'),
@@ -1191,6 +1292,32 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'padding_bottom' => $form_state->getValue('padding_bottom'),
     'padding_left' => $form_state->getValue('padding_left'),
     'padding_unit' => $form_state->getValue('padding_unit'),
+
+
+    'slider_arrow_size' => $form_state->getValue('slider_arrow_size'),
+    'slider_arrow_size_unit' => $form_state->getValue('slider_arrow_size_unit'),
+    'slider_arrow_color' => $form_state->getValue('slider_arrow_color'),
+    'slider_arrow_backgroundcolor' => $form_state->getValue('slider_arrow_backgroundcolor'),
+
+    'slider_dot_size' => $form_state->getValue('slider_dot_size'),
+    'slider_dot_size_unit' => $form_state->getValue('slider_dot_size_unit'),
+    'slider_dot_color' => $form_state->getValue('slider_dot_color'),
+    'slider_dot_color_active' => $form_state->getValue('slider_dot_color_active'),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   ];
 
