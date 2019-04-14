@@ -1,0 +1,90 @@
+[data-drupal-selector="edit-iq-theme"] .styling-preview h1{
+    font-size:                        {{h1_font_size}}{{h1_font_size_unit}};
+    line-height:                      {{h1_line_height}};
+    font-weight:                      {{h1_font_weight}};
+    font-family:                      {{h1_font_family}};
+    margin-top:                       {{h1_margin_top}}{{h1_margin_unit}};
+    margin-bottom:                    {{h1_margin_bottom}}{{h1_margin_unit}};
+    color:                            {{h1_color}};
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview h2{
+    font-size:                        {{h2_font_size}}{{h2_font_size_unit}};
+    line-height:                      {{h2_line_height}};
+    font-weight:                      {{h2_font_weight}};
+    font-family:                      {{h2_font_family}};
+    margin-top:                       {{h2_margin_top}}{{h2_margin_unit}};
+    margin-bottom:                    {{h2_margin_bottom}}{{h2_margin_unit}};
+    color:                            {{h2_color}};
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview h3{
+    font-size:                        {{h3_font_size}}{{h3_font_size_unit}};
+    line-height:                      {{h3_line_height}};
+    font-weight:                      {{h3_font_weight}};
+    font-family:                      {{h3_font_family}};
+    margin-top:                       {{h3_margin_top}}{{h3_margin_unit}};
+    margin-bottom:                    {{h3_margin_bottom}}{{h3_margin_unit}};
+    color:                            {{h3_color}};
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview h4{
+    font-size:                        {{h4_font_size}}{{h4_font_size_unit}};
+    line-height:                      {{h4_line_height}};
+    font-weight:                      {{h4_font_weight}};
+    font-family:                      {{h4_font_family}};
+    margin-top:                       {{h4_margin_top}}{{h4_margin_unit}};
+    margin-bottom:                    {{h4_margin_bottom}}{{h4_margin_unit}};
+    color:                            {{h4_color}};
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview h5{
+    font-size:                        {{h5_font_size}}{{h5_font_size_unit}};
+    line-height:                      {{h5_line_height}};
+    font-weight:                      {{h5_font_weight}};
+    font-family:                      {{h5_font_family}};
+    margin-top:                       {{h5_margin_top}}{{h5_margin_unit}};
+    margin-bottom:                    {{h5_margin_bottom}}{{h5_margin_unit}};
+    color:                            {{h5_color}};
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview h6{
+    font-size:                        {{h6_font_size}}{{h6_font_size_unit}};
+    line-height:                      {{h6_line_height}};
+    font-weight:                      {{h6_font_weight}};
+    font-family:                      {{h6_font_family}};
+    margin-top:                       {{h6_margin_top}}{{h6_margin_unit}};
+    margin-bottom:                    {{h6_margin_bottom}}{{h6_margin_unit}};
+    color:                            {{h6_color}};
+}
+
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview p{
+    font-size:                        {{standard_font_size}}{{standard_font_size_unit}};
+    line-height:                      {{standard_line_height}};
+    font-weight:                      {{standard_font_weight}};
+    font-family:                      {{standard_font_family}};
+    margin-top:                       {{standard_margin_top}}{{standard_margin_unit}};
+    margin-bottom:                    {{standard_margin_bottom}}{{standard_margin_unit}};
+    color:                            {{standard_color}};
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview .lead{
+    font-size:                        {{lead_font_size}}{{lead_font_size_unit}};
+    line-height:                      {{lead_line_height}};
+    font-weight:                      {{lead_font_weight}};
+    font-family:                      {{lead_font_family}};
+    margin-top:                       {{lead_margin_top}}{{lead_margin_unit}};
+    margin-bottom:                    {{lead_margin_bottom}}{{lead_margin_unit}};
+    color:                            {{lead_color}};
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview .small{
+    font-size:                        {{small_font_size}}{{small_font_size_unit}};
+    line-height:                      {{small_line_height}};
+    font-weight:                      {{small_font_weight}};
+    font-family:                      {{small_font_family}};
+    margin-top:                       {{small_margin_top}}{{small_margin_unit}};
+    margin-bottom:                    {{small_margin_bottom}}{{small_margin_unit}};
+    color:                            {{small_color}};
+}

@@ -168,6 +168,8 @@ $slider-dot-color:                    $color-{{slider_dot_color}};
 $slider-dot-color_active:             $color-{{slider_dot_color_active}};
 
 
+/* Quote */
+$quote-highlight-color:                  $color-{{quote_highlight_color}};
 
 
 
@@ -251,6 +253,8 @@ $color-text-titles:                   $color-{{h1_color}};
 $color-text-content:                  $color-{{standard_color}};
 $color-text-links:                    $color-{{link_color}};
 $color-text-icons:                    $color-{{color_icons}};
+$color-text-icons-hover:              $color-{{color_icons_hover}};
+
 
 /* Elements colors normal state (e.g. button) */
 $color-text-elements:                 $font-color-buttons; //Settable (value)

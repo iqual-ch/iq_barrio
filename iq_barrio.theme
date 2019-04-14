@@ -136,20 +136,21 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
   ];
 
   // section colors
-  $form['colors'] = [
+  $form['color_definitions'] = [
     '#type' => 'details',
     '#title' => t('Colors'),
     '#open' => true, // Controls the HTML5 'open' attribute. Defaults to FALSE.
     '#group' => 'iq_theme',
+    '#prefix' => '<div id="iq-barrio-target"></div><div id="iq-barrio-source">'.file_get_contents(__DIR__ . "/resources/sass/backend-styling-previes.css.txt").'</div>'
   ];
 
 
-  $form['colors']['base_definitions'] = [
+  $form['color_definitions']['base_definitions'] = [
     '#type' => 'details',
     '#title' => t('Base color definitions'),
   ];
 
-  $form['colors']['base_definitions']['grey_holder'] = [
+  $form['color_definitions']['base_definitions']['grey_holder'] = [
     '#type' => 'container',
     '#prefix' => '<strong>5 shades of grey</strong>',
     '#attributes' => [
@@ -157,90 +158,82 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     ]
   ];
 
-  $form['colors']['base_definitions']['grey_holder']['color_black'] = [
+  $form['color_definitions']['base_definitions']['grey_holder']['color_black'] = [
     '#type' => 'hidden',
     '#default_value' => theme_get_setting('color_black') ? theme_get_setting('color_black') : '#000000',
   ];
 
-  $form['colors']['base_definitions']['grey_holder']['color_white'] = [
+  $form['color_definitions']['base_definitions']['grey_holder']['color_white'] = [
     '#type' => 'hidden',
     '#default_value' => theme_get_setting('color_white') ? theme_get_setting('color_white') : '#FFFFFF',
   ];
 
-  $form['colors']['base_definitions']['grey_holder']['color_black'] = [
+  $form['color_definitions']['base_definitions']['grey_holder']['color_black'] = [
     '#type' => 'hidden',
     '#default_value' => theme_get_setting('color_black') ? theme_get_setting('color_black') : '#000000',
   ];
 
-  $form['colors']['base_definitions']['grey_holder']['color_white'] = [
+  $form['color_definitions']['base_definitions']['grey_holder']['color_white'] = [
     '#type' => 'hidden',
     '#default_value' => theme_get_setting('color_white') ? theme_get_setting('color_white') : '#FFFFFF',
   ];
 
-  $form['colors']['base_definitions']['grey_holder']['color_grey1'] = [
+  $form['color_definitions']['base_definitions']['grey_holder']['color_grey1'] = [
     '#type' => 'color',
     '#default_value' => theme_get_setting('color_grey1') ? theme_get_setting('color_grey1') : '#333333',
   ];
 
-  $form['colors']['base_definitions']['grey_holder']['color_grey2'] = [
+  $form['color_definitions']['base_definitions']['grey_holder']['color_grey2'] = [
     '#type' => 'color',
     '#default_value' => theme_get_setting('color_grey2') ? theme_get_setting('color_grey2') : '#666666',
   ];
 
-  $form['colors']['base_definitions']['grey_holder']['color_grey3'] = [
+  $form['color_definitions']['base_definitions']['grey_holder']['color_grey3'] = [
     '#type' => 'color',
     '#default_value' => theme_get_setting('color_grey3') ? theme_get_setting('color_grey3') : '#999999',
   ];
 
-  $form['colors']['base_definitions']['grey_holder']['color_grey4'] = [
+  $form['color_definitions']['base_definitions']['grey_holder']['color_grey4'] = [
     '#type' => 'color',
     '#default_value' => theme_get_setting('color_grey4') ? theme_get_setting('color_grey4') : '#cccccc',
   ];
 
-  $form['colors']['base_definitions']['grey_holder']['color_grey5'] = [
+  $form['color_definitions']['base_definitions']['grey_holder']['color_grey5'] = [
     '#type' => 'color',
     '#default_value' => theme_get_setting('color_grey5') ? theme_get_setting('color_grey5') : '#eeeeee',
   ];
 
 
-  $form['colors']['base_definitions']['color_primary'] = [
+  $form['color_definitions']['base_definitions']['color_primary'] = [
     '#type' => 'color',
     '#title' => t('Primary color'),
     '#default_value' => theme_get_setting('color_primary') ? theme_get_setting('color_primary') : '#e95e27',
   ];
 
-  $form['colors']['base_definitions']['color_secondary'] = [
+  $form['color_definitions']['base_definitions']['color_secondary'] = [
     '#type' => 'color',
     '#title' => t('Secondary color'),
     '#default_value' => theme_get_setting('color_secondary') ? theme_get_setting('color_secondary') : '#009C82',
   ];
 
-  $form['colors']['base_definitions']['color_tertiary'] = [
+  $form['color_definitions']['base_definitions']['color_tertiary'] = [
     '#type' => 'color',
     '#title' => t('Tertiary color'),
     '#default_value' => theme_get_setting('color_tertiary') ? theme_get_setting('color_tertiary') : '#9C360D',
   ];
 
-  $form['colors']['base_definitions']['color_quaternary'] = [
+  $form['color_definitions']['base_definitions']['color_quaternary'] = [
     '#type' => 'color',
     '#title' => t('Quaternary color'),
     '#default_value' => theme_get_setting('color_quaternary') ? theme_get_setting('color_quaternary') : '#27E9C9',
   ];
 
-  $form['colors']['section_definitions'] = [
+  $form['color_definitions']['section_definitions'] = [
     '#type' => 'details',
     '#title' => t('Color assignments'),
   ];
 
-  $form['colors']['section_definitions']['color_icons'] = [
-    '#type' => 'select',
-    '#title' => t('Icons'),
-    '#options' => $arr_colors,
-    '#default_value' => theme_get_setting('color_icons') ? theme_get_setting('color_icons') : 'primary',
-    '#suffix' => '<hr>'
-  ];
-
-  $form['colors']['section_definitions']['color_page_background'] = [
+  $form['color_definitions']['section_definitions']['color_page_background'] = [
     '#type' => 'select',
     '#title' => t('Background color page'),
     '#options' => $arr_colors,
@@ -248,14 +241,14 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '#suffix' => '<hr>'
   ];
 
-  $form['colors']['section_definitions']['color_page_background_header'] = [
+  $form['color_definitions']['section_definitions']['color_page_background_header'] = [
     '#type' => 'select',
     '#title' => t('Background color header'),
     '#options' => $arr_colors,
     '#default_value' => theme_get_setting('color_page_background_header') ? theme_get_setting('color_page_background_header') : 'white',
   ];
 
-  $form['colors']['section_definitions']['color_page_font_header'] = [
+  $form['color_definitions']['section_definitions']['color_page_font_header'] = [
     '#type' => 'select',
     '#title' => t('Font color header'),
     '#options' => $arr_colors,
@@ -263,7 +256,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '#suffix' => '<hr>'
   ];
 
-  $form['colors']['section_definitions']['color_page_background_footer'] = [
+  $form['color_definitions']['section_definitions']['color_page_background_footer'] = [
     '#type' => 'select',
     '#title' => t('Background color footer'),
     '#options' => $arr_colors,
@@ -271,7 +264,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '#suffix' => '<div class="line-break"></div>'
   ];
 
-  $form['colors']['section_definitions']['color_page_font_footer'] = [
+  $form['color_definitions']['section_definitions']['color_page_font_footer'] = [
     '#type' => 'select',
     '#title' => t('font color footer'),
     '#options' => $arr_colors,
@@ -279,7 +272,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '#suffix' => '<hr>'
   ];
 
-  $form['colors']['section_definitions']['color_page_background_elements'] = [
+  $form['color_definitions']['section_definitions']['color_page_background_elements'] = [
     '#type' => 'select',
     '#title' => t('Background color elements'),
     '#options' => $arr_colors,
@@ -288,7 +281,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
   ];
 
 
-  $form['colors']['section_definitions']['color_text_inverted'] = [
+  $form['color_definitions']['section_definitions']['color_text_inverted'] = [
     '#type' => 'select',
     '#title' => t('inverted Text color'),
     '#options' => $arr_colors,
@@ -408,7 +401,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
       '#prefix' => '</div><div class="styling-preview">',
       '#suffix' => '</div></div>',
       '#type' => 'item',
-      '#markup' => '<' . $tag . ' data-style="font-family: ' . $font_family_value . '; margin-bottom: ' . $margin_bottom_value . $margin_unit_value . '; margin-top: ' . $margin_top_value . $margin_unit_value . '; font-weight: ' . $font_weight_value . '; color: ' . theme_get_setting('color_' . $color_value) . '; font-size: ' . $font_size_value . $font_size_unit_value . '; line-height: ' . $line_height_value . ';">' . $title . '</' . $tag . '><p>Next element<br/>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet</p>',
+      '#markup' => '<' . $tag . ' >' . $title . '</' . $tag . '><p>Next element<br/>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet</p>',
     ];
   }
 
@@ -511,7 +504,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
       '#prefix' => '</div><div class="styling-preview">',
       '#suffix' => '</div></div>',
       '#type' => 'item',
-      '#markup' => '<p data-style="font-family: ' . $font_family_value . '; font-weight: ' . $font_weight_value . '; margin-bottom: ' . $margin_bottom_value . $margin_unit_value . '; margin-top: ' . $margin_top_value . $margin_unit_value . '; color: ' . theme_get_setting('color_', $color_value) . '; font-size: ' . $font_size_value . $font_size_unit_value . '; line-height: ' . $line_height_value . ';">' . $title . '<br/>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet</p>',
+      '#markup' => '<p class="'.$tag.'">' . $title . '<br/>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet</p>',
     ];
   }
 
@@ -1013,7 +1006,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
 
   // section decorations
 
-  $form['components'] = [
+  $form['patterns'] = [
     '#type' => 'details',
     '#title' => t('Patterns'),
     '#summary' => t('Styling of patterns.'),
@@ -1021,40 +1014,38 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
   ];
 
 
-  $form['components']['slider'] = [
+  $form['patterns']['slider'] = [
     '#type' => 'details',
     '#title' => t('Slider'),
   ];
 
-
-
-  $form['components']['slider']['slider_arrow_size_holder'] = [
+  $form['patterns']['slider']['slider_arrow_size_holder'] = [
     '#type' => 'container',
     '#attributes' => [
       'class' => ['container-inline', 'unit-combo-field'],
     ]
   ];
 
-   $form['components']['slider']['slider_arrow_size_holder']['slider_arrow_size'] = [
+   $form['patterns']['slider']['slider_arrow_size_holder']['slider_arrow_size'] = [
     '#type' => 'textfield',
     '#title' => t('Arrow size'),
     '#default_value' => theme_get_setting('slider_arrow_size') ? theme_get_setting('slider_arrow_size') : '1',
   ];
 
-   $form['components']['slider']['slider_arrow_size_holder']['slider_arrow_size_unit'] = [
+   $form['patterns']['slider']['slider_arrow_size_holder']['slider_arrow_size_unit'] = [
     '#type' => 'select',
     '#options' => $arr_units,
     '#default_value' => theme_get_setting('slider_arrow_size_unit') ? theme_get_setting('slider_arrow_size_unit') : 'rem',
   ];
 
-  $form['components']['slider']['slider_arrow_color'] = [
+  $form['patterns']['slider']['slider_arrow_color'] = [
     '#type' => 'select',
     '#title' => t('Arrow color'),
     '#options' => $arr_colors,
     '#default_value' => theme_get_setting('slider_arrow_color') ? theme_get_setting('slider_arrow_color') : 'grey3',
   ];
 
-  $form['components']['slider']['slider_arrow_backgroundcolor'] = [
+  $form['patterns']['slider']['slider_arrow_backgroundcolor'] = [
     '#type' => 'select',
     '#title' => t('Arrow background color'),
     '#options' => $arr_colors,
@@ -1062,40 +1053,70 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
   ];
 
 
-  $form['components']['slider']['slider_dot_size_holder'] = [
+  $form['patterns']['slider']['slider_dot_size_holder'] = [
     '#type' => 'container',
     '#attributes' => [
       'class' => ['container-inline', 'unit-combo-field'],
     ]
   ];
 
-  $form['components']['slider']['slider_dot_size_holder']['slider_dot_size'] = [
+  $form['patterns']['slider']['slider_dot_size_holder']['slider_dot_size'] = [
     '#type' => 'textfield',
     '#title' => t('Dot size'),
     '#default_value' => theme_get_setting('slider_dot_size') ? theme_get_setting('slider_dot_size') : '1',
   ];
 
-   $form['components']['slider']['slider_dot_size_holder']['slider_dot_size_unit'] = [
+   $form['patterns']['slider']['slider_dot_size_holder']['slider_dot_size_unit'] = [
     '#type' => 'select',
     '#options' => $arr_units,
     '#default_value' => theme_get_setting('slider_dot_size_unit') ? theme_get_setting('slider_dot_size_unit'): 'rem',
   ];
 
-
-
-  $form['components']['slider']['slider_dot_color'] = [
+  $form['patterns']['slider']['slider_dot_color'] = [
     '#type' => 'select',
     '#title' => t('Dot color'),
     '#options' => $arr_colors,
     '#default_value' => theme_get_setting('slider_dot_color') ? theme_get_setting('slider_dot_color') : 'grey3',
   ];
 
-  $form['components']['slider']['slider_dot_color_active'] = [
+  $form['patterns']['slider']['slider_dot_color_active'] = [
     '#type' => 'select',
     '#title' => t('Dot color active'),
     '#options' => $arr_colors,
     '#default_value' => theme_get_setting('slider_dot_color_active') ? theme_get_setting('slider_dot_color_active') : 'grey1',
   ];
+
+  $form['patterns']['quote'] = [
+    '#type' => 'details',
+    '#title' => t('Quote'),
+  ];
+
+  $form['patterns']['quote']['quote_highlight_color'] = [
+    '#type' => 'select',
+    '#title' => t('Highlight color (quote marks / lines)'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('quote_highlight_color') ? theme_get_setting('quote_highlight_color') : 'grey3',
+  ];
+
+  $form['patterns']['icons'] = [
+    '#type' => 'details',
+    '#title' => t('Icons'),
+  ];
+
+  $form['patterns']['icons']['color_icons'] = [
+    '#type' => 'select',
+    '#title' => t('Icon color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_icons') ? theme_get_setting('color_icons') : 'primary',
+  ];
+
+  $form['patterns']['icons']['color_icons_hover'] = [
+    '#type' => 'select',
+    '#title' => t('Icon color hover'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_icons_hover') ? theme_get_setting('color_icons_hover') : 'primary',
+  ];
+
 
 
   $form['#submit'][] = 'iq_barrio_form_system_theme_settings_submit';
@@ -1129,6 +1150,7 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'color_quaternary' =>  $form_state->getValue('color_quaternary'),
 
     'color_icons' => $form_state->getValue('color_icons'),
+    'color_icons_hover' => $form_state->getValue('color_icons_hover'),
     'color_page_background' => $form_state->getValue('color_page_background'),
     'color_page_background_header' => $form_state->getValue('color_page_background_header'),
     'color_page_font_header' => $form_state->getValue('color_page_font_header'),
@@ -1305,12 +1327,12 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'slider_dot_color_active' => $form_state->getValue('slider_dot_color_active'),
 
 
+    'quote_highlight_color' => $form_state->getValue('quote_highlight_color'),
 
 
 
 
-
-
+    
 
 
 
