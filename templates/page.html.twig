@@ -70,6 +70,25 @@
 #}
 
 {% block head %}
+
+
+
+
+
+        {% if page.top_header %}
+        <section class="page-top-header {{ container }} ">
+          <div class="col">
+            {{ page.top_header }}
+          </div>
+        </section>
+        {% endif %}
+
+
+
+
+{#
+
+
         {% if page.secondary_menu or page.top_header or page.top_header_form %}
           <nav{{ navbar_top_attributes }}>
           {% if container_navbar %}
@@ -87,9 +106,12 @@
           {% endif %}
           </nav>
         {% endif %}
+
+#}
+
         <nav{{ navbar_attributes }}>
           {% if container_navbar %}
-          <div class="container">
+          <div class=" {{ container }}">
           {% endif %}
 
             {% if page.primary_menu or page.header_form or page.top_header %}
@@ -110,11 +132,14 @@
           </div>
           {% endif %}
         </nav>
-        <section class="page-header container-fluid">
+
+        {% if page.header %}
+        <section class="page-header {{ container }} ">
           <div class="col">
             {{ page.header }}
           </div>
         </section>
+        {% endif %}
 {% endblock %}
 
 {% block content %}

@@ -169,8 +169,11 @@ $slider-dot-color_active:             $color-{{slider_dot_color_active}};
 
 
 /* Quote */
-$quote-highlight-color:                  $color-{{quote_highlight_color}};
+$quote-highlight-color:               $color-{{quote_highlight_color}};
 
+
+/* Social */
+$social-icons-color:                        $color-{{social_icon_color}};
 
 
 

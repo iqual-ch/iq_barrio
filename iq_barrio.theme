@@ -1120,6 +1120,18 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '#default_value' => theme_get_setting('color_icons_hover') ? theme_get_setting('color_icons_hover') : 'primary',
   ];
 
+  $form['patterns']['social'] = [
+    '#type' => 'details',
+    '#title' => t('Social'),
+  ];
+
+  $form['patterns']['social']['social_icon_color'] = [
+    '#type' => 'select',
+    '#title' => t('Icon color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('social_icon_color') ? theme_get_setting('social_icon_color') : 'grey3',
+  ];
+
 
 
   $form['#submit'][] = 'iq_barrio_form_system_theme_settings_submit';
@@ -1332,7 +1344,7 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
 
     'quote_highlight_color' => $form_state->getValue('quote_highlight_color'),
 
-
+    'social_icon_color' => $form_state->getValue('social_icon_color'),
 
 
 
