@@ -84,7 +84,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
 
   $arr_fontweights = [
     '100' => t('100 (lightest)'),
-    '200' => t('200'),
+    '200' => '200',
     '300' => t('300'),
     '400' => t('400 (normal)'),
     '500' => t('500'),
@@ -123,7 +123,9 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
         //Get "regular" fonts only
         if ($font->css_style->value == 'normal' && $font->css_weight->value == 'normal') {
           $fontname = $font->name->value;
-          $arr_google_fonts[$fontname] = $fontname;
+          $css_family = $font->css_family->value;
+
+          $arr_google_fonts[$css_family] = $fontname;
         }
       }
       $arr_fonts['Google Fonts'] = $arr_google_fonts;
@@ -538,7 +540,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
       'none' => t('none'),
     ],
     '#default_value' => $link_text_decoration_value,
-    '#suffix' => '<div class="line-break"></div>'
+    '#suffix' => '<div class="line-break border"></div>'
   ];
 
   $form['typography']['links']['link_color_hover'] = [
@@ -564,7 +566,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '#prefix' => '</div><div class="styling-preview">',
     '#suffix' => '</div></div>',
     '#type' => 'item',
-    '#markup' => '<p>Links: </p><p><a href="#" data-style="color: ' . theme_get_setting('color_' . $link_color_value) . '; text-decoration: ' . $link_text_decoration_value . '">Standard</a></p><p><a href="#" data-style="color: ' . theme_get_setting('color_' . $link_color_hover_value) . '; text-decoration: ' . $link_text_decoration_hover_value . '">Hovered</a></p><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor <a href="#">invidunt</a> ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd <a href="#">gubergren, no sea takimata sanctus est</a> Lorem ipsum dolor sit amet</p>',
+    '#markup' => '<p>Links: </p><p><a href="#" class="preview-link-standard">Standard</a></p><p><a href="#" class="preview-link-hover">Hovered</a></p><p>Inline links within text: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor <a href="#" class="preview-link-inline">invidunt</a> ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd <a href="#" class="preview-link-inline">gubergren, no sea takimata sanctus est</a> Lorem ipsum dolor sit amet</p>',
   ];
 
 
@@ -708,6 +710,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '#title' => t('Standard font color'),
     '#options' => $arr_colors,
     '#default_value' => theme_get_setting('button_font_color_standard'),
+    '#prefix' => '<div class="line-break"></div>'
   ];
 
   $form['typography']['buttons']['button_background_color_standard'] = [
@@ -723,7 +726,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '#title' => t('Standard border color'),
     '#options' => $arr_colors,
     '#default_value' => theme_get_setting('button_border_color_standard'),
-    '#suffix' => '<div class="line-break"></div>'
+    '#suffix' => '<div class="line-break border"></div>'
   ];
 
 
@@ -748,7 +751,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '#title' => t('Hover border color'),
     '#options' => $arr_colors,
     '#default_value' => theme_get_setting('button_border_color_hover'),
-    '#suffix' => '<div class="line-break"></div>'
+    '#suffix' => '<div class="line-break border"></div>'
   ];
 
 
@@ -779,7 +782,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '#prefix' => '</div><div class="styling-preview">',
     '#suffix' => '</div></div>',
     '#type' => 'item',
-    '#markup' => '<button>Standard</button><button>Hover</button><button>Active</button>',
+    '#markup' => '<div class="preview-button standard">Standard</div><div class="preview-button hover">Hover</div><div class="preview-button active">Active</div><p>Buttons within text: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor <a href="#" class="preview-button inline">invidunt</a> ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. <br/><a href="#" class="preview-button inline">gubergren, no sea takimata sanctus est</a> <br/>Lorem ipsum dolor sit amet</p>',
   ];
 
 
@@ -1332,7 +1335,7 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
 
 
 
-    
+
 
 
 

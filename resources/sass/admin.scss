@@ -53,6 +53,11 @@ display: none;
       &.line-break{
         height: 1px;
         width: 100%;
+
+        &.border{
+          border-bottom: 1px solid #ccc;
+          margin-right: 30px;
+        }
       }
     }
   }

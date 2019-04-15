@@ -88,3 +88,57 @@
     margin-bottom:                    {{small_margin_bottom}}{{small_margin_unit}};
     color:                            {{small_color}};
 }
+
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview a.preview-link-standard,
+[data-drupal-selector="edit-iq-theme"] .styling-preview a.preview-link-inline{
+  color:                              {{link_color}};
+  text-decoration:                    {{link_text_decoration}};
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview a.preview-link-hover,
+[data-drupal-selector="edit-iq-theme"] .styling-preview a.preview-link-inline:hover,
+[data-drupal-selector="edit-iq-theme"] .styling-preview a.preview-link-inline:focus,
+[data-drupal-selector="edit-iq-theme"] .styling-preview a.preview-link-inline:active{
+    color:                            {{link_color_hover}};
+    text-decoration:                  {{link_text_decoration_hover}};
+}
+
+[data-drupal-selector="edit-iq-theme"] .preview-button{
+    display:                          inline-block;
+    font-family:                      {{button_font_family}};
+    font-weight:                      {{button_font_weight}};
+    font-size:                        {{button_font_size}}{{button_font_size_unit}};;
+    line-height:                      {{button_line_height}};
+    margin-top:                       {{button_margin_top}}{{button_margin_unit}};
+    margin-bottom:                    {{button_margin_bottom}}{{button_margin_unit}};
+    margin-left:                      {{button_margin_left}}{{button_margin_unit}};
+    margin-right:                     {{button_margin_right}}{{button_margin_unit}};
+    padding-top:                      {{button_padding_top}}{{button_padding_unit}};
+    padding-bottom:                   {{button_padding_bottom}}{{button_padding_unit}};
+    padding-left:                     {{button_padding_left}}{{button_padding_unit}};
+    padding-right:                    {{button_padding_right}}{{button_padding_unit}};
+    border:                           1px solid transparent;
+}
+
+[data-drupal-selector="edit-iq-theme"] .preview-button.standard,
+[data-drupal-selector="edit-iq-theme"] .preview-button.inline{
+    text-decoration:                  none;
+    color:                            {{button_font_color_standard}};
+    background-color:                 {{button_background_color_standard}};
+    border-color:                     {{button_border_color_standard}};
+}
+
+[data-drupal-selector="edit-iq-theme"] .preview-button.hover,
+[data-drupal-selector="edit-iq-theme"] .preview-button.inline:hover{
+    color:                            {{button_font_color_hover}};
+    background-color:                 {{button_background_color_hover}};
+    border-color:                     {{button_border_color_hover}};
+}
+
+[data-drupal-selector="edit-iq-theme"] .preview-button.active,
+[data-drupal-selector="edit-iq-theme"] .preview-button.inline:active{
+    color:                            {{button_font_color_active}};
+    background-color:                 {{button_background_color_active}};
+    border-color:                     {{button_border_color_active}};
+}
