@@ -109,6 +109,8 @@
 
 #}
 
+{#
+
         <nav{{ navbar_attributes }}>
           {% if container_navbar %}
           <div class=" {{ container }}">
@@ -132,7 +134,7 @@
           </div>
           {% endif %}
         </nav>
-
+#}
         {% if page.header %}
         <section class="page-header {{ container }} ">
           <div class="col">
@@ -145,7 +147,12 @@
 {% block content %}
         <div id="main" class="{{ container }}">
           {{ page.breadcrumb }}
+          {#
           <div class="row row-offcanvas row-offcanvas-left clearfix">
+
+          <main{{ content_attributes.removeClass('col') }}>
+          #}
+
               <main{{ content_attributes }}>
                 <section class="section">
                   <a id="main-content" tabindex="-1"></a>
@@ -166,7 +173,10 @@
                 </aside>
               </div>
             {% endif %}
+          {#
           </div>
+          #}
+
         </div>
 {% endblock %}
 
