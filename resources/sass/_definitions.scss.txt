@@ -173,11 +173,15 @@ $quote-highlight-color:               $color-{{quote_highlight_color}};
 
 
 /* Social */
-$social-icons-color:                        $color-{{social_icon_color}};
+$social-icons-color:                  $color-{{social_icon_color}};
 
 
+/* Tabs */
+$tab-color:                           $color-{{tab_color}};
+$tab-font-color:                      $color-{{tab_font_color}};
 
-
+$tab-color-active:                    $color-{{tab_color_active}};
+$tab-font-color-active:               $color-{{tab_font_color_active}};
 
 
 

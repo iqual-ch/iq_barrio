@@ -1133,6 +1133,43 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
   ];
 
 
+  $form['patterns']['tabs'] = [
+    '#type' => 'details',
+    '#title' => t('Tabbed content'),
+  ];
+
+  $form['patterns']['tabs']['tab_color'] = [
+    '#type' => 'select',
+    '#title' => t('Tab color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('tab_color') ? theme_get_setting('tab_color') : 'primary',
+  ];
+
+
+  $form['patterns']['tabs']['tab_font_color'] = [
+    '#type' => 'select',
+    '#title' => t('Tab font color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('tab_font_color') ? theme_get_setting('tab_font_color') : 'grey1',
+  ];
+
+
+
+  $form['patterns']['tabs']['tab_color_active'] = [
+    '#type' => 'select',
+    '#title' => t('Tab color active'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('tab_color_active') ? theme_get_setting('tab_color_active') : 'grey3',
+  ];
+
+  $form['patterns']['tabs']['tab_font_color_active'] = [
+    '#type' => 'select',
+    '#title' => t('Tab font color active'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('tab_font_color_active') ? theme_get_setting('tab_font_color_active') : 'grey1',
+  ];
+
+
 
   $form['#submit'][] = 'iq_barrio_form_system_theme_settings_submit';
 }
@@ -1347,8 +1384,11 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'social_icon_color' => $form_state->getValue('social_icon_color'),
 
 
+    'tab_color' => $form_state->getValue('tab_color'),
+    'tab_color_active' => $form_state->getValue('tab_color_active'),
 
-
+    'tab_font_color' => $form_state->getValue('tab_font_color'),
+    'tab_font_color_active' => $form_state->getValue('tab_font_color_active'),
 
 
 

@@ -7,9 +7,11 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body {
-   font-family: $font-family-content;
-   font-size: $font-size-base;
-   line-height: $line-height-base;
+  font-size: $font-size-standard;
+  line-height: $line-height-standard;
+  font-weight: $font-weight-standard;
+  font-family: $font-family-standard;
+  color: $color-standard;
 }
 
 h1 {
@@ -80,6 +82,14 @@ p {
   color: $color-standard;
   margin-top: $margin-top-standard;
   margin-bottom: $margin-bottom-standard;
+}
+
+.node__content{
+  font-size: $font-size-standard;
+  line-height: $line-height-standard;
+  font-weight: $font-weight-standard;
+  font-family: $font-family-standard;
+  color: $color-standard;
 }
 
 .lead {
