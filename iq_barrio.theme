@@ -243,6 +243,22 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '#suffix' => '<hr>'
   ];
 
+
+  $form['color_definitions']['section_definitions']['color_page_background_meta_header'] = [
+    '#type' => 'select',
+    '#title' => t('Background color meta header'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_page_background_meta_header') ? theme_get_setting('color_page_background_meta_header') : 'white',
+  ];
+
+  $form['color_definitions']['section_definitions']['color_page_font_meta_header'] = [
+    '#type' => 'select',
+    '#title' => t('Font color meta header'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_page_font_meta_header') ? theme_get_setting('color_page_font_meta_header') : 'grey3',
+    '#suffix' => '<hr>'
+  ];
+
   $form['color_definitions']['section_definitions']['color_page_background_header'] = [
     '#type' => 'select',
     '#title' => t('Background color header'),
@@ -257,6 +273,9 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '#default_value' => theme_get_setting('color_page_font_header') ? theme_get_setting('color_page_font_header') : 'grey3',
     '#suffix' => '<hr>'
   ];
+
+
+
 
   $form['color_definitions']['section_definitions']['color_page_background_footer'] = [
     '#type' => 'select',
@@ -1204,8 +1223,12 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'color_icons' => $form_state->getValue('color_icons'),
     'color_icons_hover' => $form_state->getValue('color_icons_hover'),
     'color_page_background' => $form_state->getValue('color_page_background'),
+
     'color_page_background_header' => $form_state->getValue('color_page_background_header'),
     'color_page_font_header' => $form_state->getValue('color_page_font_header'),
+    'color_page_background_meta_header' => $form_state->getValue('color_page_background_meta_header'),
+    'color_page_font_meta_header' => $form_state->getValue('color_page_font_meta_header'),
+
     'color_page_background_navbar' => $form_state->getValue('color_page_background_navbar'),
     'color_page_font_navbar' => $form_state->getValue('color_page_font_navbar'),
     'color_page_background_footer' => $form_state->getValue('color_page_background_footer'),

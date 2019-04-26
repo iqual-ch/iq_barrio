@@ -19,6 +19,9 @@ $color-quaternary:                    {{color_quaternary}};
 /* Base colors */
 $color-background-page:               $color-{{color_page_background}};
 
+$color-background-meta-header:        $color-{{color_page_background_meta_header}};
+$color-font-meta-header:              $color-{{color_page_font_meta_header}};
+
 $color-background-header:             $color-{{color_page_background_header}};
 $color-font-header:                   $color-{{color_page_font_header}};
 
