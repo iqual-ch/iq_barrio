@@ -9,6 +9,11 @@
 /* Headings */
 /* Content */
 /* Margins &  paddings */
+/*************** PATTERN SETTINGS ***************/
+/* Slider */
+/* Quote */
+/* Social */
+/* Tabs */
 /* Title margins */
 /*************** BORDER DEFINITIONS ***************/
 /*************** OTHER DEFINITIONS ***************/
@@ -20,117 +25,128 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 /* line 9, ../sass/style.scss */
 body {
-  font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
+  font-weight: 300;
+  font-family: Lato;
+  color: #fff;
 }
 
-/* line 15, ../sass/style.scss */
+/* line 17, ../sass/style.scss */
 h1 {
-  font-size: 2.5rem;
+  font-size: 4rem;
   line-height: 1.2;
-  font-weight: 700;
-  font-family: "Open Sans", sans-serif;
-  color: #e95e27;
+  font-weight: 300;
+  font-family: Lato;
+  color: #cccccc;
   margin-top: 2.5rem;
   margin-bottom: 1.25rem;
 }
 
-/* line 25, ../sass/style.scss */
+/* line 27, ../sass/style.scss */
 h2 {
   font-size: 2rem;
   line-height: 1.2;
   font-weight: 400;
-  font-family: "Open Sans", sans-serif;
-  color: #009c82;
+  font-family: Lato;
+  color: #cccccc;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
-/* line 35, ../sass/style.scss */
+/* line 37, ../sass/style.scss */
 h3 {
   font-size: 1.75rem;
   line-height: 1.2;
-  font-weight: 900;
-  font-family: "Open Sans", sans-serif;
-  color: #9c360d;
+  font-weight: 400;
+  font-family: Lato;
+  color: #cccccc;
   margin-top: 1.75rem;
   margin-bottom: 0.875rem;
 }
 
-/* line 45, ../sass/style.scss */
+/* line 47, ../sass/style.scss */
 h4 {
   font-size: 1.5rem;
   line-height: 1.2;
-  font-weight: 100;
-  font-family: "Open Sans", sans-serif;
-  color: #27e9c9;
+  font-weight: 300;
+  font-family: Lato;
+  color: #cccccc;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
 }
 
-/* line 55, ../sass/style.scss */
+/* line 57, ../sass/style.scss */
 h5 {
   font-size: 1.25rem;
   line-height: 1.2;
-  font-weight: 100;
-  font-family: "Open Sans", sans-serif;
-  color: #999999;
+  font-weight: 300;
+  font-family: Lato;
+  color: #cccccc;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
 }
 
-/* line 65, ../sass/style.scss */
+/* line 67, ../sass/style.scss */
 h6 {
   font-size: 1rem;
   line-height: 1.2;
-  font-weight: 100;
-  font-family: "Open Sans", sans-serif;
-  color: #000;
+  font-weight: 500;
+  font-family: Lato;
+  color: #cccccc;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
 
-/* line 75, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 p {
   font-size: 1rem;
   line-height: 1.5;
-  font-weight: 100;
-  font-family: "Open Sans", sans-serif;
-  color: #999999;
-  margin-top: 1rem;
+  font-weight: 300;
+  font-family: Lato;
+  color: #fff;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
-/* line 85, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
+.node__content {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+  font-family: Lato;
+  color: #fff;
+}
+
+/* line 95, ../sass/style.scss */
 .lead {
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 700;
-  font-family: "Open Sans", sans-serif;
-  color: #999999;
-  margin-top: 1rem;
+  font-family: Lato;
+  color: #fff;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
-/* line 95, ../sass/style.scss */
+/* line 105, ../sass/style.scss */
 .small, small {
   font-size: 0.75rem;
   line-height: 1.2;
-  font-weight: 100;
-  font-family: "Open Sans", sans-serif;
-  color: #999999;
-  margin-top: 1rem;
+  font-weight: 300;
+  font-family: Lato;
+  color: #fff;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
-/* line 106, ../sass/style.scss */
-.iq-text a {
-  color: #e95e27;
+/* line 116, ../sass/style.scss */
+a {
+  color: #ff8040;
   text-decoration: underline;
 }
-/* line 110, ../sass/style.scss */
-.iq-text a:hover, .iq-text a:focus, .iq-text a:active {
-  color: #e95e27;
+/* line 120, ../sass/style.scss */
+a:hover, a:focus, a:active {
+  color: #ffd1c4;
   text-decoration: underline dotted;
 }

@@ -6,124 +6,151 @@ $size-ratio:                          1.25; //Settable (selection, see http://ty
 /*************** COLOR DEFINITIONS ***************/
 $color-black:                         #000;
 $color-white:                         #fff;
-$color-grey1:                         #333333;
+$color-grey1:                         #1a1a1a;
 $color-grey2:                         #666666;
 $color-grey3:                         #999999;
 $color-grey4:                         #cccccc;
 $color-grey5:                         #eeeeee;
-$color-primary:                       #e95e27;
-$color-secondary:                     #009c82;
-$color-tertiary:                      #9c360d;
-$color-quaternary:                    #27e9c9;
+$color-primary:                       #1d1d1b;
+$color-secondary:                     #737373;
+$color-tertiary:                      #ff8040;
+$color-quaternary:                    #ffd1c4;
 
 /* Base colors */
-$color-background-page:               $color-white;
+$color-background-page:               $color-grey1;
 
-$color-background-header:             $color-grey5;
+$color-background-meta-header:        $color-grey1;
+$color-font-meta-header:              $color-grey5;
+
+$color-background-header:             $color-white;
 $color-font-header:                   $color-grey3;
 
-$color-background-footer:             $color-black;
-$color-font-footer:                   $color-white;
+$color-background-navbar:             $color-white;
+$color-font-navbar:                   $color-grey3;
+
+$color-background-navbar-hover:       $color-white;
+$color-font-navbar-hover:             $color-grey1;
+
+$color-background-nav-dropdown:       $color-white;
+$color-font-nav-dropdown:             $color-grey3;
+
+$color-background-nav-dropdown-hover: $color-grey5;
+$color-font-nav-dropdown-hover:       $color-grey2;
+
+$color-background-nav-mobile:         $color-white;
+$color-font-nav-mobile:               $color-grey3;
+$color-font-nav-mobile-hover:         $color-grey1;
+
+$color-font-nav-sidebar:              $color-grey3;
+$color-font-nav-sidebar-hover:        $color-grey5;
+
+
+
+
+$color-background-footer:             $color-white;
+$color-font-footer:                   $color-grey3;
+
+$color-text-inverted:                 $color-grey2;
 
 
 
 /*************** FONT DEFINITIONS ***************/
 
 /* Headings */
-$font-size-h1:                        2.5rem;
+$font-size-h1:                        4rem;
 $line-height-h1:                      1.2;
-$font-weight-h1:                      700;
-$color-h1:                            $color-primary;
-$font-family-h1:                      'Open Sans', sans-serif;
+$font-weight-h1:                      300;
+$color-h1:                            $color-grey4;
+$font-family-h1:                      Lato;
 $margin-top-h1:                       2.5rem;
 $margin-bottom-h1:                    1.25rem;
 
 $font-size-h2:                        2rem;
 $line-height-h2:                      1.2;
 $font-weight-h2:                      400;
-$color-h2:                            $color-secondary;
-$font-family-h2:                      'Open Sans', sans-serif;
+$color-h2:                            $color-grey4;
+$font-family-h2:                      Lato;
 $margin-top-h2:                       2rem;
 $margin-bottom-h2:                    1rem;
 
 $font-size-h3:                        1.75rem;
 $line-height-h3:                      1.2;
-$font-weight-h3:                      900;
-$color-h3:                            $color-tertiary;
-$font-family-h3:                      'Open Sans', sans-serif;
+$font-weight-h3:                      400;
+$color-h3:                            $color-grey4;
+$font-family-h3:                      Lato;
 $margin-top-h3:                       1.75rem;
 $margin-bottom-h3:                    0.875rem;
 
 $font-size-h4:                        1.5rem;
 $line-height-h4:                      1.2;
-$font-weight-h4:                      100;
-$color-h4:                            $color-quaternary;
-$font-family-h4:                      'Open Sans', sans-serif;
+$font-weight-h4:                      300;
+$color-h4:                            $color-grey4;
+$font-family-h4:                      Lato;
 $margin-top-h4:                       1.5rem;
 $margin-bottom-h4:                    0.75rem;
 
 $font-size-h5:                        1.25rem;
 $line-height-h5:                      1.2;
-$font-weight-h5:                      100;
-$color-h5:                            $color-grey3;
-$font-family-h5:                      'Open Sans', sans-serif;
+$font-weight-h5:                      300;
+$color-h5:                            $color-grey4;
+$font-family-h5:                      Lato;
 $margin-top-h5:                       1.25rem;
 $margin-bottom-h5:                    0.625rem;
 
 $font-size-h6:                        1rem;
 $line-height-h6:                      1.2;
-$font-weight-h6:                      100;
-$color-h6:                            $color-black;
-$font-family-h6:                      'Open Sans', sans-serif;
+$font-weight-h6:                      500;
+$color-h6:                            $color-grey4;
+$font-family-h6:                      Lato;
 $margin-top-h6:                       1rem;
 $margin-bottom-h6:                    0.5rem;
 
 
 /* Content */
-$font-size-standard:                      1rem;
-$line-height-standard:                    1.5;
-$font-weight-standard:                    100;
-$color-standard:                          $color-grey3;
-$font-family-standard:                    'Open Sans', sans-serif;
-$margin-top-standard:                 1rem;
+$font-size-standard:                  1rem;
+$line-height-standard:                1.5;
+$font-weight-standard:                300;
+$color-standard:                      $color-white;
+$font-family-standard:                Lato;
+$margin-top-standard:                 0.5rem;
 $margin-bottom-standard:              0.5rem;
 
-$color-link:                         $color-primary;
-$color-link-hover:                   $color-primary;
+$color-link:                          $color-tertiary;
+$color-link-hover:                    $color-quaternary;
 $text-decoration-link:                underline;
 $text-decoration-link-hover:          underline dotted;
 
 $font-size-small:                     0.75rem;
 $line-height-small:                   1.2;
-$font-weight-small:                   100;
-$color-small:                         $color-grey3;
-$font-family-small:                   'Open Sans', sans-serif;
-$margin-top-small:                    1rem;
+$font-weight-small:                   300;
+$color-small:                         $color-white;
+$font-family-small:                   Lato;
+$margin-top-small:                    0.5rem;
 $margin-bottom-small:                 0.5rem;
 
 $font-size-lead:                      1rem;
 $line-height-lead:                    1.5;
 $font-weight-lead:                    700;
-$color-lead:                          $color-grey3;
-$font-family-lead:                    'Open Sans', sans-serif;
-$margin-top-lead:                     1rem;
+$color-lead:                          $color-white;
+$font-family-lead:                    Lato;
+$margin-top-lead:                     0.5rem;
 $margin-bottom-lead:                  0.5rem;
 
-$font-size-buttons:                   16px;
+$font-size-buttons:                   1rem;
 $line-height-buttons:                 1.5;
-$font-weight-buttons:                 700;
-$font-family-buttons:                 'Open Sans', sans-serif;
+$font-weight-buttons:                 900;
+$font-family-buttons:                 Verdana;
 $margin-buttons:                      10px 10px 10px 10px;
 $padding-buttons:                     5px 20px 5px 20px;
 $font-color-buttons:                  $color-white;
-$background-color-buttons:            $color-primary;
-$border-color-buttons:                $color-black;
+$background-color-buttons:            $color-tertiary;
+$border-color-buttons:                $color-tertiary;
 $font-color-hover-buttons:            $color-white;
-$background-color-hover-buttons:      $color-secondary;
-$border-color-hover-buttons:          $color-black;
+$background-color-hover-buttons:      $color-grey1;
+$border-color-hover-buttons:          $color-grey1;
 $font-color-active-buttons:           $color-white;
-$background-color-active-buttons:     $color-tertiary;
-$border-color-active-buttons:         $color-black;
+$background-color-active-buttons:     $color-secondary;
+$border-color-active-buttons:         $color-grey2;
 
 
 
@@ -140,8 +167,44 @@ $base-padding-left:                   30px;
 $base-padding-right:                  30px;
 $base-padding:                        $base-padding-top $base-padding-right $base-padding-bottom $base-padding-left;
 
-
 $padding-field-default: 5px 20px;
+
+
+
+
+
+/*************** PATTERN SETTINGS ***************/
+
+/* Slider */
+$slider-arrow-font-size:              1.5rem;
+$slider-arrow-color:                  $color-grey3;
+$slider-arrow-backgroundcolor:        $color-white;
+$slider-dot-font-size:                1rem;
+$slider-dot-color:                    $color-grey4;
+$slider-dot-color_active:             $color-grey3;
+
+
+/* Quote */
+$quote-highlight-color:               $color-grey5;
+
+
+/* Social */
+$social-icons-color:                  $color-grey1;
+
+
+/* Tabs */
+$tab-color:                           $color-grey5;
+$tab-font-color:                      $color-grey3;
+
+$tab-color-active:                    $color-grey4;
+$tab-font-color-active:               $color-grey2;
+
+
+
+
+
+
+
 
 // Helper function
 @function strip-unit($value) {
@@ -174,9 +237,9 @@ $padding-field-default: 5px 20px;
 
 
 /*************** BORDER DEFINITIONS ***************/
-$border-radius-base:  15%; //Settable (value, 0-50%)
-$border-width-base:   5px; //Settable (value, 1-10px)
-$border-color-base:   $color-tertiary;
+$border-radius-base:  1px; //Settable (value, 0-50%)
+$border-width-base:   1px; //Settable (value, 1-10px)
+$border-color-base:   $color-grey5;
 
 /*************** OTHER DEFINITIONS ***************/
 $transition-default: all 0.2s ease;
@@ -209,10 +272,12 @@ $padding-right-base:                  $base-padding-right;
 $padding-base:                        $padding-bottom-base;
 
 /* Content text colors */
-$color-text-titles:                   $color-primary;
-$color-text-content:                  $color-grey3;
-$color-text-links:                    $color-primary;
-$color-text-icons:                    $color-primary;
+$color-text-titles:                   $color-grey4;
+$color-text-content:                  $color-white;
+$color-text-links:                    $color-tertiary;
+$color-text-icons:                    $color-white;
+$color-text-icons-hover:              $color-tertiary;
+
 
 /* Elements colors normal state (e.g. button) */
 $color-text-elements:                 $font-color-buttons; //Settable (value)
@@ -237,5 +302,5 @@ $font-weight-base:                    $font-weight-standard;
 $color-base:                          $color-standard;
 $font-family-base:                    $font-family-standard;
 
-$font-family-titles:                  $font-family-h1; 
-$font-family-content:                 $font-family-base; 
+$font-family-titles:                  $font-family-h1;
+$font-family-content:                 $font-family-base;

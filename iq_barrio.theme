@@ -447,6 +447,11 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     $line_height_value = theme_get_setting($tag . '_line_height') ? theme_get_setting($tag . '_line_height') : '1.2';
     $font_weight_value = theme_get_setting($tag . '_font_weight') ? theme_get_setting($tag . '_font_weight') : '400';
 
+    $margin_top_value = theme_get_setting($tag . '_margin_top') ? theme_get_setting($tag . '_margin_top') : '0.5';
+    $margin_bottom_value = theme_get_setting($tag . '_margin_bottom') ? theme_get_setting($tag . '_margin_bottom') : '0.5';
+    $margin_unit_value = theme_get_setting($tag . '_margin_unit') ? theme_get_setting($tag . '_margin_unit') : 'rem';
+
+
     $form['typography']['text_elements'][$tag . '_font_family'] = [
       '#prefix' => '<div class="styling-row"><div class="styling-input">',
       '#type' => 'select',
@@ -824,25 +829,46 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
 
 
 
+  $form['navigation']['navi_main'] = [
+    '#type' => 'details',
+    '#title' => t('Navigation Main'),
+  ];
 
-  $form['navigation']['color_page_background_navbar'] = [
+
+  $form['navigation']['navi_main']['color_page_background_navbar'] = [
     '#type' => 'select',
-    '#title' => t('Background color navbar'),
+    '#title' => t('Background color navbar standard'),
     '#options' => $arr_colors,
-    '#default_value' => theme_get_setting('color_page_background_navbar') ? theme_get_setting('color_page_background_navbar') : 'primary',
+    '#default_value' => theme_get_setting('color_page_background_navbar') ? theme_get_setting('color_page_background_navbar') : 'white',
     '#suffix' => '<div class="line-break"></div>'
   ];
 
-  $form['navigation']['color_page_font_navbar'] = [
+  $form['navigation']['navi_main']['color_page_font_navbar'] = [
     '#type' => 'select',
-    '#title' => t('Font color navbar'),
+    '#title' => t('Font color navbar standard'),
     '#options' => $arr_colors,
     '#default_value' => theme_get_setting('color_page_font_navbar') ? theme_get_setting('color_page_font_navbar') : 'grey3',
     '#suffix' => '<hr>'
   ];
 
+  $form['navigation']['navi_main']['color_page_background_navbar_hover'] = [
+    '#type' => 'select',
+    '#title' => t('Background color navbar hover'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_page_background_navbar_hover') ? theme_get_setting('color_page_background_navbar_hover') : 'primary',
+    '#suffix' => '<div class="line-break"></div>'
+  ];
 
-  $form['navigation']['color_page_background_nav_dropdown'] = [
+  $form['navigation']['navi_main']['color_page_font_navbar_hover'] = [
+    '#type' => 'select',
+    '#title' => t('Font color navbar hover'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_page_font_navbar_hover') ? theme_get_setting('color_page_font_navbar_hover') : 'black',
+    '#suffix' => '<hr>'
+  ];
+
+
+  $form['navigation']['navi_main']['color_page_background_nav_dropdown'] = [
     '#type' => 'select',
     '#title' => t('Background color navigation dropdown'),
     '#options' => $arr_colors,
@@ -850,7 +876,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '#suffix' => '<div class="line-break"></div>'
   ];
 
-  $form['navigation']['color_page_font_nav_dropdown'] = [
+  $form['navigation']['navi_main']['color_page_font_nav_dropdown'] = [
     '#type' => 'select',
     '#title' => t('Font color navigation dropdown'),
     '#options' => $arr_colors,
@@ -858,7 +884,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '#suffix' => '<hr>'
   ];
 
-  $form['navigation']['color_page_background_nav_dropdown_hover'] = [
+  $form['navigation']['navi_main']['color_page_background_nav_dropdown_hover'] = [
     '#type' => 'select',
     '#title' => t('Background color navigation hover'),
     '#options' => $arr_colors,
@@ -866,7 +892,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '#suffix' => '<div class="line-break"></div>'
   ];
 
-  $form['navigation']['color_page_font_nav_dropdown_hover'] = [
+  $form['navigation']['navi_main']['color_page_font_nav_dropdown_hover'] = [
     '#type' => 'select',
     '#title' => t('Font color navigation hover'),
     '#options' => $arr_colors,
@@ -875,9 +901,35 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
   ];
 
 
+  $form['navigation']['navi_mobile'] = [
+    '#type' => 'details',
+    '#title' => t('Navigation Mobile'),
+  ];
+
+  $form['navigation']['navi_mobile']['color_page_background_nav_mobile'] = [
+    '#type' => 'select',
+    '#title' => t('Background color nav mobile standard'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_page_background_nav_mobile') ? theme_get_setting('color_page_background_nav_mobile') : 'white',
+    '#suffix' => '<div class="line-break"></div>'
+  ];
 
 
+  $form['navigation']['navi_mobile']['color_page_font_nav_mobile'] = [
+    '#type' => 'select',
+    '#title' => t('Font color nav mobile standard'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_page_font_nav_mobile') ? theme_get_setting('color_page_font_nav_mobile') : 'grey3',
+    '#suffix' => '<div class="line-break"></div>'
+  ];
 
+  $form['navigation']['navi_mobile']['color_page_font_nav_mobile_hover'] = [
+    '#type' => 'select',
+    '#title' => t('Font color nav mobile hover'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_page_font_nav_mobile_hover') ? theme_get_setting('color_page_font_nav_mobile_hover') : 'grey3',
+    '#suffix' => '<div class="line-break"></div>'
+  ];
 
 
 
@@ -1231,6 +1283,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
 
     'color_page_background_navbar' => $form_state->getValue('color_page_background_navbar'),
     'color_page_font_navbar' => $form_state->getValue('color_page_font_navbar'),
+    'color_page_background_navbar_hover' => $form_state->getValue('color_page_background_navbar_hover'),
+    'color_page_font_navbar_hover' => $form_state->getValue('color_page_font_navbar_hover'),
     'color_page_background_footer' => $form_state->getValue('color_page_background_footer'),
     'color_page_font_nav_dropdown' => $form_state->getValue('color_page_font_nav_dropdown'),
     'color_page_background_nav_dropdown' => $form_state->getValue('color_page_background_nav_dropdown'),
@@ -1239,6 +1293,12 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'color_page_font_footer' => $form_state->getValue('color_page_font_footer'),
     'color_page_background_elements' => $form_state->getValue('color_page_background_elements'),
     'color_text_inverted' => $form_state->getValue('color_text_inverted'),
+
+    'color_page_background_nav_mobile' => $form_state->getValue('color_page_background_nav_mobile'),
+    'color_page_font_nav_mobile' => $form_state->getValue('color_page_font_nav_mobile'),
+    'color_page_font_nav_mobile_hover' => $form_state->getValue('color_page_font_nav_mobile_hover'),
+
+
 
 
 

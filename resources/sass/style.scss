@@ -74,17 +74,14 @@ h6 {
   margin-bottom: $margin-bottom-h6;
  }
 
-.iq-text {
+p {
   font-size: $font-size-standard;
   line-height: $line-height-standard;
   font-weight: $font-weight-standard;
   font-family: $font-family-standard;
   color: $color-standard;
-
-  p, ul, ol{
-    margin-top: $margin-top-standard;
-    margin-bottom: $margin-bottom-standard;
-  }
+  margin-top: $margin-top-standard;
+  margin-bottom: $margin-bottom-standard;
 }
 
 .node__content{
@@ -101,11 +98,8 @@ h6 {
   font-weight: $font-weight-lead;
   font-family: $font-family-lead;
   color: $color-lead;
-
-  p, ul, ol{
-    margin-top: $margin-top-lead;
-    margin-bottom: $margin-bottom-lead;
-  }
+  margin-top: $margin-top-lead;
+  margin-bottom: $margin-bottom-lead;
 }
 
 .small, small {
@@ -114,11 +108,8 @@ h6 {
   font-weight: $font-weight-small;
   font-family: $font-family-small;
   color: $color-small;
-
-  p, ul, ol{
-    margin-top: $margin-top-small;
-    margin-bottom: $margin-bottom-small;
-  }
+  margin-top: $margin-top-small;
+  margin-bottom: $margin-bottom-small;
 }
 
 

@@ -28,11 +28,24 @@ $color-font-header:                   $color-{{color_page_font_header}};
 $color-background-navbar:             $color-{{color_page_background_navbar}};
 $color-font-navbar:                   $color-{{color_page_font_navbar}};
 
+$color-background-navbar-hover:       $color-{{color_page_background_navbar_hover}};
+$color-font-navbar-hover:             $color-{{color_page_font_navbar_hover}};
+
 $color-background-nav-dropdown:       $color-{{color_page_background_nav_dropdown}};
 $color-font-nav-dropdown:             $color-{{color_page_font_nav_dropdown}};
 
 $color-background-nav-dropdown-hover: $color-{{color_page_background_nav_dropdown_hover}};
 $color-font-nav-dropdown-hover:       $color-{{color_page_font_nav_dropdown_hover}};
+
+$color-background-nav-mobile:         $color-{{color_page_background_nav_mobile}};
+$color-font-nav-mobile:               $color-{{color_page_font_nav_mobile}};
+$color-font-nav-mobile-hover:         $color-{{color_page_font_nav_mobile_hover}};
+
+$color-font-nav-sidebar:              $color-{{color_page_font_nav_sidebar}};
+$color-font-nav-sidebar-hover:        $color-{{color_page_font_nav_sidebar_hover}};
+
+
+
 
 $color-background-footer:             $color-{{color_page_background_footer}};
 $color-font-footer:                   $color-{{color_page_font_footer}};
