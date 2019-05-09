@@ -26,6 +26,11 @@ footer {
       .content {
         * {
           color: $color-font-footer;
+          &:hover,
+          &:active,
+          &:focus{
+            color: $color-font-footer;
+          }
         }
       }
 

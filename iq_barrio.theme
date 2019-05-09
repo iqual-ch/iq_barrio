@@ -338,6 +338,10 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     $color_value = theme_get_setting($tag . '_color') ? theme_get_setting($tag . '_color') : 'primary';
     $font_size_value = theme_get_setting($tag . '_font_size') ? theme_get_setting($tag . '_font_size') : '2.5';
     $font_size_unit_value = theme_get_setting($tag . '_font_size_unit') ? theme_get_setting($tag . '_font_size_unit') : 'rem';
+
+    $font_size_min_value = theme_get_setting($tag . '_font_size_min') ? theme_get_setting($tag . '_font_size_min') : '2';
+    $font_size_min_unit_value = theme_get_setting($tag . '_font_size_min_unit') ? theme_get_setting($tag . '_font_size_min_unit') : 'rem';
+
     $line_height_value = theme_get_setting($tag . '_line_height') ? theme_get_setting($tag . '_line_height') : '1.2';
     $font_weight_value = theme_get_setting($tag . '_font_weight') ? theme_get_setting($tag . '_font_weight') : 'normal';
 
@@ -361,12 +365,28 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
       '#suffix' => '<div class="line-break"></div>'
     ];
 
-    $form['typography']['headings'][$tag . '_font_weight'] = [
-      '#type' => 'select',
-      '#options' => $arr_fontweights,
-      '#title' => t('Font weight'),
-      '#default_value' => $font_weight_value,
+
+    $form['typography']['headings'][$tag . '_font_size_min_holder'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'class' => ['container-inline', 'unit-combo-field'],
+      ]
     ];
+
+    $form['typography']['headings'][$tag . '_font_size_min_holder'][$tag . '_font_size_min'] = [
+      '#type' => 'textfield',
+      '#title' => t('Font size (min)'),
+      '#default_value' => $font_size_min_value,
+    ];
+
+    $form['typography']['headings'][$tag . '_font_size_min_holder'][$tag . '_font_size_min_unit'] = [
+      '#type' => 'select',
+      '#options' => $arr_units,
+      '#default_value' => $font_size_min_unit_value,
+    ];
+
+
+
 
     $form['typography']['headings'][$tag . '_font_size_holder'] = [
       '#type' => 'container',
@@ -377,7 +397,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
 
     $form['typography']['headings'][$tag . '_font_size_holder'][$tag . '_font_size'] = [
       '#type' => 'textfield',
-      '#title' => t('Font size'),
+      '#title' => t('Font size (max)'),
       '#default_value' => $font_size_value,
     ];
 
@@ -385,6 +405,22 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
       '#type' => 'select',
       '#options' => $arr_units,
       '#default_value' => $font_size_unit_value,
+    ];
+
+
+    $form['typography']['headings'][$tag . '_font_weight'] = [
+      '#type' => 'select',
+      '#options' => $arr_fontweights,
+      '#title' => t('Font weight'),
+      '#default_value' => $font_weight_value,
+    ];
+
+
+
+    $form['typography']['headings'][$tag . '_line_height'] = [
+      '#type' => 'textfield',
+      '#title' => t('Line height'),
+      '#default_value' => $line_height_value,
     ];
 
 
@@ -412,11 +448,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
       '#default_value' => $margin_unit_value,
     ];
 
-    $form['typography']['headings'][$tag . '_line_height'] = [
-      '#type' => 'textfield',
-      '#title' => t('Line height'),
-      '#default_value' => $line_height_value,
-    ];
+
 
     $form['typography']['headings'][$tag . '_title'] = [
       '#prefix' => '</div><div class="styling-preview">',
@@ -931,7 +963,27 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '#suffix' => '<div class="line-break"></div>'
   ];
 
+  $form['navigation']['navi_sidebar'] = [
+    '#type' => 'details',
+    '#title' => t('Navigation Sidebar'),
+  ];
 
+
+  $form['navigation']['navi_sidebar']['color_page_font_nav_sidebar'] = [
+    '#type' => 'select',
+    '#title' => t('Font color nav sidebar standard'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_page_font_nav_sidebar') ? theme_get_setting('color_page_font_nav_sidebar') : 'grey3',
+    '#suffix' => '<div class="line-break"></div>'
+  ];
+
+  $form['navigation']['navi_sidebar']['color_page_font_nav_sidebar_hover'] = [
+    '#type' => 'select',
+    '#title' => t('Font color nav sidebar hover'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_page_font_nav_sidebar_hover') ? theme_get_setting('color_page_font_nav_sidebar_hover') : 'grey3',
+    '#suffix' => '<div class="line-break"></div>'
+  ];
 
 
   // section decorations
@@ -1298,7 +1350,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'color_page_font_nav_mobile' => $form_state->getValue('color_page_font_nav_mobile'),
     'color_page_font_nav_mobile_hover' => $form_state->getValue('color_page_font_nav_mobile_hover'),
 
-
+    'color_page_font_nav_sidebar' => $form_state->getValue('color_page_font_nav_sidebar'),
+    'color_page_font_nav_sidebar_hover' => $form_state->getValue('color_page_font_nav_sidebar_hover'),
 
 
 
@@ -1306,6 +1359,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'h1_color' => $form_state->getValue('h1_color'),
     'h1_font_size' => $form_state->getValue('h1_font_size'),
     'h1_font_size_unit' => $form_state->getValue('h1_font_size_unit'),
+    'h1_font_size_min' => $form_state->getValue('h1_font_size_min'),
+    'h1_font_size_min_unit' => $form_state->getValue('h1_font_size_min_unit'),
     'h1_line_height' => $form_state->getValue('h1_line_height'),
     'h1_font_weight' => $form_state->getValue('h1_font_weight'),
     'h1_margin_top' => $form_state->getValue('h1_margin_top'),
@@ -1316,6 +1371,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'h2_color' => $form_state->getValue('h2_color'),
     'h2_font_size' => $form_state->getValue('h2_font_size'),
     'h2_font_size_unit' => $form_state->getValue('h2_font_size_unit'),
+    'h2_font_size_min' => $form_state->getValue('h2_font_size_min'),
+    'h2_font_size_min_unit' => $form_state->getValue('h2_font_size_min_unit'),
     'h2_line_height' => $form_state->getValue('h2_line_height'),
     'h2_font_weight' => $form_state->getValue('h2_font_weight'),
     'h2_margin_top' => $form_state->getValue('h2_margin_top'),
@@ -1326,6 +1383,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'h3_color' => $form_state->getValue('h3_color'),
     'h3_font_size' => $form_state->getValue('h3_font_size'),
     'h3_font_size_unit' => $form_state->getValue('h3_font_size_unit'),
+    'h3_font_size_min' => $form_state->getValue('h3_font_size_min'),
+    'h3_font_size_min_unit' => $form_state->getValue('h3_font_size_min_unit'),
     'h3_line_height' => $form_state->getValue('h3_line_height'),
     'h3_font_weight' => $form_state->getValue('h3_font_weight'),
     'h3_margin_top' => $form_state->getValue('h3_margin_top'),
@@ -1336,6 +1395,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'h4_color' => $form_state->getValue('h4_color'),
     'h4_font_size' => $form_state->getValue('h4_font_size'),
     'h4_font_size_unit' => $form_state->getValue('h4_font_size_unit'),
+    'h4_font_size_min' => $form_state->getValue('h4_font_size_min'),
+    'h4_font_size_min_unit' => $form_state->getValue('h4_font_size_min_unit'),
     'h4_line_height' => $form_state->getValue('h4_line_height'),
     'h4_font_weight' => $form_state->getValue('h4_font_weight'),
     'h4_margin_top' => $form_state->getValue('h4_margin_top'),
@@ -1346,6 +1407,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'h5_color' => $form_state->getValue('h5_color'),
     'h5_font_size' => $form_state->getValue('h5_font_size'),
     'h5_font_size_unit' => $form_state->getValue('h5_font_size_unit'),
+    'h5_font_size_min' => $form_state->getValue('h5_font_size_min'),
+    'h5_font_size_min_unit' => $form_state->getValue('h5_font_size_min_unit'),
     'h5_line_height' => $form_state->getValue('h5_line_height'),
     'h5_font_weight' => $form_state->getValue('h5_font_weight'),
     'h5_margin_top' => $form_state->getValue('h5_margin_top'),
@@ -1356,6 +1419,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'h6_color' => $form_state->getValue('h6_color'),
     'h6_font_size' => $form_state->getValue('h6_font_size'),
     'h6_font_size_unit' => $form_state->getValue('h6_font_size_unit'),
+    'h6_font_size_min' => $form_state->getValue('h6_font_size_min'),
+    'h6_font_size_min_unit' => $form_state->getValue('h6_font_size_min_unit'),
     'h6_line_height' => $form_state->getValue('h6_line_height'),
     'h6_font_weight' => $form_state->getValue('h6_font_weight'),
     'h6_margin_top' => $form_state->getValue('h6_margin_top'),

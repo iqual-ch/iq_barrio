@@ -1,6 +1,40 @@
 // /* Forms (definitions for webform -> webforms.sass) */
 
-// @import "definitions";
+@import "definitions";
+
+.webform-submission-form{
+
+  fieldset{
+    padding: 0;
+
+    label{
+      margin-bottom: 0;
+    }
+
+
+    input,
+    select,
+    textarea {
+      border-radius: $border-radius-base;
+      border: $border-width-base solid $border-color-base;
+    }
+
+
+  }
+
+  .form-actions{
+    padding: 0;
+    .btn-primary{
+      margin: 0;
+    }
+  }
+
+
+}
+
+
+
+
 // .page-content {
 //     input {
 //         border: $border-width-base solid $color-border-elements;
