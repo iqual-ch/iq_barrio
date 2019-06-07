@@ -10,6 +10,7 @@
     margin-top:                       {{h1_margin_top}}{{h1_margin_unit}};
     margin-bottom:                    {{h1_margin_bottom}}{{h1_margin_unit}};
     color:                            {{h1_color}};
+    opacity:                          {{h1_opacity}};
 }
 
 [data-drupal-selector="edit-iq-theme"] .styling-preview h2{
@@ -20,6 +21,7 @@
     margin-top:                       {{h2_margin_top}}{{h2_margin_unit}};
     margin-bottom:                    {{h2_margin_bottom}}{{h2_margin_unit}};
     color:                            {{h2_color}};
+    opacity:                          {{h2_opacity}};
 }
 
 [data-drupal-selector="edit-iq-theme"] .styling-preview h3{
@@ -30,6 +32,7 @@
     margin-top:                       {{h3_margin_top}}{{h3_margin_unit}};
     margin-bottom:                    {{h3_margin_bottom}}{{h3_margin_unit}};
     color:                            {{h3_color}};
+    opacity:                          {{h3_opacity}};
 }
 
 [data-drupal-selector="edit-iq-theme"] .styling-preview h4{
@@ -40,6 +43,8 @@
     margin-top:                       {{h4_margin_top}}{{h4_margin_unit}};
     margin-bottom:                    {{h4_margin_bottom}}{{h4_margin_unit}};
     color:                            {{h4_color}};
+    opacity:                          {{h4_opacity}};
+
 }
 
 [data-drupal-selector="edit-iq-theme"] .styling-preview h5{
@@ -50,6 +55,7 @@
     margin-top:                       {{h5_margin_top}}{{h5_margin_unit}};
     margin-bottom:                    {{h5_margin_bottom}}{{h5_margin_unit}};
     color:                            {{h5_color}};
+    opacity:                          {{h5_opacity}};
 }
 
 [data-drupal-selector="edit-iq-theme"] .styling-preview h6{
@@ -60,6 +66,7 @@
     margin-top:                       {{h6_margin_top}}{{h6_margin_unit}};
     margin-bottom:                    {{h6_margin_bottom}}{{h6_margin_unit}};
     color:                            {{h6_color}};
+    opacity:                          {{h6_opacity}};
 }
 
 
@@ -71,6 +78,7 @@
     margin-top:                       {{standard_margin_top}}{{standard_margin_unit}};
     margin-bottom:                    {{standard_margin_bottom}}{{standard_margin_unit}};
     color:                            {{standard_color}};
+    opacity:                          {{standard_opacity}};
 }
 
 [data-drupal-selector="edit-iq-theme"] .styling-preview .lead{
@@ -81,6 +89,7 @@
     margin-top:                       {{lead_margin_top}}{{lead_margin_unit}};
     margin-bottom:                    {{lead_margin_bottom}}{{lead_margin_unit}};
     color:                            {{lead_color}};
+    opacity:                          {{lead_opacity}};
 }
 
 [data-drupal-selector="edit-iq-theme"] .styling-preview .small{
@@ -91,12 +100,14 @@
     margin-top:                       {{small_margin_top}}{{small_margin_unit}};
     margin-bottom:                    {{small_margin_bottom}}{{small_margin_unit}};
     color:                            {{small_color}};
+    opacity:                          {{small_opacity}};
 }
 
 
 [data-drupal-selector="edit-iq-theme"] .styling-preview a.preview-link-standard,
 [data-drupal-selector="edit-iq-theme"] .styling-preview a.preview-link-inline{
   color:                              {{link_color}};
+  opacity:                            {{link_opacity}};
   text-decoration:                    {{link_text_decoration}};
 }
 
@@ -105,6 +116,7 @@
 [data-drupal-selector="edit-iq-theme"] .styling-preview a.preview-link-inline:focus,
 [data-drupal-selector="edit-iq-theme"] .styling-preview a.preview-link-inline:active{
     color:                            {{link_color_hover}};
+    opacity:                          {{link_opacity_hover}};
     text-decoration:                  {{link_text_decoration_hover}};
 }
 
@@ -131,6 +143,7 @@
     color:                            {{button_font_color_standard}};
     background-color:                 {{button_background_color_standard}};
     border-color:                     {{button_border_color_standard}};
+    opacity:                          {{button_background_opacity_standard}};
 }
 
 [data-drupal-selector="edit-iq-theme"] .preview-button.hover,
@@ -138,6 +151,7 @@
     color:                            {{button_font_color_hover}};
     background-color:                 {{button_background_color_hover}};
     border-color:                     {{button_border_color_hover}};
+    opacity:                          {{button_background_opacity_hover}};
 }
 
 [data-drupal-selector="edit-iq-theme"] .preview-button.active,
@@ -145,4 +159,5 @@
     color:                            {{button_font_color_active}};
     background-color:                 {{button_background_color_active}};
     border-color:                     {{button_border_color_active}};
+    opacity:                          {{button_background_opacity_active}};
 }

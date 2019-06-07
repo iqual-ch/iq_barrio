@@ -6,8 +6,9 @@
       justify-content: flex-end;
 
       >li {
-        margin-right: 0;
-        margin-left: $base-margin-left;
+        &:last-child{
+          margin-right: 0;
+        }
       }
     }
   }
@@ -16,20 +17,31 @@
     flex-direction: row;
 
     >li {
-      margin-right: $base-margin-right;
-      background-color: $color-background-navbar;
+      margin: $navi-main-margin;
+      &:first-child{
+        margin-left: 0;
+      }
 
       a {
+        font-family: $navi-main-font-family;
+        font-weight: $navi-main-font-weight;
+        line-height: $navi-main-line-height;
+        font-size: $navi-main-font-size;
+        background-color: $color-background-navbar;
+        padding: $navi-main-padding;
         color: $color-font-navbar;
         text-decoration: none;
+
+        &.nav-link{
+          padding: $navi-main-padding;
+        }
       }
 
       &.active,
       &:active,
       &:hover {
-        background-color: $color-background-navbar-hover;
-
         a {
+          background-color: $color-background-navbar-hover;
           color: $color-font-navbar-hover;
           text-decoration: none;
         }

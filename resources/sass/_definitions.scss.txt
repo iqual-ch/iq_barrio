@@ -17,40 +17,31 @@ $color-tertiary:                      {{color_tertiary}};
 $color-quaternary:                    {{color_quaternary}};
 
 /* Base colors */
-$color-background-page:               $color-{{color_page_background}};
+$color-background-page:               rgba($color-{{color_page_background}},{{opacity_color_page_background}});
 
-$color-background-meta-header:        $color-{{color_page_background_meta_header}};
-$color-font-meta-header:              $color-{{color_page_font_meta_header}};
+$color-background-meta-header:        rgba($color-{{color_page_background_meta_header}},{{opacity_color_page_background_meta_header}});
+$color-font-meta-header:              rgba($color-{{color_page_font_meta_header}},{{opacity_color_page_font_meta_header}});
 
-$color-background-header:             $color-{{color_page_background_header}};
-$color-font-header:                   $color-{{color_page_font_header}};
+$color-background-header:             rgba($color-{{color_page_background_header}},{{opacity_color_page_background_header}});
+$color-font-header:                   rgba($color-{{color_page_font_header}},{{opacity_color_page_font_header}});
 
-$color-background-navbar:             $color-{{color_page_background_navbar}};
-$color-font-navbar:                   $color-{{color_page_font_navbar}};
+$color-background-nav-dropdown:       rgba($color-{{color_page_background_nav_dropdown}},{{opacity_page_background_nav_dropdown}});
+$color-font-nav-dropdown:             rgba($color-{{color_page_font_nav_dropdown}},{{opacity_page_font_nav_dropdown}});
 
-$color-background-navbar-hover:       $color-{{color_page_background_navbar_hover}};
-$color-font-navbar-hover:             $color-{{color_page_font_navbar_hover}};
+$color-background-nav-dropdown-hover: rgba($color-{{color_page_background_nav_dropdown_hover}},{{opacity_page_background_nav_dropdown_hover}});
+$color-font-nav-dropdown-hover:       rgba($color-{{color_page_font_nav_dropdown_hover}},{{opacity_page_font_nav_dropdown_hover}});
 
-$color-background-nav-dropdown:       $color-{{color_page_background_nav_dropdown}};
-$color-font-nav-dropdown:             $color-{{color_page_font_nav_dropdown}};
+$color-background-nav-mobile:         rgba($color-{{color_page_background_nav_mobile}},{{opacity_page_background_nav_mobile}});
+$color-font-nav-mobile:               rgba($color-{{color_page_font_nav_mobile}},{{opacity_page_font_nav_mobile}});
+$color-font-nav-mobile-hover:         rgba($color-{{color_page_font_nav_mobile_hover}},{{opacity_page_font_nav_mobile_hover}});
 
-$color-background-nav-dropdown-hover: $color-{{color_page_background_nav_dropdown_hover}};
-$color-font-nav-dropdown-hover:       $color-{{color_page_font_nav_dropdown_hover}};
+$color-font-nav-sidebar:              rgba($color-{{color_page_font_nav_sidebar}},{{opacity_page_font_nav_sidebar}});
+$color-font-nav-sidebar-hover:        rgba($color-{{color_page_font_nav_sidebar_hover}},{{opacity_page_font_nav_sidebar_hover}});
 
-$color-background-nav-mobile:         $color-{{color_page_background_nav_mobile}};
-$color-font-nav-mobile:               $color-{{color_page_font_nav_mobile}};
-$color-font-nav-mobile-hover:         $color-{{color_page_font_nav_mobile_hover}};
+$color-background-footer:             rgba($color-{{color_page_background_footer}},{{opacity_color_page_background_footer}});
+$color-font-footer:                   rgba($color-{{color_page_font_footer}},{{opacity_color_page_font_footer}});
 
-$color-font-nav-sidebar:              $color-{{color_page_font_nav_sidebar}};
-$color-font-nav-sidebar-hover:        $color-{{color_page_font_nav_sidebar_hover}};
-
-
-
-
-$color-background-footer:             $color-{{color_page_background_footer}};
-$color-font-footer:                   $color-{{color_page_font_footer}};
-
-$color-text-inverted:                 $color-{{color_text_inverted}};
+$color-text-inverted:                 rgba($color-{{color_text_inverted}},{{opacity_text_inverted}});
 
 
 
@@ -61,7 +52,7 @@ $font-size-h1:                        {{h1_font_size}}{{h1_font_size_unit}};
 $font-size-min-h1:                    {{h1_font_size_min}}{{h1_font_size_min_unit}};
 $line-height-h1:                      {{h1_line_height}};
 $font-weight-h1:                      {{h1_font_weight}};
-$color-h1:                            $color-{{h1_color}};
+$color-h1:                            rgba($color-{{h1_color}},{{h1_opacity}});
 $font-family-h1:                      {{h1_font_family}};
 $margin-top-h1:                       {{h1_margin_top}}{{h1_margin_unit}};
 $margin-bottom-h1:                    {{h1_margin_bottom}}{{h1_margin_unit}};
@@ -70,7 +61,7 @@ $font-size-h2:                        {{h2_font_size}}{{h2_font_size_unit}};
 $font-size-min-h2:                    {{h2_font_size_min}}{{h2_font_size_min_unit}};
 $line-height-h2:                      {{h2_line_height}};
 $font-weight-h2:                      {{h2_font_weight}};
-$color-h2:                            $color-{{h2_color}};
+$color-h2:                            rgba($color-{{h2_color}},{{h2_opacity}});
 $font-family-h2:                      {{h2_font_family}};
 $margin-top-h2:                       {{h2_margin_top}}{{h2_margin_unit}};
 $margin-bottom-h2:                    {{h2_margin_bottom}}{{h2_margin_unit}};
@@ -79,7 +70,7 @@ $font-size-h3:                        {{h3_font_size}}{{h3_font_size_unit}};
 $font-size-min-h3:                    {{h3_font_size_min}}{{h3_font_size_min_unit}};
 $line-height-h3:                      {{h3_line_height}};
 $font-weight-h3:                      {{h3_font_weight}};
-$color-h3:                            $color-{{h3_color}};
+$color-h3:                            rgba($color-{{h3_color}},{{h3_opacity}});
 $font-family-h3:                      {{h3_font_family}};
 $margin-top-h3:                       {{h3_margin_top}}{{h3_margin_unit}};
 $margin-bottom-h3:                    {{h3_margin_bottom}}{{h3_margin_unit}};
@@ -88,7 +79,7 @@ $font-size-h4:                        {{h4_font_size}}{{h4_font_size_unit}};
 $font-size-min-h4:                    {{h4_font_size_min}}{{h4_font_size_min_unit}};
 $line-height-h4:                      {{h4_line_height}};
 $font-weight-h4:                      {{h4_font_weight}};
-$color-h4:                            $color-{{h4_color}};
+$color-h4:                            rgba($color-{{h4_color}},{{h4_opacity}});
 $font-family-h4:                      {{h4_font_family}};
 $margin-top-h4:                       {{h4_margin_top}}{{h4_margin_unit}};
 $margin-bottom-h4:                    {{h4_margin_bottom}}{{h4_margin_unit}};
@@ -97,7 +88,7 @@ $font-size-h5:                        {{h5_font_size}}{{h5_font_size_unit}};
 $font-size-min-h5:                    {{h5_font_size_min}}{{h5_font_size_min_unit}};
 $line-height-h5:                      {{h5_line_height}};
 $font-weight-h5:                      {{h5_font_weight}};
-$color-h5:                            $color-{{h5_color}};
+$color-h5:                            rgba($color-{{h5_color}},{{h5_opacity}});
 $font-family-h5:                      {{h5_font_family}};
 $margin-top-h5:                       {{h5_margin_top}}{{h5_margin_unit}};
 $margin-bottom-h5:                    {{h5_margin_bottom}}{{h5_margin_unit}};
@@ -106,7 +97,7 @@ $font-size-h6:                        {{h6_font_size}}{{h6_font_size_unit}};
 $font-size-min-h6:                    {{h6_font_size_min}}{{h6_font_size_min_unit}};
 $line-height-h6:                      {{h6_line_height}};
 $font-weight-h6:                      {{h6_font_weight}};
-$color-h6:                            $color-{{h6_color}};
+$color-h6:                            rgba($color-{{h6_color}},{{h6_opacity}});
 $font-family-h6:                      {{h6_font_family}};
 $margin-top-h6:                       {{h6_margin_top}}{{h6_margin_unit}};
 $margin-bottom-h6:                    {{h6_margin_bottom}}{{h6_margin_unit}};
@@ -116,20 +107,20 @@ $margin-bottom-h6:                    {{h6_margin_bottom}}{{h6_margin_unit}};
 $font-size-standard:                  {{standard_font_size}}{{standard_font_size_unit}};
 $line-height-standard:                {{standard_line_height}};
 $font-weight-standard:                {{standard_font_weight}};
-$color-standard:                      $color-{{standard_color}};
+$color-standard:                      rgba($color-{{standard_color}},{{standard_opacity}});
 $font-family-standard:                {{standard_font_family}};
 $margin-top-standard:                 {{standard_margin_top}}{{standard_margin_unit}};
 $margin-bottom-standard:              {{standard_margin_bottom}}{{standard_margin_unit}};
 
-$color-link:                          $color-{{link_color}};
-$color-link-hover:                    $color-{{link_color_hover}};
+$color-link:                          rgba($color-{{link_color}},{{link_opacity}});
+$color-link-hover:                    rgba($color-{{link_color_hover}},{{link_opacity_hover}});
 $text-decoration-link:                {{link_text_decoration}};
 $text-decoration-link-hover:          {{link_text_decoration_hover}};
 
 $font-size-small:                     {{small_font_size}}{{small_font_size_unit}};
 $line-height-small:                   {{small_line_height}};
 $font-weight-small:                   {{small_font_weight}};
-$color-small:                         $color-{{small_color}};
+$color-small:                         rgba($color-{{small_color}},{{small_opacity}});
 $font-family-small:                   {{small_font_family}};
 $margin-top-small:                    {{small_margin_top}}{{small_margin_unit}};
 $margin-bottom-small:                 {{small_margin_bottom}}{{small_margin_unit}};
@@ -137,7 +128,7 @@ $margin-bottom-small:                 {{small_margin_bottom}}{{small_margin_unit
 $font-size-lead:                      {{lead_font_size}}{{lead_font_size_unit}};
 $line-height-lead:                    {{lead_line_height}};
 $font-weight-lead:                    {{lead_font_weight}};
-$color-lead:                          $color-{{lead_color}};
+$color-lead:                          rgba($color-{{lead_color}},{{lead_opacity}});
 $font-family-lead:                    {{lead_font_family}};
 $margin-top-lead:                     {{lead_margin_top}}{{lead_margin_unit}};
 $margin-bottom-lead:                  {{lead_margin_bottom}}{{lead_margin_unit}};
@@ -148,15 +139,33 @@ $font-weight-buttons:                 {{button_font_weight}};
 $font-family-buttons:                 {{button_font_family}};
 $margin-buttons:                      {{button_margin_top}}{{button_margin_unit}} {{button_margin_right}}{{button_margin_unit}} {{button_margin_bottom}}{{button_margin_unit}} {{button_margin_left}}{{button_margin_unit}};
 $padding-buttons:                     {{button_padding_top}}{{button_padding_unit}} {{button_padding_right}}{{button_padding_unit}} {{button_padding_bottom}}{{button_padding_unit}} {{button_padding_left}}{{button_padding_unit}};
-$font-color-buttons:                  $color-{{button_font_color_standard}};
-$background-color-buttons:            $color-{{button_background_color_standard}};
-$border-color-buttons:                $color-{{button_border_color_standard}};
-$font-color-hover-buttons:            $color-{{button_font_color_hover}};
-$background-color-hover-buttons:      $color-{{button_background_color_hover}};
-$border-color-hover-buttons:          $color-{{button_border_color_hover}};
-$font-color-active-buttons:           $color-{{button_font_color_active}};
-$background-color-active-buttons:     $color-{{button_background_color_active}};
-$border-color-active-buttons:         $color-{{button_border_color_active}};
+$font-color-buttons:                  rgba($color-{{button_font_color_standard}},{{button_font_opacity_standard}});
+$background-color-buttons:            rgba($color-{{button_background_color_standard}},{{button_background_opacity_standard}});
+$border-color-buttons:                rgba($color-{{button_border_color_standard}},{{button_border_opacity_standard}});
+$font-color-hover-buttons:            rgba($color-{{button_font_color_hover}},{{button_font_opacity_hover}});
+$background-color-hover-buttons:      rgba($color-{{button_background_color_hover}},{{button_background_opacity_hover}});
+$border-color-hover-buttons:          rgba($color-{{button_border_color_hover}},{{button_border_opacity_hover}});
+$font-color-active-buttons:           rgba($color-{{button_font_color_active}},{{button_font_opacity_active}});
+$background-color-active-buttons:     rgba($color-{{button_background_color_active}},{{button_background_opacity_active}});
+$border-color-active-buttons:         rgba($color-{{button_border_color_active}},{{button_border_opacity_active}});
+
+/* Navigation main */
+
+$navi-main-font-family:               {{navi_main_font_family}};
+$navi-main-font-weight:               {{navi_main_font_weight}};
+$navi-main-line-height:               {{navi_main_line_height}};
+$navi-main-font-size:                 {{navi_main_font_size}}{{navi_main_font_size_unit}};
+$navi-main-margin:                    {{navi_main_margin_top}}{{navi_main_margin_unit}} {{navi_main_margin_left_right}}{{navi_main_margin_unit}} {{navi_main_margin_bottom}}{{navi_main_margin_unit}};
+$navi-main-padding:                   {{navi_main_padding_top}}{{navi_main_padding_unit}} {{navi_main_padding_left_right}}{{navi_main_padding_unit}} {{navi_main_padding_bottom}}{{navi_main_padding_unit}};
+
+$color-background-navbar:             rgba($color-{{color_page_background_navbar}},{{opacity_page_background_navbar}});
+$color-font-navbar:                   rgba($color-{{color_page_font_navbar}},{{opacity_page_font_navbar}});
+
+$color-background-navbar-hover:       rgba($color-{{color_page_background_navbar_hover}},{{opacity_page_background_navbar_hover}});
+$color-font-navbar-hover:             rgba($color-{{color_page_font_navbar_hover}},{{opacity_page_font_navbar_hover}});
+
+
+
 
 
 
@@ -183,27 +192,27 @@ $padding-field-default: 5px 20px;
 
 /* Slider */
 $slider-arrow-font-size:              {{slider_arrow_size}}{{slider_arrow_size_unit}};
-$slider-arrow-color:                  $color-{{slider_arrow_color}};
-$slider-arrow-backgroundcolor:        $color-{{slider_arrow_backgroundcolor}};
+$slider-arrow-color:                  rgba($color-{{slider_arrow_color}},{{slider_arrow_opacity}});
+$slider-arrow-backgroundcolor:        rgba($color-{{slider_arrow_backgroundcolor}},{{slider_arrow_background_opacity}});
 $slider-dot-font-size:                {{slider_dot_size}}{{slider_dot_size_unit}};
-$slider-dot-color:                    $color-{{slider_dot_color}};
-$slider-dot-color_active:             $color-{{slider_dot_color_active}};
+$slider-dot-color:                    rgba($color-{{slider_dot_color}},{{slider_dot_opacity}});
+$slider-dot-color_active:             rgba($color-{{slider_dot_color_active}},{{slider_dot_opacity_active}});
 
 
 /* Quote */
-$quote-highlight-color:               $color-{{quote_highlight_color}};
+$quote-highlight-color:               rgba($color-{{quote_highlight_color}},{{quote_highlight_opacity}});
 
 
 /* Social */
-$social-icons-color:                  $color-{{social_icon_color}};
+$social-icons-color:                  rgba($color-{{social_icon_color}},{{social_icon_opacity}});
 
 
 /* Tabs */
-$tab-color:                           $color-{{tab_color}};
-$tab-font-color:                      $color-{{tab_font_color}};
+$tab-color:                           rgba($color-{{tab_color}},{{tab_opacity}});
+$tab-font-color:                      rgba($color-{{tab_font_color}},{{tab_font_opacity}});
 
-$tab-color-active:                    $color-{{tab_color_active}};
-$tab-font-color-active:               $color-{{tab_font_color_active}};
+$tab-color-active:                    rgba($color-{{tab_color_active}},{{tab_opacity_active}});
+$tab-font-color-active:               rgba($color-{{tab_font_color_active}},{{tab_font_opacity_active}});
 
 
 
@@ -228,7 +237,7 @@ $tab-font-color-active:               $color-{{tab_font_color_active}};
   font-size: $min-font-size;
 
   @if $u1 == $u2 and $u4 == $u3 {
-    @if $u3 = rem {
+    @if $u3 == rem {
       & {
         @media screen and (min-width: 320px) {
           font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * 16 * ((100vw - #{320px}) / #{strip-unit(991px - 320px)}));
@@ -236,7 +245,7 @@ $tab-font-color-active:               $color-{{tab_font_color_active}};
       }
     }
 
-    @if $u3 = px {
+    @if $u3 == px {
       & {
         @media screen and (min-width: 320px) {
           font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{320px}) / #{strip-unit(991px - 320px)}));
@@ -259,7 +268,9 @@ $tab-font-color-active:               $color-{{tab_font_color_active}};
 /*************** BORDER DEFINITIONS ***************/
 $border-radius-base:  {{radius}}{{radius_unit}}; //Settable (value, 0-50%)
 $border-width-base:   {{border_width}}{{border_width_unit}}; //Settable (value, 1-10px)
-$border-color-base:   $color-{{border_color}};
+$border-style-base:   {{border_style}}; //Settable (value, 1-10px)
+$border-color-base:   rgba($color-{{border_color}},{{border_opacity}});
+$border-base:         $border-width-base $border-style-base $border-color-base;
 
 /*************** OTHER DEFINITIONS ***************/
 $transition-default: all 0.2s ease;
@@ -292,11 +303,11 @@ $padding-right-base:                  $base-padding-right;
 $padding-base:                        $padding-bottom-base;
 
 /* Content text colors */
-$color-text-titles:                   $color-{{h1_color}};
-$color-text-content:                  $color-{{standard_color}};
-$color-text-links:                    $color-{{link_color}};
-$color-text-icons:                    $color-{{color_icons}};
-$color-text-icons-hover:              $color-{{color_icons_hover}};
+$color-text-titles:                   rgba($color-{{h1_color}},{{h1_opacity}});
+$color-text-content:                  rgba($color-{{standard_color}},{{standard_opacity}});
+$color-text-links:                    rgba($color-{{link_color}},{{link_opacity}});
+$color-text-icons:                    rgba($color-{{color_icons}},{{opacity_icons}});
+$color-text-icons-hover:              rgba($color-{{color_icons_hover}},{{opacity_icons_hover}});
 
 
 /* Elements colors normal state (e.g. button) */
