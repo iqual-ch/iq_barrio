@@ -161,3 +161,169 @@
     border-color:                     {{button_border_color_active}};
     opacity:                          {{button_background_opacity_active}};
 }
+
+
+[data-drupal-selector="edit-iq-theme"] #edit-section-definitions .styling-preview {
+    background-color: transparent;
+}
+
+
+#color-definitions-preview-page{
+    border:         1px solid #999;
+    width:          75%;
+    margin:         30px auto 0;
+    font-size:      10px;
+    position:       relative;
+}
+
+#color-definitions-preview-page:before{
+    background:     {{color_page_background}};
+    opacity:        {{opacity_color_page_background}};
+    position:       absolute;
+    top:            0;
+    height:         100%;
+    width:          100%;
+    content:        '';
+    display:        block;
+    z-index:        1;
+}
+
+#color-definitions-preview-meta-header{
+    border-bottom:  1px solid #999;
+    padding:        10px;
+    background:     {{color_page_background_meta_header}};
+    opacity:        {{opacity_color_page_background_meta_header}};
+    color:          {{color_page_font_meta_header}};
+    position:       relative;
+    z-index:        2;
+}
+
+#color-definitions-preview-header{
+    border-bottom:  1px solid #999;
+    padding:        10px;
+    background:     {{color_page_background_header}};
+    opacity:        {{opacity_color_page_background_header}};
+    color:          {{color_page_font_header}};
+    height:         100px;
+    position:       relative;
+    z-index:        2;
+}
+
+#color-definitions-preview-content{
+    border-bottom:  1px solid #999;
+    padding:        10px;
+    color:          {{standard_color}};
+    height:         250px;
+    position:       relative;
+    z-index:        2;
+}
+
+#color-definitions-preview-footer{
+    padding:        10px;
+    background:     {{color_page_background_footer}};
+    opacity:        {{opacity_color_page_background_footer}};
+    color:          {{color_page_font_footer}};
+    height:         50px;
+    position:       relative;
+    z-index:        2;
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li{
+    list-style:     none;
+    white-space:    nowrap;
+    position:       relative;
+    margin:         {{navi_main_margin_top}}{{navi_main_margin_unit}} {{navi_main_margin_left_right}}{{navi_main_margin_unit}} {{navi_main_margin_bottom}}{{navi_main_margin_unit}};
+    padding:        {{navi_main_padding_top}}{{navi_main_padding_unit}} {{navi_main_padding_left_right}}{{navi_main_padding_unit}} {{navi_main_padding_bottom}}{{navi_main_padding_unit}};
+    font-family:    {{navi_main_font_family}};
+    font-weight:    {{navi_main_font_weight}};
+    line-height:    {{navi_main_line_height}};
+    font-size:      {{navi_main_font_size}}{{navi_main_font_size_unit}};
+    background-color:   {{color_page_background_navbar}};
+    opacity:            {{opacity_page_background_navbar}};
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li a{
+    color: {{color_page_font_navbar}};
+    opacity: {{opacity_page_font_navbar}};
+    text-decoration:    none;
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li.active,
+[data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li:active{
+    background-color:   {{color_page_background_navbar_active}};
+    opacity:            {{opacity_page_background_navbar_active}};
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li.active a {
+    color:              {{color_page_font_navbar_active}};
+    opacity:            {{opacity_page_font_navbar_active}};
+}
+
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li:hover,
+[data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li.active:hover {
+    background-color:   {{color_page_background_navbar_hover}};
+    opacity:            {{opacity_page_background_navbar}};
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li:hover a,
+[data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li.active:hover a{
+    color:              {{color_page_font_navbar_hover}};
+    opacity:            {{opacity_page_font_navbar_hover}};
+}
+
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li .dropdown-menu{
+    padding: 0;
+    margin: 0;
+    border: {{border_width}}{{border_width_unit}} {{border_style}} {{border_color}};
+    border-radius: {{radius}}{{radius_unit}};
+    position: absolute;
+    top: 100%;
+}
+
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li .dropdown-menu li{
+    background-color:   {{color_page_background_nav_dropdown}};
+    opacity:            {{opacity_page_background_nav_dropdown}};
+    padding-top: calc( {{padding_top}}{{padding_unit}} / 2 );
+    padding-bottom: calc( {{padding_bottom}}{{padding_unit}} / 2 );
+    padding-left: calc( {{padding_left}}{{padding_unit}} / 2 );
+    padding-right: calc( {{padding_right}}{{padding_unit}} / 2 );
+    margin: 0;
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li .dropdown-menu li:hover,
+[data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li .dropdown-menu li.active:hover{
+    background-color:   {{color_page_background_nav_dropdown_hover}};
+    opacity:            {{opacity_page_background_nav_dropdown_hover}};
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li .dropdown-menu li.active{
+    background-color:   {{color_page_background_nav_dropdown_active}};
+    opacity:            {{opacity_page_background_nav_dropdown_active}};
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li .dropdown-menu a{
+    display: block;
+    color: {{color_page_font_nav_dropdown}};
+    opacity: {{opacity_page_font_nav_dropdown}};
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li .dropdown-menu li:hover a,
+[data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li .dropdown-menu li.active:hover a{
+    color:              {{color_page_font_nav_dropdown_hover}};
+    opacity:            {{opacity_page_font_nav_dropdown_hover}};
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li .dropdown-menu li.active a{
+    color:              {{color_page_font_nav_dropdown_active}};
+    opacity:            {{opacity_page_font_nav_dropdown_active}};
+}

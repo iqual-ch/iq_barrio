@@ -189,11 +189,19 @@
 
   .block-pagedesigner-part {
     width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+
+    padding-top: $base-padding-top / 2;
+    padding-bottom: $base-padding-bottom / 2;
+    padding-left: $base-padding-left / 2;
+    padding-right: $base-padding-right / 2;
+
 
     * {
       color: $color-font-meta-header
+    }
+
+    p{
+      margin: inherit;
     }
   }
 }
@@ -256,6 +264,12 @@
 
 .col {
   min-height: 0;
+}
+
+.mobile-reverse-order{
+  @media only screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .mobile-keep-cols {
@@ -336,8 +350,6 @@
     }
 
   }
-
-
 
 }
 

@@ -25,18 +25,6 @@ $color-font-meta-header:              rgba($color-{{color_page_font_meta_header}
 $color-background-header:             rgba($color-{{color_page_background_header}},{{opacity_color_page_background_header}});
 $color-font-header:                   rgba($color-{{color_page_font_header}},{{opacity_color_page_font_header}});
 
-$color-background-nav-dropdown:       rgba($color-{{color_page_background_nav_dropdown}},{{opacity_page_background_nav_dropdown}});
-$color-font-nav-dropdown:             rgba($color-{{color_page_font_nav_dropdown}},{{opacity_page_font_nav_dropdown}});
-
-$color-background-nav-dropdown-hover: rgba($color-{{color_page_background_nav_dropdown_hover}},{{opacity_page_background_nav_dropdown_hover}});
-$color-font-nav-dropdown-hover:       rgba($color-{{color_page_font_nav_dropdown_hover}},{{opacity_page_font_nav_dropdown_hover}});
-
-$color-background-nav-mobile:         rgba($color-{{color_page_background_nav_mobile}},{{opacity_page_background_nav_mobile}});
-$color-font-nav-mobile:               rgba($color-{{color_page_font_nav_mobile}},{{opacity_page_font_nav_mobile}});
-$color-font-nav-mobile-hover:         rgba($color-{{color_page_font_nav_mobile_hover}},{{opacity_page_font_nav_mobile_hover}});
-
-$color-font-nav-sidebar:              rgba($color-{{color_page_font_nav_sidebar}},{{opacity_page_font_nav_sidebar}});
-$color-font-nav-sidebar-hover:        rgba($color-{{color_page_font_nav_sidebar_hover}},{{opacity_page_font_nav_sidebar_hover}});
 
 $color-background-footer:             rgba($color-{{color_page_background_footer}},{{opacity_color_page_background_footer}});
 $color-font-footer:                   rgba($color-{{color_page_font_footer}},{{opacity_color_page_font_footer}});
@@ -164,8 +152,30 @@ $color-font-navbar:                   rgba($color-{{color_page_font_navbar}},{{o
 $color-background-navbar-hover:       rgba($color-{{color_page_background_navbar_hover}},{{opacity_page_background_navbar_hover}});
 $color-font-navbar-hover:             rgba($color-{{color_page_font_navbar_hover}},{{opacity_page_font_navbar_hover}});
 
+$color-background-navbar-active:       rgba($color-{{color_page_background_navbar_active}},{{opacity_page_background_navbar_active}});
+$color-font-navbar-active:             rgba($color-{{color_page_font_navbar_active}},{{opacity_page_font_navbar_active}});
 
+/* Dropdown */
 
+$color-background-nav-dropdown:       rgba($color-{{color_page_background_nav_dropdown}},{{opacity_page_background_nav_dropdown}});
+$color-font-nav-dropdown:             rgba($color-{{color_page_font_nav_dropdown}},{{opacity_page_font_nav_dropdown}});
+
+$color-background-nav-dropdown-hover: rgba($color-{{color_page_background_nav_dropdown_hover}},{{opacity_page_background_nav_dropdown_hover}});
+$color-font-nav-dropdown-hover:       rgba($color-{{color_page_font_nav_dropdown_hover}},{{opacity_page_font_nav_dropdown_hover}});
+
+$color-background-nav-dropdown-active: rgba($color-{{color_page_background_nav_dropdown_active}},{{opacity_page_background_nav_dropdown_active}});
+$color-font-nav-dropdown-active:       rgba($color-{{color_page_font_nav_dropdown_active}},{{opacity_page_font_nav_dropdown_active}});
+
+/* Mobile */
+
+$color-background-nav-mobile:         rgba($color-{{color_page_background_nav_mobile}},{{opacity_page_background_nav_mobile}});
+$color-font-nav-mobile:               rgba($color-{{color_page_font_nav_mobile}},{{opacity_page_font_nav_mobile}});
+$color-font-nav-mobile-hover:         rgba($color-{{color_page_font_nav_mobile_hover}},{{opacity_page_font_nav_mobile_hover}});
+
+/* Dropdown */
+
+$color-font-nav-sidebar:              rgba($color-{{color_page_font_nav_sidebar}},{{opacity_page_font_nav_sidebar}});
+$color-font-nav-sidebar-hover:        rgba($color-{{color_page_font_nav_sidebar_hover}},{{opacity_page_font_nav_sidebar_hover}});
 
 
 
