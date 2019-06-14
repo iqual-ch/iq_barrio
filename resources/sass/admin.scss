@@ -95,6 +95,15 @@ display: none;
         }
       }
 
+      > .seven-details{
+        margin-right: 30px;
+
+        .seven-details__wrapper{
+          padding-right: 0;
+        }
+      }
+
+
       // &.line-break{
       //   height: 1px;
       //   width: 100%;
