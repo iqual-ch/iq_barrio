@@ -135,6 +135,9 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
   $form['iq_theme'] = [
     '#type' => 'vertical_tabs',
     '#title' => t('Custom Theme Settings'),
+    '#attributes' => [
+      'class' => ['iq-barrio-settings'],
+    ]
   ];
 
   // section colors
@@ -1688,7 +1691,7 @@ $form['buttons']['default']['button_padding_holder']['button_padding_unit'] = [
 
 $form['buttons']['default']['standard'] = [
   '#type' => 'details',
-  '#title' => t('Standard'),
+  '#title' => t('Standard color settings'),
 ];
 
 $form['buttons']['default']['standard']['button_font_color_standard'] = [
@@ -1875,7 +1878,7 @@ $form['buttons']['default']['standard']['button_border_opacity_active'] = [
 
 $form['buttons']['default']['inverted'] = [
   '#type' => 'details',
-  '#title' => t('Inverted'),
+  '#title' => t('Inverted color settings'),
 ];
 
 $form['buttons']['default']['inverted']['button_font_color_inverted'] = [
@@ -1883,7 +1886,7 @@ $form['buttons']['default']['inverted']['button_font_color_inverted'] = [
   '#title' => t('Font color'),
   '#options' => $arr_colors,
   '#default_value' => theme_get_setting('button_font_color_inverted') ? theme_get_setting('button_font_color_inverted') : 'white',
-  '#prefix' => '<div class="inline-input-holder"><strong>inverted</strong>',
+  '#prefix' => '<div class="inline-input-holder"><strong>Standard</strong>',
 ];
 
 $form['buttons']['default']['inverted']['button_font_opacity_inverted'] = [
@@ -2793,15 +2796,23 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     '#title' => t('Icons'),
   ];
 
-  $form['patterns']['icons']['color_icons'] = [
+
+  $form['patterns']['icons']['default'] = [
+    '#type' => 'details',
+    '#title' => t('Default icon'),
+  ];
+
+
+
+  $form['patterns']['icons']['default']['color_icons'] = [
     '#type' => 'select',
     '#title' => t('Color'),
     '#options' => $arr_colors,
     '#default_value' => theme_get_setting('color_icons') ? theme_get_setting('color_icons') : 'primary',
-    '#prefix' => '<div class="styling-row"><div class="styling-input full"><div class="inline-input-holder "><strong>Icons standard</strong>',
+    '#prefix' => '<div class="styling-row"><div class="styling-input full"><div class="inline-input-holder "><strong>Standard</strong>',
   ];
 
-  $form['patterns']['icons']['opacity_icons'] = [
+  $form['patterns']['icons']['default']['opacity_icons'] = [
     '#type' => 'textfield',
     // '#attributes' => [
     //   'min' => 0,
@@ -2813,16 +2824,15 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     '#suffix' => '</div>'
   ];
 
-
-  $form['patterns']['icons']['color_icons_hover'] = [
+  $form['patterns']['icons']['default']['color_icons_hover'] = [
     '#type' => 'select',
     '#title' => t('Color'),
     '#options' => $arr_colors,
     '#default_value' => theme_get_setting('color_icons_hover') ? theme_get_setting('color_icons_hover') : 'primary',
-    '#prefix' => '<div class="inline-input-holder "><strong>Icons hover</strong>',
+    '#prefix' => '<div class="inline-input-holder "><strong>Hover</strong>',
   ];
 
-  $form['patterns']['icons']['opacity_icons_hover'] = [
+  $form['patterns']['icons']['default']['opacity_icons_hover'] = [
     '#type' => 'textfield',
     // '#attributes' => [
     //   'min' => 0,
@@ -2831,8 +2841,250 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     // ],
     '#title' => t('Opacity'),
     '#default_value' => theme_get_setting('opacity_icons_hover') ? theme_get_setting('opacity_icons_hover') : 1,
+    '#suffix' => '</div>'
+  ];
+
+  $form['patterns']['icons']['default']['color_icons_active'] = [
+    '#type' => 'select',
+    '#title' => t('Color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_icons_active') ? theme_get_setting('color_icons_active') : 'primary',
+    '#prefix' => '<div class="inline-input-holder separator"><strong>Active</strong>',
+  ];
+
+  $form['patterns']['icons']['default']['opacity_icons_active'] = [
+    '#type' => 'textfield',
+    // '#attributes' => [
+    //   'min' => 0,
+    //   'max' => 1,
+    //   'step' => 0.01,
+    // ],
+    '#title' => t('Opacity'),
+    '#default_value' => theme_get_setting('opacity_icons_active') ? theme_get_setting('opacity_icons_active') : 1,
+    '#suffix' => '</div>'
+  ];
+
+
+
+
+
+
+
+  $form['patterns']['icons']['default']['color_icons_inverted'] = [
+    '#type' => 'select',
+    '#title' => t('Color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_icons_inverted') ? theme_get_setting('color_icons_inverted') : 'primary',
+    '#prefix' => '<div class="styling-row"><div class="styling-input full"><div class="inline-input-holder "><strong>Inverted</strong>',
+  ];
+
+  $form['patterns']['icons']['default']['opacity_icons_inverted'] = [
+    '#type' => 'textfield',
+    // '#attributes' => [
+    //   'min' => 0,
+    //   'max' => 1,
+    //   'step' => 0.01,
+    // ],
+    '#title' => t('Opacity'),
+    '#default_value' => theme_get_setting('opacity_icons_inverted') ? theme_get_setting('opacity_icons_inverted') : 1,
+    '#suffix' => '</div>'
+  ];
+
+  $form['patterns']['icons']['default']['color_icons_inverted_hover'] = [
+    '#type' => 'select',
+    '#title' => t('Color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_icons_inverted_hover') ? theme_get_setting('color_icons_inverted_hover') : 'primary',
+    '#prefix' => '<div class="inline-input-holder "><strong>Inverted hover</strong>',
+  ];
+
+  $form['patterns']['icons']['default']['opacity_icons_inverted_hover'] = [
+    '#type' => 'textfield',
+    // '#attributes' => [
+    //   'min' => 0,
+    //   'max' => 1,
+    //   'step' => 0.01,
+    // ],
+    '#title' => t('Opacity'),
+    '#default_value' => theme_get_setting('opacity_icons_inverted_hover') ? theme_get_setting('opacity_icons_inverted_hover') : 1,
+    '#suffix' => '</div>'
+  ];
+
+  $form['patterns']['icons']['default']['color_icons_inverted_active'] = [
+    '#type' => 'select',
+    '#title' => t('Color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_icons_inverted_active') ? theme_get_setting('color_icons_inverted_active') : 'primary',
+    '#prefix' => '<div class="inline-input-holder"><strong>Inverted active</strong>',
+  ];
+
+  $form['patterns']['icons']['default']['opacity_icons_inverted_active'] = [
+    '#type' => 'textfield',
+    // '#attributes' => [
+    //   'min' => 0,
+    //   'max' => 1,
+    //   'step' => 0.01,
+    // ],
+    '#title' => t('Opacity'),
+    '#default_value' => theme_get_setting('opacity_icons_inverted_active') ? theme_get_setting('opacity_icons_inverted_active') : 1,
     '#suffix' => '</div></div></div>'
   ];
+
+
+
+
+
+
+
+  $form['patterns']['icons']['alternate'] = [
+    '#type' => 'details',
+    '#title' => t('Alternate icon'),
+  ];
+
+
+
+
+  $form['patterns']['icons']['alternate']['color_icons_alternate'] = [
+    '#type' => 'select',
+    '#title' => t('Color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_icons_alternate') ? theme_get_setting('color_icons_alternate') : 'primary',
+    '#prefix' => '<div class="styling-row"><div class="styling-input full"><div class="inline-input-holder "><strong>Standard</strong>',
+  ];
+
+  $form['patterns']['icons']['alternate']['opacity_icons_alternate'] = [
+    '#type' => 'textfield',
+    // '#attributes' => [
+    //   'min' => 0,
+    //   'max' => 1,
+    //   'step' => 0.01,
+    // ],
+    '#title' => t('Opacity'),
+    '#default_value' => theme_get_setting('opacity_icons_alternate') ? theme_get_setting('opacity_icons_alternate') : 1,
+    '#suffix' => '</div>'
+  ];
+
+  $form['patterns']['icons']['alternate']['color_icons_alternate_hover'] = [
+    '#type' => 'select',
+    '#title' => t('Color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_icons_alternate_hover') ? theme_get_setting('color_icons_alternate_hover') : 'primary',
+    '#prefix' => '<div class="inline-input-holder "><strong>Hover</strong>',
+  ];
+
+  $form['patterns']['icons']['alternate']['opacity_icons_alternate_hover'] = [
+    '#type' => 'textfield',
+    // '#attributes' => [
+    //   'min' => 0,
+    //   'max' => 1,
+    //   'step' => 0.01,
+    // ],
+    '#title' => t('Opacity'),
+    '#default_value' => theme_get_setting('opacity_icons_alternate_hover') ? theme_get_setting('opacity_icons_alternate_hover') : 1,
+    '#suffix' => '</div>'
+  ];
+
+  $form['patterns']['icons']['alternate']['color_icons_alternate_active'] = [
+    '#type' => 'select',
+    '#title' => t('Color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_icons_alternate_active') ? theme_get_setting('color_icons_alternate_active') : 'primary',
+    '#prefix' => '<div class="inline-input-holder separator"><strong>Active</strong>',
+  ];
+
+  $form['patterns']['icons']['alternate']['opacity_icons_alternate_active'] = [
+    '#type' => 'textfield',
+    // '#attributes' => [
+    //   'min' => 0,
+    //   'max' => 1,
+    //   'step' => 0.01,
+    // ],
+    '#title' => t('Opacity'),
+    '#default_value' => theme_get_setting('opacity_icons_alternate_active') ? theme_get_setting('opacity_icons_alternate_active') : 1,
+    '#suffix' => '</div>'
+  ];
+
+
+
+
+
+
+
+  $form['patterns']['icons']['alternate']['color_icons_alternate_inverted'] = [
+    '#type' => 'select',
+    '#title' => t('Color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_icons_alternate_inverted') ? theme_get_setting('color_icons_alternate_inverted') : 'primary',
+    '#prefix' => '<div class="styling-row"><div class="styling-input full"><div class="inline-input-holder "><strong>Inverted</strong>',
+  ];
+
+  $form['patterns']['icons']['alternate']['opacity_icons_alternate_inverted'] = [
+    '#type' => 'textfield',
+    // '#attributes' => [
+    //   'min' => 0,
+    //   'max' => 1,
+    //   'step' => 0.01,
+    // ],
+    '#title' => t('Opacity'),
+    '#default_value' => theme_get_setting('opacity_icons_alternate_inverted') ? theme_get_setting('opacity_icons_alternate_inverted') : 1,
+    '#suffix' => '</div>'
+  ];
+
+  $form['patterns']['icons']['alternate']['color_icons_alternate_inverted_hover'] = [
+    '#type' => 'select',
+    '#title' => t('Color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_icons_alternate_inverted_hover') ? theme_get_setting('color_icons_alternate_inverted_hover') : 'primary',
+    '#prefix' => '<div class="inline-input-holder "><strong>Inverted hover</strong>',
+  ];
+
+  $form['patterns']['icons']['alternate']['opacity_icons_alternate_inverted_hover'] = [
+    '#type' => 'textfield',
+    // '#attributes' => [
+    //   'min' => 0,
+    //   'max' => 1,
+    //   'step' => 0.01,
+    // ],
+    '#title' => t('Opacity'),
+    '#default_value' => theme_get_setting('opacity_icons_alternate_inverted_hover') ? theme_get_setting('opacity_icons_alternate_inverted_hover') : 1,
+    '#suffix' => '</div>'
+  ];
+
+  $form['patterns']['icons']['alternate']['color_icons_alternate_inverted_active'] = [
+    '#type' => 'select',
+    '#title' => t('Color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('color_icons_alternate_inverted_active') ? theme_get_setting('color_icons_alternate_inverted_active') : 'primary',
+    '#prefix' => '<div class="inline-input-holder"><strong>Inverted active</strong>',
+  ];
+
+  $form['patterns']['icons']['alternate']['opacity_icons_alternate_inverted_active'] = [
+    '#type' => 'textfield',
+    // '#attributes' => [
+    //   'min' => 0,
+    //   'max' => 1,
+    //   'step' => 0.01,
+    // ],
+    '#title' => t('Opacity'),
+    '#default_value' => theme_get_setting('opacity_icons_alternate_inverted_active') ? theme_get_setting('opacity_icons_alternate_inverted_active') : 1,
+    '#suffix' => '</div></div></div>'
+  ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   $form['patterns']['social'] = [
     '#type' => 'details',
@@ -2950,6 +3202,64 @@ $form['buttons']['alternate']['button_alternate_title'] = [
   ];
 
 
+
+
+  $form['patterns']['toggler'] = [
+    '#type' => 'details',
+    '#title' => t('Toggler'),
+  ];
+
+  $form['patterns']['toggler']['toggler_color'] = [
+    '#type' => 'select',
+    '#title' => t('Color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('toggler_color') ? theme_get_setting('toggler_color') : 'grey3',
+    '#prefix' => '<div class="styling-row"><div class="styling-input full"><div class="inline-input-holder "><strong>Standard</strong>',
+  ];
+
+  $form['patterns']['toggler']['toggler_opacity'] = [
+    '#type' => 'textfield',
+    '#title' => t('Opacity'),
+    '#default_value' => theme_get_setting('toggler_opacity') ? theme_get_setting('toggler_opacity') : 1,
+    '#suffix' => '</div>'
+  ];
+
+
+  $form['patterns']['toggler']['toggler_color_hover'] = [
+    '#type' => 'select',
+    '#title' => t('Color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('toggler_color_hover') ? theme_get_setting('toggler_color_hover') : 'grey3',
+    '#prefix' => '<div class="styling-row"><div class="styling-input full"><div class="inline-input-holder "><strong>Hover</strong>',
+  ];
+
+  $form['patterns']['toggler']['toggler_opacity_hover'] = [
+    '#type' => 'textfield',
+    '#title' => t('Opacity'),
+    '#default_value' => theme_get_setting('toggler_opacity_hover') ? theme_get_setting('toggler_opacity_hover') : 1,
+    '#suffix' => '</div>'
+  ];
+
+  $form['patterns']['toggler']['toggler_color_active'] = [
+    '#type' => 'select',
+    '#title' => t('Color'),
+    '#options' => $arr_colors,
+    '#default_value' => theme_get_setting('toggler_color_active') ? theme_get_setting('toggler_color_active') : 'grey3',
+    '#prefix' => '<div class="styling-row"><div class="styling-input full"><div class="inline-input-holder "><strong>Active</strong>',
+  ];
+
+  $form['patterns']['toggler']['toggler_opacity_active'] = [
+    '#type' => 'textfield',
+    '#title' => t('Opacity'),
+    '#default_value' => theme_get_setting('toggler_opacity_active') ? theme_get_setting('toggler_opacity_hover') : 1,
+    '#suffix' => '</div></div></div>'
+  ];
+
+
+
+
+
+
   $form['#submit'][] = 'iq_barrio_form_system_theme_settings_submit';
 }
 
@@ -2985,6 +3295,40 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
 
     'color_icons_hover' => $form_state->getValue('color_icons_hover'),
     'opacity_icons_hover' => $form_state->getValue('opacity_icons_hover'),
+
+    'color_icons_active' => $form_state->getValue('color_icons_active'),
+    'opacity_icons_active' => $form_state->getValue('opacity_icons_active'),
+
+    'color_icons_inverted' => $form_state->getValue('color_icons_inverted'),
+    'opacity_icons_inverted' => $form_state->getValue('opacity_icons_inverted'),
+
+    'color_icons_inverted_hover' => $form_state->getValue('color_icons_inverted_hover'),
+    'opacity_icons_inverted_hover' => $form_state->getValue('opacity_icons_inverted_hover'),
+
+    'color_icons_inverted_active' => $form_state->getValue('color_icons_inverted_active'),
+    'opacity_icons_inverted_active' => $form_state->getValue('opacity_icons_inverted_active'),
+
+
+    'color_icons_alternate' => $form_state->getValue('color_icons_alternate'),
+    'opacity_icons_alternate' => $form_state->getValue('opacity_icons_alternate'),
+
+    'color_icons_alternate_hover' => $form_state->getValue('color_icons_alternate_hover'),
+    'opacity_icons_alternate_hover' => $form_state->getValue('opacity_icons_alternate_hover'),
+
+    'color_icons_alternate_active' => $form_state->getValue('color_icons_alternate_active'),
+    'opacity_icons_alternate_active' => $form_state->getValue('opacity_icons_alternate_active'),
+
+
+    'color_icons_alternate_inverted' => $form_state->getValue('color_icons_alternate_inverted'),
+    'opacity_icons_alternate_inverted' => $form_state->getValue('opacity_icons_alternate_inverted'),
+
+    'color_icons_alternate_inverted_hover' => $form_state->getValue('color_icons_alternate_inverted_hover'),
+    'opacity_icons_alternate_inverted_hover' => $form_state->getValue('opacity_icons_alternate_inverted_hover'),
+
+    'color_icons_alternate_inverted_active' => $form_state->getValue('color_icons_alternate_inverted_active'),
+    'opacity_icons_alternate_inverted_active' => $form_state->getValue('opacity_icons_alternate_inverted_active'),
+
+
 
     'color_page_background' => $form_state->getValue('color_page_background'),
     'opacity_color_page_background' => $form_state->getValue('opacity_color_page_background'),
@@ -3248,7 +3592,7 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'button_border_opacity_inverted_active' => $form_state->getValue('button_border_opacity_inverted_active'),
     'button_alternate_font_size' => $form_state->getValue('button_alternate_font_size'),
     'button_alternate_font_size_unit' => $form_state->getValue('button_alternate_font_size_unit'),
-    'standard_line_height' => $form_state->getValue('standard_line_height'),
+
     'button_alternate_font_weight' => $form_state->getValue('button_alternate_font_weight'),
     'button_alternate_font_family' => $form_state->getValue('button_alternate_font_family'),
     'button_alternate_margin_top' => $form_state->getValue('button_alternate_margin_top'),
@@ -3353,6 +3697,20 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'tab_font_opacity' => $form_state->getValue('tab_font_opacity'),
     'tab_font_color_active' => $form_state->getValue('tab_font_color_active'),
     'tab_font_opacity_active' => $form_state->getValue('tab_font_opacity_active'),
+
+
+
+    'toggler_color' => $form_state->getValue('toggler_color'),
+    'toggler_opacity' => $form_state->getValue('toggler_opacity'),
+    'toggler_color_hover' => $form_state->getValue('toggler_color_hover'),
+    'toggler_opacity_hover' => $form_state->getValue('toggler_opacity_hover'),
+    'toggler_color_active' => $form_state->getValue('toggler_color_active'),
+    'toggler_opacity_active' => $form_state->getValue('toggler_opacity_active'),
+
+
+
+
+
 
   ];
 

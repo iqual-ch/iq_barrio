@@ -1,129 +1,142 @@
 @import "definitions";
 
 #iq-barrio-source,
-#iq-barrio-target{
-display: none;
+#iq-barrio-target {
+  display: none;
 }
 
 
-.container-inline{
+.container-inline {
   position: relative;
-  padding-top: calc( 16px + 0.2em );
+  padding-top: calc(16px + 0.2em);
   margin: 0.75em 0;
-  .form-item{
+
+  .form-item {
     margin-top: 0;
     margin-bottom: 0;
-    label{
+
+    label {
       display: block;
       position: absolute;
       top: 0;
     }
-    input.form-text{
-      width:32px;
+
+    input.form-text {
+      width: 32px;
       padding-right: 0;
       padding-left: 0.25rem;
     }
-    select{
+
+    select {
       width: 57px;
     }
   }
 }
 
-.styling-row{
+.styling-row {
   display: flex;
   width: 100%;
   margin-bottom: 45px;
   padding-bottom: 45px;
   border-bottom: 1px solid #ccc;
 
-  &:last-child{
+  &:last-child {
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: none;
   }
 
-  .styling-input{
+  .styling-input {
     width: 700px;
     display: flex;
     flex-flow: wrap;
     flex-direction: column;
 
-    &.full{
+    &.full {
       width: 100%;
     }
 
-      .inline-input-holder{
-        margin-right: 30px;
-        margin-bottom: 15px;
-        &:last-child{
-          margin-bottom: 0;
-        }
-        &.separator{
-          border-bottom: 1px solid #ccc;
-          margin-bottom: 20px;
-          padding-bottom: 10px;
-        }
-        span{
-          display: block;
-          font-weight: bold;
-        }
-        strong{
-          display: block;
-          font-size: 115%;
-        }
+    .inline-input-holder {
+      margin-right: 30px;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.separator {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+      }
+
+      span {
+        display: block;
+        font-weight: bold;
+      }
+
+      strong {
+        display: block;
+        font-size: 115%;
+      }
 
 
-        > *{
-          display: inline-block;
-          &.separator{
+      >* {
+        display: inline-block;
+
+        &.separator {
+          margin-right: 30px;
+        }
+
+        label {
+          white-space: nowrap;
+        }
+
+        input {
+          max-width: 75px;
+
+          &.separator {
             margin-right: 30px;
           }
-          label{
-            white-space: nowrap;
-          }
-          input{
-            max-width: 75px;
-            &.separator{
-              margin-right: 30px;
-            }
-          }
-          select{
-            &.separator{
-              margin-right: 30px;
-            }
+        }
+
+        select {
+          &.separator {
+            margin-right: 30px;
           }
         }
       }
+    }
 
-      > .seven-details{
-        margin-right: 30px;
+    >.seven-details {
+      margin-right: 30px;
 
-        .seven-details__wrapper{
-          padding-right: 0;
-        }
+      .seven-details__wrapper {
+        padding-right: 0;
       }
+    }
 
 
-      // &.line-break{
-      //   height: 1px;
-      //   width: 100%;
+    // &.line-break{
+    //   height: 1px;
+    //   width: 100%;
 
-      //   &.border{
-      //     border-bottom: 1px solid #ccc;
-      //     margin-right: 30px;
-      //   }
-      // }
+    //   &.border{
+    //     border-bottom: 1px solid #ccc;
+    //     margin-right: 30px;
+    //   }
+    // }
 
   }
 
-  .styling-preview{
-    width: calc( 100% - 485px );
+  .styling-preview {
+    width: calc(100% - 485px);
     border: 1px solid #eee;
     padding: 10px;
     background-color: #fff;
     position: relative;
 
-    &:before{
+    &:before {
       content: 'Preview';
       font-size: 10px;
       display: block;
@@ -134,11 +147,25 @@ display: none;
   }
 }
 
-.unit-combo-field{
-  label{
+.unit-combo-field {
+  label {
     display: block !important;
   }
-  input[type="text"]{
+
+  input[type="text"] {
     width: 75px;
+  }
+}
+
+
+
+
+form.system-theme-settings[action*="iq_barrio"] {
+  > h2,
+  #edit-theme-settings,
+  #edit-logo,
+  #edit-favicon,
+  > .js-form-item.form-no-label {
+    display: none !important;
   }
 }

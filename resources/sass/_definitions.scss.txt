@@ -264,7 +264,9 @@ $tab-font-color:                      rgba($color-{{tab_font_color}},{{tab_font_
 $tab-color-active:                    rgba($color-{{tab_color_active}},{{tab_opacity_active}});
 $tab-font-color-active:               rgba($color-{{tab_font_color_active}},{{tab_font_opacity_active}});
 
-
+$toggler-color:                       rgba($color-{{toggler_color}},{{toggler_opacity}});
+$toggler-color-hover:                 rgba($color-{{toggler_color_hover}},{{toggler_opacity_hover}});
+$toggler-color-active:                rgba($color-{{toggler_color_active}},{{toggler_opacity_active}});
 
 
 
@@ -356,8 +358,23 @@ $padding-base:                        $padding-bottom-base;
 $color-text-titles:                   rgba($color-{{h1_color}},{{h1_opacity}});
 $color-text-content:                  rgba($color-{{standard_color}},{{standard_opacity}});
 $color-text-links:                    rgba($color-{{link_color}},{{link_opacity}});
+
 $color-text-icons:                    rgba($color-{{color_icons}},{{opacity_icons}});
 $color-text-icons-hover:              rgba($color-{{color_icons_hover}},{{opacity_icons_hover}});
+$color-text-icons-active:             rgba($color-{{color_icons_active}},{{opacity_icons_active}});
+
+$color-text-icons-inverted:           rgba($color-{{color_icons_inverted}},{{opacity_icons_inverted}});
+$color-text-icons-inverted-hover:     rgba($color-{{color_icons_inverted_hover}},{{opacity_icons_inverted_hover}});
+$color-text-icons-inverted-active:    rgba($color-{{color_icons_inverted_active}},{{opacity_icons_inverted_active}});
+
+$color-text-icons-alternate:                    rgba($color-{{color_icons_alternate}},{{opacity_icons_alternate}});
+$color-text-icons-alternate-hover:              rgba($color-{{color_icons_alternate_hover}},{{opacity_icons_alternate_hover}});
+$color-text-icons-alternate-active:             rgba($color-{{color_icons_alternate_active}},{{opacity_icons_alternate_active}});
+
+$color-text-icons-alternate-inverted:           rgba($color-{{color_icons_alternate_inverted}},{{opacity_icons_alternate_inverted}});
+$color-text-icons-alternate-inverted-hover:     rgba($color-{{color_icons_alternate_inverted_hover}},{{opacity_icons_alternate_inverted_hover}});
+$color-text-icons-alternate-inverted-active:    rgba($color-{{color_icons_alternate_inverted_active}},{{opacity_icons_alternate_inverted_active}});
+
 
 
 /* Elements colors normal state (e.g. button) */
