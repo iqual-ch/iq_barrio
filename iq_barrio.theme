@@ -3260,6 +3260,344 @@ $form['buttons']['alternate']['button_alternate_title'] = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+ // section buttons
+
+
+ $form['patterns']['anchornavigation'] = [
+  '#type' => 'details',
+  '#title' => t('Anchor navigation'),
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_font_family'] = [
+  '#prefix' => '<div class="styling-row"><div class="styling-input"><div class="inline-input-holder"><strong>Main styling</strong>',
+  '#type' => 'select',
+  '#title' => t('Font family'),
+  '#options' => $arr_fonts,
+  '#default_value' => theme_get_setting('anchornavigation_font_family'),
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_font_weight'] = [
+  '#type' => 'select',
+  '#options' => $arr_fontweights,
+  '#title' => t('Font weight'),
+  '#default_value' => theme_get_setting('anchornavigation_font_weight'),
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_line_height'] = [
+  '#type' => 'textfield',
+  '#title' => t('Line height'),
+  '#default_value' => theme_get_setting('anchornavigation_line_height'),
+  '#suffix' => '</div>'
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_font_size_holder'] = [
+  '#type' => 'container',
+  '#prefix' => '<div class="inline-input-holder">',
+  '#attributes' => [
+    'class' => ['container-inline', 'unit-combo-field', 'separator'],
+  ]
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_font_size_holder']['anchornavigation_font_size'] = [
+  '#type' => 'textfield',
+  '#title' => t('Font size'),
+  '#default_value' => theme_get_setting('anchornavigation_font_size'),
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_font_size_holder']['anchornavigation_font_size_unit'] = [
+  '#type' => 'select',
+  '#options' => $arr_units,
+  '#default_value' => theme_get_setting('anchornavigation_font_size_unit'),
+];
+
+
+$form['patterns']['anchornavigation']['anchornavigation_margin_holder'] = [
+  '#type' => 'container',
+  '#attributes' => [
+    'class' => ['container-inline', 'unit-combo-field', 'multi-valule', 'separator'],
+  ],
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_margin_holder']['anchornavigation_margin_top'] = [
+  '#title' => t('Margin (top, bottom)'),
+  '#type' => 'textfield',
+  '#default_value' => theme_get_setting('anchornavigation_margin_top'),
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_margin_holder']['anchornavigation_margin_right'] = [
+  '#type' => 'textfield',
+  '#default_value' => theme_get_setting('anchornavigation_margin_right'),
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_margin_holder']['anchornavigation_margin_bottom'] = [
+  '#type' => 'textfield',
+  '#default_value' => theme_get_setting('anchornavigation_margin_bottom'),
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_margin_holder']['anchornavigation_margin_left'] = [
+  '#type' => 'textfield',
+  '#default_value' => theme_get_setting('anchornavigation_margin_left'),
+];
+
+
+$form['patterns']['anchornavigation']['anchornavigation_margin_holder']['anchornavigation_margin_unit'] = [
+  '#type' => 'textfield',
+  '#type' => 'select',
+  '#options' => $arr_units,
+  '#default_value' => theme_get_setting('anchornavigation_margin_unit'),
+];
+
+
+$form['patterns']['anchornavigation']['anchornavigation_padding_holder'] = [
+  '#type' => 'container',
+  '#attributes' => [
+    'class' => ['container-inline', 'unit-combo-field', 'multi-valule'],
+  ],
+  '#suffix' => '</div>'
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_padding_holder']['anchornavigation_padding_top'] = [
+  '#title' => t('Padding (top, bottom)'),
+  '#type' => 'textfield',
+  '#default_value' => theme_get_setting('anchornavigation_padding_top'),
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_padding_holder']['anchornavigation_padding_right'] = [
+  '#type' => 'textfield',
+  '#default_value' => theme_get_setting('anchornavigation_padding_right'),
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_padding_holder']['anchornavigation_padding_bottom'] = [
+  '#type' => 'textfield',
+  '#default_value' => theme_get_setting('anchornavigation_padding_bottom'),
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_padding_holder']['anchornavigation_padding_left'] = [
+  '#type' => 'textfield',
+  '#default_value' => theme_get_setting('anchornavigation_padding_left'),
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_padding_holder']['anchornavigation_padding_unit'] = [
+  '#type' => 'textfield',
+  '#type' => 'select',
+  '#options' => $arr_units,
+  '#default_value' => theme_get_setting('anchornavigation_padding_unit'),
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_wrapper_background_color'] = [
+  '#type' => 'select',
+  '#title' => t('Wrapper background color'),
+  '#options' => $arr_colors,
+  '#default_value' => theme_get_setting('anchornavigation_wrapper_background_color') ? theme_get_setting('anchornavigation_wrapper_background_color') : 'white',
+  '#prefix' => '<div class="inline-input-holder separator"><strong>Color settings</strong>',
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_wrapper_background_opacity'] = [
+  '#type' => 'textfield',
+  '#title' => t('Opacity'),
+  '#default_value' => theme_get_setting('anchornavigation_wrapper_background_opacity'),
+  '#suffix' => '</div>'
+];
+
+
+
+$form['patterns']['anchornavigation']['anchornavigation_font_color_standard'] = [
+  '#type' => 'select',
+  '#title' => t('Font color'),
+  '#options' => $arr_colors,
+  '#default_value' => theme_get_setting('anchornavigation_font_color_standard') ? theme_get_setting('anchornavigation_font_color_standard') : 'grey1',
+  '#prefix' => '<div class="inline-input-holder"><strong>Standard</strong>',
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_font_opacity_standard'] = [
+  '#type' => 'textfield',
+  '#title' => t('Opacity'),
+  '#default_value' => theme_get_setting('anchornavigation_font_opacity_standard') ? theme_get_setting('anchornavigation_font_opacity_standard') : 1,
+  '#suffix' => '</div>'
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_background_color_standard'] = [
+  '#prefix' => '<div class="inline-input-holder separator">',
+  '#type' => 'select',
+  '#title' => t('Background color'),
+  '#options' => $arr_colors,
+  '#default_value' => theme_get_setting('anchornavigation_background_color_standard') ? theme_get_setting('anchornavigation_background_color_standard') : 'white',
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_background_opacity_standard'] = [
+  '#type' => 'textfield',
+  '#attributes' => [
+    'class' => ['separator'],
+  ],
+  '#title' => t('Opacity'),
+  '#default_value' => theme_get_setting('anchornavigation_background_opacity_standard') ? theme_get_setting('anchornavigation_background_opacity_standard') : 1,
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_border_color_standard'] = [
+  '#type' => 'select',
+  '#title' => t('Border color'),
+  '#options' => $arr_colors,
+  '#default_value' => theme_get_setting('anchornavigation_border_color_standard') ? theme_get_setting('anchornavigation_background_color_standard') : 'white',
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_border_opacity_standard'] = [
+  '#type' => 'textfield',
+  '#title' => t('Opacity'),
+  '#default_value' => theme_get_setting('anchornavigation_border_opacity_standard') ? theme_get_setting('anchornavigation_border_opacity_standard') : 1,
+  '#suffix' => '</div>'
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_font_color_hover'] = [
+  '#type' => 'select',
+  '#title' => t('Font color'),
+  '#options' => $arr_colors,
+  '#default_value' => theme_get_setting('anchornavigation_font_color_hover') ? theme_get_setting('anchornavigation_font_color_hover') : 'white',
+  '#prefix' => '<div class="inline-input-holder"><strong>Hover</strong>',
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_font_opacity_hover'] = [
+  '#type' => 'textfield',
+  '#title' => t('Opacity'),
+  '#default_value' => theme_get_setting('anchornavigation_font_opacity_hover') ? theme_get_setting('anchornavigation_font_opacity_hover') : 1,
+  '#suffix' => '</div>'
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_background_color_hover'] = [
+  '#prefix' => '<div class="inline-input-holder separator">',
+  '#type' => 'select',
+  '#title' => t('Background color'),
+  '#options' => $arr_colors,
+  '#default_value' => theme_get_setting('anchornavigation_background_color_hover') ? theme_get_setting('anchornavigation_background_color_hover') : 'primary',
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_background_opacity_hover'] = [
+  '#type' => 'textfield',
+  '#attributes' => [
+    'class' => ['separator'],
+  ],
+  '#title' => t('Opacity'),
+  '#default_value' => theme_get_setting('anchornavigation_background_opacity_hover') ? theme_get_setting('anchornavigation_background_opacity_hover') : 1,
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_border_color_hover'] = [
+  '#type' => 'select',
+  '#title' => t('Hover border color'),
+  '#options' => $arr_colors,
+  '#default_value' => theme_get_setting('anchornavigation_border_color_hover') ? theme_get_setting('anchornavigation_border_color_hover') : 'primary',
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_border_opacity_hover'] = [
+  '#type' => 'textfield',
+  '#title' => t('Opacity'),
+  '#default_value' => theme_get_setting('anchornavigation_border_opacity_hover') ? theme_get_setting('anchornavigation_border_opacity_hover') : 1,
+  '#suffix' => '</div>'
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_font_color_active'] = [
+  '#type' => 'select',
+  '#title' => t('Font color'),
+  '#options' => $arr_colors,
+  '#default_value' => theme_get_setting('anchornavigation_font_color_active') ? theme_get_setting('anchornavigation_font_color_active') : 'white',
+  '#prefix' => '<div class="inline-input-holder"><strong>Active</strong>',
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_font_opacity_active'] = [
+  '#type' => 'textfield',
+  '#title' => t('Opacity'),
+  '#default_value' => theme_get_setting('anchornavigation_font_opacity_active') ? theme_get_setting('anchornavigation_font_opacity_active') : 1,
+  '#suffix' => '</div>'
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_background_color_active'] = [
+  '#type' => 'select',
+  '#title' => t('Background color'),
+  '#options' => $arr_colors,
+  '#default_value' => theme_get_setting('anchornavigation_background_color_active') ? theme_get_setting('anchornavigation_background_color_active') : 'primary',
+  '#prefix' => '<div class="inline-input-holder separator">',
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_background_opacity_active'] = [
+  '#type' => 'textfield',
+  '#attributes' => [
+    'class' => ['separator'],
+  ],
+  '#title' => t('Opacity'),
+  '#default_value' => theme_get_setting('anchornavigation_background_opacity_active') ? theme_get_setting('anchornavigation_background_opacity_active') : 1,
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_border_color_active'] = [
+  '#type' => 'select',
+  '#title' => t('Border color'),
+  '#options' => $arr_colors,
+  '#default_value' => theme_get_setting('anchornavigation_border_color_active') ? theme_get_setting('anchornavigation_border_color_active') : 1,
+];
+
+$form['patterns']['anchornavigation']['anchornavigation_border_opacity_active'] = [
+  '#type' => 'textfield',
+  '#title' => t('Opacity'),
+  '#default_value' => theme_get_setting('anchornavigation_border_opacity_active') ? theme_get_setting('anchornavigation_border_opacity_active') : 1,
+  '#suffix' => '</div>'
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   $form['#submit'][] = 'iq_barrio_form_system_theme_settings_submit';
 }
 
@@ -3707,6 +4045,43 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'toggler_color_active' => $form_state->getValue('toggler_color_active'),
     'toggler_opacity_active' => $form_state->getValue('toggler_opacity_active'),
 
+
+
+    'anchornavigation_font_family' => $form_state->getValue('anchornavigation_font_family'),
+    'anchornavigation_font_weight' => $form_state->getValue('anchornavigation_font_weight'),
+    'anchornavigation_line_height' => $form_state->getValue('anchornavigation_line_height'),
+    'anchornavigation_font_size' => $form_state->getValue('anchornavigation_font_size'),
+    'anchornavigation_font_size_unit' => $form_state->getValue('anchornavigation_font_size_unit'),
+    'anchornavigation_margin_top' => $form_state->getValue('anchornavigation_margin_top'),
+    'anchornavigation_margin_right' => $form_state->getValue('anchornavigation_margin_right'),
+    'anchornavigation_margin_bottom' => $form_state->getValue('anchornavigation_margin_bottom'),
+    'anchornavigation_margin_left' => $form_state->getValue('anchornavigation_margin_left'),
+    'anchornavigation_margin_unit' => $form_state->getValue('anchornavigation_margin_unit'),
+    'anchornavigation_padding_top' => $form_state->getValue('anchornavigation_padding_top'),
+    'anchornavigation_padding_right' => $form_state->getValue('anchornavigation_padding_right'),
+    'anchornavigation_padding_bottom' => $form_state->getValue('anchornavigation_padding_bottom'),
+    'anchornavigation_padding_left' => $form_state->getValue('anchornavigation_padding_left'),
+    'anchornavigation_padding_unit' => $form_state->getValue('anchornavigation_padding_unit'),
+    'anchornavigation_font_color_standard' => $form_state->getValue('anchornavigation_font_color_standard'),
+    'anchornavigation_font_opacity_standard' => $form_state->getValue('anchornavigation_font_opacity_standard'),
+    'anchornavigation_background_color_standard' => $form_state->getValue('anchornavigation_background_color_standard'),
+    'anchornavigation_background_opacity_standard' => $form_state->getValue('anchornavigation_background_opacity_standard'),
+    'anchornavigation_border_color_standard' => $form_state->getValue('anchornavigation_border_color_standard'),
+    'anchornavigation_border_opacity_standard' => $form_state->getValue('anchornavigation_border_opacity_standard'),
+    'anchornavigation_font_color_hover' => $form_state->getValue('anchornavigation_font_color_hover'),
+    'anchornavigation_font_opacity_hover' => $form_state->getValue('anchornavigation_font_opacity_hover'),
+    'anchornavigation_background_color_hover' => $form_state->getValue('anchornavigation_background_color_hover'),
+    'anchornavigation_background_opacity_hover' => $form_state->getValue('anchornavigation_background_opacity_hover'),
+    'anchornavigation_border_color_hover' => $form_state->getValue('anchornavigation_border_color_hover'),
+    'anchornavigation_border_opacity_hover' => $form_state->getValue('anchornavigation_border_opacity_hover'),
+    'anchornavigation_font_color_active' => $form_state->getValue('anchornavigation_font_color_active'),
+    'anchornavigation_font_opacity_active' => $form_state->getValue('anchornavigation_font_opacity_active'),
+    'anchornavigation_background_color_active' => $form_state->getValue('anchornavigation_background_color_active'),
+    'anchornavigation_background_opacity_active' => $form_state->getValue('anchornavigation_background_opacity_active'),
+    'anchornavigation_border_color_active' => $form_state->getValue('anchornavigation_border_color_active'),
+    'anchornavigation_border_opacity_active' => $form_state->getValue('anchornavigation_border_opacity_active'),
+    'anchornavigation_wrapper_background_color' => $form_state->getValue('anchornavigation_wrapper_background_color'),
+    'anchornavigation_wrapper_background_opacity' => $form_state->getValue('anchornavigation_wrapper_background_opacity'),
 
 
 

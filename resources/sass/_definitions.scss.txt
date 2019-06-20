@@ -260,15 +260,45 @@ $social-icons-color:                  rgba($color-{{social_icon_color}},{{social
 /* Tabs */
 $tab-color:                           rgba($color-{{tab_color}},{{tab_opacity}});
 $tab-font-color:                      rgba($color-{{tab_font_color}},{{tab_font_opacity}});
-
 $tab-color-active:                    rgba($color-{{tab_color_active}},{{tab_opacity_active}});
 $tab-font-color-active:               rgba($color-{{tab_font_color_active}},{{tab_font_opacity_active}});
 
+/* Toggler */
 $toggler-color:                       rgba($color-{{toggler_color}},{{toggler_opacity}});
 $toggler-color-hover:                 rgba($color-{{toggler_color_hover}},{{toggler_opacity_hover}});
 $toggler-color-active:                rgba($color-{{toggler_color_active}},{{toggler_opacity_active}});
 
+/* Anchor Navigation */
+$anchornavigation-font-family:        {{anchornavigation_font_family}};
+$anchornavigation-font-weight:        {{anchornavigation_font_weight}};
+$anchornavigation-line-height:        {{anchornavigation_line_height}};
+$anchornavigation-font-size:          {{anchornavigation_font_size}}{{anchornavigation_font_size_unit}};
 
+$anchornavigation-margin-top:         {{anchornavigation_margin_top}}{{anchornavigation_margin_unit}};
+$anchornavigation-margin-right:       {{anchornavigation_margin_right}}{{anchornavigation_margin_unit}};
+$anchornavigation-margin-bottom:      {{anchornavigation_margin_bottom}}{{anchornavigation_margin_unit}};
+$anchornavigation-margin-left:        {{anchornavigation_margin_left}}{{anchornavigation_margin_unit}};
+$anchornavigation-margin:             {{anchornavigation_margin_top}}{{anchornavigation_margin_unit}} {{anchornavigation_margin_right}}{{anchornavigation_margin_unit}} {{anchornavigation_margin_bottom}}{{anchornavigation_margin_unit}} {{anchornavigation_margin_left}}{{anchornavigation_margin_unit}};
+
+$anchornavigation-padding-top:        {{anchornavigation_padding_top}}{{anchornavigation_padding_unit}};
+$anchornavigation-padding-right:      {{anchornavigation_padding_right}}{{anchornavigation_padding_unit}};
+$anchornavigation-padding-bottom:     {{anchornavigation_padding_bottom}}{{anchornavigation_padding_unit}};
+$anchornavigation-padding-left:       {{anchornavigation_padding_left}}{{anchornavigation_padding_unit}};
+$anchornavigation-padding:            {{anchornavigation_padding_top}}{{anchornavigation_padding_unit}} {{anchornavigation_padding_right}}{{anchornavigation_padding_unit}} {{anchornavigation_padding_bottom}}{{anchornavigation_padding_unit}} {{anchornavigation_padding_left}}{{anchornavigation_padding_unit}};
+
+$anchornavigation-font-color-standard:          rgba($color-{{anchornavigation_font_color_standard}}, {{anchornavigation_font_opacity_standard}});
+$anchornavigation-background-color-standard:    rgba($color-{{anchornavigation_background_color_standard}}, {{anchornavigation_background_opacity_standard}});
+$anchornavigation-border-color-standard:        rgba($color-{{anchornavigation_border_color_standard}}, {{anchornavigation_border_opacity_standard}});
+
+$anchornavigation-font-color-hover:             rgba($color-{{anchornavigation_font_color_hover}}, {{anchornavigation_font_opacity_hover}});
+$anchornavigation-background-color-hover:       rgba($color-{{anchornavigation_background_color_hover}}, {{anchornavigation_background_opacity_hover}});
+$anchornavigation-border-color-hover:           rgba($color-{{anchornavigation_border_color_hover}}, {{anchornavigation_border_opacity_hover}});
+
+$anchornavigation-font-color-active:            rgba($color-{{anchornavigation_font_color_active}}, {{anchornavigation_font_opacity_active}});
+$anchornavigation-background-color-active:      rgba($color-{{anchornavigation_background_color_active}}, {{anchornavigation_background_opacity_active}});
+$anchornavigation-border-color-active:          rgba($color-{{anchornavigation_border_color_active}}, {{anchornavigation_border_opacity_active}});
+
+$anchornavigation-background-color:             rgba($color-{{anchornavigation_wrapper_background_color}}, {{anchornavigation_wrapper_background_opacity}});
 
 
 
