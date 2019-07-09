@@ -26,12 +26,13 @@
   jQuery('[data-drupal-selector="edit-iq-theme"]').find('input, select').each(function(){
     var find = '{{' + jQuery(this).attr('name') + '}}';
     var re = new RegExp(find, 'g');
+
     if( colors.hasOwnProperty( jQuery(this).val() ) ){
-      style = style.replace(re, colors[jQuery(this).val()] );
+      style = style.replace(re, hexToRGB(colors[jQuery(this).val()]) );
     }else{
       style = style.replace(re, jQuery(this).val() );
     }
-    
+
   });
 
   jQuery('#iq-barrio-target').html( '<style>' + style + '</style>' ) ;
@@ -58,16 +59,29 @@
     jQuery('[data-drupal-selector="edit-iq-theme"]').find('input, select').each(function(){
       var find = '{{' + jQuery(this).attr('name') + '}}';
       var re = new RegExp(find, 'g');
+
       if( colors.hasOwnProperty( jQuery(this).val() ) ){
-        style = style.replace(re, colors[jQuery(this).val()] );
+        style = style.replace(re, hexToRGB(colors[jQuery(this).val()]) );
       }else{
         style = style.replace(re, jQuery(this).val() );
       }
+
     });
 
     jQuery('#iq-barrio-target').html( '<style>' + style + '</style>' ) ;
   })
 
-
-
 })(jQuery, Drupal);
+
+function toHex(d) {
+  return  ("0"+((Number(d)*255).toString(16))).slice(-2).toUpperCase()
+}
+
+
+function hexToRGB(hex) {
+  var r = parseInt(hex.slice(1, 3), 16),
+      g = parseInt(hex.slice(3, 5), 16),
+      b = parseInt(hex.slice(5, 7), 16);
+
+      return r + "," + g + "," + b ;
+}
