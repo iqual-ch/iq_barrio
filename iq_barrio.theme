@@ -94,6 +94,11 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '900' => t('900 (boldest)'),
   ];
 
+  $arr_fontstyles = [
+    'normal' => t('Normal'),
+    'italic' => t('Italic'),
+  ];
+
   $arr_units = [
     'px'  => 'px',
     'em'  => 'em',
@@ -102,7 +107,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
   ];
 
   $arr_fonts = array(
-    'Normal Fonts' => array(
+    'System Fonts' => array(
       'Arial' => t('Arial'),
       'Courier New' => t('Courier New'),
       'Helvetica' => t('Helvetica'),
@@ -119,16 +124,17 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
 
     if (!empty($fonts)) {
 
+
       foreach ($fonts as $font) {
         //Get "regular" fonts only
-        if ($font->css_style->value == 'normal' && $font->css_weight->value == 'normal') {
+//        if ($font->css_style->value == 'normal' && $font->css_weight->value == 'normal') {
           $fontname = $font->name->value;
           $css_family = $font->css_family->value;
 
-          $arr_google_fonts[$css_family] = $fontname;
-        }
+          $arr_google_fonts[$css_family] = $font->css_family->value;
+//        }
       }
-      $arr_fonts['Google Fonts'] = $arr_google_fonts;
+      $arr_fonts['Additional fonts'] = $arr_google_fonts;
     }
   }
 
@@ -254,7 +260,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     //   'step' => '0.01',
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_color_page_background') ? theme_get_setting('opacity_color_page_background') : 1,
+    '#default_value' => theme_get_setting('opacity_color_page_background'),
     '#suffix' => '</div>'
   ];
 
@@ -276,7 +282,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_color_page_background_meta_header') ? theme_get_setting('opacity_color_page_background_meta_header') : 1,
+    '#default_value' => theme_get_setting('opacity_color_page_background_meta_header'),
     '#suffix' => '</div>'
   ];
 
@@ -298,7 +304,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_color_page_font_meta_header') ? theme_get_setting('opacity_color_page_font_meta_header') : 1,
+    '#default_value' => theme_get_setting('opacity_color_page_font_meta_header'),
     '#suffix' => '</div>'
   ];
 
@@ -320,7 +326,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_color_page_background_header') ? theme_get_setting('opacity_color_page_background_header') : 1,
+    '#default_value' => theme_get_setting('opacity_color_page_background_header'),
     '#suffix' => '</div>'
   ];
 
@@ -342,7 +348,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_color_page_font_header') ? theme_get_setting('opacity_color_page_font_header') : 1,
+    '#default_value' => theme_get_setting('opacity_color_page_font_header'),
     '#suffix' => '</div>'
   ];
 
@@ -364,7 +370,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_color_page_background_footer') ? theme_get_setting('opacity_color_page_background_footer') : 1,
+    '#default_value' => theme_get_setting('opacity_color_page_background_footer'),
     '#suffix' => '</div>'
   ];
 
@@ -385,7 +391,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_color_page_font_footer') ? theme_get_setting('opacity_color_page_font_footer') : 1,
+    '#default_value' => theme_get_setting('opacity_color_page_font_footer'),
     '#suffix' => '</div>'
   ];
 
@@ -407,7 +413,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_color_page_background_elements') ? theme_get_setting('opacity_color_page_background_elements') : 1,
+    '#default_value' => theme_get_setting('opacity_color_page_background_elements'),
     '#suffix' => '</div></div><div class="styling-preview page-layout"><div id="color-definitions-preview-page"><div id="color-definitions-preview-meta-header">Meta header</div><div id="color-definitions-preview-header">Header</div><div id="color-definitions-preview-content">Content</div><div id="color-definitions-preview-footer">Footer</div></div></div></div>'
   ];
 
@@ -445,6 +451,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
 
     $line_height_value = theme_get_setting($tag . '_line_height') ? theme_get_setting($tag . '_line_height') : '1.2';
     $font_weight_value = theme_get_setting($tag . '_font_weight') ? theme_get_setting($tag . '_font_weight') : 'normal';
+    $font_style_value = theme_get_setting($tag . '_font_style') ? theme_get_setting($tag . '_font_style') : 'normal';
 
     $margin_top_value = theme_get_setting($tag . '_margin_top') ? theme_get_setting($tag . '_margin_top') : '0';
     $margin_bottom_value = theme_get_setting($tag . '_margin_bottom') ? theme_get_setting($tag . '_margin_bottom') : '30';
@@ -489,6 +496,14 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
       '#options' => $arr_fontweights,
       '#title' => t('Font weight'),
       '#default_value' => $font_weight_value,
+    ];
+
+
+    $form['typography']['headings'][$tag . '_font_style'] = [
+      '#type' => 'select',
+      '#options' => $arr_fontstyles,
+      '#title' => t('Font style'),
+      '#default_value' => $font_style_value,
     ];
 
 
@@ -595,8 +610,9 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     $font_size_unit_value = theme_get_setting($tag . '_font_size_unit') ? theme_get_setting($tag . '_font_size_unit') : 'rem';
     $line_height_value = theme_get_setting($tag . '_line_height') ? theme_get_setting($tag . '_line_height') : '1.2';
     $font_weight_value = theme_get_setting($tag . '_font_weight') ? theme_get_setting($tag . '_font_weight') : '400';
+    $font_style_value = theme_get_setting($tag . '_font_style') ? theme_get_setting($tag . '_font_style') : 'normal';
 
-    $margin_top_value = theme_get_setting($tag . '_margin_top') ? theme_get_setting($tag . '_margin_top') : '0.5';
+    $margin_top_value = theme_get_setting($tag . '_margin_top') ? theme_get_setting($tag . '_margin_top') : '0';
     $margin_bottom_value = theme_get_setting($tag . '_margin_bottom') ? theme_get_setting($tag . '_margin_bottom') : '0.5';
     $margin_unit_value = theme_get_setting($tag . '_margin_unit') ? theme_get_setting($tag . '_margin_unit') : 'rem';
 
@@ -634,6 +650,13 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
       '#options' => $arr_fontweights,
       '#title' => t('Font weight'),
       '#default_value' => $font_weight_value,
+    ];
+
+    $form['typography']['text_elements'][$tag . '_font_style'] = [
+      '#type' => 'select',
+      '#options' => $arr_fontstyles,
+      '#title' => t('Font style'),
+      '#default_value' => $font_style_value,
     ];
 
     $form['typography']['text_elements'][$tag . '_line_height'] = [
@@ -717,7 +740,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_text_inverted') ? theme_get_setting('opacity_text_inverted') : 1,
+    '#default_value' => theme_get_setting('opacity_text_inverted'),
     '#suffix' => '</div></div></div>'
   ];
 
@@ -846,6 +869,15 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '#default_value' => theme_get_setting('navi_main_font_weight'),
   ];
 
+  $form['navigation']['navi_main']['navi_main_font_style'] = [
+    '#type' => 'select',
+    '#options' => $arr_fontstyles,
+    '#title' => t('Font style'),
+    '#default_value' => theme_get_setting('navi_main_font_style'),
+  ];
+
+
+
   $form['navigation']['navi_main']['navi_main_line_height'] = [
     '#type' => 'textfield',
     '#title' => t('Line height'),
@@ -960,7 +992,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
       'class' => ['separator'],
     ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_page_background_navbar') ? theme_get_setting('opacity_page_background_navbar') : 1,
+    '#default_value' => theme_get_setting('opacity_page_background_navbar'),
   ];
 
   $form['navigation']['navi_main']['color_page_font_navbar'] = [
@@ -978,7 +1010,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_page_font_navbar') ? theme_get_setting('opacity_page_font_navbar') : 1,
+    '#default_value' => theme_get_setting('opacity_page_font_navbar'),
     '#suffix' => '</div>'
   ];
 
@@ -999,7 +1031,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
       'class' => ['separator'],
     ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_page_background_navbar_hover') ? theme_get_setting('opacity_page_background_navbar_hover') : 1,
+    '#default_value' => theme_get_setting('opacity_page_background_navbar_hover'),
   ];
 
   $form['navigation']['navi_main']['color_page_font_navbar_hover'] = [
@@ -1017,7 +1049,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_page_font_navbar_hover') ? theme_get_setting('opacity_page_font_navbar_hover') : 1,
+    '#default_value' => theme_get_setting('opacity_page_font_navbar_hover'),
     '#suffix' => '</div>'
   ];
 
@@ -1040,7 +1072,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
       'class' => ['separator'],
     ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_page_background_navbar_active') ? theme_get_setting('opacity_page_background_navbar_active') : 1,
+    '#default_value' => theme_get_setting('opacity_page_background_navbar_active'),
   ];
 
   $form['navigation']['navi_main']['color_page_font_navbar_active'] = [
@@ -1058,7 +1090,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_page_font_navbar_active') ? theme_get_setting('opacity_page_font_navbar_active') : 1,
+    '#default_value' => theme_get_setting('opacity_page_font_navbar_active'),
     '#suffix' => '</div>'
   ];
 
@@ -1080,7 +1112,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
       'class' => ['separator'],
     ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_page_background_nav_dropdown') ? theme_get_setting('opacity_page_background_nav_dropdown') : 1,
+    '#default_value' => theme_get_setting('opacity_page_background_nav_dropdown'),
   ];
 
   $form['navigation']['navi_main']['color_page_font_nav_dropdown'] = [
@@ -1098,7 +1130,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_page_font_nav_dropdown') ? theme_get_setting('opacity_page_font_nav_dropdown') : 1,
+    '#default_value' => theme_get_setting('opacity_page_font_nav_dropdown'),
     '#suffix' => '</div>'
   ];
 
@@ -1120,7 +1152,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
       'class' => ['separator'],
     ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_page_background_nav_dropdown_hover') ? theme_get_setting('opacity_page_background_nav_dropdown_hover') : 1,
+    '#default_value' => theme_get_setting('opacity_page_background_nav_dropdown_hover'),
   ];
 
   $form['navigation']['navi_main']['color_page_font_nav_dropdown_hover'] = [
@@ -1138,7 +1170,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_page_font_nav_dropdown_hover') ? theme_get_setting('opacity_page_font_nav_dropdown_hover') : 1,
+    '#default_value' => theme_get_setting('opacity_page_font_nav_dropdown_hover'),
     '#suffix' => '</div>'
   ];
 
@@ -1160,7 +1192,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
       'class' => ['separator'],
     ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_page_background_nav_dropdown_active') ? theme_get_setting('opacity_page_background_nav_dropdown_active') : 1,
+    '#default_value' => theme_get_setting('opacity_page_background_nav_dropdown_active'),
   ];
 
   $form['navigation']['navi_main']['color_page_font_nav_dropdown_active'] = [
@@ -1178,7 +1210,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_page_font_nav_dropdown_active') ? theme_get_setting('opacity_page_font_nav_dropdown_active') : 1,
+    '#default_value' => theme_get_setting('opacity_page_font_nav_dropdown_active'),
     '#suffix' => '</div>'
   ];
 
@@ -1239,7 +1271,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
       'class' => ['separator'],
     ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_page_background_nav_mobile') ? theme_get_setting('opacity_page_background_nav_mobile') : 1,
+    '#default_value' => theme_get_setting('opacity_page_background_nav_mobile'),
   ];
 
   $form['navigation']['navi_mobile']['color_page_font_nav_mobile'] = [
@@ -1257,7 +1289,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_page_font_nav_mobile') ? theme_get_setting('opacity_page_font_nav_mobile') : 1,
+    '#default_value' => theme_get_setting('opacity_page_font_nav_mobile'),
     '#suffix' => '</div>'
   ];
 
@@ -1278,7 +1310,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_page_font_nav_mobile_hover') ? theme_get_setting('opacity_page_font_nav_mobile_hover') : 1,
+    '#default_value' => theme_get_setting('opacity_page_font_nav_mobile_hover'),
     '#suffix' => '</div>'
   ];
 
@@ -1318,7 +1350,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_page_font_nav_sidebar') ? theme_get_setting('opacity_page_font_nav_sidebar') : 1,
+    '#default_value' => theme_get_setting('opacity_page_font_nav_sidebar'),
     '#suffix' => '</div>'
   ];
 
@@ -1339,7 +1371,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_page_font_nav_sidebar_hover') ? theme_get_setting('opacity_page_font_nav_sidebar_hover') : 1,
+    '#default_value' => theme_get_setting('opacity_page_font_nav_sidebar_hover'),
     '#suffix' => '</div>'
   ];
 
@@ -1568,6 +1600,13 @@ $form['buttons']['default']['button_font_weight'] = [
   '#options' => $arr_fontweights,
   '#title' => t('Font weight'),
   '#default_value' => theme_get_setting('button_font_weight'),
+];
+
+$form['buttons']['default']['button_font_style'] = [
+  '#type' => 'select',
+  '#options' => $arr_fontstyles,
+  '#title' => t('Font style'),
+  '#default_value' => theme_get_setting('button_font_style'),
 ];
 
 $form['buttons']['default']['button_line_height'] = [
@@ -2106,6 +2145,13 @@ $form['buttons']['alternate']['button_alternate_font_weight'] = [
   '#options' => $arr_fontweights,
   '#title' => t('Font weight'),
   '#default_value' => theme_get_setting('button_alternate_font_weight'),
+];
+
+$form['buttons']['alternate']['button_alternate_font_style'] = [
+  '#type' => 'select',
+  '#options' => $arr_fontstyles,
+  '#title' => t('Font style'),
+  '#default_value' => theme_get_setting('button_alternate_font_style'),
 ];
 
 $form['buttons']['alternate']['button_alternate_line_height'] = [
@@ -2820,7 +2866,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_icons') ? theme_get_setting('opacity_icons') : 1,
+    '#default_value' => theme_get_setting('opacity_icons'),
     '#suffix' => '</div>'
   ];
 
@@ -2840,7 +2886,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_icons_hover') ? theme_get_setting('opacity_icons_hover') : 1,
+    '#default_value' => theme_get_setting('opacity_icons_hover'),
     '#suffix' => '</div>'
   ];
 
@@ -2860,7 +2906,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_icons_active') ? theme_get_setting('opacity_icons_active') : 1,
+    '#default_value' => theme_get_setting('opacity_icons_active'),
     '#suffix' => '</div>'
   ];
 
@@ -2886,7 +2932,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_icons_inverted') ? theme_get_setting('opacity_icons_inverted') : 1,
+    '#default_value' => theme_get_setting('opacity_icons_inverted'),
     '#suffix' => '</div>'
   ];
 
@@ -2906,7 +2952,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_icons_inverted_hover') ? theme_get_setting('opacity_icons_inverted_hover') : 1,
+    '#default_value' => theme_get_setting('opacity_icons_inverted_hover'),
     '#suffix' => '</div>'
   ];
 
@@ -2926,7 +2972,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_icons_inverted_active') ? theme_get_setting('opacity_icons_inverted_active') : 1,
+    '#default_value' => theme_get_setting('opacity_icons_inverted_active'),
     '#suffix' => '</div></div></div>'
   ];
 
@@ -2960,7 +3006,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_icons_alternate') ? theme_get_setting('opacity_icons_alternate') : 1,
+    '#default_value' => theme_get_setting('opacity_icons_alternate'),
     '#suffix' => '</div>'
   ];
 
@@ -2980,7 +3026,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_icons_alternate_hover') ? theme_get_setting('opacity_icons_alternate_hover') : 1,
+    '#default_value' => theme_get_setting('opacity_icons_alternate_hover'),
     '#suffix' => '</div>'
   ];
 
@@ -3000,7 +3046,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_icons_alternate_active') ? theme_get_setting('opacity_icons_alternate_active') : 1,
+    '#default_value' => theme_get_setting('opacity_icons_alternate_active'),
     '#suffix' => '</div>'
   ];
 
@@ -3026,7 +3072,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_icons_alternate_inverted') ? theme_get_setting('opacity_icons_alternate_inverted') : 1,
+    '#default_value' => theme_get_setting('opacity_icons_alternate_inverted'),
     '#suffix' => '</div>'
   ];
 
@@ -3046,7 +3092,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_icons_alternate_inverted_hover') ? theme_get_setting('opacity_icons_alternate_inverted_hover') : 1,
+    '#default_value' => theme_get_setting('opacity_icons_alternate_inverted_hover'),
     '#suffix' => '</div>'
   ];
 
@@ -3066,7 +3112,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_icons_alternate_inverted_active') ? theme_get_setting('opacity_icons_alternate_inverted_active') : 1,
+    '#default_value' => theme_get_setting('opacity_icons_alternate_inverted_active'),
     '#suffix' => '</div></div></div>'
   ];
 
@@ -3291,6 +3337,14 @@ $form['patterns']['anchornavigation']['anchornavigation_font_weight'] = [
   '#options' => $arr_fontweights,
   '#title' => t('Font weight'),
   '#default_value' => theme_get_setting('anchornavigation_font_weight'),
+];
+
+
+$form['patterns']['anchornavigation']['anchornavigation_font_style'] = [
+  '#type' => 'select',
+  '#options' => $arr_fontstyles,
+  '#title' => t('Font style'),
+  '#default_value' => theme_get_setting('anchornavigation_font_style'),
 ];
 
 $form['patterns']['anchornavigation']['anchornavigation_line_height'] = [
@@ -3707,6 +3761,7 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
 
     'navi_main_font_family' => $form_state->getValue('navi_main_font_family'),
     'navi_main_font_weight' => $form_state->getValue('navi_main_font_weight'),
+    'navi_main_font_style' => $form_state->getValue('navi_main_font_style'),
     'navi_main_line_height' => $form_state->getValue('navi_main_line_height'),
     'navi_main_font_size' => $form_state->getValue('navi_main_font_size'),
     'navi_main_font_size_unit' => $form_state->getValue('navi_main_font_size_unit'),
@@ -3770,6 +3825,7 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'h1_font_size_min' => $form_state->getValue('h1_font_size_min'),
     'h1_line_height' => $form_state->getValue('h1_line_height'),
     'h1_font_weight' => $form_state->getValue('h1_font_weight'),
+    'h1_font_style' => $form_state->getValue('h1_font_style'),
     'h1_margin_top' => $form_state->getValue('h1_margin_top'),
     'h1_margin_bottom' => $form_state->getValue('h1_margin_bottom'),
     'h1_margin_unit' => $form_state->getValue('h1_margin_unit'),
@@ -3782,6 +3838,7 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'h2_font_size_min' => $form_state->getValue('h2_font_size_min'),
     'h2_line_height' => $form_state->getValue('h2_line_height'),
     'h2_font_weight' => $form_state->getValue('h2_font_weight'),
+    'h2_font_style' => $form_state->getValue('h2_font_style'),
     'h2_margin_top' => $form_state->getValue('h2_margin_top'),
     'h2_margin_bottom' => $form_state->getValue('h2_margin_bottom'),
     'h2_margin_unit' => $form_state->getValue('h2_margin_unit'),
@@ -3794,6 +3851,7 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'h3_font_size_min' => $form_state->getValue('h3_font_size_min'),
     'h3_line_height' => $form_state->getValue('h3_line_height'),
     'h3_font_weight' => $form_state->getValue('h3_font_weight'),
+    'h3_font_style' => $form_state->getValue('h3_font_style'),
     'h3_margin_top' => $form_state->getValue('h3_margin_top'),
     'h3_margin_bottom' => $form_state->getValue('h3_margin_bottom'),
     'h3_margin_unit' => $form_state->getValue('h3_margin_unit'),
@@ -3806,6 +3864,7 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'h4_font_size_min' => $form_state->getValue('h4_font_size_min'),
     'h4_line_height' => $form_state->getValue('h4_line_height'),
     'h4_font_weight' => $form_state->getValue('h4_font_weight'),
+    'h4_font_style' => $form_state->getValue('h4_font_style'),
     'h4_margin_top' => $form_state->getValue('h4_margin_top'),
     'h4_margin_bottom' => $form_state->getValue('h4_margin_bottom'),
     'h4_margin_unit' => $form_state->getValue('h4_margin_unit'),
@@ -3818,6 +3877,7 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'h5_font_size_min' => $form_state->getValue('h5_font_size_min'),
     'h5_line_height' => $form_state->getValue('h5_line_height'),
     'h5_font_weight' => $form_state->getValue('h5_font_weight'),
+    'h5_font_style' => $form_state->getValue('h5_font_style'),
     'h5_margin_top' => $form_state->getValue('h5_margin_top'),
     'h5_margin_bottom' => $form_state->getValue('h5_margin_bottom'),
     'h5_margin_unit' => $form_state->getValue('h5_margin_unit'),
@@ -3830,6 +3890,7 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'h6_font_size_min' => $form_state->getValue('h6_font_size_min'),
     'h6_line_height' => $form_state->getValue('h6_line_height'),
     'h6_font_weight' => $form_state->getValue('h6_font_weight'),
+    'h6_font_style' => $form_state->getValue('h6_font_style'),
     'h6_margin_top' => $form_state->getValue('h6_margin_top'),
     'h6_margin_bottom' => $form_state->getValue('h6_margin_bottom'),
     'h6_margin_unit' => $form_state->getValue('h6_margin_unit'),
@@ -3841,6 +3902,7 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'standard_font_size_unit' => $form_state->getValue('standard_font_size_unit'),
     'standard_line_height' => $form_state->getValue('standard_line_height'),
     'standard_font_weight' => $form_state->getValue('standard_font_weight'),
+    'standard_font_style' => $form_state->getValue('standard_font_style'),
     'standard_margin_top' => $form_state->getValue('standard_margin_top'),
     'standard_margin_bottom' => $form_state->getValue('standard_margin_bottom'),
     'standard_margin_unit' => $form_state->getValue('standard_margin_unit'),
@@ -3852,6 +3914,7 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'small_font_size_unit' => $form_state->getValue('small_font_size_unit'),
     'small_line_height' => $form_state->getValue('small_line_height'),
     'small_font_weight' => $form_state->getValue('small_font_weight'),
+    'small_font_style' => $form_state->getValue('small_font_style'),
     'small_margin_top' => $form_state->getValue('small_margin_top'),
     'small_margin_bottom' => $form_state->getValue('small_margin_bottom'),
     'small_margin_unit' => $form_state->getValue('small_margin_unit'),
@@ -3863,6 +3926,7 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'lead_font_size_unit' => $form_state->getValue('lead_font_size_unit'),
     'lead_line_height' => $form_state->getValue('lead_line_height'),
     'lead_font_weight' => $form_state->getValue('lead_font_weight'),
+    'lead_font_style' => $form_state->getValue('lead_font_style'),
     'lead_margin_top' => $form_state->getValue('lead_margin_top'),
     'lead_margin_bottom' => $form_state->getValue('lead_margin_bottom'),
     'lead_margin_unit' => $form_state->getValue('lead_margin_unit'),
@@ -3877,6 +3941,7 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
 
     'button_font_family' => $form_state->getValue('button_font_family'),
     'button_font_weight' => $form_state->getValue('button_font_weight'),
+    'button_font_style' => $form_state->getValue('button_font_style'),
     'button_font_size' => $form_state->getValue('button_font_size'),
     'button_font_size_unit' => $form_state->getValue('button_font_size_unit'),
     'button_margin_top' => $form_state->getValue('button_margin_top'),
@@ -3932,6 +3997,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'button_alternate_font_size_unit' => $form_state->getValue('button_alternate_font_size_unit'),
 
     'button_alternate_font_weight' => $form_state->getValue('button_alternate_font_weight'),
+    'button_alternate_font_style' => $form_state->getValue('button_alternate_font_style'),
+
     'button_alternate_font_family' => $form_state->getValue('button_alternate_font_family'),
     'button_alternate_margin_top' => $form_state->getValue('button_alternate_margin_top'),
     'button_alternate_margin_unit' => $form_state->getValue('button_alternate_margin_unit'),
@@ -4049,6 +4116,7 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
 
     'anchornavigation_font_family' => $form_state->getValue('anchornavigation_font_family'),
     'anchornavigation_font_weight' => $form_state->getValue('anchornavigation_font_weight'),
+    'anchornavigation_font_style' => $form_state->getValue('anchornavigation_font_style'),
     'anchornavigation_line_height' => $form_state->getValue('anchornavigation_line_height'),
     'anchornavigation_font_size' => $form_state->getValue('anchornavigation_font_size'),
     'anchornavigation_font_size_unit' => $form_state->getValue('anchornavigation_font_size_unit'),
