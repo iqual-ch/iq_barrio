@@ -6,6 +6,7 @@
     font-size:                        {{h1_font_size}}{{h1_font_size_unit}};
     line-height:                      {{h1_line_height}};
     font-weight:                      {{h1_font_weight}};
+    font-style:                       {{h1_font_style}};
     font-family:                      {{h1_font_family}};
     margin-top:                       {{h1_margin_top}}{{h1_margin_unit}};
     margin-bottom:                    {{h1_margin_bottom}}{{h1_margin_unit}};
@@ -16,6 +17,7 @@
     font-size:                        {{h2_font_size}}{{h2_font_size_unit}};
     line-height:                      {{h2_line_height}};
     font-weight:                      {{h2_font_weight}};
+    font-style:                       {{h2_font_style}};
     font-family:                      {{h2_font_family}};
     margin-top:                       {{h2_margin_top}}{{h2_margin_unit}};
     margin-bottom:                    {{h2_margin_bottom}}{{h2_margin_unit}};
@@ -26,6 +28,7 @@
     font-size:                        {{h3_font_size}}{{h3_font_size_unit}};
     line-height:                      {{h3_line_height}};
     font-weight:                      {{h3_font_weight}};
+    font-style:                       {{h3_font_style}};
     font-family:                      {{h3_font_family}};
     margin-top:                       {{h3_margin_top}}{{h3_margin_unit}};
     margin-bottom:                    {{h3_margin_bottom}}{{h3_margin_unit}};
@@ -36,6 +39,7 @@
     font-size:                        {{h4_font_size}}{{h4_font_size_unit}};
     line-height:                      {{h4_line_height}};
     font-weight:                      {{h4_font_weight}};
+    font-style:                       {{h4_font_style}};
     font-family:                      {{h4_font_family}};
     margin-top:                       {{h4_margin_top}}{{h4_margin_unit}};
     margin-bottom:                    {{h4_margin_bottom}}{{h4_margin_unit}};
@@ -46,6 +50,7 @@
     font-size:                        {{h5_font_size}}{{h5_font_size_unit}};
     line-height:                      {{h5_line_height}};
     font-weight:                      {{h5_font_weight}};
+    font-style:                       {{h5_font_style}};
     font-family:                      {{h5_font_family}};
     margin-top:                       {{h5_margin_top}}{{h5_margin_unit}};
     margin-bottom:                    {{h5_margin_bottom}}{{h5_margin_unit}};
@@ -56,6 +61,7 @@
     font-size:                        {{h6_font_size}}{{h6_font_size_unit}};
     line-height:                      {{h6_line_height}};
     font-weight:                      {{h6_font_weight}};
+    font-style:                       {{h6_font_style}};
     font-family:                      {{h6_font_family}};
     margin-top:                       {{h6_margin_top}}{{h6_margin_unit}};
     margin-bottom:                    {{h6_margin_bottom}}{{h6_margin_unit}};
@@ -67,6 +73,7 @@
     font-size:                        {{standard_font_size}}{{standard_font_size_unit}};
     line-height:                      {{standard_line_height}};
     font-weight:                      {{standard_font_weight}};
+    font-style:                       {{standard_font_style}};
     font-family:                      {{standard_font_family}};
     margin-top:                       {{standard_margin_top}}{{standard_margin_unit}};
     margin-bottom:                    {{standard_margin_bottom}}{{standard_margin_unit}};
@@ -77,6 +84,7 @@
     font-size:                        {{lead_font_size}}{{lead_font_size_unit}};
     line-height:                      {{lead_line_height}};
     font-weight:                      {{lead_font_weight}};
+    font-style:                       {{lead_font_style}};
     font-family:                      {{lead_font_family}};
     margin-top:                       {{lead_margin_top}}{{lead_margin_unit}};
     margin-bottom:                    {{lead_margin_bottom}}{{lead_margin_unit}};
@@ -87,6 +95,7 @@
     font-size:                        {{small_font_size}}{{small_font_size_unit}};
     line-height:                      {{small_line_height}};
     font-weight:                      {{small_font_weight}};
+    font-style:                       {{small_font_style}};
     font-family:                      {{small_font_family}};
     margin-top:                       {{small_margin_top}}{{small_margin_unit}};
     margin-bottom:                    {{small_margin_bottom}}{{small_margin_unit}};
@@ -113,6 +122,7 @@
     display:                          inline-block;
     font-family:                      {{button_font_family}};
     font-weight:                      {{button_font_weight}};
+    font-style:                       {{button_font_style}};
     font-size:                        {{button_font_size}}{{button_font_size_unit}};;
     line-height:                      {{button_line_height}};
     margin-top:                       {{button_margin_top}}{{button_margin_unit}};
@@ -203,6 +213,7 @@
     display:                          inline-block;
     font-family:                      {{button_alternate_font_family}};
     font-weight:                      {{button_alternate_font_weight}};
+    font-style:                       {{button_alternate_font_style}};
     font-size:                        {{button_alternate_font_size}}{{button_alternate_font_size_unit}};;
     line-height:                      {{button_alternate_line_height}};
     margin-top:                       {{button_alternate_margin_top}}{{button_alternate_margin_unit}};
@@ -379,6 +390,7 @@
     padding:            {{navi_main_padding_top}}{{navi_main_padding_unit}} {{navi_main_padding_left_right}}{{navi_main_padding_unit}} {{navi_main_padding_bottom}}{{navi_main_padding_unit}};
     font-family:        {{navi_main_font_family}};
     font-weight:        {{navi_main_font_weight}};
+    font-style:         {{navi_main_font_style}};
     line-height:        {{navi_main_line_height}};
     font-size:          {{navi_main_font_size}}{{navi_main_font_size_unit}};
     background-color:   rgba({{color_page_background_navbar}},{{opacity_page_background_navbar}});
