@@ -11,7 +11,6 @@
       margin-bottom: 0;
     }
 
-
     input,
     select,
     textarea {
@@ -19,13 +18,85 @@
       border: $border-width-base solid $border-color-base;
     }
 
+    .form-control:focus{
+      border-color: $color-primary;
+    }
+  }
+
+
+
+
+  .webform-progress{
+    .progress-step{
+
+      .progress-text{
+        color: $color-grey1;
+      }
+
+      &.is-active {
+        .progress-marker{
+          background-color: $color-primary;
+        }
+      }
+
+      &.is-complete:hover{
+        .progress-marker{
+          background-color: $color-primary;
+        }
+      }
+
+      .progress-title[role="link"] {
+        color: $color-grey1;
+        &:hover{
+          color: $color-primary;
+        }
+      }
+
+
+
+
+
+
+    }
+
+
 
   }
 
+
   .form-actions{
-    padding: 0;
+    padding: 0 15px;
+    position: relative;
+
+
+    @media only screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between
+    }
+
+
+
+
+    .ajax-progress-throbber{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      filter: grayscale(1);
+      left: 100%;
+    }
     .btn-primary{
       margin: 0;
+
+      @media only screen and (min-width: 768px) {
+        flex-basis: 45%;
+      }
+
+      &.disabled,
+      &:disabled{
+        color: $color-grey5;
+        background-color: $color-grey3;
+        border-color: $color-grey3;
+      }
     }
   }
 

@@ -1,6 +1,9 @@
 <?php
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\taxonomy\Entity\Term;
+use Drupal\pagedesigner\Definition\PatternDefinition;
+use Drupal\ui_patterns\UiPatternsManager;
+
 
 /**
  *  Implements hook_theme().
@@ -59,6 +62,90 @@ function _iq_barrio_user_login_form_submit($form, FormStateInterface $form_state
  */
 function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $form_state, $form_id = null)
 {
+
+//  $pattern_manager = new UiPatternsManager();
+//
+//  $definition = $pattern_manager->getDefinition('rowoneone');
+
+//   $pattern_manager = \Drupal::service('plugin.manager.ui_patterns');
+
+//   $pattern_definitions = $pattern_manager->getDefinitions();
+
+
+//   $definition_src = $pattern_manager->getDefinition('rowoneone');
+
+//   $pattern_definitions['rowoneone']['label'] = 'test test test';
+
+
+//   $plugin_handler = \Drupal::service('plugin.manager.pagedesigner_handler');
+
+// //  $plugin_handler->collectPatterns($pattern_definitions);
+
+
+
+//   print_r( get_class_methods( $pattern_manager ) );
+
+// echo "OK";
+
+//  die();
+
+  // $definition_src = \Drupal::service('plugin.manager.ui_patterns')->getDefinition('rowoneone');
+
+  // print_r( $definition_src );
+
+  // $additional_data = $definition_src->getAdditional();
+
+  // $additional_data['classes']['random'] = [
+  //   'label' => 'Random',
+  //   'description' => 'I dont do anything',
+  //   'responsive' => 1
+  // ];
+
+
+  // print_r( $additional_data );
+
+
+
+  // $definition_src->setAdditional($additional_data);
+
+  // $cid = 'rowoneone';
+
+  // \Drupal::cache()->set($cid, $definition_src, Cache::PERMANENT, $block->getCacheTags());
+
+
+  // print_r( $definition_src );
+
+
+  // $definition['additional']['classes']['random'] = [
+  //   'label]'=> 'Random',
+  //   'description' => 'I dont do anything',
+  //   'responsive' => 1
+  // ];
+
+
+
+  // $definition_src->setPropertyDefinition('label');
+
+
+  // $definition['id'] = $id;
+  // $patterns[] = $this->getPatternDefinition($definition);
+
+
+
+
+  // $markup = \Drupal::service('renderer')->renderPlain($build);
+  // $markup = '<div data-gjs-type="block">' . $markup . '<div>';
+  // $definition['markup'] = $markup;
+  // $definition['label'] = (string) $block->label();
+  // $patterns[$id] = new PatternDefinition($definition);
+  // \Drupal::cache()->set($cid, $definition, Cache::PERMANENT, $block->getCacheTags());
+
+
+
+
+
+
+
 
   $form['#attached']['library'][] = 'iq_barrio/admin-style';
 
@@ -443,7 +530,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
   foreach ($headings as $tag => $title) {
     $font_family_value = theme_get_setting($tag . '_font_family') ? theme_get_setting($tag . '_font_family') : '000000';
     $color_value = theme_get_setting($tag . '_color') ? theme_get_setting($tag . '_color') : 'primary';
-    $opacity_value = theme_get_setting('opacity_' . $tag . '_color') ? theme_get_setting($tag . '_opacity') : 1;
+    $opacity_value = theme_get_setting($tag.'_opacity');
     $font_size_value = theme_get_setting($tag . '_font_size') ? theme_get_setting($tag . '_font_size') : '2.5';
     $font_size_unit_value = theme_get_setting($tag . '_font_size_unit') ? theme_get_setting($tag . '_font_size_unit') : 'rem';
 
@@ -527,7 +614,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
 
     $form['typography']['headings'][$tag . '_font_size_min_holder'][$tag . '_font_size_min'] = [
       '#type' => 'textfield',
-      '#title' => t('Font-size&nbsp;min'),
+      '#title' => t('Font-size<br/>min'),
       '#default_value' => $font_size_min_value,
     ];
 
@@ -542,7 +629,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
 
     $form['typography']['headings'][$tag . '_font_size_holder'][$tag . '_font_size'] = [
       '#type' => 'textfield',
-      '#title' => t('Font-size&nbsp;max'),
+      '#title' => t('<br/>max'),
       '#default_value' => $font_size_value,
     ];
 
@@ -600,13 +687,18 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     'standard' => 'Standard text font',
     'small' => 'Small text font',
     'lead' => 'Lead text font',
+    'deco_1' => 'Decoration font 1',
+    'deco_2' => 'Decoration font 2',
+    'deco_3' => 'Decoration font 3',
   ];
 
   foreach ($text_elements as $tag => $title) {
     $font_family_value = theme_get_setting($tag . '_font_family') ? theme_get_setting($tag . '_font_family') : '000000';
     $color_value = theme_get_setting($tag . '_color') ? theme_get_setting($tag . '_color') : 'grey3';
-    $opacity_value = theme_get_setting('opacity_' . $tag . '_color') ? theme_get_setting($tag . '_opacity') : 1;
-    $font_size_value = theme_get_setting($tag . '_font_size') ? theme_get_setting($tag . '_font_size') : '2.5';
+    $opacity_value = theme_get_setting($tag.'_opacity');
+
+    $font_size_min_value = theme_get_setting($tag . '_font_size_min') ? theme_get_setting($tag . '_font_size_min') : '1';
+    $font_size_value = theme_get_setting($tag . '_font_size') ? theme_get_setting($tag . '_font_size') : '1.5';
     $font_size_unit_value = theme_get_setting($tag . '_font_size_unit') ? theme_get_setting($tag . '_font_size_unit') : 'rem';
     $line_height_value = theme_get_setting($tag . '_line_height') ? theme_get_setting($tag . '_line_height') : '1.2';
     $font_weight_value = theme_get_setting($tag . '_font_weight') ? theme_get_setting($tag . '_font_weight') : '400';
@@ -667,7 +759,11 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     ];
 
 
-    $form['typography']['text_elements'][$tag . '_font_size_holder'] = [
+
+
+
+
+    $form['typography']['text_elements'][$tag . '_font_size_min_holder'] = [
       '#type' => 'container',
       '#attributes' => [
         'class' => ['container-inline', 'unit-combo-field', 'separator'],
@@ -675,9 +771,24 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
       '#prefix' => '<div class="inline-input-holder">',
     ];
 
+    $form['typography']['text_elements'][$tag . '_font_size_min_holder'][$tag . '_font_size_min'] = [
+      '#type' => 'textfield',
+      '#title' => t('Font-size<br/>min'),
+      '#default_value' => $font_size_min_value,
+    ];
+
+
+
+    $form['typography']['text_elements'][$tag . '_font_size_holder'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'class' => ['container-inline', 'unit-combo-field', 'separator'],
+      ]
+    ];
+
     $form['typography']['text_elements'][$tag . '_font_size_holder'][$tag . '_font_size'] = [
       '#type' => 'textfield',
-      '#title' => t('Font size'),
+      '#title' => t('<br/>max'),
       '#default_value' => $font_size_value,
     ];
 
@@ -686,6 +797,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
       '#options' => $arr_units,
       '#default_value' => $font_size_unit_value,
     ];
+
 
     $form['typography']['text_elements'][$tag . '_margin_holder'] = [
       '#type' => 'container',
@@ -752,11 +864,11 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
   ];
 
   $link_color_value = theme_get_setting('link_color') ? theme_get_setting('link_color') : 'primary';
-  $link_opacity_value = theme_get_setting('link_opacity') ? theme_get_setting('link_opacity') : 1;
+  $link_opacity_value = theme_get_setting('link_opacity');
   $link_text_decoration_value = theme_get_setting('link_text_decoration') ? theme_get_setting('link_text_decoration') : 'underline';
 
   $link_color_hover_value = theme_get_setting('link_color_hover') ? theme_get_setting('link_color_hover') : 'primary';
-  $link_opacity_hover_value = theme_get_setting('link_opacity_hover') ? theme_get_setting('link_opacity_hover') : 1;
+  $link_opacity_hover_value = theme_get_setting('link_opacity_hover');
 
 
   $link_text_decoration_hover_value = theme_get_setting('link_text_decoration_hover') ? theme_get_setting('link_text_decoration_hover') : 'underline';
@@ -1459,7 +1571,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('border_opacity') ? theme_get_setting('border_opacity') : 1,
+    '#default_value' => theme_get_setting('border_opacity'),
     '#suffix' => '</div>'
   ];
 
@@ -1616,8 +1728,6 @@ $form['buttons']['default']['button_line_height'] = [
   '#suffix' => '</div>'
 ];
 
-
-
 $form['buttons']['default']['button_font_size_holder'] = [
   '#type' => 'container',
   '#prefix' => '<div class="inline-input-holder">',
@@ -1639,15 +1749,93 @@ $form['buttons']['default']['button_font_size_holder']['button_font_size_unit'] 
 ];
 
 
-$form['buttons']['default']['button_margin_holder'] = [
+
+
+
+
+$form['buttons']['default']['button_border_width_holder'] = [
   '#type' => 'container',
   '#attributes' => [
     'class' => ['container-inline', 'unit-combo-field', 'multi-valule', 'separator'],
   ],
 ];
 
+$form['buttons']['default']['button_border_width_holder']['button_border_width_top'] = [
+  '#title' => t('Border (top, right, bottom, left)'),
+  '#type' => 'textfield',
+  '#default_value' => theme_get_setting('button_border_width_top'),
+];
+
+$form['buttons']['default']['button_border_width_holder']['button_border_width_right'] = [
+  '#type' => 'textfield',
+  '#default_value' => theme_get_setting('button_border_width_right'),
+];
+
+$form['buttons']['default']['button_border_width_holder']['button_border_width_bottom'] = [
+  '#type' => 'textfield',
+  '#default_value' => theme_get_setting('button_border_width_bottom'),
+];
+
+$form['buttons']['default']['button_border_width_holder']['button_border_width_left'] = [
+  '#type' => 'textfield',
+  '#default_value' => theme_get_setting('button_border_width_left'),
+];
+
+$form['buttons']['default']['button_border_width_holder']['button_border_width_unit'] = [
+  '#type' => 'textfield',
+  '#type' => 'select',
+  '#options' => $arr_units,
+  '#default_value' => theme_get_setting('button_border_width_unit'),
+];
+
+$form['buttons']['default']['button_border_radius_holder'] = [
+  '#type' => 'container',
+  '#attributes' => [
+    'class' => ['container-inline', 'unit-combo-field', 'separator'],
+  ]
+];
+
+$form['buttons']['default']['button_border_radius_holder']['button_border_radius'] = [
+  '#type' => 'textfield',
+  '#title' => t('Border radius'),
+  '#default_value' => theme_get_setting('button_border_radius'),
+];
+
+$form['buttons']['default']['button_border_radius_holder']['button_border_radius_unit'] = [
+  '#type' => 'select',
+  '#options' => $arr_units,
+  '#default_value' => theme_get_setting('button_border_radius_unit'),
+  '#suffix' => '</div>',
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$form['buttons']['default']['button_margin_holder'] = [
+  '#type' => 'container',
+  '#prefix' => '<div class="inline-input-holder">',
+  '#attributes' => [
+    'class' => ['container-inline', 'unit-combo-field', 'multi-valule', 'separator'],
+  ],
+];
+
 $form['buttons']['default']['button_margin_holder']['button_margin_top'] = [
-  '#title' => t('Margin (top, bottom)'),
+  '#title' => t('Margin (top, right, bottom, left)'),
   '#type' => 'textfield',
   '#default_value' => theme_get_setting('button_margin_top'),
 ];
@@ -1685,7 +1873,7 @@ $form['buttons']['default']['button_padding_holder'] = [
 ];
 
 $form['buttons']['default']['button_padding_holder']['button_padding_top'] = [
-  '#title' => t('Padding (top, bottom)'),
+  '#title' => t('Padding (top, right, bottom, left)'),
   '#type' => 'textfield',
   '#default_value' => theme_get_setting('button_padding_top'),
 ];
@@ -1749,7 +1937,7 @@ $form['buttons']['default']['standard']['button_font_opacity_standard'] = [
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_font_opacity_standard') ? theme_get_setting('button_font_opacity_standard') : 1,
+  '#default_value' => theme_get_setting('button_font_opacity_standard'),
   '#suffix' => '</div>'
 ];
 
@@ -1771,7 +1959,7 @@ $form['buttons']['default']['standard']['button_background_opacity_standard'] = 
     'class' => ['separator'],
   ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_background_opacity_standard') ? theme_get_setting('button_background_opacity_standard') : 1,
+  '#default_value' => theme_get_setting('button_background_opacity_standard'),
 ];
 
 $form['buttons']['default']['standard']['button_border_color_standard'] = [
@@ -1789,7 +1977,7 @@ $form['buttons']['default']['standard']['button_border_opacity_standard'] = [
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_border_opacity_standard') ? theme_get_setting('button_border_opacity_standard') : 1,
+  '#default_value' => theme_get_setting('button_border_opacity_standard'),
   '#suffix' => '</div>'
 ];
 
@@ -1809,7 +1997,7 @@ $form['buttons']['default']['standard']['button_font_opacity_hover'] = [
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_font_opacity_hover') ? theme_get_setting('button_font_opacity_hover') : 1,
+  '#default_value' => theme_get_setting('button_font_opacity_hover'),
   '#suffix' => '</div>'
 ];
 
@@ -1830,7 +2018,7 @@ $form['buttons']['default']['standard']['button_background_opacity_hover'] = [
     'class' => ['separator'],
   ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_background_opacity_hover') ? theme_get_setting('button_background_opacity_hover') : 1,
+  '#default_value' => theme_get_setting('button_background_opacity_hover'),
 ];
 
 $form['buttons']['default']['standard']['button_border_color_hover'] = [
@@ -1848,7 +2036,7 @@ $form['buttons']['default']['standard']['button_border_opacity_hover'] = [
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_border_opacity_hover') ? theme_get_setting('button_border_opacity_hover') : 1,
+  '#default_value' => theme_get_setting('button_border_opacity_hover'),
   '#suffix' => '</div>'
 ];
 
@@ -1868,7 +2056,7 @@ $form['buttons']['default']['standard']['button_font_opacity_active'] = [
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_font_opacity_active') ? theme_get_setting('button_font_opacity_active') : 1,
+  '#default_value' => theme_get_setting('button_font_opacity_active'),
   '#suffix' => '</div>'
 ];
 
@@ -1889,7 +2077,7 @@ $form['buttons']['default']['standard']['button_background_opacity_active'] = [
     'class' => ['separator'],
   ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_background_opacity_active') ? theme_get_setting('button_background_opacity_active') : 1,
+  '#default_value' => theme_get_setting('button_background_opacity_active'),
 ];
 
 $form['buttons']['default']['standard']['button_border_color_active'] = [
@@ -1907,7 +2095,7 @@ $form['buttons']['default']['standard']['button_border_opacity_active'] = [
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_border_opacity_active') ? theme_get_setting('button_border_opacity_active') : 1,
+  '#default_value' => theme_get_setting('button_border_opacity_active'),
   '#suffix' => '</div>'
 ];
 
@@ -1936,7 +2124,7 @@ $form['buttons']['default']['inverted']['button_font_opacity_inverted'] = [
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_font_opacity_inverted') ? theme_get_setting('button_font_opacity_inverted') : 1,
+  '#default_value' => theme_get_setting('button_font_opacity_inverted'),
   '#suffix' => '</div>'
 ];
 
@@ -1958,7 +2146,7 @@ $form['buttons']['default']['inverted']['button_background_opacity_inverted'] = 
     'class' => ['separator'],
   ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_background_opacity_inverted') ? theme_get_setting('button_background_opacity_inverted') : 1,
+  '#default_value' => theme_get_setting('button_background_opacity_inverted'),
 ];
 
 $form['buttons']['default']['inverted']['button_border_color_inverted'] = [
@@ -1976,7 +2164,7 @@ $form['buttons']['default']['inverted']['button_border_opacity_inverted'] = [
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_border_opacity_inverted') ? theme_get_setting('button_border_opacity_inverted') : 1,
+  '#default_value' => theme_get_setting('button_border_opacity_inverted'),
   '#suffix' => '</div>'
 ];
 
@@ -1996,7 +2184,7 @@ $form['buttons']['default']['inverted']['button_font_opacity_inverted_hover'] = 
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_font_opacity_inverted_hover') ? theme_get_setting('button_font_opacity_inverted_hover') : 1,
+  '#default_value' => theme_get_setting('button_font_opacity_inverted_hover'),
   '#suffix' => '</div>'
 ];
 
@@ -2017,7 +2205,7 @@ $form['buttons']['default']['inverted']['button_background_opacity_inverted_hove
     'class' => ['separator'],
   ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_background_opacity_inverted_hover') ? theme_get_setting('button_background_opacity_inverted_hover') : 1,
+  '#default_value' => theme_get_setting('button_background_opacity_inverted_hover'),
 ];
 
 $form['buttons']['default']['inverted']['button_border_color_inverted_hover'] = [
@@ -2035,7 +2223,7 @@ $form['buttons']['default']['inverted']['button_border_opacity_inverted_hover'] 
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_border_opacity_inverted_hover') ? theme_get_setting('button_border_opacity_inverted_hover') : 1,
+  '#default_value' => theme_get_setting('button_border_opacity_inverted_hover'),
   '#suffix' => '</div>'
 ];
 
@@ -2055,7 +2243,7 @@ $form['buttons']['default']['inverted']['button_font_opacity_inverted_active'] =
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_font_opacity_inverted_active') ? theme_get_setting('button_font_opacity_inverted_active') : 1,
+  '#default_value' => theme_get_setting('button_font_opacity_inverted_active'),
   '#suffix' => '</div>'
 ];
 
@@ -2076,7 +2264,7 @@ $form['buttons']['default']['inverted']['button_background_opacity_inverted_acti
     'class' => ['separator'],
   ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_background_opacity_inverted_active') ? theme_get_setting('button_background_opacity_inverted_active') : 1,
+  '#default_value' => theme_get_setting('button_background_opacity_inverted_active'),
 ];
 
 $form['buttons']['default']['inverted']['button_border_color_inverted_active'] = [
@@ -2094,7 +2282,7 @@ $form['buttons']['default']['inverted']['button_border_opacity_inverted_active']
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_border_opacity_inverted_active') ? theme_get_setting('button_border_opacity_inverted_active') : 1,
+  '#default_value' => theme_get_setting('button_border_opacity_inverted_active'),
   '#suffix' => '</div>'
 ];
 
@@ -2184,15 +2372,82 @@ $form['buttons']['alternate']['button_alternate_font_size_holder']['button_alter
 ];
 
 
-$form['buttons']['alternate']['button_alternate_margin_holder'] = [
+
+$form['buttons']['alternate']['button_alternate_border_width_holder'] = [
   '#type' => 'container',
   '#attributes' => [
     'class' => ['container-inline', 'unit-combo-field', 'multi-valule', 'separator'],
   ],
 ];
 
+$form['buttons']['alternate']['button_alternate_border_width_holder']['button_alternate_border_width_top'] = [
+  '#title' => t('Border (top, right, bottom, left)'),
+  '#type' => 'textfield',
+  '#default_value' => theme_get_setting('button_alternate_border_width_top'),
+];
+
+$form['buttons']['alternate']['button_alternate_border_width_holder']['button_alternate_border_width_right'] = [
+  '#type' => 'textfield',
+  '#default_value' => theme_get_setting('button_alternate_border_width_right'),
+];
+
+$form['buttons']['alternate']['button_alternate_border_width_holder']['button_alternate_border_width_bottom'] = [
+  '#type' => 'textfield',
+  '#default_value' => theme_get_setting('button_alternate_border_width_bottom'),
+];
+
+$form['buttons']['alternate']['button_alternate_border_width_holder']['button_alternate_border_width_left'] = [
+  '#type' => 'textfield',
+  '#default_value' => theme_get_setting('button_alternate_border_width_left'),
+];
+
+$form['buttons']['alternate']['button_alternate_border_width_holder']['button_alternate_border_width_unit'] = [
+  '#type' => 'textfield',
+  '#type' => 'select',
+  '#options' => $arr_units,
+  '#default_value' => theme_get_setting('button_alternate_border_width_unit'),
+];
+
+$form['buttons']['alternate']['button_alternate_border_radius_holder'] = [
+  '#type' => 'container',
+  '#attributes' => [
+    'class' => ['container-inline', 'unit-combo-field', 'separator'],
+  ]
+];
+
+$form['buttons']['alternate']['button_alternate_border_radius_holder']['button_alternate_border_radius'] = [
+  '#type' => 'textfield',
+  '#title' => t('Border radius'),
+  '#default_value' => theme_get_setting('button_alternate_border_radius'),
+];
+
+$form['buttons']['alternate']['button_alternate_border_radius_holder']['button_alternate_border_radius_unit'] = [
+  '#type' => 'select',
+  '#options' => $arr_units,
+  '#default_value' => theme_get_setting('button_alternate_border_radius_unit'),
+  '#suffix' => '</div>',
+];
+
+
+
+
+
+
+
+
+
+
+
+$form['buttons']['alternate']['button_alternate_margin_holder'] = [
+  '#type' => 'container',
+  '#prefix' => '<div class="inline-input-holder">',
+  '#attributes' => [
+    'class' => ['container-inline', 'unit-combo-field', 'multi-valule', 'separator'],
+  ],
+];
+
 $form['buttons']['alternate']['button_alternate_margin_holder']['button_alternate_margin_top'] = [
-  '#title' => t('Margin (top, bottom)'),
+  '#title' => t('Margin (top, right, bottom, left)'),
   '#type' => 'textfield',
   '#default_value' => theme_get_setting('button_alternate_margin_top'),
 ];
@@ -2230,7 +2485,7 @@ $form['buttons']['alternate']['button_alternate_padding_holder'] = [
 ];
 
 $form['buttons']['alternate']['button_alternate_padding_holder']['button_alternate_padding_top'] = [
-  '#title' => t('Padding (top, bottom)'),
+  '#title' => t('Padding (top, right, bottom, left)'),
   '#type' => 'textfield',
   '#default_value' => theme_get_setting('button_alternate_padding_top'),
 ];
@@ -2288,7 +2543,7 @@ $form['buttons']['alternate']['standard']['button_alternate_font_opacity_standar
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_alternate_font_opacity_standard') ? theme_get_setting('button_alternate_font_opacity_standard') : 1,
+  '#default_value' => theme_get_setting('button_alternate_font_opacity_standard'),
   '#suffix' => '</div>'
 ];
 
@@ -2310,7 +2565,7 @@ $form['buttons']['alternate']['standard']['button_alternate_background_opacity_s
     'class' => ['separator'],
   ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_alternate_background_opacity_standard') ? theme_get_setting('button_alternate_background_opacity_standard') : 1,
+  '#default_value' => theme_get_setting('button_alternate_background_opacity_standard'),
 ];
 
 $form['buttons']['alternate']['standard']['button_alternate_border_color_standard'] = [
@@ -2328,7 +2583,7 @@ $form['buttons']['alternate']['standard']['button_alternate_border_opacity_stand
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_alternate_border_opacity_standard') ? theme_get_setting('button_alternate_border_opacity_standard') : 1,
+  '#default_value' => theme_get_setting('button_alternate_border_opacity_standard'),
   '#suffix' => '</div>'
 ];
 
@@ -2348,7 +2603,7 @@ $form['buttons']['alternate']['standard']['button_alternate_font_opacity_hover']
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_alternate_font_opacity_hover') ? theme_get_setting('button_alternate_font_opacity_hover') : 1,
+  '#default_value' => theme_get_setting('button_alternate_font_opacity_hover'),
   '#suffix' => '</div>'
 ];
 
@@ -2369,7 +2624,7 @@ $form['buttons']['alternate']['standard']['button_alternate_background_opacity_h
     'class' => ['separator'],
   ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_alternate_background_opacity_hover') ? theme_get_setting('button_alternate_background_opacity_hover') : 1,
+  '#default_value' => theme_get_setting('button_alternate_background_opacity_hover'),
 ];
 
 $form['buttons']['alternate']['standard']['button_alternate_border_color_hover'] = [
@@ -2387,7 +2642,7 @@ $form['buttons']['alternate']['standard']['button_alternate_border_opacity_hover
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_alternate_border_opacity_hover') ? theme_get_setting('button_alternate_border_opacity_hover') : 1,
+  '#default_value' => theme_get_setting('button_alternate_border_opacity_hover'),
   '#suffix' => '</div>'
 ];
 
@@ -2407,7 +2662,7 @@ $form['buttons']['alternate']['standard']['button_alternate_font_opacity_active'
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_alternate_font_opacity_active') ? theme_get_setting('button_alternate_font_opacity_active') : 1,
+  '#default_value' => theme_get_setting('button_alternate_font_opacity_active'),
   '#suffix' => '</div>'
 ];
 
@@ -2428,7 +2683,7 @@ $form['buttons']['alternate']['standard']['button_alternate_background_opacity_a
     'class' => ['separator'],
   ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_alternate_background_opacity_active') ? theme_get_setting('button_alternate_background_opacity_active') : 1,
+  '#default_value' => theme_get_setting('button_alternate_background_opacity_active'),
 ];
 
 $form['buttons']['alternate']['standard']['button_alternate_border_color_active'] = [
@@ -2446,7 +2701,7 @@ $form['buttons']['alternate']['standard']['button_alternate_border_opacity_activ
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_alternate_border_opacity_active') ? theme_get_setting('button_alternate_border_opacity_active') : 1,
+  '#default_value' => theme_get_setting('button_alternate_border_opacity_active'),
   '#suffix' => '</div>'
 ];
 
@@ -2475,7 +2730,7 @@ $form['buttons']['alternate']['inverted']['button_alternate_font_opacity_inverte
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_alternate_font_opacity_inverted') ? theme_get_setting('button_alternate_font_opacity_inverted') : 1,
+  '#default_value' => theme_get_setting('button_alternate_font_opacity_inverted'),
   '#suffix' => '</div>'
 ];
 
@@ -2497,7 +2752,7 @@ $form['buttons']['alternate']['inverted']['button_alternate_background_opacity_i
     'class' => ['separator'],
   ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_alternate_background_opacity_inverted') ? theme_get_setting('button_alternate_background_opacity_inverted') : 1,
+  '#default_value' => theme_get_setting('button_alternate_background_opacity_inverted'),
 ];
 
 $form['buttons']['alternate']['inverted']['button_alternate_border_color_inverted'] = [
@@ -2515,7 +2770,7 @@ $form['buttons']['alternate']['inverted']['button_alternate_border_opacity_inver
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_alternate_border_opacity_inverted') ? theme_get_setting('button_alternate_border_opacity_inverted') : 1,
+  '#default_value' => theme_get_setting('button_alternate_border_opacity_inverted'),
   '#suffix' => '</div>'
 ];
 
@@ -2535,7 +2790,7 @@ $form['buttons']['alternate']['inverted']['button_alternate_font_opacity_inverte
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_alternate_font_opacity_inverted_hover') ? theme_get_setting('button_alternate_font_opacity_inverted_hover') : 1,
+  '#default_value' => theme_get_setting('button_alternate_font_opacity_inverted_hover'),
   '#suffix' => '</div>'
 ];
 
@@ -2556,7 +2811,7 @@ $form['buttons']['alternate']['inverted']['button_alternate_background_opacity_i
     'class' => ['separator'],
   ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_alternate_background_opacity_inverted_hover') ? theme_get_setting('button_alternate_background_opacity_inverted_hover') : 1,
+  '#default_value' => theme_get_setting('button_alternate_background_opacity_inverted_hover'),
 ];
 
 $form['buttons']['alternate']['inverted']['button_alternate_border_color_inverted_hover'] = [
@@ -2574,7 +2829,7 @@ $form['buttons']['alternate']['inverted']['button_alternate_border_opacity_inver
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_alternate_border_opacity_inverted_hover') ? theme_get_setting('button_alternate_border_opacity_inverted_hover') : 1,
+  '#default_value' => theme_get_setting('button_alternate_border_opacity_inverted_hover'),
   '#suffix' => '</div>'
 ];
 
@@ -2594,7 +2849,7 @@ $form['buttons']['alternate']['inverted']['button_alternate_font_opacity_inverte
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_alternate_font_opacity_inverted_active') ? theme_get_setting('button_alternate_font_opacity_inverted_active') : 1,
+  '#default_value' => theme_get_setting('button_alternate_font_opacity_inverted_active'),
   '#suffix' => '</div>'
 ];
 
@@ -2615,7 +2870,7 @@ $form['buttons']['alternate']['inverted']['button_alternate_background_opacity_i
     'class' => ['separator'],
   ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_alternate_background_opacity_inverted_active') ? theme_get_setting('button_alternate_background_opacity_inverted_active') : 1,
+  '#default_value' => theme_get_setting('button_alternate_background_opacity_inverted_active'),
 ];
 
 $form['buttons']['alternate']['inverted']['button_alternate_border_color_inverted_active'] = [
@@ -2633,7 +2888,7 @@ $form['buttons']['alternate']['inverted']['button_alternate_border_opacity_inver
   //   'step' => 0.01,
   // ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('button_alternate_border_opacity_inverted_active') ? theme_get_setting('button_alternate_border_opacity_inverted_active') : 1,
+  '#default_value' => theme_get_setting('button_alternate_border_opacity_inverted_active'),
   '#suffix' => '</div>'
 ];
 
@@ -2725,7 +2980,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
       'class' => [ 'separator'],
     ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('slider_arrow_opacity') ? theme_get_setting('slider_arrow_opacity') : 1,
+    '#default_value' => theme_get_setting('slider_arrow_opacity'),
   ];
 
   $form['patterns']['slider']['slider_arrow_backgroundcolor'] = [
@@ -2743,7 +2998,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('slider_arrow_background_opacity') ? theme_get_setting('slider_arrow_background_opacity') : 1,
+    '#default_value' => theme_get_setting('slider_arrow_background_opacity'),
     '#suffix' => '</div>'
   ];
 
@@ -2786,7 +3041,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
       'class' => [ 'separator'],
     ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('slider_dot_opacity') ? theme_get_setting('slider_dot_opacity') : 1,
+    '#default_value' => theme_get_setting('slider_dot_opacity'),
   ];
 
   $form['patterns']['slider']['slider_dot_color_active'] = [
@@ -2804,7 +3059,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('slider_dot_opacity_active') ? theme_get_setting('slider_dot_opacity_active') : 1,
+    '#default_value' => theme_get_setting('slider_dot_opacity_active'),
     '#suffix' => '</div></div></div>'
   ];
 
@@ -2831,7 +3086,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('quote_highlight_opacity') ? theme_get_setting('quote_highlight_opacity') : 1,
+    '#default_value' => theme_get_setting('quote_highlight_opacity'),
     '#suffix' => '</div></div></div>'
   ];
 
@@ -3153,7 +3408,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('social_icon_opacity') ? theme_get_setting('social_icon_opacity') : 1,
+    '#default_value' => theme_get_setting('social_icon_opacity'),
     '#suffix' => '</div></div></div>'
   ];
 
@@ -3182,7 +3437,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
       'class' => [ 'separator'],
     ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('tab_opacity') ? theme_get_setting('tab_opacity') : 1,
+    '#default_value' => theme_get_setting('tab_opacity'),
   ];
 
   $form['patterns']['tabs']['tab_font_color'] = [
@@ -3200,7 +3455,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('tab_font_opacity') ? theme_get_setting('tab_font_opacity') : 1,
+    '#default_value' => theme_get_setting('tab_font_opacity'),
     '#suffix' => '</div>'
   ];
 
@@ -3225,7 +3480,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
       'class' => [ 'separator'],
     ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('tab_opacity_active') ? theme_get_setting('tab_opacity_active') : 1,
+    '#default_value' => theme_get_setting('tab_opacity_active'),
   ];
 
   $form['patterns']['tabs']['tab_font_color_active'] = [
@@ -3243,7 +3498,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
     //   'step' => 0.01,
     // ],
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('tab_font_opacity_active') ? theme_get_setting('tab_font_opacity_active') : 1,
+    '#default_value' => theme_get_setting('tab_font_opacity_active'),
     '#suffix' => '</div></div></div>'
   ];
 
@@ -3266,7 +3521,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
   $form['patterns']['toggler']['toggler_opacity'] = [
     '#type' => 'textfield',
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('toggler_opacity') ? theme_get_setting('toggler_opacity') : 1,
+    '#default_value' => theme_get_setting('toggler_opacity'),
     '#suffix' => '</div>'
   ];
 
@@ -3282,7 +3537,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
   $form['patterns']['toggler']['toggler_opacity_hover'] = [
     '#type' => 'textfield',
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('toggler_opacity_hover') ? theme_get_setting('toggler_opacity_hover') : 1,
+    '#default_value' => theme_get_setting('toggler_opacity_hover'),
     '#suffix' => '</div>'
   ];
 
@@ -3297,7 +3552,7 @@ $form['buttons']['alternate']['button_alternate_title'] = [
   $form['patterns']['toggler']['toggler_opacity_active'] = [
     '#type' => 'textfield',
     '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('toggler_opacity_active') ? theme_get_setting('toggler_opacity_hover') : 1,
+    '#default_value' => theme_get_setting('toggler_opacity_active'),
     '#suffix' => '</div></div></div>'
   ];
 
@@ -3383,7 +3638,7 @@ $form['patterns']['anchornavigation']['anchornavigation_margin_holder'] = [
 ];
 
 $form['patterns']['anchornavigation']['anchornavigation_margin_holder']['anchornavigation_margin_top'] = [
-  '#title' => t('Margin (top, bottom)'),
+  '#title' => t('Margin (top, right, bottom, left)'),
   '#type' => 'textfield',
   '#default_value' => theme_get_setting('anchornavigation_margin_top'),
 ];
@@ -3421,7 +3676,7 @@ $form['patterns']['anchornavigation']['anchornavigation_padding_holder'] = [
 ];
 
 $form['patterns']['anchornavigation']['anchornavigation_padding_holder']['anchornavigation_padding_top'] = [
-  '#title' => t('Padding (top, bottom)'),
+  '#title' => t('Padding (top, right, bottom, left)'),
   '#type' => 'textfield',
   '#default_value' => theme_get_setting('anchornavigation_padding_top'),
 ];
@@ -3476,7 +3731,7 @@ $form['patterns']['anchornavigation']['anchornavigation_font_color_standard'] = 
 $form['patterns']['anchornavigation']['anchornavigation_font_opacity_standard'] = [
   '#type' => 'textfield',
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('anchornavigation_font_opacity_standard') ? theme_get_setting('anchornavigation_font_opacity_standard') : 1,
+  '#default_value' => theme_get_setting('anchornavigation_font_opacity_standard'),
   '#suffix' => '</div>'
 ];
 
@@ -3494,7 +3749,7 @@ $form['patterns']['anchornavigation']['anchornavigation_background_opacity_stand
     'class' => ['separator'],
   ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('anchornavigation_background_opacity_standard') ? theme_get_setting('anchornavigation_background_opacity_standard') : 1,
+  '#default_value' => theme_get_setting('anchornavigation_background_opacity_standard'),
 ];
 
 $form['patterns']['anchornavigation']['anchornavigation_border_color_standard'] = [
@@ -3507,7 +3762,7 @@ $form['patterns']['anchornavigation']['anchornavigation_border_color_standard'] 
 $form['patterns']['anchornavigation']['anchornavigation_border_opacity_standard'] = [
   '#type' => 'textfield',
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('anchornavigation_border_opacity_standard') ? theme_get_setting('anchornavigation_border_opacity_standard') : 1,
+  '#default_value' => theme_get_setting('anchornavigation_border_opacity_standard'),
   '#suffix' => '</div>'
 ];
 
@@ -3522,7 +3777,7 @@ $form['patterns']['anchornavigation']['anchornavigation_font_color_hover'] = [
 $form['patterns']['anchornavigation']['anchornavigation_font_opacity_hover'] = [
   '#type' => 'textfield',
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('anchornavigation_font_opacity_hover') ? theme_get_setting('anchornavigation_font_opacity_hover') : 1,
+  '#default_value' => theme_get_setting('anchornavigation_font_opacity_hover'),
   '#suffix' => '</div>'
 ];
 
@@ -3540,7 +3795,7 @@ $form['patterns']['anchornavigation']['anchornavigation_background_opacity_hover
     'class' => ['separator'],
   ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('anchornavigation_background_opacity_hover') ? theme_get_setting('anchornavigation_background_opacity_hover') : 1,
+  '#default_value' => theme_get_setting('anchornavigation_background_opacity_hover'),
 ];
 
 $form['patterns']['anchornavigation']['anchornavigation_border_color_hover'] = [
@@ -3553,7 +3808,7 @@ $form['patterns']['anchornavigation']['anchornavigation_border_color_hover'] = [
 $form['patterns']['anchornavigation']['anchornavigation_border_opacity_hover'] = [
   '#type' => 'textfield',
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('anchornavigation_border_opacity_hover') ? theme_get_setting('anchornavigation_border_opacity_hover') : 1,
+  '#default_value' => theme_get_setting('anchornavigation_border_opacity_hover'),
   '#suffix' => '</div>'
 ];
 
@@ -3568,7 +3823,7 @@ $form['patterns']['anchornavigation']['anchornavigation_font_color_active'] = [
 $form['patterns']['anchornavigation']['anchornavigation_font_opacity_active'] = [
   '#type' => 'textfield',
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('anchornavigation_font_opacity_active') ? theme_get_setting('anchornavigation_font_opacity_active') : 1,
+  '#default_value' => theme_get_setting('anchornavigation_font_opacity_active'),
   '#suffix' => '</div>'
 ];
 
@@ -3586,20 +3841,20 @@ $form['patterns']['anchornavigation']['anchornavigation_background_opacity_activ
     'class' => ['separator'],
   ],
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('anchornavigation_background_opacity_active') ? theme_get_setting('anchornavigation_background_opacity_active') : 1,
+  '#default_value' => theme_get_setting('anchornavigation_background_opacity_active'),
 ];
 
 $form['patterns']['anchornavigation']['anchornavigation_border_color_active'] = [
   '#type' => 'select',
   '#title' => t('Border color'),
   '#options' => $arr_colors,
-  '#default_value' => theme_get_setting('anchornavigation_border_color_active') ? theme_get_setting('anchornavigation_border_color_active') : 1,
+  '#default_value' => theme_get_setting('anchornavigation_border_color_active'),
 ];
 
 $form['patterns']['anchornavigation']['anchornavigation_border_opacity_active'] = [
   '#type' => 'textfield',
   '#title' => t('Opacity'),
-  '#default_value' => theme_get_setting('anchornavigation_border_opacity_active') ? theme_get_setting('anchornavigation_border_opacity_active') : 1,
+  '#default_value' => theme_get_setting('anchornavigation_border_opacity_active'),
   '#suffix' => '</div>'
 ];
 
@@ -3900,6 +4155,7 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'standard_opacity' => $form_state->getValue('standard_opacity'),
     'standard_font_size' => $form_state->getValue('standard_font_size'),
     'standard_font_size_unit' => $form_state->getValue('standard_font_size_unit'),
+    'standard_font_size_min' => $form_state->getValue('standard_font_size_min'),
     'standard_line_height' => $form_state->getValue('standard_line_height'),
     'standard_font_weight' => $form_state->getValue('standard_font_weight'),
     'standard_font_style' => $form_state->getValue('standard_font_style'),
@@ -3912,6 +4168,7 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'small_opacity' => $form_state->getValue('small_opacity'),
     'small_font_size' => $form_state->getValue('small_font_size'),
     'small_font_size_unit' => $form_state->getValue('small_font_size_unit'),
+    'small_font_size_min' => $form_state->getValue('small_font_size_min'),
     'small_line_height' => $form_state->getValue('small_line_height'),
     'small_font_weight' => $form_state->getValue('small_font_weight'),
     'small_font_style' => $form_state->getValue('small_font_style'),
@@ -3924,12 +4181,53 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'lead_opacity' => $form_state->getValue('lead_opacity'),
     'lead_font_size' => $form_state->getValue('lead_font_size'),
     'lead_font_size_unit' => $form_state->getValue('lead_font_size_unit'),
+    'lead_font_size_min' => $form_state->getValue('lead_font_size_min'),
     'lead_line_height' => $form_state->getValue('lead_line_height'),
     'lead_font_weight' => $form_state->getValue('lead_font_weight'),
     'lead_font_style' => $form_state->getValue('lead_font_style'),
     'lead_margin_top' => $form_state->getValue('lead_margin_top'),
     'lead_margin_bottom' => $form_state->getValue('lead_margin_bottom'),
     'lead_margin_unit' => $form_state->getValue('lead_margin_unit'),
+
+    'deco_1_font_family' => $form_state->getValue('deco_1_font_family'),
+    'deco_1_color' => $form_state->getValue('deco_1_color'),
+    'deco_1_opacity' => $form_state->getValue('deco_1_opacity'),
+    'deco_1_font_size' => $form_state->getValue('deco_1_font_size'),
+    'deco_1_font_size_unit' => $form_state->getValue('deco_1_font_size_unit'),
+    'deco_1_font_size_min' => $form_state->getValue('deco_1_font_size_min'),
+    'deco_1_line_height' => $form_state->getValue('deco_1_line_height'),
+    'deco_1_font_weight' => $form_state->getValue('deco_1_font_weight'),
+    'deco_1_font_style' => $form_state->getValue('deco_1_font_style'),
+    'deco_1_margin_top' => $form_state->getValue('deco_1_margin_top'),
+    'deco_1_margin_bottom' => $form_state->getValue('deco_1_margin_bottom'),
+    'deco_1_margin_unit' => $form_state->getValue('deco_1_margin_unit'),
+
+    'deco_2_font_family' => $form_state->getValue('deco_2_font_family'),
+    'deco_2_color' => $form_state->getValue('deco_2_color'),
+    'deco_2_opacity' => $form_state->getValue('deco_2_opacity'),
+    'deco_2_font_size' => $form_state->getValue('deco_2_font_size'),
+    'deco_2_font_size_unit' => $form_state->getValue('deco_2_font_size_unit'),
+    'deco_2_font_size_min' => $form_state->getValue('deco_2_font_size_min'),
+    'deco_2_line_height' => $form_state->getValue('deco_2_line_height'),
+    'deco_2_font_weight' => $form_state->getValue('deco_2_font_weight'),
+    'deco_2_font_style' => $form_state->getValue('deco_2_font_style'),
+    'deco_2_margin_top' => $form_state->getValue('deco_2_margin_top'),
+    'deco_2_margin_bottom' => $form_state->getValue('deco_2_margin_bottom'),
+    'deco_2_margin_unit' => $form_state->getValue('deco_2_margin_unit'),
+
+    'deco_3_font_family' => $form_state->getValue('deco_3_font_family'),
+    'deco_3_color' => $form_state->getValue('deco_3_color'),
+    'deco_3_opacity' => $form_state->getValue('deco_3_opacity'),
+    'deco_3_font_size' => $form_state->getValue('deco_3_font_size'),
+    'deco_3_font_size_unit' => $form_state->getValue('deco_3_font_size_unit'),
+    'deco_3_font_size_min' => $form_state->getValue('deco_3_font_size_min'),
+    'deco_3_line_height' => $form_state->getValue('deco_3_line_height'),
+    'deco_3_font_weight' => $form_state->getValue('deco_3_font_weight'),
+    'deco_3_font_style' => $form_state->getValue('deco_3_font_style'),
+    'deco_3_margin_top' => $form_state->getValue('deco_3_margin_top'),
+    'deco_3_margin_bottom' => $form_state->getValue('deco_3_margin_bottom'),
+    'deco_3_margin_unit' => $form_state->getValue('deco_3_margin_unit'),
+
 
     'link_color' => $form_state->getValue('link_color'),
     'link_opacity' => $form_state->getValue('link_opacity'),
@@ -3954,6 +4252,14 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'button_padding_bottom' => $form_state->getValue('button_padding_bottom'),
     'button_padding_left' => $form_state->getValue('button_padding_left'),
     'button_padding_unit' => $form_state->getValue('button_padding_unit'),
+    'button_border_width_top' => $form_state->getValue('button_border_width_top'),
+    'button_border_width_right' => $form_state->getValue('button_border_width_right'),
+    'button_border_width_bottom' => $form_state->getValue('button_border_width_bottom'),
+    'button_border_width_left' => $form_state->getValue('button_border_width_left'),
+    'button_border_width_unit' => $form_state->getValue('button_border_width_unit'),
+    'button_border_radius' => $form_state->getValue('button_border_radius'),
+    'button_border_radius_unit' => $form_state->getValue('button_border_radius_unit'),
+
     'button_font_color_standard' => $form_state->getValue('button_font_color_standard'),
     'button_font_opacity_standard' => $form_state->getValue('button_font_opacity_standard'),
     'button_background_color_standard' => $form_state->getValue('button_background_color_standard'),
@@ -3972,9 +4278,6 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'button_background_opacity_active' => $form_state->getValue('button_background_opacity_active'),
     'button_border_color_active' => $form_state->getValue('button_border_color_active'),
     'button_border_opacity_active' => $form_state->getValue('button_border_opacity_active'),
-
-
-
     'button_font_color_inverted' => $form_state->getValue('button_font_color_inverted'),
     'button_font_opacity_inverted' => $form_state->getValue('button_font_opacity_inverted'),
     'button_background_color_inverted' => $form_state->getValue('button_background_color_inverted'),
@@ -3993,12 +4296,13 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'button_background_opacity_inverted_active' => $form_state->getValue('button_background_opacity_inverted_active'),
     'button_border_color_inverted_active' => $form_state->getValue('button_border_color_inverted_active'),
     'button_border_opacity_inverted_active' => $form_state->getValue('button_border_opacity_inverted_active'),
+
+
+
     'button_alternate_font_size' => $form_state->getValue('button_alternate_font_size'),
     'button_alternate_font_size_unit' => $form_state->getValue('button_alternate_font_size_unit'),
-
     'button_alternate_font_weight' => $form_state->getValue('button_alternate_font_weight'),
     'button_alternate_font_style' => $form_state->getValue('button_alternate_font_style'),
-
     'button_alternate_font_family' => $form_state->getValue('button_alternate_font_family'),
     'button_alternate_margin_top' => $form_state->getValue('button_alternate_margin_top'),
     'button_alternate_margin_unit' => $form_state->getValue('button_alternate_margin_unit'),
@@ -4010,6 +4314,13 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'button_alternate_padding_right' => $form_state->getValue('button_alternate_padding_right'),
     'button_alternate_padding_bottom' => $form_state->getValue('button_alternate_padding_bottom'),
     'button_alternate_padding_left' => $form_state->getValue('button_alternate_padding_left'),
+    'button_alternate_border_width_top' => $form_state->getValue('button_alternate_border_width_top'),
+    'button_alternate_border_width_right' => $form_state->getValue('button_alternate_border_width_right'),
+    'button_alternate_border_width_bottom' => $form_state->getValue('button_alternate_border_width_bottom'),
+    'button_alternate_border_width_left' => $form_state->getValue('button_alternate_border_width_left'),
+    'button_alternate_border_width_unit' => $form_state->getValue('button_alternate_border_width_unit'),
+    'button_alternate_border_radius' => $form_state->getValue('button_alternate_border_radius'),
+    'button_alternate_border_radius_unit' => $form_state->getValue('button_alternate_border_radius_unit'),
     'button_alternate_font_color_standard' => $form_state->getValue('button_alternate_font_color_standard'),
     'button_alternate_font_opacity_standard' => $form_state->getValue('button_alternate_font_opacity_standard'),
     'button_alternate_background_color_standard' => $form_state->getValue('button_alternate_background_color_standard'),
@@ -4172,5 +4483,11 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
 
 function iq_barrio_theme_rebuild()
 {
-  \Drupal::logger('iq_barrio')->notice('cache rebuild :)');
+//  \Drupal::logger('iq_barrio')->notice('cache rebuild :)');
 }
+
+
+function iq_barrio_ui_patterns_info_alter(array &$definitions) {
+  //    print_r( $definitions );
+    $definitions['yaml:rowoneone']->setLabel('blablablaba');
+  }

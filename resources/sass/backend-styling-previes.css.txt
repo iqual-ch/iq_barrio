@@ -102,6 +102,40 @@
     color:                            rgba({{small_color}},{{small_opacity}});
 }
 
+[data-drupal-selector="edit-iq-theme"] .styling-preview .deco_1{
+    font-size:                        {{deco_1_font_size}}{{deco_1_font_size_unit}};
+    line-height:                      {{deco_1_line_height}};
+    font-weight:                      {{deco_1_font_weight}};
+    font-style:                       {{deco_1_font_style}};
+    font-family:                      {{deco_1_font_family}};
+    margin-top:                       {{deco_1_margin_top}}{{deco_1_margin_unit}};
+    margin-bottom:                    {{deco_1_margin_bottom}}{{deco_1_margin_unit}};
+    color:                            rgba({{deco_1_color}},{{deco_1_opacity}});
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview .deco_2{
+    font-size:                        {{deco_2_font_size}}{{deco_2_font_size_unit}};
+    line-height:                      {{deco_2_line_height}};
+    font-weight:                      {{deco_2_font_weight}};
+    font-style:                       {{deco_2_font_style}};
+    font-family:                      {{deco_2_font_family}};
+    margin-top:                       {{deco_2_margin_top}}{{deco_2_margin_unit}};
+    margin-bottom:                    {{deco_2_margin_bottom}}{{deco_2_margin_unit}};
+    color:                            rgba({{deco_2_color}},{{deco_2_opacity}});
+}
+
+[data-drupal-selector="edit-iq-theme"] .styling-preview .deco_3{
+    font-size:                        {{deco_3_font_size}}{{deco_3_font_size_unit}};
+    line-height:                      {{deco_3_line_height}};
+    font-weight:                      {{deco_3_font_weight}};
+    font-style:                       {{deco_3_font_style}};
+    font-family:                      {{deco_3_font_family}};
+    margin-top:                       {{deco_3_margin_top}}{{deco_3_margin_unit}};
+    margin-bottom:                    {{deco_3_margin_bottom}}{{deco_3_margin_unit}};
+    color:                            rgba({{deco_3_color}},{{deco_3_opacity}});
+}
+
+
 [data-drupal-selector="edit-iq-theme"] .styling-preview a.preview-link-standard,
 [data-drupal-selector="edit-iq-theme"] .styling-preview a.preview-link-inline{
   color:                              rgba({{link_color}},{{link_opacity}});
@@ -123,7 +157,6 @@
     font-family:                      {{button_font_family}};
     font-weight:                      {{button_font_weight}};
     font-style:                       {{button_font_style}};
-    font-size:                        {{button_font_size}}{{button_font_size_unit}};;
     line-height:                      {{button_line_height}};
     margin-top:                       {{button_margin_top}}{{button_margin_unit}};
     margin-bottom:                    {{button_margin_bottom}}{{button_margin_unit}};
@@ -133,7 +166,10 @@
     padding-bottom:                   {{button_padding_bottom}}{{button_padding_unit}};
     padding-left:                     {{button_padding_left}}{{button_padding_unit}};
     padding-right:                    {{button_padding_right}}{{button_padding_unit}};
-    border:                           1px solid transparent;
+    border-width:                     {{button_border_width_top}}{{button_border_width_unit}} {{button_border_width_right}}{{button_border_width_unit}} {{button_border_width_bottom}}{{button_border_width_unit}} {{button_border_width_left}}{{button_border_width_unit}};
+    border-radius:                    {{button_border_radius}}{{button_border_radius_unit}};
+    border-style:                     solid;
+    font-size:                        {{button_font_size}}{{button_font_size_unit}};
 }
 
 [data-drupal-selector="edit-iq-theme"] .preview-button.standard,
@@ -167,7 +203,7 @@
 }
 
 [data-drupal-selector="edit-iq-theme"] .preview-inverted{
-    background-color:                 rgba({{color_page_background}},{{opacity_page_background}});
+    background-color:                 rgba({{color_page_background}},{{opacity_color_page_background}});
     filter:                           invert(100%);
     padding:                          20px;
     display:                          inline-block;
@@ -203,9 +239,9 @@
 
 [data-drupal-selector="edit-iq-theme"] .preview-inverted .preview-button.active,
 [data-drupal-selector="edit-iq-theme"] .preview-inverted .preview-button.inline:active{
-    color:                            rgba({{button_font_color_inverted_active}},{{button_font_opacity_inverted_active}})
-    background-color:                 rgba({{button_background_color_inverted_active}},{{button_background_opacity_inverted_active}})
-    border-color:                     rgba({{button_border_color_inverted_active}},{{button_border_opacity_inverted_active}})
+    color:                            rgba({{button_font_color_inverted_active}},{{button_font_opacity_inverted_active}});
+    background-color:                 rgba({{button_background_color_inverted_active}},{{button_background_opacity_inverted_active}});
+    border-color:                     rgba({{button_border_color_inverted_active}},{{button_border_opacity_inverted_active}});
 }
 
 
@@ -214,7 +250,6 @@
     font-family:                      {{button_alternate_font_family}};
     font-weight:                      {{button_alternate_font_weight}};
     font-style:                       {{button_alternate_font_style}};
-    font-size:                        {{button_alternate_font_size}}{{button_alternate_font_size_unit}};;
     line-height:                      {{button_alternate_line_height}};
     margin-top:                       {{button_alternate_margin_top}}{{button_alternate_margin_unit}};
     margin-bottom:                    {{button_alternate_margin_bottom}}{{button_alternate_margin_unit}};
@@ -224,7 +259,10 @@
     padding-bottom:                   {{button_alternate_padding_bottom}}{{button_alternate_padding_unit}};
     padding-left:                     {{button_alternate_padding_left}}{{button_alternate_padding_unit}};
     padding-right:                    {{button_alternate_padding_right}}{{button_alternate_padding_unit}};
-    border:                           1px solid transparent;
+    border-width:                     {{button_alternate_border_width_top}}{{button_alternate_border_width_unit}} {{button_alternate_border_width_right}}{{button_alternate_border_width_unit}} {{button_alternate_border_width_bottom}}{{button_alternate_border_width_unit}} {{button_alternate_border_width_left}}{{button_alternate_border_width_unit}};
+    border-radius:                    {{button_alternate_border_radius}}{{button_alternate_border_radius_unit}};
+    border-style:                     solid;
+    font-size:                        {{button_alternate_font_size}}{{button_alternate_font_size_unit}};
 }
 
 [data-drupal-selector="edit-iq-theme"] .button-alternate .preview-button.standard,

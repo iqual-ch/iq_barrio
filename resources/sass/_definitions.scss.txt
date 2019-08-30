@@ -99,6 +99,7 @@ $margin-bottom-h6:                    {{h6_margin_bottom}}{{h6_margin_unit}};
 
 /* Content */
 $font-size-standard:                  {{standard_font_size}}{{standard_font_size_unit}};
+$font-size-min-standard:              {{standard_font_size_min}}{{standard_font_size_unit}};
 $line-height-standard:                {{standard_line_height}};
 $font-weight-standard:                {{standard_font_weight}};
 $font-style-standard:                 {{standard_font_style}};
@@ -107,12 +108,8 @@ $font-family-standard:                {{standard_font_family}};
 $margin-top-standard:                 {{standard_margin_top}}{{standard_margin_unit}};
 $margin-bottom-standard:              {{standard_margin_bottom}}{{standard_margin_unit}};
 
-$color-link:                          rgba($color-{{link_color}},{{link_opacity}});
-$color-link-hover:                    rgba($color-{{link_color_hover}},{{link_opacity_hover}});
-$text-decoration-link:                {{link_text_decoration}};
-$text-decoration-link-hover:          {{link_text_decoration_hover}};
-
 $font-size-small:                     {{small_font_size}}{{small_font_size_unit}};
+$font-size-min-small:                 {{small_font_size_min}}{{small_font_size_unit}};
 $line-height-small:                   {{small_line_height}};
 $font-weight-small:                   {{small_font_weight}};
 $font-style-small:                    {{small_font_style}};
@@ -122,6 +119,7 @@ $margin-top-small:                    {{small_margin_top}}{{small_margin_unit}};
 $margin-bottom-small:                 {{small_margin_bottom}}{{small_margin_unit}};
 
 $font-size-lead:                      {{lead_font_size}}{{lead_font_size_unit}};
+$font-size-min-lead:                  {{lead_font_size_min}}{{lead_font_size_unit}};
 $line-height-lead:                    {{lead_line_height}};
 $font-weight-lead:                    {{lead_font_weight}};
 $font-style-lead:                     {{lead_font_style}};
@@ -130,11 +128,52 @@ $font-family-lead:                    {{lead_font_family}};
 $margin-top-lead:                     {{lead_margin_top}}{{lead_margin_unit}};
 $margin-bottom-lead:                  {{lead_margin_bottom}}{{lead_margin_unit}};
 
+$font-size-deco-1:                    {{deco_1_font_size}}{{deco_1_font_size_unit}};
+$font-size-min-deco-1:                {{deco_1_font_size_min}}{{deco_1_font_size_unit}};
+$line-height-deco-1:                  {{deco_1_line_height}};
+$font-weight-deco-1:                  {{deco_1_font_weight}};
+$font-style-deco-1:                   {{deco_1_font_style}};
+$color-deco-1:                        rgba($color-{{deco_1_color}},{{deco_1_opacity}});
+$font-family-deco-1:                  {{deco_1_font_family}};
+$margin-top-deco-1:                   {{deco_1_margin_top}}{{deco_1_margin_unit}};
+$margin-bottom-deco-1:                {{deco_1_margin_bottom}}{{deco_1_margin_unit}};
+
+$font-size-deco-2:                    {{deco_2_font_size}}{{deco_2_font_size_unit}};
+$font-size-min-deco-2:                {{deco_2_font_size_min}}{{deco_2_font_size_unit}};
+$line-height-deco-2:                  {{deco_2_line_height}};
+$font-weight-deco-2:                  {{deco_2_font_weight}};
+$font-style-deco-2:                   {{deco_2_font_style}};
+$color-deco-2:                        rgba($color-{{deco_2_color}},{{deco_2_opacity}});
+$font-family-deco-2:                  {{deco_2_font_family}};
+$margin-top-deco-2:                   {{deco_2_margin_top}}{{deco_2_margin_unit}};
+$margin-bottom-deco-2:                {{deco_2_margin_bottom}}{{deco_2_margin_unit}};
+
+$font-size-deco-3:                    {{deco_3_font_size}}{{deco_3_font_size_unit}};
+$font-size-min-deco-3:                {{deco_3_font_size_min}}{{deco_3_font_size_unit}};
+$line-height-deco-3:                  {{deco_3_line_height}};
+$font-weight-deco-3:                  {{deco_3_font_weight}};
+$font-style-deco-3:                   {{deco_3_font_style}};
+$color-deco-3:                        rgba($color-{{deco_3_color}},{{deco_3_opacity}});
+$font-family-deco-3:                  {{deco_3_font_family}};
+$margin-top-deco-3:                   {{deco_3_margin_top}}{{deco_3_margin_unit}};
+$margin-bottom-deco-3:                {{deco_3_margin_bottom}}{{deco_3_margin_unit}};
+
+
+
+$color-link:                          rgba($color-{{link_color}},{{link_opacity}});
+$color-link-hover:                    rgba($color-{{link_color_hover}},{{link_opacity_hover}});
+$text-decoration-link:                {{link_text_decoration}};
+$text-decoration-link-hover:          {{link_text_decoration_hover}};
+
 $font-size-buttons:                   {{button_font_size}}{{button_font_size_unit}};
 $line-height-buttons:                 {{standard_line_height}};
 $font-weight-buttons:                 {{button_font_weight}};
 $font-style-buttons:                  {{button_font_style}};
 $font-family-buttons:                 {{button_font_family}};
+$border-width-buttons:                {{button_border_width_top}}{{button_border_width_unit}} {{button_border_width_right}}{{button_border_width_unit}} {{button_border_width_bottom}}{{button_border_width_unit}} {{button_border_width_left}}{{button_border_width_unit}};
+$border-radius-buttons:               {{button_border_radius}}{{button_border_radius_unit}};
+
+
 $margin-buttons:                      {{button_margin_top}}{{button_margin_unit}} {{button_margin_right}}{{button_margin_unit}} {{button_margin_bottom}}{{button_margin_unit}} {{button_margin_left}}{{button_margin_unit}};
 $padding-buttons:                     {{button_padding_top}}{{button_padding_unit}} {{button_padding_right}}{{button_padding_unit}} {{button_padding_bottom}}{{button_padding_unit}} {{button_padding_left}}{{button_padding_unit}};
 $font-color-buttons:                  rgba($color-{{button_font_color_standard}},{{button_font_opacity_standard}});
@@ -163,6 +202,8 @@ $line-height-buttons-alternate:                 {{standard_line_height}};
 $font-weight-buttons-alternate:                 {{button_alternate_font_weight}};
 $font-style-buttons-alternate:                  {{button_alternate_font_style}};
 $font-family-buttons-alternate:                 {{button_alternate_font_family}};
+$border-width-buttons-alternate:                {{button_alternate_border_width_top}}{{button_alternate_border_width_unit}} {{button_alternate_border_width_right}}{{button_alternate_border_width_unit}} {{button_alternate_border_width_bottom}}{{button_alternate_border_width_unit}} {{button_alternate_border_width_left}}{{button_alternate_border_width_unit}};
+$border-radius-buttons-alternate:               {{button_alternate_border_radius}}{{button_alternate_border_radius_unit}};
 $margin-buttons-alternate:                      {{button_alternate_margin_top}}{{button_alternate_margin_unit}} {{button_alternate_margin_right}}{{button_alternate_margin_unit}} {{button_alternate_margin_bottom}}{{button_alternate_margin_unit}} {{button_alternate_margin_left}}{{button_alternate_margin_unit}};
 $padding-buttons-alternate:                     {{button_alternate_padding_top}}{{button_alternate_padding_unit}} {{button_alternate_padding_right}}{{button_alternate_padding_unit}} {{button_alternate_padding_bottom}}{{button_alternate_padding_unit}} {{button_alternate_padding_left}}{{button_alternate_padding_unit}};
 $font-color-buttons-alternate:                  rgba($color-{{button_alternate_font_color_standard}},{{button_alternate_font_opacity_standard}});
