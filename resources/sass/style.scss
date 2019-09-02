@@ -131,7 +131,7 @@ p, .standard {
   color: $color-small;
   margin-top: $margin-top-small;
   margin-bottom: $margin-bottom-small;
-  @include fluid-type(320px, 991px, $font-size-min-standard, $font-size-standard);
+  @include fluid-type(320px, 991px, $font-size-min-small, $font-size-small);
 }
 
 .deco-font-1{
