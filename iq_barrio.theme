@@ -531,8 +531,13 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     $font_family_value = theme_get_setting($tag . '_font_family') ? theme_get_setting($tag . '_font_family') : '000000';
     $color_value = theme_get_setting($tag . '_color') ? theme_get_setting($tag . '_color') : 'primary';
     $opacity_value = theme_get_setting($tag.'_opacity');
+
+    $color_inverted_value = theme_get_setting($tag . '_color_inverted') ? theme_get_setting($tag . '_color_inverted') : 'white';
+    $opacity_inverted_value = theme_get_setting($tag.'_opacity_inverted');
+
     $font_size_value = theme_get_setting($tag . '_font_size') ? theme_get_setting($tag . '_font_size') : '2.5';
     $font_size_unit_value = theme_get_setting($tag . '_font_size_unit') ? theme_get_setting($tag . '_font_size_unit') : 'rem';
+
 
     $font_size_min_value = theme_get_setting($tag . '_font_size_min') ? theme_get_setting($tag . '_font_size_min') : '2';
 
@@ -564,8 +569,32 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
       // ],
       '#title' => t('Opacity'),
       '#default_value' => $opacity_value,
+//      '#suffix' => '</div>'
+    ];
+
+
+    $form['typography']['headings'][$tag . '_color_inverted'] = [
+      '#type' => 'select',
+      '#title' => t('Inverted color'),
+      '#options' => $arr_colors,
+      '#default_value' => $color_inverted_value,
+
+    ];
+
+    $form['typography']['headings'][$tag . '_opacity_inverted'] = [
+      '#type' => 'textfield',
+      // '#attributes' => [
+      //   'min' => 0,
+      //   'max' => 1,
+      //   'step' => 0.01,
+      // ],
+      '#title' => t('Opacity'),
+      '#default_value' => $opacity_inverted_value,
       '#suffix' => '</div>'
     ];
+
+
+
 
 
 
@@ -697,6 +726,10 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     $color_value = theme_get_setting($tag . '_color') ? theme_get_setting($tag . '_color') : 'grey3';
     $opacity_value = theme_get_setting($tag.'_opacity');
 
+    $color_inverted_value = theme_get_setting($tag . '_color_inverted') ? theme_get_setting($tag . '_color_inverted') : 'white';
+    $opacity_inverted_value = theme_get_setting($tag.'_opacity_inverted');
+
+
     $font_size_min_value = theme_get_setting($tag . '_font_size_min') ? theme_get_setting($tag . '_font_size_min') : '1';
     $font_size_value = theme_get_setting($tag . '_font_size') ? theme_get_setting($tag . '_font_size') : '1.5';
     $font_size_unit_value = theme_get_setting($tag . '_font_size_unit') ? theme_get_setting($tag . '_font_size_unit') : 'rem';
@@ -726,8 +759,34 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
       // ],
       '#title' => t('Opacity'),
       '#default_value' => $opacity_value,
-      '#suffix' => '</div>'
+
     ];
+
+
+
+
+  $form['typography']['text_elements'][$tag . '_color_inverted'] = [
+    '#type' => 'select',
+    '#title' => t('Inverted color'),
+    '#options' => $arr_colors,
+    '#default_value' => $color_inverted_value,
+
+  ];
+
+  $form['typography']['text_elements'][$tag . '_opacity_inverted'] = [
+    '#type' => 'textfield',
+    // '#attributes' => [
+    //   'min' => 0,
+    //   'max' => 1,
+    //   'step' => 0.01,
+    // ],
+    '#title' => t('Opacity'),
+    '#default_value' => $opacity_inverted_value,
+    '#suffix' => '</div>'
+  ];
+
+
+
 
     $form['typography']['text_elements'][$tag . '_font_family'] = [
       '#type' => 'select',
@@ -836,25 +895,25 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
 
 
 
-  $form['typography']['text_elements']['color_text_inverted'] = [
-    '#type' => 'select',
-    '#title' => t('Font color'),
-    '#options' => $arr_colors,
-    '#default_value' => theme_get_setting('color_text_inverted') ? theme_get_setting('color_text_inverted') : 'white',
-    '#prefix' => '<div class="styling-row"><div class="styling-input"><div class="inline-input-holder"><strong>Inverted text</strong>',
-  ];
+  // $form['typography']['text_elements']['color_text_inverted'] = [
+  //   '#type' => 'select',
+  //   '#title' => t('Font color'),
+  //   '#options' => $arr_colors,
+  //   '#default_value' => theme_get_setting('color_text_inverted') ? theme_get_setting('color_text_inverted') : 'white',
+  //   '#prefix' => '<div class="styling-row"><div class="styling-input"><div class="inline-input-holder"><strong>Inverted text</strong>',
+  // ];
 
-  $form['typography']['text_elements']['opacity_text_inverted'] = [
-    '#type' => 'textfield',
-    // '#attributes' => [
-    //   'min' => 0,
-    //   'max' => 1,
-    //   'step' => 0.01,
-    // ],
-    '#title' => t('Opacity'),
-    '#default_value' => theme_get_setting('opacity_text_inverted'),
-    '#suffix' => '</div></div></div>'
-  ];
+  // $form['typography']['text_elements']['opacity_text_inverted'] = [
+  //   '#type' => 'textfield',
+  //   // '#attributes' => [
+  //   //   'min' => 0,
+  //   //   'max' => 1,
+  //   //   'step' => 0.01,
+  //   // ],
+  //   '#title' => t('Opacity'),
+  //   '#default_value' => theme_get_setting('opacity_text_inverted'),
+  //   '#suffix' => '</div></div></div>'
+  // ];
 
 
 
@@ -865,11 +924,15 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
 
   $link_color_value = theme_get_setting('link_color') ? theme_get_setting('link_color') : 'primary';
   $link_opacity_value = theme_get_setting('link_opacity');
+  $link_color_inverted_value = theme_get_setting('link_color_inverted') ? theme_get_setting('link_color_inverted') : 'white';
+  $link_opacity_inverted_value = theme_get_setting('link_opacity_inverted');
+
   $link_text_decoration_value = theme_get_setting('link_text_decoration') ? theme_get_setting('link_text_decoration') : 'underline';
 
   $link_color_hover_value = theme_get_setting('link_color_hover') ? theme_get_setting('link_color_hover') : 'primary';
   $link_opacity_hover_value = theme_get_setting('link_opacity_hover');
-
+  $link_color_hover_inverted_value = theme_get_setting('link_color_hover_inverted') ? theme_get_setting('link_color_hover_inverted') : 'white';
+  $link_opacity_hover_inverted_value = theme_get_setting('link_opacity_hover_inverted');
 
   $link_text_decoration_hover_value = theme_get_setting('link_text_decoration_hover') ? theme_get_setting('link_text_decoration_hover') : 'underline';
 
@@ -892,6 +955,29 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '#title' => t('Opacity'),
     '#default_value' => $link_opacity_value,
   ];
+
+
+
+  $form['typography']['links']['link_color_inverted'] = [
+    '#type' => 'select',
+    '#title' => t('Inverted color'),
+    '#options' => $arr_colors,
+    '#default_value' => $link_color_inverted_value,
+
+  ];
+
+  $form['typography']['links']['link_opacity_inverted'] = [
+    '#type' => 'textfield',
+    // '#attributes' => [
+    //   'min' => 0,
+    //   'max' => 1,
+    //   'step' => 0.01,
+    // ],
+    '#title' => t('Opacity'),
+    '#default_value' => $link_opacity_inverted_value,
+
+  ];
+
 
   $form['typography']['links']['link_text_decoration'] = [
     '#type' => 'select',
@@ -928,6 +1014,26 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
     '#title' => t('Opacity'),
     '#default_value' => $link_opacity_hover_value,
   ];
+
+  $form['typography']['links']['link_color_hover_inverted'] = [
+    '#type' => 'select',
+    '#title' => t('Inverted color'),
+    '#options' => $arr_colors,
+    '#default_value' => $link_color_hover_inverted_value,
+  ];
+
+  $form['typography']['links']['link_opacity_hover_inverted'] = [
+    '#type' => 'textfield',
+    // '#attributes' => [
+    //   'min' => 0,
+    //   'max' => 1,
+    //   'step' => 0.01,
+    // ],
+    '#title' => t('Opacity'),
+    '#default_value' => $link_opacity_hover_inverted_value,
+
+  ];
+
 
 
   $form['typography']['links']['link_text_decoration_hover'] = [
@@ -4075,6 +4181,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'h1_font_family' => $form_state->getValue('h1_font_family'),
     'h1_color' => $form_state->getValue('h1_color'),
     'h1_opacity' => $form_state->getValue('h1_opacity'),
+    'h1_color_inverted' => $form_state->getValue('h1_color_inverted'),
+    'h1_opacity_inverted' => $form_state->getValue('h1_opacity_inverted'),
     'h1_font_size' => $form_state->getValue('h1_font_size'),
     'h1_font_size_unit' => $form_state->getValue('h1_font_size_unit'),
     'h1_font_size_min' => $form_state->getValue('h1_font_size_min'),
@@ -4088,6 +4196,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'h2_font_family' => $form_state->getValue('h2_font_family'),
     'h2_color' => $form_state->getValue('h2_color'),
     'h2_opacity' => $form_state->getValue('h2_opacity'),
+    'h2_color_inverted' => $form_state->getValue('h2_color_inverted'),
+    'h2_opacity_inverted' => $form_state->getValue('h2_opacity_inverted'),
     'h2_font_size' => $form_state->getValue('h2_font_size'),
     'h2_font_size_unit' => $form_state->getValue('h2_font_size_unit'),
     'h2_font_size_min' => $form_state->getValue('h2_font_size_min'),
@@ -4101,6 +4211,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'h3_font_family' => $form_state->getValue('h3_font_family'),
     'h3_color' => $form_state->getValue('h3_color'),
     'h3_opacity' => $form_state->getValue('h3_opacity'),
+    'h3_color_inverted' => $form_state->getValue('h3_color_inverted'),
+    'h3_opacity_inverted' => $form_state->getValue('h3_opacity_inverted'),
     'h3_font_size' => $form_state->getValue('h3_font_size'),
     'h3_font_size_unit' => $form_state->getValue('h3_font_size_unit'),
     'h3_font_size_min' => $form_state->getValue('h3_font_size_min'),
@@ -4114,6 +4226,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'h4_font_family' => $form_state->getValue('h4_font_family'),
     'h4_color' => $form_state->getValue('h4_color'),
     'h4_opacity' => $form_state->getValue('h4_opacity'),
+    'h4_color_inverted' => $form_state->getValue('h4_color_inverted'),
+    'h4_opacity_inverted' => $form_state->getValue('h4_opacity_inverted'),
     'h4_font_size' => $form_state->getValue('h4_font_size'),
     'h4_font_size_unit' => $form_state->getValue('h4_font_size_unit'),
     'h4_font_size_min' => $form_state->getValue('h4_font_size_min'),
@@ -4127,6 +4241,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'h5_font_family' => $form_state->getValue('h5_font_family'),
     'h5_color' => $form_state->getValue('h5_color'),
     'h5_opacity' => $form_state->getValue('h5_opacity'),
+    'h5_color_inverted' => $form_state->getValue('h5_color_inverted'),
+    'h5_opacity_inverted' => $form_state->getValue('h5_opacity_inverted'),
     'h5_font_size' => $form_state->getValue('h5_font_size'),
     'h5_font_size_unit' => $form_state->getValue('h5_font_size_unit'),
     'h5_font_size_min' => $form_state->getValue('h5_font_size_min'),
@@ -4140,6 +4256,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'h6_font_family' => $form_state->getValue('h6_font_family'),
     'h6_color' => $form_state->getValue('h6_color'),
     'h6_opacity' => $form_state->getValue('h6_opacity'),
+    'h6_color_inverted' => $form_state->getValue('h6_color_inverted'),
+    'h6_opacity_inverted' => $form_state->getValue('h6_opacity_inverted'),
     'h6_font_size' => $form_state->getValue('h6_font_size'),
     'h6_font_size_unit' => $form_state->getValue('h6_font_size_unit'),
     'h6_font_size_min' => $form_state->getValue('h6_font_size_min'),
@@ -4153,6 +4271,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'standard_font_family' => $form_state->getValue('standard_font_family'),
     'standard_color' => $form_state->getValue('standard_color'),
     'standard_opacity' => $form_state->getValue('standard_opacity'),
+    'standard_color_inverted' => $form_state->getValue('standard_color_inverted'),
+    'standard_opacity_inverted' => $form_state->getValue('standard_opacity_inverted'),
     'standard_font_size' => $form_state->getValue('standard_font_size'),
     'standard_font_size_unit' => $form_state->getValue('standard_font_size_unit'),
     'standard_font_size_min' => $form_state->getValue('standard_font_size_min'),
@@ -4166,6 +4286,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'small_font_family' => $form_state->getValue('small_font_family'),
     'small_color' => $form_state->getValue('small_color'),
     'small_opacity' => $form_state->getValue('small_opacity'),
+    'small_color_inverted' => $form_state->getValue('small_color_inverted'),
+    'small_opacity_inverted' => $form_state->getValue('small_opacity_inverted'),
     'small_font_size' => $form_state->getValue('small_font_size'),
     'small_font_size_unit' => $form_state->getValue('small_font_size_unit'),
     'small_font_size_min' => $form_state->getValue('small_font_size_min'),
@@ -4178,6 +4300,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
 
     'lead_font_family' => $form_state->getValue('lead_font_family'),
     'lead_color' => $form_state->getValue('lead_color'),
+    'lead_opacity_inverted' => $form_state->getValue('lead_opacity_inverted'),
+    'lead_color_inverted' => $form_state->getValue('lead_color_inverted'),
     'lead_opacity' => $form_state->getValue('lead_opacity'),
     'lead_font_size' => $form_state->getValue('lead_font_size'),
     'lead_font_size_unit' => $form_state->getValue('lead_font_size_unit'),
@@ -4192,6 +4316,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'deco_1_font_family' => $form_state->getValue('deco_1_font_family'),
     'deco_1_color' => $form_state->getValue('deco_1_color'),
     'deco_1_opacity' => $form_state->getValue('deco_1_opacity'),
+    'deco_1_color_inverted' => $form_state->getValue('deco_1_color_inverted'),
+    'deco_1_opacity_inverted' => $form_state->getValue('deco_1_opacity_inverted'),
     'deco_1_font_size' => $form_state->getValue('deco_1_font_size'),
     'deco_1_font_size_unit' => $form_state->getValue('deco_1_font_size_unit'),
     'deco_1_font_size_min' => $form_state->getValue('deco_1_font_size_min'),
@@ -4205,6 +4331,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'deco_2_font_family' => $form_state->getValue('deco_2_font_family'),
     'deco_2_color' => $form_state->getValue('deco_2_color'),
     'deco_2_opacity' => $form_state->getValue('deco_2_opacity'),
+    'deco_2_color_inverted' => $form_state->getValue('deco_2_color_inverted'),
+    'deco_2_opacity_inverted' => $form_state->getValue('deco_2_opacity_inverted'),
     'deco_2_font_size' => $form_state->getValue('deco_2_font_size'),
     'deco_2_font_size_unit' => $form_state->getValue('deco_2_font_size_unit'),
     'deco_2_font_size_min' => $form_state->getValue('deco_2_font_size_min'),
@@ -4218,6 +4346,8 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
     'deco_3_font_family' => $form_state->getValue('deco_3_font_family'),
     'deco_3_color' => $form_state->getValue('deco_3_color'),
     'deco_3_opacity' => $form_state->getValue('deco_3_opacity'),
+    'deco_3_color_inverted' => $form_state->getValue('deco_3_color_inverted'),
+    'deco_3_opacity_inverted' => $form_state->getValue('deco_3_opacity_inverted'),
     'deco_3_font_size' => $form_state->getValue('deco_3_font_size'),
     'deco_3_font_size_unit' => $form_state->getValue('deco_3_font_size_unit'),
     'deco_3_font_size_min' => $form_state->getValue('deco_3_font_size_min'),
@@ -4231,11 +4361,15 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
 
     'link_color' => $form_state->getValue('link_color'),
     'link_opacity' => $form_state->getValue('link_opacity'),
+    'link_color_inverted' => $form_state->getValue('link_color_inverted'),
+    'link_opacity_inverted' => $form_state->getValue('link_opacity_inverted'),
     'link_text_decoration' => $form_state->getValue('link_text_decoration'),
+
     'link_color_hover' => $form_state->getValue('link_color_hover'),
     'link_opacity_hover' => $form_state->getValue('link_opacity_hover'),
+    'link_color_hover_inverted' => $form_state->getValue('link_color_hover_inverted'),
+    'link_opacity_hover_inverted' => $form_state->getValue('link_opacity_hover_inverted'),
     'link_text_decoration_hover' => $form_state->getValue('link_text_decoration_hover'),
-
 
     'button_font_family' => $form_state->getValue('button_font_family'),
     'button_font_weight' => $form_state->getValue('button_font_weight'),
