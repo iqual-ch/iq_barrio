@@ -389,7 +389,7 @@
     border-bottom:  1px solid #999;
     padding:        10px;
     background:     rgba({{color_page_background_header}},{{opacity_color_page_background_header}});
-    color:          rgba({{color_page_font_header}},{{opacitycolor_page_font_header}});
+    color:          rgba({{color_page_font_header}},{{opacity_color_page_font_header}});
     height:         100px;
     position:       relative;
     z-index:        2;
