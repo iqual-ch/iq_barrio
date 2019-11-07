@@ -1,0 +1,49 @@
+collapsible:
+  label: Collapsible
+  description: Collapsible element (accordion, tabs)
+  type: row
+  category: Composite
+  icon: fas fa-bars
+  pagedesigner: 1
+  weight: 1000
+  fields:
+    title:
+      type: html
+      label: Title of the collapsible
+      description: Set a title of the collapsible.
+      preview: Collapsible title
+    effect:
+      type: select
+      label: Type
+      description: Type of collapsible
+      options:
+        accordion: Accordion
+        tabs: Tabbed
+    iconopen:
+      type: fontawesome
+      label: The icon if active
+    iconclosed:
+      type: fontawesome
+      label: The icon if closed
+    column0:
+      type: cell
+      label: column0
+  styles:
+    groups:
+      - general
+      - dimension
+      - typography
+      - decorations
+      - extra
+      - flex
+  libraries:
+    - collapsible:
+        js:
+          collapsible.js: {}
+        css:
+          component:
+            collapsible.css: {}
+        dependencies:
+          - core/drupal
+          - core/jquery.ui.accordion
+          - core/jquery.ui.tabs

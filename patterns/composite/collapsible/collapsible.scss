@@ -1,0 +1,170 @@
+@import '../../../resources/sass/definitions';
+#page .iq-collapsible {
+  &.ui-widget{
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: inherit;
+  }
+
+  .ui-accordion-header{
+    padding: 0;
+    margin: 0;
+  }
+  .iq-collapsible-title {
+    width: 100%;
+    display: flex;
+    border-radius: 0;
+    padding: $padding-base * 0.5;
+    border: none;
+    font-size: $font-size-standard;
+    font-weight: $font-weight-standard;
+    font-style: $font-style-standard;
+    font-family: $font-family-standard;
+    margin-bottom: 1px;
+    > *:first-child{
+      margin-top: 0;
+    }
+    > *:last-child{
+      margin-bottom: 0;
+    }
+
+
+    &.ui-state-default {
+      cursor: pointer;
+      color: $tab-font-color;
+      background-color: $tab-color;
+      *{
+        color: $tab-font-color;
+      }
+    }
+    &.ui-state-active {
+      cursor: pointer;
+      color: $tab-font-color-active;
+      background-color: $tab-color-active;
+      *{
+        color: $tab-font-color-active;
+      }
+    }
+    .iq-collapsible-icon-open,
+    .iq-collapsible-icon-closed {
+      margin-left: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+      position: absolute;
+      right: $padding-right-base * 0.5;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 1;
+      transition: $transition-default;
+    }
+    &.ui-accordion-header-collapsed .iq-collapsible-icon-open {
+      //display: none;
+      opacity: 0;
+    }
+    &.ui-state-active .iq-collapsible-icon-closed {
+      //display: none;
+      opacity: 0;
+    }
+  }
+  .ui-accordion-content{
+    border: $border-width-base solid $border-color-base;
+    border-radius: 0;
+    padding: $padding-base * 0.5;
+    margin: 0;
+    background: transparent;
+    overflow: unset;
+
+    > *:first-child{
+      margin-top: 0;
+    }
+    > *:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+/* Tabbed content (jquery.ui.tabs) (60-tab.twig.html pattern --> 60-tab.sass) */
+@import '../../../resources/sass/definitions';
+
+
+#page .iq-tab-element.ui-widget.ui-widget-content {
+    //margin: $margin-top-base 0 $margin-bottom-base;
+    margin-bottom: $base-margin-bottom;
+    font-family: inherit;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
+
+    .iq-tab-list {
+        margin: 0;
+        list-style: none;
+        line-height: 20px;
+        border-radius: 0;
+        border: none;
+        border-bottom: $border-width-base solid $border-color-base;
+        z-index: 2;
+        position: relative;
+
+        &:after {
+            content: "";
+            display: table;
+            border-collapse: collapse;
+            clear: both;
+        }
+        &.ui-tabs-nav {
+            padding:0;
+            background: none;
+            border-color:  $border-color-base;
+        }
+        .iq-tab-title {
+            float: left;
+            position: relative;
+            border: none;
+            border-radius: $border-radius-base;
+            background: $tab-color;
+            margin: 0 $margin-right-base * 0.5 0 0;
+            &.ui-state-active,
+            &:hover{
+                margin-bottom: 0;
+                padding-bottom: 0;
+                background: $tab-color-active;
+                a {
+                    color: $tab-font-color-active;
+                }
+            }
+            a {
+                float: left;
+                color: $tab-font-color;
+                padding: 0 $padding-right-base 0 $padding-left-base;
+                cursor: pointer;
+                line-height: $padding-top-base * 1.5;
+                font-size: $font-size-lead;
+                font-weight: $font-weight-lead;
+                font-style: $font-style-lead;
+                font-family: $font-family-lead;
+                *:first-child{
+                  margin-top: 0;
+                }
+                *:first-child{
+                  margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .iq-tab-content {
+        display: block;
+        border: none;
+        background: none;
+        &.ui-tabs-panel {
+            border-top:none;
+            margin-top: -1.5 * $padding-top-base;
+            padding: $padding-top-base * 2 0 0 0;
+        }
+    }
+}
+
+.iq-collapsible .ui-widget-content  a{
+  color: inherit;
+}

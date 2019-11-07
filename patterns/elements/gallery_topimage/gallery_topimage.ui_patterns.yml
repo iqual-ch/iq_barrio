@@ -1,0 +1,13 @@
+gallery_topimage:
+  label: Gallery (Top image)
+  description: Insert a gallery
+  type: component
+  category: Element
+  icon: fas fa-images
+  pagedesigner: 1
+  autorender: false
+  fields:
+    images:
+      type: gallery
+      label: The gallery
+      preview: []

@@ -1,0 +1,22 @@
+trustelement:
+  label: Trust element
+  description: Insert a trust element.
+  category: Element
+  icon: far fa-handshake
+  pagedesigner: 1
+  type: component
+  fields:
+    icon:
+      type: fontawesome
+      label: Choose either an icon...
+    text:
+      type: text
+      label: ... or enter a text
+    content:
+      type: html
+      label: The content of the tab.
+  libraries:
+    - trustelement:
+        css:
+          component:
+            trustelement.css: {}

@@ -1,0 +1,45 @@
+@import '../../../resources/sass/definitions';
+
+.iq-text{
+  &.inverted{
+    *{
+      color: $color-standard-inverted;
+    }
+  }
+
+  &.lead{
+    &.inverted{
+      *{
+        color: $color-lead-inverted;
+      }
+    }
+    p{
+      font-size: $font-size-lead;
+      line-height: $line-height-lead;
+      font-weight: $font-weight-lead;
+      font-style: $font-style-lead;
+      font-family: $font-family-lead;
+      color: $color-lead;
+      margin-top: $margin-top-lead;
+      margin-bottom: $margin-bottom-lead;
+    }
+  }
+
+  &.small{
+    &.inverted{
+      *{
+        color: $color-small-inverted;
+      }
+    }
+    p{
+      font-size: $font-size-small;
+      line-height: $line-height-small;
+      font-weight: $font-weight-small;
+      font-style: $font-style-small;
+      font-family: $font-family-small;
+      color: $color-small;
+      margin-top: $margin-top-small;
+      margin-bottom: $margin-bottom-small;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+search:
+  label: Search bar
+  description: Insert a search bar.
+  category: Element
+  icon: fas fa-search
+  pagedesigner: 1
+  type: component
+  fields:
+    href:
+      type: link
+      label: The link
+    target:
+      type: target
+      label: The link target
+    placeholder:
+      type: text
+      label: Placeholder
+    name:
+      type: text
+      label: Input field name
+    alignment:
+      type: select
+      label: Alignment
+      preview: center
+      options:
+        center: Center
+        left: Left
+        right: Right
+    submit_icon:
+      type: fontawesome
+      label: The submit icon
+    cancel_icon:
+      type: fontawesome
+      label: The cancel icon
+    input_visibility:
+      type: select
+      label: Initially show input field
+      options:
+        show_input: Yes
+        hide_input: No
+    icon_position:
+      type: select
+      label: Icon position
+      preview: left
+      options:
+        left: Left
+        right: Right
+  libraries:
+    - search:
+        css:
+          component:
+            search.css: {}
+        js:
+          search.js: {}

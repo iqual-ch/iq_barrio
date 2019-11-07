@@ -1,0 +1,85 @@
+rowoneone:
+  label: One column row
+  description: A row with one columns.
+  type: row
+  category: Rows
+  icon: fas fa-columns
+  pagedesigner: 1
+  weight: 100
+  styles:
+    groups:
+      - general
+      - dimension
+      - typography
+      - decorations
+      - extra
+      - flex
+  classes:
+    fullwidth:
+      label: "Full width"
+      description: "Use full browser width"
+      responsive: true
+    nogutter:
+      label: "No gutters"
+      description: "No margins around columns"
+      responsive: true
+    noindent:
+      label: "No indent"
+      description: "Prevent children from having left and right padding"
+      responsive: true
+    hidden:
+      label: "Hide row"
+      description: "Hide row"
+      responsive: true
+
+  styling_options:
+    background_color:
+      label: "Background color"
+      options:
+        background-color-primary: "Primary color"
+        background-color-secondary: "Secondary color"
+        background-color-tertiary: "Tertiary color"
+        background-color-quaternary: "Quaternary color"
+        background-color-grey1: "Grey 1"
+        background-color-grey2: "Grey 2"
+        background-color-grey3: "Grey 3"
+        background-color-grey4: "Grey 4"
+        background-color-grey5: "Grey 5"
+        background-color-black: "Black"
+        background-color-white: "White"
+    font_color:
+      label: "Font color"
+      options:
+        font-color-primary: "Primary color"
+        font-color-secondary: "Secondary color"
+        font-color-tertiary: "Tertiary color"
+        font-color-quaternary: "Quaternary color"
+        font-color-grey1: "Grey 1"
+        font-color-grey2: "Grey 2"
+        font-color-grey3: "Grey 3"
+        font-color-grey4: "Grey 4"
+        font-color-grey5: "Grey 5"
+        font-color-black: "Black"
+        font-color-white: "White"
+
+    top_border:
+      label: "Top border decoration"
+      options:
+        angeled-top-2:  "Angeled (2 deg)"
+        angeled-top-4:  "Angeled (4 deg)"
+        angeled-top-reverse-2:  "Reverse Angeled (2 deg)"
+        angeled-top-reverse-4:  "ReverseAngeled (4 deg)"
+#        ramped-top: "Ramp"
+    bottom_border:
+      label: "Bottom border decoration"
+      options:
+        angeled-bottom-2:  "Angeled (2 deg)"
+        angeled-bottom-4:  "Angeled (4 deg)"
+        angeled-bottom-reverse-2:  "Reverse Angeled (2 deg)"
+        angeled-bottom-reverse-4:  "Reverse Angeled (4 deg)"
+#        ramped-bottom: "Ramp"
+
+  fields:
+    column0:
+      type: cell
+      label: column0

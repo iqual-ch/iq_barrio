@@ -1,0 +1,46 @@
+icon:
+  label: Icon
+  description: Insert an icon.
+  category: Element
+  icon: fab fa-font-awesome
+  pagedesigner: 1
+  type: component
+  fields:
+    fa:
+      type: fontawesome
+      label: The icon
+    href:
+      type: link
+      label: The link target url
+      description: The target page or an external url starting with http(s)://
+    title:
+      type: text
+      label: The link title text
+    target:
+      type: target
+      label: The link target
+    alignment:
+      type: select
+      label: Alignment
+      preview: center
+      options:
+        center: Center
+        left: Left
+        right: Right
+  libraries:
+    - icon:
+        css:
+          component:
+            icon.css: {}
+
+  classes:
+    alternate:
+      label: "Alternate icon"
+      description: "Alternate icon style"
+    inverted:
+      label: "Inverted"
+      description: "Invert icon color"
+
+  styles:
+    properties:
+      - font-size

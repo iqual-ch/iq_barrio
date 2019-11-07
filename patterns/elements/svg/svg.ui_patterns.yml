@@ -1,0 +1,48 @@
+svg:
+  label: SVG
+  description: Insert an svg.
+  category: Element
+  icon: fas fa-draw-polygon
+  pagedesigner: 1
+  type: component
+  fields:
+    svg_file:
+      type: svg
+      label: The SVG file
+    svg_title:
+      type: text
+      label: The svg title text
+    svg_alt:
+      type: text
+      label: The svg alt text
+    href:
+      type: link
+      label: The link target url
+      description: The target page or an external url starting with http(s)://
+    title_link:
+      type: text
+      label: The link title text
+    link_target:
+      type: target
+      label: Open link in new window
+    # parent_class:
+    #   type: text
+    #   label: Class name
+  styles:
+    properties:
+      - width
+  relations:
+    svg_file:
+      svg_alt:
+        source_key: alt
+  #      target_key: key
+        override: true
+      svg_title:
+        source_key: title
+  #      target_key: key
+        override: true
+  libraries:
+    - svg:
+        css:
+          component:
+            svg.css: {}

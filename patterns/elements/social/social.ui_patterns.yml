@@ -1,0 +1,50 @@
+social:
+  label: Social icons
+  description: Insert social icons.
+  category: Element
+  icon: fas fa-share-alt
+  pagedesigner: 1
+  type: component
+  fields:
+    href_facebook:
+      type: link
+      label: The Facebook link
+    title_facebook:
+      type: text
+      label: The Facebook link title text
+    href_twitter:
+      type: link
+      label: The Twitter link
+    title_twitter:
+      type: text
+      label: The Twitter link title text
+    href_linkedin:
+      type: link
+      label: The LinkedIn link
+    title_linkedin:
+      type: text
+      label: The LinkedIn link title text
+    href_youtube:
+      type: link
+      label: The Youtube link
+    title_youtube:
+      type: text
+      label: The Youtube link title text
+    href_instagram:
+      type: link
+      label: The Instagram link
+    title_instagram:
+      type: text
+      label: The Instagram link title text
+  classes:
+    round-icons:
+      label: "Round icons"
+      description: "Round Icons"
+    default-colors:
+      label: "Default colors"
+      description: "Use each network's default color"
+  libraries:
+    - social:
+        css:
+          component:
+            social.css: {}

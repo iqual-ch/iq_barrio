@@ -1,0 +1,53 @@
+anchornavigation:
+  label: Anchor navigation
+  description: Insert an anchor navigation.
+  category: Element
+  icon: fas fa-list-alt
+  pagedesigner: 1
+  type: row
+
+  fields:
+    alignment:
+      type: select
+      label: Navigation alignment
+      preview: top
+      options:
+        top: Horizontal, top
+        bottom: Horizontal, bottom
+        left: Vertical, left
+        right: Vertical, right
+    position:
+      type: select
+      label: Position
+      preview: sticky
+      options:
+        sticky: Sticky
+        fixed: Fixed
+    icon:
+      type: select
+      label: Show icon
+      preview: 1
+      options:
+        1: Yes
+        0: No
+    icon_position:
+      type: select
+      label: Icon position / Link alignment
+      preview: left
+      options:
+        left: Left
+        right: Right
+
+  classes:
+    fullwidth:
+      label: "Fullwidth"
+      description: "Use full browser width to show horizontal navigation bar"
+      responsive: false
+
+  libraries:
+    - anchornavigation:
+        css:
+          component:
+            anchornavigation.css: {}
+        js:
+          anchornavigation.js: {}

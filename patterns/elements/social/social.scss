@@ -1,0 +1,77 @@
+@import '../../../resources/sass/definitions';
+
+
+.iq-social-icons{
+  font-size: 0;
+  &.round-icons{
+    a{
+      width: 32px;
+      height: 32px;
+      display: inline-block;
+      border-radius: 50%;
+      line-height: 32px;
+      text-align: center;
+      background-color: $social-icons-color;
+      color: $color-text-inverted
+
+    }
+  }
+  &.default-colors{
+    .icon-facebook{
+      color: #3b5999;
+    }
+    .icon-twitter{
+      color: #55acee;
+    }
+    .icon-linkedin{
+      color: #0077B5;
+    }
+    .icon-youtube{
+      color: #FE0000;
+    }
+    .icon-instagram{
+      color: #C13584;
+    }
+
+
+    &.round-icons{
+      .icon-facebook{
+        background-color: #3b5999;
+        *{
+          color: $color-white;
+        }
+      }
+      .icon-twitter{
+        background-color: #55acee;
+        *{
+          color: $color-white;
+        }
+      }
+      .icon-linkedin{
+        background-color: #0077B5;
+        *{
+          color: $color-white;
+        }
+      }
+      .icon-youtube{
+        background-color: $color-white;
+        *{
+          color: #FE0000;
+        }
+      }
+      .icon-instagram{
+        background: #d6249f;
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+        *{
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  a{
+    color: $social-icons-color;
+    font-size: 16px;
+    margin-right: $margin-right-base * 0.5;
+  }
+}

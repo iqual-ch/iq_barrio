@@ -1,0 +1,110 @@
+slider:
+  label: Slider
+  description: A slider container.
+  type: row
+  category: Composite
+  icon: fas fa-stream
+  pagedesigner: 1
+  weight: 1000
+  styles:
+    groups:
+      - general
+      - dimension
+      - typography
+      - decorations
+      - extra
+      - flex
+  classes:
+    fullwidth:
+      label: "Full width"
+      description: "Use full browser width"
+      responsive: true
+    fullheight:
+      label: "Full height"
+      description: "Use full browser height"
+      responsive: true
+    nogutter:
+      label: "No gutters"
+      description: "No margins around columns"
+      responsive: true
+    noindent:
+      label: "No indent"
+      description: "Prevent children from having left and right padding"
+      responsive: true
+    hidden:
+      label: "Hide row"
+      description: "Hide row"
+      responsive: true
+    outside-controls:
+      label: "Outside controls"
+      description: "Place controls outside slider"
+      responsive: true
+  styling_options:
+    color_scheme:
+      label: "Color scheme"
+      options:
+        color-scheme-wo:  "White text on orange background"
+        color-scheme-grey:  "Greyscale"
+        color-scheme-dark:  "Dark"
+    top_border:
+      label: "Top border decoration"
+      options:
+        angeled-top-2:  "Angeled (2 deg)"
+        angeled-top-4:  "Angeled (4 deg)"
+        angeled-top-reverse-2:  "Reverse Angeled (2 deg)"
+        angeled-top-reverse-4:  "ReverseAngeled (4 deg)"
+#        ramped-top: "Ramp"
+    bottom_border:
+      label: "Bottom border decoration"
+      options:
+        angeled-bottom-2:  "Angeled (2 deg)"
+        angeled-bottom-4:  "Angeled (4 deg)"
+        angeled-bottom-reverse-2:  "Reverse Angeled (2 deg)"
+        angeled-bottom-reverse-4:  "Reverse Angeled (4 deg)"
+#        ramped-bottom: "Ramp"
+
+  fields:
+    autoplay:
+      type: select
+      label: Start sliding on load
+      options:
+        "0": No
+        "1": Yes
+    loop:
+      type: select
+      label: Loop around
+      options:
+        "0": No
+        "1": Yes
+    duration:
+      type: text
+      label: The number of seconds to show a slide
+    speed:
+      type: text
+      label: The number of seconds to change slides
+    arrowleft:
+      type: fontawesome
+      label: The icon for the left arrow
+    arrowright:
+      type: fontawesome
+      label: The icon for the right arrow
+    navigation:
+      type: fontawesome
+      label: The icon for the navigation
+    column0:
+      type: cell
+      label: column0
+  libraries:
+    - slider:
+        js:
+          //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js:
+            { minified: true, type: external }
+          slider.js: {}
+        css:
+          component:
+            //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css:
+              { minified: true, type: external }
+            slider.css: {}
+        dependencies:
+          - core/drupal
+          - core/jquery

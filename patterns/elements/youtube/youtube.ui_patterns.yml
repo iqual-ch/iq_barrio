@@ -1,0 +1,37 @@
+youtube: # The id of the pattern. Must match the name of the file.
+  label: Youtube Video # Name of the pattern for the user
+  description: Display a youtube video. # Short description of the pattern
+  type: component
+  category: Element
+  icon: fab fa-youtube
+  pagedesigner: 1
+  designer: 0
+  weight: 400
+  fields:
+    url:
+      type: embed
+      label: URL
+      description: Video source url.
+      preview: 'https://www.youtube.com/embed/g_3cIWgZ5C8?rel=0&amp;showinfo=0'
+    ratio:
+      type: select
+      label: Video aspect ration
+      description: Aspect ratio of the video
+      preview: 'ratio16-9'
+      options:
+        ratio16-9: '16:9 (Standard)'
+        ratio4-3: '4:3 (Old-School)'
+        ratio-234: '2.35:1 (Cinematic)'
+        ratio-185: '1.85:1 (Wide)'
+        ratio-2: '2:1 (Super-Wide)'
+        ratio-1: '1:1 (Square)'
+        ratio9-16: '9:16 (Portrait mode)'
+  styles:
+    properties:
+      - width
+
+  libraries: # List additional assets as follows
+    - youtube: # for css file (same name as scss file)
+       css:
+         component:
+           youtube.css: {}

@@ -1,0 +1,43 @@
+text:
+  label: Formattable text
+  description: Formattable text.
+  category: Element
+  icon: fas fa-font
+  pagedesigner: 1
+  type: component
+  fields:
+    content:
+      type: html
+      label: "The text"
+  classes:
+    inverted:
+      label: "Inverted"
+      description: "Inverted text color"
+    lead:
+      label: "Lead text"
+      description: "Lead text style"
+    small:
+      label: "Small text"
+      description: "small text style"
+
+  styling_options:
+    font_color:
+      label: "Font color"
+      options:
+        font-color-primary: "Primary color"
+        font-color-secondary: "Secondary color"
+        font-color-tertiary: "Tertiary color"
+        font-color-quaternary: "Quaternary color"
+        font-color-grey1: "Grey 1"
+        font-color-grey2: "Grey 2"
+        font-color-grey3: "Grey 3"
+        font-color-grey4: "Grey 4"
+        font-color-grey5: "Grey 5"
+        font-color-black: "Black"
+        font-color-white: "White"
+
+  libraries:
+    - text:
+        css:
+          component:
+            text.css: {}

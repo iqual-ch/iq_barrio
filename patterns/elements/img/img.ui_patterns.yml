@@ -1,0 +1,53 @@
+img:
+  label: Image
+  description: Insert an image.
+  category: Element
+  icon: fas fa-image
+  pagedesigner: 1
+  type: component
+  fields:
+    image_img:
+      type: image
+      label: The image
+    image_title:
+      type: text
+      label: The image title text
+    image_alt:
+      type: text
+      label: The image alt text
+    href:
+      type: link
+      label: The link target url
+      description: The target page or an external url starting with http(s)://
+    title_link:
+      type: text
+      label: The link title text
+    link_target:
+      type: target
+      label: Open link in new window
+    lightbox:
+      type: select
+      label: Open image in lightbox
+      options:
+        no_lightbox: No
+        lightbox: Yes
+  styles:
+    properties:
+      - width
+  relations:
+    image_img:
+      image_alt:
+        source_key: alt
+        override: true
+      image_title:
+        source_key: title
+        override: true
+  libraries:
+    - img:
+        css:
+          component:
+            //cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css: { minified: true, type: external }
+            img.css: {}
+        js:
+          //cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js: { minified: true, type: external }
+          img.js: {}
