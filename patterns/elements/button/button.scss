@@ -77,7 +77,6 @@
   }
 
   &.inverted{
-    color: $font-color-buttons-inverted;
     a{
       color: $font-color-buttons-inverted;
       border-color: $border-color-buttons-inverted;
@@ -110,7 +109,6 @@
   }
 
   &.alternate{
-    padding: $padding-buttons-alternate;
     a{
       padding: $padding-buttons-alternate;
       font-size: $font-size-buttons-alternate;
@@ -151,7 +149,6 @@
       }
     }
     &.inverted{
-      color: $font-color-buttons-alternate-inverted;
       a{
         color: $font-color-buttons-alternate-inverted;
         border-color: $border-color-buttons-alternate-inverted;
@@ -221,26 +218,3 @@
     }
   }
 }
-
-
-// .iq-button.iq-text a {
-//   display: inline-block;
-//   padding: 10px 5%;
-//   text-align: center;
-//   text-decoration: none;
-//   background-color: $color-background-elements;
-//   border-color: $color-border-elements;
-//   color: $color-text-elements;
-//   &:hover {
-//     background-color: $color-background-elements-hover;
-//     border-color: $color-border-elements-hover;
-//     color: $color-text-elements-hover;
-//     transition: $transition-default;
-//   }
-//   &:active {
-//     background-color: $color-background-elements-active;
-//     border-color: $color-border-elements-active;
-//     color: $color-text-elements-active;
-//     transition: $transition-default;
-//   }
-// }
