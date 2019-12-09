@@ -1,0 +1,30 @@
+// /* Views (definitions for views -> views.sass) */
+
+@import "definitions";
+
+.view {
+  .view-content {
+    .table-responsive {
+      .views-table {
+        thead th {
+          color: $color-primary;
+          background-color: $color-grey2;
+          border-color: $color-background-page;
+        }
+
+        tbody td {
+          color: $color-standard;
+          background-color: $color-background-page;
+          border-color: $color-primary;
+        }
+      }
+    }
+
+  }
+
+  >nav {
+    .page-link {
+      color: $color-primary;
+    }
+  }
+}
