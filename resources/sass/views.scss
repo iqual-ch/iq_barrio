@@ -6,7 +6,13 @@
   .view-content {
     .table-responsive {
       .views-table {
-        thead th {
+
+        thead th,
+        thead th a,
+        thead th a:active,
+        thead th a:focus,
+        thead th a:visited,
+        thead th a:hover {
           color: $color-standard;
           background-color: $color-grey5;
           border-color: $color-grey4;
@@ -18,9 +24,29 @@
           border-color: $color-grey4;
         }
       }
+
+      .tableresponsive-toggle {
+        background: none;
+        border: none;
+        text-decoration: underline;
+        color: $color-link;
+        float: right;
+        font-size: $font-size-small;
+      }
+
+
+      .tablesort--asc {
+        background-image: url(/core/misc/icons/787878/twistie-down.svg);
+      }
+
+
+      .tablesort--desc {
+        background-image: url(/core/misc/icons/787878/twistie-up.svg);
+      }
     }
 
   }
+
 
   >nav {
     .page-link {
