@@ -4,7 +4,7 @@
         {% if input_visibility == "show_input" %}
             <div class="search-inputs">
                 {% if icon_position == 'left' and submit_icon %}<button type="submit" class="search-submit"><i class="{{submit_icon}}"></i></button>{% endif %}
-                <input type="text" name="{{name}}" placeholder="{{placeholder}}" />
+                <input type="text" autocomplete="off" name="{{name}}" placeholder="{{placeholder}}" />
                 {% if icon_position == 'right' and submit_icon %}<button type="submit" class="search-submit"><i class="{{submit_icon}}"></i></button>{% endif %}
             </div>
         {% else %}
@@ -12,7 +12,7 @@
             {% if icon_position == 'right' and cancel_icon %}<a data-toggle-search class="search-cancel"><i class="{{cancel_icon}}"></i></a>{% endif %}
             <div class="search-inputs toggable">
                 {% if icon_position == 'left' and submit_icon %}<button type="submit" class="search-submit"><i class="{{submit_icon}}"></i></button>{% endif %}
-                <input type="text" name="{{name}}" placeholder="{{placeholder}}" />
+                <input type="text" autocomplete="off" name="{{name}}" placeholder="{{placeholder}}" />
                 {% if icon_position == 'right' and submit_icon %}<button type="submit" class="search-submit"><i class="{{submit_icon}}"></i></button>{% endif %}
             </div>
             {% if icon_position == 'right' and submit_icon %}<a data-toggle-search class="search-show"><i class="{{submit_icon}}"></i></a>{% endif %}
