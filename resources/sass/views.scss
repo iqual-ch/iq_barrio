@@ -7,15 +7,15 @@
     .table-responsive {
       .views-table {
         thead th {
-          color: $color-primary;
-          background-color: $color-grey2;
-          border-color: $color-background-page;
+          color: $color-standard;
+          background-color: $color-grey5;
+          border-color: $color-grey4;
         }
 
         tbody td {
           color: $color-standard;
           background-color: $color-background-page;
-          border-color: $color-primary;
+          border-color: $color-grey4;
         }
       }
     }
@@ -25,6 +25,7 @@
   >nav {
     .page-link {
       color: $color-primary;
+      border-radius: 0;
     }
   }
 }
