@@ -2,12 +2,12 @@
 
 @import "definitions";
 
-.webform-submission-form{
+.webform-submission-form {
 
-  fieldset{
+  fieldset {
     padding: 0;
 
-    label{
+    label {
       margin-bottom: 0;
     }
 
@@ -16,9 +16,10 @@
     textarea {
       border-radius: $border-radius-base;
       border: $border-width-base solid $border-color-base;
+      margin-top: 0rem;
     }
 
-    .form-control:focus{
+    .form-control:focus {
       border-color: $color-primary;
     }
   }
@@ -26,28 +27,29 @@
 
 
 
-  .webform-progress{
-    .progress-step{
+  .webform-progress {
+    .progress-step {
 
-      .progress-text{
+      .progress-text {
         color: $color-grey1;
       }
 
       &.is-active {
-        .progress-marker{
+        .progress-marker {
           background-color: $color-primary;
         }
       }
 
-      &.is-complete:hover{
-        .progress-marker{
+      &.is-complete:hover {
+        .progress-marker {
           background-color: $color-primary;
         }
       }
 
       .progress-title[role="link"] {
         color: $color-grey1;
-        &:hover{
+
+        &:hover {
           color: $color-primary;
         }
       }
@@ -64,7 +66,7 @@
   }
 
 
-  .form-actions{
+  .form-actions {
     padding: 0 15px;
     position: relative;
 
@@ -77,14 +79,15 @@
 
 
 
-    .ajax-progress-throbber{
+    .ajax-progress-throbber {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       filter: grayscale(1);
       left: 100%;
     }
-    .btn-primary{
+
+    .btn-primary {
       margin: 0;
 
       @media only screen and (min-width: 768px) {
@@ -92,7 +95,7 @@
       }
 
       &.disabled,
-      &:disabled{
+      &:disabled {
         color: $color-grey5;
         background-color: $color-grey3;
         border-color: $color-grey3;
@@ -102,196 +105,3 @@
 
 
 }
-
-
-
-
-// .page-content {
-//     input {
-//         border: $border-width-base solid $color-border-elements;
-//         color: $color-text-content;
-//         background: transparent;
-//         height: 35px;
-//         padding: $padding-field-default;
-//         max-width: 100%;
-//     }
-//     select {
-//         border: $border-width-base solid $color-border-elements;
-//         color: $color-text-content;
-//         height: 35px;
-//         padding: $padding-field-default;
-//         max-width: 100%;
-//         background: transparent !important;
-//         -moz-appearance: none;
-//         text-indent: 0.01px;
-//         text-overflow: '';
-//         &::-ms-expand {
-//             display: none;
-//         }
-//     }
-//     textarea {
-//         border: $border-width-base solid $color-border-elements;
-//         color: $color-text-content;
-//         background: transparent;
-//         height: auto;
-//         padding: $padding-field-default;
-//         max-width: 100%;
-//     }
-//     select[multiple] {
-//         height: auto;
-//     }
-//     .form-type-select {
-//         position: relative;
-//     }
-//     .form-type-select::after {
-//         content: "\f078";
-//         font-family: FontAwesome;
-//         font-style: normal;
-//         font-weight: normal;
-//         text-decoration: none;
-//         color: $color-text-icons;
-//         font-size: $font-size-base;
-//         position: absolute;
-//         right: 9px;
-//         top: 45%;
-//         pointer-events: none;
-//     }
-//     .form-type-radio input,
-//     .form-radios input,
-//     .form-type-checkbox input {
-//         padding: 0;
-//         width: auto;
-//         margin-right: 15px;
-//         height: auto;
-//     }
-//     .form-type-radio input:checked,
-//     .form-radios input:checked {
-//         background: $color-text-icons;
-//     }
-//     .form-type-checkbox input:checked {
-//         background: $color-background-page;
-//         &::after {
-//             content: "\f00c";
-//             font-family: FontAwesome;
-//             font-style: normal;
-//             font-weight: normal;
-//             text-decoration: inherit;
-//             color: $color-text-content;
-//             font-size: $font-size-base;
-//             position: absolute;
-//             left: 1px;
-//             line-height: $font-size-base * 1.1;
-//         }
-//     }
-//     .form-actions input,
-//     .form-actions input:hover {
-//         color: $color-text-elements;
-//         border: $border-width-base solid $color-border-elements;
-//         max-width: 30%;
-//         min-width: 120px;
-//         background-color: $color-background-elements;
-//     }
-//     .form-actions input.webform-button--previous,
-//     .form-actions input.webform-button--previous:hover {
-//         background: $color-background-elements-active;
-//         color: $color-text-elements-active;
-//         border: $border-width-base solid $color-border-elements-active;
-//     }
-//     fieldset:not(.fieldgroup) {
-//         background: $color-background-page;
-//         padding-left: 0px;
-//     }
-//     fieldset:not(.fieldgroup)>legend {
-//         /* Fix for width of legend */
-//         width: calc(100% - 36px);
-//     }
-//     .form-type-radio {
-//         height: 45px;
-//         label:after {
-//             content: '';
-//             clear: both;
-//         }
-//     }
-//     .form-item .description {
-//         /*Fix for description style */
-//         font-size: $font-size-base;
-//         color: $color-text-content;
-//     }
-//     .form-type-checkbox,
-//     .page-content .form-type-radio {
-//         /* Fix for to wide options */
-//         white-space: normal;
-//     }
-//     .form-item label.option {
-//         /* Fix for to wide labels */
-//         white-space: initial;
-//     }
-//     .form-type-webform-likert {
-//         margin: $margin-top-base 0 $margin-bottom-base;
-//     }
-//     .webform-likert-table thead th {
-//         color: $color-text-elements;
-//         background-color: $color-background-elements;
-//     }
-//     .webform-likert-table tr {
-//         padding-bottom: $padding-bottom-base;
-//         border-bottom: $border-width-base solid $color-border-elements-hover;
-//     }
-//     .webform-likert-table tr label {
-//         font-size: 14px;
-//     }
-//     .progress-step .progress-marker,
-//     .progress-step:hover .progress-marker {
-//         background-color: $color-light;
-//     }
-//     .progress-step.is-complete .progress-marker,
-//     .progress-step.is-complete:hover .progress-marker {
-//         background-color: $color-dark;
-//     }
-//     .progress-step.is-active .progress-marker,
-//     .progress-step.is-active:hover .progress-marker {
-//         background-color: $color-text-icons;
-//     }
-//     .messages.messages--info {
-//         color: $color-text-content;
-//         border-color: $color-border-elements;
-//     }
-//     .webform-likert-table thead th {
-//         font-size: 13px;
-//     }
-//     .webform-submission-form label {
-//         margin-bottom: 5px;
-//     }
-//     .captcha {
-//         float: left;
-//         margin-right: 0.5em;
-//         margin-top: 1em;
-//     }
-//     .form--inline .form-item {
-//         float: none;
-//         display: inline-block;
-//         max-width: 100%;
-//     }
-// }
-
-// .adminimal label {
-//     padding: 0;
-// }
-
-// /* Make sorting options go to next line */
-
-// .form-item-sort-by {
-//     clear: both;
-// }
-
-// fieldset legend {
-//     /* Fix for line if label is visually hidden */
-//     border-bottom: none;
-// }
-
-// fieldset legend span {
-//     /* Fix for line if label is visually hidden */
-//     border-bottom: $border-width-base solid $color-border-elements;
-//     width: 100%;
-//     display: inline-block;
-// }
