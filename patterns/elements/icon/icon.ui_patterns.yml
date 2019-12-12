@@ -16,9 +16,11 @@ icon:
     title:
       type: text
       label: The link title text
+      description: Appears as soon as the mouse is moved over the menu link (tooltip).
     target:
       type: target
       label: The link target
+      description: Should the link be opened in the same window or in a new one?
     alignment:
       type: select
       label: Alignment

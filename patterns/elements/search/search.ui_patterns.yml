@@ -12,6 +12,7 @@ search:
     target:
       type: target
       label: The link target
+      description: Should the link be opened in the same window or in a new one?
     placeholder:
       type: text
       label: Placeholder

@@ -14,8 +14,8 @@ collapsible:
       preview: Collapsible title
     effect:
       type: select
-      label: Type
-      description: Type of collapsible
+      label: Type of the collapsible
+      description: Select the type of the collapsible
       options:
         accordion: Accordion
         tabs: Tabbed

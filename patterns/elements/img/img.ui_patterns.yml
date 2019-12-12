@@ -15,6 +15,7 @@ img:
     image_alt:
       type: text
       label: The image alt text
+      description: Alternate text for an image, if the image cannot be displayed.
     href:
       type: link
       label: The link target url
@@ -22,6 +23,7 @@ img:
     title_link:
       type: text
       label: The link title text
+      description: Appears as soon as the mouse is moved over the image (tooltip).
     link_target:
       type: target
       label: Open link in new window

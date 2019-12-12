@@ -9,9 +9,11 @@ toggler:
     target:
       type: text
       label: Target component
+      description: The ID of the target component
     tooltip:
       type: text
       label: Tooltip
+      description: Appears as soon as the mouse is moved over the element (tooltip).
     scrolllock:
       type: select
       label: Lock scrolling

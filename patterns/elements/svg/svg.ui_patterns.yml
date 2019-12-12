@@ -15,6 +15,7 @@ svg:
     svg_alt:
       type: text
       label: The svg alt text
+      description: Alternate text, if the SVG cannot be displayed.
     href:
       type: link
       label: The link target url
@@ -22,9 +23,11 @@ svg:
     title_link:
       type: text
       label: The link title text
+      description: Appears as soon as the mouse is moved over the SVG (tooltip).
     link_target:
       type: target
       label: Open link in new window
+      description: Should the link be opened in the same window or in a new one?
     # parent_class:
     #   type: text
     #   label: Class name

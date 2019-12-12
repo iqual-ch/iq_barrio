@@ -1,6 +1,6 @@
 slider:
   label: Slider
-  description: A slider container.
+  description: A slider displays various elements (mostly images) in a defined interval.
   type: row
   category: Composite
   icon: fas fa-stream
@@ -67,12 +67,14 @@ slider:
     autoplay:
       type: select
       label: Start sliding on load
+      description: As soon as the page is reloaded, the slider starts automatically.
       options:
         "0": No
         "1": Yes
     loop:
       type: select
       label: Loop around
+      description: The slides are played in an endless loop.
       options:
         "0": No
         "1": Yes
