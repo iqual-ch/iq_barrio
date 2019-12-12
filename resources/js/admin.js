@@ -22,6 +22,7 @@
   }
 
 
+
   var style = jQuery('#iq-barrio-source').html();
   jQuery('[data-drupal-selector="edit-iq-theme"]').find('input, select').each(function(){
     var find = '{{' + jQuery(this).attr('name') + '}}';
