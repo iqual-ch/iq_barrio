@@ -1,6 +1,6 @@
 htmlinclude:
   label: Html include
-  description: Insert arbitrary html.
+  description: Insert any html content.
   type: component
   category: Element
   icon: fas fa-code

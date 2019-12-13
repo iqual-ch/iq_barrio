@@ -1,5 +1,5 @@
 collapsible:
-  label: Collapsible
+  label: Collapsible element
   description: Collapsible element (accordion, tabs)
   type: row
   category: Composite
@@ -15,7 +15,6 @@ collapsible:
     effect:
       type: select
       label: Type of the collapsible
-      description: Select the type of the collapsible
       options:
         accordion: Accordion
         tabs: Tabbed

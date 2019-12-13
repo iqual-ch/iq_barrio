@@ -1,6 +1,6 @@
 youtube: # The id of the pattern. Must match the name of the file.
   label: Youtube Video # Name of the pattern for the user
-  description: Display a youtube video. # Short description of the pattern
+  description: Insert a youtube video. # Short description of the pattern
   type: component
   category: Element
   icon: fab fa-youtube
@@ -10,7 +10,7 @@ youtube: # The id of the pattern. Must match the name of the file.
   fields:
     url:
       type: embed
-      label: URL
+      label: Upload Youtube Video
       description: Video source url.
       preview: 'https://www.youtube.com/embed/g_3cIWgZ5C8?rel=0&amp;showinfo=0'
     ratio:

@@ -37,10 +37,10 @@ video:
       preview: 0
     img:
       type: image
-      label: The preview image
+      label: Upload preview image for the video
     video:
       type: video
-      label: The video to play
+      label: Upload video file
   styles:
     properties:
       - width
