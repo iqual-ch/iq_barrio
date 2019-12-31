@@ -11,7 +11,7 @@ icon:
       label: The icon
     href:
       type: link
-      label: The link target url
+      label: The link
       description: The target page or an external url starting with http(s)://
     title:
       type: text
@@ -19,7 +19,7 @@ icon:
       description: Appears as soon as the mouse is moved over the menu link (tooltip).
     target:
       type: target
-      label: The link target
+      label: Open link in new window
       description: Should the link be opened in the same window or in a new one?
     alignment:
       type: select

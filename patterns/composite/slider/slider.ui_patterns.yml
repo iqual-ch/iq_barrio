@@ -52,7 +52,7 @@ slider:
         angeled-top-2:  "Angeled (2 deg)"
         angeled-top-4:  "Angeled (4 deg)"
         angeled-top-reverse-2:  "Reverse Angeled (2 deg)"
-        angeled-top-reverse-4:  "ReverseAngeled (4 deg)"
+        angeled-top-reverse-4:  "Reverse Angeled (4 deg)"
 #        ramped-top: "Ramp"
     bottom_border:
       label: "Bottom border decoration"

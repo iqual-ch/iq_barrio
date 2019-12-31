@@ -16,7 +16,7 @@ file:
       description: Appears as soon as the mouse is moved over the menu link (tooltip).
     target:
       type: target
-      label: The link target
+      label: Open link in new window
       description: Should the link be opened in the same window or in a new one?
     text:
       type: text

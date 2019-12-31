@@ -14,7 +14,7 @@ trustelement:
       label: ... or enter a text
     content:
       type: html
-      label: The content of the tab.
+      label: The text
   libraries:
     - trustelement:
         css:

@@ -19,7 +19,7 @@ gallery:
         5: 5
     images:
       type: gallery
-      label: The gallery
+      label: Choose
       preview: []
   libraries:
     - gallery:

@@ -18,7 +18,7 @@ img:
       description: Alternate text for an image, if the image cannot be displayed.
     href:
       type: link
-      label: The link target url
+      label: The link
       description: The target page or an external url starting with http(s)://
     title_link:
       type: text
