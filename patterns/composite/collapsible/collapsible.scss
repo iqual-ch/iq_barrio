@@ -6,6 +6,13 @@
     font-family: inherit;
   }
 
+  &.ui-accordion{
+    > .iq-column{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
   .ui-accordion-header{
     padding: 0;
     margin: 0;
@@ -26,6 +33,15 @@
     }
     > *:last-child{
       margin-bottom: 0;
+    }
+
+    > div{
+      > *:first-child{
+        margin-top: 0;
+      }
+      > *:last-child{
+        margin-bottom: 0;
+      }
     }
 
 
@@ -86,10 +102,6 @@
     }
   }
 }
-
-
-/* Tabbed content (jquery.ui.tabs) (60-tab.twig.html pattern --> 60-tab.sass) */
-@import '../../../resources/sass/definitions';
 
 
 #page .iq-tab-element.ui-widget.ui-widget-content {
