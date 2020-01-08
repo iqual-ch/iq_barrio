@@ -1,0 +1,1456 @@
+# German translation of iq_barrio
+#
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2019-12-12 10:48+0000\n"
+"PO-Revision-Date: 2019-12-12 10:48+0000\n"
+"Last-Translator: iqual GmbH <support@iqual.ch>\n"
+"Language-Team: iqual GmbH <support@iqual.ch>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: iq_barrio.theme:154;307
+msgid "Primary color"
+msgstr "Primäre Farbe"
+
+#: iq_barrio.theme:155;313
+msgid "Secondary color"
+msgstr "Sekundäre Farbe"
+
+#: iq_barrio.theme:156;319
+msgid "Tertiary color"
+msgstr "Tertiäre Farbe"
+
+#: iq_barrio.theme:157;325
+msgid "Quaternary color"
+msgstr "Quartiäre Farbe"
+
+#: iq_barrio.theme:160
+msgid "Grey 1"
+msgstr "Grau 1"
+
+#: iq_barrio.theme:161
+msgid "Grey 2"
+msgstr "Grau 2"
+
+#: iq_barrio.theme:162
+msgid "Grey 3"
+msgstr "Grau 3"
+
+#: iq_barrio.theme:163
+msgid "Grey 4"
+msgstr "Grau 4"
+
+#: iq_barrio.theme:164
+msgid "Grey 5"
+msgstr "Grau 5"
+
+#: iq_barrio.theme:167
+msgid "Black"
+msgstr "Schwarz"
+
+#: iq_barrio.theme:168
+msgid "White"
+msgstr "Weiss"
+
+#: iq_barrio.theme:173
+msgid "100 (lightest)"
+msgstr "100 (leichteste)"
+
+#: iq_barrio.theme:175
+msgid "300"
+msgstr "300"
+
+#: iq_barrio.theme:176
+msgid "400 (normal)"
+msgstr "400 (normal)"
+
+#: iq_barrio.theme:177
+msgid "500"
+msgstr "500"
+
+#: iq_barrio.theme:178
+msgid "600"
+msgstr "600"
+
+#: iq_barrio.theme:179
+msgid "700 (bold)"
+msgstr "700 (fett)"
+
+#: iq_barrio.theme:180
+msgid "800"
+msgstr "800"
+
+#: iq_barrio.theme:181
+msgid "900 (boldest)"
+msgstr "900 (fetteste)"
+
+#: iq_barrio.theme:185
+msgid "Normal"
+msgstr "Normal"
+
+#: iq_barrio.theme:186
+msgid "Italic"
+msgstr "Kursiv"
+
+#: iq_barrio.theme:198
+msgid "Arial"
+msgstr "Arial"
+
+#: iq_barrio.theme:199
+msgid "Courier New"
+msgstr "Courier New"
+
+#: iq_barrio.theme:200
+msgid "Helvetica"
+msgstr "Helvetica"
+
+#: iq_barrio.theme:201
+msgid "Times New Roman"
+msgstr "Times New Roman"
+
+#: iq_barrio.theme:202
+msgid "Verdana"
+msgstr "Verdana"
+
+#: iq_barrio.theme:203
+msgid "Open Sans, sans-serif"
+msgstr "Open Sans, sans-serif"
+
+#: iq_barrio.theme:230
+msgid "Custom Theme Settings"
+msgstr "Einstellungen benutzerdefiniertes Theme"
+
+#: iq_barrio.theme:239
+msgid "Colors"
+msgstr "Farben"
+
+#: iq_barrio.theme:248
+msgid "Base color definitions"
+msgstr "Basis Farbdefinitionen"
+
+#: iq_barrio.theme:331
+msgid "Color assignments"
+msgstr "Farbzuweisungen"
+
+#: iq_barrio.theme:336;557;748;942;999;1667;3075;3181;3216;3236;3256;3282;3302;3322;3356;3376;3396;3422;3442;3462;3503;3530;3574;3621;3637;3652
+msgid "Color"
+msgstr "Farbe"
+
+#: iq_barrio.theme:349;371;393;415;437;459;480;502;570;591;760;783;955;976;1014;1032;1212;1230;1251;1269;1292;1310;1332;1350;1372;1390;1412;1430;1491;1509;1530;1570;1591;1679;2045;2067;2085;2105;2126;2144;2164;2185;2203;2232;2254;2272;2292;2313;2331;2351;2372;2390;2651;2673;2691;2711;2732;2750;2770;2791;2809;2838;2860;2878;2898;2919;2937;2957;2978;2996;3088;3106;3149;3167;3194;3229;3249;3269;3295;3315;3335;3369;3389;3409;3435;3455;3475;3516;3545;3563;3588;3606;3629;3645;3660;3822;3839;3857;3870;3885;3903;3916;3931;3949;3962
+msgid "Opacity"
+msgstr "Transparenz"
+
+#: iq_barrio.theme:358;402;446;1238;1279;1358;1398;1478;2054;2113;2171;2241;2300;2358;2660;2719;2777;2847;2906;2964;3094;3847;3893;3938
+msgid "Background color"
+msgstr "Hintergrundfarbe"
+
+#: iq_barrio.theme:380;424;1257;1298;1338;1378;1418;1518;1557;1578;2032;2092;2151;2219;2279;2338;2638;2698;2757;2825;2885;2944;3551;3831;3877;3923
+msgid "Font color"
+msgstr "Schriftfarbe"
+
+#: iq_barrio.theme:467
+msgid "Font color footer"
+msgstr "Schriftfarbe im Fussbereich"
+
+#: iq_barrio.theme:489;1199
+msgid "Background color "
+msgstr "Hintergrundfarbe"
+
+#: iq_barrio.theme:511
+msgid "Typography"
+msgstr "Typografie"
+
+#: iq_barrio.theme:512
+msgid "Typography definitions."
+msgstr "Typografie-Definitionen."
+
+#: iq_barrio.theme:518
+msgid "Headings"
+msgstr "Überschriften"
+
+#: iq_barrio.theme:578;770;963;1020
+msgid "Inverted color"
+msgstr "Kontrastfarbe (Konträr)"
+
+#: iq_barrio.theme:603;793;1078;1810;2431;3691
+msgid "Font family"
+msgstr "Schriftfarbe"
+
+#: iq_barrio.theme:613;802;1086;1819;2440;3699
+msgid "Font weight"
+msgstr "Schriftdicke"
+
+#: iq_barrio.theme:621;809;1093;1826;2447;3707
+msgid "Font style"
+msgstr "Formatvorlage"
+
+#: iq_barrio.theme:629;815;1101;1832;2453;3713
+msgid "Line height"
+msgstr "Höhe der Textzeile"
+
+#: iq_barrio.theme:646;835
+msgid "Font-size<br/>min"
+msgstr "Schriftgrösse<br />min"
+
+#: iq_barrio.theme:661;850
+msgid "<br/>max"
+msgstr "<br />max"
+
+#: iq_barrio.theme:680;868
+msgid "Margin (top, bottom)"
+msgstr "Aussenabstand (oben, unten)"
+
+#: iq_barrio.theme:712
+msgid "Text elements"
+msgstr "Textelemente"
+
+#: iq_barrio.theme:922
+msgid "Links"
+msgstr "Links"
+
+#: iq_barrio.theme:984;1041
+msgid "Text decoration"
+msgstr "Textunterstreichung"
+
+#: iq_barrio.theme:986;1043
+msgid "Underline"
+msgstr "Unterstrichen"
+
+#: iq_barrio.theme:987;1044
+msgid "Dotted"
+msgstr "Gepunktet"
+
+#: iq_barrio.theme:988;1045
+msgid "Dashed"
+msgstr "Gestrichelt"
+
+#: iq_barrio.theme:989;1046
+msgid "none"
+msgstr "keine"
+
+#: iq_barrio.theme:1064
+msgid "Navigation"
+msgstr "Navigation"
+
+#: iq_barrio.theme:1065
+msgid "Navigation settings"
+msgstr "Navigationseinstellungen"
+
+#: iq_barrio.theme:1072
+msgid "Navigation Main"
+msgstr "Hauptnavigation"
+
+#: iq_barrio.theme:1118;1847;2470;3728
+msgid "Font size"
+msgstr "Schriftgrösse"
+
+#: iq_barrio.theme:1137
+msgid "Margin (top, left/right, bottom)"
+msgstr "Aussenabstand (oben, links/rechts, unten)"
+
+#: iq_barrio.theme:1169
+msgid "Padding (top, left/right, bottom)"
+msgstr "Innenabstand (oben, links/rechts, unten)"
+
+#: iq_barrio.theme:1218;1497
+msgid "Font color "
+msgstr "Schriftfarbe"
+
+#: iq_barrio.theme:1319
+msgid "Background"
+msgstr "Hintergrund"
+
+#: iq_barrio.theme:1472
+msgid "Navigation Mobile"
+msgstr "Mobile Navigation"
+
+#: iq_barrio.theme:1551
+msgid "Navigation Sidebar"
+msgstr "Seitliche Navigation"
+
+#: iq_barrio.theme:1609
+msgid "Styling"
+msgstr "Styling"
+
+#: iq_barrio.theme:1610
+msgid "Borders, shadows etc."
+msgstr "Rahmen, Schatten etc."
+
+#: iq_barrio.theme:1617
+msgid "Border"
+msgstr "Rahmen"
+
+#: iq_barrio.theme:1631
+msgid "Width"
+msgstr "Breite"
+
+#: iq_barrio.theme:1646
+msgid "Style"
+msgstr "Darstellung"
+
+#: iq_barrio.theme:1696
+msgid "Border Radius"
+msgstr "Eckenrundung des Rahmens"
+
+#: iq_barrio.theme:1711
+msgid "Margins & Paddings"
+msgstr "Aussenabstände und Innenabstände"
+
+#: iq_barrio.theme:1723
+msgid "Margin (Top, right, bottom, left)"
+msgstr "Aussenabstand (oben, rechts, unten, links)"
+
+#: iq_barrio.theme:1760
+msgid "Padding (Top, right, bottom, left)"
+msgstr "Innenabstand (oben, rechts, unten, links)"
+
+#: iq_barrio.theme:1796
+msgid "Buttons"
+msgstr "Buttons"
+
+#: iq_barrio.theme:1797
+msgid "Styling of buttons."
+msgstr "Darstellung der Buttons"
+
+#: iq_barrio.theme:1804
+msgid "Default Button"
+msgstr "Standard Button"
+
+#: iq_barrio.theme:1870;2490
+msgid "Border (top, right, bottom, left)"
+msgstr "Rahmenlinie (oben, rechts, unten, links)"
+
+#: iq_barrio.theme:1906;2526
+msgid "Border radius"
+msgstr "Eckenrundung des Rahmens"
+
+#: iq_barrio.theme:1944;2556;3747
+msgid "Margin (top, right, bottom, left)"
+msgstr "Aussenabstand (oben, rechts, unten, links)"
+
+#: iq_barrio.theme:1982;2594;3785
+msgid "Padding (top, right, bottom, left)"
+msgstr "Innenabstand (oben, rechts, unten, links)"
+
+#: iq_barrio.theme:2027;2633
+msgid "Standard color settings"
+msgstr "Standard Farbeinstellungen"
+
+#: iq_barrio.theme:2073;2191;2260;2378;2679;2797;2866;2984;3863;3955
+msgid "Border color"
+msgstr "Rahmenfarbe"
+
+#: iq_barrio.theme:2132;2319;2738;2925;3909
+msgid "Hover border color"
+msgstr "Rahmenfarbe (Hover)"
+
+#: iq_barrio.theme:2214;2820
+msgid "Inverted color settings"
+msgstr "Einstellungen der Kontrastfarben"
+
+#: iq_barrio.theme:2425
+msgid "Alterante Button"
+msgstr "Alternativer Button"
+
+#: iq_barrio.theme:3041
+msgid "Patterns"
+msgstr "Patterns"
+
+#: iq_barrio.theme:3042
+msgid "Styling of patterns."
+msgstr "Gestaltung der Patterns"
+
+#: iq_barrio.theme:3050
+msgid "Slider"
+msgstr "Slider"
+
+#: iq_barrio.theme:3063;3124
+msgid "Size"
+msgstr "Grösse"
+
+#: iq_barrio.theme:3136
+msgid "Colo standard"
+msgstr "Standardfarbe"
+
+#: iq_barrio.theme:3155
+msgid "Color active"
+msgstr "Farbe (aktiver Zustand)"
+
+#: iq_barrio.theme:3176
+msgid "Quote"
+msgstr "Zitat"
+
+#: iq_barrio.theme:3203
+msgid "Icons"
+msgstr "Icons"
+
+#: iq_barrio.theme:3209
+msgid "Default icon"
+msgstr "Standard Icon"
+
+#: iq_barrio.theme:3348
+msgid "Alternate icon"
+msgstr "Alternatives Icon"
+
+#: iq_barrio.theme:3498
+msgid "Social"
+msgstr "Social"
+
+#: iq_barrio.theme:3525
+msgid "Tabbed content"
+msgstr "Tabbed content"
+
+#: iq_barrio.theme:3594
+msgid "Tab font color active"
+msgstr "Schriftfarbe eines aktiven Tabs"
+
+#: iq_barrio.theme:3616
+msgid "Toggler"
+msgstr "Toggler/Schalter"
+
+#: iq_barrio.theme:3685
+msgid "Anchor navigation"
+msgstr "Anker Navigation"
+
+#: iq_barrio.theme:3814
+msgid "Wrapper background color"
+msgstr "Hintergrundfarbe des Wrappers"
+
+#: iq_barrio.info.yml:0
+msgid "iqual Barrio Subtheme"
+msgstr "iqual Barrio Subtheme"
+
+#: iq_barrio.info.yml:0
+msgid "iqual Bootstrap Barrio SubTheme."
+msgstr "iqual Bootstrap Barrio SubTheme."
+
+#: color/color.inc:11
+msgid "Header background top"
+msgstr "Kopfzeilenhintergrund (oben)"
+
+#: color/color.inc:12
+msgid "Header background bottom"
+msgstr "Kopfzeilenhintergrund (unten)"
+
+#: color/color.inc:13
+msgid "Main background"
+msgstr "Haupthintergrund"
+
+#: color/color.inc:14
+msgid "Sidebar background"
+msgstr "Hintergrund der Seitenleiste"
+
+#: color/color.inc:15
+msgid "Sidebar borders"
+msgstr "Rahmen der Seitenleiste"
+
+#: color/color.inc:16
+msgid "Footer background"
+msgstr "Hintergrund der Fusszeile"
+
+#: color/color.inc:17
+msgid "Primary button background"
+msgstr "Hintergrundfarbe des primären Buttons"
+
+#: color/color.inc:18
+msgid "Primary button hover"
+msgstr "Primär-Button überfahren"
+
+#: color/color.inc:19
+msgid "Title and slogan"
+msgstr "Titel und Slogan"
+
+#: color/color.inc:20
+msgid "Text color"
+msgstr "Schriftfarbe"
+
+#: color/color.inc:21
+msgid "Link color"
+msgstr "Linkfarbe"
+
+#: color/color.inc:26
+msgid "Blue Lagoon (default)"
+msgstr "Blue Lagoon (default)"
+
+#: color/color.inc:42
+msgid "Firehouse"
+msgstr "Firehouse"
+
+#: color/color.inc:58
+msgid "Ice"
+msgstr "Ice"
+
+#: color/color.inc:74
+msgid "Plum"
+msgstr "Plum"
+
+#: color/color.inc:90
+msgid "Slate"
+msgstr "Slate"
+
+#: config/schema/iq_barrio.schema.yml:0
+msgid "iqual theme settings"
+msgstr "iqual Theme-Einstellungen"
+
+msgid "Inverted"
+msgstr "Konträr"
+
+msgid "Inverted Text color"
+msgstr "Kontrastfarbe des Textes"
+
+
+################ Global Stylings ################
+
+msgid "Full width"
+msgstr "Volle Breite"
+
+msgid "Use full browser width"
+msgstr "Nutzt die volle Breite des Browsers"
+
+msgid "No gutters"
+msgstr "Kein Aussenabstand"
+
+msgid "No margins around columns"
+msgstr "Entfernt die Aussenabstände der einzelnen Spalten."
+
+msgid "No indent"
+msgstr "Kein Einzug"
+
+msgid "Prevent children from having left and right padding"
+msgstr ""
+"Sorgt bei Verschachtelungen dafür, dass alle darin enthaltenen "
+"Elemente nicht eingerückt werden."
+
+msgid "Hide row"
+msgstr "Zeile ausblenden"
+
+msgid "Keep cols on mobile"
+msgstr "Spalten auf Mobilgeräten beibehalten"
+
+msgid "Prevent columns from beeing stretched to 100% on mobile devices"
+msgstr ""
+"Verhindert, dass Spalten auf Mobilgeräten eine Breite von 100% "
+"erhalten."
+
+msgid "Reverse order on mobile"
+msgstr "Umgekehrte Reihenfolge für Mobilgeräte"
+
+msgid "Reverse order of columns on mobile devices"
+msgstr "Umgekehrte Reihenfolge der Spalten auf Mobilgeräten."
+
+msgid "Background color"
+msgstr "Hintergrundfarbe"
+
+msgid "Font color"
+msgstr "Schriftfarbe"
+
+msgid "Primary color"
+msgstr "Primäre Farbe"
+
+msgid "Secondary color"
+msgstr "Sekundäre Farbe"
+
+msgid "Tertiary color"
+msgstr "Tertiäre Farbe"
+
+msgid "Quaternary color"
+msgstr "Quartiäre Farbe"
+
+msgid "Grey 1"
+msgstr "Grau 1"
+
+msgid "Grey 2"
+msgstr "Grau 2"
+
+msgid "Grey 3"
+msgstr "Grau 3"
+
+msgid "Grey 4"
+msgstr "Grau 4"
+
+msgid "Grey 5"
+msgstr "Grau 5"
+
+msgid "Black"
+msgstr "Schwarz"
+
+msgid "White"
+msgstr "Weiss"
+
+msgid "Bottom border decoration"
+msgstr "Dekoration Kante (unten)"
+
+msgid "Top border decoration"
+msgstr "Dekoration Kante (oben)"
+
+msgid "Angeled (2 deg)"
+msgstr "20° Winkel (rechts nach links)"
+
+msgid "Angeled (4 deg)"
+msgstr "40° Winkel (rechts nach links)"
+
+msgid "Reverse Angeled (2 deg)"
+msgstr "20° Winkel (links nach rechts)"
+
+msgid "Reverse Angeled (4 deg)"
+msgstr "40° Winkel (links nach rechts)"
+
+msgid "Color scheme"
+msgstr "Farbschema"
+
+msgid "White text on orange background"
+msgstr "Weisser Text auf orangem Hintergrund"
+
+msgid "Greyscale"
+msgstr "Graustufen"
+
+msgid "Dark"
+msgstr "Dunkel"
+
+
+
+################ Global Fields ################
+
+msgctxt "pd_pattern"
+msgid "The target page or an external url starting with http(s)://"
+msgstr "Die Zielseite oder eine externe URL (startet mit http(s)://)"
+
+msgctxt "pd_pattern"
+msgid "The link target url"
+msgstr "Die Ziel-URL"
+
+msgctxt "pd_pattern"
+msgid "The link title text"
+msgstr "Der Linktitel"
+
+msgctxt "pd_pattern"
+msgid "The link target"
+msgstr "Die Zielfensterbasis"
+
+msgctxt "pd_pattern"
+msgid "Appears as soon as the mouse is moved over the menu link (tooltip)."
+msgstr "Erscheint, sobald die Maus über den Menülink bewegt wird (Tooltip)."
+
+msgctxt "pd_pattern"
+msgid "Should the link be opened in the same window or in a new one?"
+msgstr "Soll der Link im gleichen Fenster geöffnet werden oder in einem neuen?"
+
+msgctxt "pd_pattern"
+msgid "Alignment"
+msgstr "Ausrichtung"
+
+msgctxt "pd_pattern"
+msgid "Open link in new window"
+msgstr "Link in neuem Fenster öffnen?"
+
+
+
+################ /patterns/structural ################
+
+
+
+# /patterns/structural - global row fields
+
+msgctxt "pd_pattern"
+msgid "column0"
+msgstr "Spalte 0"
+
+msgctxt "pd_pattern"
+msgid "column1"
+msgstr "Spalte 1"
+
+msgctxt "pd_pattern"
+msgid "column2"
+msgstr "Spalte 2"
+
+msgctxt "pd_pattern"
+msgid "column3"
+msgstr "Spalte 3"
+
+msgctxt "pd_pattern"
+msgid "column4"
+msgstr "Spalte 4"
+
+msgctxt "pd_pattern"
+msgid "column5"
+msgstr "Spalte 5"
+
+
+
+# /patterns/structural/rowoneone
+
+msgctxt "pd_pattern"
+msgid "One column row"
+msgstr "Einspaltig"
+
+msgctxt "pd_pattern"
+msgid "A row with one columns."
+msgstr "Eine Zeile mit einer Spalte"
+
+
+
+# /patterns/structural/rowonetwoonetwo
+
+msgctxt "pd_pattern"
+msgid "Two column row (1/2 - 1/2)"
+msgstr "Zweispaltig <br /> (1/2 - 1/2)"
+
+msgctxt "pd_pattern"
+msgid "A row with two columns."
+msgstr "Eine Zeile mit zwei Spalten"
+
+
+
+# /patterns/structural/rowtwothreeonethree
+
+msgctxt "pd_pattern"
+msgid "Two column row (2/3 - 1/3)"
+msgstr "Zweispaltig <br /> (2/3 - 1/3)"
+
+msgctxt "pd_pattern"
+msgid "A row with a 2/3 column and a 1/3 column."
+msgstr "Eine Zeile mit zwei Spalten (2/3 - 1/3)"
+
+
+
+# /patterns/structural/rowonethreetwothree
+
+msgctxt "pd_pattern"
+msgid "Two column row (1/3 - 2/3)"
+msgstr "Zweispaltig <br /> (1/3 - 2/3)"
+
+msgctxt "pd_pattern"
+msgid "A row with a 1/3 column and a 2/3 column."
+msgstr "Eine Zeile mit zwei Spalten (1/3 - 2/3)"
+
+
+
+# /patterns/structural/rowthreefouronefour
+
+msgctxt "pd_pattern"
+msgid "Two column row (3/4 - 1/4)"
+msgstr "Zweispaltig <br /> (3/4 - 1/4)"
+
+msgctxt "pd_pattern"
+msgid "A row with a 3/4 column and a 1/4 column."
+msgstr "Eine Zeile mit zwei Spalten (3/4 - 1/4)"
+
+
+
+# /patterns/structural/rowonefourthreefour
+
+msgctxt "pd_pattern"
+msgid "Two column row (1/4 - 3/4)"
+msgstr "Zweispaltig <br /> (1/4 - 3/4)"
+
+msgctxt "pd_pattern"
+msgid "A row with a 1/4 column and a 3/4 column."
+msgstr "Eine Zeile mit zwei Spalten (1/4 - 3/4)"
+
+
+
+# /patterns/structural/rowfivesixonesix
+
+msgctxt "pd_pattern"
+msgid "Two columns row (5/6 - 1/6)"
+msgstr "Zweispaltig <br /> (5/6 - 1/6)"
+
+msgctxt "pd_pattern"
+msgid "A row with 2 columns."
+msgstr "Eine Zeile mit 2 Spalten"
+
+
+
+# /patterns/structural/rowseventwelvefivetwelve
+
+msgctxt "pd_pattern"
+msgid "Two colum row (7/12 - 5/12)"
+msgstr "Zweispaltig <br /> (7/12 - 5/12)"
+
+msgctxt "pd_pattern"
+msgid "A row with a 7/12 column and a 5/12 column."
+msgstr "Eine Zeile mit zwei Spalten (7/12 - 5/12)"
+
+
+
+# /patterns/structural/rowonethreeonethreeonethree
+
+msgctxt "pd_pattern"
+msgid "Three column row (1/3 - 1/3 - 1/3)"
+msgstr "Dreispaltig <br /> (1/3 - 1/3 - 1/3)"
+
+msgctxt "pd_pattern"
+msgid "A row with three 1/3 columns."
+msgstr "Eine Zeile mit drei Spalten (1/3 - 1/3 - 1/3)"
+
+
+
+# /patterns/structural/rowonefourtwofouronefour
+
+msgctxt "pd_pattern"
+msgid "Three columns row (1/4 - 2/4 - 1/4)"
+msgstr "Dreispaltig <br /> (1/4 - 2/4 - 1/4)"
+
+msgctxt "pd_pattern"
+msgid "A row with three columns."
+msgstr "Eine Zeile mit drei Spalten"
+
+
+
+# /patterns/structural/rowonefouronefouronefouronefour
+
+msgctxt "pd_pattern"
+msgid "Four columns row (1/4 - 1/4 - 1/4 - 1/4)"
+msgstr "Vierspaltig <br /> (1/4 - 1/4 - 1/4 - 1/4)"
+
+msgctxt "pd_pattern"
+msgid "A row with four columns."
+msgstr "Eine Zeile mit vier Spalten"
+
+
+
+# /patterns/structural/rowonefiveonefiveonefiveonefiveonefive
+
+msgctxt "pd_pattern"
+msgid "Five columns row (1/5 - 1/5 - 1/5 - 1/5 - 1/5)"
+msgstr "Fünfspaltig <br /> (1/5 - 1/5 - 1/5 - 1/5 - 1/5)"
+
+msgctxt "pd_pattern"
+msgid "A row with five columns."
+msgstr "Eine Zeile mit fünf Spalten"
+
+
+
+# /patterns/structural/rowonesixonesixonesixonesixonesixonesix
+
+msgctxt "pd_pattern"
+msgid "Six columns row (1/6 - 1/6 - 1/6 - 1/6 - 1/6 - 1/6)"
+msgstr "Sechsspaltig <br />  (1/6 - 1/6 - 1/6 - 1/6 - 1/6 - 1/6)"
+
+msgctxt "pd_pattern"
+msgid "A row with six columns."
+msgstr "Eine Zeile mit sechs Spalten"
+
+
+
+########## /patterns/elements ##########
+
+
+
+# /patterns/elements/youtube
+
+msgctxt "pd_pattern"
+msgid "Youtube Video"
+msgstr "Youtube-Video"
+
+msgctxt "pd_pattern"
+msgid "Display a youtube video."
+msgstr "Anzeige eines Youtube-Videos"
+
+msgctxt "pd_pattern"
+msgid "Insert a youtube video."
+msgstr "Ein Youtube-Video einfügen."
+
+msgctxt "pd_pattern"
+msgid "Upload Youtube Video"
+msgstr "Youtube-Video einbinden/hochladen"
+
+msgctxt "pd_pattern"
+msgid "Video source url."
+msgstr "URL des Youtube-Videos (z.B https://youtu.be/54feQuwZuoY)"
+
+msgctxt "pd_pattern"
+msgid "URL"
+msgstr "URL"
+
+msgctxt "pd_pattern"
+msgid "Aspect ratio of the video"
+msgstr "Seitenverhältnis des Videos"
+
+msgctxt "pd_pattern"
+msgid "Video aspect ration"
+msgstr "Seitenverhältnis des Videos"
+
+
+
+# /patterns/elements/video
+
+msgctxt "pd_pattern"
+msgid "Video"
+msgstr "Video"
+
+msgctxt "pd_pattern"
+msgid "Insert a video element."
+msgstr "Ein Video einfügen."
+
+msgctxt "pd_pattern"
+msgid "Show video controls."
+msgstr "Video-Steuerelemente anzeigen."
+
+msgctxt "pd_pattern"
+msgid "Whether to automatically play the video."
+msgstr "Soll das Video automatisch abgespielt werden?"
+
+msgctxt "pd_pattern"
+msgid "Whether to loop the video."
+msgstr "Soll das Video automatisch wiederholt werden?"
+
+msgctxt "pd_pattern"
+msgid "Whether to mute the video by default."
+msgstr "Soll das Video standardmässig stumm geschaltet werden?"
+
+msgctxt "pd_pattern"
+msgid "Upload preview image for the video"
+msgstr "Vorschaubild für das Video hochladen"
+
+msgctxt "pd_pattern"
+msgid "Upload video file"
+msgstr "Videodatei hochladen"
+
+msgctxt "pd_pattern"
+msgid "The preview image"
+msgstr "Das Vorschaubild"
+
+msgctxt "pd_pattern"
+msgid "The video to play"
+msgstr "Das Video"
+
+
+
+# /patterns/composite/slider
+
+msgctxt "pd_pattern"
+msgid "Slider"
+msgstr "Slider"
+
+msgctxt "pd_pattern"
+msgid ""
+"A slider displays various elements (mostly images) in a defined "
+"interval."
+msgstr "Ein Slider zeigt verschiedene Elemente (meist Bilder) in einem definierten Intervall an."
+
+msgctxt "pd_pattern"
+msgid "As soon as the page is reloaded, the slider starts automatically."
+msgstr "Sobald die Seite neu geladen wird, startet der Slider automatisch."
+
+msgctxt "pd_pattern"
+msgid "The slides are played in an endless loop."
+msgstr "Die Slides werden in einer Endlosschleife wiedergegeben"
+
+msgctxt "pd_pattern"
+msgid "The number of seconds to show a slide"
+msgstr "Anzahl Sekunden in der ein Slide angezeigt werden soll"
+
+msgctxt "pd_pattern"
+msgid "The number of seconds to change slides"
+msgstr "Dauer des Slidewechsels in Sekunden"
+
+msgctxt "pd_pattern"
+msgid "The icon for the left arrow"
+msgstr "Das Icon für den linken Pfeil"
+
+msgctxt "pd_pattern"
+msgid "The icon for the right arrow"
+msgstr "Das Icon für den rechten Pfeil"
+
+msgctxt "pd_pattern"
+msgid "The icon for the navigation"
+msgstr "Das Icon für die Navigation"
+
+msgctxt "pd_pattern"
+msgid "A slider container."
+msgstr "Ein Slider-Container"
+
+msgctxt "pd_pattern"
+msgid "Start sliding on load"
+msgstr "Slider beim Laden automatisch starten"
+
+msgctxt "pd_pattern"
+msgid "Loop around"
+msgstr "Slides in einer Schleife wiedergeben"
+
+
+
+# /patterns/composite/collapsible
+
+msgctxt "pd_pattern"
+msgid "Collapsible"
+msgstr "Ausklappbar"
+
+msgctxt "pd_pattern"
+msgid "Collapsible element"
+msgstr "Ausklappbares Element"
+
+msgctxt "pd_pattern"
+msgid "Collapsible element (accordion, tabs)"
+msgstr "Ausklappbares Element (Akkordeon, Reiter)"
+
+msgctxt "pd_pattern"
+msgid "Set a title of the collapsible."
+msgstr "Erfassen Sie einen Titel für das ausklappbare Element"
+
+msgctxt "pd_pattern"
+msgid "Title of the collapsible"
+msgstr "Titel des Elements"
+
+msgctxt "pd_pattern"
+msgid "Type of collapsible"
+msgstr "Typ des Elements"
+
+msgctxt "pd_pattern"
+msgid "Type"
+msgstr "Typ"
+
+msgctxt "pd_pattern"
+msgid "The icon if active"
+msgstr "Das Icon für den aktiven Zustand"
+
+msgctxt "pd_pattern"
+msgid "The icon if closed"
+msgstr "Das Icon für den geschlossenen Zustand"
+
+
+
+# /patterns/elements/text
+
+msgctxt "pd_pattern"
+msgid "Formattable text"
+msgstr "Texteditor"
+
+msgctxt "pd_pattern"
+msgid "Formattable text."
+msgstr "Texteditor (formatierbarer Text)"
+
+msgctxt "pd_pattern"
+msgid "The text"
+msgstr "Der Fliesstext"
+
+
+
+# /patterns/elements/htmlinclude
+
+msgctxt "pd_pattern"
+msgid "Html include"
+msgstr "HTML-Inlcude"
+
+msgctxt "pd_pattern"
+msgid "Insert arbitrary html."
+msgstr "Erfassen Sie beliebigen HTML-Inhalt"
+
+msgctxt "pd_pattern"
+msgid "Insert any html content."
+msgstr "Erfassen Sie beliebigen HTML-Inhalt"
+
+msgctxt "pd_pattern"
+msgid "The html"
+msgstr "Der HTML-Code"
+
+
+
+# /patterns/elements/icon
+
+msgctxt "pd_pattern"
+msgid "Icon"
+msgstr "Icon"
+
+msgctxt "pd_pattern"
+msgid "Insert an icon."
+msgstr "Ein Icon einfügen."
+
+msgctxt "pd_pattern"
+msgid "The icon"
+msgstr "Das Icon"
+
+
+
+# /patterns/elements/anchornavigation
+
+msgctxt "pd_pattern"
+msgid "Anchor navigation"
+msgstr "Ankernavigation"
+
+msgctxt "pd_pattern"
+msgid "Insert an anchor navigation."
+msgstr "Eine Ankernavigation einfügen."
+
+msgctxt "pd_pattern"
+msgid "Navigation alignment"
+msgstr "Ausrichtung der Navigation"
+
+msgid "Sticky"
+msgstr "Klebend"
+
+msgid "Fixed"
+msgstr "Fixiert (losgelöst vom Textfluss)"
+
+msgctxt "pd_pattern"
+msgid "Position"
+msgstr "Position"
+
+msgid "Horizontal, top"
+msgstr "Horizontal, oben"
+
+msgid "Horizontal, bottom"
+msgstr "Horizontal, unten"
+
+msgid "Vertical, left"
+msgstr "Vertikal, links"
+
+msgid "Vertical, right"
+msgstr "Vertikal, rechts"
+
+msgctxt "pd_pattern"
+msgid "Show icon"
+msgstr "Icon anzeigen?"
+
+msgctxt "pd_pattern"
+msgid "Icon position / Link alignment"
+msgstr "Position des Icons / Ausrichtung des Links"
+
+
+
+# /patterns/elements/image
+
+msgctxt "pd_pattern"
+msgid "Image"
+msgstr "Bild"
+
+msgctxt "pd_pattern"
+msgid "Insert an image."
+msgstr "Ein Bild einfügen"
+
+msgctxt "pd_pattern"
+msgid "The image"
+msgstr "Das Bild"
+
+msgctxt "pd_pattern"
+msgid "The image title text"
+msgstr "Der Bildtitel"
+
+msgctxt "pd_pattern"
+msgid "Alternate text for an image, if the image cannot be displayed."
+msgstr "Alternativer Text, sollte das Bild nicht angezeigt werden."
+
+msgctxt "pd_pattern"
+msgid "Appears as soon as the mouse is moved over the image (tooltip)."
+msgstr "Erscheint, sobald die Maus über das Bild bewegt wird (Tooltip)."
+
+msgctxt "pd_pattern"
+msgid "The image alt text"
+msgstr "Der alternative Bildtext"
+
+msgctxt "pd_pattern"
+msgid "Open image in lightbox"
+msgstr "Bild in einer Lightbox öffnen?"
+
+
+
+# /patterns/elements/file
+
+msgctxt "pd_pattern"
+msgid "Document"
+msgstr "Dokument"
+
+msgctxt "pd_pattern"
+msgid "Insert a document."
+msgstr "Ein Dokument einfügen."
+
+msgctxt "pd_pattern"
+msgid "The document"
+msgstr "Das Dokument"
+
+msgctxt "pd_pattern"
+msgid "The text to display"
+msgstr "Der Anzeigetext"
+
+
+
+# /patterns/elements/svg
+
+msgctxt "pd_pattern"
+msgid "SVG"
+msgstr "SVG-Grafik"
+
+msgctxt "pd_pattern"
+msgid "Insert an svg."
+msgstr "Eine SVG-Grafik einfügen"
+
+msgctxt "pd_pattern"
+msgid "The SVG file"
+msgstr "Die SVG-Datei"
+
+msgctxt "pd_pattern"
+msgid "The svg title text"
+msgstr "Der SVG-Titel"
+
+msgctxt "pd_pattern"
+msgid "The svg alt text"
+msgstr "Der alternative SVG-Text"
+
+msgctxt "pd_pattern"
+msgid "Alternate text, if the SVG cannot be displayed."
+msgstr "Alternativer Text, sollte die SVG-Grafik nicht angezeigt werden."
+
+msgctxt "pd_pattern"
+msgid "Appears as soon as the mouse is moved over the SVG (tooltip)."
+msgstr "Erscheint, sobald die Maus über die SVG-Grafik bewegt wird (Tooltip)."
+
+
+
+# /patterns/elements/social
+
+msgctxt "pd_pattern"
+msgid "Social icons"
+msgstr "Social Media Icons"
+
+msgctxt "pd_pattern"
+msgid "Insert social icons."
+msgstr "Ein Social Media Icon einfügen"
+
+msgctxt "pd_pattern"
+msgid "The Facebook link"
+msgstr "Der Facebook-Link"
+
+msgctxt "pd_pattern"
+msgid "The Facebook link title text"
+msgstr "Der Facebook-Linktitel"
+
+msgctxt "pd_pattern"
+msgid "The Twitter link"
+msgstr "Der Twitter-Link"
+
+msgctxt "pd_pattern"
+msgid "The Twitter link title text"
+msgstr "Der Twitter-Linktitel"
+
+msgctxt "pd_pattern"
+msgid "The LinkedIn link"
+msgstr "Der LinkedIn-Link"
+
+msgctxt "pd_pattern"
+msgid "The LinkedIn link title text"
+msgstr "Der LinkedIn-Linktitel"
+
+msgctxt "pd_pattern"
+msgid "The Youtube link"
+msgstr "Der Youtube-Link"
+
+msgctxt "pd_pattern"
+msgid "The Youtube link title text"
+msgstr "Der Youtube-Linktitel"
+
+
+
+# /patterns/elements/toggler
+
+msgctxt "pd_pattern"
+msgid "Toggler"
+msgstr "Toggler/Schalter"
+
+msgctxt "pd_pattern"
+msgid "Show / Hide component."
+msgstr "Komponente zum Ein- und Ausblenden"
+
+msgctxt "pd_pattern"
+msgid "Target component"
+msgstr "Zielkomponente"
+
+msgctxt "pd_pattern"
+msgid "The ID of the target component"
+msgstr "Die ID der Zielkomponente"
+
+msgctxt "pd_pattern"
+msgid "Tooltip"
+msgstr "Tooltip"
+
+msgctxt "pd_pattern"
+msgid "Appears as soon as the mouse is moved over the element (tooltip)."
+msgstr "Erscheint, sobald die Maus über das Element bewegt wird (Tooltip)."
+
+msgctxt "pd_pattern"
+msgid "Lock scrolling"
+msgstr "Scrollfunktion blockieren?"
+
+
+
+# /patterns/elements/trustelement
+
+msgctxt "pd_pattern"
+msgid "Trust element"
+msgstr "Vertrauenselement"
+
+msgctxt "pd_pattern"
+msgid "Insert a trust element."
+msgstr "Ein Vertrauenselement einfügen."
+
+msgctxt "pd_pattern"
+msgid "Choose either an icon..."
+msgstr "Wählen Sie entwender ein Icon aus..."
+
+msgctxt "pd_pattern"
+msgid "... or enter a text"
+msgstr "... oder geben Sie einen Text ein"
+
+msgctxt "pd_pattern"
+msgid "The content of the tab."
+msgstr "Der Inhalt des Reiters"
+
+
+
+# /patterns/elements/gallery
+
+msgctxt "pd_pattern"
+msgid "Gallery"
+msgstr "Galerie"
+
+msgctxt "pd_pattern"
+msgid "Insert a gallery"
+msgstr "Eine Galerie einfügen"
+
+msgctxt "pd_pattern"
+msgid "Number of columns"
+msgstr "Anzahl der Spalten"
+
+msgctxt "pd_pattern"
+msgid "The gallery"
+msgstr "Die Galerie"
+
+msgctxt "pd_pattern"
+msgid "Select an existing gallery or create a new one"
+msgstr "Bestehende Galerie auswählen oder eine neue erstellen"
+
+msgctxt "pd_pattern"
+msgid "Create new gallery"
+msgstr "Eine neue Galerie erstellen"
+
+msgctxt "pd_pattern"
+msgid "Gallery name"
+msgstr "Name der Galerie"
+
+
+
+# /patterns/elements/button
+
+msgctxt "pd_pattern"
+msgid "Button"
+msgstr "Button"
+
+msgctxt "pd_pattern"
+msgid "The link"
+msgstr "Der Link"
+
+msgctxt "pd_pattern"
+msgid "The link title"
+msgstr Der Linktitel"
+
+msgctxt "pd_pattern"
+msgid "The button text"
+msgstr "Der Button-Text"
+
+msgctxt "pd_pattern"
+msgid "The button icon"
+msgstr "Das Button-Icon"
+
+msgctxt "pd_pattern"
+msgid "Icon position"
+msgstr "Position des Icons"
+
+
+
+# /patterns/elements/anchor
+
+msgctxt "pd_pattern"
+msgid "Anchor"
+msgstr "Anker"
+
+msgctxt "pd_pattern"
+msgid "Inserts a link to leapfrog to a specific point on a website page."
+msgstr "Ein Link, welcher als Sprungmarke dient um einen spezifischen Punkt auf der Website anzusteuern."
+
+msgctxt "pd_pattern"
+msgid "The anchor id"
+msgstr "Die Anker-ID"
+
+msgctxt "pd_pattern"
+msgid ""
+"The anchor name to reference (may not contain spaces and is case "
+"sensitive)."
+msgstr "Der Referenzname (darf keine Leerzeichen enthalten und Gross- und Kleinschreibung wird berücksichtigt.)"
+
+msgctxt "pd_pattern"
+msgid "The anchor label"
+msgstr "Die Anker-Beschriftung"
+
+msgctxt "pd_pattern"
+msgid "The anchor label to display in edit mode."
+msgstr "Die Beschriftung des Ankers wird nur im Editiermodus angezeigt"
+
+msgctxt "pd_pattern"
+msgid "The anchor icon"
+msgstr "Das Anker-Icon"
+
+msgctxt "pd_pattern"
+msgid "The icon is only displayed in the anchor navigation."
+msgstr "Das Icon wird zur Darstellung in der Ankernavigation angezeigt."
+
+msgctxt "pd_pattern"
+msgid "Insert an anchor."
+msgstr "Einen Anker einfügen"
+
+msgctxt "pd_pattern"
+msgid "The anchor name to reference"
+msgstr "Der Referenzname des Ankers"
+
+
+
+# /patterns/elements/quote
+
+msgctxt "pd_pattern"
+msgid "Quote"
+msgstr "Zitat"
+
+msgctxt "pd_pattern"
+msgid "Insert a quote."
+msgstr "Ein Zitat einfügen"
+
+msgctxt "pd_pattern"
+msgid "Style"
+msgstr "Darstellung"
+
+msgctxt "pd_pattern"
+msgid "The quote"
+msgstr "Das Zitat"
+
+
+
+# /patterns/elements/audio
+
+msgctxt "pd_pattern"
+msgid "Audio"
+msgstr "Audio"
+
+msgctxt "pd_pattern"
+msgid "Insert an audio element."
+msgstr "Eine Audiodatei einfügen"
+
+msgctxt "pd_pattern"
+msgid "Show audio controls."
+msgstr "Steuerelemente der Audiodatei anzeigen?"
+
+msgctxt "pd_pattern"
+msgid "Whether to automatically play the audio."
+msgstr "Soll die Audiodatei automatisch abgespielt werden?"
+
+msgctxt "pd_pattern"
+msgid "Whether to loop the audio."
+msgstr "Soll die Audiodatei automatisch wiederholt werden?"
+
+msgctxt "pd_pattern"
+msgid "Whether to mute the audio by default."
+msgstr "Soll die Audiodatei standardmässig stumm geschaltet werden?"
+
+msgctxt "pd_pattern"
+msgid "The audio to play"
+msgstr "Die Audiodatei"
