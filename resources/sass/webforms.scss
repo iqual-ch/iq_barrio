@@ -13,6 +13,13 @@
     padding: 0;
   }
 
+  details{
+    margin-bottom: 15px;
+    .details-wrapper{
+      margin-top: 15px;
+    }
+  }
+
   fieldset {
     margin-bottom: 15px;
     padding: 0;
@@ -78,6 +85,23 @@
           box-shadow: none;
           outline: none;
         }
+      }
+    }
+
+    &.form-item-file-upload{
+      .description{
+        .col-auto{
+          margin-top: 5px;
+          padding: 0;
+        }
+      }
+
+      [name="file_upload_remove_button"]{
+        width: auto;
+        padding: 0 10px;
+        font-weight: normal;
+        color: $color-link-hover;
+        background-color: rgba(0, 0, 0, 0.063);
       }
     }
 
