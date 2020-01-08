@@ -2,56 +2,96 @@
 
 @import "definitions";
 
-.view {
-  .view-content {
-    .table-responsive {
-      .views-table {
+.views-element-container{
+  > .content{
+    margin-left: -15px;
+    margin-right: -15px;
 
-        thead th,
-        thead th a,
-        thead th a:active,
-        thead th a:focus,
-        thead th a:visited,
-        thead th a:hover {
-          color: $color-standard;
-          background-color: $color-grey5;
-          border-color: $color-grey4;
+    .view-filters{
+      .form-row{
+        margin-right: 0;
+        margin-left: 0;
+        fieldset {
+          padding: 0;
+          flex-basis: 100%;
+          @media only screen and (min-width: 768px) {
+            margin-right: 15px;
+            flex-basis: auto;
+          }
+          label {
+            margin-bottom: 0;
+          }
+          input,
+          select,
+          textarea {
+            border-radius: $border-radius-base;
+            border: $border-width-base solid $border-color-base;
+            margin-top: 0rem;
+          }
+          .form-control:focus {
+            border-color: $color-primary;
+          }
         }
 
-        tbody td {
-          color: $color-standard;
-          background-color: $color-background-page;
-          border-color: $color-grey4;
+        .form-actions{
+          padding: 0;
+          flex-grow: 1;
+          display: flex;
+          justify-content: flex-end;
+          .btn-primary{
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.5;
+            padding: .375rem .75rem;
+            flex-grow: 0;
+            width: auto;
+
+            &[data-drupal-selector="edit-reset"]{
+              display: none;
+            }
+          }
         }
       }
 
-      .tableresponsive-toggle {
-        background: none;
-        border: none;
-        text-decoration: underline;
-        color: $color-link;
-        float: right;
-        font-size: $font-size-small;
-      }
-
-
-      .tablesort--asc {
-        background-image: url(/core/misc/icons/787878/twistie-down.svg);
-      }
-
-
-      .tablesort--desc {
-        background-image: url(/core/misc/icons/787878/twistie-up.svg);
-      }
     }
 
-  }
+    .view-content{
+      table{
+        tr{
+          th{
+            font-weight: normal;
+            a{
+              font-weight: normal;
+            }
+          }
+        }
+      }
 
+    }
 
-  >nav {
-    .page-link {
-      color: $color-primary;
-      border-radius: 0;
+    nav{
+      .pagination{
+        li{
+          &.active{
+            .page-link{
+              color: $font-color-buttons;
+              background-color: $background-color-buttons;
+              border-color: $background-color-buttons;
+            }
+          }
+          .page-link{
+            border-radius: 0;
+            text-decoration: none;
+            color: $color-standard;
+            &:hover, &:focus, &:active{
+              color: $color-link-hover;
+              background-color: rgba(0, 0, 0, 0.063);
+              border-color: rgba(0, 0, 0, 0.063);
+            }
+          }
+        }
+      }
+
     }
   }
 }

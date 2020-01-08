@@ -270,13 +270,16 @@ a{
     box-shadow: none;
   }
 
-  &:not(:disabled):not(.disabled):hover{
+  &:not(:disabled):not(.disabled):hover,
+  &:hover{
     color: $font-color-hover-buttons;
     background-color: $background-color-hover-buttons;
     border-color: $border-color-hover-buttons;
   }
 
-  &:not(:disabled):not(.disabled):active{
+  &:not(:disabled):not(.disabled):active,
+  &:active,
+  &:focus{
     color: $font-color-active-buttons;
     background-color: $background-color-active-buttons;
     border-color: $border-color-active-buttons
