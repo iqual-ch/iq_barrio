@@ -21,7 +21,7 @@ youtube: # The id of the pattern. Must match the name of the file.
       options:
         ratio16-9: '16:9 (Standard)'
         ratio4-3: '4:3 (Old-School)'
-        ratio-234: '2.35:1 (Cinematic)'
+        ratio-235: '2.35:1 (Cinematic)'
         ratio-185: '1.85:1 (Wide)'
         ratio-2: '2:1 (Super-Wide)'
         ratio-1: '1:1 (Square)'
