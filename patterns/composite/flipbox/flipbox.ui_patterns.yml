@@ -1,0 +1,70 @@
+flipbox:
+  label: Flipbox
+  description: Teaserbox with flippable content
+  type: row
+  category: Composite
+  icon: fas fa-sync-alt
+  pagedesigner: 1
+  weight: 100
+
+  fields:
+    column0:
+      type: cell
+      label: column0
+    column1:
+      type: cell
+      label: column0
+    effect:
+      type: select
+      label: Flip animation
+      options:
+        fade: Fade
+        push-up: Push up
+        push-down: Push down
+        push-left: Push left
+        push-right: Push right
+        slide-up: Slide up
+        slide-down: Slide down
+        slide-left: Slide left
+        slide-right: Slide right
+        reveal-up: Reveal up
+        reveal-down: Reveal down
+        reveal-left: Reveal left
+        reveal-right: Reveal right
+        hinge-up: Hinge up
+        hinge-down: Hinge down
+        hinge-left: Hinge left
+        hinge-right: Hinge right
+        flip-horiz: Flip horizontal
+        flip-vert: Flip vertical
+        flip-diag-1: Flip diagonal 1
+        flip-diag-2: Flip diagonal 2
+        shutter-out-horiz: Shutter out horizontal
+        shutter-out-vert: Shutter out vertical
+        shutter-out-diag-1: Shutter out diagonal 1
+        shutter-out-diag-2: Shutter out diagonal 2
+        shutter-in-horiz: Shutter in horizontal
+        shutter-in-vert: Shutter in vertical
+        shutter-in-out-horiz: Shutter in out horizontal
+        shutter-in-out-vert: Shutter in out vertical
+        shutter-in-out-diag-1: Shutter in out diagonal 1
+        shutter-in-out-diag-2: Shutter in out diagonal 2
+        fold-up: Fold up
+        fold-down: Fold down
+        fold-left: Fold left
+        fold-right: Fold right
+        zoom-in: Zoom in
+        zoom-out: Zoom out
+        zoom-out-up: Zoom out up
+        zoom-out-down: Zoom out down
+        zoom-out-left: Zoom out left
+        zoom-out-right: Zoom out right
+        zoom-out-flip-horiz: Zoom out flip horizontal
+        zoom-out-flip-vert: Zoom out flip vertical
+        blur: Blur
+
+  libraries:
+    - flipbox:
+        css:
+          component:
+            flipbox.css: {}
