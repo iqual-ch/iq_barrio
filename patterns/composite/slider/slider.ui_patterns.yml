@@ -15,10 +15,6 @@ slider:
       - extra
       - flex
   classes:
-    fullwidth:
-      label: "Full width"
-      description: "Use full browser width"
-      responsive: true
     fullheight:
       label: "Full height"
       description: "Use full browser height"
