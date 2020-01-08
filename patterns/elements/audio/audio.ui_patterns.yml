@@ -1,0 +1,40 @@
+audio:
+  label: Audio
+  description: Insert an audio element.
+  type: component
+  category: Element
+  icon: fas fa-file-audio
+  pagedesigner: 1
+  weight: 500
+  fields:
+    audiocontrols:
+      type: select
+      label: Show audio controls.
+      options:
+        0: No
+        1: Yes
+      preview: 0
+    audioautoplay:
+      type: select
+      label: Whether to automatically play the audio.
+      options:
+        0: No
+        1: Yes
+      preview: 0
+    audioloop:
+      type: select
+      label: Whether to loop the audio.
+      options:
+        0: No
+        1: Yes
+      preview: 0
+    audiomuted:
+      type: select
+      label: Whether to mute the audio by default.
+      options:
+        0: No
+        1: Yes
+      preview: 0
+    audio:
+      type: audio
+      label: The audio to play

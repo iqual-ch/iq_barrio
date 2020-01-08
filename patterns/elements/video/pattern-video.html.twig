@@ -1,0 +1,6 @@
+<div class="iq-video">
+  <video width="100%" height="auto" {% if videocontrols == 1 %} controls="controls" {% endif %} {% if videoautoplay == 1 %} autoplay="autoplay" {% endif %} {% if videomuted == 1 %} muted="muted" {% endif %} {% if videoloop == 1 %} loop="loop" {% endif %} poster="{{img}}">
+    <source src="{{video}}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>

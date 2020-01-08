@@ -1,0 +1,13 @@
+htmlinclude:
+  label: Html include
+  description: Insert arbitrary html.
+  type: component
+  category: Element
+  icon: fas fa-code
+  pagedesigner: 1
+  weight: 1000
+  fields:
+    html:
+      type: textarea
+      label: The html
+      description: Insert any html content.

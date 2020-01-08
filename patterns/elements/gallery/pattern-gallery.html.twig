@@ -1,0 +1,9 @@
+<div class="iq-gallery row iq-row" data-cols="{% if numcols > 0 %}{{numcols}}{% else %}4{% endif %}">
+  {% for image in images %}
+  <div class="iq-image col iq-column">
+    <a href="{{image.src}}" data-toggle="lightbox-gallery" data-gallery="gallery" data-max-width="1920" data-title="{{image.alt}}"
+      style="background-image: url({{image.src}});background-size: cover;display: block;">
+    </a>
+  </div>
+  {% endfor %}
+</div>

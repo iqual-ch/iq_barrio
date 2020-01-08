@@ -1,0 +1,46 @@
+video:
+  label: Video
+  description: Insert a video element.
+  type: component
+  category: Element
+  icon: fas fa-video
+  pagedesigner: 1
+  weight: 500
+  fields:
+    videocontrols:
+      type: select
+      label: Show video controls.
+      options:
+        0: No
+        1: Yes
+      preview: 0
+    videoautoplay:
+      type: select
+      label: Whether to automatically play the video.
+      options:
+        0: No
+        1: Yes
+      preview: 0
+    videoloop:
+      type: select
+      label: Whether to loop the video.
+      options:
+        0: No
+        1: Yes
+      preview: 0
+    videomuted:
+      type: select
+      label: Whether to mute the video by default.
+      options:
+        0: No
+        1: Yes
+      preview: 0
+    img:
+      type: image
+      label: The preview image
+    video:
+      type: video
+      label: The video to play
+  styles:
+    properties:
+      - width

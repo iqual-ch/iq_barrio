@@ -1,0 +1,50 @@
+button:
+  label: Button
+  description:
+  category: Element
+  icon: far fa-hand-pointer
+  pagedesigner: 1
+  type: component
+  fields:
+    href:
+      type: link
+      label: The link
+    title:
+      type: text
+      label: The link title
+    target:
+      type: target
+      label: The link target
+    text:
+      type: text
+      label: The button text
+    alignment:
+      type: select
+      label: Alignment
+      preview: center
+      options:
+        center: Center
+        left: Left
+        right: Right
+    button_icon:
+      type: fontawesome
+      label: The button icon
+    icon_position:
+      type: select
+      label: Icon position
+      preview: left
+      options:
+        left: Left
+        right: Right
+  classes:
+    alternate:
+      label: "Alternate button"
+      description: "Alternate button style"
+    inverted:
+      label: "Inverted"
+      description: "Invert button color"
+  libraries:
+    - button:
+        css:
+          component:
+            button.css: {}

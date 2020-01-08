@@ -1,0 +1,47 @@
+@import '../../../resources/sass/definitions';
+
+.iq-trust-element{
+  display: flex;
+  margin-bottom: $base-margin-bottom;
+  .iq-trust-element-icon {
+    color: $color-text-icons;
+    display: inline-block;
+    width: 15%;
+    font-size: $font-size-h3;
+    text-align: center;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;    
+    i{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+
+  .iq-trust-element-text {
+    padding-left: 3%;
+    width: 80%;
+    margin-left: 2%;
+    display: inline-block;
+    vertical-align: middle;
+    p {
+      margin: 0;
+    }
+    strong {
+      font-size: $font-size-h5;
+    }
+  }
+
+  .iq-trust-element-number {
+    font-weight: bold;
+    font-family: $font-family-content;
+    > span{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+}

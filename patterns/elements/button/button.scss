@@ -1,0 +1,220 @@
+@import '../../../resources/sass/definitions';
+
+
+.iq-button {
+  text-align: center;
+  color: $font-color-buttons;
+  &[data-align="left"]{
+    text-align: left;
+    a{
+      margin-left: 0;
+    }
+  }
+  &[data-align="right"]{
+    text-align: right;
+    a{
+      margin-right: 0;
+    }
+  }
+
+  &[data-icon-position="left"]{
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  &[data-icon-position="right"]{
+    i {
+      margin-left: 10px;
+    }
+  }
+
+  a {
+    display: inline-block;
+    padding: $padding-buttons;
+    font-size: $font-size-buttons;
+    font-weight: $font-weight-buttons;
+    font-style: $font-style-buttons;
+    font-family: $font-family-buttons;
+    line-height: $line-height-buttons;
+    margin: $margin-buttons;
+    color: $font-color-buttons;
+    text-align: center;
+    text-decoration: none;
+    border-color: $border-color-buttons;
+    border-style: solid;
+    border-width: $border-width-buttons;
+    border-radius: $border-radius-buttons;
+    background: $background-color-buttons;
+    transition: $transition-default;
+    &:hover,
+    &:focus  {
+      background-color: $background-color-hover-buttons;
+      color: $font-color-hover-buttons;
+      border-color: $border-color-hover-buttons;
+      transition: $transition-default;
+      text-decoration: none;
+      i{
+        color: $font-color-hover-buttons;
+        transition: $transition-default;
+      }
+    }
+    &:active{
+      background-color: $background-color-active-buttons;
+      color: $font-color-active-buttons;
+      border-color: $border-color-active-buttons;
+      transition: $transition-default;
+      text-decoration: none;
+      i{
+        color: $font-color-active-buttons;
+      }
+    }
+    i{
+      color: $font-color-buttons;
+      transition: $transition-default;
+    }
+
+  }
+
+  &.inverted{
+    a{
+      color: $font-color-buttons-inverted;
+      border-color: $border-color-buttons-inverted;
+      background: $background-color-buttons-inverted;
+      i{
+        color: $font-color-buttons-inverted;
+        transition: $transition-default;
+      }
+      &:hover,
+      &:focus {
+        background-color: $background-color-hover-buttons-inverted;
+        color: $font-color-hover-buttons-inverted;
+        border-color: $border-color-hover-buttons-inverted;
+        i{
+          color: $font-color-hover-buttons-inverted;
+          transition: $transition-default;
+        }
+      }
+      &:active {
+        background-color: $background-color-active-buttons-inverted;
+        color: $font-color-active-buttons-inverted;
+        border-color: $border-color-active-buttons-inverted;
+        transition: $transition-default;
+        i{
+          color: $font-color-active-buttons-inverted;
+          transition: $transition-default;
+        }
+      }
+    }
+  }
+
+  &.alternate{
+    a{
+      padding: $padding-buttons-alternate;
+      font-size: $font-size-buttons-alternate;
+      font-weight: $font-weight-buttons-alternate;
+      font-style: $font-style-buttons-alternate;
+      font-family: $font-family-buttons-alternate;
+      line-height: $line-height-buttons-alternate;
+      margin: $margin-buttons-alternate;
+      color: $font-color-buttons-alternate;
+      border-width: $border-width-buttons-alternate;
+      border-color: $border-color-buttons-alternate;
+      border-style: solid;
+      border-radius: $border-radius-buttons-alternate;
+      background: $background-color-buttons-alternate;
+      i{
+        color: $font-color-buttons-alternate;
+        transition: $transition-default;
+      }
+      &:hover,
+      &:focus {
+        background-color: $background-color-hover-buttons-alternate;
+        color: $font-color-hover-buttons-alternate;
+        border-color: $border-color-hover-buttons-alternate;
+        i{
+          color: $font-color-hover-buttons-alternate;
+          transition: $transition-default;
+        }
+      }
+      &:active{
+        background-color: $background-color-active-buttons-alternate;
+        color: $font-color-active-buttons-alternate;
+        border-color: $border-color-active-buttons-alternate;
+        transition: $transition-default;
+        i{
+          color: $font-color-active-buttons-alternate;
+          transition: $transition-default;
+        }
+      }
+    }
+    &.inverted{
+      a{
+        color: $font-color-buttons-alternate-inverted;
+        border-color: $border-color-buttons-alternate-inverted;
+        background: $background-color-buttons-alternate-inverted;
+        i{
+          color: $font-color-buttons-alternate-inverted;
+          transition: $transition-default;
+        }
+        &:hover,
+        &:focus {
+          background-color: $background-color-hover-buttons-alternate-inverted;
+          color: $font-color-hover-buttons-alternate-inverted;
+          border-color: $border-color-hover-buttons-alternate-inverted;
+          i{
+            color: $font-color-hover-buttons-alternate-inverted;
+            transition: $transition-default;
+          }
+        }
+        &:active{
+          background-color: $background-color-active-buttons-alternate-inverted;
+          color: $font-color-active-buttons-alternate-inverted;
+          border-color: $border-color-active-buttons-alternate-inverted;
+          transition: $transition-default;
+          i{
+            color: $font-color-active-buttons-alternate-inverted;
+            transition: $transition-default;
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+[data-gjs-type="container"]{
+  .iq-button{
+    &[alignment="left"]{
+      text-align: left !important;
+      a{
+        margin-left: 0 !important;
+      }
+    }
+    &[alignment="center"]{
+      text-align: center !important;
+      a{
+        margin-right:auto !important;
+        margin-right:auto !important;
+      }
+    }
+    &[alignment="right"]{
+      text-align: right !important;
+      a{
+        margin-right: 0 !important;
+      }
+    }
+    &[icon_position="left"]{
+      i {
+        margin-right: 10px;
+      }
+    }
+
+    &[icon_position="right"]{
+      i {
+        margin-left: 10px;
+      }
+    }
+  }
+}

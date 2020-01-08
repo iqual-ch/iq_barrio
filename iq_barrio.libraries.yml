@@ -11,6 +11,7 @@ global-styling:
       resources/css/colors.css: {}
       resources/css/style.css: {}
       resources/css/webforms.css: {}
+      resources/css/views.css: {}
       resources/css/navigation.css: {}
       resources/css/navigation-header.css: {}
       resources/css/navigation-footer.css: {}

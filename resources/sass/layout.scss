@@ -1,154 +1,411 @@
 @import "definitions";
 
-.container-fluid{
-    padding-left: 0;
-    padding-right: 0;
-    .row{
-        &.row-offcanvas{
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+
+  .iq-row {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: $base-padding-top;
+    padding-bottom: $base-padding-bottom;
+
+    &.fullwidth {
+      max-width: none;
+      margin-left: -15px;
+      margin-right: -15px;
+
+      >.iq-column:first-of-type {
+        // padding-left: 0;
+      }
+
+      >.iq-column:last-of-type {
+        // padding-right: 0;
+      }
+    }
+
+
+    &.fullwidth-small {
+      @media only screen and (max-width: 767px) {
+        max-width: none;
+        margin-left: -15px;
+        margin-right: -15px;
+
+        >.iq-column {
+          // padding-left: 0;
+          // padding-right: 0;
+
+          >.iq-row.fullwidth-small {
             margin-left: 0;
             margin-right: 0;
+          }
         }
-    }
-}
-
-.pd-content{
-    .row {
-        max-width: 1140px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: $base-padding-top;
-        padding-bottom: $base-padding-bottom;
-
-        &.fullwidth{
-            max-width: none;
-            margin-left: -15px;
-            margin-right: -15px;
-            [class*="col"]:first-of-type{
-                padding-left: 0;
-            }
-            [class*="col"]:last-of-type{
-                padding-right: 0;
-            }
-        }
-
-
-        &.fullwidth-small{
-            @media only screen and (max-width: 767px) {
-                max-width: none;
-                margin-left: -15px;
-                margin-right: -15px;
-                [class*="col"]:first-of-type{
-                    padding-left: 0;
-                }
-                [class*="col"]:last-of-type{
-                    padding-right: 0;
-                }
-            }
-        }
-
-
-        &.fullwidth-medium{
-            @media only screen and (min-width: 768px) and (max-width: 1199px) {
-                max-width: none;
-                margin-left: -15px;
-                margin-right: -15px;
-                [class*="col"]:first-of-type{
-                    padding-left: 0;
-                }
-                [class*="col"]:last-of-type{
-                    padding-right: 0;
-                }
-            }
-        }
-
-        &.fullwidth-large{
-            @media only screen and (min-width: 1200px) {
-                max-width: none;
-                margin-left: -15px;
-                margin-right: -15px;
-                [class*="col"]:first-of-type{
-                    padding-left: 0;
-                }
-                [class*="col"]:last-of-type{
-                    padding-right: 0;
-                }
-            }
-        }
-
-        &.nogutter{
-            [class*="col"]{
-                padding-left: 0;
-                padding-right: 0;
-            }
-        }
-
-
-        &.nogutter-small{
-            [class*="col"]{
-                @media only screen and (max-width: 767px) {
-                    padding-left: 0;
-                    padding-right: 0;
-                }
-            }
-        }
-
-        &.nogutter-medium{
-            [class*="col"]{
-                @media only screen and (min-width: 768px) and (max-width: 1199px) {
-                    padding-left: 0;
-                    padding-right: 0;
-                }
-            }
-        }
-
-        &.nogutter-large{
-            [class*="col"]{
-                @media only screen and (min-width: 1200px) {
-                    padding-left: 0;
-                    padding-right: 0;
-                }
-            }
-        }
-
-
-
-
-
-
       }
+    }
+
+
+    &.fullwidth-medium {
+      @media only screen and (min-width: 768px) and (max-width: 1199px) {
+        max-width: none;
+        margin-left: -15px;
+        margin-right: -15px;
+
+        >.iq-column:first-of-type {
+          // padding-left: 0;
+
+          >.iq-row.fullwidth-medium {
+            margin-left: 0;
+          }
+        }
+
+        >.iq-column:last-of-type {
+          // padding-right: 0;
+
+          >.iq-row.fullwidth-medium {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    &.fullwidth-large {
+      @media only screen and (min-width: 1200px) {
+        max-width: none;
+        margin-left: -15px;
+        margin-right: -15px;
+
+        >.iq-column:first-of-type {
+          // padding-left: 0;
+
+          >.iq-row.fullwidth-large {
+            margin-left: 0;
+          }
+        }
+
+        >.iq-column:last-of-type {
+          // padding-right: 0;
+
+          >.iq-row.fullwidth-large {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    &.nogutter {
+      >.iq-column {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    &.nogutter-small {
+      >.iq-column {
+        @media only screen and (max-width: 767px) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+
+    &.nogutter-medium {
+      >.iq-column {
+        @media only screen and (min-width: 768px) and (max-width: 1199px) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+
+    &.nogutter-large {
+      >.iq-column {
+        @media only screen and (min-width: 1200px) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+
+
+
+
+
+
+
+
+    &.noindent-small {
+      @media only screen and (max-width: 767px) {
+        .iq-row{
+          margin-left: -15px;
+          margin-right: -15px;
+        }
+      }
+    }
+
+    &.noindent-medium {
+      @media only screen and (min-width: 768px) and (max-width: 1199px) {
+        .iq-row{
+          margin-left: -15px;
+          margin-right: -15px;
+        }
+      }
+    }
+
+    &.noindent-large {
+      @media only screen and (min-width: 1200px) {
+        .iq-row{
+          margin-left: -15px;
+          margin-right: -15px;
+        }
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &.hidden {
+      display: none;
+    }
+
+    &.hidden-small {
+      @media only screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    &.hidden-medium {
+      @media only screen and (min-width: 768px) and (max-width: 1199px) {
+        display: none;
+      }
+    }
+
+    &.hidden-large {
+      @media only screen and (min-width: 1200px) {
+        display: none;
+      }
+    }
+  }
 }
 
-// .menu--main {
-//   width: 1140px;
-//   margin-left: auto;
-//   margin-right: auto;
-//   .navbar-nav>.nav-item {
-//     @media only screen and (max-width: 768px) {
-//       padding-left: 15px;
+
+.container-fluid[data-gjs-type="container"] {
+  .iq-row {
+
+    &.hidden {
+      display: flex;
+      opacity: 0.2;
+    }
+
+    &.hidden-small {
+      @media only screen and (max-width: 767px) {
+        display: flex;
+        opacity: 0.2;
+      }
+    }
+
+    &.hidden-medium {
+      @media only screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        opacity: 0.2;
+      }
+    }
+
+    &.hidden-large {
+      @media only screen and (min-width: 1200px) {
+        display: flex;
+        opacity: 0.2;
+      }
+    }
+  }
+}
+
+
+.page-top-header {
+  background-color: $color-background-meta-header;
+
+  .block-pagedesigner-part {
+    width: 100%;
+
+    padding-top: $base-padding-top / 2;
+    padding-bottom: $base-padding-bottom / 2;
+    padding-left: $base-padding-left / 2;
+    padding-right: $base-padding-right / 2;
+
+
+    * {
+      color: $color-font-meta-header
+    }
+
+    p{
+      margin: inherit;
+    }
+  }
+}
+
+.page-header {
+  background-color: $color-background-header;
+
+  * {
+    color: $color-font-header
+  }
+}
+
+
+
+
+// overwrite funny drupal stylings
+.node--type-page {
+  #main {
+    &[data-gjs-type] {
+      background-color: $color-background-page;
+    }
+
+    .node--unpublished {
+      padding: 0;
+    }
+  }
+}
+
+
+// .page-node-52 {
+//   .main-content {
+//     background-color: $color-background-meta-header;
+
+//     * {
+//       color: $color-font-meta-header
 //     }
 //   }
 // }
 
-// .region-content .pd-content>.row {
-//   margin-top: 30px;
-//   @media only screen and (max-width: 991px) {
-//     margin-top: 20px;
+// .page-node-53 {
+//   .main-content {
+//     background-color: $color-background-header;
+
+//     * {
+//       color: $color-font-header
+//     }
 //   }
-//   @media only screen and (max-width: 768px) {
-//     margin-top: 10px;
+// }
+
+// .page-node-35 {
+//   .main-content {
+//     background-color: $color-background-footer;
+
+//     * {
+//       color: $color-font-footer
+//     }
 //   }
 // }
 
-// .site-footer .block {
-//   border: none !important;
-//   padding: 0 !important;
-// }
 
-// .pd-content fieldset {
-//   padding-left: 0;
-//   padding-right: 0;
-// }
+.col {
+  min-height: 0;
+}
 
-// .btn-primary {
-//   border-radius: 0;
-// }
+.mobile-reverse-order{
+  @media only screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.mobile-keep-cols {
+  .col-xs-12 {
+
+    &.col-md {
+      -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      max-width: 100%;
+    }
+
+    &.col-md-1 {
+      -ms-flex: 0 0 8.333333%;
+      flex: 0 0 8.333333%;
+      max-width: 8.333333%;
+    }
+
+    &.col-md-2 {
+      -ms-flex: 0 0 16.666667%;
+      flex: 0 0 16.666667%;
+      max-width: 16.666667%;
+    }
+
+    &.col-md-3 {
+      -ms-flex: 0 0 25%;
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    &.col-md-4 {
+      -ms-flex: 0 0 33.333333%;
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+    }
+
+    &.col-md-5 {
+      -ms-flex: 0 0 41.666667%;
+      flex: 0 0 41.666667%;
+      max-width: 41.666667%;
+    }
+
+    &.col-md-6 {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    &.col-md-7 {
+      -ms-flex: 0 0 58.333333%;
+      flex: 0 0 58.333333%;
+      max-width: 58.333333%;
+    }
+
+    &.col-md-8 {
+      -ms-flex: 0 0 66.666667%;
+      flex: 0 0 66.666667%;
+      max-width: 66.666667%;
+    }
+
+    &.col-md-9 {
+      -ms-flex: 0 0 75%;
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    &.col-md-10 {
+      -ms-flex: 0 0 83.333333%;
+      flex: 0 0 83.333333%;
+      max-width: 83.333333%;
+    }
+
+    &.col-md-11 {
+      -ms-flex: 0 0 91.666667%;
+      flex: 0 0 91.666667%;
+      max-width: 91.666667%;
+    }
+
+  }
+
+}
+
+body.scroll-lock {
+  overflow: hidden;
+}

@@ -1,0 +1,30 @@
+anchor:
+  label: Anchor
+  description: Insert an anchor.
+  category: Element
+  icon: fas fa-anchor
+  pagedesigner: 1
+  type: component
+
+  fields:
+    anchor_id:
+      type: text
+      label: The anchor id
+      description: The anchor name to reference
+    anchor_label:
+      type: text
+      label: The anchor label
+      description: The anchor label to display in edit mode
+    anchor_icon:
+      type: fontawesome
+      label: The anchor icon
+
+  libraries:
+    - anchor:
+        css:
+          component:
+            anchor.css: {}
+        js:
+          anchor.js: {}
+      dependencies:
+        - core/drupal

@@ -1,0 +1,49 @@
+@import '../../../resources/sass/definitions';
+.container-fluid .iq-row.iq-gallery {
+  max-width: none;
+  margin-left: -15px;
+  margin-right: -15px;
+  .iq-image {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    a:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+
+  &[data-cols="2"] .col {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  &[data-cols="3"] .col {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+
+  &[data-cols="4"] .col {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  &[data-cols="5"] .col {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+.ekko-lightbox-nav-overlay a{
+  text-decoration: none;
+  &:active,
+  &:hover,
+  &:focus{
+    text-decoration: none
+  }
+}

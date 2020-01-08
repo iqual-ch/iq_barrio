@@ -1,0 +1,19 @@
+<div {% if effect == "tabs" %}class="iq-tab-element"{% else %}class="row iq-collapsible clearfix iq-row"{% endif %} data-type="{{effect}}">
+{% if effect == "tabs" %}
+    <ul class="iq-tab-list">
+        <li class="iq-tab-title">
+            <a href="">{{title}}</a>
+        </li>
+    </ul>
+    <div class="col iq-column iq-tab-content">
+        {{column0}}
+    </div>
+{% else %}
+  <div class="iq-collapsible-title">
+    <div>{{title}}</div>
+    <i class="{{iconclosed}} iq-collapsible-icon-closed"></i>
+    <i class="{{iconopen}} iq-collapsible-icon-open"></i>
+  </div>
+  <div class="col iq-column iq-collapsible-content">{{column0}}</div>
+{% endif %}
+</div>

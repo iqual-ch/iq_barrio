@@ -1,0 +1,22 @@
+file:
+  label: Document
+  description: Insert a document.
+  category: Element
+  icon: fas fa-file
+  pagedesigner: 1
+  type: component
+  fields:
+    document:
+      type: document
+      label: The document
+    title:
+      type: text
+      label: The link title text
+      preview: The link title
+    target:
+      type: target
+      label: The link target
+    text:
+      type: text
+      label: The text to display
+      preview: The link text

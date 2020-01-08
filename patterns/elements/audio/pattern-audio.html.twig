@@ -1,0 +1,6 @@
+<div class="iq-audio">
+  <audio {% if audiocontrols == 1 %} controls="controls" {% endif %} {% if audioautoplay == 1 %} autoplay="autoplay" {% endif %} {% if audiomuted == 1 %} muted="muted" {% endif %} {% if audioloop == 1 %} loop="loop" {% endif %}>
+    <source src="{{audio}}" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
+</div>

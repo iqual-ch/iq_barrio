@@ -1,0 +1,108 @@
+@import '../../../resources/sass/definitions';
+.iq-fa-icon {
+  text-align: center;
+  min-height: 30px;
+  line-height: 1;
+
+  &[data-align="left"]{
+    text-align: left;
+  }
+  &[data-align="right"]{
+    text-align: right;
+  }
+
+  i {
+    color: $color-text-icons;
+  }
+
+  a{
+    text-decoration: none;
+    &:hover,
+    &:active{
+      i{
+        color: $color-text-icons-hover;
+      }
+    }
+    &:active{
+      i{
+        color: $color-text-icons-active;
+      }
+    }
+  }
+
+  &.inverted{
+    i{
+      color: $color-text-icons-inverted;
+    }
+
+    a{
+      &:hover,
+      &:active{
+        i{
+          color: $color-text-icons-inverted-hover;
+        }
+      }
+      &:active{
+        i{
+          color: $color-text-icons-inverted-active;
+        }
+      }
+    }
+  }
+
+  &.alternate{
+
+    &.inverted{
+      i{
+        color: $color-text-icons-alternate-inverted;
+      }
+
+      a{
+        &:hover,
+        &:active{
+          i{
+            color: $color-text-icons-alternate-inverted-hover;
+          }
+        }
+        &:active{
+          i{
+            color: $color-text-icons-alternate-inverted-active;
+          }
+        }
+      }
+    }
+
+
+    i{
+      color: $color-text-icons-alternate;
+    }
+    a{
+      &:hover,
+      &:active{
+        i{
+          color: $color-text-icons-alternate-hover;
+        }
+      }
+      &:active{
+        i{
+          color: $color-text-icons-alternate-active;
+        }
+      }
+    }
+  }
+}
+
+
+[data-gjs-type="container"]{
+  .iq-fa-icon{
+    &[alignment="left"]{
+      text-align: left !important;
+    }
+    &[alignment="center"]{
+      text-align: center !important;
+    }
+    &[alignment="right"]{
+      text-align: right !important;
+    }
+  }
+}

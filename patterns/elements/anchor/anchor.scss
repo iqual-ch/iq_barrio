@@ -1,0 +1,14 @@
+@import '../../../resources/sass/definitions';
+[data-gjs-type="anchor"]{
+  a{
+    font-size: 1.5rem;
+    color: #000;
+    &:before{
+      content: 'Anchor: ';
+    }
+
+    &:after{
+      content: attr(data-anchor-label);
+    }
+  }
+}

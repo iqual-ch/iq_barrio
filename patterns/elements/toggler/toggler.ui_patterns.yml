@@ -1,0 +1,45 @@
+toggler:
+  label: Toggler
+  description: Show / Hide component.
+  category: Element
+  icon: fas fa-toggle-on
+  pagedesigner: 1
+  type: component
+  fields:
+    target:
+      type: text
+      label: Target component
+    tooltip:
+      type: text
+      label: Tooltip
+    scrolllock:
+      type: select
+      label: Lock scrolling
+      preview: yes
+      options:
+        yes: Yes
+        no: No
+    alignment:
+      type: select
+      label: Alignment
+      preview: center
+      options:
+        center: Center
+        left: Left
+        right: Right
+  libraries:
+    - toggler:
+        css:
+          component:
+            toggler.css: {}
+        js:
+          toggler.js: {}
+  styles:
+    groups:
+      - general
+      - dimension
+  classes:
+    hidden:
+      label: "Hide toggler"
+      description: "Hide toggler"
+      responsive: true

@@ -1,0 +1,32 @@
+quote:
+  label: Quote
+  description: Insert a quote.
+  category: Element
+  icon: fas fa-quote-left
+  pagedesigner: 1
+  type: component
+  fields:
+    quote_style:
+      type: select
+      label: Style
+      options:
+        lines: Lines
+        marks: Quotation marks
+    html:
+      type: html
+      label: The quote
+  classes:
+    inverted:
+      label: "Inverted"
+      description: "Inverted text color"
+    lead:
+      label: "Lead text"
+      description: "Lead text style"
+    small:
+      label: "Small text"
+      description: "small text style"
+  libraries:
+    - quote:
+        css:
+          component:
+            quote.css: {}

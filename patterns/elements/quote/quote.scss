@@ -1,0 +1,80 @@
+@import '../../../resources/sass/definitions';
+.iq-quote {
+  blockquote {
+    margin: 1rem 0;
+    &.marks {
+      margin: $margin-top-base 100px $margin-bottom-base;
+      padding: 0;
+      position: relative;
+      text-align: center;
+      font-size: $font-size-h6;
+      border-left: none;
+      min-height: 80px;
+
+      &:before {
+        content: '\f10d';
+        font-family: 'Font Awesome 5 Free';
+        font-size: 5rem;
+        color: $quote-highlight-color;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -100px;
+        line-height: 1em;
+        font-weight: 900;
+      }
+      &:after {
+        content: '\f10e';
+        font-family: 'Font Awesome 5 Free';
+        font-size: 5rem;
+        color: $quote-highlight-color;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -100px;
+        line-height: 1em;
+        font-weight: 900;
+      }
+    }
+    &.lines {
+      border-top: 5px solid $quote-highlight-color;
+      border-bottom: 5px solid $quote-highlight-color;
+      padding-top: $padding-top-base;
+      padding-bottom: $padding-bottom-base;
+      *:first-child {
+        margin-top: 0 ;
+      }
+      *:last-child {
+        margin-bottom: 0 ;
+      }
+    }
+  }
+  &.inverted {
+    blockquote{
+      &.marks {
+        &:before,
+        &:after {
+          color: $color-text-inverted;
+        }
+      }
+      &.lines {
+        border-top: 5px solid $color-text-inverted;
+        border-bottom: 5px solid $color-text-inverted;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .iq-quote blockquote.marks {
+    margin: 0 50px 10px;
+    &:before {
+      left: -50px;
+      font-size: 2rem;
+    }
+    &:after {
+      right: -50px;
+      font-size: 2rem;
+    }
+  }
+}

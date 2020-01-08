@@ -1,0 +1,245 @@
+@import '../../../resources/sass/definitions';
+
+
+
+
+.iq-anchornavigation{
+  z-index: 100;
+
+  @media print {
+    display: none;
+  }
+
+  &[data-position="sticky"]{
+    position: sticky;
+  }
+
+  &[data-position="fixed"]{
+    position: fixed;
+  }
+
+
+  // horizontal nav
+  &[data-align="top"],
+  &[data-align="bottom"]{
+
+
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1140px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &.fullwidth{
+      margin-left: -15px;
+      margin-right: -15px;
+      padding: 0;
+      max-width: none;
+      background: $anchornavigation-background-color;
+    }
+
+
+    &[data-position="fixed"]{
+      width: 100%;
+    }
+    .wrapper{
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      flex-direction: row;
+    }
+  }
+
+  &[data-align="top"]{
+    top:0;
+  }
+  &[data-align="bottom"]{
+    bottom:0;
+  }
+
+
+  // vertical nav
+  &[data-align="left"],
+  &[data-align="right"]{
+    top: 0;
+    &[data-position="fixed"]{
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .wrapper{
+      flex-direction: column;
+    }
+  }
+
+  &[data-align="left"]{
+    left:0;
+    &[data-position="sticky"]{
+      float: left;
+    }
+  }
+
+  &[data-align="right"]{
+    right: 0;
+
+    &[data-position="sticky"]{
+      float: right;
+    }
+  }
+
+
+  .wrapper{
+    display: flex;
+    background: $anchornavigation-background-color;
+    &[data-icon-position="left"]{
+      a{
+        display: flex;
+        text-align: left;
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+        i{
+          margin-right: 10px;
+          line-height: inherit;
+        }
+      }
+    }
+    &[data-icon-position="right"]{
+      a{
+        display: block;
+        text-align: right;
+        justify-content: flex-end;
+        i{
+          margin-left: 10px;
+        }
+      }
+    }
+
+    &[data-icon="0"]{
+      a{
+        i{
+          display: none;
+        }
+      }
+    }
+
+
+
+    a{
+      margin: $anchornavigation-margin;
+      padding: $anchornavigation-padding;
+      font-size:  $anchornavigation-font-size;
+      font-weight: $anchornavigation-font-weight;
+      font-style: $anchornavigation-font-style;
+      font-family: $anchornavigation-font-family;
+      line-height: $anchornavigation-line-height;
+      transition: $transition-default;
+      text-decoration: none;
+
+      color: $anchornavigation-font-color-standard;
+      border: $border-width-base solid $anchornavigation-border-color-standard;
+      background: $anchornavigation-background-color-standard;
+
+      white-space: nowrap;
+
+      &:hover,
+      a:focus,
+      a:active{
+        color: $anchornavigation-font-color-hover;
+        border: $border-width-base solid $anchornavigation-border-color-hover;
+        background: $anchornavigation-background-color-hover;
+        text-decoration: none;
+      }
+
+      &.active{
+        color: $anchornavigation-font-color-active;
+        border: $border-width-base solid $anchornavigation-border-color-active;
+        background: $anchornavigation-background-color-active;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+
+// backend
+
+.iq-anchornavigation[data-gjs-type="anchornavigation"]{
+  &[position="sticky"]{
+    position: sticky;
+  }
+
+  &[position="fixed"]{
+    position: fixed;
+  }
+
+
+  // horizontal nav
+  &[alignment="top"],
+  &[alignment="bottom"]{
+
+    // &.fullwidth{
+    //   .wrapper{
+    //     max-width: none;
+    //     padding-left: 0;
+    //     padding-right: 0;
+    //   }
+    // }
+
+    // margin-left: -15px;
+    // margin-right: -15px;
+    &[position="fixed"]{
+      width: 100%;
+    }
+    // .wrapper{
+    //   padding-left: 15px;
+    //   padding-right: 15px;
+    //   margin-left: auto;
+    //   margin-right: auto;
+    //   max-width: 1140px;
+    //   overflow-x: auto;
+    //   scroll-behavior: smooth;
+    //   -webkit-overflow-scrolling: touch;
+    //   flex-direction: row;
+    // }
+  }
+
+  &[alignment="top"]{
+    top:0;
+    bottom: auto;
+  }
+  &[alignment="bottom"]{
+    bottom:0;
+    top: auto;
+  }
+
+
+  // vertical nav
+  &[alignment="left"],
+  &[alignment="right"]{
+    top: 0;
+    bottom: auto;
+    &[position="fixed"]{
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .wrapper{
+      flex-direction: column;
+    }
+  }
+
+  &[alignment="left"]{
+    left:0;
+    right: auto;
+    &[data-position="sticky"]{
+      float: left;
+    }
+  }
+
+  &[alignment="right"]{
+    right: 0;
+    left: auto;
+    &[position="sticky"]{
+      float: right;
+    }
+  }
+}

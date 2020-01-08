@@ -1,0 +1,137 @@
+@import '../../../resources/sass/definitions';
+.search-view-row {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  .views-field-type {
+    font-size: 1.1em;
+    line-height: 1.1em;
+  }
+  .views-field-title {
+    font-size: 1.1em;
+    line-height: 1.1em;
+  }
+}
+
+// .iq-search input {
+//   width: 150px;
+//   display: none;
+//   border: none;
+//   &.show {
+//     border: $border-width-base solid $color-border-elements;
+//     padding: 1px 10px;
+//     display: inline-block !important;
+//   }
+//   &::-webkit-input-placeholder {
+//     color: $color-text-content;
+//   }
+//   &:-moz-placeholder {
+//     color: $color-text-content;
+//     opacity: 1;
+//   }
+//   &::-moz-placeholder {
+//     color: $color-text-content;
+//     opacity: 1;
+//   }
+//   &:-ms-input-placeholder {
+//     color: $color-text-content;
+//   }
+// }
+
+// .iq-search button {
+//   background: none;
+//   border: none;
+//   height: ;
+// }
+
+.iq-search{
+  text-align: center;
+  &[data-align="left"]{
+    text-align: left;
+  }
+  &[data-align="right"]{
+    text-align: right;
+  }
+
+  &[data-icon-position="left"]{
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  &[data-icon-position="right"]{
+    i {
+      margin-left: 10px;
+    }
+  }
+
+  &.active{
+    a{
+      &.search-show{
+        display: none;
+      }
+      &.search-cancel{
+        &:not([href]):not([tabindex]),
+        &:not([href]):not([tabindex]):focus,
+        &:not([href]):not([tabindex]):hover{
+          i{
+            color: $color-grey4;
+          }
+        }
+        display: inline-block;
+        color: $color-grey4;
+        margin-right: 20px;
+      }
+    }
+
+    .search-inputs.toggable{
+      display: inline-block;
+    }
+  }
+
+  a{
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    &.search-cancel{
+      display: none;
+    }
+  }
+
+  .search-inputs{
+    display: inline-block;
+    border-bottom: 1px solid $color-grey4;
+    &.toggable{
+      display: none;
+    }
+    button, input{
+      height: 30px;
+      line-height: 30px;
+      margin: 0;
+      padding: 0;
+      border: none;
+      background: none;
+      outline: none;
+      &:focus{
+        outline: none;
+      }
+
+      &::-webkit-input-placeholder {
+        color: $color-grey3;
+      }
+      &:-moz-placeholder {
+        color: $color-grey3;
+        opacity: 1;
+      }
+      &::-moz-placeholder {
+        color: $color-grey3;
+        opacity: 1;
+      }
+      &:-ms-input-placeholder {
+        color: $color-grey3;
+      }
+
+    }
+  }
+
+}
