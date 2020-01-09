@@ -19,6 +19,10 @@ slider:
       label: "Full height"
       description: "Use full browser height"
       responsive: true
+    fullwidth:
+      label: "Full width"
+      description: "Use full browser width"
+      responsive: true
     nogutter:
       label: "No gutters"
       description: "No margins around columns"
