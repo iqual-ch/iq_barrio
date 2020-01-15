@@ -1,7 +1,7 @@
 {
   "name": "iqual/iq_barrio",
   "description": "Generic barrio sub theme for iqual websites.",
-  "type": "drupal-theme",
+  "type": "drupal-custom-theme",
   "keywords": [
     "Drupal"
   ],
