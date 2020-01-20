@@ -1,5 +1,5 @@
 [data-drupal-selector="edit-iq-theme"] .styling-preview {
-    background-color:                 rgba({{color_page_background}},{{opacity_page_background}});
+    background-color:                 rgba({{color_page_background}},{{opacity_color_page_background}});
 }
 
 [data-drupal-selector="edit-iq-theme"] .styling-preview h1{
