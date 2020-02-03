@@ -28,7 +28,7 @@
       top: 0;
       bottom: 0;
       left: 0;
-      right: 0;    
+      right: 0;
     }
   }
 
@@ -37,7 +37,7 @@
     &:hover{
       .flip-content.hover{
         -webkit-transform: translate(0, 0);
-        transform: translate(0, 0);  
+        transform: translate(0, 0);
         opacity: 1;
       }
     }
@@ -58,7 +58,7 @@
         transform: translate(0, -15%);
       }
     }
-        
+
     &[data-flip-effect="fade-in-left"]{
       .hover{
         -webkit-transform: translate(-15%, 0);
@@ -177,7 +177,7 @@
         transform: translateX(-100%);
       }
     }
-    
+
     &[data-flip-effect="slide-top-left"]{
       .hover{
         -webkit-transform: translate(-100%, -100%);
@@ -262,28 +262,28 @@
         transform: translateX(-100%);
       }
     }
-    
+
     &[data-flip-effect="reveal-top-left"]{
       &::before{
         -webkit-transform: translate(-100%, -100%);
         transform: translate(-100%, -100%);
       }
     }
-    
+
     &[data-flip-effect="reveal-top-right"]{
       &::before{
         -webkit-transform: translate(100%, -100%);
         transform: translate(100%, -100%);
       }
     }
-    
+
     &[data-flip-effect="reveal-bottom-left"]{
       &::before{
         -webkit-transform: translate(-100%, 100%);
         transform: translate(-100%, 100%);
       }
     }
-    
+
     &[data-flip-effect="reveal-bottom-right"]{
       &::before{
         -webkit-transform: translate(100%, 100%);
@@ -303,7 +303,7 @@
         transition-delay: 0.21s;
       }
       .init{
-        opacity: 0; 
+        opacity: 0;
       }
     }
 
@@ -482,7 +482,7 @@
         transform-origin: 50% 0%;
       }
     }
-    
+
     &[data-flip-effect="flip-diag-1"]{
       &:hover{
         .hover{
@@ -500,7 +500,7 @@
         transform: rotate3d(1, -1, 0, 100deg);
       }
     }
-  
+
     &[data-flip-effect="flip-diag-2"]{
       &:hover{
         .hover{
@@ -517,7 +517,7 @@
         -webkit-transform: rotate3d(1, 1, 0, 100deg);
         transform: rotate3d(1, 1, 0, 100deg);
       }
-    } 
+    }
   }
 
   // shutter out
@@ -617,7 +617,7 @@
   // sjutter in
 
   &[data-flip-effect^="shutter-in"]{
-    &::before, 
+    &::before,
     &::after{
       background: $color-primary;
       position: absolute;
@@ -675,7 +675,7 @@
         }
       }
     }
-    
+
     &[data-flip-effect="shutter-in-out-horiz"]{
       &::after,
       &::before{
@@ -897,7 +897,7 @@
     .hover{
       opacity: 0;
       -webkit-transform: scale(0.5);
-      transform: scale(0.5);  
+      transform: scale(0.5);
     }
   }
 
@@ -1171,4 +1171,9 @@
               transform: scale(0.8) translateX(150%);
       opacity: 0.5;
   }
+}
+
+// backend
+.iq-flipbox[data-gjs-type] .flip-content.hover {
+  position: relative !important;
 }
