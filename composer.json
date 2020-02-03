@@ -11,6 +11,7 @@
     "source": "https://github.com/iqual-ch/iq_barrio"
   },
   "require": {
-    "drupal/bootstrap_barrio": "*"
+    "drupal/bootstrap_barrio": "*",
+    "iqual/iq_barrio_composer_update": "*"
   }
 }
