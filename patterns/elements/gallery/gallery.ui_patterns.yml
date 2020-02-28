@@ -6,6 +6,7 @@ gallery:
   pagedesigner: 1
   type: component
   autorender: false
+  styles: 1
   fields:
     numcols:
       type: select

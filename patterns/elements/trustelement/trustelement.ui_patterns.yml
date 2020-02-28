@@ -15,6 +15,7 @@ trustelement:
     content:
       type: html
       label: The text
+  styles: 1
   libraries:
     - trustelement:
         css:

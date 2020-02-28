@@ -6,7 +6,7 @@ flipbox:
   icon: fas fa-sync-alt
   pagedesigner: 1
   weight: 100
-
+  styles: 1
   fields:
     column0:
       type: cell

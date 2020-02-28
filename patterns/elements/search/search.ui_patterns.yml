@@ -5,6 +5,7 @@ search:
   icon: fas fa-search
   pagedesigner: 1
   type: component
+  styles: 1
   fields:
     href:
       type: link

@@ -6,14 +6,7 @@ slider:
   icon: fas fa-stream
   pagedesigner: 1
   weight: 1000
-  styles:
-    groups:
-      - general
-      - dimension
-      - typography
-      - decorations
-      - extra
-      - flex
+  styles: 1
   classes:
     fullheight:
       label: "Full height"

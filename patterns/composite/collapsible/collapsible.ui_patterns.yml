@@ -27,14 +27,7 @@ collapsible:
     column0:
       type: cell
       label: column0
-  styles:
-    groups:
-      - general
-      - dimension
-      - typography
-      - decorations
-      - extra
-      - flex
+  styles: 1
   libraries:
     - collapsible:
         js:

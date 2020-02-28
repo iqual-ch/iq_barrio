@@ -26,9 +26,7 @@ youtube: # The id of the pattern. Must match the name of the file.
         ratio-2: '2:1 (Super-Wide)'
         ratio-1: '1:1 (Square)'
         ratio9-16: '9:16 (Portrait mode)'
-  styles:
-    properties:
-      - width
+  styles: 1
 
   libraries: # List additional assets as follows
     - youtube: # for css file (same name as scss file)

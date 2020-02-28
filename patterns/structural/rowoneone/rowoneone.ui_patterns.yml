@@ -6,14 +6,7 @@ rowoneone:
   icon: fas fa-columns
   pagedesigner: 1
   weight: 100
-  styles:
-    groups:
-      - general
-      - dimension
-      - typography
-      - decorations
-      - extra
-      - flex
+  styles: 1
   classes:
     fullwidth:
       label: "Full width"

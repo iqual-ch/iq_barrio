@@ -5,6 +5,7 @@ file:
   icon: fas fa-file
   pagedesigner: 1
   type: component
+  styles: 1
   fields:
     document:
       type: document

@@ -33,9 +33,7 @@ img:
       options:
         no_lightbox: No
         lightbox: Yes
-  styles:
-    properties:
-      - width
+  styles: 1
   relations:
     image_img:
       image_alt:
