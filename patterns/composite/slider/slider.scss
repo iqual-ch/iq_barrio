@@ -51,6 +51,12 @@
 
   &[data-gjs-type]{
     height: auto !important;
+    .iq-image{
+      height: auto !important;
+      img{
+        height: auto !important;
+      }
+    }
   }
 
   &.outside-controls-small {

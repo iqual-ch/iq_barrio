@@ -43,6 +43,4 @@ icon:
       label: "Inverted"
       description: "Invert icon color"
 
-  styles:
-    properties:
-      - font-size
+  styles: 1

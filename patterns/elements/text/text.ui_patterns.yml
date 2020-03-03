@@ -5,6 +5,7 @@ text:
   icon: fas fa-font
   pagedesigner: 1
   type: component
+  styles: 1
   fields:
     content:
       type: html

@@ -5,7 +5,7 @@ anchornavigation:
   icon: fas fa-list-alt
   pagedesigner: 1
   type: row
-
+  styles: 1
   fields:
     alignment:
       type: select

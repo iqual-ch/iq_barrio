@@ -6,6 +6,8 @@ htmlinclude:
   icon: fas fa-code
   pagedesigner: 1
   weight: 1000
+  styles: 1
+  autorender: false
   fields:
     html:
       type: textarea

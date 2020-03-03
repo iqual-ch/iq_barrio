@@ -30,3 +30,4 @@ quote:
         css:
           component:
             quote.css: {}
+  styles: 1

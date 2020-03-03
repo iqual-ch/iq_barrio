@@ -36,10 +36,7 @@ toggler:
             toggler.css: {}
         js:
           toggler.js: {}
-  styles:
-    groups:
-      - general
-      - dimension
+  styles: 1
   classes:
     hidden:
       label: "Hide toggler"

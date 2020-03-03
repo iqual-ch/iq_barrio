@@ -5,6 +5,7 @@ button:
   icon: far fa-hand-pointer
   pagedesigner: 1
   type: component
+  styles: 1
   fields:
     href:
       type: link

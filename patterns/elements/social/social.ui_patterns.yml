@@ -5,6 +5,7 @@ social:
   icon: fas fa-share-alt
   pagedesigner: 1
   type: component
+  styles: 1
   fields:
     href_facebook:
       type: link

@@ -41,6 +41,4 @@ video:
     video:
       type: video
       label: Upload video file
-  styles:
-    properties:
-      - width
+  styles: 1

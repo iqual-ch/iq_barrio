@@ -31,9 +31,7 @@ svg:
     # parent_class:
     #   type: text
     #   label: Class name
-  styles:
-    properties:
-      - width
+  styles: 1
   relations:
     svg_file:
       svg_alt:
