@@ -61,7 +61,7 @@ rowoneone:
         angeled-top-2:  "Angeled (20 deg)"
         angeled-top-4:  "Angeled (40 deg)"
         angeled-top-reverse-2:  "Reverse Angeled (20 deg)"
-        angeled-top-reverse-4:  "ReverseAngeled (40 deg)"
+        angeled-top-reverse-4:  "Reverse Angeled (40 deg)"
 #        ramped-top: "Ramp"
     bottom_border:
       label: "Bottom border decoration"

@@ -12,111 +12,169 @@
 
 ################ Global Stylings ################
 
+msgctxt "pd_pattern"
 msgid "Full width"
 msgstr "Volle Breite"
 
+msgctxt "pd_pattern"
 msgid "Use full browser width"
 msgstr "Nutzt die volle Breite des Browsers"
 
+msgctxt "pd_pattern"
 msgid "No gutters"
 msgstr "Kein Aussenabstand"
 
+msgctxt "pd_pattern"
 msgid "No margins around columns"
 msgstr "Entfernt die Aussenabstände der einzelnen Spalten."
 
+msgctxt "pd_pattern"
 msgid "No indent"
 msgstr "Kein Einzug"
 
+msgctxt "pd_pattern"
 msgid "Prevent children from having left and right padding"
 msgstr ""
 "Sorgt bei Verschachtelungen dafür, dass alle darin enthaltenen "
 "Elemente nicht eingerückt werden."
 
+msgctxt "pd_pattern"
 msgid "Hide row"
 msgstr "Zeile ausblenden"
 
+msgctxt "pd_pattern"
 msgid "Keep cols on mobile"
 msgstr "Spalten auf Mobilgeräten beibehalten"
 
+msgctxt "pd_pattern"
 msgid "Prevent columns from beeing stretched to 100% on mobile devices"
 msgstr ""
 "Verhindert, dass Spalten auf Mobilgeräten eine Breite von 100% "
 "erhalten."
 
+msgctxt "pd_pattern"
 msgid "Reverse order on mobile"
 msgstr "Umgekehrte Reihenfolge für Mobilgeräte"
 
+msgctxt "pd_pattern"
 msgid "Reverse order of columns on mobile devices"
 msgstr "Umgekehrte Reihenfolge der Spalten auf Mobilgeräten."
 
+msgctxt "pd_pattern"
 msgid "Background color"
 msgstr "Hintergrundfarbe"
 
+msgctxt "pd_pattern"
 msgid "Font color"
 msgstr "Schriftfarbe"
 
+msgctxt "pd_pattern"
 msgid "Primary color"
 msgstr "Primäre Farbe"
 
+msgctxt "pd_pattern"
 msgid "Secondary color"
 msgstr "Sekundäre Farbe"
 
+msgctxt "pd_pattern"
 msgid "Tertiary color"
 msgstr "Tertiäre Farbe"
 
+msgctxt "pd_pattern"
 msgid "Quaternary color"
 msgstr "Quartiäre Farbe"
 
+msgctxt "pd_pattern"
 msgid "Grey 1"
 msgstr "Grau 1"
 
+msgctxt "pd_pattern"
 msgid "Grey 2"
 msgstr "Grau 2"
 
+msgctxt "pd_pattern"
 msgid "Grey 3"
 msgstr "Grau 3"
 
+msgctxt "pd_pattern"
 msgid "Grey 4"
 msgstr "Grau 4"
 
+msgctxt "pd_pattern"
 msgid "Grey 5"
 msgstr "Grau 5"
 
+msgctxt "pd_pattern"
 msgid "Black"
 msgstr "Schwarz"
 
+msgctxt "pd_pattern"
 msgid "White"
 msgstr "Weiss"
 
+msgctxt "pd_pattern"
 msgid "Bottom border decoration"
 msgstr "Dekoration Kante (unten)"
 
+msgctxt "pd_pattern"
 msgid "Top border decoration"
 msgstr "Dekoration Kante (oben)"
 
+msgctxt "pd_pattern"
 msgid "Angeled (20 deg)"
 msgstr "20° Winkel (rechts nach links)"
 
+msgctxt "pd_pattern"
 msgid "Angeled (40 deg)"
 msgstr "40° Winkel (rechts nach links)"
 
+msgctxt "pd_pattern"
 msgid "Reverse Angeled (20 deg)"
 msgstr "20° Winkel (links nach rechts)"
 
+msgctxt "pd_pattern"
 msgid "Reverse Angeled (40 deg)"
 msgstr "40° Winkel (links nach rechts)"
 
+msgctxt "pd_pattern"
 msgid "Color scheme"
 msgstr "Farbschema"
 
+msgctxt "pd_pattern"
 msgid "White text on orange background"
 msgstr "Weisser Text auf orangem Hintergrund"
 
+msgctxt "pd_pattern"
 msgid "Greyscale"
 msgstr "Graustufen"
 
+msgctxt "pd_pattern"
 msgid "Dark"
 msgstr "Dunkel"
+
+msgctxt "pd_pattern"
+msgid "Inverted"
+msgstr "Invertiert"
+
+msgctxt "pd_pattern"
+msgid "Inverted text color"
+msgstr "Invertierte Textfarbe"
+
+msgctxt "pd_pattern"
+msgid "Small text"
+msgstr "Text klein"
+
+msgctxt "pd_pattern"
+msgid "small text style"
+msgstr "Formatierung kleiner Text"
+
+msgctxt "pd_pattern"
+msgid "Lead text"
+msgstr "Leadtext"
+
+msgctxt "pd_pattern"
+msgid "Lead text style"
+msgstr "Formatierung Leadtext"
 
 
 
@@ -186,7 +244,9 @@ msgctxt "pd_pattern"
 msgid "column5"
 msgstr "Spalte 5"
 
-
+msgctxt "pd_pattern"
+msgid "Rows"
+msgstr "Zeilen"
 
 # /patterns/structural/rowoneone
 
