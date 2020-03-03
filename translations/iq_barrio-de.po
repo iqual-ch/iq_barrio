@@ -10,497 +10,6 @@
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: iq_barrio.theme:154;307
-msgid "Primary color"
-msgstr "Primäre Farbe"
-
-#: iq_barrio.theme:155;313
-msgid "Secondary color"
-msgstr "Sekundäre Farbe"
-
-#: iq_barrio.theme:156;319
-msgid "Tertiary color"
-msgstr "Tertiäre Farbe"
-
-#: iq_barrio.theme:157;325
-msgid "Quaternary color"
-msgstr "Quartiäre Farbe"
-
-#: iq_barrio.theme:160
-msgid "Grey 1"
-msgstr "Grau 1"
-
-#: iq_barrio.theme:161
-msgid "Grey 2"
-msgstr "Grau 2"
-
-#: iq_barrio.theme:162
-msgid "Grey 3"
-msgstr "Grau 3"
-
-#: iq_barrio.theme:163
-msgid "Grey 4"
-msgstr "Grau 4"
-
-#: iq_barrio.theme:164
-msgid "Grey 5"
-msgstr "Grau 5"
-
-#: iq_barrio.theme:167
-msgid "Black"
-msgstr "Schwarz"
-
-#: iq_barrio.theme:168
-msgid "White"
-msgstr "Weiss"
-
-#: iq_barrio.theme:173
-msgid "100 (lightest)"
-msgstr "100 (leichteste)"
-
-#: iq_barrio.theme:175
-msgid "300"
-msgstr "300"
-
-#: iq_barrio.theme:176
-msgid "400 (normal)"
-msgstr "400 (normal)"
-
-#: iq_barrio.theme:177
-msgid "500"
-msgstr "500"
-
-#: iq_barrio.theme:178
-msgid "600"
-msgstr "600"
-
-#: iq_barrio.theme:179
-msgid "700 (bold)"
-msgstr "700 (fett)"
-
-#: iq_barrio.theme:180
-msgid "800"
-msgstr "800"
-
-#: iq_barrio.theme:181
-msgid "900 (boldest)"
-msgstr "900 (fetteste)"
-
-#: iq_barrio.theme:185
-msgid "Normal"
-msgstr "Normal"
-
-#: iq_barrio.theme:186
-msgid "Italic"
-msgstr "Kursiv"
-
-#: iq_barrio.theme:198
-msgid "Arial"
-msgstr "Arial"
-
-#: iq_barrio.theme:199
-msgid "Courier New"
-msgstr "Courier New"
-
-#: iq_barrio.theme:200
-msgid "Helvetica"
-msgstr "Helvetica"
-
-#: iq_barrio.theme:201
-msgid "Times New Roman"
-msgstr "Times New Roman"
-
-#: iq_barrio.theme:202
-msgid "Verdana"
-msgstr "Verdana"
-
-#: iq_barrio.theme:203
-msgid "Open Sans, sans-serif"
-msgstr "Open Sans, sans-serif"
-
-#: iq_barrio.theme:230
-msgid "Custom Theme Settings"
-msgstr "Einstellungen benutzerdefiniertes Theme"
-
-#: iq_barrio.theme:239
-msgid "Colors"
-msgstr "Farben"
-
-#: iq_barrio.theme:248
-msgid "Base color definitions"
-msgstr "Basis Farbdefinitionen"
-
-#: iq_barrio.theme:331
-msgid "Color assignments"
-msgstr "Farbzuweisungen"
-
-#: iq_barrio.theme:336;557;748;942;999;1667;3075;3181;3216;3236;3256;3282;3302;3322;3356;3376;3396;3422;3442;3462;3503;3530;3574;3621;3637;3652
-msgid "Color"
-msgstr "Farbe"
-
-#: iq_barrio.theme:349;371;393;415;437;459;480;502;570;591;760;783;955;976;1014;1032;1212;1230;1251;1269;1292;1310;1332;1350;1372;1390;1412;1430;1491;1509;1530;1570;1591;1679;2045;2067;2085;2105;2126;2144;2164;2185;2203;2232;2254;2272;2292;2313;2331;2351;2372;2390;2651;2673;2691;2711;2732;2750;2770;2791;2809;2838;2860;2878;2898;2919;2937;2957;2978;2996;3088;3106;3149;3167;3194;3229;3249;3269;3295;3315;3335;3369;3389;3409;3435;3455;3475;3516;3545;3563;3588;3606;3629;3645;3660;3822;3839;3857;3870;3885;3903;3916;3931;3949;3962
-msgid "Opacity"
-msgstr "Transparenz"
-
-#: iq_barrio.theme:358;402;446;1238;1279;1358;1398;1478;2054;2113;2171;2241;2300;2358;2660;2719;2777;2847;2906;2964;3094;3847;3893;3938
-msgid "Background color"
-msgstr "Hintergrundfarbe"
-
-#: iq_barrio.theme:380;424;1257;1298;1338;1378;1418;1518;1557;1578;2032;2092;2151;2219;2279;2338;2638;2698;2757;2825;2885;2944;3551;3831;3877;3923
-msgid "Font color"
-msgstr "Schriftfarbe"
-
-#: iq_barrio.theme:467
-msgid "Font color footer"
-msgstr "Schriftfarbe im Fussbereich"
-
-#: iq_barrio.theme:489;1199
-msgid "Background color "
-msgstr "Hintergrundfarbe"
-
-#: iq_barrio.theme:511
-msgid "Typography"
-msgstr "Typografie"
-
-#: iq_barrio.theme:512
-msgid "Typography definitions."
-msgstr "Typografie-Definitionen."
-
-#: iq_barrio.theme:518
-msgid "Headings"
-msgstr "Überschriften"
-
-#: iq_barrio.theme:578;770;963;1020
-msgid "Inverted color"
-msgstr "Kontrastfarbe (Konträr)"
-
-#: iq_barrio.theme:603;793;1078;1810;2431;3691
-msgid "Font family"
-msgstr "Schriftfarbe"
-
-#: iq_barrio.theme:613;802;1086;1819;2440;3699
-msgid "Font weight"
-msgstr "Schriftdicke"
-
-#: iq_barrio.theme:621;809;1093;1826;2447;3707
-msgid "Font style"
-msgstr "Formatvorlage"
-
-#: iq_barrio.theme:629;815;1101;1832;2453;3713
-msgid "Line height"
-msgstr "Höhe der Textzeile"
-
-#: iq_barrio.theme:646;835
-msgid "Font-size<br/>min"
-msgstr "Schriftgrösse<br />min"
-
-#: iq_barrio.theme:661;850
-msgid "<br/>max"
-msgstr "<br />max"
-
-#: iq_barrio.theme:680;868
-msgid "Margin (top, bottom)"
-msgstr "Aussenabstand (oben, unten)"
-
-#: iq_barrio.theme:712
-msgid "Text elements"
-msgstr "Textelemente"
-
-#: iq_barrio.theme:922
-msgid "Links"
-msgstr "Links"
-
-#: iq_barrio.theme:984;1041
-msgid "Text decoration"
-msgstr "Textunterstreichung"
-
-#: iq_barrio.theme:986;1043
-msgid "Underline"
-msgstr "Unterstrichen"
-
-#: iq_barrio.theme:987;1044
-msgid "Dotted"
-msgstr "Gepunktet"
-
-#: iq_barrio.theme:988;1045
-msgid "Dashed"
-msgstr "Gestrichelt"
-
-#: iq_barrio.theme:989;1046
-msgid "none"
-msgstr "keine"
-
-#: iq_barrio.theme:1064
-msgid "Navigation"
-msgstr "Navigation"
-
-#: iq_barrio.theme:1065
-msgid "Navigation settings"
-msgstr "Navigationseinstellungen"
-
-#: iq_barrio.theme:1072
-msgid "Navigation Main"
-msgstr "Hauptnavigation"
-
-#: iq_barrio.theme:1118;1847;2470;3728
-msgid "Font size"
-msgstr "Schriftgrösse"
-
-#: iq_barrio.theme:1137
-msgid "Margin (top, left/right, bottom)"
-msgstr "Aussenabstand (oben, links/rechts, unten)"
-
-#: iq_barrio.theme:1169
-msgid "Padding (top, left/right, bottom)"
-msgstr "Innenabstand (oben, links/rechts, unten)"
-
-#: iq_barrio.theme:1218;1497
-msgid "Font color "
-msgstr "Schriftfarbe"
-
-#: iq_barrio.theme:1319
-msgid "Background"
-msgstr "Hintergrund"
-
-#: iq_barrio.theme:1472
-msgid "Navigation Mobile"
-msgstr "Mobile Navigation"
-
-#: iq_barrio.theme:1551
-msgid "Navigation Sidebar"
-msgstr "Seitliche Navigation"
-
-#: iq_barrio.theme:1609
-msgid "Styling"
-msgstr "Styling"
-
-#: iq_barrio.theme:1610
-msgid "Borders, shadows etc."
-msgstr "Rahmen, Schatten etc."
-
-#: iq_barrio.theme:1617
-msgid "Border"
-msgstr "Rahmen"
-
-#: iq_barrio.theme:1631
-msgid "Width"
-msgstr "Breite"
-
-#: iq_barrio.theme:1646
-msgid "Style"
-msgstr "Darstellung"
-
-#: iq_barrio.theme:1696
-msgid "Border Radius"
-msgstr "Eckenrundung des Rahmens"
-
-#: iq_barrio.theme:1711
-msgid "Margins & Paddings"
-msgstr "Aussenabstände und Innenabstände"
-
-#: iq_barrio.theme:1723
-msgid "Margin (Top, right, bottom, left)"
-msgstr "Aussenabstand (oben, rechts, unten, links)"
-
-#: iq_barrio.theme:1760
-msgid "Padding (Top, right, bottom, left)"
-msgstr "Innenabstand (oben, rechts, unten, links)"
-
-#: iq_barrio.theme:1796
-msgid "Buttons"
-msgstr "Buttons"
-
-#: iq_barrio.theme:1797
-msgid "Styling of buttons."
-msgstr "Darstellung der Buttons"
-
-#: iq_barrio.theme:1804
-msgid "Default Button"
-msgstr "Standard Button"
-
-#: iq_barrio.theme:1870;2490
-msgid "Border (top, right, bottom, left)"
-msgstr "Rahmenlinie (oben, rechts, unten, links)"
-
-#: iq_barrio.theme:1906;2526
-msgid "Border radius"
-msgstr "Eckenrundung des Rahmens"
-
-#: iq_barrio.theme:1944;2556;3747
-msgid "Margin (top, right, bottom, left)"
-msgstr "Aussenabstand (oben, rechts, unten, links)"
-
-#: iq_barrio.theme:1982;2594;3785
-msgid "Padding (top, right, bottom, left)"
-msgstr "Innenabstand (oben, rechts, unten, links)"
-
-#: iq_barrio.theme:2027;2633
-msgid "Standard color settings"
-msgstr "Standard Farbeinstellungen"
-
-#: iq_barrio.theme:2073;2191;2260;2378;2679;2797;2866;2984;3863;3955
-msgid "Border color"
-msgstr "Rahmenfarbe"
-
-#: iq_barrio.theme:2132;2319;2738;2925;3909
-msgid "Hover border color"
-msgstr "Rahmenfarbe (Hover)"
-
-#: iq_barrio.theme:2214;2820
-msgid "Inverted color settings"
-msgstr "Einstellungen der Kontrastfarben"
-
-#: iq_barrio.theme:2425
-msgid "Alterante Button"
-msgstr "Alternativer Button"
-
-#: iq_barrio.theme:3041
-msgid "Patterns"
-msgstr "Patterns"
-
-#: iq_barrio.theme:3042
-msgid "Styling of patterns."
-msgstr "Gestaltung der Patterns"
-
-#: iq_barrio.theme:3050
-msgid "Slider"
-msgstr "Slider"
-
-#: iq_barrio.theme:3063;3124
-msgid "Size"
-msgstr "Grösse"
-
-#: iq_barrio.theme:3136
-msgid "Colo standard"
-msgstr "Standardfarbe"
-
-#: iq_barrio.theme:3155
-msgid "Color active"
-msgstr "Farbe (aktiver Zustand)"
-
-#: iq_barrio.theme:3176
-msgid "Quote"
-msgstr "Zitat"
-
-#: iq_barrio.theme:3203
-msgid "Icons"
-msgstr "Icons"
-
-#: iq_barrio.theme:3209
-msgid "Default icon"
-msgstr "Standard Icon"
-
-#: iq_barrio.theme:3348
-msgid "Alternate icon"
-msgstr "Alternatives Icon"
-
-#: iq_barrio.theme:3498
-msgid "Social"
-msgstr "Social"
-
-#: iq_barrio.theme:3525
-msgid "Tabbed content"
-msgstr "Tabbed content"
-
-#: iq_barrio.theme:3594
-msgid "Tab font color active"
-msgstr "Schriftfarbe eines aktiven Tabs"
-
-#: iq_barrio.theme:3616
-msgid "Toggler"
-msgstr "Toggler/Schalter"
-
-#: iq_barrio.theme:3685
-msgid "Anchor navigation"
-msgstr "Anker Navigation"
-
-#: iq_barrio.theme:3814
-msgid "Wrapper background color"
-msgstr "Hintergrundfarbe des Wrappers"
-
-#: iq_barrio.info.yml:0
-msgid "iqual Barrio Subtheme"
-msgstr "iqual Barrio Subtheme"
-
-#: iq_barrio.info.yml:0
-msgid "iqual Bootstrap Barrio SubTheme."
-msgstr "iqual Bootstrap Barrio SubTheme."
-
-#: color/color.inc:11
-msgid "Header background top"
-msgstr "Kopfzeilenhintergrund (oben)"
-
-#: color/color.inc:12
-msgid "Header background bottom"
-msgstr "Kopfzeilenhintergrund (unten)"
-
-#: color/color.inc:13
-msgid "Main background"
-msgstr "Haupthintergrund"
-
-#: color/color.inc:14
-msgid "Sidebar background"
-msgstr "Hintergrund der Seitenleiste"
-
-#: color/color.inc:15
-msgid "Sidebar borders"
-msgstr "Rahmen der Seitenleiste"
-
-#: color/color.inc:16
-msgid "Footer background"
-msgstr "Hintergrund der Fusszeile"
-
-#: color/color.inc:17
-msgid "Primary button background"
-msgstr "Hintergrundfarbe des primären Buttons"
-
-#: color/color.inc:18
-msgid "Primary button hover"
-msgstr "Primär-Button überfahren"
-
-#: color/color.inc:19
-msgid "Title and slogan"
-msgstr "Titel und Slogan"
-
-#: color/color.inc:20
-msgid "Text color"
-msgstr "Schriftfarbe"
-
-#: color/color.inc:21
-msgid "Link color"
-msgstr "Linkfarbe"
-
-#: color/color.inc:26
-msgid "Blue Lagoon (default)"
-msgstr "Blue Lagoon (default)"
-
-#: color/color.inc:42
-msgid "Firehouse"
-msgstr "Firehouse"
-
-#: color/color.inc:58
-msgid "Ice"
-msgstr "Ice"
-
-#: color/color.inc:74
-msgid "Plum"
-msgstr "Plum"
-
-#: color/color.inc:90
-msgid "Slate"
-msgstr "Slate"
-
-#: config/schema/iq_barrio.schema.yml:0
-msgid "iqual theme settings"
-msgstr "iqual Theme-Einstellungen"
-
-msgid "Inverted"
-msgstr "Konträr"
-
-msgid "Inverted Text color"
-msgstr "Kontrastfarbe des Textes"
-
-
 ################ Global Stylings ################
 
 msgid "Full width"
@@ -683,7 +192,7 @@ msgstr "Spalte 5"
 
 msgctxt "pd_pattern"
 msgid "One column row"
-msgstr "Einspaltig"
+msgstr "Einspaltige"
 
 msgctxt "pd_pattern"
 msgid "A row with one columns."
@@ -989,7 +498,7 @@ msgstr "Ausklappbares Element (Akkordeon, Reiter)"
 
 msgctxt "pd_pattern"
 msgid "Set a title of the collapsible."
-msgstr "Erfassen Sie einen Titel für das ausklappbare Element"
+msgstr "Setzen Sie einen Titel für das ausklappbare Element"
 
 msgctxt "pd_pattern"
 msgid "Title of the collapsible"
@@ -1010,6 +519,22 @@ msgstr "Das Icon für den aktiven Zustand"
 msgctxt "pd_pattern"
 msgid "The icon if closed"
 msgstr "Das Icon für den geschlossenen Zustand"
+
+
+
+# /patterns/composite/flipbox
+
+msgctxt "pd_pattern"
+msgid "Flipbox"
+msgstr "Flipbox"
+
+msgctxt "pd_pattern"
+msgid "Teaserbox with flippable content"
+msgstr "Box + Inhalt mit diversen Anzeigeeffekten"
+
+msgctxt "pd_pattern"
+msgid "Flip animation"
+msgstr "Animation"
 
 
 
@@ -1037,11 +562,11 @@ msgstr "HTML-Inlcude"
 
 msgctxt "pd_pattern"
 msgid "Insert arbitrary html."
-msgstr "Erfassen Sie beliebigen HTML-Inhalt"
+msgstr "Erstellen Sie beliebigen HTML-Inhalt"
 
 msgctxt "pd_pattern"
 msgid "Insert any html content."
-msgstr "Erfassen Sie beliebigen HTML-Inhalt"
+msgstr "Erstellen Sie beliebigen HTML-Inhalt"
 
 msgctxt "pd_pattern"
 msgid "The html"
@@ -1331,6 +856,14 @@ msgstr "Name der Galerie"
 
 
 
+# /patterns/elements/gallery_topimage
+
+msgctxt "pd_pattern"
+msgid "Gallery (Top image)"
+msgstr "Galerie (Top Image)"
+
+
+
 # /patterns/elements/button
 
 msgctxt "pd_pattern"
@@ -1413,7 +946,7 @@ msgstr "Zitat"
 
 msgctxt "pd_pattern"
 msgid "Insert a quote."
-msgstr "Ein Zitat einfügen"
+msgstr "Ein Zitat einfügen."
 
 msgctxt "pd_pattern"
 msgid "Style"
@@ -1454,3 +987,30 @@ msgstr "Soll die Audiodatei standardmässig stumm geschaltet werden?"
 msgctxt "pd_pattern"
 msgid "The audio to play"
 msgstr "Die Audiodatei"
+
+
+################ Drupal Blocks ################
+
+msgctxt "pd_pattern"
+msgid "Main navigation left"
+msgstr "Hauptnavigation (linksbündig)"
+
+msgctxt "pd_pattern"
+msgid "Sub navigation right"
+msgstr "Subnavigation (rechtsbündig)"
+
+msgctxt "pd_pattern"
+msgid "Sub navigation left"
+msgstr "Subnavigation (linksbündig)"
+
+msgctxt "pd_pattern"
+msgid "Mobile navigation"
+msgstr "Mobile Navigation"
+
+msgctxt "pd_pattern"
+msgid "Main navigation right"
+msgstr "Hauptnavigation (rechtsbündig)"
+
+msgctxt "pd_pattern"
+msgid "Kontaktformular"
+msgstr "Kontaktformular"
