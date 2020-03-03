@@ -21,6 +21,14 @@ msgid "Use full browser width"
 msgstr "Nutzt die volle Breite des Browsers"
 
 msgctxt "pd_pattern"
+msgid "Full height"
+msgstr "Volle Höhe"
+
+msgctxt "pd_pattern"
+msgid "Use full browser height"
+msgstr "Nutzt die volle Höhe des Browsers"
+
+msgctxt "pd_pattern"
 msgid "No gutters"
 msgstr "Kein Aussenabstand"
 
@@ -176,6 +184,34 @@ msgctxt "pd_pattern"
 msgid "Lead text style"
 msgstr "Formatierung Leadtext"
 
+msgctxt "pd_pattern"
+msgid "Alternate icon"
+msgstr "Alternatives Icon"
+
+msgctxt "pd_pattern"
+msgid "Alternate icon style"
+msgstr "Alternativer Icon-Stil"
+
+msgctxt "pd_pattern"
+msgid "Invert icon color"
+msgstr "Invertierte Icon-Farbe"
+
+msgctxt "pd_pattern"
+msgid "Round icons"
+msgstr "Runde Icons"
+
+msgctxt "pd_pattern"
+msgid "Round Icons"
+msgstr "Runde Icons"
+
+msgctxt "pd_pattern"
+msgid "Default colors"
+msgstr "Standardfarben"
+
+msgctxt "pd_pattern"
+msgid "Fullwidth"
+msgstr "Volle Breite"
+
 
 
 ################ Global Fields ################
@@ -212,7 +248,17 @@ msgctxt "pd_pattern"
 msgid "Open link in new window"
 msgstr "Link in neuem Fenster öffnen?"
 
+msgctxt "pd_pattern"
+msgid "Choose"
+msgstr "Auswählen:"
 
+msgctxt "pd_pattern"
+msgid "Loading Screen"
+msgstr "Ladebild"
+
+msgctxt "pd_pattern"
+msgid "Pagedsigner Settings"
+msgstr "Pagedesigner-Einstellungen"
 
 ################ /patterns/structural ################
 
@@ -252,7 +298,7 @@ msgstr "Zeilen"
 
 msgctxt "pd_pattern"
 msgid "One column row"
-msgstr "Einspaltige"
+msgstr "Einspaltige Zeile"
 
 msgctxt "pd_pattern"
 msgid "A row with one columns."
@@ -264,7 +310,7 @@ msgstr "Eine Zeile mit einer Spalte"
 
 msgctxt "pd_pattern"
 msgid "Two column row (1/2 - 1/2)"
-msgstr "Zweispaltig <br /> (1/2 - 1/2)"
+msgstr "Zweispaltige Zeile <br /> (1/2 - 1/2)"
 
 msgctxt "pd_pattern"
 msgid "A row with two columns."
@@ -276,7 +322,7 @@ msgstr "Eine Zeile mit zwei Spalten"
 
 msgctxt "pd_pattern"
 msgid "Two column row (2/3 - 1/3)"
-msgstr "Zweispaltig <br /> (2/3 - 1/3)"
+msgstr "Zweispaltige Zeile <br /> (2/3 - 1/3)"
 
 msgctxt "pd_pattern"
 msgid "A row with a 2/3 column and a 1/3 column."
@@ -288,7 +334,7 @@ msgstr "Eine Zeile mit zwei Spalten (2/3 - 1/3)"
 
 msgctxt "pd_pattern"
 msgid "Two column row (1/3 - 2/3)"
-msgstr "Zweispaltig <br /> (1/3 - 2/3)"
+msgstr "Zweispaltige Zeile <br /> (1/3 - 2/3)"
 
 msgctxt "pd_pattern"
 msgid "A row with a 1/3 column and a 2/3 column."
@@ -300,7 +346,7 @@ msgstr "Eine Zeile mit zwei Spalten (1/3 - 2/3)"
 
 msgctxt "pd_pattern"
 msgid "Two column row (3/4 - 1/4)"
-msgstr "Zweispaltig <br /> (3/4 - 1/4)"
+msgstr "Zweispaltige Zeile <br /> (3/4 - 1/4)"
 
 msgctxt "pd_pattern"
 msgid "A row with a 3/4 column and a 1/4 column."
@@ -312,7 +358,7 @@ msgstr "Eine Zeile mit zwei Spalten (3/4 - 1/4)"
 
 msgctxt "pd_pattern"
 msgid "Two column row (1/4 - 3/4)"
-msgstr "Zweispaltig <br /> (1/4 - 3/4)"
+msgstr "Zweispaltige Zeile <br /> (1/4 - 3/4)"
 
 msgctxt "pd_pattern"
 msgid "A row with a 1/4 column and a 3/4 column."
@@ -324,7 +370,7 @@ msgstr "Eine Zeile mit zwei Spalten (1/4 - 3/4)"
 
 msgctxt "pd_pattern"
 msgid "Two columns row (5/6 - 1/6)"
-msgstr "Zweispaltig <br /> (5/6 - 1/6)"
+msgstr "Zweispaltige Zeile <br /> (5/6 - 1/6)"
 
 msgctxt "pd_pattern"
 msgid "A row with 2 columns."
@@ -336,7 +382,7 @@ msgstr "Eine Zeile mit 2 Spalten"
 
 msgctxt "pd_pattern"
 msgid "Two colum row (7/12 - 5/12)"
-msgstr "Zweispaltig <br /> (7/12 - 5/12)"
+msgstr "Zweispaltige Zeile <br /> (7/12 - 5/12)"
 
 msgctxt "pd_pattern"
 msgid "A row with a 7/12 column and a 5/12 column."
@@ -348,7 +394,7 @@ msgstr "Eine Zeile mit zwei Spalten (7/12 - 5/12)"
 
 msgctxt "pd_pattern"
 msgid "Three column row (1/3 - 1/3 - 1/3)"
-msgstr "Dreispaltig <br /> (1/3 - 1/3 - 1/3)"
+msgstr "Dreispaltige Zeile <br /> (1/3 - 1/3 - 1/3)"
 
 msgctxt "pd_pattern"
 msgid "A row with three 1/3 columns."
@@ -360,7 +406,7 @@ msgstr "Eine Zeile mit drei Spalten (1/3 - 1/3 - 1/3)"
 
 msgctxt "pd_pattern"
 msgid "Three columns row (1/4 - 2/4 - 1/4)"
-msgstr "Dreispaltig <br /> (1/4 - 2/4 - 1/4)"
+msgstr "Dreispaltige Zeile <br /> (1/4 - 2/4 - 1/4)"
 
 msgctxt "pd_pattern"
 msgid "A row with three columns."
@@ -372,7 +418,7 @@ msgstr "Eine Zeile mit drei Spalten"
 
 msgctxt "pd_pattern"
 msgid "Four columns row (1/4 - 1/4 - 1/4 - 1/4)"
-msgstr "Vierspaltig <br /> (1/4 - 1/4 - 1/4 - 1/4)"
+msgstr "Vierspaltige Zeile <br /> (1/4 - 1/4 - 1/4 - 1/4)"
 
 msgctxt "pd_pattern"
 msgid "A row with four columns."
@@ -384,7 +430,7 @@ msgstr "Eine Zeile mit vier Spalten"
 
 msgctxt "pd_pattern"
 msgid "Five columns row (1/5 - 1/5 - 1/5 - 1/5 - 1/5)"
-msgstr "Fünfspaltig <br /> (1/5 - 1/5 - 1/5 - 1/5 - 1/5)"
+msgstr "Fünfspaltige Zeile <br /> (1/5 - 1/5 - 1/5 - 1/5 - 1/5)"
 
 msgctxt "pd_pattern"
 msgid "A row with five columns."
@@ -396,7 +442,7 @@ msgstr "Eine Zeile mit fünf Spalten"
 
 msgctxt "pd_pattern"
 msgid "Six columns row (1/6 - 1/6 - 1/6 - 1/6 - 1/6 - 1/6)"
-msgstr "Sechsspaltig <br />  (1/6 - 1/6 - 1/6 - 1/6 - 1/6 - 1/6)"
+msgstr "Sechsspaltige Zeile <br />  (1/6 - 1/6 - 1/6 - 1/6 - 1/6 - 1/6)"
 
 msgctxt "pd_pattern"
 msgid "A row with six columns."
@@ -493,6 +539,14 @@ msgstr "Das Video"
 msgctxt "pd_pattern"
 msgid "Slider"
 msgstr "Slider"
+
+msgctxt "pd_pattern"
+msgid "Outside controls"
+msgstr "Äussere Bedienelemente"
+
+msgctxt "pd_pattern"
+msgid "Place controls outside slider"
+msgstr "Äussere Bedienelemente des Sliders anzeigen"
 
 msgctxt "pd_pattern"
 msgid ""
@@ -694,6 +748,10 @@ msgctxt "pd_pattern"
 msgid "Icon position / Link alignment"
 msgstr "Position des Icons / Ausrichtung des Links"
 
+msgctxt "pd_pattern"
+msgid "Use full browser width to show horizontal navigation bar"
+msgstr "Verwenden Sie die volle Browserbreite, um die horizontale Navigationsleiste anzuzeigen"
+
 
 
 # /patterns/elements/image
@@ -749,6 +807,38 @@ msgstr "Das Dokument"
 msgctxt "pd_pattern"
 msgid "The text to display"
 msgstr "Der Anzeigetext"
+
+
+
+# /patterns/elements/file
+
+msgctxt "pd_pattern"
+msgid "Search bar"
+msgstr "Suchleiste"
+
+msgctxt "pd_pattern"
+msgid "Insert a search bar."
+msgstr "Eine Suchleiste einfügen"
+
+msgctxt "pd_pattern"
+msgid "Placeholder"
+msgstr "Platzhalter"
+
+msgctxt "pd_pattern"
+msgid "Input field name"
+msgstr "Name des Eingabefeldes"
+
+msgctxt "pd_pattern"
+msgid "The submit icon"
+msgstr "Das Senden-Symbol"
+
+msgctxt "pd_pattern"
+msgid "The cancel icon"
+msgstr "Das Abbruch-Symbol"
+
+msgctxt "pd_pattern"
+msgid "Initially show input field"
+msgstr "Eingabefeld von Anfang an anzeigen"
 
 
 
@@ -826,6 +916,13 @@ msgctxt "pd_pattern"
 msgid "The Youtube link title text"
 msgstr "Der Youtube-Linktitel"
 
+msgctxt "pd_pattern"
+msgid "The Instagram link"
+msgstr "Der Instagram-Link"
+
+msgctxt "pd_pattern"
+msgid "The Instagram link title text"
+msgstr "Der Instagram-Linktitel"
 
 
 # /patterns/elements/toggler
@@ -857,6 +954,10 @@ msgstr "Erscheint, sobald die Maus über das Element bewegt wird (Tooltip)."
 msgctxt "pd_pattern"
 msgid "Lock scrolling"
 msgstr "Scrollfunktion blockieren?"
+
+msgctxt "pd_pattern"
+msgid "Hide toggler"
+msgstr "Toggler ausblenden"
 
 
 
@@ -949,6 +1050,18 @@ msgstr "Das Button-Icon"
 msgctxt "pd_pattern"
 msgid "Icon position"
 msgstr "Position des Icons"
+
+msgctxt "pd_pattern"
+msgid "Alternate button"
+msgstr "Alternativer Button"
+
+msgctxt "pd_pattern"
+msgid "Alternate button style"
+msgstr "Stil des alternativen Buttons"
+
+msgctxt "pd_pattern"
+msgid "Invert button color"
+msgstr "Invertierte Button-Farbe"
 
 
 
@@ -1074,3 +1187,27 @@ msgstr "Hauptnavigation (rechtsbündig)"
 msgctxt "pd_pattern"
 msgid "Kontaktformular"
 msgstr "Kontaktformular"
+
+
+
+################ Categories ################
+
+msgctxt "pd_pattern"
+msgid "Composite"
+msgstr "Zusammengesetzte Komponenten"
+
+msgctxt "pd_pattern"
+msgid "Element"
+msgstr "Elemente"
+
+msgctxt "pd_pattern"
+msgid "Drupal blocks"
+msgstr "Drupal Blöcke"
+
+msgctxt "pd_pattern"
+msgid "Layouts"
+msgstr "Layouts"
+
+msgctxt "pd_pattern"
+msgid "Forms"
+msgstr "Formulare"
