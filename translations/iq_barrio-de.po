@@ -623,6 +623,10 @@ msgid "Type of collapsible"
 msgstr "Typ des Elements"
 
 msgctxt "pd_pattern"
+msgid "Type of the collapsible"
+msgstr "Typ des Elements"
+
+msgctxt "pd_pattern"
 msgid "Type"
 msgstr "Typ"
 
