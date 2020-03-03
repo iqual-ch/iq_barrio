@@ -94,16 +94,16 @@ msgstr "Dekoration Kante (unten)"
 msgid "Top border decoration"
 msgstr "Dekoration Kante (oben)"
 
-msgid "Angeled (2 deg)"
+msgid "Angeled (20 deg)"
 msgstr "20° Winkel (rechts nach links)"
 
-msgid "Angeled (4 deg)"
+msgid "Angeled (40 deg)"
 msgstr "40° Winkel (rechts nach links)"
 
-msgid "Reverse Angeled (2 deg)"
+msgid "Reverse Angeled (20 deg)"
 msgstr "20° Winkel (links nach rechts)"
 
-msgid "Reverse Angeled (4 deg)"
+msgid "Reverse Angeled (40 deg)"
 msgstr "40° Winkel (links nach rechts)"
 
 msgid "Color scheme"

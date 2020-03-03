@@ -58,18 +58,18 @@ rowoneone:
     top_border:
       label: "Top border decoration"
       options:
-        angeled-top-2:  "Angeled (2 deg)"
-        angeled-top-4:  "Angeled (4 deg)"
-        angeled-top-reverse-2:  "Reverse Angeled (2 deg)"
-        angeled-top-reverse-4:  "ReverseAngeled (4 deg)"
+        angeled-top-2:  "Angeled (20 deg)"
+        angeled-top-4:  "Angeled (40 deg)"
+        angeled-top-reverse-2:  "Reverse Angeled (20 deg)"
+        angeled-top-reverse-4:  "ReverseAngeled (40 deg)"
 #        ramped-top: "Ramp"
     bottom_border:
       label: "Bottom border decoration"
       options:
-        angeled-bottom-2:  "Angeled (2 deg)"
-        angeled-bottom-4:  "Angeled (4 deg)"
-        angeled-bottom-reverse-2:  "Reverse Angeled (2 deg)"
-        angeled-bottom-reverse-4:  "Reverse Angeled (4 deg)"
+        angeled-bottom-2:  "Angeled (20 deg)"
+        angeled-bottom-4:  "Angeled (40 deg)"
+        angeled-bottom-reverse-2:  "Reverse Angeled (20 deg)"
+        angeled-bottom-reverse-4:  "Reverse Angeled (40 deg)"
 #        ramped-bottom: "Ramp"
 
   fields:
