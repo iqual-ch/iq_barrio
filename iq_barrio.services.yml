@@ -1,3 +1,0 @@
-services:
-  iq_barrio.theme_services:
-    class: Drupal\iq_barrio\Service\ThemeServices

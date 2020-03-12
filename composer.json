@@ -12,6 +12,7 @@
   },
   "require": {
     "drupal/bootstrap_barrio": "*",
-    "iqual/iq_barrio_composer_update": "*"
+    "iqual/iq_barrio_composer_update": "*",
+    "iqual/iq_barrio_helper": "*"
   }
 }
