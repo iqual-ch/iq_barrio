@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Update hooks for iq_barrio themes.
+ */
+
+/**
+ * Description explaining your update step 8000.
+ */
+function pagetree_update_8000() {
+  \Drupal::service('module_installer')->install(['iq_barrio_helper']);
+}
