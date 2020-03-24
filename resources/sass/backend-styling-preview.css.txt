@@ -447,11 +447,13 @@
 
 [data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li .dropdown-menu li{
     background-color:   rgba({{color_page_background_nav_dropdown}},{{opacity_page_background_nav_dropdown}});
-    padding-top: calc( {{padding_top}}{{padding_unit}} / 2 );
-    padding-bottom: calc( {{padding_bottom}}{{padding_unit}} / 2 );
-    padding-left: calc( {{padding_left}}{{padding_unit}} / 2 );
-    padding-right: calc( {{padding_right}}{{padding_unit}} / 2 );
-    margin: 0;
+    margin:             {{navi_sub_margin_top}}{{navi_sub_margin_unit}} {{navi_sub_margin_left_right}}{{navi_sub_margin_unit}} {{navi_sub_margin_bottom}}{{navi_sub_margin_unit}};
+    padding:            {{navi_sub_padding_top}}{{navi_sub_padding_unit}} {{navi_sub_padding_left_right}}{{navi_sub_padding_unit}} {{navi_sub_padding_bottom}}{{navi_sub_padding_unit}};
+    font-family:        {{navi_sub_font_family}};
+    font-weight:        {{navi_sub_font_weight}};
+    font-style:         {{navi_sub_font_style}};
+    line-height:        {{navi_sub_line_height}};
+    font-size:          {{navi_sub_font_size}}{{navi_sub_font_size_unit}};
 }
 
 [data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li .dropdown-menu li:hover,

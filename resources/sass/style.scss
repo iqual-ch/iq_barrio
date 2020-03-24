@@ -119,7 +119,7 @@ p, .standard {
   color: $color-lead;
   margin-top: $margin-top-lead;
   margin-bottom: $margin-bottom-lead;
-  @include fluid-type(320px, 991px, $font-size-min-standard, $font-size-standard);
+  @include fluid-type(320px, 991px, $font-size-min-lead, $font-size-lead);
 }
 
 .small, small {
