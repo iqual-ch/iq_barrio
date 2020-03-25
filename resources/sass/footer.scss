@@ -12,7 +12,8 @@ footer {
 
     color: $color-font-footer;
     background: $color-background-footer;
-    padding: $base-padding-top 15px $base-padding-bottom;
+    // padding: $base-padding-top 15px $base-padding-bottom;
+    padding: 0;
     font-family: inherit;
 
     .site-footer__top{
