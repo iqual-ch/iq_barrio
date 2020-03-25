@@ -11,7 +11,6 @@ function iq_barrio_theme($existing, $type, $theme, $path) {
   return array();
 }
 
-
 /**
  * Implements hook_form_FORM_ID_alter().
  */
@@ -40,8 +39,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
 /**
  * Implements hook_form_system_theme_settings_submit().
  */
-function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &$form_state)
-{
+function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &$form_state) {
   $title_font = $form_state->getValue('title_font');
   $content_font = $form_state->getValue('content_font');
 
@@ -69,13 +67,11 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
   \Drupal::moduleHandler()->invokeAll('iq_theme_settings', array($styles, $service));
 }
 
-function iq_barrio_theme_rebuild()
-{
+function iq_barrio_theme_rebuild(){
 //  \Drupal::logger('iq_barrio')->notice('cache rebuild :)');
 }
 
 
 function iq_barrio_ui_patterns_info_alter(array &$definitions) {
-  //    print_r( $definitions );
-    $definitions['yaml:rowoneone']->setLabel('blablablaba');
-  }
+//  print_r( $definitions );
+}
