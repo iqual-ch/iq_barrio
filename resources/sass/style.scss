@@ -180,6 +180,10 @@ a{
   }
 }
 
+b, strong{
+  font-weight: bold;
+}
+
 
 .inverted{
 
@@ -261,8 +265,8 @@ a{
   color: $font-color-buttons;
   background-color: $background-color-buttons;
   border-color: $border-color-buttons;
-  border-width: $border-width-base;
-  border-radius: $border-radius-base;
+  border-width: $border-width-buttons;
+  border-radius: $border-radius-buttons;
   &:focus{
     box-shadow: none;
   }
