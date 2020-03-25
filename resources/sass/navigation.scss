@@ -29,8 +29,9 @@
         font-style: $navi-main-font-style;
         line-height: $navi-main-line-height;
         font-size: $navi-main-font-size;
+        text-transform: $navi-main-text-transform;
         padding: $navi-main-padding;
-
+        border-width: $navi-main-border-width;
         text-decoration: none;
 
         &.nav-link {
@@ -41,6 +42,7 @@
       >a {
         background-color: $color-background-navbar;
         color: $color-font-navbar;
+        border-color: $color-border-navbar;
       }
 
       &.active,
@@ -48,6 +50,7 @@
         > a {
           background-color: $color-background-navbar-active;
           color: $color-font-navbar-active;
+          border-color: $color-border-navbar-active;
           text-decoration: none;
         }
       }
@@ -57,6 +60,7 @@
         > a {
           background-color: $color-background-navbar-hover;
           color: $color-font-navbar-hover;
+          border-color: $color-border-navbar-hover;
           text-decoration: none;
         }
       }
@@ -67,24 +71,31 @@
   .dropdown-menu {
     padding: 0;
     margin: 0;
-    border: $border-base;
-    border-radius: $border-radius-base;
-
+    border: none;
+    background: none;
     position: absolute;
     top: 100%;
 
     >li {
       background-color: $color-background-nav-dropdown;
       padding: 0;
+      margin: $navi-sub-margin;
       text-decoration: none;
 
       > a{
         display: block;
+        font-family: $navi-sub-font-family;
+        font-weight: $navi-sub-font-weight;
+        font-style: $navi-sub-font-style;
+        line-height: $navi-sub-line-height;
+        font-size: $navi-sub-font-size;
+        text-transform: $navi-sub-text-transform;
+        padding: $navi-sub-padding;
+        border-width: $navi-sub-border-width;
+        text-decoration: none;
         color: $color-font-nav-dropdown;
-        padding-top: $base-padding-top / 2;
-        padding-bottom: $base-padding-bottom / 2;
-        padding-left: $base-padding-left / 2;
-        padding-right: $base-padding-right / 2;
+        border-color: $color-border-nav-dropdown;
+        border-style: solid;
       }
 
 
@@ -93,6 +104,7 @@
         background-color: $color-background-nav-dropdown-hover;
         >a {
           color: $color-font-nav-dropdown-hover;
+          border-color: $color-border-nav-dropdown-hover;
           text-decoration: none;
         }
       }
@@ -102,6 +114,7 @@
         background-color: $color-background-nav-dropdown-active;
         >a {
           color: $color-font-nav-dropdown-active;
+          border-color: $color-border-nav-dropdown-active;
           text-decoration: none;
         }
       }

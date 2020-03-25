@@ -248,28 +248,46 @@ $navi-main-font-weight:               {{navi_main_font_weight}};
 $navi-main-font-style:                {{navi_main_font_style}};
 $navi-main-line-height:               {{navi_main_line_height}};
 $navi-main-font-size:                 {{navi_main_font_size}}{{navi_main_font_size_unit}};
+$navi-main-text-transform:            {{navi_main_text_transform}};
 $navi-main-margin:                    {{navi_main_margin_top}}{{navi_main_margin_unit}} {{navi_main_margin_left_right}}{{navi_main_margin_unit}} {{navi_main_margin_bottom}}{{navi_main_margin_unit}};
 $navi-main-padding:                   {{navi_main_padding_top}}{{navi_main_padding_unit}} {{navi_main_padding_left_right}}{{navi_main_padding_unit}} {{navi_main_padding_bottom}}{{navi_main_padding_unit}};
+$navi-main-border-width:              {{navi_main_border_width_top}}{{navi_main_border_width_unit}} {{navi_main_border_width_right}}{{navi_main_border_width_unit}} {{navi_main_border_width_bottom}}{{navi_main_border_width_unit}} {{navi_main_border_width_left}}{{navi_main_border_width_unit}};
 
 $color-background-navbar:             rgba($color-{{color_page_background_navbar}},{{opacity_page_background_navbar}});
 $color-font-navbar:                   rgba($color-{{color_page_font_navbar}},{{opacity_page_font_navbar}});
+$color-border-navbar:                 rgba($color-{{color_page_border_navbar}},{{opacity_page_border_navbar}});
 
 $color-background-navbar-hover:       rgba($color-{{color_page_background_navbar_hover}},{{opacity_page_background_navbar_hover}});
 $color-font-navbar-hover:             rgba($color-{{color_page_font_navbar_hover}},{{opacity_page_font_navbar_hover}});
+$color-border-navbar-hover:           rgba($color-{{color_page_border_navbar_hover}},{{opacity_page_border_navbar_hover}});
 
-$color-background-navbar-active:       rgba($color-{{color_page_background_navbar_active}},{{opacity_page_background_navbar_active}});
-$color-font-navbar-active:             rgba($color-{{color_page_font_navbar_active}},{{opacity_page_font_navbar_active}});
+$color-background-navbar-active:      rgba($color-{{color_page_background_navbar_active}},{{opacity_page_background_navbar_active}});
+$color-font-navbar-active:            rgba($color-{{color_page_font_navbar_active}},{{opacity_page_font_navbar_active}});
+$color-border-navbar-active:          rgba($color-{{color_page_border_navbar_active}},{{opacity_page_border_navbar_active}});
 
 /* Dropdown */
 
+$navi-sub-font-family:                {{navi_sub_font_family}};
+$navi-sub-font-weight:                {{navi_sub_font_weight}};
+$navi-sub-font-style:                 {{navi_sub_font_style}};
+$navi-sub-line-height:                {{navi_sub_line_height}};
+$navi-sub-font-size:                  {{navi_sub_font_size}}{{navi_sub_font_size_unit}};
+$navi-sub-text-transform:             {{navi_sub_text_transform}};
+$navi-sub-margin:                     {{navi_sub_margin_top}}{{navi_sub_margin_unit}} {{navi_sub_margin_left_right}}{{navi_sub_margin_unit}} {{navi_sub_margin_bottom}}{{navi_sub_margin_unit}};
+$navi-sub-padding:                    {{navi_sub_padding_top}}{{navi_sub_padding_unit}} {{navi_sub_padding_left_right}}{{navi_sub_padding_unit}} {{navi_sub_padding_bottom}}{{navi_sub_padding_unit}};
+$navi-sub-border-width:               {{navi_sub_border_width_top}}{{navi_sub_border_width_unit}} {{navi_sub_border_width_right}}{{navi_sub_border_width_unit}} {{navi_sub_border_width_bottom}}{{navi_sub_border_width_unit}} {{navi_sub_border_width_left}}{{navi_sub_border_width_unit}};
+
 $color-background-nav-dropdown:       rgba($color-{{color_page_background_nav_dropdown}},{{opacity_page_background_nav_dropdown}});
 $color-font-nav-dropdown:             rgba($color-{{color_page_font_nav_dropdown}},{{opacity_page_font_nav_dropdown}});
+$color-border-nav-dropdown:           rgba($color-{{color_page_border_nav_dropdown}},{{opacity_page_border_nav_dropdown}});
 
 $color-background-nav-dropdown-hover: rgba($color-{{color_page_background_nav_dropdown_hover}},{{opacity_page_background_nav_dropdown_hover}});
 $color-font-nav-dropdown-hover:       rgba($color-{{color_page_font_nav_dropdown_hover}},{{opacity_page_font_nav_dropdown_hover}});
+$color-border-nav-dropdown-hover:     rgba($color-{{color_page_border_nav_dropdown_hover}},{{opacity_page_border_nav_dropdown_hover}});
 
 $color-background-nav-dropdown-active: rgba($color-{{color_page_background_nav_dropdown_active}},{{opacity_page_background_nav_dropdown_active}});
 $color-font-nav-dropdown-active:       rgba($color-{{color_page_font_nav_dropdown_active}},{{opacity_page_font_nav_dropdown_active}});
+$color-border-nav-dropdown-active:     rgba($color-{{color_page_border_nav_dropdown_active}},{{opacity_page_border_nav_dropdown_active}});
 
 /* Mobile */
 
