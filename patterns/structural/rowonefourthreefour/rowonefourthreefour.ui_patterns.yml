@@ -62,14 +62,6 @@ rowonefourthreefour:
         font-color-grey5: "Grey 5"
         font-color-black: "Black"
         font-color-white: "White"
-    bottom_border:
-      label: "Bottom border decoration"
-      options:
-        angeled-bottom-2:  "Angeled (20 deg)"
-        angeled-bottom-4:  "Angeled (40 deg)"
-        angeled-bottom-reverse-2:  "Reverse Angeled (20 deg)"
-        angeled-bottom-reverse-4:  "Reverse Angeled (40 deg)"
-#        ramped-bottom: "Ramp"
 
   fields:
     column0:

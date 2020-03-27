@@ -54,7 +54,6 @@ rowoneone:
         font-color-grey5: "Grey 5"
         font-color-black: "Black"
         font-color-white: "White"
-
     top_border:
       label: "Top border decoration"
       options:
@@ -62,7 +61,6 @@ rowoneone:
         angeled-top-4:  "Angeled (40 deg)"
         angeled-top-reverse-2:  "Reverse Angeled (20 deg)"
         angeled-top-reverse-4:  "Reverse Angeled (40 deg)"
-#        ramped-top: "Ramp"
     bottom_border:
       label: "Bottom border decoration"
       options:
@@ -70,7 +68,7 @@ rowoneone:
         angeled-bottom-4:  "Angeled (40 deg)"
         angeled-bottom-reverse-2:  "Reverse Angeled (20 deg)"
         angeled-bottom-reverse-4:  "Reverse Angeled (40 deg)"
-#        ramped-bottom: "Ramp"
+
 
   fields:
     column0:
