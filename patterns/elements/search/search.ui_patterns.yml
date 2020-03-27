@@ -3,7 +3,7 @@ search:
   description: Insert a search bar.
   category: Element
   icon: fas fa-search
-  pagedesigner: 1
+  pagedesigner: 0
   type: component
   styles: 1
   fields:
