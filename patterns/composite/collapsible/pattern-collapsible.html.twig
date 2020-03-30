@@ -1,5 +1,5 @@
-<div {% if effect == "tabs" %}class="iq-tab-element"{% else %}class="row iq-collapsible clearfix iq-row"{% endif %} data-type="{{effect}}">
-{% if effect == "tabs" %}
+<div {% if effect|render == "tabs" %}class="iq-tab-element"{% else %}class="row iq-collapsible clearfix iq-row"{% endif %} data-type="{{effect}}">
+{% if effect|render == "tabs" %}
     <ul class="iq-tab-list">
         <li class="iq-tab-title">
             <a href="">{{title}}</a>

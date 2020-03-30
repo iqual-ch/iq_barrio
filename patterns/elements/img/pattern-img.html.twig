@@ -1,10 +1,10 @@
 <div class="iq-image">
-    {% if lightbox == 'lightbox' %}
+    {% if lightbox|render == 'lightbox' %}
         <a href="{{image_img}}" data-toggle="{{lightbox}}-single-image" data-max-width="1920" data-title="{{image_alt}}">
             <img src="{{image_img}}" title="{{image_title}}" alt="{{image_alt}}" />
         </a>
     {% else %}
-        {% if href %}
+        {% if href|render is not empty %}
         <a href="{{href}}" title="{{title_link}}" target="{{link_target}}" >
             <img src="{{image_img}}" title="{{image_title}}" alt="{{image_alt}}" />
         </a>

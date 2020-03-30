@@ -1,5 +1,5 @@
 <div class="iq-trust-element">
-    {% if icon %}
+    {% if icon|render is not empty %}
     <div class="iq-trust-element-icon" data-iq-alternate-group="symbol" data-iq-alternate-label="Symbol" data-iq-label="Icon">
         <i class="fa {{icon}}"></i>
     </div>

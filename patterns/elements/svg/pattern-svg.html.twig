@@ -1,6 +1,6 @@
 <div class="iq-svg">
   <div class="{{parent_class}}" >
-    {% if href %}
+    {% if href|render is not empty %}
     <a href="{{href}}" title="{{title_link}}" target="{{link_target}}" >
       <img src="{{svg_file}}" alt="{{svg_alt}}" title="{{svg_title}}"/>
     </a>
