@@ -234,7 +234,7 @@
 
 .container-fluid[data-gjs-type="container"] .iq-row.nav-mobile-holder {
   &[data-gjs-type] {
-    position: relative;
+    position: relative !important;
     display: block;
   }
 }

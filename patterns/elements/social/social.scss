@@ -12,8 +12,10 @@
       line-height: 32px;
       text-align: center;
       background-color: $social-icons-color;
-      color: $color-text-inverted
-
+      color: $color-text-inverted;
+      i{
+        line-height: 32px;
+      }
     }
   }
   &.default-colors{
