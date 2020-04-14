@@ -17,6 +17,7 @@ flipbox:
     effect:
       type: select
       label: Flip animation
+      preview: fade
       options:
         fade: Fade
         push-up: Push up
