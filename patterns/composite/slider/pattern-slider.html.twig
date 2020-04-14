@@ -1,3 +1,3 @@
-<div class="row iq-slider iq-row" data-slick='{"autoplay": {{autoplay}}, "infinite": {{loop}}}' data-duration="{{duration}}" data-speed="{{speed}}" data-arrow-left="{{arrowleft}}" data-arrow-right="{{arrowright}}" data-navigation="{{navigation}}">
-  <div class="col iq-column">{{column0}}</div>
+<div class="row iq-slider iq-row" >
+  <div class="col iq-column" {% if autoplay|render == "1" %}data-autoplay="{{autoplay}}"{% endif %} {% if loop|render == "1" %}data-loop="{{loop}}"{% endif %} data-duration="{{duration}}" data-speed="{{speed}}" data-arrow-left="{{arrowleft}}" data-arrow-right="{{arrowright}}" data-navigation="{{navigation}}" >{{column0}}</div>
 </div>

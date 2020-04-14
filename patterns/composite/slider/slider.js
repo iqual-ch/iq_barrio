@@ -3,37 +3,56 @@
 
     sliders.each(function (i, slider) {
       $slider = $(slider);
-
+      $slider.addClass('owl-carousel');
 
       var config = {
-        autoplaySpeed: parseInt($slider.data('duration') * 1000),
-        speed: parseInt($slider.data('speed') * 1000),
-        cssEase: 'ease',
         dots: false,
-        arrows: false
+        nav: false,
+        items: 1,
+        loop: false,
       };
 
-      if( $slider.data('arrow-left') && $slider.data('arrow-right') ){
-        config.prevArrow = '<i class="' + $slider.data('arrow-left') + ' slick-arrow-prev"></i>';
-        config.nextArrow = '<i class="' + $slider.data('arrow-right') + ' slick-arrow-next"></i>';
-        config.arrows = true
+      if ($slider.data('autoplay')) {
+        config.autoplay = true;
+//        config.autoplayHoverPause = true;
+        if ($slider.data('duration')) {
+          config.autoplayTimeout = $slider.data('duration') * 1000;
+        }
+
+        if ($slider.data('speed')) {
+          config.autoplaySpeed = $slider.data('speed') * 1000;
+        }
       }
 
-      if( $slider.data('navigation') ){
+      if ($slider.data('loop')) {
+        config.loop = true;
+      }
+
+      if ($slider.data('navigation')) {
+        config.dotClass = $slider.data('navigation');
         config.dots = true;
+        if ($slider.data('speed')) {
+          config.dotsSpeed = $slider.data('speed') * 1000;
+        }
       }
 
-      $slick = $slider.find('> .iq-column').slick($.extend(config , $slider.data('slick') ));
-      if ( $slider.data('navigation') ) {
-        $slick.find('.slick-dots li').addClass($slider.data('navigation'));
+      if ($slider.data('arrow-left') && $slider.data('arrow-right')) {
+        config.navText = ["<i class=\"" + $slider.data('arrow-left') + "\"></i>", "<i class=\"" + $slider.data('arrow-right') + "\"></i>"];
+        config.nav = true;
+        if ($slider.data('speed')) {
+          config.navSpeed = $slider.data('speed') * 1000;
+        }
       }
+
+      $slider.owlCarousel(config);
     });
   }
 
   Drupal.behaviors.iqual_pattern_slider = {
     attach: function (context, settings) {
-      slider($(context).find('.pd-live .iq-slider'));
+      slider($(context).find('.pd-live .iq-slider > .iq-column'));
     }
   };
+
 
 })(jQuery, Drupal);
