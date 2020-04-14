@@ -10,6 +10,7 @@
         nav: false,
         items: 1,
         loop: false,
+        margin: 15
       };
 
       if ($slider.data('autoplay')) {
