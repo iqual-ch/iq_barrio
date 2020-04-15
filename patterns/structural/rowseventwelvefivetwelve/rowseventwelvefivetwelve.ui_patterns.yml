@@ -21,8 +21,8 @@ rowseventwelvefivetwelve:
       description: "Prevent children from having left and right padding"
       responsive: true
     hidden:
-      label: "Hide row"
-      description: "Hide row"
+      label: "Hide component"
+      description: "Hide component"
       responsive: true
     mobile-keep-cols:
       label: "Keep cols on mobile"
@@ -32,6 +32,9 @@ rowseventwelvefivetwelve:
       label: "Reverse order on mobile"
       description: "Reverse order of columns on mobile devices"
       responsive: false
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"
 
   styling_options:
     background_color:

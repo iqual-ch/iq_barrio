@@ -30,7 +30,6 @@ body {
       }
     }
 
-
     &.fullwidth-small {
       @media only screen and (max-width: 767px) {
         max-width: none;
@@ -48,7 +47,6 @@ body {
         }
       }
     }
-
 
     &.fullwidth-medium {
       @media only screen and (min-width: 768px) and (max-width: 1199px) {
@@ -132,13 +130,6 @@ body {
       }
     }
 
-
-
-
-
-
-
-
     &.noindent-small {
       @media only screen and (max-width: 767px) {
         .iq-row{
@@ -165,78 +156,60 @@ body {
         }
       }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    &.hidden {
-      display: none;
-    }
-
-    &.hidden-small {
-      @media only screen and (max-width: 767px) {
-        display: none;
-      }
-    }
-
-    &.hidden-medium {
-      @media only screen and (min-width: 768px) and (max-width: 1199px) {
-        display: none;
-      }
-    }
-
-    &.hidden-large {
-      @media only screen and (min-width: 1200px) {
-        display: none;
-      }
-    }
   }
 }
 
 
-.container-fluid[data-gjs-type="container"] {
-  .iq-row {
+// global visibility options
+.hidden {
+  &:not([data-gjs-type]){
+    display: none;
+  }
+  [data-gjs-type]{
+    opacity: 0.2;
+  }
+}
 
-    &.hidden {
-      display: flex;
+.hidden-small {
+  @media only screen and (max-width: 767px) {
+    &:not([data-gjs-type]){
+      display: none;
+    }
+    [data-gjs-type]{
       opacity: 0.2;
     }
+  }
+}
 
-    &.hidden-small {
-      @media only screen and (max-width: 767px) {
-        display: flex;
-        opacity: 0.2;
-      }
+.hidden-medium {
+  @media only screen and (min-width: 768px) and (max-width: 1199px) {
+    &:not([data-gjs-type]){
+      display: none;
     }
-
-    &.hidden-medium {
-      @media only screen and (min-width: 768px) and (max-width: 1199px) {
-        display: flex;
-        opacity: 0.2;
-      }
+    [data-gjs-type]{
+      opacity: 0.2;
     }
+  }
+}
 
-    &.hidden-large {
-      @media only screen and (min-width: 1200px) {
-        display: flex;
-        opacity: 0.2;
-      }
+.hidden-large {
+  @media only screen and (min-width: 1200px) {
+    &:not([data-gjs-type]){
+      display: none;
+    }
+    [data-gjs-type]{
+      opacity: 0.2;
+    }
+  }
+}
+
+.hidden-print {
+  @media print {
+    &:not([data-gjs-type]){
+      display: none;
+    }
+    [data-gjs-type]{
+      opacity: 0.2;
     }
   }
 }

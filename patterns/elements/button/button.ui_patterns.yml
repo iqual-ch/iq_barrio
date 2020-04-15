@@ -46,6 +46,14 @@ button:
     inverted:
       label: "Inverted"
       description: "Invert button color"
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"
+
   libraries:
     - button:
         css:

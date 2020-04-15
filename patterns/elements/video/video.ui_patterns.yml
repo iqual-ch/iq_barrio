@@ -42,3 +42,11 @@ video:
       type: video
       label: Upload video file
   styles: 1
+  classes:
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"

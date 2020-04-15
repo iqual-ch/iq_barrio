@@ -89,6 +89,14 @@ slider:
     column0:
       type: cell
       label: column0
+  classes:
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"
   libraries:
     - slider:
         js:

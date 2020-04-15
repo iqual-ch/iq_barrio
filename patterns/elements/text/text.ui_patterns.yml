@@ -20,7 +20,13 @@ text:
     small:
       label: "Small text"
       description: "small text style"
-
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"
   styling_options:
     font_color:
       label: "Font color"

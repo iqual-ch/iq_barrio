@@ -63,7 +63,14 @@ flipbox:
         zoom-out-flip-horiz: Zoom out flip horizontal
         zoom-out-flip-vert: Zoom out flip vertical
         blur: Blur
-
+  classes:
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"
   libraries:
     - flipbox:
         css:

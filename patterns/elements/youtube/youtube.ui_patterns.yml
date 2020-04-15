@@ -27,9 +27,16 @@ youtube: # The id of the pattern. Must match the name of the file.
         ratio-1: '1:1 (Square)'
         ratio9-16: '9:16 (Portrait mode)'
   styles: 1
-
-  libraries: # List additional assets as follows
-    - youtube: # for css file (same name as scss file)
+  classes:
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"
+  libraries:
+    - youtube:
        css:
          component:
            youtube.css: {}

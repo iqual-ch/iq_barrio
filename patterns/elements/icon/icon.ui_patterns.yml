@@ -29,12 +29,7 @@ icon:
         center: Center
         left: Left
         right: Right
-  libraries:
-    - icon:
-        css:
-          component:
-            icon.css: {}
-
+  styles: 1
   classes:
     alternate:
       label: "Alternate icon"
@@ -42,5 +37,15 @@ icon:
     inverted:
       label: "Inverted"
       description: "Invert icon color"
-
-  styles: 1
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"
+  libraries:
+    - icon:
+        css:
+          component:
+            icon.css: {}

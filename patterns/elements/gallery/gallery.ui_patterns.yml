@@ -33,3 +33,11 @@ gallery:
             gallery.css: {}
         dependencies:
           - ui_patterns/img.img
+  classes:
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"

@@ -21,9 +21,13 @@ rowoneone:
       description: "Prevent children from having left and right padding"
       responsive: true
     hidden:
-      label: "Hide row"
-      description: "Hide row"
+      label: "Hide component"
+      description: "Hide component"
       responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"
+
 
   styling_options:
     background_color:

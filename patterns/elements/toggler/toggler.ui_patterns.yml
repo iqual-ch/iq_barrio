@@ -39,6 +39,9 @@ toggler:
   styles: 1
   classes:
     hidden:
-      label: "Hide toggler"
-      description: "Hide toggler"
+      label: "Hide component"
+      description: "Hide component"
       responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"

@@ -13,3 +13,11 @@ htmlinclude:
       type: textarea
       label: The html
       description: Insert any html content.
+  classes:
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"

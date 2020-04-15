@@ -47,6 +47,14 @@ search:
       options:
         left: Left
         right: Right
+  classes:
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"
   libraries:
     - search:
         css:

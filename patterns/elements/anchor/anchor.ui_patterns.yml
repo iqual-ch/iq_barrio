@@ -19,7 +19,14 @@ anchor:
       type: fontawesome
       label: The anchor icon
       description: The icon is only displayed in the anchor navigation.
-
+  classes:
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"
   libraries:
     - anchor:
         css:

@@ -25,9 +25,17 @@ quote:
     small:
       label: "Small text"
       description: "small text style"
+  styles: 1
+  classes:
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"
   libraries:
     - quote:
         css:
           component:
             quote.css: {}
-  styles: 1

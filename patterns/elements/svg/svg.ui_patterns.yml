@@ -32,6 +32,14 @@ svg:
     #   type: text
     #   label: Class name
   styles: 1
+  classes:
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"
   relations:
     svg_file:
       svg_alt:

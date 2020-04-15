@@ -43,6 +43,13 @@ anchornavigation:
       label: "Fullwidth"
       description: "Use full browser width to show horizontal navigation bar"
       responsive: false
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"
 
   libraries:
     - anchornavigation:

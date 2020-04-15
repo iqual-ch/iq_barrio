@@ -23,3 +23,11 @@ file:
       type: text
       label: The text to display
       preview: The link text
+  classes:
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"

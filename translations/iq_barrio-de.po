@@ -51,6 +51,14 @@ msgid "Hide row"
 msgstr "Zeile ausblenden"
 
 msgctxt "pd_pattern"
+msgid "Hide component"
+msgstr "Komponente ausblenden"
+
+msgctxt "pd_pattern"
+msgid "Hide on print"
+msgstr "Für Druck ausblenden"
+
+msgctxt "pd_pattern"
 msgid "Keep cols on mobile"
 msgstr "Spalten auf Mobilgeräten beibehalten"
 

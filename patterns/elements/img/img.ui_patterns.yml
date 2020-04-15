@@ -34,6 +34,14 @@ img:
         no_lightbox: No
         lightbox: Yes
   styles: 1
+  classes:
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"
   relations:
     image_img:
       image_alt:

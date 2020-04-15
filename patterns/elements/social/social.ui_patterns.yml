@@ -44,6 +44,13 @@ social:
     default-colors:
       label: "Default colors"
       description: "Use each network's default color"
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"
   libraries:
     - social:
         css:
