@@ -24,14 +24,17 @@ slider:
       label: "No indent"
       description: "Prevent children from having left and right padding"
       responsive: true
-    hidden:
-      label: "Hide row"
-      description: "Hide row"
-      responsive: true
     outside-controls:
       label: "Outside controls"
       description: "Place controls outside slider"
       responsive: true
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"
   styling_options:
     color_scheme:
       label: "Color scheme"
@@ -89,14 +92,6 @@ slider:
     column0:
       type: cell
       label: column0
-  classes:
-    hidden:
-      label: "Hide component"
-      description: "Hide component"
-      responsive: true
-    hidden-print:
-      label: "Hide on print"
-      description: "Hide on print"
   libraries:
     - slider:
         js:
