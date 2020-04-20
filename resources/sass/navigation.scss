@@ -15,7 +15,7 @@
 
   >ul {
     flex-direction: row;
-
+    flex-wrap: nowrap;
     >li {
       margin: $navi-main-margin;
 
@@ -33,7 +33,7 @@
         padding: $navi-main-padding;
         border-width: $navi-main-border-width;
         text-decoration: none;
-
+        white-space: nowrap;
         &.nav-link {
           padding: $navi-main-padding;
         }

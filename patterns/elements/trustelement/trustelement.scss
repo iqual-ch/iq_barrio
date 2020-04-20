@@ -25,11 +25,8 @@
     margin-left: 2%;
     display: inline-block;
     vertical-align: middle;
-    p {
+    *:last-child{
       margin: 0;
-    }
-    strong {
-      font-size: $font-size-h5;
     }
   }
 
