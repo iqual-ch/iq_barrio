@@ -157,10 +157,10 @@
                 padding: 0 $padding-right-base 0 $padding-left-base;
                 cursor: pointer;
                 line-height: $padding-top-base * 1.5;
-                font-size: $font-size-lead;
-                font-weight: $font-weight-lead;
-                font-style: $font-style-lead;
-                font-family: $font-family-lead;
+                font-size: $font-size-standard;
+                font-weight: $font-weight-standard;
+                font-style: $font-style-standard;
+                font-family: $font-family-standard;
                 *:first-child{
                   margin-top: 0;
                 }
