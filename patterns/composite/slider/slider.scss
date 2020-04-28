@@ -193,9 +193,21 @@
     }
   }
 
-  .col {
+  > .col {
     height: 100%;
     display: block;
+    .owl-stage-outer{
+      height: 100%;
+      .owl-stage{
+        height: 100%;
+        .owl-item{
+          height: 100%;
+          > .iq-row{
+            height: 100%;
+          }
+        }
+      }
+    }
 
     &[data-gjs-type] {
       height: auto;
