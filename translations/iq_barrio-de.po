@@ -995,6 +995,13 @@ msgctxt "pd_pattern"
 msgid "The content of the tab."
 msgstr "Der Inhalt des Reiters"
 
+msgctxt "pd_pattern"
+msgid "Small indent"
+msgstr "Weniger Einzug"
+
+msgctxt "pd_pattern"
+msgid "Icon color"
+msgstr "Icon-Farbe"
 
 
 # /patterns/elements/gallery

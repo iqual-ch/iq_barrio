@@ -1,13 +1,236 @@
 @import '../../../resources/sass/definitions';
 
 .iq-trust-element{
+
   display: flex;
   margin-bottom: $base-margin-bottom;
+  font-size: $font-size-h3;
+
+  &.icon-color-primary{
+    .iq-trust-element-icon,
+    .iq-trust-element-number{
+      * {
+        color: $color-primary;
+      }
+    }
+  }
+  &.icon-color-secondary{
+    .iq-trust-element-icon,
+    .iq-trust-element-number{
+      *{
+        color: $color-secondary;
+      }
+    }
+  }
+  &.icon-color-tertiary{
+    .iq-trust-element-icon,
+    .iq-trust-element-number{
+      *{
+        color: $color-tertiary;
+      }
+    }
+  }
+  &.icon-color-quaternary{
+    .iq-trust-element-icon,
+    .iq-trust-element-number{
+      *{
+        color: $color-quaternary;
+      }
+    }
+  }
+  &.icon-color-grey1{
+    .iq-trust-element-icon,
+    .iq-trust-element-number{
+      *{
+        color: $color-grey1;
+      }
+    }
+  }
+  &.icon-color-grey2{
+    .iq-trust-element-icon,
+    .iq-trust-element-number{
+      *{
+        color: $color-grey2;
+      }
+    }
+  }
+  &.icon-color-grey3{
+    .iq-trust-element-icon,
+    .iq-trust-element-number{
+      *{
+        color: $color-grey3;
+      }
+    }
+  }
+  &.icon-color-grey4{
+    .iq-trust-element-icon,
+    .iq-trust-element-number{
+      *{
+        color: $color-grey4;
+      }
+    }
+  }
+  &.icon-color-grey5{
+    .iq-trust-element-icon,
+    .iq-trust-element-number{
+      *{
+        color: $color-grey5;
+      }
+    }
+  }
+  &.icon-color-black{
+    .iq-trust-element-icon,
+    .iq-trust-element-number{
+      *{
+        color: $color-black;
+      }
+    }
+  }
+  &.icon-color-white{
+    .iq-trust-element-icon,
+    .iq-trust-element-number{
+      *{
+        color: $color-white;
+      }
+    }
+  }
+  &.font-color-primary{
+    .iq-trust-element-text.iq-text *{
+      color: $color-primary;
+    }
+  }
+  &.font-color-secondary{
+    .iq-trust-element-text.iq-text *{
+      color: $color-secondary;
+    }
+  }
+  &.font-color-tertiary{
+    .iq-trust-element-text.iq-text *{
+      color: $color-tertiary;
+    }
+  }
+  &.font-color-quaternary{
+    .iq-trust-element-text.iq-text *{
+      color: $color-quaternary;
+    }
+  }
+  &.font-color-grey1{
+    .iq-trust-element-text.iq-text *{
+      color: $color-grey1;
+    }
+  }
+  &.font-color-grey2{
+    .iq-trust-element-text.iq-text *{
+      color: $color-grey2;
+    }
+  }
+  &.font-color-grey3{
+    .iq-trust-element-text.iq-text *{
+      color: $color-grey3;
+    }
+  }
+  &.font-color-grey4{
+    .iq-trust-element-text.iq-text *{
+      color: $color-grey4;
+    }
+  }
+  &.font-color-grey5{
+    .iq-trust-element-text.iq-text *{
+      color: $color-grey5;
+    }
+  }
+  &.font-color-black{
+    .iq-trust-element-text.iq-text *{
+      color: $color-black;
+    }
+  }
+  &.font-color-white{
+    .iq-trust-element-text.iq-text *{
+      color: $color-white;
+    }
+  }
+
+  &.inverted{
+    .iq-trust-element-icon,
+    .iq-trust-element-number,
+    .iq-trust-element-text{
+      *{
+        color: $color-standard-inverted;
+      }
+    }
+  }
+
+  &.lead{
+    &.inverted{
+      .iq-trust-element-text *{
+        color: $color-lead-inverted;
+      }
+    }
+    .iq-trust-element-text p{
+      font-weight: $font-weight-lead;
+      font-style: $font-style-lead;
+      font-family: $font-family-lead;
+      color: $color-lead;
+      margin-top: $margin-top-lead;
+      margin-bottom: $margin-bottom-lead;
+
+      @include fluid-type(320px, 991px, $font-size-min-lead, $font-size-lead);
+    }
+  }
+
+  &.small{
+    &.inverted{
+      .iq-trust-element-text *{
+        color: $color-small-inverted;
+      }
+    }
+    .iq-trust-element-text p{
+      line-height: $line-height-small;
+      font-weight: $font-weight-small;
+      font-style: $font-style-small;
+      font-family: $font-family-small;
+      color: $color-small;
+      margin-top: $margin-top-small;
+      margin-bottom: $margin-bottom-small;
+      @include fluid-type(320px, 991px, $font-size-min-small, $font-size-small);
+    }
+  }
+
+  &.small-indent{
+    .iq-trust-element-icon,
+    .iq-trust-element-number{
+      width: calc( 45px + 5% );
+      i{
+        left: 0;
+        transform: translate(0,-50%);
+        &[data-align="top"]{
+          transform: translate(0, 5px);
+        }
+        &[data-align="bottom"]{
+          transform: translate(0, -100%);
+        }
+      }
+      > span {
+        left: 0;
+        transform: translate(0,-50%);
+        &[data-align="top"]{
+          transform: translate(0, 0);
+        }
+        &[data-align="bottom"]{
+          transform: translate(0, -100%);
+        }
+      }
+    }
+    .iq-trust-element-text {
+      width: calc( 95% - 45px );
+    }
+  }
+
   .iq-trust-element-icon {
     color: $color-text-icons;
     display: inline-block;
-    width: 15%;
-    font-size: $font-size-h3;
+    width: 20%;
+    font-size: inherit;
     text-align: center;
     font-weight: bold;
     position: relative;
@@ -16,13 +239,19 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%,-50%);
+      &[data-align="top"]{
+        top: 0;
+        transform: translate(-50%, 5px);
+      }
+      &[data-align="bottom"]{
+        top: 100%;
+        transform: translate(-50%, -100%);
+      }
     }
   }
 
-  .iq-trust-element-text {
-    padding-left: 3%;
-    width: 80%;
-    margin-left: 2%;
+  .iq-trust-element-text.iq-text {
+    width: 85%;
     display: inline-block;
     vertical-align: middle;
     *:last-child{
@@ -38,6 +267,14 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%,-50%);
+      &[data-align="top"]{
+        top: 0;
+        transform: translate(-50%, 0);
+      }
+      &[data-align="bottom"]{
+        top: 100%;
+        transform: translate(-50%, -100%);
+      }
     }
   }
 }

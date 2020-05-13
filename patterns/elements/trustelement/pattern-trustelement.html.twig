@@ -1,12 +1,11 @@
-<div class="iq-trust-element">
+<div class="iq-trust-element" >
     {% if icon|render is not empty %}
-    <div class="iq-trust-element-icon" data-iq-alternate-group="symbol" data-iq-alternate-label="Symbol" data-iq-label="Icon">
-        <i class="fa {{icon}}"></i>
+    <div class="iq-trust-element-icon">
+        <i class="fa {{icon}}" data-align="{{icon_position}}"></i>
     </div>
     {% else %}
-    <div class="iq-trust-element-icon iq-trust-element-number iq-alternate-hide" data-iq-alternate-group="symbol" data-iq-alternate-label="Text"
-        data-iq-label="Left text">
-        <span>{{text}}</span>
+    <div class="iq-trust-element-icon iq-trust-element-number iq-alternate-hide">
+        <span data-align="{{icon_position}}" >{{text}}</span>
     </div>
     {% endif %}
     <div class="iq-trust-element-text iq-text">
