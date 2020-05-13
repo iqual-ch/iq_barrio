@@ -14,14 +14,14 @@
       }
     }
     p{
-      font-size: $font-size-lead;
-      line-height: $line-height-lead;
       font-weight: $font-weight-lead;
       font-style: $font-style-lead;
       font-family: $font-family-lead;
       color: $color-lead;
       margin-top: $margin-top-lead;
       margin-bottom: $margin-bottom-lead;
+
+      @include fluid-type(320px, 991px, $font-size-min-lead, $font-size-lead);
     }
   }
 
@@ -32,7 +32,6 @@
       }
     }
     p{
-      font-size: $font-size-small;
       line-height: $line-height-small;
       font-weight: $font-weight-small;
       font-style: $font-style-small;
@@ -40,6 +39,7 @@
       color: $color-small;
       margin-top: $margin-top-small;
       margin-bottom: $margin-bottom-small;
+      @include fluid-type(320px, 991px, $font-size-min-small, $font-size-small);
     }
   }
 }
