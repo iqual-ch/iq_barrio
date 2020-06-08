@@ -23,6 +23,14 @@ file:
       type: text
       label: The text to display
       preview: The link text
+    alignment:
+      type: select
+      label: Alignment
+      preview: left
+      options:
+        left: Left
+        center: Center
+        right: Right
   classes:
     hidden:
       label: "Hide component"
@@ -31,3 +39,10 @@ file:
     hidden-print:
       label: "Hide on print"
       description: "Hide on print"
+  libraries:
+    - file:
+        css:
+          component:
+            file.css: {}
+        js:
+          file.js: {}

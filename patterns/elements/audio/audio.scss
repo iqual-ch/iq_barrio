@@ -1,4 +1,30 @@
 @import '../../../resources/sass/definitions';
 .iq-audio {
   min-height: 30px;
+  text-align: left;
+  color: $font-color-buttons;
+  &[data-align="left"]{
+    text-align: left;
+  }
+  &[data-align="center"]{
+    text-align: center;
+  }
+  &[data-align="right"]{
+    text-align: right;
+  }
+}
+
+
+[data-gjs-type="container"]{
+  .iq-audio{
+    &[alignment="left"]{
+      text-align: left !important;
+    }
+    &[alignment="center"]{
+      text-align: center !important;
+    }
+    &[alignment="right"]{
+      text-align: right !important;
+    }
+  }
 }

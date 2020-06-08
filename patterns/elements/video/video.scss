@@ -1,5 +1,5 @@
 @import '../../../resources/sass/definitions';
-.iq-image{
+.iq-video{
   &[data-align="left"]{
     margin-left: 0;
     margin-right: auto;
@@ -13,14 +13,14 @@
     margin-right: 0;
   }
 
-  img {
+  video {
     width: 100%;
     height: auto;
   }
 }
 
 [data-gjs-type="container"]{
-  .iq-image{
+  .iq-video{
     &[alignment="left"]{
       margin-left: 0;
       margin-right: auto;

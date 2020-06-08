@@ -39,6 +39,14 @@ audio:
     audio:
       type: audio
       label: The audio to play
+    alignment:
+      type: select
+      label: Alignment
+      preview: left
+      options:
+        left: Left
+        center: Center
+        right: Right
   classes:
     hidden:
       label: "Hide component"
@@ -47,3 +55,10 @@ audio:
     hidden-print:
       label: "Hide on print"
       description: "Hide on print"
+  libraries:
+    - audio:
+        css:
+          component:
+            audio.css: {}
+        js:
+          audio.js: {}

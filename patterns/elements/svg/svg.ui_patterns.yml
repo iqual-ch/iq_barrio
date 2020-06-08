@@ -28,6 +28,14 @@ svg:
       type: target
       label: Open link in new window
       description: Should the link be opened in the same window or in a new one?
+    alignment:
+      type: select
+      label: Alignment
+      preview: left
+      options:
+        left: Left
+        center: Center
+        right: Right
     # parent_class:
     #   type: text
     #   label: Class name

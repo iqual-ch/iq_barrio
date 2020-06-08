@@ -33,6 +33,14 @@ img:
       options:
         no_lightbox: No
         lightbox: Yes
+    alignment:
+      type: select
+      label: Alignment
+      preview: left
+      options:
+        center: Center
+        left: Left
+        right: Right
   styles: 1
   classes:
     hidden:

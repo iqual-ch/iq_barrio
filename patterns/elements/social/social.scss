@@ -3,6 +3,23 @@
 
 .iq-social-icons{
   font-size: 0;
+
+  &[data-align="left"]{
+    text-align: left;
+  }
+  &[data-align="center"]{
+    text-align: center;
+    a:last-child{
+      margin-right: 0;
+    }
+  }
+  &[data-align="right"]{
+    text-align: right;
+    a:last-child{
+      margin-right: 0;
+    }
+  }
+
   &.round-icons{
     a{
       width: 32px;
@@ -34,7 +51,6 @@
     .icon-instagram{
       color: #C13584;
     }
-
 
     &.round-icons{
       .icon-facebook{
@@ -75,5 +91,26 @@
     color: $social-icons-color;
     font-size: 16px;
     margin-right: $margin-right-base * 0.5;
+  }
+}
+
+
+[data-gjs-type="container"]{
+  .iq-social-icons{
+    &[alignment="left"]{
+      text-align: left !important;
+    }
+    &[alignment="center"]{
+      text-align: center !important;
+      a:last-child{
+        margin-right: 0 !important;;
+      }
+    }
+    &[alignment="right"]{
+      text-align: right !important;
+      a:last-child{
+        margin-right: 0 !important;;
+      }
+    }
   }
 }

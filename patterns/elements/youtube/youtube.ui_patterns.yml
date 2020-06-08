@@ -26,6 +26,14 @@ youtube: # The id of the pattern. Must match the name of the file.
         ratio-2: '2:1 (Super-Wide)'
         ratio-1: '1:1 (Square)'
         ratio9-16: '9:16 (Portrait mode)'
+    alignment:
+      type: select
+      label: Alignment
+      preview: left
+      options:
+        left: Left
+        center: Center
+        right: Right
   styles: 1
   classes:
     hidden:

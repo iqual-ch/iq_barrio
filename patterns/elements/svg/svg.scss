@@ -1,5 +1,39 @@
 @import '../../../resources/sass/definitions';
 
 .iq-svg{
-  width: 100%
+  width: 100%;
+  &[data-align="left"]{
+    margin-left: 0;
+    margin-right: auto;
+  }
+  &[data-align="center"]{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &[data-align="right"]{
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+[data-gjs-type="container"]{
+  .iq-svg{
+    &[alignment="left"]{
+      margin-left: 0;
+      margin-right: auto;
+    }
+    &[alignment="center"]{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &[alignment="right"]{
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
 }

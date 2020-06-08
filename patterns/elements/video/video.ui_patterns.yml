@@ -41,6 +41,14 @@ video:
     video:
       type: video
       label: Upload video file
+    alignment:
+      type: select
+      label: Alignment
+      preview: left
+      options:
+        left: Left
+        center: Center
+        right: Right
   styles: 1
   classes:
     hidden:
@@ -50,3 +58,10 @@ video:
     hidden-print:
       label: "Hide on print"
       description: "Hide on print"
+  libraries:
+    - video:
+        css:
+          component:
+            video.css: {}
+        js:
+          video.js: {}

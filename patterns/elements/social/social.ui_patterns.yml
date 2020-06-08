@@ -37,6 +37,14 @@ social:
     title_instagram:
       type: text
       label: The Instagram link title text
+    alignment:
+      type: select
+      label: Alignment
+      preview: left
+      options:
+        left: Left
+        center: Center
+        right: Right
   classes:
     round-icons:
       label: "Round icons"
