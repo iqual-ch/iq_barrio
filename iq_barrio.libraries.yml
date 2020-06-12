@@ -19,6 +19,7 @@ global-styling:
       resources/css/footer.css: {}
       resources/css/breadcrumbs.css: {}
       resources/css/base.css: {}
+      resources/css/shop.css: {}
   dependencies:
     - iq_barrio/bootstrap_cdn
 

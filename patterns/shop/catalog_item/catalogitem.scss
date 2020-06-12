@@ -1,0 +1,76 @@
+@import '../../../resources/sass/definitions';
+.iq-catalog-item{
+  a{
+    text-decoration: none;
+  }
+  padding: 15px;
+  border: 1px solid $color-grey5;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+  transition: $transition-default;
+  &:hover{
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,0.1);
+  }
+  .img-holder{
+    padding-bottom: 100%;
+    position: relative;
+    margin: -15px -15px 15px;
+    img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      max-width: 100%;
+    }
+  }
+
+  .variation-title{
+    font-size: $font-size-h4;
+    line-height: $line-height-h4;
+    font-weight: $font-weight-h4;
+    font-style: $font-style-h4;
+    font-family: $font-family-h4;
+    color: $color-h4;
+    margin-top: $margin-top-h4;
+    margin-bottom: $margin-bottom-h4;
+    @include fluid-type(320px, 991px, $font-size-min-h4, $font-size-h4);
+  }
+
+  .commerce-variation-add-to-cart-form{
+    display: flex;
+    .quantity {
+      margin: 0;
+      border-radius: 0;
+      border: 1px solid #ddd;
+      border-right: none;
+      text-align: center;
+      border-radius: $border-radius-buttons 0 0 $border-radius-buttons;
+    }
+    .form-submit{
+      border: none;
+      padding: 0 15px;
+      background: $background-color-buttons;
+      // font-weight: 900;
+      // font-family: "Font Awesome 5 Free";
+      // -moz-osx-font-smoothing: grayscale;
+      // -webkit-font-smoothing: antialiased;
+      // display: inline-block;
+      // font-style: normal;
+      // font-variant: normal;
+      // text-rendering: auto;
+      // line-height: 1;
+      font-size: $font-size-small;
+
+
+      font-weight: $font-weight-buttons;
+      font-style: $font-style-buttons;
+      font-family: $font-family-buttons;
+      color: $font-color-buttons;
+
+      border-radius: 0 $border-radius-buttons $border-radius-buttons 0;
+    }
+  }
+
+}

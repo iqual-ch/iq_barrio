@@ -1,0 +1,10 @@
+@import 'definitions';
+
+// catalog
+.iq-catalog{
+  padding-left: 15px;
+  padding-right: 15px;
+  > .view-content.row{
+    flex-basis: 100%;
+  }
+}
