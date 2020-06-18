@@ -773,3 +773,8 @@ b, strong{
 //     padding: 0;
 //   }
 // }
+
+.alert-wrapper {
+  left: 60px;
+  width: calc(100% - 120px);
+}
