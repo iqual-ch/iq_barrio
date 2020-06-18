@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('ui_patterns/img.img') }}
+{{ attach_library('ui_patterns/text.text') }}
+<article{{ attributes }}>
+  <div class="row iq-row">
+    <div class="col-xs-12 col-sm-6 iq-column product-image">
+      <div class="iq-image">
+        {{ product.variation_field_images }}
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 iq-column product-information">
+      <div class="iq-text">
+        <h1>{{ product_entity.title.value }}</h1>
+        <div class="lead field-price">{{ product.variation_price }}</div>
+        <div class="small field-sku">{{ product.variation_sku }}</div>
+        <div>
+          {{product_entity.field_iq_commerce_lead.value|raw}}
+        </div>
+      </div>
+      {{- product|without('variation_attributes', 'field_iq_commerce_lead', 'variation_price', 'variation_sku', 'variation_field_images') -}}
+    </div>
+  </div>
+
+  {{ product_entity.field_pagedesigner_content|view({label: 'hidden', type: 'pagedesigner_formatter', settings: {}})}}
+
+  </article>
