@@ -13,19 +13,22 @@ catalog_item:
     product_id:
       type: text
       label: Product id
-    content:
+    variation_id:
       type: text
-      label: Product variation
+      label: Product variation id
     product_title:
       type: text
       label: Product title
+    product_description:
+      type: text
+      label: Product description
     product_img:
       type: image
       label: Product image
-    prodcut_price:
+    variation_price:
       type: text
       label: Product price
-    prodcut_currency:
+    variation_currency:
       type: text
       label: Product currency
     add_to_cart_action:

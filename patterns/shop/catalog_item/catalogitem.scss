@@ -1,19 +1,34 @@
 @import '../../../resources/sass/definitions';
 .iq-catalog-item{
-  a{
-    text-decoration: none;
-  }
   padding: 15px;
-  border: 1px solid $color-grey5;
+  margin-bottom: 30px;
+  border: 1px solid $border-color-base;
+  background: $color-background-page;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
   transition: $transition-default;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   &:hover{
     box-shadow: 0 5px 20px 0 rgba(0,0,0,0.1);
   }
+  *{
+    color: $color-standard;
+  }
+  a{
+    text-decoration: none;
+    &:hover,
+    &:active,
+    &:focus{
+      text-decoration: none;
+    }
+  }
+
   .img-holder{
+    flex-basis: 100%;
     padding-bottom: 100%;
     position: relative;
-    margin: -15px -15px 15px;
+    margin: -15px -15px 30px;
     img{
       position: absolute;
       top: 50%;
@@ -26,29 +41,55 @@
     }
   }
 
-  .variation-title{
-    font-size: $font-size-h4;
-    line-height: $line-height-h4;
-    font-weight: $font-weight-h4;
-    font-style: $font-style-h4;
-    font-family: $font-family-h4;
-    color: $color-h4;
-    margin-top: $margin-top-h4;
-    margin-bottom: $margin-bottom-h4;
-    @include fluid-type(320px, 991px, $font-size-min-h4, $font-size-h4);
+  .info-holder{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 15px;
+    .title{
+      flex-grow: 1;
+      padding-right: 30px;
+      font-size: $font-size-h6;
+      font-weight: $font-weight-h6;
+      font-style: $font-style-h6;
+      font-family: $font-family-h6;
+      color: $color-h6;
+      @include fluid-type(320px, 991px, $font-size-min-h6, $font-size-h6);
+      line-height: 1.2;
+    }
+
+    .price{
+      display: flex;
+      justify-content: flex-end;
+      align-items: baseline;
+      line-height: 1.2;
+      .currency{
+        padding-right: 5px;
+        font-size: $font-size-small;
+        padding-top: 0.3rem;
+        line-height: 1;
+      }
+    }
+  }
+
+  .descpription{
+    margin-bottom: 15px;
+    line-height: 1.2;
+    display: block;
   }
 
   .commerce-variation-add-to-cart-form{
+    margin-top: auto;
     display: flex;
     .quantity {
       margin: 0;
       border-radius: 0;
-      border: 1px solid #ddd;
+      border: 1px solid $border-color-base;
       border-right: none;
       text-align: center;
       border-radius: $border-radius-buttons 0 0 $border-radius-buttons;
     }
-    .form-submit{
+    button{
+      cursor: pointer;
       border: none;
       padding: 0 15px;
       background: $background-color-buttons;
@@ -70,6 +111,9 @@
       color: $font-color-buttons;
 
       border-radius: 0 $border-radius-buttons $border-radius-buttons 0;
+      i{
+        color: $color-white;
+      }
     }
   }
 
