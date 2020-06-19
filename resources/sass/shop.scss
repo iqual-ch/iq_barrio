@@ -376,6 +376,9 @@
   .cart-block--link__expand{
     color: $color-primary;
     text-decoration: none;
+    i{
+      color: $color-primary;
+    }
     .cart-block--summary__count{
       background: $color-grey4;
       color: $color-white;
@@ -391,7 +394,9 @@
   }
   .cart-block--contents{
     width: auto;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
     .cart-block--contents__inner{
+      padding-top: 0;
       * {
         color: $color-standard;
       }
@@ -546,5 +551,13 @@ article.profile{
   .btn-primary{
     margin: 15px 0;
     width: auto;
+  }
+}
+
+// categories
+.view-shop-categories{
+  > .view-content{
+    margin: 0;
+    padding: 0 15px;
   }
 }
