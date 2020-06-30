@@ -417,6 +417,10 @@ msgid "Three columns row (1/4 - 2/4 - 1/4)"
 msgstr "Dreispaltige Zeile <br /> (1/4 - 2/4 - 1/4)"
 
 msgctxt "pd_pattern"
+msgid "Three columns row (2/4 - 1/4 - 1/4)"
+msgstr "Dreispaltige Zeile <br /> (2/4 - 1/4 - 1/4)"
+
+msgctxt "pd_pattern"
 msgid "A row with three columns."
 msgstr "Eine Zeile mit drei Spalten"
 
