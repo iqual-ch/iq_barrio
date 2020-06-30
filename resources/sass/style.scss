@@ -775,6 +775,6 @@ b, strong{
 // }
 
 .alert-wrapper {
-  left: 60px;
-  width: calc(100% - 120px);
+  left: 60px !important;
+  width: calc(100% - 120px) !important;
 }
