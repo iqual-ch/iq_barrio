@@ -7,12 +7,12 @@ product_teaser:
   type: component
   styles: 1
   fields:
-    product_link:
-      type: href
-      label: Product link
     product_title:
       type: text
       label: Product title
+    product_link:
+      type: href
+      label: Product link
     product_description:
       type: text
       label: Product description

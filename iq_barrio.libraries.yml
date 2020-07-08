@@ -19,7 +19,6 @@ global-styling:
       resources/css/footer.css: {}
       resources/css/breadcrumbs.css: {}
       resources/css/base.css: {}
-      resources/css/shop.css: {}
   dependencies:
     - iq_barrio/bootstrap_cdn
 
@@ -30,6 +29,20 @@ bootstrap_cdn:
   css:
     layout:
       //stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css: {weight: 0}
+
+shop-styling:
+  version: VERSION
+  js:
+    resources/js/shop.js: {}
+    //cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js:
+      { minified: true, type: external }
+  css:
+    layout:
+      resources/css/shop.css: {}
+      https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css:
+        { minified: true, type: external }
+  dependencies:
+    - iq_barrio/global-styling
 
 admin-style:
   js:

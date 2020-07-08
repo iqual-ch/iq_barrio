@@ -31,6 +31,9 @@ catalog_item:
     variation_currency:
       type: text
       label: Product currency
+    variation_additional_price_text:
+      type: text
+      label: Additional text for variation price
     add_to_cart_action:
       type: text
       label: Add to cart form action

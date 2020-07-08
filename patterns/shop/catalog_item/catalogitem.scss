@@ -2,7 +2,7 @@
 .iq-catalog-item{
   padding: 15px;
   margin-bottom: 30px;
-  border: 1px solid $border-color-base;
+  border: 1px solid $color-grey5;
   background: $color-background-page;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
   transition: $transition-default;
@@ -68,6 +68,18 @@
         padding-top: 0.3rem;
         line-height: 1;
       }
+      .additional-text{
+        padding-right: 5px;
+        font-size: $font-size-small;
+        padding-top: 0.3rem;
+        line-height: 1;
+      }
+    }
+    .detail{
+      padding-right: 5px;
+      font-size: $font-size-h6;
+      padding-top: 0.3rem;
+      line-height: 1;
     }
   }
 
@@ -83,7 +95,7 @@
     .quantity {
       margin: 0;
       border-radius: 0;
-      border: 1px solid $border-color-base;
+      border: 1px solid #ddd;
       border-right: none;
       text-align: center;
       border-radius: $border-radius-buttons 0 0 $border-radius-buttons;
@@ -114,6 +126,33 @@
       i{
         color: $color-white;
       }
+    }
+  }
+
+
+  .btn-more{
+    display: inline-block;
+    padding: $padding-buttons;
+    font-size: $font-size-buttons;
+    font-weight: $font-weight-buttons;
+    font-style: $font-style-buttons;
+    font-family: $font-family-buttons;
+    line-height: $line-height-buttons;
+    color: $font-color-buttons;
+    text-align: center;
+    text-decoration: none;
+    border-color: $border-color-buttons;
+    border-style: solid;
+    border-width: $border-width-buttons;
+    border-radius: $border-radius-buttons;
+    background: $background-color-buttons;
+    transition: $transition-default;
+    margin-right: auto;
+
+    i{
+      color: $font-color-buttons;
+      transition: $transition-default;
+      margin-left: 10px;
     }
   }
 
