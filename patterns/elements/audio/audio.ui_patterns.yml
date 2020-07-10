@@ -60,5 +60,3 @@ audio:
         css:
           component:
             audio.css: {}
-        js:
-          audio.js: {}
