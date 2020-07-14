@@ -412,7 +412,7 @@
     text-transform:     {{navi_main_text_transform}};
     border-width:       {{navi_main_border_width_top}}{{navi_main_border_width_unit}} {{navi_main_border_width_right}}{{navi_main_border_width_unit}} {{navi_main_border_width_bottom}}{{navi_main_border_width_unit}} {{navi_main_border_width_left}}{{navi_main_border_width_unit}};
     border-style:       solid;
-    border-color:       rgba({{color_page_border_navbar}},{{opacity_page_border_nav_dropdown}});
+    border-color:       rgba({{color_page_border_navbar}},{{opacity_page_border_navbar}});
 }
 
 [data-drupal-selector="edit-iq-theme"] .styling-preview .navbar-nav li a{
