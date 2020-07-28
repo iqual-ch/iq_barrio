@@ -1,0 +1,37 @@
+separator:
+  label: Separator
+  description: Separator
+  category: Element
+  icon: fas fa-grip-lines
+  pagedesigner: 1
+  type: component
+  styles: 1
+  classes:
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"
+  styling_options:
+    color:
+      label: "Color"
+      options:
+        color-primary: "Primary color"
+        color-secondary: "Secondary color"
+        color-tertiary: "Tertiary color"
+        color-quaternary: "Quaternary color"
+        color-grey1: "Grey 1"
+        color-grey2: "Grey 2"
+        color-grey3: "Grey 3"
+        color-grey4: "Grey 4"
+        color-grey5: "Grey 5"
+        color-black: "Black"
+        color-white: "White"
+
+  libraries:
+    - separator:
+        css:
+          component:
+            separator.css: {}
