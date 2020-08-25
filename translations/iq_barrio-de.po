@@ -1039,6 +1039,12 @@ msgid "Gallery name"
 msgstr "Name der Galerie"
 
 
+# /patterns/elements/gallery_slider
+
+msgctxt "pd_pattern"
+msgid "Number of images"
+msgstr "Anzahl Bilder"
+
 
 # /patterns/elements/gallery_topimage
 

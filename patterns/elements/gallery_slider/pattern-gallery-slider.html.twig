@@ -1,0 +1,12 @@
+<div class="iq-slidergallery owl-carousel" data-arrow-left="{{arrowleft}}" data-arrow-right="{{arrowright}}" >
+  {% for image in images %}
+    {% if image.src %}
+    <div >
+      <a href="{{image.src}}" data-toggle="lightbox-gallery" data-gallery="gallery"
+        data-max-width="1920" data-title="{{image.alt}}" >
+        <img src="{{image.src}}" title="{{image.alt}}" alt="{{image.alt}}" />
+      </a>
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>

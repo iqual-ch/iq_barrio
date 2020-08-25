@@ -1,0 +1,50 @@
+@import "../../../../iq_barrio/resources/sass/definitions";
+
+.iq-slidergallery.owl-carousel {
+  position: relative;
+  .owl-nav {
+    button{
+      outline: none;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+
+      &.owl-prev {
+        left: 15px;
+      }
+
+      &.owl-next {
+        right: 15px;
+      }
+
+      i{
+        padding: 20px;
+        background: $slider-arrow-backgroundcolor;
+        color: $slider-arrow-color;
+        font-size: $slider-arrow-font-size;
+      }
+    }
+  }
+  .owl-item{
+    a{
+      position: relative;
+      display: block;
+      &::before{
+        position: absolute;
+        bottom: 0;
+        padding: 18px;
+        font-size: 14px;
+        color: $color-white;
+        font-weight: 200;
+      }
+      &::before{
+        content: attr(data-title);
+        width: 100%;
+        left: 0;
+        background: rgba($color-black, 0.24);
+      }
+    }
+  }
+}
