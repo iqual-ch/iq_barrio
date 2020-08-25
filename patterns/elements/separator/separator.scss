@@ -1,0 +1,59 @@
+@import '../../../resources/sass/definitions';
+
+.iq-separator{
+  &.color-primary{
+    hr{
+      border-color: $color-primary
+    }
+  }
+  &.color-secondary{
+    hr{
+      border-color: $color-secondary
+    }
+  }
+  &.color-tertiary{
+    hr{
+      border-color: $color-tertiary
+    }
+  }
+  &.color-quaternary{
+    hr{
+      border-color: $color-quaternary
+    }
+  }
+  &.color-grey1{
+    hr{
+      border-color: $color-grey1
+    }
+  }
+  &.color-grey2{
+    hr{
+      border-color: $color-grey2
+    }
+  }
+  &.color-grey3{
+    hr{
+      border-color: $color-grey3
+    }
+  }
+  &.color-grey4{
+    hr{
+      border-color: $color-grey4
+    }
+  }
+  &.color-grey5{
+    hr{
+      border-color: $color-grey5
+    }
+  }
+  &.color-black{
+    hr{
+      border-color: $color-black
+    }
+  }
+  &.color-white{
+    hr{
+      border-color: $color-white
+    }
+  }
+}
