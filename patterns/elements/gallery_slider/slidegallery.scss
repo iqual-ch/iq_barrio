@@ -27,23 +27,36 @@
       }
     }
   }
-  .owl-item{
-    a{
-      position: relative;
-      display: block;
-      &::before{
-        position: absolute;
-        bottom: 0;
-        padding: 18px;
-        font-size: 14px;
-        color: $color-white;
-        font-weight: 200;
-      }
-      &::before{
-        content: attr(data-title);
-        width: 100%;
-        left: 0;
-        background: rgba($color-black, 0.24);
+
+  .owl-stage{
+    display: flex;
+    .owl-item{
+      flex-shrink: 0;
+      > div{
+        height: 100%;
+        a{
+          height: 100%;
+          position: relative;
+          display: block;
+          &::before{
+            position: absolute;
+            bottom: 0;
+            padding: 18px;
+            font-size: 14px;
+            color: $color-white;
+            font-weight: 200;
+          }
+          &::before{
+            content: attr(data-title);
+            width: 100%;
+            left: 0;
+            background: rgba($color-black, 0.24);
+          }
+          img{
+            height: 100%;
+            object-fit: cover;
+          }
+        }
       }
     }
   }
