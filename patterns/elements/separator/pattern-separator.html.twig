@@ -1,3 +1,17 @@
 <div class="iq-separator" >
-<hr/>
+  {% if icon|render is not empty %}
+    <div class="iq-fa-icon">
+      <i class="{{icon}}"></i>
+    </div>
+  {% elseif svg_file|render is not empty %}
+    <div class="iq-svg">
+      <img src="{{svg_file}}" alt="" />
+    </div>
+  {% elseif content|render is not empty %}
+    <div class="iq-text">
+      {{content}}
+    </div>
+  {% else %}
+    <div></div>
+  {% endif %}
 </div>

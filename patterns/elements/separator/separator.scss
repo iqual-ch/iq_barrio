@@ -1,59 +1,203 @@
 @import '../../../resources/sass/definitions';
 
 .iq-separator{
-  &.color-primary{
-    hr{
-      border-color: $color-primary
+
+  // default
+  &:not(.gradient) > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before,
+    &::after{
+      content: '';
+      display: block;
+      height: 5px;
+      width: 100%;
+      background-color: $color-grey3;
+      height: 5px;
+    }
+    &::before{margin-right: 4vh;}
+    &::after{margin-left: 4vh;}
+    &:empty{
+      &::before{margin-right: 0;}
+      &::after{margin-left: 0;}
     }
   }
-  &.color-secondary{
-    hr{
-      border-color: $color-secondary
+
+  // solid & fading separators
+  &.solid,
+  &.fading{
+    &.hairline{>div{&::before,&::after{height: 1px;}}}
+    &.thin{>div{&::before,&::after{height: 3px;}}}
+    &.medium{>div{&::before,&::after{height: 5px;}}}
+    &.bold{>div{&::before,&::after{height: 9px;}}}
+    &.heavy{>div{&::before,&::after{height: 20px;}}}
+  }
+
+  &.solid{
+    &.color-primary{>div{&::before, &::after{background-color: $color-primary}}}
+    &.color-secondary{>div{&::before, &::after{background-color: $color-secondary}}}
+    &.color-tertiary{>div{&::before, &::after{background-color: $color-tertiary}}}
+    &.color-quaternary{>div{&::before, &::after{background-color: $color-quaternary}}}
+    &.color-grey1{>div{&::before, &::after{background-color: $color-grey1}}}
+    &.color-grey2{>div{&::before, &::after{background-color: $color-grey2}}}
+    &.color-grey3{>div{&::before, &::after{background-color: $color-grey3}}}
+    &.color-grey4{>div{&::before, &::after{background-color: $color-grey4}}}
+    &.color-grey5{>div{&::before, &::after{background-color: $color-grey5}}}
+    &.color-black{>div{&::before, &::after{background-color: $color-black}}}
+    &.color-white{>div{&::before, &::after{background-color: $color-white}}}
+  }
+
+  &.fading{
+    &.color-primary{
+      >div{
+        &::before{background: linear-gradient(to right, rgba($color-primary,0), $color-primary)}
+        &::after{background: linear-gradient(to left, rgba($color-primary,0), $color-primary)}
+      }
+    }
+    &.color-secondary{
+      >div{
+        &::before{background: linear-gradient(to right, rgba($color-secondary,0), $color-secondary)}
+        &::after{background: linear-gradient(to left, rgba($color-secondary,0), $color-secondary)}
+      }
+    }
+    &.color-tertiary{
+      >div{
+        &::before{background: linear-gradient(to right, rgba($color-tertiary,0), $color-tertiary)}
+        &::after{background: linear-gradient(to left, rgba($color-tertiary,0), $color-tertiary)}
+      }
+    }
+    &.color-quaternary{
+      >div{
+        &::before{background: linear-gradient(to right, rgba($color-quaternary,0), $color-quaternary)}
+        &::after{background: linear-gradient(to left, rgba($color-quaternary,0), $color-quaternary)}
+      }
+    }
+    &.color-grey1{
+      >div{
+        &::before{background: linear-gradient(to right, rgba($color-grey1,0), $color-grey1)}
+        &::after{background: linear-gradient(to left, rgba($color-grey1,0), $color-grey1)}
+      }
+    }
+    &.color-grey2{
+      >div{
+        &::before{background: linear-gradient(to right, rgba($color-grey2,0), $color-grey2)}
+        &::after{background: linear-gradient(to left, rgba($color-grey2,0), $color-grey2)}
+      }
+    }
+    &.color-grey3{
+      >div{
+        &::before{background: linear-gradient(to right, rgba($color-grey3,0), $color-grey3)}
+        &::after{background: linear-gradient(to left, rgba($color-grey3,0), $color-grey3)}
+      }
+    }
+    &.color-grey4{
+      >div{
+        &::before{background: linear-gradient(to right, rgba($color-grey4,0), $color-grey4)}
+        &::after{background: linear-gradient(to left, rgba($color-grey4,0), $color-grey4)}
+      }
+    }
+    &.color-grey5{
+      >div{
+        &::before{background: linear-gradient(to right, rgba($color-grey5,0), $color-grey5)}
+        &::after{background: linear-gradient(to left, rgba($color-grey5,0), $color-grey5)}
+      }
+    }
+    &.color-white{
+      >div{
+        &::before{background: linear-gradient(to right, rgba($color-white,0), $color-white)}
+        &::after{background: linear-gradient(to left, rgba($color-white,0), $color-white)}
+      }
+    }
+    &.color-black{
+      >div{
+        &::before{background: linear-gradient(to right, rgba($color-black,0), $color-black)}
+        &::after{background: linear-gradient(to left, rgba($color-black,0), $color-black)}
+      }
     }
   }
-  &.color-tertiary{
-    hr{
-      border-color: $color-tertiary
+
+  // gradient
+  &.gradient{
+    text-align: center;
+    &::after{
+      display: block;
+      content: '';
+      height: 3rem;
+      margin: -2rem -.5rem 0;
+      color: rgba($color-grey3, .25);
+      box-shadow: 0 1rem 1rem -1rem;
+    }
+
+
+    // color
+    &.color-primary::after{color: rgba($color-primary, .25)}
+    &.color-secondary::after{color: rgba($color-secondary, .25)}
+    &.color-tertiary::after{color: rgba($color-tertiary, .25)}
+    &.color-quaternary::after{color: rgba($color-quaternary, .25)}
+    &.color-grey1::after{color: rgba($color-grey1, .25)}
+    &.color-grey2::after{color: rgba($color-grey2, .25)}
+    &.color-grey3::after{color: rgba($color-grey3, .25)}
+    &.color-grey4::after{color: rgba($color-grey4, .25)}
+    &.color-grey5::after{color: rgba($color-grey5, .25)}
+    &.color-black::after{color: rgba($color-black, .25)}
+    &.color-white::after{color: rgba($color-white, .25)}
+
+    // thicknexx
+    &.hairline::after{box-shadow: 0 0.75rem 0.75rem -1rem}
+    &.thin::after{box-shadow: 0 1rem 0.5rem -1rem;}
+    &.medium::after{box-shadow: 0 1rem 1rem -1rem;}
+    &.bold::after{box-shadow: 0 1.5rem 1.5rem -1rem;}
+    &.heavy::after{box-shadow: 0 2rem 2rem -1rem;}
+
+  }
+
+
+
+  // icon
+  &.color-primary{>div.iq-fa-icon{i{color: $color-primary}}}
+  &.color-secondary{>div.iq-fa-icon{i{color: $color-secondary}}}
+  &.color-tertiary{>div.iq-fa-icon{i{color: $color-tertiary}}}
+  &.color-quaternary{>div.iq-fa-icon{i{color: $color-quaternary}}}
+  &.color-grey1{>div.iq-fa-icon{i{color: $color-grey1}}}
+  &.color-grey2{>div.iq-fa-icon{i{color: $color-grey2}}}
+  &.color-grey3{>div.iq-fa-icon{i{color: $color-grey3}}}
+  &.color-grey4{>div.iq-fa-icon{i{color: $color-grey4}}}
+  &.color-grey5{>div.iq-fa-icon{i{color: $color-grey5}}}
+  &.color-black{>div.iq-fa-icon{i{color: $color-black}}}
+  &.color-white{>div.iq-fa-icon{i{color: $color-white}}}
+
+  // text
+  &.color-primary{>div.iq-text{*{color: $color-primary}}}
+  &.color-secondary{>div.iq-text{*{color: $color-secondary}}}
+  &.color-tertiary{>div.iq-text{*{color: $color-tertiary}}}
+  &.color-quaternary{>div.iq-text{*{color: $color-quaternary}}}
+  &.color-grey1{>div.iq-text{*{color: $color-grey1}}}
+  &.color-grey2{>div.iq-text{*{color: $color-grey2}}}
+  &.color-grey3{>div.iq-text{*{color: $color-grey3}}}
+  &.color-grey4{>div.iq-text{*{color: $color-grey4}}}
+  &.color-grey5{>div.iq-text{*{color: $color-grey5}}}
+  &.color-black{>div.iq-text{*{color: $color-black}}}
+  &.color-white{>div.iq-text{*{color: $color-white}}}
+  >div.iq-text{
+    *{
+      white-space: nowrap;
+      &:first-child{
+        margin-top: 0;
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
     }
   }
-  &.color-quaternary{
-    hr{
-      border-color: $color-quaternary
+
+  // SVG
+  >div.iq-svg{
+    height: 100%;
+    img{
+      width: auto;
+      height: 100%;
     }
   }
-  &.color-grey1{
-    hr{
-      border-color: $color-grey1
-    }
-  }
-  &.color-grey2{
-    hr{
-      border-color: $color-grey2
-    }
-  }
-  &.color-grey3{
-    hr{
-      border-color: $color-grey3
-    }
-  }
-  &.color-grey4{
-    hr{
-      border-color: $color-grey4
-    }
-  }
-  &.color-grey5{
-    hr{
-      border-color: $color-grey5
-    }
-  }
-  &.color-black{
-    hr{
-      border-color: $color-black
-    }
-  }
-  &.color-white{
-    hr{
-      border-color: $color-white
-    }
-  }
+
 }

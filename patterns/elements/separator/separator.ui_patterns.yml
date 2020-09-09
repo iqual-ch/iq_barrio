@@ -6,6 +6,16 @@ separator:
   pagedesigner: 1
   type: component
   styles: 1
+  fields:
+    icon:
+      type: fontawesome
+      label: Choose either an icon...
+    svg_file:
+      type: svg
+      label: ... or add an SVG file...
+    content:
+      type: html
+      label: ... or enter a text
   classes:
     hidden:
       label: "Hide component"
@@ -15,6 +25,20 @@ separator:
       label: "Hide on print"
       description: "Hide on print"
   styling_options:
+    style:
+      label: "Separator style"
+      options:
+        solid: "Solid line (default)"
+        fading: "Fading line"
+        gradient: "Gradient"
+    thickness:
+      label: "Separator thickness"
+      options:
+        hairline: "Hairline"
+        thin: "Thin"
+        medium: "Medium (default)"
+        bold: "Bold"
+        heavy: "Heavy"
     color:
       label: "Color"
       options:
@@ -24,13 +48,15 @@ separator:
         color-quaternary: "Quaternary color"
         color-grey1: "Grey 1"
         color-grey2: "Grey 2"
-        color-grey3: "Grey 3"
+        color-grey3: "Grey 3 (default)"
         color-grey4: "Grey 4"
         color-grey5: "Grey 5"
         color-black: "Black"
         color-white: "White"
-
   libraries:
+    - ui_patterns/text.text
+    - ui_patterns/icon.icon
+    - ui_patterns/svg.svg
     - separator:
         css:
           component:
