@@ -30,8 +30,17 @@
 
   .owl-stage{
     display: flex;
+    &[data-gjs-type]{
+      transform: none !important;
+    }
     .owl-item{
       flex-shrink: 0;
+      &[data-gjs-type]{
+        display: none;
+        &.active{
+          display: block;
+        }
+      }
       > div{
         height: 100%;
         a{
