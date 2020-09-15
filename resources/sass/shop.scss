@@ -79,14 +79,16 @@
 
             > div{
 
-                display: grid;
-                grid-template-columns: 100px 20px auto;
-                grid-template-rows: auto auto;
+              display: grid;
+              grid-template-columns: 100px 20px auto;
+              grid-template-rows: auto auto;
 
-              .field--name-field-images{
+              .field--name-field-images,
+              .field--name-field-iq-commerce-images{
                 grid-column-start: 1;
                 grid-row-start: 1;
                 grid-row-end: none;
+                margin: 0;
                 .field__item{
                   img{
                     margin: 0;
@@ -182,6 +184,7 @@
             background-color: $color-grey4;
             border: $border-width-base solid $border-color-base;
             font-weight: normal;
+            width: auto;
           }
         }
       }
@@ -265,6 +268,10 @@
           color: inherit;
           border-bottom: 1px solid $border-color-base;
           border-top: none;
+
+          &:last-child{
+            text-align: right;
+          }
         }
 
         .views-field-quantity{
@@ -322,6 +329,22 @@
       padding-right: 0;
     }
 
+    a[href*="cart"]{
+      position: absolute;
+      top: 100%;
+      font-size: $font-size-buttons;
+      line-height: $line-height-buttons;
+      padding: $padding-buttons;
+      padding-left: 0;
+      padding-right: 0;
+      border-width: $border-width-buttons;
+      border-style: solid;
+      border-color: transparent;
+      &::before{
+        content: '\00ab';
+        margin-right: 5px;
+      }
+    }
   }
 
   .checkout-pane-payment-information{
@@ -333,6 +356,36 @@
       }
       #edit-payment-information-billing-information{
         order: 0;
+      }
+    }
+  }
+
+  .layout-region-checkout-footer{
+    float: none;
+    width: auto;
+    padding: 0;
+    .form-actions{
+      display: flex;
+      justify-content: space-between;
+      &::before{
+        content: '';
+        order: 1;
+      }
+      input{
+        order: 2;
+        max-width: 50%;
+      }
+      a.link--previous{
+        font-size: $font-size-buttons;
+        line-height: $line-height-buttons;
+        padding: $padding-buttons;
+        padding-left: 0;
+        padding-right: 0;
+        border: $border-width-buttons solid transparent;
+        &::before{
+          content: '\00ab';
+          margin-right: 5px;
+        }
       }
     }
   }
@@ -429,11 +482,16 @@
       flex-basis: 100%;
     }
     .field--name-quantity{
-      flex-basis: 100px;
+      flex-basis: 80px;
+      .form-group{
+        margin: 0;
+        height: 100%;
+      }
       label{
         display: none
       }
       input{
+        height: 100%;
         margin: 0;
         border-radius: 0;
         border: 1px solid #ddd;
@@ -441,6 +499,7 @@
         border-radius: $border-radius-buttons 0 0 $border-radius-buttons;
         padding-top: 6px;
         padding-bottom: 6px;
+        font-style: $font-size-buttons;
       }
     }
     .form-actions{
@@ -454,6 +513,7 @@
         font-family: $font-family-buttons;
         color: $font-color-buttons;
         border-radius: 0 $border-radius-buttons $border-radius-buttons 0;
+        margin: 0;
       }
     }
   }
