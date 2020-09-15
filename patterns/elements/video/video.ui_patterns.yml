@@ -63,5 +63,3 @@ video:
         css:
           component:
             video.css: {}
-        js:
-          video.js: {}

@@ -185,3 +185,12 @@
 .iq-collapsible .ui-widget-content  a{
   color: inherit;
 }
+
+[data-gjs-type="collapsible"].iq-tab-element {
+    display: block;
+    margin: 0 -15px;
+    .iq-tab-list{
+      list-style-type: none;
+      padding: 0 15px;
+    }
+}

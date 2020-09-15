@@ -5,14 +5,8 @@
 
 @import 'definitions';
 
-
 body {
-  font-size: $font-size-standard;
-  line-height: $line-height-standard;
-  font-weight: $font-weight-standard;
-  font-style: $font-style-standard;
-  font-family: $font-family-standard;
-  color: $color-standard;
+  @include font-standard;
 }
 
 h1, .h1 {
@@ -88,26 +82,14 @@ h6, .h6 {
  }
 
 p, .standard {
-  font-size: $font-size-standard;
-  line-height: $line-height-standard;
-  font-weight: $font-weight-standard;
-  font-style: $font-style-standard;
-  font-family: $font-family-standard;
-  color: $color-standard;
+  @include font-standard;
   margin-top: $margin-top-standard;
   margin-bottom: $margin-bottom-standard;
-  @include fluid-type(320px, 991px, $font-size-min-standard, $font-size-standard);
 }
 
 .node__content{
-  font-size: $font-size-standard;
-  line-height: $line-height-standard;
-  font-weight: $font-weight-standard;
-  font-style: $font-style-standard;
-  font-family: $font-family-standard;
-  color: $color-standard;
+  @include font-standard;
   margin-top: 0;
-  @include fluid-type(320px, 991px, $font-size-min-standard, $font-size-standard);
 }
 
 .lead {
@@ -773,3 +755,8 @@ b, strong{
 //     padding: 0;
 //   }
 // }
+
+.alert-wrapper {
+  left: 60px !important;
+  width: calc(100% - 120px) !important;
+}
