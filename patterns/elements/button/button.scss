@@ -20,12 +20,14 @@
   &[data-icon-position="left"]{
     i {
       margin-right: 10px;
+      margin-left: 0;
     }
   }
 
   &[data-icon-position="right"]{
     i {
       margin-left: 10px;
+      margin-right: 0;
     }
   }
 
