@@ -1,14 +1,18 @@
 <?php
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\taxonomy\Entity\Term;
-use Drupal\pagedesigner\Definition\PatternDefinition;
-use Drupal\ui_patterns\UiPatternsManager;
 
 /**
- *  Implements hook_theme().
+ * @file
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_theme().
  */
 function iq_barrio_theme($existing, $type, $theme, $path) {
-  return array();
+  return [];
 }
 
 /**
@@ -29,7 +33,7 @@ function _iq_barrio_user_login_form_submit($form, FormStateInterface $form_state
 /**
  * Implements hook_form_system_theme_settings_alter().
  */
-function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $form_state, $form_id = null) {
+function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $form_state, $form_id = NULL) {
   $styleSettings = \Drupal::config('iq_barrio.settings')->get();
   $service = \Drupal::service('iq_barrio_helper.iq_barrio_service');
   $service->alterThemeSettingsForm($form, $styleSettings);
@@ -44,16 +48,16 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
   $content_font = $form_state->getValue('content_font');
 
   if (strpos(strtolower($form_state->getValue('title_font')), 'regular')) {
-    $title_font = trim(strstr($form_state->getValue('title_font'), 'regular', true));
+    $title_font = trim(strstr($form_state->getValue('title_font'), 'regular', TRUE));
   }
 
   if (strpos(strtolower($form_state->getValue('content_font')), 'regular')) {
-    $content_font = trim(strstr($form_state->getValue('content_font'), 'regular', true));
+    $content_font = trim(strstr($form_state->getValue('content_font'), 'regular', TRUE));
   }
 
   $styles = $form_state->getValues();
-  foreach( $styles as $stylingKey => $stylingValaue ){
-    if( (strpos($stylingKey, 'opacity') !== false) && !isset($stylingValaue)  ){
+  foreach ($styles as $stylingKey => $stylingValaue) {
+    if ((strpos($stylingKey, 'opacity') !== FALSE) && !isset($stylingValaue)) {
       $styles[$stylingKey] = 1;
     }
   }
@@ -63,15 +67,10 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
   $service = \Drupal::service('iq_barrio_helper.iq_barrio_service');
   $service->writeDefinitionsFile($styles, $filename);
 
-  //Call hook
-  \Drupal::moduleHandler()->invokeAll('iq_theme_settings', array($styles, $service));
-}
+  // Call hook.
+  \Drupal::moduleHandler()->invokeAll('iq_theme_settings', [$styles, $service]);
 
-function iq_barrio_theme_rebuild(){
-//  \Drupal::logger('iq_barrio')->notice('cache rebuild :)');
-}
-
-
-function iq_barrio_ui_patterns_info_alter(array &$definitions) {
-//  print_r( $definitions );
+  if ($form_state->getValue('reset_css')) {
+    $service->resetCSS();
+  }
 }
