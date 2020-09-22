@@ -15,7 +15,7 @@ gallery_slider:
     numcols:
       type: select
       label: Number of images
-      preview: 4
+      preview: 1
       options:
         1: 1
         2: 2

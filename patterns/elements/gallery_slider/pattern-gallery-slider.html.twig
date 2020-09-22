@@ -1,7 +1,7 @@
-<div class="iq-slidergallery owl-carousel" data-arrow-left="{{arrowleft}}" data-arrow-right="{{arrowright}}" >
+<div class="iq-slidergallery owl-carousel" data-arrow-left="{{arrowleft}}" data-arrow-right="{{arrowright}}" data-cols="{% if numcols|render is not empty %}{{numcols}}{% else %}1{% endif %}">
   {% for image in images %}
     {% if image.src %}
-    <div >
+    <div class="col">
       <a href="{{image.src}}" data-toggle="lightbox-gallery" data-gallery="gallery"
         data-max-width="1920" data-title="{{image.alt}}" >
         <img src="{{image.src}}" title="{{image.alt}}" alt="{{image.alt}}" />

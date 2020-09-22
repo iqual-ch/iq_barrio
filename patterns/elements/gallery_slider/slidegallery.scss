@@ -2,6 +2,8 @@
 
 .iq-slidergallery.owl-carousel {
   position: relative;
+  margin: 0 -15px;
+  width: calc( 100% + 30px );
   .owl-nav {
     button{
       outline: none;
@@ -12,11 +14,11 @@
       z-index: 1;
 
       &.owl-prev {
-        left: 15px;
+        left: 30px;
       }
 
       &.owl-next {
-        right: 15px;
+        right: 30px;
       }
 
       i{

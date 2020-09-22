@@ -11,6 +11,14 @@
         items: 1,
         loop: true,
         nav: false,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          768: {
+            items: $(this).data('cols')
+          }
+        }
       };
 
       if ($(this).data('arrow-left') && $(this).data('arrow-right')) {
