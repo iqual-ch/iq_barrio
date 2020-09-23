@@ -74,4 +74,60 @@
       }
     }
   }
+
+  &[data-gjs-type="gallery_slider"]{
+    display: flex;
+    img{
+      width: 100%;
+    }
+    &[numcols="1"]{
+      .col{
+        max-width: 100%;
+        &:nth-child(n+2){
+          display: none;
+        }
+      }
+    }
+    &[numcols="2"]{
+      .col{
+        max-width: 50%;
+        &:nth-child(n+3){
+          display: none;
+        }
+      }
+    }
+    &[numcols="3"]{
+      .col{
+        max-width: 33%;
+        &:nth-child(n+4){
+          display: none;
+        }
+      }
+    }
+    &[numcols="4"]{
+      .col{
+        max-width: 25%;
+        &:nth-child(n+5){
+          display: none;
+        }
+      }
+    }
+    &[numcols="5"]{
+      .col{
+        max-width: 20%;
+        &:nth-child(n+6){
+          display: none;
+        }
+      }
+    }
+
+    .owl-item{
+      .col{
+        max-width: 100% !important;
+        display: block !important;
+      }
+    }
+
+
+  }
 }
