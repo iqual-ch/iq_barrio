@@ -24,6 +24,30 @@
     }
   }
 
+  &:not(.gradient){
+    &.hairline{>div{&::before,&::after{height: 1px;}}}
+    &.thin{>div{&::before,&::after{height: 3px;}}}
+    &.medium{>div{&::before,&::after{height: 5px;}}}
+    &.bold{>div{&::before,&::after{height: 9px;}}}
+    &.heavy{>div{&::before,&::after{height: 20px;}}}
+
+    &.color-primary{>div{&::before, &::after{background-color: $color-primary}}}
+    &.color-secondary{>div{&::before, &::after{background-color: $color-secondary}}}
+    &.color-tertiary{>div{&::before, &::after{background-color: $color-tertiary}}}
+    &.color-quaternary{>div{&::before, &::after{background-color: $color-quaternary}}}
+    &.color-grey1{>div{&::before, &::after{background-color: $color-grey1}}}
+    &.color-grey2{>div{&::before, &::after{background-color: $color-grey2}}}
+    &.color-grey3{>div{&::before, &::after{background-color: $color-grey3}}}
+    &.color-grey4{>div{&::before, &::after{background-color: $color-grey4}}}
+    &.color-grey5{>div{&::before, &::after{background-color: $color-grey5}}}
+    &.color-black{>div{&::before, &::after{background-color: $color-black}}}
+    &.color-white{>div{&::before, &::after{background-color: $color-white}}}
+  }
+
+
+
+
+
   // solid & fading separators
   &.solid,
   &.fading{
@@ -49,6 +73,11 @@
   }
 
   &.fading{
+    >div{
+      &::before{background: linear-gradient(to right, rgba($color-grey3,0), $color-grey3)}
+      &::after{background: linear-gradient(to left, rgba($color-grey3,0), $color-grey3)}
+    }
+
     &.color-primary{
       >div{
         &::before{background: linear-gradient(to right, rgba($color-primary,0), $color-primary)}
