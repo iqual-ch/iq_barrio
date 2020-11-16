@@ -27,9 +27,7 @@
     <input type="hidden" name="product_id" value="{{ product_id }}" />
     <input type="hidden" name="variation_id" value="{{ variation_id }}" />
     <input type="hidden" name="destination" value="{{ add_to_cart_destination }}" />
-    {% if user.hasPermission('access variation add to cart') %}
-      <button title="{{add_to_cart_title}}"><i class="{{add_to_cart_icon}}"></i></button>
-    {% endif %}
+    <button title="{{add_to_cart_title}}"><i class="{{add_to_cart_icon}}"></i></button>
   </form>
   {% else %}
     {% if add_to_cart_title is not empty %}<a href="{{ product_link }}" class="btn-more">{{add_to_cart_title}}<i class="{{add_to_cart_icon}}"></i></a>{% endif %}

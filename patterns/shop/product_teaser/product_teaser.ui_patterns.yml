@@ -27,6 +27,7 @@ product_teaser:
       label: Button text
 
   libraries:
+    - ui_patterns/button.button
     - product_teaser:
         css:
           component:
