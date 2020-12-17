@@ -22,6 +22,9 @@
           transform: translateZ(0);
 
   .flip-content{
+    &.init{
+      height: 100%;
+    }
     &.hover{
       position: absolute;
       top: 0;
