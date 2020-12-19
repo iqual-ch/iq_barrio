@@ -1,54 +1,55 @@
 <div class="iq-image" data-align="{{alignment}}">
-  {% if image_template|render is not empty %}
 
-    {% if image_img['#plain_text'] %}
-      {% set img = json_decode(image_img['#plain_text']) %}
-    {% else %}
-      {% set img = json_decode(image_img) %}
-    {% endif %}
-
-    {% if lightbox|render == 'lightbox' %}
-      <a href="{{img['img_original']}}" data-toggle="{{lightbox}}-single-image"
-       data-max-width="1920" data-title="{{image_alt}}">
-    {% else %}
-      {% if href|render is not empty %}
-        <a href="{{href}}" title="{{title_link}}" target="{{link_target}}">
-      {% endif %}
-    {% endif %}
-
-    {% set fallback = "" %}
-    <picture>
-      {% for breakpoint, image_data in img['img_responsive'] %}
-        {% set fallback = img['img_responsive'][breakpoint].srcset %}
-        <source media="(min-width: {{breakpoint}})"
-          srcset="{{fallback}}"
-          sizes="{{img['img_responsive'][breakpoint].sizes}}" />
-      {% endfor %}
-      <img src="{{img['img_original']}}" loading="lazy" title="{{image_title}}" alt="{{image_alt}}" />
-    </picture>
-
-    {% if lightbox|render == 'lightbox' or href|render is not empty %}
-      </a>
-    {% endif %}
-
+  {% if image_img['#plain_text'] %}
+    {% set img = custom_function('json_decode', image_img['#plain_text']) %}
   {% else %}
+    {% set img = custom_function('json_decode', image_img) %}
+  {% endif %}
+
+  {% if img is not empty and image_template|render is not empty %}
+
+  {% if lightbox|render == 'lightbox' %}
+  <a href="{{img['img_original']}}" data-toggle="{{lightbox}}-single-image"
+    data-max-width="1920" data-title="{{image_alt}}">
+    {% else %}
+    {% if href|render is not empty %}
+    <a href="{{href}}" title="{{title_link}}" target="{{link_target}}">
+      {% endif %}
+      {% endif %}
+
+      {% set fallback = "" %}
+      <picture>
+        {% for breakpoint, image_data in img['img_responsive'] %}
+        {% set fallback = img['img_responsive'][breakpoint].srcset %}
+        <source media="(min-width: {{breakpoint}})" srcset="{{fallback}}"
+          sizes="{{img['img_responsive'][breakpoint].sizes}}" />
+        {% endfor %}
+        <img src="{{img['img_original']}}" loading="lazy"
+          title="{{image_title}}" alt="{{image_alt}}" />
+      </picture>
+
+      {% if lightbox|render == 'lightbox' or href|render is not empty %}
+    </a>
+    {% endif %}
+
+    {% else %}
 
     {% if lightbox|render == 'lightbox' %}
     <a href="{{image_img}}" data-toggle="{{lightbox}}-single-image"
       data-max-width="1920" data-title="{{image_alt}}">
 
-    {% else %}
+      {% else %}
       {% if href|render is not empty %}
       <a href="{{href}}" title="{{title_link}}" target="{{link_target}}">
 
-      {% endif %}
-    {% endif %}
+        {% endif %}
+        {% endif %}
 
-    <img src="{{image_img}}" loading="lazy" title="{{image_title}}" alt="{{image_alt}}" />
-    {% if lightbox|render == 'lightbox' or href|render is not empty %}
+        <img src="{{image_img}}" loading="lazy" title="{{image_title}}"
+          alt="{{image_alt}}" />
+        {% if lightbox|render == 'lightbox' or href|render is not empty %}
       </a>
-    {% endif %}
+      {% endif %}
 
-  {% endif %}
-
+      {% endif %}
 </div>
