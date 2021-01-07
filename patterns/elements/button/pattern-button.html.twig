@@ -1,7 +1,7 @@
 <div class="iq-button" data-align="{{alignment}}" data-icon-position="{{icon_position}}">
-    <a href="{{href}}" title="{{title}}" target="{{target}}">
-        {% if icon_position|render == 'left' and button_icon|render is not empty %}<i class="{{button_icon}}"></i>{% endif %}
-        {{text}}
-        {% if icon_position|render == 'right' and button_icon|render is not empty %}<i class="{{button_icon}}"></i>{% endif %}
-    </a>
+  <a href="{{href}}" title="{{title}}" target="{{target}}">
+    {% if icon_position|render == 'left' and button_icon|render is not empty %}<i class="{{button_icon}}"></i>{% endif %}
+    <span>{{text}}</span>
+    {% if icon_position|render == 'right' and button_icon|render is not empty %}<i class="{{button_icon}}"></i>{% endif %}
+  </a>
 </div>
