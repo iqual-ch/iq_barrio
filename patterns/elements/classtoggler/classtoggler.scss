@@ -1,0 +1,80 @@
+@import '../../../resources/sass/definitions';
+
+.iq-classtoggler{
+
+  text-align: center;
+  &[data-align="left"]{
+    text-align: left;
+  }
+  &[data-align="right"]{
+    text-align: right;
+  }
+
+  a{
+    width: 34px;
+    height: 34px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+
+    &:hover{
+      div{
+        background-color: $toggler-color-hover;
+      }
+    }
+
+    &.active{
+      div{
+        background-color: $toggler-color-active;
+        &:nth-child(1){
+          transform: rotate(45deg);
+          top: 50%;
+          margin-top: -2px;
+        }
+        &:nth-child(2){
+          left: 50%;
+          width: 0;
+        }
+        &:nth-child(3){
+          bottom: 50%;
+          transform: rotate(-45deg);
+          margin-bottom: -1px;
+        }
+      }
+    }
+
+    div{
+      height: 3px;
+      background-color: $toggler-color;
+      border-radius: $border-radius-base*2;
+      position: absolute;
+      width: 100%;
+      transition: $transition-default;
+      left: 0;
+
+      &:nth-child(1){
+        top: 5px;
+      }
+      &:nth-child(2){
+        top: 50%;
+        transform: translateY(-50%)
+      }
+      &:nth-child(3){
+        bottom: 5px;
+      }
+    }
+  }
+}
+[data-gjs-type="container"]{
+  .iq-toggler{
+    &[alignment="left"]{
+      text-align: left !important;
+    }
+    &[alignment="center"]{
+      text-align: center !important;
+    }
+    &[alignment="right"]{
+      text-align: right !important;
+    }
+  }
+}
