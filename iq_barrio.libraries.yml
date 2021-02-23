@@ -33,7 +33,7 @@ bootstrap_cdn:
 shop-styling:
   version: VERSION
   js:
-    resuorces/js/shop.js: {}
+    resources/js/shop.js: {}
     //cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js:
       { minified: true, type: external }
   css:
