@@ -71,11 +71,11 @@
         color: $font-color-active-buttons;
       }
     }
-    i{
+    i,
+    span{
       color: $font-color-buttons;
       transition: $transition-default;
     }
-
   }
 
   &.inverted{
@@ -83,6 +83,7 @@
       color: $font-color-buttons-inverted;
       border-color: $border-color-buttons-inverted;
       background: $background-color-buttons-inverted;
+      span,
       i{
         color: $font-color-buttons-inverted;
         transition: $transition-default;
@@ -92,6 +93,7 @@
         background-color: $background-color-hover-buttons-inverted;
         color: $font-color-hover-buttons-inverted;
         border-color: $border-color-hover-buttons-inverted;
+        span,
         i{
           color: $font-color-hover-buttons-inverted;
           transition: $transition-default;
@@ -102,6 +104,7 @@
         color: $font-color-active-buttons-inverted;
         border-color: $border-color-active-buttons-inverted;
         transition: $transition-default;
+        span,
         i{
           color: $font-color-active-buttons-inverted;
           transition: $transition-default;
@@ -125,7 +128,8 @@
       border-style: solid;
       border-radius: $border-radius-buttons-alternate;
       background: $background-color-buttons-alternate;
-      i{
+      i,
+      span{
         color: $font-color-buttons-alternate;
         transition: $transition-default;
       }
