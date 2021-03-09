@@ -1,12 +1,14 @@
 <div class="iq-image" data-align="{{alignment}}">
 
   {% if image_img['#plain_text'] %}
-    {% set img = custom_function('json_decode', image_img['#plain_text']) %}
+    {% set img = image_img['#plain_text'] %}
   {% else %}
-    {% set img = custom_function('json_decode', image_img) %}
+    {% set img = image_img %}
   {% endif %}
 
   {% if img is not empty and image_template|render is not empty %}
+
+  {% set img = custom_function('json_decode', img) %}
 
   {% if lightbox|render == 'lightbox' %}
   <a href="{{img['img_original']}}" data-toggle="{{lightbox}}-single-image"

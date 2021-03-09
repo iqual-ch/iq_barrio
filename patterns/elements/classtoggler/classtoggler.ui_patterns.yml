@@ -1,0 +1,51 @@
+classtoggler:
+  label: Classtoggler
+  description: Show / Hide component.
+  category: Element
+  icon: fas fa-toggle-on
+  pagedesigner: 1
+  type: component
+  fields:
+    target:
+      type: text
+      label: The ID of the target component
+      description: The ID of the target component
+    classname:
+      type: text
+      label: Classname
+      description: Class to be toggled on target
+    tooltip:
+      type: text
+      label: Tooltip
+      description: Appears as soon as the mouse is moved over the element (tooltip).
+    scrolllock:
+      type: select
+      label: Lock scrolling
+      preview: yes
+      options:
+        yes: Yes
+        no: No
+    alignment:
+      type: select
+      label: Alignment
+      preview: center
+      options:
+        center: Center
+        left: Left
+        right: Right
+  libraries:
+    - classtoggler:
+        css:
+          component:
+            classtoggler.css: {}
+        js:
+          classtoggler.js: {}
+  styles: 1
+  classes:
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"

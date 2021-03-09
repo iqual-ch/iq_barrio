@@ -18,10 +18,23 @@ gallery:
         3: 3
         4: 4
         5: 5
+
+    image_template:
+      type: image_style_template
+      label: Image Template
+
+    sizes:
+      type: component_sizes
+      label: Size
+
     images:
       type: gallery
       label: Choose
       preview: []
+  responsive_images:
+    template_fields:
+      images: image_template
+    component_sizes_field: sizes
   libraries:
     - gallery:
         js:

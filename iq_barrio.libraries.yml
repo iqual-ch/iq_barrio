@@ -4,8 +4,8 @@ global-styling:
     resources/js/global.js: {}
   css:
     layout:
-      //use.fontawesome.com/releases/v5.7.1/css/all.css: {external: true}
-      //use.fontawesome.com/releases/v5.7.1/css/v4-shims.css: {external: true}
+      //use.fontawesome.com/releases/v5.15.2/css/all.css: {external: true}
+      //use.fontawesome.com/releases/v5.15.2/css/v4-shims.css: {external: true}
       resources/css/layout.css: {}
     component:
       resources/css/colors.css: {}
