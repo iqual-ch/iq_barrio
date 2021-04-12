@@ -39,6 +39,11 @@ button:
       options:
         left: Left
         right: Right
+    hidden_label:
+      type: text
+      label: Hidden text for screen readers
+      visibility:
+        accessibility: true
   classes:
     alternate:
       label: "Alternate button"
