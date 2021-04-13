@@ -616,8 +616,7 @@
     }
   }
 
-  // sjutter in
-
+  // shutter in
   &[data-flip-effect^="shutter-in"]{
     &::before,
     &::after{
@@ -1055,17 +1054,6 @@
       opacity: 0;
     }
   }
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
@@ -1176,8 +1164,15 @@
 }
 
 // backend
-.iq-flipbox[data-gjs-type] .flip-content {
-  position: relative !important;
-  transform: none !important;
-  opacity: 1 !important;
+.iq-flipbox[data-gjs-type] {
+  display: grid;
+  grid-auto-rows: 1fr;
+  .flip-content {
+    position: relative !important;
+    transform: none !important;
+    opacity: 1 !important;
+    height: auto !important;
+  }
 }
+
+
