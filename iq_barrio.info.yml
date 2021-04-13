@@ -12,7 +12,6 @@ dependencies:
 
 libraries:
   - iq_barrio/global-styling
-  - iq_barrio/shop-styling
   - iq_barrio/admin-style
 
 ckeditor_stylesheets:
