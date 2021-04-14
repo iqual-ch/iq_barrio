@@ -14,6 +14,11 @@ button:
       type: text
       label: The link title
       description: Appears as soon as the mouse is moved over the menu link (tooltip).
+    aria_label:
+      type: text
+      label: "SR: Textbeschreibung des Links"
+      visibility:
+        accessibility: true
     target:
       type: target
       label: Open link in new window
@@ -39,11 +44,6 @@ button:
       options:
         left: Left
         right: Right
-    hidden_label:
-      type: text
-      label: Hidden text for screen readers
-      visibility:
-        accessibility: true
   classes:
     alternate:
       label: "Alternate button"

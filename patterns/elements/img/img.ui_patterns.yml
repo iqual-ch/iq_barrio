@@ -6,6 +6,15 @@ img:
   pagedesigner: 1
   type: component
   fields:
+    aria_hidden:
+      type: select
+      label: Hide image from Screenreader
+      preview: "false"
+      options:
+        "false": No
+        "true": Yes
+      visibility:
+        accessibility: true
     image_img:
       type: image
       label: The image

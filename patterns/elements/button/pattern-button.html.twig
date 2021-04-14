@@ -1,6 +1,6 @@
 <div class="iq-button" data-align="{{alignment}}"
   data-icon-position="{{icon_position}}">
-  <a href="{{href}}" title="{{title}}" target="{{target}}">
+  <a aria-label="{{aria_label}}" href="{{href}}" title="{{title}}" target="{{target}}">
     <span>
       {% if icon_position|render == 'left' and button_icon|render is not empty
       %}<i class="{{button_icon}}"></i>{% endif %}
@@ -8,8 +8,5 @@
       {% if icon_position|render == 'right' and button_icon|render is not empty
       %}<i class="{{button_icon}}"></i>{% endif %}
     </span>
-    {% if hidden_label|render is not empty %}
-    <span class="visually-hidden"> {{hidden_label}} </span>
-    {% endif %}
   </a>
 </div>
