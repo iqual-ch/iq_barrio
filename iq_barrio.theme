@@ -65,7 +65,7 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
   $filename = __DIR__ . "/resources/sass/_definitions.scss";
 
   $service = \Drupal::service('iq_barrio_helper.iq_barrio_service');
-  $service->writeDefinitionsFile($styles, $filename);
+  $service->writeDefinitionsFile($styles, $filename, __DIR__ . "/resources/sass/_template.scss.txt");
 
   // Call hook.
   \Drupal::moduleHandler()->invokeAll('iq_theme_settings', [$styles, $service]);
