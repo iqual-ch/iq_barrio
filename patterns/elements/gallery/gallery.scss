@@ -6,12 +6,6 @@
   .iq-image {
     padding-top: 15px;
     padding-bottom: 15px;
-
-    a:after {
-      content: "";
-      display: block;
-      padding-bottom: 100%;
-    }
   }
 
   &[data-cols="1"] .col {

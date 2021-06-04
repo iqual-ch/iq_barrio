@@ -28,6 +28,17 @@ gallery_slider:
     arrowright:
       type: fontawesome
       label: The icon for the right arrow
+    image_template:
+      type: image_style_template
+      preview: image_standard
+      label: Template
+    sizes:
+      type: component_sizes
+      label: Size
+  responsive_images:
+    template_fields:
+      images: image_template
+    component_sizes_field: sizes
   libraries:
     - gallery_slider:
         js:

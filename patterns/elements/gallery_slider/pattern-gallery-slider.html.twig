@@ -2,9 +2,16 @@
   {% for image in images %}
     {% if image.src %}
     <div class="col">
-      <a href="{{image.src}}" data-toggle="lightbox-gallery" data-gallery="gallery"
-        data-max-width="1920" data-title="{{image.alt}}" >
-        <img src="{{image.src}}" title="{{image.alt}}" alt="{{image.alt}}" />
+      <a href="{{image.src}}" data-toggle="lightbox-gallery" data-gallery="gallery" data-max-width="1920" data-title="{{image.alt}}" >
+        {% include '@iq_barrio/includes/responsive-image.html.twig' with {
+          'image' : image.uri,
+          'sizes': sizes,
+          'template': image_template|render,
+          'attributes' : {
+            title: image.alt|render,
+            alt: image.alt|render
+          }
+        } %}
       </a>
     </div>
     {% endif %}
