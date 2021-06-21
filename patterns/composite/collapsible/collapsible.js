@@ -100,8 +100,12 @@
 
   Drupal.behaviors.iqual_pattern_collapsible = {
     attach: function (context, settings) {
-      collapsible($(context).find('.pd-live .iq-collapsible[data-type="accordion"]'));
-      collapsibleTabs($(context).find('.pd-live .iq-collapsible[data-type="tabs"]'));
+      if ($(context).find('.pd-live .iq-collapsible[data-type="accordion"]').length) {
+        collapsible($(context).find('.pd-live .iq-collapsible[data-type="accordion"]'));
+      }
+      if ($(context).find('.pd-live .iq-collapsible[data-type="tabs"]').length) {
+        collapsibleTabs($(context).find('.pd-live .iq-collapsible[data-type="tabs"]'));
+      }
     }
   };
 
