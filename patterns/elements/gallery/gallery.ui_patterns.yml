@@ -22,7 +22,7 @@ gallery:
     image_template:
       type: image_style_template
       label: Image Template
-
+      preview: image_standard
     sizes:
       type: component_sizes
       label: Size

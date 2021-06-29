@@ -1,0 +1,23 @@
+{# check if image is uri or url #}
+{% if image|render|slice(0, 9) == "public://" %}
+  {% if sizes is empty %}
+    {% set sizes = {'1200px':'100vw', '768px':'100vw','300px':'100vw'} %}
+  {% endif %}
+
+  {% if template is empty %}
+    {% set template = "image_standard" %}
+  {% endif %}
+
+  {% if sizes is not empty and template|render is not empty %}
+    <picture>
+      {% for key, value in image_style(sizes, template) %}
+        <source media="(min-width: {{ key }})" sizes="{{ value.size }}" srcset="{% for image_style_name, size in value.templates %}{{ styled_image_url(image|render, image_style_name) }} {{ size }}{% if not loop.last %},{% endif %}{% endfor %}" ></source>
+      {% endfor %}
+      <img src="{{file_url(image|render)}}" loading="lazy" {% for key, value in attributes %}{{key}}="{{value}}" {% endfor %} />
+    </picture>
+  {% else %}
+    <img src="{{file_url(image|render)}}" loading="lazy" {% for key, value in attributes %}{{key}}="{{value}}" {% endfor %} />
+  {% endif %}
+{% else %}
+  <img src="{{image}}" loading="lazy" {% for key, value in attributes %}{{key}}="{{value}}" {% endfor %} />
+{% endif %}
