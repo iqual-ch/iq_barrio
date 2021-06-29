@@ -6,6 +6,16 @@
   .iq-image {
     padding-top: 15px;
     padding-bottom: 15px;
+    a{
+      display: block;
+      position: relative;
+      padding-bottom: 100%;
+      img{
+        position: absolute;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
 
   &[data-cols="1"] .col {
@@ -38,10 +48,6 @@
     max-width: 20%;
   }
 
-  img{
-    height: 100%;
-    object-fit: cover;
-  }
 }
 
 .ekko-lightbox-nav-overlay a{
