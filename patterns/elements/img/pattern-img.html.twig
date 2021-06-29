@@ -1,57 +1,25 @@
-<div aria-hidden="{{aria_hidden}}" class="iq-image" data-align="{{alignment}}">
-
-  {% if image_img['#plain_text'] %}
-    {% set img = image_img['#plain_text'] %}
-  {% else %}
-    {% set img = image_img %}
-  {% endif %}
-
-  {% if img is not empty and image_template|render is not empty %}
-
-  {% set img = custom_function('json_decode', img) %}
+<div class="iq-image" data-align="{{alignment}}">
 
   {% if lightbox|render == 'lightbox' %}
-  <a aria-hidden="{{aria_hidden}}" href="{{img['img_original']}}" data-toggle="{{lightbox}}-single-image"
-    data-max-width="1920" data-title="{{image_alt}}">
-    {% else %}
+    <a href="{{img['img_original']}}" data-toggle="{{lightbox}}-single-image"  data-max-width="1920" data-title="{{image_alt}}">
+  {% else %}
     {% if href|render is not empty %}
-    <a aria-hidden="{{aria_hidden}}" href="{{href}}" title="{{title_link}}" target="{{link_target}}">
-      {% endif %}
-      {% endif %}
-
-      {% set fallback = "" %}
-      <picture>
-        {% for breakpoint, image_data in img['img_responsive'] %}
-        {% set fallback = img['img_responsive'][breakpoint].srcset %}
-        <source media="(min-width: {{breakpoint}})" srcset="{{fallback}}"
-          sizes="{{img['img_responsive'][breakpoint].sizes}}" />
-        {% endfor %}
-        <img aria-hidden="{{aria_hidden}}" src="{{img['img_original']}}" loading="lazy"
-          title="{{image_title}}" alt="{{image_alt}}" />
-      </picture>
-
-      {% if lightbox|render == 'lightbox' or href|render is not empty %}
-    </a>
+      <a href="{{href}}" title="{{title_link}}" target="{{link_target}}">
     {% endif %}
+  {% endif %}
 
-    {% else %}
+  {% include '@iq_barrio/includes/responsive-image.html.twig' with {
+    'image' : image_img,
+    'sizes': sizes,
+    'template': image_template|render,
+    'attributes' : {
+      title: image_title|render,
+      alt: image_alt|render,
+      'aria-hidden': aria_hidden
+    }
+  } %}
 
-    {% if lightbox|render == 'lightbox' %}
-    <a aria-hidden="{{aria_hidden}}" href="{{image_img}}" data-toggle="{{lightbox}}-single-image"
-      data-max-width="1920" data-title="{{image_alt}}">
-
-      {% else %}
-      {% if href|render is not empty %}
-      <a aria-hidden="{{aria_hidden}}" href="{{href}}" title="{{title_link}}" target="{{link_target}}">
-
-        {% endif %}
-        {% endif %}
-
-        <img aria-hidden="{{aria_hidden}}" src="{{image_img}}" loading="lazy" title="{{image_title}}"
-          alt="{{image_alt}}" />
-        {% if lightbox|render == 'lightbox' or href|render is not empty %}
-      </a>
-      {% endif %}
-
-      {% endif %}
+  {% if lightbox|render == 'lightbox' or href|render is not empty %}
+    </a>
+  {% endif %}
 </div>
