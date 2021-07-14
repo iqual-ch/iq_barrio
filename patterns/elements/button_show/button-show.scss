@@ -1,0 +1,164 @@
+@import '../../../resources/sass/definitions';
+
+.iq-button-show{
+
+  &.icon-color-primary{
+    a{
+      color: $color-primary;
+    }
+  }
+
+  &.icon-color-secondary{
+    a{
+      color: $color-secondary;
+    }
+  }
+
+  &.icon-color-tertiary{
+    a{
+      color: $color-tertiary;
+    }
+  }
+
+  &.icon-color-quaternary{
+    a{
+      color: $color-quaternary;
+    }
+  }
+
+  &.icon-color-grey1{
+    a{
+      color: $color-grey1;
+    }
+  }
+
+  &.icon-color-grey2{
+    a{
+      color: $color-grey2;
+    }
+  }
+
+  &.icon-color-grey3{
+    a{
+      color: $color-grey3;
+    }
+  }
+
+  &.icon-color-grey4{
+    a{
+      color: $color-grey4;
+    }
+  }
+
+  &.icon-color-grey5{
+    a{
+      color: $color-grey5;
+    }
+  }
+
+  &.icon-color-black{
+    a{
+      color: $color-black;
+    }
+  }
+
+  &.icon-color-white{
+    a{
+      color: $color-white;
+    }
+  }
+
+  &.hover-color-primary{
+    a:hover{
+      color: $color-primary;
+    }
+  }
+
+  &.hover-color-secondary{
+    a:hover{
+      color: $color-secondary;
+    }
+  }
+
+  &.hover-color-tertiary{
+    a:hover{
+      color: $color-tertiary;
+    }
+  }
+
+  &.hover-color-quaternary{
+    a:hover{
+      color: $color-quaternary;
+    }
+  }
+
+  &.hover-color-grey1{
+    a:hover{
+      color: $color-grey1;
+    }
+  }
+
+  &.hover-color-grey2{
+    a:hover{
+      color: $color-grey2;
+    }
+  }
+
+  &.hover-color-grey3{
+    a:hover{
+      color: $color-grey3;
+    }
+  }
+
+  &.hover-color-grey4{
+    a:hover{
+      color: $color-grey4;
+    }
+  }
+
+  &.hover-color-grey5{
+    a:hover{
+      color: $color-grey5;
+    }
+  }
+
+  &.hover-color-black{
+    a:hover{
+      color: $color-black;
+    }
+  }
+
+  &.hover-color-white{
+    a:hover{
+      color: $color-white;
+    }
+  }
+
+
+  text-align: center;
+  &[data-align="left"]{
+    text-align: left;
+  }
+  &[data-align="right"]{
+    text-align: right;
+  }
+
+  a{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+  }
+}
+[data-gjs-type="container"]{
+  .iq-button-show{
+    &[alignment="left"]{
+      text-align: left !important;
+    }
+    &[alignment="center"]{
+      text-align: center !important;
+    }
+    &[alignment="right"]{
+      text-align: right !important;
+    }
+  }
+}

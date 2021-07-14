@@ -1,0 +1,80 @@
+button_hide:
+  label: Button Hide
+  description: Button to hide a component
+  category: Element
+  icon: far fa-eye-slash
+  pagedesigner: 1
+  type: component
+  fields:
+    fa:
+      type: fontawesome
+      label: The icon
+    target:
+      type: text
+      label: Target selector
+      description: The DOM selector of the target component
+    tooltip:
+      type: text
+      label: Tooltip
+      description: Appears as soon as the mouse is moved over the element (tooltip).
+    scrolllock:
+      type: select
+      label: Unlock scrolling
+      preview: yes
+      options:
+        yes: Yes
+        no: No
+    alignment:
+      type: select
+      label: Alignment
+      preview: center
+      options:
+        center: Center
+        left: Left
+        right: Right
+  styles: 1
+  classes:
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"
+  styling_options:
+    icon_color:
+      label: "Icon color"
+      options:
+        icon-color-primary: "Primary color"
+        icon-color-secondary: "Secondary color"
+        icon-color-tertiary: "Tertiary color"
+        icon-color-quaternary: "Quaternary color"
+        icon-color-grey1: "Grey 1"
+        icon-color-grey2: "Grey 2"
+        icon-color-grey3: "Grey 3"
+        icon-color-grey4: "Grey 4"
+        icon-color-grey5: "Grey 5"
+        icon-color-black: "Black"
+        icon-color-white: "White"
+    hover_color:
+      label: "Hover color"
+      options:
+        hover-color-primary: "Primary color"
+        hover-color-secondary: "Secondary color"
+        hover-color-tertiary: "Tertiary color"
+        hover-color-quaternary: "Quaternary color"
+        hover-color-grey1: "Grey 1"
+        hover-color-grey2: "Grey 2"
+        hover-color-grey3: "Grey 3"
+        hover-color-grey4: "Grey 4"
+        hover-color-grey5: "Grey 5"
+        hover-color-black: "Black"
+        hover-color-white: "White"
+
+  libraries:
+    - button_hide:
+        css:
+          component:
+            button-hide.css: {}
+        js:
+          button-hide.js: {}
