@@ -16,7 +16,7 @@
           if (target.length) {
             // Only prevent default if animation is actually gonna happen
             event.preventDefault();
-            $($(this).attr('href')).closest('.iq-collapsible-content').prev().click();
+            $(this.hash).closest('.iq-collapsible-content').prev().click();
             $('html, body').animate({
               scrollTop: target.offset().top
             }, 1000, function () {
