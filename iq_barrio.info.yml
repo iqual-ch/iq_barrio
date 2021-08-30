@@ -3,6 +3,7 @@ type: theme
 description: 'iqual Bootstrap Barrio SubTheme.'
 version: VERSION
 core: 8.x
+core_version_requirement: ^8 || ^9
 base theme: bootstrap_barrio
 'interface translation project': iq_barrio
 'interface translation server pattern': themes/custom/iq_barrio/translations/iq_barrio-%language.po
