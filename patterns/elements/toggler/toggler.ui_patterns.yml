@@ -8,8 +8,8 @@ toggler:
   fields:
     target:
       type: text
-      label: The ID of the target component
-      description: The ID of the target component
+      label: Target selector
+      description: The DOM selector of the target component
     tooltip:
       type: text
       label: Tooltip
