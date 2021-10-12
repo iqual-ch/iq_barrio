@@ -20,10 +20,6 @@ rowtwothreeonethree:
       label: "No indent"
       description: "Prevent children from having left and right padding"
       responsive: true
-    noindent:
-      label: "No indent"
-      description: "Prevent children from having left and right padding"
-      responsive: true
     hidden:
       label: "Hide component"
       description: "Hide component"
