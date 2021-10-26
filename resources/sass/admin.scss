@@ -5,7 +5,6 @@
   display: none;
 }
 
-
 .container-inline {
   position: relative;
   padding-top: calc(16px + 0.2em);
@@ -115,18 +114,6 @@
         padding-right: 0;
       }
     }
-
-
-    // &.line-break{
-    //   height: 1px;
-    //   width: 100%;
-
-    //   &.border{
-    //     border-bottom: 1px solid #ccc;
-    //     margin-right: 30px;
-    //   }
-    // }
-
   }
 
   .styling-preview {
@@ -156,9 +143,6 @@
     width: 75px;
   }
 }
-
-
-
 
 form.system-theme-settings[action*="iq_barrio"] {
   > h2,
