@@ -178,12 +178,12 @@ $text-decoration-link:                underline;
 $text-decoration-link-hover:          underline dotted;
 
 $font-size-buttons:                   1rem;
-$line-height-buttons:                 1.5;
+$line-height-buttons:                 1.2;
 $font-weight-buttons:                 900;
 $font-style-buttons:                  normal;
 $font-family-buttons:                 Lato;
-$border-width-buttons:                px px px px;
-$border-radius-buttons:               px;
+$border-width-buttons:                1px 1px 1px 1px;
+$border-radius-buttons:               0px;
 
 
 $margin-buttons:                      10px 10px 10px 10px;
@@ -210,12 +210,12 @@ $border-color-active-buttons-inverted:         rgba($color-primary,1);
 
 
 $font-size-buttons-alternate:                   14px;
-$line-height-buttons-alternate:                 1.5;
+$line-height-buttons-alternate:                 1;
 $font-weight-buttons-alternate:                 100;
 $font-style-buttons-alternate:                  normal;
 $font-family-buttons-alternate:                 'Open Sans', sans-serif;
-$border-width-buttons-alternate:                px px px px;
-$border-radius-buttons-alternate:               px;
+$border-width-buttons-alternate:                1px 1px 1px 1px;
+$border-radius-buttons-alternate:               0px;
 $margin-buttons-alternate:                      0px 0px 0px 0px;
 $padding-buttons-alternate:                     10px 10px 10px 10px;
 $font-color-buttons-alternate:                  rgba($color-grey1,1);
@@ -248,28 +248,46 @@ $navi-main-font-weight:               400;
 $navi-main-font-style:                normal;
 $navi-main-line-height:               2;
 $navi-main-font-size:                 1rem;
+$navi-main-text-transform:            none;
 $navi-main-margin:                    0px 20px 0px;
 $navi-main-padding:                   5px 5px 5px;
+$navi-main-border-width:              0px 0px 0px 0px;
 
 $color-background-navbar:             rgba($color-white,0.5);
 $color-font-navbar:                   rgba($color-grey3,1);
+$color-border-navbar:                 rgba($color-white,0);
 
 $color-background-navbar-hover:       rgba($color-white,0.5);
 $color-font-navbar-hover:             rgba($color-grey2,1);
+$color-border-navbar-hover:           rgba($color-white,0);
 
-$color-background-navbar-active:       rgba($color-white,0.5);
-$color-font-navbar-active:             rgba($color-primary,1);
+$color-background-navbar-active:      rgba($color-white,0.5);
+$color-font-navbar-active:            rgba($color-primary,1);
+$color-border-navbar-active:          rgba($color-white,0);
 
 /* Dropdown */
 
+$navi-sub-font-family:                Lato;
+$navi-sub-font-weight:                400;
+$navi-sub-font-style:                 normal;
+$navi-sub-line-height:                2;
+$navi-sub-font-size:                  1rem;
+$navi-sub-text-transform:             none;
+$navi-sub-margin:                     -1px 0px 0px;
+$navi-sub-padding:                    15px 15px 15px;
+$navi-sub-border-width:               1px 1px 1px 1px;
+
 $color-background-nav-dropdown:       rgba($color-white,1);
 $color-font-nav-dropdown:             rgba($color-grey3,1);
+$color-border-nav-dropdown:           rgba($color-grey5,1);
 
 $color-background-nav-dropdown-hover: rgba($color-grey4,1);
 $color-font-nav-dropdown-hover:       rgba($color-grey1,1);
+$color-border-nav-dropdown-hover:     rgba($color-grey5,1);
 
 $color-background-nav-dropdown-active: rgba($color-white,1);
 $color-font-nav-dropdown-active:       rgba($color-primary,1);
+$color-border-nav-dropdown-active:     rgba($color-grey5,1);
 
 /* Mobile */
 
@@ -308,10 +326,10 @@ $padding-field-default: 5px 20px;
 /* Slider */
 $slider-arrow-font-size:              1.5rem;
 $slider-arrow-color:                  rgba($color-grey3,1);
-$slider-arrow-backgroundcolor:        rgba($color-white,1);
+$slider-arrow-backgroundcolor:        rgba($color-white,0.5);
 $slider-dot-font-size:                1rem;
-$slider-dot-color:                    rgba($color-grey4,1);
-$slider-dot-color_active:             rgba($color-grey3,1);
+$slider-dot-color:                    rgba($color-primary,1);
+$slider-dot-color_active:             rgba($color-primary,0.5);
 
 
 /* Quote */
