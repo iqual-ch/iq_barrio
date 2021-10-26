@@ -36,3 +36,30 @@ admin-style:
   css:
     layout:
       resources/css/admin.css: {}
+
+jquery.ui:
+  js:
+    vendor/jquery.ui/ui/data-min.js: { weight: -11, minified: true }
+    vendor/jquery.ui/ui/disable-selection-min.js: { weight: -11, minified: true }
+    vendor/jquery.ui/ui/form-min.js: { weight: -11, minified: true }
+    vendor/jquery.ui/ui/labels-min.js: { weight: -11, minified: true }
+    vendor/jquery.ui/ui/jquery-1-7-min.js: { weight: -11, minified: true }
+    vendor/jquery.ui/ui/scroll-parent-min.js: { weight: -11, minified: true }
+    vendor/jquery.ui/ui/tabbable-min.js: { weight: -11, minified: true }
+    vendor/jquery.ui/ui/unique-id-min.js: { weight: -11, minified: true }
+    vendor/jquery.ui/ui/version-min.js: { weight: -11, minified: true }
+    vendor/jquery.ui/ui/escape-selector-min.js: { weight: -11, minified: true }
+    vendor/jquery.ui/ui/focusable-min.js: { weight: -11, minified: true }
+    vendor/jquery.ui/ui/ie-min.js: { weight: -11, minified: true }
+    vendor/jquery.ui/ui/keycode-min.js: { weight: -11, minified: true }
+    vendor/jquery.ui/ui/plugin-min.js: { weight: -11, minified: true }
+    vendor/jquery.ui/ui/safe-active-element-min.js: { weight: -11, minified: true }
+    vendor/jquery.ui/ui/safe-blur-min.js: { weight: -11, minified: true }
+    vendor/jquery.ui/ui/widget-min.js: { weight: -10, minified: true }
+  css:
+    component:
+      vendor/jquery.ui/themes/base/core.css: {}
+    theme:
+      vendor/jquery.ui/themes/base/theme.css: {}
+  dependencies:
+    - core/jquery
