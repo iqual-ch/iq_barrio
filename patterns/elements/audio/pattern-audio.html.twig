@@ -1,6 +1,6 @@
 <div class="iq-audio" data-align="{{alignment}}">
   <audio {% if audiocontrols|render == "1" %} controls="controls" {% endif %} {% if audioautoplay|render == "1" %} autoplay="autoplay" {% endif %} {% if audiomuted|render == "1" %} muted="muted" {% endif %} {% if audioloop|render == "1" %} loop="loop" {% endif %}>
-    <source src="{{audio}}" type="audio/mp3">
+    <source src="{{audio}}" type="audio/mp3" />
     Your browser does not support the audio tag.
   </audio>
 </div>
