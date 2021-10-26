@@ -39,11 +39,14 @@ collapsible:
   libraries:
     - collapsible:
         js:
+          jquery.ui/accordion-min.js: {minified: true}
+          jquery.ui/tabs-min.js: {minified: true}
           collapsible.js: {}
         css:
           component:
+            jquery.ui/accordion.css: {minified: true}
+            jquery.ui/tabs.css: {minified: true}
             collapsible.css: {}
         dependencies:
           - core/drupal
-          - core/jquery.ui.accordion
-          - core/jquery.ui.tabs
+          - iq_barrio/jquery.ui
