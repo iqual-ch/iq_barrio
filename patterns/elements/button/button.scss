@@ -56,9 +56,12 @@
       border-color: $border-color-hover-buttons;
       transition: $transition-default;
       text-decoration: none;
-      i{
+      span{
         color: $font-color-hover-buttons;
-        transition: $transition-default;
+        i{
+          color: $font-color-hover-buttons;
+          transition: $transition-default;
+        }
       }
     }
     &:active{
@@ -67,8 +70,11 @@
       border-color: $border-color-active-buttons;
       transition: $transition-default;
       text-decoration: none;
-      i{
+      span{
         color: $font-color-active-buttons;
+        i{
+          color: $font-color-active-buttons;
+        }
       }
     }
     span{
@@ -147,11 +153,13 @@
       &:hover,
       &:focus {
         background-color: $background-color-hover-buttons-alternate;
-        color: $font-color-hover-buttons-alternate;
         border-color: $border-color-hover-buttons-alternate;
-        i{
+        span{
           color: $font-color-hover-buttons-alternate;
-          transition: $transition-default;
+          i{
+            color: $font-color-hover-buttons-alternate;
+            transition: $transition-default;
+          }
         }
       }
       &:active{
