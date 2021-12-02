@@ -9,13 +9,15 @@ img:
     image_img:
       type: image
       label: The image
+
     image_template:
       type: image_style_template
       label: Template
-      preview: image_standard
+
     sizes:
       type: component_sizes
       label: Size
+
     image_title:
       type: text
       label: The image title text

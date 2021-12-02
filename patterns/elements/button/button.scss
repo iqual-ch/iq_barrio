@@ -71,13 +71,11 @@
         color: $font-color-active-buttons;
       }
     }
-    span{
+    i{
       color: $font-color-buttons;
-      i{
-        color: $font-color-buttons;
-        transition: $transition-default;
-      }
+      transition: $transition-default;
     }
+
   }
 
   &.inverted{
@@ -85,24 +83,18 @@
       color: $font-color-buttons-inverted;
       border-color: $border-color-buttons-inverted;
       background: $background-color-buttons-inverted;
-      span{
+      i{
         color: $font-color-buttons-inverted;
-        i{
-          color: $font-color-buttons-inverted;
-          transition: $transition-default;
-        }
+        transition: $transition-default;
       }
       &:hover,
       &:focus {
         background-color: $background-color-hover-buttons-inverted;
         color: $font-color-hover-buttons-inverted;
         border-color: $border-color-hover-buttons-inverted;
-        span{
+        i{
           color: $font-color-hover-buttons-inverted;
-          i{
-            color: $font-color-hover-buttons-inverted;
-            transition: $transition-default;
-          }
+          transition: $transition-default;
         }
       }
       &:active {
@@ -110,12 +102,9 @@
         color: $font-color-active-buttons-inverted;
         border-color: $border-color-active-buttons-inverted;
         transition: $transition-default;
-        span{
+        i{
           color: $font-color-active-buttons-inverted;
-          i{
-            color: $font-color-active-buttons-inverted;
-            transition: $transition-default;
-          }
+          transition: $transition-default;
         }
       }
     }
@@ -136,13 +125,9 @@
       border-style: solid;
       border-radius: $border-radius-buttons-alternate;
       background: $background-color-buttons-alternate;
-      span{
+      i{
         color: $font-color-buttons-alternate;
-        i{
-          color: $font-color-buttons-alternate;
-          transition: $transition-default;
-        }
-
+        transition: $transition-default;
       }
       &:hover,
       &:focus {
@@ -159,13 +144,9 @@
         color: $font-color-active-buttons-alternate;
         border-color: $border-color-active-buttons-alternate;
         transition: $transition-default;
-        span{
+        i{
           color: $font-color-active-buttons-alternate;
-          i{
-            color: $font-color-active-buttons-alternate;
-            transition: $transition-default;
-          }
-
+          transition: $transition-default;
         }
       }
     }
@@ -174,24 +155,18 @@
         color: $font-color-buttons-alternate-inverted;
         border-color: $border-color-buttons-alternate-inverted;
         background: $background-color-buttons-alternate-inverted;
-        span{
+        i{
           color: $font-color-buttons-alternate-inverted;
-          i{
-            color: $font-color-buttons-alternate-inverted;
-            transition: $transition-default;
-          }
+          transition: $transition-default;
         }
         &:hover,
         &:focus {
           background-color: $background-color-hover-buttons-alternate-inverted;
           color: $font-color-hover-buttons-alternate-inverted;
           border-color: $border-color-hover-buttons-alternate-inverted;
-          span{
+          i{
             color: $font-color-hover-buttons-alternate-inverted;
-            i{
-              color: $font-color-hover-buttons-alternate-inverted;
-              transition: $transition-default;
-            }
+            transition: $transition-default;
           }
         }
         &:active{
@@ -199,12 +174,9 @@
           color: $font-color-active-buttons-alternate-inverted;
           border-color: $border-color-active-buttons-alternate-inverted;
           transition: $transition-default;
-          span{
+          i{
             color: $font-color-active-buttons-alternate-inverted;
-            i{
-              color: $font-color-active-buttons-alternate-inverted;
-              transition: $transition-default;
-            }
+            transition: $transition-default;
           }
         }
       }

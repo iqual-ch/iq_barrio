@@ -10,8 +10,20 @@
     text-align: right;
   }
 
-  &.active{
-    a{
+  a{
+    width: 34px;
+    height: 34px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+
+    &:hover{
+      div{
+        background-color: $toggler-color-hover;
+      }
+    }
+
+    &.active{
       div{
         background-color: $toggler-color-active;
         &:nth-child(1){
@@ -28,20 +40,6 @@
           transform: rotate(-45deg);
           margin-bottom: -1px;
         }
-      }
-    }
-  }
-
-  a{
-    width: 34px;
-    height: 34px;
-    position: relative;
-    cursor: pointer;
-    display: inline-block;
-
-    &:hover{
-      div{
-        background-color: $toggler-color-hover;
       }
     }
 

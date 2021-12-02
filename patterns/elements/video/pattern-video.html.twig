@@ -1,5 +1,5 @@
 <div class="iq-video" data-align="{{alignment}}">
-  <video width="100%" height="auto" {% if videocontrols|render == "1" %} controls="controls" {% endif %} {% if videoautoplay|render == "1" %} autoplay="autoplay" {% endif %} {% if videomuted|render == "1" %} muted="muted" {% endif %} {% if videoloop|render == "1" %} loop="loop" {% endif %} {% if img|render is not empty %}poster="{{file_url(img|render)}}"{% endif %}>
+  <video width="100%" height="auto" {% if videocontrols|render == "1" %} controls="controls" {% endif %} {% if videoautoplay|render == "1" %} autoplay="autoplay" {% endif %} {% if videomuted|render == "1" %} muted="muted" {% endif %} {% if videoloop|render == "1" %} loop="loop" {% endif %} poster="{{img}}">
     <source src="{{video}}" type="video/mp4">
     Your browser does not support the video tag.
   </video>

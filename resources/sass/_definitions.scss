@@ -1,4 +1,7 @@
 /*************** BASE DEFINITIONS ***************/
+@import '_breakpoints.scss';
+
+/*************** BASE DEFINITIONS ***************/
 $min-viewport-width:                  320px;
 $max-viewport-width:                  1280px;
 $size-ratio:                          1.25; //Settable (selection, see http://type-scale.com/, scale)
@@ -7,27 +10,27 @@ $size-ratio:                          1.25; //Settable (selection, see http://ty
 $color-black:                         #000;
 $color-white:                         #fff;
 $color-grey1:                         #333333;
-$color-grey2:                         #666666;
+$color-grey2:                         #525252;
 $color-grey3:                         #999999;
 $color-grey4:                         #cccccc;
 $color-grey5:                         #eeeeee;
-$color-primary:                       #d96704;
-$color-secondary:                     #a63f03;
-$color-tertiary:                      #9b2c02;
-$color-quaternary:                    #d0eff2;
+$color-primary:                       #e95e27;
+$color-secondary:                     #b13f12;
+$color-tertiary:                      #ee8155;
+$color-quaternary:                    #6cb0cb;
 
 /* Base colors */
 $color-background-page:               rgba($color-white,1);
 
-$color-background-meta-header:        rgba($color-grey1,1);
-$color-font-meta-header:              rgba($color-grey4,1);
+$color-background-meta-header:        rgba($color-white,1);
+$color-font-meta-header:              rgba($color-grey3,1);
 
 $color-background-header:             rgba($color-white,1);
 $color-font-header:                   rgba($color-grey3,1);
 
 
-$color-background-footer:             rgba($color-grey1,1);
-$color-font-footer:                   rgba($color-grey4,1);
+$color-background-footer:             rgba($color-white,1);
+$color-font-footer:                   rgba($color-grey3,1);
 
 $color-text-inverted:                 rgba($color-white,1);
 
@@ -42,7 +45,7 @@ $font-weight-h1:                      300;
 $font-style-h1:                       normal;
 $color-h1:                            rgba($color-primary,1);
 $color-h1-inverted:                   rgba($color-white,1);
-$font-family-h1:                      Lato;
+$font-family-h1:                      'Open Sans', sans-serif;
 $margin-top-h1:                       2.5rem;
 $margin-bottom-h1:                    1.25rem;
 
@@ -53,7 +56,7 @@ $font-weight-h2:                      400;
 $font-style-h2:                       normal;
 $color-h2:                            rgba($color-grey3,1);
 $color-h2-inverted:                   rgba($color-white,1);
-$font-family-h2:                      Lato;
+$font-family-h2:                      'Open Sans', sans-serif;
 $margin-top-h2:                       2rem;
 $margin-bottom-h2:                    1rem;
 
@@ -64,7 +67,7 @@ $font-weight-h3:                      400;
 $font-style-h3:                       normal;
 $color-h3:                            rgba($color-grey3,1);
 $color-h3-inverted:                   rgba($color-white,1);
-$font-family-h3:                      Lato;
+$font-family-h3:                      'Open Sans', sans-serif;
 $margin-top-h3:                       1.75rem;
 $margin-bottom-h3:                    0.875rem;
 
@@ -75,7 +78,7 @@ $font-weight-h4:                      300;
 $font-style-h4:                       normal;
 $color-h4:                            rgba($color-grey3,1);
 $color-h4-inverted:                   rgba($color-white,1);
-$font-family-h4:                      Lato;
+$font-family-h4:                      'Open Sans', sans-serif;
 $margin-top-h4:                       1.5rem;
 $margin-bottom-h4:                    0.75rem;
 
@@ -86,7 +89,7 @@ $font-weight-h5:                      300;
 $font-style-h5:                       normal;
 $color-h5:                            rgba($color-grey3,1);
 $color-h5-inverted:                   rgba($color-white,1);
-$font-family-h5:                      Lato;
+$font-family-h5:                      'Open Sans', sans-serif;
 $margin-top-h5:                       1.25rem;
 $margin-bottom-h5:                    0.625rem;
 
@@ -97,7 +100,7 @@ $font-weight-h6:                      500;
 $font-style-h6:                       normal;
 $color-h6:                            rgba($color-grey3,1);
 $color-h6-inverted:                   rgba($color-white,1);
-$font-family-h6:                      Lato;
+$font-family-h6:                      'Open Sans', sans-serif;
 $margin-top-h6:                       1rem;
 $margin-bottom-h6:                    0.5rem;
 
@@ -108,7 +111,7 @@ $font-size-min-standard:              1rem;
 $line-height-standard:                1.5;
 $font-weight-standard:                300;
 $font-style-standard:                 normal;
-$color-standard:                      rgba($color-grey3,1);
+$color-standard:                      rgba($color-grey1,1);
 $color-standard-inverted:             rgba($color-white,1);
 $font-family-standard:                Lato;
 $margin-top-standard:                 0rem;
@@ -119,7 +122,7 @@ $font-size-min-small:                 0.5rem;
 $line-height-small:                   1.2;
 $font-weight-small:                   300;
 $font-style-small:                    normal;
-$color-small:                         rgba($color-grey3,1);
+$color-small:                         rgba($color-grey1,1);
 $color-small-inverted:                rgba($color-white,1);
 $font-family-small:                   Lato;
 $margin-top-small:                    0rem;
@@ -130,7 +133,7 @@ $font-size-min-lead:                  1.25rem;
 $line-height-lead:                    1.5;
 $font-weight-lead:                    700;
 $font-style-lead:                     normal;
-$color-lead:                          rgba($color-grey3,1);
+$color-lead:                          rgba($color-grey1,1);
 $color-lead-inverted:                 rgba($color-white,1);
 $font-family-lead:                    Lato;
 $margin-top-lead:                     0rem;
@@ -141,7 +144,7 @@ $font-size-min-deco-1:                1.8rem;
 $line-height-deco-1:                  1.2;
 $font-weight-deco-1:                  400;
 $font-style-deco-1:                   normal;
-$color-deco-1:                        rgba($color-quaternary,1);
+$color-deco-1:                        rgba($color-grey1,1);
 $color-deco-1-inverted:               rgba($color-white,1);
 $font-family-deco-1:                  Arizonia;
 $margin-top-deco-1:                   0rem;
@@ -152,7 +155,7 @@ $font-size-min-deco-2:                2rem;
 $line-height-deco-2:                  1.2;
 $font-weight-deco-2:                  300;
 $font-style-deco-2:                   normal;
-$color-deco-2:                        rgba($color-tertiary,1);
+$color-deco-2:                        rgba($color-grey1,1);
 $color-deco-2-inverted:               rgba($color-white,1);
 $font-family-deco-2:                  IBM Plex Mono;
 $margin-top-deco-2:                   0rem;
@@ -174,48 +177,48 @@ $color-link:                          rgba($color-grey3,1);
 $color-link-inverted:                 rgba($color-white,1);
 $color-link-hover:                    rgba($color-primary,1);
 $color-link-hover-inverted:           rgba($color-white,1);
-$text-decoration-link:                underline;
-$text-decoration-link-hover:          underline dotted;
+$text-decoration-link:                none;
+$text-decoration-link-hover:          underline;
 
-$font-size-buttons:                   1rem;
-$line-height-buttons:                 1.5;
-$font-weight-buttons:                 900;
+$font-size-buttons:                   0.88rem;
+$line-height-buttons:                 1.2;
+$font-weight-buttons:                 400;
 $font-style-buttons:                  normal;
-$font-family-buttons:                 Lato;
-$border-width-buttons:                px px px px;
-$border-radius-buttons:               px;
+$font-family-buttons:                 'Open Sans', sans-serif;
+$border-width-buttons:                1px 1px 1px 1px;
+$border-radius-buttons:               0px;
 
 
-$margin-buttons:                      10px 10px 10px 10px;
-$padding-buttons:                     5px 20px 5px 20px;
+$margin-buttons:                      20px 0px 20px 0px;
+$padding-buttons:                     14px 42px 14px 42px;
 $font-color-buttons:                  rgba($color-white,1);
 $background-color-buttons:            rgba($color-primary,1);
 $border-color-buttons:                rgba($color-primary,1);
-$font-color-hover-buttons:            rgba($color-white,1);
-$background-color-hover-buttons:      rgba($color-primary,0.6);
+$font-color-hover-buttons:            rgba($color-primary,1);
+$background-color-hover-buttons:      rgba($color-white,1);
 $border-color-hover-buttons:          rgba($color-primary,1);
 $font-color-active-buttons:           rgba($color-primary,1);
 $background-color-active-buttons:     rgba($color-white,1);
 $border-color-active-buttons:         rgba($color-primary,1);
 
 $font-color-buttons-inverted:                  rgba($color-primary,1);
-$background-color-buttons-inverted:            rgba($color-black,1);
-$border-color-buttons-inverted:                rgba($color-black,1);
+$background-color-buttons-inverted:            rgba($color-white,1);
+$border-color-buttons-inverted:                rgba($color-white,1);
 $font-color-hover-buttons-inverted:            rgba($color-white,1);
-$background-color-hover-buttons-inverted:      rgba($color-primary,0.6);
-$border-color-hover-buttons-inverted:          rgba($color-primary,1);
+$background-color-hover-buttons-inverted:      rgba($color-primary,1);
+$border-color-hover-buttons-inverted:          rgba($color-primary,0);
 $font-color-active-buttons-inverted:           rgba($color-white,1);
-$background-color-active-buttons-inverted:     rgba($color-black,1);
-$border-color-active-buttons-inverted:         rgba($color-primary,1);
+$background-color-active-buttons-inverted:     rgba($color-primary,1);
+$border-color-active-buttons-inverted:         rgba($color-primary,0);
 
 
 $font-size-buttons-alternate:                   14px;
-$line-height-buttons-alternate:                 1.5;
+$line-height-buttons-alternate:                 1;
 $font-weight-buttons-alternate:                 100;
 $font-style-buttons-alternate:                  normal;
 $font-family-buttons-alternate:                 'Open Sans', sans-serif;
-$border-width-buttons-alternate:                px px px px;
-$border-radius-buttons-alternate:               px;
+$border-width-buttons-alternate:                1px 1px 1px 1px;
+$border-radius-buttons-alternate:               0px;
 $margin-buttons-alternate:                      0px 0px 0px 0px;
 $padding-buttons-alternate:                     10px 10px 10px 10px;
 $font-color-buttons-alternate:                  rgba($color-grey1,1);
@@ -248,28 +251,46 @@ $navi-main-font-weight:               400;
 $navi-main-font-style:                normal;
 $navi-main-line-height:               2;
 $navi-main-font-size:                 1rem;
+$navi-main-text-transform:            none;
 $navi-main-margin:                    0px 20px 0px;
 $navi-main-padding:                   5px 5px 5px;
+$navi-main-border-width:              0px 0px 0px 0px;
 
 $color-background-navbar:             rgba($color-white,0.5);
 $color-font-navbar:                   rgba($color-grey3,1);
+$color-border-navbar:                 rgba($color-white,0);
 
 $color-background-navbar-hover:       rgba($color-white,0.5);
 $color-font-navbar-hover:             rgba($color-grey2,1);
+$color-border-navbar-hover:           rgba($color-white,0);
 
-$color-background-navbar-active:       rgba($color-white,0.5);
-$color-font-navbar-active:             rgba($color-primary,1);
+$color-background-navbar-active:      rgba($color-white,0.5);
+$color-font-navbar-active:            rgba($color-primary,1);
+$color-border-navbar-active:          rgba($color-white,0);
 
 /* Dropdown */
 
+$navi-sub-font-family:                Lato;
+$navi-sub-font-weight:                400;
+$navi-sub-font-style:                 normal;
+$navi-sub-line-height:                2;
+$navi-sub-font-size:                  1rem;
+$navi-sub-text-transform:             none;
+$navi-sub-margin:                     -1px 0px 0px;
+$navi-sub-padding:                    15px 15px 15px;
+$navi-sub-border-width:               1px 1px 1px 1px;
+
 $color-background-nav-dropdown:       rgba($color-white,1);
 $color-font-nav-dropdown:             rgba($color-grey3,1);
+$color-border-nav-dropdown:           rgba($color-grey5,1);
 
 $color-background-nav-dropdown-hover: rgba($color-grey4,1);
 $color-font-nav-dropdown-hover:       rgba($color-grey1,1);
+$color-border-nav-dropdown-hover:     rgba($color-grey5,1);
 
 $color-background-nav-dropdown-active: rgba($color-white,1);
 $color-font-nav-dropdown-active:       rgba($color-primary,1);
+$color-border-nav-dropdown-active:     rgba($color-grey5,1);
 
 /* Mobile */
 
@@ -307,11 +328,11 @@ $padding-field-default: 5px 20px;
 
 /* Slider */
 $slider-arrow-font-size:              1.5rem;
-$slider-arrow-color:                  rgba($color-grey3,1);
-$slider-arrow-backgroundcolor:        rgba($color-white,1);
+$slider-arrow-color:                  rgba($color-white,1);
+$slider-arrow-backgroundcolor:        rgba($color-white,0);
 $slider-dot-font-size:                1rem;
-$slider-dot-color:                    rgba($color-grey4,1);
-$slider-dot-color_active:             rgba($color-grey3,1);
+$slider-dot-color:                    rgba($color-primary,0.3);
+$slider-dot-color_active:             rgba($color-primary,1);
 
 
 /* Quote */
@@ -319,13 +340,13 @@ $quote-highlight-color:               rgba($color-grey5,1);
 
 
 /* Social */
-$social-icons-color:                  rgba($color-quaternary,1);
+$social-icons-color:                  rgba($color-primary,1);
 
 
 /* Tabs */
-$tab-color:                           rgba($color-grey5,1);
-$tab-font-color:                      rgba($color-grey3,1);
-$tab-color-active:                    rgba($color-grey4,1);
+$tab-color:                           rgba($color-white,1);
+$tab-font-color:                      rgba($color-grey2,1);
+$tab-color-active:                    rgba($color-grey5,1);
 $tab-font-color-active:               rgba($color-grey2,1);
 
 /* Toggler */
@@ -452,24 +473,24 @@ $padding-base:                        $padding-bottom-base;
 
 /* Content text colors */
 $color-text-titles:                   rgba($color-primary,1);
-$color-text-content:                  rgba($color-grey3,1);
+$color-text-content:                  rgba($color-grey1,1);
 $color-text-links:                    rgba($color-grey3,1);
 
-$color-text-icons:                    rgba($color-primary,0.4);
-$color-text-icons-hover:              rgba($color-primary,0.6);
+$color-text-icons:                    rgba($color-primary,1);
+$color-text-icons-hover:              rgba($color-primary,0.8);
 $color-text-icons-active:             rgba($color-primary,1);
 
-$color-text-icons-inverted:           rgba($color-white,0.4);
-$color-text-icons-inverted-hover:     rgba($color-white,0.6);
+$color-text-icons-inverted:           rgba($color-white,1);
+$color-text-icons-inverted-hover:     rgba($color-white,0.8);
 $color-text-icons-inverted-active:    rgba($color-primary,1);
 
-$color-text-icons-alternate:                    rgba($color-tertiary,0.6);
-$color-text-icons-alternate-hover:              rgba($color-tertiary,1);
-$color-text-icons-alternate-active:             rgba($color-primary,1);
+$color-text-icons-alternate:                    rgba($color-black,1);
+$color-text-icons-alternate-hover:              rgba($color-black,0.8);
+$color-text-icons-alternate-active:             rgba($color-black,1);
 
-$color-text-icons-alternate-inverted:           rgba($color-quaternary,0.6);
-$color-text-icons-alternate-inverted-hover:     rgba($color-quaternary,1);
-$color-text-icons-alternate-inverted-active:    rgba($color-black,1);
+$color-text-icons-alternate-inverted:           rgba($color-grey3,1);
+$color-text-icons-alternate-inverted-hover:     rgba($color-grey3,0.8);
+$color-text-icons-alternate-inverted-active:    rgba($color-grey3,1);
 
 
 

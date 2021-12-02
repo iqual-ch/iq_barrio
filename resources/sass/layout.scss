@@ -382,10 +382,3 @@ body {
 body.scroll-lock {
   overflow: hidden;
 }
-
-body.scroll-lock-scrollbar{
-  overflow: hidden;
-  position: fixed;
-  overflow-y: scroll;
-  width: 100%;
-}

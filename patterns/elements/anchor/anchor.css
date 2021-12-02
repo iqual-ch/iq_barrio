@@ -1,0 +1,1 @@
+[data-gjs-type="anchor"] a{font-size:1.5rem;color:#000}[data-gjs-type="anchor"] a:before{content:'Anchor: '}[data-gjs-type="anchor"] a:after{content:attr(data-anchor-label)}
