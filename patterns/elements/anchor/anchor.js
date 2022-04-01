@@ -16,13 +16,16 @@
           if (target.length) {
             // Only prevent default if animation is actually gonna happen
             event.preventDefault();
-            $(this.hash).closest('.iq-collapsible-content').prev().click();
+            $(this.hash).closest('.iq-collapsible-content:not([class*="active"])').prev().click();
+            var $target = $(target);
+            if ($target.closest('.iq-collapsible-content').length) {
+              return false;
+            }
             $('html, body').animate({
               scrollTop: target.offset().top
             }, 1000, function () {
               // Callback after animation
               // Must change focus!
-              var $target = $(target);
               $target.focus();
               if ($target.is(":focus")) { // Checking if the target was focused
                 return false;
