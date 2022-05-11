@@ -1,19 +1,25 @@
 @import '../../../resources/sass/definitions';
 
-.iq-text{
-  &.inverted{
-    *{
+.iq-text {
+  // Inherit manual and easy styling color.
+  * {
+    color: inherit;
+  }
+
+  &.inverted {
+    * {
       color: $color-standard-inverted;
     }
   }
 
-  &.lead{
-    &.inverted{
-      *{
+  &.lead {
+    &.inverted {
+      * {
         color: $color-lead-inverted;
       }
     }
-    p{
+
+    p {
       line-height: $line-height-lead;
       font-weight: $font-weight-lead;
       font-style: $font-style-lead;
@@ -26,13 +32,14 @@
     }
   }
 
-  &.small{
-    &.inverted{
-      *{
+  &.small {
+    &.inverted {
+      * {
         color: $color-small-inverted;
       }
     }
-    p{
+
+    p {
       line-height: $line-height-small;
       font-weight: $font-weight-small;
       font-style: $font-style-small;
@@ -43,4 +50,9 @@
       @include fluid-type(320px, 991px, $font-size-min-small, $font-size-small);
     }
   }
+}
+
+// Inherit manual and easy styling color in footer.
+footer.site-footer .site-footer__top .content .iq-text * {
+  color: inherit;
 }
