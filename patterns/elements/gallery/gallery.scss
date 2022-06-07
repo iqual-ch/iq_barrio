@@ -3,6 +3,20 @@
   max-width: none;
   margin-left: -15px;
   margin-right: -15px;
+
+  &.img-square{
+    .iq-image {
+      a{
+        padding-bottom: 100%;
+        img{
+          position: absolute;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
   .iq-image {
     padding-top: 15px;
     padding-bottom: 15px;
