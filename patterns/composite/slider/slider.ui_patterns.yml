@@ -89,6 +89,9 @@ slider:
     navigation:
       type: fontawesome
       label: The icon for the navigation
+    margin:
+      type: text
+      label: Margin between slides
     column0:
       type: cell
       label: column0
