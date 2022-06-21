@@ -13,6 +13,10 @@
         margin: 15
       };
 
+      if (typeof $slider.data('margin') !== "undefined" ) {
+        config.margin = parseInt($slider.data('margin'));
+      }
+
       if ($slider.data('autoplay')) {
         config.autoplay = true;
 //        config.autoplayHoverPause = true;
