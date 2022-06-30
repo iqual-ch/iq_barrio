@@ -154,6 +154,7 @@
       &:focus {
         background-color: $background-color-hover-buttons-alternate;
         border-color: $border-color-hover-buttons-alternate;
+        color: $font-color-hover-buttons-alternate;
         span{
           color: $font-color-hover-buttons-alternate;
           i{
