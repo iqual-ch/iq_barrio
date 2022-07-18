@@ -1,7 +1,7 @@
 <div class="iq-svg" data-align="{{alignment}}">
   <div class="{{parent_class}}" >
     {% if href|render is not empty %}
-    <a href="{{href}}" title="{{title_link}}" target="{{link_target}}" >
+    <a href="{{href}}" title="{{title_link}}" target="{{link_target}}" {% if link_target|render == '_blank' %}rel="nofollow noopener"{% endif %}>
       <img src="{{svg_file}}" alt="{{svg_alt}}" title="{{svg_title}}"/>
     </a>
     {% else %}

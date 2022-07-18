@@ -1,5 +1,5 @@
 <div class="iq-document iq-text" data-align="{{alignment}}">
-    <a href="{{document}}" title="{{title}}" target="{{target}}" >
+    <a href="{{document}}" title="{{title}}" target="{{target}}" {% if target|render == '_blank' %}rel="nofollow noopener"{% endif %}>
         {{text}}
     </a>
 </div>

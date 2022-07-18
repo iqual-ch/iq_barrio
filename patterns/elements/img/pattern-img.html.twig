@@ -4,7 +4,7 @@
     <a href="{{img['img_original']}}" data-toggle="{{lightbox}}-single-image"  data-max-width="1920" data-title="{{image_alt}}">
   {% else %}
     {% if href|render is not empty %}
-      <a href="{{href}}" title="{{title_link}}" target="{{link_target}}">
+      <a href="{{href}}" title="{{title_link}}" target="{{link_target}}" {% if link_target|render == '_blank' %}rel="nofollow noopener"{% endif %}>
     {% endif %}
   {% endif %}
 

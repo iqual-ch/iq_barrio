@@ -1,5 +1,5 @@
 <div class="iq-search" data-align="{{alignment}}" data-icon-position="{{icon_position}}" >
-    <form action="{{href}}" target="{{target}}">
+    <form action="{{href}}" target="{{target}}" {% if target|render == '_blank' %}rel="nofollow noopener"{% endif %}>
 
         {% if input_visibility|render == "show_input" %}
             <div class="search-inputs">
