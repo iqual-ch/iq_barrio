@@ -1,6 +1,5 @@
 <div class="iq-fa-icon" data-align="{{alignment}}">
     {% if href|render is not empty %}
-    {# <a href="{{href}}" title="{{title}}" target="{{target}}" > #}
     <a href="{{href}}" title="{{title}}" target="{{target}}" {% if target|render == '_blank' %}rel="nofollow noopener"{% endif %}>
         <i class="{{fa}}"></i>
     </a>
