@@ -201,4 +201,12 @@
       float: right;
     }
   }
+
+  .wrapper{
+    &:empty{
+      &::before{
+        content: "Anchor 1 › Anchor 2 › Anchor 3 › Anchor 4";
+      }
+    }
+  }
 }
