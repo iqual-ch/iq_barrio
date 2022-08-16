@@ -1,8 +1,5 @@
 @import '../../../resources/sass/definitions';
 
-
-
-
 .iq-anchornavigation{
   z-index: 100;
 
@@ -18,12 +15,9 @@
     position: fixed;
   }
 
-
   // horizontal nav
   &[data-align="top"],
   &[data-align="bottom"]{
-
-
     margin-left: auto;
     margin-right: auto;
     max-width: 1140px;
@@ -37,7 +31,6 @@
       max-width: none;
       background: $anchornavigation-background-color;
     }
-
 
     &[data-position="fixed"]{
       width: 100%;
@@ -56,7 +49,6 @@
   &[data-align="bottom"]{
     bottom:0;
   }
-
 
   // vertical nav
   &[data-align="left"],
@@ -85,7 +77,6 @@
       float: right;
     }
   }
-
 
   .wrapper{
     display: flex;
@@ -121,8 +112,6 @@
       }
     }
 
-
-
     a{
       margin: $anchornavigation-margin;
       padding: $anchornavigation-padding;
@@ -133,13 +122,10 @@
       line-height: $anchornavigation-line-height;
       transition: $transition-default;
       text-decoration: none;
-
       color: $anchornavigation-font-color-standard;
       border: $border-width-base solid $anchornavigation-border-color-standard;
       background: $anchornavigation-background-color-standard;
-
       white-space: nowrap;
-
       &:hover,
       a:focus,
       a:active{
@@ -159,10 +145,7 @@
   }
 }
 
-
-
 // backend
-
 .iq-anchornavigation[data-gjs-type="anchornavigation"]{
   &[position="sticky"]{
     position: sticky;
@@ -172,35 +155,12 @@
     position: fixed;
   }
 
-
   // horizontal nav
   &[alignment="top"],
   &[alignment="bottom"]{
-
-    // &.fullwidth{
-    //   .wrapper{
-    //     max-width: none;
-    //     padding-left: 0;
-    //     padding-right: 0;
-    //   }
-    // }
-
-    // margin-left: -15px;
-    // margin-right: -15px;
     &[position="fixed"]{
       width: 100%;
     }
-    // .wrapper{
-    //   padding-left: 15px;
-    //   padding-right: 15px;
-    //   margin-left: auto;
-    //   margin-right: auto;
-    //   max-width: 1140px;
-    //   overflow-x: auto;
-    //   scroll-behavior: smooth;
-    //   -webkit-overflow-scrolling: touch;
-    //   flex-direction: row;
-    // }
   }
 
   &[alignment="top"]{
@@ -211,7 +171,6 @@
     bottom:0;
     top: auto;
   }
-
 
   // vertical nav
   &[alignment="left"],
