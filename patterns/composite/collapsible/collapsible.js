@@ -34,10 +34,11 @@
     }
   }
 
-
   function collapsibleTabs($stacks) {
 
-    var definition = {};// heightStyle: 'auto' };
+    var definition = {
+      fx: { width: 'toggle', duration: 500 },
+    };
     var first = null;
     var newGroup = true;
     $stacks.each(function (i, tab) {
