@@ -27,12 +27,12 @@
       }
     }
 
-    let scrollPosition = $target.offset().top - window.scollOffset;
+    let scrollPosition = $target.offset().top - window.scrollOffset;
     window.scrollTo(0, scrollPosition);
   }
 
   window.setDefaultScrollOffset = function() {
-    window.scollOffset = 0
+    window.scrollOffset = 0
     $('*').filter(function () {
       if (!$(this).is(':visible')) {
         return false;
@@ -44,7 +44,7 @@
         return true;
       }
     }).each(function(){
-      window.scollOffset = Math.max(window.scollOffset, $(this).height() + parseInt($(this).css('top')));
+      window.scrollOffset = Math.max(window.scrollOffset, $(this).height() + parseInt($(this).css('top')));
     });
 
     $(document).trigger('after-offset-calculation');

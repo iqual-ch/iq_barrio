@@ -33,7 +33,7 @@
 
         // Get id of current scroll item
         let cur = scrollItems.map(function () {
-          if ($(this).is(':visible') && $(this).offset().top - window.scollOffset <= fromTop + 3)
+          if ($(this).is(':visible') && $(this).offset().top - window.scrollOffset <= fromTop + 3)
             return this;
         });
         // Get the id of the current element
