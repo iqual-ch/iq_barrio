@@ -51,7 +51,7 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
       $styles[$stylingKey] = 1;
     }
   }
-  $themePath = \Drupal::root() . \Drupal::service('theme_handler')->getTheme('iq_barrio')->getPath();
+  $themePath = \Drupal::root() . '/' . \Drupal::service('theme_handler')->getTheme('iq_barrio')->getPath();
   $filename =  $themePath . "/resources/sass/_definitions.scss";
 
   $service = \Drupal::service('iq_barrio_helper.iq_barrio_service');
