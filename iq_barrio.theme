@@ -45,28 +45,18 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
  * Implements hook_form_system_theme_settings_submit().
  */
 function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &$form_state) {
-  $title_font = $form_state->getValue('title_font');
-  $content_font = $form_state->getValue('content_font');
-
-  if (strpos(strtolower($form_state->getValue('title_font')), 'regular')) {
-    $title_font = trim(strstr($form_state->getValue('title_font'), 'regular', TRUE));
-  }
-
-  if (strpos(strtolower($form_state->getValue('content_font')), 'regular')) {
-    $content_font = trim(strstr($form_state->getValue('content_font'), 'regular', TRUE));
-  }
-
   $styles = $form_state->getValues();
   foreach ($styles as $stylingKey => $stylingValaue) {
     if ((strpos($stylingKey, 'opacity') !== FALSE) && !isset($stylingValaue)) {
       $styles[$stylingKey] = 1;
     }
   }
-
-  $filename = __DIR__ . "/resources/sass/_definitions.scss";
+  $themePath = \Drupal::root() . \Drupal::service('theme_handler')->getTheme('iq_barrio')->getPath();
+  $filename =  $themePath . "/resources/sass/_definitions.scss";
 
   $service = \Drupal::service('iq_barrio_helper.iq_barrio_service');
-  $service->writeDefinitionsFile($styles, $filename, __DIR__ . "/resources/sass/_template.scss.txt");
+  $service->writeDefinitionsFile($styles, $filename, $themePath . "/resources/sass/_template.scss.txt");
+  $service->compile();
 
   // Call hook.
   \Drupal::moduleHandler()->invokeAll('iq_theme_settings', [$styles, $service]);
