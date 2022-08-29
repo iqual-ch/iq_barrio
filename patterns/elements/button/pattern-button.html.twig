@@ -1,5 +1,5 @@
 <div class="iq-button" data-align="{{alignment}}" data-icon-position="{{icon_position}}">
-  <a href="{{href}}" title="{{title}}" target="{{target}}" {% if target|render == '_blank' %}rel="nofollow noopener"{% endif %}>
+  <a href="{{href}}" title="{{title}}" target="{{target}}" {% if target|render == '_blank' %}rel="noopener"{% endif %}>
     <span>
       {% if icon_position|render == 'left' and button_icon|render is not empty %}<i class="{{button_icon}}"></i>{% endif %}
       {{text}}
