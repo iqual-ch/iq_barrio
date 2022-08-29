@@ -13,7 +13,7 @@
   "require": {
     "drupal/bootstrap_barrio": "^4.18",
     "iqual/iq_barrio_composer_update": "^2.0",
-    "iqual/iq_barrio_helper": "^2.1",
-    "drupal/pagedesigner_responsive_images": "^2.0"
+    "iqual/iq_barrio_helper": "^3.0",
+    "iqual/pagedesigner_responsive_images": "^2.0"
   }
 }
