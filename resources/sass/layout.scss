@@ -1,8 +1,13 @@
 @import "definitions";
 
+* {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
 body {
-   overflow-x: hidden;
-   min-width: 320px;
+  overflow-x: hidden;
+  min-width: 320px;
 }
 
 .container-fluid {
@@ -124,7 +129,7 @@ body {
 
     &.noindent-small {
       @media only screen and (max-width: 767px) {
-        .iq-row{
+        .iq-row {
           margin-left: -15px;
           margin-right: -15px;
         }
@@ -133,7 +138,7 @@ body {
 
     &.noindent-medium {
       @media only screen and (min-width: 768px) and (max-width: 1199px) {
-        .iq-row{
+        .iq-row {
           margin-left: -15px;
           margin-right: -15px;
         }
@@ -142,7 +147,7 @@ body {
 
     &.noindent-large {
       @media only screen and (min-width: 1200px) {
-        .iq-row{
+        .iq-row {
           margin-left: -15px;
           margin-right: -15px;
         }
@@ -154,20 +159,22 @@ body {
 
 // global visibility options
 .hidden {
-  &:not([data-gjs-type]){
+  &:not([data-gjs-type]) {
     display: none;
   }
-  &[data-gjs-type]{
+
+  &[data-gjs-type] {
     opacity: 0.2;
   }
 }
 
 .hidden-small {
   @media only screen and (max-width: 767px) {
-    &:not([data-gjs-type]){
+    &:not([data-gjs-type]) {
       display: none;
     }
-    &[data-gjs-type]{
+
+    &[data-gjs-type] {
       opacity: 0.2;
     }
   }
@@ -175,10 +182,11 @@ body {
 
 .hidden-medium {
   @media only screen and (min-width: 768px) and (max-width: 1199px) {
-    &:not([data-gjs-type]){
+    &:not([data-gjs-type]) {
       display: none;
     }
-    &[data-gjs-type]{
+
+    &[data-gjs-type] {
       opacity: 0.2;
     }
   }
@@ -186,10 +194,11 @@ body {
 
 .hidden-large {
   @media only screen and (min-width: 1200px) {
-    &:not([data-gjs-type]){
+    &:not([data-gjs-type]) {
       display: none;
     }
-    &[data-gjs-type]{
+
+    &[data-gjs-type] {
       opacity: 0.2;
     }
   }
@@ -197,10 +206,11 @@ body {
 
 .hidden-print {
   @media print {
-    &:not([data-gjs-type]){
+    &:not([data-gjs-type]) {
       display: none;
     }
-    &[data-gjs-type]{
+
+    &[data-gjs-type] {
       opacity: 0.2;
     }
   }
@@ -223,7 +233,7 @@ body {
       color: $color-font-meta-header
     }
 
-    p{
+    p {
       margin: inherit;
     }
   }
@@ -237,7 +247,7 @@ body {
   }
 }
 
-.vertical-padding{
+.vertical-padding {
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -292,7 +302,7 @@ body {
   min-height: 0;
 }
 
-.mobile-reverse-order{
+.mobile-reverse-order {
   @media only screen and (max-width: 767px) {
     flex-direction: column-reverse;
   }
@@ -383,7 +393,7 @@ body.scroll-lock {
   overflow: hidden;
 }
 
-body.scroll-lock-scrollbar{
+body.scroll-lock-scrollbar {
   overflow: hidden;
   position: fixed;
   overflow-y: scroll;
