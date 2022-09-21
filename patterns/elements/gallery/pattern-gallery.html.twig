@@ -1,4 +1,4 @@
-<div class="iq-gallery row iq-row{% if image_template|render is empty %} img-square{% endif %}" data-cols="{% if numcols|render is not empty %}{{numcols}}{% else %}4{% endif %}">
+<div class="iq-gallery row iq-row{% if image_template|render is empty or image_template|render == "image_standard" %} img-square{% endif %}" data-cols="{% if numcols|render is not empty %}{{numcols}}{% else %}4{% endif %}">
   {% for image in images %}
     {% if image.src %}
     <div class="iq-image col iq-column">
