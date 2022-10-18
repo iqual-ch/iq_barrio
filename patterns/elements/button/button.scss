@@ -49,18 +49,20 @@
     border-radius: $border-radius-buttons;
     background: $background-color-buttons;
     transition: $transition-default;
-    &:hover,
-    &:focus  {
-      background-color: $background-color-hover-buttons;
-      color: $font-color-hover-buttons;
-      border-color: $border-color-hover-buttons;
-      transition: $transition-default;
-      text-decoration: none;
-      span{
+    @media (hover: hover) and (pointer: fine) {
+      &:hover,
+      &:focus  {
+        background-color: $background-color-hover-buttons;
         color: $font-color-hover-buttons;
-        i{
+        border-color: $border-color-hover-buttons;
+        transition: $transition-default;
+        text-decoration: none;
+        span{
           color: $font-color-hover-buttons;
-          transition: $transition-default;
+          i{
+            color: $font-color-hover-buttons;
+            transition: $transition-default;
+          }
         }
       }
     }
@@ -98,16 +100,18 @@
           transition: $transition-default;
         }
       }
-      &:hover,
-      &:focus {
-        background-color: $background-color-hover-buttons-inverted;
-        color: $font-color-hover-buttons-inverted;
-        border-color: $border-color-hover-buttons-inverted;
-        span{
+      @media (hover: hover) and (pointer: fine) {
+        &:hover,
+        &:focus {
+          background-color: $background-color-hover-buttons-inverted;
           color: $font-color-hover-buttons-inverted;
-          i{
+          border-color: $border-color-hover-buttons-inverted;
+          span{
             color: $font-color-hover-buttons-inverted;
-            transition: $transition-default;
+            i{
+              color: $font-color-hover-buttons-inverted;
+              transition: $transition-default;
+            }
           }
         }
       }
@@ -150,16 +154,18 @@
         }
 
       }
-      &:hover,
-      &:focus {
-        background-color: $background-color-hover-buttons-alternate;
-        border-color: $border-color-hover-buttons-alternate;
-        color: $font-color-hover-buttons-alternate;
-        span{
+      @media (hover: hover) and (pointer: fine) {
+        &:hover,
+        &:focus {
+          background-color: $background-color-hover-buttons-alternate;
+          border-color: $border-color-hover-buttons-alternate;
           color: $font-color-hover-buttons-alternate;
-          i{
+          span{
             color: $font-color-hover-buttons-alternate;
-            transition: $transition-default;
+            i{
+              color: $font-color-hover-buttons-alternate;
+              transition: $transition-default;
+            }
           }
         }
       }
@@ -190,16 +196,18 @@
             transition: $transition-default;
           }
         }
-        &:hover,
-        &:focus {
-          background-color: $background-color-hover-buttons-alternate-inverted;
-          color: $font-color-hover-buttons-alternate-inverted;
-          border-color: $border-color-hover-buttons-alternate-inverted;
-          span{
+        @media (hover: hover) and (pointer: fine) {
+          &:hover,
+          &:focus {
+            background-color: $background-color-hover-buttons-alternate-inverted;
             color: $font-color-hover-buttons-alternate-inverted;
-            i{
+            border-color: $border-color-hover-buttons-alternate-inverted;
+            span{
               color: $font-color-hover-buttons-alternate-inverted;
-              transition: $transition-default;
+              i{
+                color: $font-color-hover-buttons-alternate-inverted;
+                transition: $transition-default;
+              }
             }
           }
         }
