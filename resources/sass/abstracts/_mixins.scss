@@ -1,0 +1,323 @@
+// This file contains mixin definitions
+
+// H1
+@mixin Head-H1 {
+  @include fluid-type(320px, 991px, $font-size-min-h1, $font-size-h1);
+  font-family: $font-family-h1;
+  line-height: $line-height-h1;
+  font-weight: $font-weight-h1;
+  font-style: $font-style-h1;
+  color: $color-h1;
+}
+
+@mixin Head-H1-Inverted {
+  @include fluid-type(320px, 991px, $font-size-min-h1, $font-size-h1);
+  font-family: $font-family-h1;
+  line-height: $line-height-h1;
+  font-weight: $font-weight-h1;
+  font-style: $font-style-h1;
+  color: $color-h1-inverted;
+}
+
+// H2
+@mixin Head-H2 {
+  @include fluid-type(320px, 991px, $font-size-min-h2, $font-size-h2);
+  font-family: $font-family-h2;
+  line-height: $line-height-h2;
+  font-weight: $font-weight-h2;
+  font-style: $font-style-h2;
+  color: $color-h2;
+}
+
+@mixin Head-H2-Inverted {
+  @include fluid-type(320px, 991px, $font-size-min-h2, $font-size-h2);
+  font-size: $font-size-min-h2;
+  font-family: $font-family-h2;
+  line-height: $line-height-h2;
+  font-weight: $font-weight-h2;
+  font-style: $font-style-h2;
+  color: $color-h2-inverted;
+}
+
+// H3
+@mixin Head-H3 {
+  @include fluid-type(320px, 991px, $font-size-min-h3, $font-size-h3);
+  font-size: $font-size-min-h3;
+  font-family: $font-family-h3;
+  line-height: $line-height-h3;
+  font-weight: $font-weight-h3;
+  font-style: $font-style-h3;
+  color: $color-h3;
+}
+
+@mixin Head-H3-Inverted {
+  @include fluid-type(320px, 991px, $font-size-min-h3, $font-size-h3);
+  font-size: $font-size-min-h3;
+  font-family: $font-family-h3;
+  line-height: $line-height-h3;
+  font-weight: $font-weight-h3;
+  font-style: $font-style-h3;
+  color: $color-h3-inverted;
+}
+
+// H4
+@mixin Head-H4 {
+  @include fluid-type(320px, 991px, $font-size-min-h4, $font-size-h4);
+  font-size: $font-size-min-h4;
+  font-family: $font-family-h4;
+  line-height: $line-height-h4;
+  font-weight: $font-weight-h4;
+  font-style: $font-style-h4;
+  color: $color-h4;
+}
+
+@mixin Head-H4-Inverted {
+  @include fluid-type(320px, 991px, $font-size-min-h4, $font-size-h4);
+  font-size: $font-size-min-h4;
+  font-family: $font-family-h4;
+  line-height: $line-height-h4;
+  font-weight: $font-weight-h4;
+  font-style: $font-style-h4;
+  color: $color-h4-inverted;
+}
+
+// H5
+@mixin Head-H5 {
+  @include fluid-type(320px, 991px, $font-size-min-h5, $font-size-h5);
+  font-size: $font-size-min-h5;
+  font-family: $font-family-h5;
+  line-height: $line-height-h5;
+  font-weight: $font-weight-h5;
+  font-style: $font-style-h5;
+  color: $color-h5;
+}
+
+@mixin Head-H5-Inverted {
+  @include fluid-type(320px, 991px, $font-size-min-h5, $font-size-h5);
+  font-family: $font-family-h5;
+  line-height: $line-height-h5;
+  font-weight: $font-weight-h5;
+  font-style: $font-style-h5;
+  color: $color-h5-inverted;
+}
+
+// H6
+@mixin Head-H6 {
+  @include fluid-type(320px, 991px, $font-size-min-h6, $font-size-h6);
+  font-size: $font-size-min-h6;
+  font-family: $font-family-h6;
+  line-height: $line-height-h6;
+  font-weight: $font-weight-h6;
+  font-style: $font-style-h6;
+  color: $color-h6;
+}
+
+@mixin Head-H6-Inverted {
+  @include fluid-type(320px, 991px, $font-size-min-h6, $font-size-h6);
+  font-size: $font-size-min-h6;
+  font-family: $font-family-h6;
+  line-height: $line-height-h6;
+  font-weight: $font-weight-h6;
+  font-style: $font-style-h6;
+  color: $color-h6-inverted;
+}
+
+// Body text
+
+// Standard
+@mixin Body-Standard {
+  font-size: $font-size-min-standard;
+  font-family: $font-family-standard;
+  line-height: $line-height-standard;
+  font-weight: $font-weight-standard;
+  font-style: $font-style-standard;
+  color: $color-standard;
+  margin-bottom: $margin-bottom-standard;
+
+  @media screen and (min-width: 991px) {
+    font-size: $font-size-standard;
+  }
+}
+
+@mixin Body-Standard-Inverted {
+  font-size: $font-size-min-standard;
+  font-family: $font-family-standard;
+  line-height: $line-height-standard;
+  font-weight: $font-weight-standard;
+  font-style: $font-style-standard;
+  color: $color-standard-inverted;
+  margin-bottom: $margin-bottom-standard;
+
+  @media screen and (min-width: 991px) {
+    font-size: $font-size-standard;
+  }
+}
+
+// Small
+@mixin Body-Small {
+  font-size: $font-size-min-small;
+  font-family: $font-family-small;
+  line-height: $line-height-small;
+  font-weight: $font-weight-small;
+  font-style: $font-style-small;
+  color: $color-small;
+  margin-bottom: $margin-bottom-small;
+
+  @media screen and (min-width: 991px) {
+    font-size: $font-size-small;
+  }
+}
+
+@mixin Body-Small-Inverted {
+  font-size: $font-size-min-small;
+  font-family: $font-family-small;
+  line-height: $line-height-small;
+  font-weight: $font-weight-small;
+  font-style: $font-style-small;
+  color: $color-small-inverted;
+  margin-bottom: $margin-bottom-small;
+
+  @media screen and (min-width: 991px) {
+    font-size: $font-size-small;
+  }
+}
+
+// Lead
+@mixin Body-Lead {
+  font-size: $font-size-min-lead;
+  font-family: $font-family-lead;
+  line-height: $line-height-lead;
+  font-weight: $font-weight-lead;
+  font-style: $font-style-lead;
+  color: $color-lead;
+  margin-bottom: $margin-bottom-lead;
+
+  @media screen and (min-width: 991px) {
+    font-size: $font-size-lead;
+  }
+}
+
+@mixin Body-Lead-Inverted {
+  font-size: $font-size-min-lead;
+  font-family: $font-family-lead;
+  line-height: $line-height-lead;
+  font-weight: $font-weight-lead;
+  font-style: $font-style-lead;
+  color: $color-lead-inverted;
+  margin-bottom: $margin-bottom-lead;
+
+  @media screen and (min-width: 991px) {
+    font-size: $font-size-lead;
+  }
+}
+
+// Deco-1
+@mixin Body-Deco-1 {
+  font-size: $font-size-min-deco-1;
+  font-family: $font-family-deco-1;
+  line-height: $line-height-deco-1;
+  font-weight: $font-weight-deco-1;
+  font-style: $font-style-deco-1;
+  color: $color-deco-1;
+  margin-bottom: $margin-bottom-deco-1;
+
+  @media screen and (min-width: 991px) {
+    font-size: $font-size-deco-1;
+  }
+}
+
+@mixin Body-Deco-1-Inverted {
+  font-size: $font-size-min-deco-1;
+  font-family: $font-family-deco-1;
+  line-height: $line-height-deco-1;
+  font-weight: $font-weight-deco-1;
+  font-style: $font-style-deco-1;
+  color: $color-deco-1-inverted;
+  margin-bottom: $margin-bottom-deco-1;
+
+  @media screen and (min-width: 991px) {
+    font-size: $font-size-deco-1;
+  }
+}
+
+// Deco-2
+@mixin Body-Deco-2 {
+  font-size: $font-size-min-deco-2;
+  font-family: $font-family-deco-2;
+  line-height: $line-height-deco-2;
+  font-weight: $font-weight-deco-2;
+  font-style: $font-style-deco-2;
+  color: $color-deco-2;
+  margin-bottom: $margin-bottom-deco-2;
+
+  @media screen and (min-width: 991px) {
+    font-size: $font-size-deco-2;
+  }
+}
+
+@mixin Body-Deco-2-Inverted {
+  font-size: $font-size-min-deco-2;
+  font-family: $font-family-deco-2;
+  line-height: $line-height-deco-2;
+  font-weight: $font-weight-deco-2;
+  font-style: $font-style-deco-2;
+  color: $color-deco-2-inverted;
+  margin-bottom: $margin-bottom-deco-2;
+
+  @media screen and (min-width: 991px) {
+    font-size: $font-size-deco-2;
+  }
+}
+
+// Deco-3
+@mixin Body-Deco-3 {
+  font-size: $font-size-min-deco-3;
+  font-family: $font-family-deco-3;
+  line-height: $line-height-deco-3;
+  font-weight: $font-weight-deco-3;
+  font-style: $font-style-deco-3;
+  color: $color-deco-3;
+  margin-bottom: $margin-bottom-deco-3;
+
+  @media screen and (min-width: 991px) {
+    font-size: $font-size-deco-3;
+  }
+}
+
+@mixin Body-Deco-3-Inverted {
+  font-size: $font-size-min-deco-3;
+  font-family: $font-family-deco-3;
+  line-height: $line-height-deco-3;
+  font-weight: $font-weight-deco-3;
+  font-style: $font-style-deco-3;
+  color: $color-deco-3-inverted;
+  margin-bottom: $margin-bottom-deco-3;
+
+  @media screen and (min-width: 991px) {
+    font-size: $font-size-deco-3;
+  }
+}
+
+@mixin link-hover {
+  position: relative;
+  transition: default;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: $color-white;
+    transition: $transition-default;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      width: 100%;
+    }
+  }
+}
