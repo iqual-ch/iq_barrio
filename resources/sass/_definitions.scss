@@ -520,6 +520,8 @@ $font-family-content:                 $font-family-base;
 
 @import "../../../iq_custom/resources/sass/definitions";
 
+@import 'abstracts/_abstracts-dir';
+
 // mixins
 @mixin font-standard {
   font-size: $font-size-standard;
