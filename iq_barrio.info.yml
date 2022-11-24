@@ -8,6 +8,9 @@ base theme: bootstrap_barrio
 'interface translation project': iq_barrio
 'interface translation server pattern': themes/custom/iq_barrio/translations/iq_barrio-%language.po
 
+
+
+
 dependencies:
   - iq_barrio_helper
   - pagedesigner_responsive_images
