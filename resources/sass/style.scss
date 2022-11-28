@@ -159,6 +159,7 @@ small {
   @include fluid-type(320px, 991px, $font-size-min-deco-3, $font-size-deco-3);
 }
 
+.ui-widget-content a,
 a {
   color: $color-link;
   text-decoration: $text-decoration-link;
