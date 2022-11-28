@@ -8,10 +8,6 @@
     }, 200);
   });
 
-  $(window).resize(function() {
-    setDefaultScrollOffset();
-  });
-
   window.onhashchange = function(e) {
     anchorScroll();
   };
@@ -31,6 +27,6 @@
     window.scrollTo(0, scrollPosition);
   }
 
-  setDefaultScrollOffset('scroll, resize');
+  setListenerForScrollOffsetCalculation('scroll, resize');
 
 })(jQuery);
