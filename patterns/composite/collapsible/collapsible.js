@@ -1,5 +1,5 @@
 (function ($, Drupal) {
-  setDefaultScrollOffset();
+  setDefaultScrollOffset('scroll, resize');
   function collapsible($stacks) {
     var definition = {
       icons: false,

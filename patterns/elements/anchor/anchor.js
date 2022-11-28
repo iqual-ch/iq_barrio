@@ -31,6 +31,6 @@
     window.scrollTo(0, scrollPosition);
   }
 
-  setDefaultScrollOffset();
+  setDefaultScrollOffset('scroll, resize');
 
 })(jQuery);
