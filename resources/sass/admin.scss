@@ -153,3 +153,23 @@ form.system-theme-settings[action*="iq_barrio"] {
     display: none !important;
   }
 }
+
+div[aria-describedby="frontend-publishing-unpublish-modal"],
+div[aria-describedby="frontend-publishing-publish-modal"] {
+  .ui-dialog-titlebar-close {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: "\00d7";
+      position: relative;
+      max-height: 20px;
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      overflow: hidden;
+    }
+  }
+}
