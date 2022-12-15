@@ -1,0 +1,45 @@
+<div class="iq-herobanner">
+  {% if image_img|render is not empty %}
+  <div class="iq-herobanner__background">
+    {% include '@iq_barrio/includes/responsive-image.html.twig' with {
+      'image' : image_img,
+      'template' : 'image_standard',
+      'sizes': '{"300px":"100vw","768px":"100vw","1200px":"100vw"}',
+        'attributes' : {
+          title: title,
+          alt: title
+        }
+    } %}
+  </div>
+  {% endif %}
+  <div class="iq-herobanner__inner">
+    <div class="iq-herobanner__inner__content iq-row row fullwidth-large nogutter-large">
+      <div class="col">
+        <div class="iq-row row">
+          <div class="col">
+            <div class="text-content">
+              {% if pretitle|render is not empty %}<span class="pretitle">{{ pretitle }}</span>{% endif %}
+              {% if title|render is not empty %}
+                {% set title_tag = '<' ~ title_weight|render ~ ' class="title" >' ~ title|nl2br ~ '</' ~ title_weight|render ~ '>' %}
+                {{ title_tag|raw }}
+              {% endif %}
+              {% if subtitle|render is not empty %}<span class="subtitle">{{ subtitle }}</span>{% endif %}
+              {% if content|render is not empty %}<div class="content iq-text lead">{{ content }}</div>{% endif %}
+            </div>
+            {% if button_href|render is not empty %}
+            <div class="iq-button" data-icon-position="{{ button_icon_position }}">
+              <a href="{{ button_href }}" title="{{ button_title }}" target="{{ button_target }}" {% if button_target|render == '_blank' %}rel="noopener"{% endif %}>
+                <span>
+                  {% if button_icon_position|render == 'left' and button_icon|render is not empty %}<i class="{{ button_icon }}"></i>{% endif %}
+                  {{ button_text }}
+                  {% if button_icon_position|render == 'right' and button_icon|render is not empty %}<i class="{{ button_icon }}"></i>{% endif %}
+                </span>
+              </a>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
