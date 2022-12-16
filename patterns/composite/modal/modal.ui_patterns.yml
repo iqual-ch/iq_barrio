@@ -1,0 +1,98 @@
+modal:
+  label: Modal
+  description: A Fullscreen hero banner.
+  category: Composite
+  icon: far fa-window-restore
+  pagedesigner: 1
+  type: row
+  styles: 1
+  fields:
+
+    column0:
+      type: cell
+      label: column0
+
+
+  # styling_options:
+  #   banner_height:
+  #     label: "Banner height"
+  #     options:
+  #       height-100vh: "Full height"
+  #       height-50vh: "50% Viewport"
+
+  #   alignment:
+  #     label: "Alignment"
+  #     options:
+  #       align-center-top: "Center Top"
+  #       align-left-top: "Left Top"
+  #       align-right-top: "Right Top"
+  #       align-center-middle: "Center Middle"
+  #       align-left-middle: "Left Middle"
+  #       align-right-middle: "Right Middle"
+  #       align-center-bottom: "Center Bottom"
+  #       align-left-bottom: "Left Bottom"
+  #       align-right-bottom: "Right Bottom"
+
+  #   overlay_background_color:
+  #     label: "Overlay: Background Color"
+  #     options:
+  #       background-color-primary: "Primary color"
+  #       background-color-secondary: "Secondary color"
+  #       background-color-tertiary: "Tertiary color"
+  #       background-color-quaternary: "Quaternary color"
+  #       background-color-grey1: "Grey 1"
+  #       background-color-grey2: "Grey 2"
+  #       background-color-grey3: "Grey 3"
+  #       background-color-grey4: "Grey 4"
+  #       background-color-grey5: "Grey 5"
+  #       background-color-black: "Black"
+  #       background-color-white: "White"
+  #   overlay_style:
+  #     label: "Overlay: Style"
+  #     options:
+  #       overlay-style-solid: "Solid Color"
+  #       overlay-style-transparent: "Transparent Color"
+  #       overlay-style-mulitply: "Multiply Colors"
+  #       overlay-style-blur: "Blur Background image"
+  #       overlay-style-darken: "Darken Background image"
+  #   overlay_font_color:
+  #     label: "Overlay: Font color"
+  #     options:
+  #       font-color-primary: "Primary color"
+  #       font-color-secondary: "Secondary color"
+  #       font-color-tertiary: "Tertiary color"
+  #       font-color-quaternary: "Quaternary color"
+  #       font-color-grey1: "Grey 1"
+  #       font-color-grey2: "Grey 2"
+  #       font-color-grey3: "Grey 3"
+  #       font-color-grey4: "Grey 4"
+  #       font-color-grey5: "Grey 5"
+  #       font-color-black: "Black"
+  #       font-color-white: "White"
+
+  # classes:
+  #   hidden:
+  #     label: "Hide component"
+  #     description: "Hide component"
+  #     responsive: true
+  #   hidden-print:
+  #     label: "Hide on print"
+  #     description: "Hide on print"
+  #   full-height-overlay:
+  #     label: "Overlay: Full height"
+  #     description: "Hide on print"
+  #     responsive: true
+  #   mobile-stack-banner:
+  #     label: "Mobile: Stack banner"
+  #     description: "Hide on print"
+
+  libraries:
+    - modal:
+        css:
+          component:
+            modal.css: {}
+        js:
+          modal.js: {}
+        dependencies:
+          - ui_patterns/text.text
+          - ui_patterns/button.button
