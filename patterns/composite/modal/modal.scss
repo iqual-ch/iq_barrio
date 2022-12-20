@@ -5,62 +5,230 @@
 
   &[data-gjs-type] {
     > input{
-      width: 0;
+      display: none;
+      &:checked{
+        + label {
+          position: fixed;
+          left: 0;
+          top: 0;
+          z-index: 2002;
+          &::after{
+            content: "ausblenden";
+          }
+          + .iq-modal__overlay{
+            display: block;
+            position: fixed !important;
+            z-index: 2000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            + .iq-modal__overlay__content{
+              display: block;
+              margin: 0;
+              position: fixed !important;
+              top: 50%;
+              left: 50%;
+              width: calc(100vw - 60px);
+              max-height: calc(100vh - 60px);
+              transform: translate(-50%, -50%);
+              z-index: 2001;
+              padding-top: 30px;
+              padding-bottom: 30px;
+            }
+          }
+        }
+      }
+    }
+    label{
+      padding: 7px 15px;
+      border: 1px solid #ccc;
+      background-color: #ccc;
+      margin: 0;
+      font-size: 12px;
+      cursor: pointer;
       &::before{
         content: "Modal\00A0";
       }
       &::after{
-        content: "einblenden";
+        content: "anzeigen"
       }
-      &:checked{
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin-top: -290px;
-        margin-left: -400px;
-        z-index: 2002;
-        &::after{
-          content: "ausblenden";
-        }
-        + .iq-modal__overlay{
-          display: block;
-          + .iq-modal__overlay__background{
-            display: block;
-          }
-        }
-      }
-
     }
-  }
-
-  &__overlay{
-    display: none;
-    &__background{
+    .iq-button,
+    .iq-modal__overlay,
+    .iq-modal__overlay__close,
+    .iq-modal__overlay__content{
       display: none;
     }
   }
 
   &__overlay{
-    position: fixed !important;
-    top: 50%;
-    left: 50%;
-    width: 800px !important;
-    height: 600px;
-    background-color: white;
-    transform: translate(-50%, -50%);
-    z-index: 2001;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    &__background{
-      background-color: black;
-      z-index: 2000;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+    background-color: rgba($color-black, 0.8);
+    z-index: 2000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    &.active{
+      display: block;
+    }
+
+    &__content.col{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: calc(100vw - 60px);
+      max-height: calc(100vh - 60px);
+      overflow-y: auto;
+      background-color: $color-white;
+      transform: translate(-50%, -50%);
+      z-index: 2001;
+      padding-top: 45px;
+      padding-bottom: 15px;
+      max-width: 1140px;
+    }
+    &__close{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      background: none;
+      border: none;
     }
   }
 
+  .iq-button{
+    cursor: pointer;
+  }
+
+  &.overlay-background-color-{
+    &primary .iq-modal__overlay{
+      background-color: rgba($color-primary, 0.8);
+    }
+    &secondary .iq-modal__overlay{
+      background-color: rgba($color-secondary, 0.8);
+    }
+    &tertiary .iq-modal__overlay{
+      background-color: rgba($color-tertiary, 0.8);
+    }
+    &quaternary .iq-modal__overlay{
+      background-color: rgba($color-quaternary, 0.8);
+    }
+    &grey1 .iq-modal__overlay{
+      background-color: rgba($color-grey1, 0.8);
+    }
+    &grey2 .iq-modal__overlay{
+      background-color: rgba($color-grey2, 0.8);
+    }
+    &grey3 .iq-modal__overlay{
+      background-color: rgba($color-grey3, 0.8);
+    }
+    &grey4 .iq-modal__overlay{
+      background-color: rgba($color-grey4, 0.8);
+    }
+    &grey5 .iq-modal__overlay{
+      background-color: rgba($color-grey5, 0.8);
+    }
+    &black .iq-modal__overlay{
+      background-color: rgba($color-black, 0.8);
+    }
+    &white .iq-modal__overlay{
+      background-color: rgba($color-white, 0.8);
+    }
+  }
+
+  &.overlay-content-width-{
+    &full .iq-modal__overlay__content{
+      max-width: none;
+    }
+    &content .iq-modal__overlay__content{
+      max-width: 1140px;
+    }
+    &small .iq-modal__overlay__content{
+      max-width: 600px;
+    }
+  }
+
+  &.overlay-content-background-color-{
+    &primary .iq-modal__overlay__content{
+      background-color: $color-primary;
+    }
+    &secondary .iq-modal__overlay__content{
+      background-color: $color-secondary;
+    }
+    &tertiary .iq-modal__overlay__content{
+      background-color: $color-tertiary;
+    }
+    &quaternary .iq-modal__overlay__content{
+      background-color: $color-quaternary;
+    }
+    &grey1 .iq-modal__overlay__content{
+      background-color: $color-grey1;
+    }
+    &grey2 .iq-modal__overlay__content{
+      background-color: $color-grey2;
+    }
+    &grey3 .iq-modal__overlay__content{
+      background-color: $color-grey3;
+    }
+    &grey4 .iq-modal__overlay__content{
+      background-color: $color-grey4;
+    }
+    &grey5 .iq-modal__overlay__content{
+      background-color: $color-grey5;
+    }
+    &black .iq-modal__overlay__content{
+      background-color: $color-black;
+    }
+    &white .iq-modal__overlay__content{
+      background-color: $color-white;
+    }
+  }
+
+  &.overlay-content-font-color-{
+    &primary .iq-modal__overlay__content *{
+      color: $color-primary;
+    }
+    &secondary .iq-modal__overlay__content *{
+      color: $color-secondary;
+    }
+    &tertiary .iq-modal__overlay__content *{
+      color: $color-tertiary;
+    }
+    &quaternary .iq-modal__overlay__content *{
+      color: $color-quaternary;
+    }
+    &grey1 .iq-modal__overlay__content *{
+      color: $color-grey1;
+    }
+    &grey2 .iq-modal__overlay__content *{
+      color: $color-grey2;
+    }
+    &grey3 .iq-modal__overlay__content *{
+      color: $color-grey3;
+    }
+    &grey4 .iq-modal__overlay__content *{
+      color: $color-grey4;
+    }
+    &grey5 .iq-modal__overlay__content *{
+      color: $color-grey5;
+    }
+    &black .iq-modal__overlay__content *{
+      color: $color-black;
+    }
+    &white .iq-modal__overlay__content *{
+      color: $color-white;
+    }
+  }
+
+}
+
+.pd-live .iq-modal[data-initialized="false"] {
+  > [data-pd-editmode-toggle-modal],
+  > [class*="iq-modal__"] {
+    display: none;
+  }
 }

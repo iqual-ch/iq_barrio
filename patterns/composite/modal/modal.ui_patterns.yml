@@ -12,79 +12,114 @@ modal:
       type: cell
       label: column0
 
+    open_action:
+      type: select
+      label: Action to open modal
+      preview: standard
+      options:
+        button: On Button Click
+        load: On Page load
+        cutsom: Custom
 
-  # styling_options:
-  #   banner_height:
-  #     label: "Banner height"
-  #     options:
-  #       height-100vh: "Full height"
-  #       height-50vh: "50% Viewport"
+    close_icon:
+      type: fontawesome
+      label: "Close button: Icon"
+    close_text:
+      type: text
+      label: "Close button: tooltip"
 
-  #   alignment:
-  #     label: "Alignment"
-  #     options:
-  #       align-center-top: "Center Top"
-  #       align-left-top: "Left Top"
-  #       align-right-top: "Right Top"
-  #       align-center-middle: "Center Middle"
-  #       align-left-middle: "Left Middle"
-  #       align-right-middle: "Right Middle"
-  #       align-center-bottom: "Center Bottom"
-  #       align-left-bottom: "Left Bottom"
-  #       align-right-bottom: "Right Bottom"
+    button_text:
+      type: text
+      label: Button text
+    button_title:
+      type: text
+      label: Button title
+    button_alignment:
+      type: select
+      label: Button Alignment
+      preview: center
+      options:
+        center: Center
+        left: Left
+        right: Right
+    button_icon:
+      type: fontawesome
+      label: Button icon
+    button_icon_position:
+      type: select
+      label: Button icon position
+      preview: left
+      options:
+        left: Left
+        right: Right
+    button_style:
+      type: select
+      label: Button style
+      preview: standard
+      options:
+        standard: Standard
+        alternate: Alternate
+    button_color:
+      type: select
+      label: Button color scheme
+      preview: standard
+      options:
+        standard: Standard
+        inverted: Inverted
 
-  #   overlay_background_color:
-  #     label: "Overlay: Background Color"
-  #     options:
-  #       background-color-primary: "Primary color"
-  #       background-color-secondary: "Secondary color"
-  #       background-color-tertiary: "Tertiary color"
-  #       background-color-quaternary: "Quaternary color"
-  #       background-color-grey1: "Grey 1"
-  #       background-color-grey2: "Grey 2"
-  #       background-color-grey3: "Grey 3"
-  #       background-color-grey4: "Grey 4"
-  #       background-color-grey5: "Grey 5"
-  #       background-color-black: "Black"
-  #       background-color-white: "White"
-  #   overlay_style:
-  #     label: "Overlay: Style"
-  #     options:
-  #       overlay-style-solid: "Solid Color"
-  #       overlay-style-transparent: "Transparent Color"
-  #       overlay-style-mulitply: "Multiply Colors"
-  #       overlay-style-blur: "Blur Background image"
-  #       overlay-style-darken: "Darken Background image"
-  #   overlay_font_color:
-  #     label: "Overlay: Font color"
-  #     options:
-  #       font-color-primary: "Primary color"
-  #       font-color-secondary: "Secondary color"
-  #       font-color-tertiary: "Tertiary color"
-  #       font-color-quaternary: "Quaternary color"
-  #       font-color-grey1: "Grey 1"
-  #       font-color-grey2: "Grey 2"
-  #       font-color-grey3: "Grey 3"
-  #       font-color-grey4: "Grey 4"
-  #       font-color-grey5: "Grey 5"
-  #       font-color-black: "Black"
-  #       font-color-white: "White"
 
-  # classes:
-  #   hidden:
-  #     label: "Hide component"
-  #     description: "Hide component"
-  #     responsive: true
-  #   hidden-print:
-  #     label: "Hide on print"
-  #     description: "Hide on print"
-  #   full-height-overlay:
-  #     label: "Overlay: Full height"
-  #     description: "Hide on print"
-  #     responsive: true
-  #   mobile-stack-banner:
-  #     label: "Mobile: Stack banner"
-  #     description: "Hide on print"
+  styling_options:
+    overlay_background_color:
+      label: "Overlay: Background Color"
+      options:
+        overlay-background-color-primary: "Primary color"
+        overlay-background-color-secondary: "Secondary color"
+        overlay-background-color-tertiary: "Tertiary color"
+        overlay-background-color-quaternary: "Quaternary color"
+        overlay-background-color-grey1: "Grey 1"
+        overlay-background-color-grey2: "Grey 2"
+        overlay-background-color-grey3: "Grey 3"
+        overlay-background-color-grey4: "Grey 4"
+        overlay-background-color-grey5: "Grey 5"
+        overlay-background-color-black: "Black"
+        overlay-background-color-white: "White"
+
+    overlay_width:
+      label: "Content: Width"
+      options:
+        overlay-content-width-full: "Full screen"
+        overlay-content-width-content: "Content width"
+        overlay-content-width-small: "Small"
+
+    content_background_color:
+      label: "Content: Background Color"
+      options:
+        overlay-content-background-color-primary: "Primary color"
+        overlay-content-background-color-secondary: "Secondary color"
+        overlay-content-background-color-tertiary: "Tertiary color"
+        overlay-content-background-color-quaternary: "Quaternary color"
+        overlay-content-background-color-grey1: "Grey 1"
+        overlay-content-background-color-grey2: "Grey 2"
+        overlay-content-background-color-grey3: "Grey 3"
+        overlay-content-background-color-grey4: "Grey 4"
+        overlay-content-background-color-grey5: "Grey 5"
+        overlay-content-background-color-black: "Black"
+        overlay-content-background-color-white: "White"
+
+    content_font_color:
+      label: "Content: Font Color"
+      options:
+        overlay-content-font-color-primary: "Primary color"
+        overlay-content-font-color-secondary: "Secondary color"
+        overlay-content-font-color-tertiary: "Tertiary color"
+        overlay-content-font-color-quaternary: "Quaternary color"
+        overlay-content-font-color-grey1: "Grey 1"
+        overlay-content-font-color-grey2: "Grey 2"
+        overlay-content-font-color-grey3: "Grey 3"
+        overlay-content-font-color-grey4: "Grey 4"
+        overlay-content-font-color-grey5: "Grey 5"
+        overlay-content-font-color-black: "Black"
+        overlay-content-font-color-white: "White"
 
   libraries:
     - modal:
