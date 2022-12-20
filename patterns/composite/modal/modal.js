@@ -21,6 +21,7 @@
         let $modalContent = $('[data-modal-content]');
         let $modalOverlay = $('[data-modal-overlay]');
 
+        $modalContent.children().wrapAll('<div class="wrapper" />')
         $modalContent.append($btnModalClose);
         $modalOverlay.append($modalContent);
 
@@ -49,7 +50,4 @@
       });
     }
   };
-
-
 })(jQuery, Drupal);
-

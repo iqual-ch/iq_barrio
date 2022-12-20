@@ -36,6 +36,7 @@
               z-index: 2001;
               padding-top: 30px;
               padding-bottom: 30px;
+              overflow-y: auto;
             }
           }
         }
@@ -81,14 +82,16 @@
       top: 50%;
       left: 50%;
       width: calc(100vw - 60px);
-      max-height: calc(100vh - 60px);
-      overflow-y: auto;
       background-color: $color-white;
       transform: translate(-50%, -50%);
       z-index: 2001;
       padding-top: 45px;
       padding-bottom: 15px;
       max-width: 1140px;
+      .wrapper{
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+      }
     }
     &__close{
       position: absolute;
@@ -223,7 +226,6 @@
       color: $color-white;
     }
   }
-
 }
 
 .pd-live .iq-modal[data-initialized="false"] {
