@@ -66,6 +66,20 @@ herobanner:
       options:
         left: Left
         right: Right
+    button_style:
+      type: select
+      label: Button style
+      preview: standard
+      options:
+        standard: Standard
+        alternate: Alternate
+    button_color_scheme:
+      type: select
+      label: Button color scheme
+      preview: standard
+      options:
+        standard: Standard
+        inverted: Inverted
 
   styling_options:
     banner_height:

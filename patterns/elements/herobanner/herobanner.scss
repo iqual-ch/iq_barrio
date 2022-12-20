@@ -5,7 +5,7 @@
   --fullscreen-height: 100vh;
 }
 
-.iq-herobanner{
+.container-fluid .iq-herobanner{
   &__background{
     position: absolute;
     left: 0;
@@ -40,8 +40,10 @@
       &.iq-row{
         padding-top: 60px !important;
         padding-bottom: 60px !important;
+        margin: 0;
         .iq-row{
           padding: 0;
+          width: 100%;
           .col{
             > *:first-child{
               margin-top: 0;
@@ -397,10 +399,10 @@
     @media only screen and (max-width: 767px) {
       .iq-herobanner__background{
         position: relative;
+        height: 50vh;
       }
       .iq-herobanner__inner{
         height: auto;
-        max-height: 50vh;
       }
     }
   }
