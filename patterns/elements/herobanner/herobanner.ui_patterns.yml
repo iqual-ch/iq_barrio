@@ -1,0 +1,166 @@
+herobanner:
+  label: Hero Banner
+  description: A Fullscreen hero banner.
+  category: Element
+  icon: far fa-image
+  pagedesigner: 1
+  type: component
+  styles: 1
+  fields:
+
+    image_img:
+      type: image
+      label: Background image
+    image_title:
+      type: text
+      label: Background image title text
+    image_alt:
+      type: text
+      label: Background image alt text
+      description: Alternate text for an image, if the image cannot be displayed.
+
+    pretitle:
+      type: text
+      label: Pretitle
+    title:
+      type: textarea
+      label: Title
+    title_weight:
+      type: select
+      label: Title weight
+      options:
+        h1: Heading 1 (&lt;h1&gt;)
+        h2: Heading 2 (&lt;h2&gt;)
+        h3: Heading 3 (&lt;h3&gt;)
+        h4: Heading 4 (&lt;h4&gt;)
+        h5: Heading 5 (&lt;h5&gt;)
+        h6: Heading 6 (&lt;h6&gt;)
+        span: None (&lt;span&gt;)
+    subtitle:
+      type: text
+      label: Subtitle
+    content:
+      type: html
+      label: Content
+
+    button_href:
+      type: link
+      label: Button Link
+    button_text:
+      type: text
+      label: Button text
+    button_title:
+      type: text
+      label: Button title
+    button_target:
+      type: target
+      label: Open button link in new window
+      description: Should the link be opened in the same window or in a new one?
+    button_icon:
+      type: fontawesome
+      label: Button icon
+    button_icon_position:
+      type: select
+      label: Button icon position
+      preview: left
+      options:
+        left: Left
+        right: Right
+    button_style:
+      type: select
+      label: Button style
+      preview: standard
+      options:
+        standard: Standard
+        alternate: Alternate
+    button_color_scheme:
+      type: select
+      label: Button color scheme
+      preview: standard
+      options:
+        standard: Standard
+        inverted: Inverted
+
+  styling_options:
+    banner_height:
+      label: "Banner height"
+      options:
+        height-100vh: "Full height"
+        height-50vh: "50% Viewport"
+
+    alignment:
+      label: "Alignment"
+      options:
+        align-center-top: "Center Top"
+        align-left-top: "Left Top"
+        align-right-top: "Right Top"
+        align-center-middle: "Center Middle"
+        align-left-middle: "Left Middle"
+        align-right-middle: "Right Middle"
+        align-center-bottom: "Center Bottom"
+        align-left-bottom: "Left Bottom"
+        align-right-bottom: "Right Bottom"
+
+    overlay_background_color:
+      label: "Overlay: Background Color"
+      options:
+        background-color-primary: "Primary color"
+        background-color-secondary: "Secondary color"
+        background-color-tertiary: "Tertiary color"
+        background-color-quaternary: "Quaternary color"
+        background-color-grey1: "Grey 1"
+        background-color-grey2: "Grey 2"
+        background-color-grey3: "Grey 3"
+        background-color-grey4: "Grey 4"
+        background-color-grey5: "Grey 5"
+        background-color-black: "Black"
+        background-color-white: "White"
+    overlay_style:
+      label: "Overlay: Style"
+      options:
+        overlay-style-solid: "Solid Color"
+        overlay-style-transparent: "Transparent Color"
+        overlay-style-mulitply: "Multiply Colors"
+        overlay-style-blur: "Blur Background image"
+        overlay-style-darken: "Darken Background image"
+    overlay_font_color:
+      label: "Overlay: Font color"
+      options:
+        font-color-primary: "Primary color"
+        font-color-secondary: "Secondary color"
+        font-color-tertiary: "Tertiary color"
+        font-color-quaternary: "Quaternary color"
+        font-color-grey1: "Grey 1"
+        font-color-grey2: "Grey 2"
+        font-color-grey3: "Grey 3"
+        font-color-grey4: "Grey 4"
+        font-color-grey5: "Grey 5"
+        font-color-black: "Black"
+        font-color-white: "White"
+
+  classes:
+    hidden:
+      label: "Hide component"
+      description: "Hide component"
+      responsive: true
+    hidden-print:
+      label: "Hide on print"
+      description: "Hide on print"
+    full-height-overlay:
+      label: "Overlay: Full height"
+      description: "Hide on print"
+      responsive: true
+    mobile-stack-banner:
+      label: "Mobile: Stack banner"
+      description: "Hide on print"
+
+  libraries:
+    - herobanner:
+        css:
+          component:
+            herobanner.css: {}
+        js:
+          herobanner.js: {}
+        dependencies:
+          - ui_patterns/text.text
+          - ui_patterns/button.button
