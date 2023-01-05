@@ -1,0 +1,177 @@
+teasercard:
+  label: Teaser Card
+  description: A Teaser Card component with multiple styling options.
+  category: Element
+  icon: fas fa-image
+  pagedesigner: 1
+  type: component
+  styles: 1
+  fields:
+    teaser_style:
+      type: select
+      label: Teaser style
+      preview: vertical
+      options:
+        vertical: Vertical
+        square-image: Square image
+        image-left: Image left
+        image-right: Image right
+
+    image_img:
+      type: image
+      label: Image
+    image_title:
+      type: text
+      label: Image title
+    image_alt:
+      type: text
+      label: Image alt text
+      description: The alt attribute provides alternative information if an image is unavailable.
+
+    pretitle:
+      type: text
+      label: Pretitle
+    title:
+      type: textarea
+      label: Title
+    title_weight:
+      type: select
+      label: Title weight
+      preview: h3
+      options:
+        h1: Heading 1 (&lt;h1&gt;)
+        h2: Heading 2 (&lt;h2&gt;)
+        h3: Heading 3 (&lt;h3&gt;)
+        h4: Heading 4 (&lt;h4&gt;)
+        h5: Heading 5 (&lt;h5&gt;)
+        h6: Heading 6 (&lt;h6&gt;)
+        span: None (&lt;span&gt;)
+    subtitle:
+      type: text
+      label: Subtitle
+    content:
+      type: html
+      label: Content
+
+    link_href:
+      type: link
+      label: Link
+    link_title:
+      type: text
+      label: Link title
+    link_target:
+      type: target
+      label: Open link in new window
+      description: Should the link be opened in the same window or in a new one?
+
+    button_text:
+      type: text
+      label: Button text
+    button_style:
+      type: select
+      label: Button style
+      preview: standard
+      options:
+        standard: Standard
+        alternate: Alternate
+    button_color_scheme:
+      type: select
+      label: Button color scheme
+      preview: standard
+      options:
+        standard: Standard
+        inverted: Inverted
+    button_icon:
+      type: fontawesome
+      label: Button icon
+    button_icon_position:
+      type: select
+      label: Button icon position
+      preview: right
+      options:
+        left: Left
+        right: Right
+
+  styling_options:
+    font_color:
+      label: Font color
+      options:
+        font-color-primary: Primary color
+        font-color-secondary: Secondary color
+        font-color-tertiary: Tertiary color
+        font-color-quaternary: Quaternary color
+        font-color-grey1: Grey 1
+        font-color-grey2: Grey 2
+        font-color-grey3: Grey 3
+        font-color-grey4: Grey 4
+        font-color-grey5: Grey 5
+        font-color-black: Black
+        font-color-white: White
+
+    text-shadow:
+      label: "Text shadow"
+      options:
+        text-shadow-light: Light
+        text-shadow-medium: Medium
+        text-shadow-dark: Dark
+        text-shadow-darker: Darker
+
+    text_alignment:
+      label: Text alignment
+      options:
+        align-center-top: Top Center
+        align-left-top: Top Left
+        align-right-top: Top Right
+        align-center-middle: Middle Center
+        align-left-middle: Middle Left
+        align-right-middle: Middle Right
+        align-center-bottom: Bottom Center
+        align-left-bottom: Bottom Left
+        align-right-bottom: Bottom Right
+
+    overlay_background_color:
+      label: "Overlay: Background Color (Only for Square image)"
+      options:
+        background-color-primary: Primary color
+        background-color-secondary: Secondary color
+        background-color-tertiary: Tertiary color
+        background-color-quaternary: Quaternary color
+        background-color-grey1: Grey 1
+        background-color-grey2: Grey 2
+        background-color-grey3: Grey 3
+        background-color-grey4: Grey 4
+        background-color-grey5: Grey 5
+        background-color-black: Black
+        background-color-white: White
+
+    overlay_style:
+      label: "Overlay: Style (Only for Square image)"
+      options:
+        overlay-style-solid: Solid color
+        overlay-style-transparent: Transparent color
+        overlay-style-multiply: Multiply colors
+        overlay-style-blur: Blur background image
+        overlay-style-darken: Darken background image
+
+  classes:
+    hidden:
+      label: Hide component
+      description: Hide component
+      responsive: true
+    hidden-print:
+      label: Hide on print
+      description: Hide on print
+    mobile-align-left:
+      label: "On mobile: Force left text align"
+      description: "On mobile: Force left text align"
+
+  libraries:
+    - teasercard:
+        css:
+          component:
+            teasercard.css: {}
+        js:
+          teasercard.js: {}
+        dependencies:
+          - ui_patterns/text.text
+          - ui_patterns/button.button

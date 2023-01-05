@@ -1,0 +1,96 @@
+<div class="iq-teasercard">
+
+  <div class="iq-row iq-teasercard__row {{ teaser_style }}{% if teaser_style|render != "square-image" %} fullwidth{% endif %}">
+
+    {# First column - Image column #}
+    {% if image_img|render is not empty %}
+      <div class="iq-column col-12 iq-teasercard__column iq-teasercard__column--image {% if teaser_style|render == "image-left" or teaser_style|render == "image-right"%} col-md-6{% endif %}">
+
+        <a {% if link_href|render is not empty %} href="{{ link_href }}" {% endif %} title="{{ link_title }}" target="{{ link_target }}" {% if link_target|render == '_blank' %} rel="nofollow noopener" {% endif %}>
+
+        {# If teaser_style is Square image, we close the link tag here, because it is going to be absolutely positioned #}
+        {% if teaser_style|render == "square-image" %}
+        </a>
+        {% endif %}
+
+            {# Responsive image #}
+            <div class="iq-teasercard__image">
+              {% include '@iq_barrio/includes/responsive-image.html.twig' with {
+                'image' : image_img,
+                'template' : 'image_standard',
+                'sizes': {'1200px': '50vw','768px':'50vw','300px':'100vw'},
+                'attributes' : {
+                  title: image_title,
+                  alt: image_alt,
+                }
+              } %}
+            </div>
+
+        {# Else, we close it here so it wraps the image #}
+        {% if teaser_style|render != "square-image" %}
+        </a>
+        {% endif %}
+
+      </div>
+    {% endif %}
+
+    {# Second column - Content column #}
+    <div class="iq-column col-12 iq-teasercard__column iq-teasercard__column--content{% if image_img|render is not empty and teaser_style|render == "image-left" or teaser_style|render == "image-right" and image_img|render is not empty %} col-md-6{% endif %}">
+      {# Pretitle #}
+      {% if pretitle|render is not empty %}
+        <div class="iq-text iq-teasercard__pretitle small">
+          <span>{{ pretitle|raw }}</span>
+        </div>
+      {% endif %}
+
+      {# Title #}
+      {% if title|render is not empty %}
+        <div class="iq-teasercard__title">
+          <a {% if link_href|render is not empty %} href="{{ link_href }}" {% endif %} title="{{ link_title }}" target="{{ link_target }}" {% if link_target|render == '_blank' %} rel="nofollow noopener" {% endif %}>
+            {% if title_weight|render == "h1" %}<span class="title h1">{{ title|nl2br|raw }}</span>{% endif %}
+            {% if title_weight|render == "h2" %}<span class="title h2">{{ title|nl2br|raw }}</span>{% endif %}
+            {% if title_weight|render == "h3" %}<span class="title h3">{{ title|nl2br|raw }}</span>{% endif %}
+            {% if title_weight|render == "h4" %}<span class="title h4">{{ title|nl2br|raw }}</span>{% endif %}
+            {% if title_weight|render == "h5" %}<span class="title h5">{{ title|nl2br|raw }}</span>{% endif %}
+            {% if title_weight|render == "h6" %}<span class="title h6">{{ title|nl2br|raw }}</span>{% endif %}
+            {% if title_weight|render == "span" %}<span class="title">{{ title|nl2br|raw }}</span>{% endif %}
+          </a>
+        </div>
+      {% endif %}
+
+      {# Subtitle #}
+      {% if subtitle|render is not empty %}
+        <div class="iq-text iq-teasercard__subtitle small">
+          <span>{{ subtitle|raw }}</span>
+        </div>
+      {% endif %}
+
+      {# Content #}
+      {% if content|render is not empty %}
+        <div class="iq-text iq-teasercard__content">
+        {{ content|raw }}
+        </div>
+      {% endif %}
+
+      {# Button #}
+      {% if button_text|render is not empty %}
+        <div class="iq-button {{ button_style }} {{ button_color_scheme }}" data-icon-position="{{ button_icon_position }}">
+
+          <a {% if link_href|render is not empty %} href="{{ link_href }}" {% endif %} title="{{ link_title }}" target="{{ link_target }}" {% if link_target|render == '_blank' %} rel="nofollow noopener" {% endif %}>
+
+            <span>
+              {% if button_icon_position|render == 'left' and button_icon|render is not empty %}<i class="{{ button_icon }}"></i>{% endif %}
+              {{ button_text|raw }}
+              {% if button_icon_position|render == 'right' and button_icon|render is not empty %}<i class="{{ button_icon }}"></i>{% endif %}
+            </span>
+
+          </a>
+
+        </div>
+      {% endif %}
+
+    </div>
+
+  </div>
+
+</div>
