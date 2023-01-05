@@ -137,6 +137,13 @@ herobanner:
         font-color-grey5: "Grey 5"
         font-color-black: "Black"
         font-color-white: "White"
+    text-shadow:
+      label: "Text shadow"
+      options:
+        text-shadow-light: Light
+        text-shadow-medium: Medium
+        text-shadow-dark: Dark
+        text-shadow-darker: Darker
 
   classes:
     hidden:

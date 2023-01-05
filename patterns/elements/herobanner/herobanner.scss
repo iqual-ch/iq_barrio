@@ -339,58 +339,80 @@
 
   // Overlay: font Color
   &.font-color-primary{
-    .iq-herobanner__inner__content .text-content *{
+    .iq-herobanner__inner__content .text-content *:not(.iq-button>a>span){
       color: $color-primary;
     }
   }
   &.font-color-secondary{
-    .iq-herobanner__inner__content .text-content *{
+    .iq-herobanner__inner__content .text-content *:not(.iq-button>a>span){
       color: $color-secondary;
     }
   }
   &.font-color-tertiary{
-    .iq-herobanner__inner__content .text-content *{
+    .iq-herobanner__inner__content .text-content *:not(.iq-button>a>span){
       color: $color-tertiary;
     }
   }
   &.font-color-quaternary{
-    .iq-herobanner__inner__content .text-content *{
+    .iq-herobanner__inner__content .text-content *:not(.iq-button>a>span){
       color: $color-quaternary;
     }
   }
   &.font-color-grey1{
-    .iq-herobanner__inner__content .text-content *{
+    .iq-herobanner__inner__content .text-content *:not(.iq-button>a>span){
       color: $color-grey1;
     }
   }
   &.font-color-grey2{
-    .iq-herobanner__inner__content .text-content *{
+    .iq-herobanner__inner__content .text-content *:not(.iq-button>a>span){
       color: $color-grey2;
     }
   }
   &.font-color-grey3{
-    .iq-herobanner__inner__content .text-content *{
+    .iq-herobanner__inner__content .text-content *:not(.iq-button>a>span){
       color: $color-grey3;
     }
   }
   &.font-color-grey4{
-    .iq-herobanner__inner__content .text-content *{
+    .iq-herobanner__inner__content .text-content *:not(.iq-button>a>span){
       color: $color-grey4;
     }
   }
   &.font-color-grey5{
-    .iq-herobanner__inner__content .text-content *{
+    .iq-herobanner__inner__content .text-content *:not(.iq-button>a>span){
       color: $color-grey5;
     }
   }
   &.font-color-black{
-    .iq-herobanner__inner__content .text-content *{
+    .iq-herobanner__inner__content .text-content *:not(.iq-button>a>span){
       color: $color-black;
     }
   }
   &.font-color-white{
-    .iq-herobanner__inner__content .text-content *{
+    .iq-herobanner__inner__content .text-content *:not(.iq-button>a>span){
       color: $color-white;
+    }
+  }
+
+  // Text shadow
+  &.text-shadow-light {
+    .iq-herobanner__inner__content .text-content *:not(.iq-button>a>span) {
+      text-shadow: 0 0 10px rgba($color-black, 30%);
+    }
+  }
+  &.text-shadow-medium {
+    .iq-herobanner__inner__content .text-content *:not(.iq-button>a>span) {
+      text-shadow: 0 0 15px rgba($color-black, 50%);
+    }
+  }
+  &.text-shadow-dark {
+    .iq-herobanner__inner__content .text-content *:not(.iq-button>a>span) {
+      text-shadow: 0 0 20px rgba($color-black, 70%);
+    }
+  }
+  &.text-shadow-darker {
+    .iq-herobanner__inner__content .text-content *:not(.iq-button>a>span) {
+      text-shadow: 0 0 30px rgba($color-black, 90%);
     }
   }
 
