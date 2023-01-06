@@ -131,6 +131,9 @@
       display: flex;
       flex-direction: column;
       z-index: 2;
+      a{
+        text-decoration: none;
+      }
     }
 
     &--image {
@@ -192,67 +195,67 @@
 
   // Font Color
   &.font-color-primary {
-    .iq-teasercard__column--content *:not(.iq-button>a>span) {
+    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-primary;
     }
   }
 
   &.font-color-secondary {
-    .iq-teasercard__column--content *:not(.iq-button>a>span) {
+    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-secondary;
     }
   }
 
   &.font-color-tertiary {
-    .iq-teasercard__column--content *:not(.iq-button>a>span) {
+    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-tertiary;
     }
   }
 
   &.font-color-quaternary {
-    .iq-teasercard__column--content *:not(.iq-button>a>span) {
+    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-quaternary;
     }
   }
 
   &.font-color-grey1 {
-    .iq-teasercard__column--content *:not(.iq-button>a>span) {
+    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-grey1;
     }
   }
 
   &.font-color-grey2 {
-    .iq-teasercard__column--content *:not(.iq-button>a>span) {
+    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-grey2;
     }
   }
 
   &.font-color-grey3 {
-    .iq-teasercard__column--content *:not(.iq-button>a>span) {
+    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-grey3;
     }
   }
 
   &.font-color-grey4 {
-    .iq-teasercard__column--content *:not(.iq-button>a>span) {
+    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-grey4;
     }
   }
 
   &.font-color-grey5 {
-    .iq-teasercard__column--content *:not(.iq-button>a>span) {
+    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-grey5;
     }
   }
 
   &.font-color-black {
-    .iq-teasercard__column--content *:not(.iq-button>a>span) {
+    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-black;
     }
   }
 
   &.font-color-white {
-    .iq-teasercard__column--content *:not(.iq-button>a>span) {
+    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-white;
     }
   }
