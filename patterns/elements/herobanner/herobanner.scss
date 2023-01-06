@@ -247,61 +247,61 @@
 
 
   // Overlay: Background Color
-  &[class*="background-color"]{
+  &[class*="bg-color"]{
     padding-top: 0;
     padding-bottom: 0;
   }
-  &.background-color-primary{
+  &.bg-color-primary{
     .iq-herobanner__inner__content::before{
       background: $color-primary;
     }
   }
-  &.background-color-secondary{
+  &.bg-color-secondary{
     .iq-herobanner__inner__content::before{
       background: $color-secondary;
     }
   }
-  &.background-color-tertiary{
+  &.bg-color-tertiary{
     .iq-herobanner__inner__content::before{
       background: $color-tertiary;
     }
   }
-  &.background-color-quaternary{
+  &.bg-color-quaternary{
     .iq-herobanner__inner__content::before{
       background: $color-quaternary;
     }
   }
-  &.background-color-grey1{
+  &.bg-color-grey1{
     .iq-herobanner__inner__content::before{
       background: $color-grey1;
     }
   }
-  &.background-color-grey2{
+  &.bg-color-grey2{
     .iq-herobanner__inner__content::before{
       background: $color-grey2;
     }
   }
-  &.background-color-grey3{
+  &.bg-color-grey3{
     .iq-herobanner__inner__content::before{
       background: $color-grey3;
     }
   }
-  &.background-color-grey4{
+  &.bg-color-grey4{
     .iq-herobanner__inner__content::before{
       background: $color-grey4;
     }
   }
-  &.background-color-grey5{
+  &.bg-color-grey5{
     .iq-herobanner__inner__content::before{
       background: $color-grey5;
     }
   }
-  &.background-color-black{
+  &.bg-color-black{
     .iq-herobanner__inner__content::before{
       background: $color-black;
     }
   }
-  &.background-color-white{
+  &.bg-color-white{
     .iq-herobanner__inner__content::before{
       background: $color-white;
     }

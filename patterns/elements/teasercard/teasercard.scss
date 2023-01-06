@@ -333,7 +333,7 @@
 
   // Overlay: Background color
   // Only for square image
-  &[class*="background-color"] {
+  &[class*="bg-color"] {
     padding-top: 0;
     padding-bottom: 0;
 
@@ -358,7 +358,7 @@
     }
   }
 
-  &.background-color-primary {
+  &.bg-color-primary {
     .iq-teasercard__row.square-image {
       .iq-teasercard__column--image {
         &:before {
@@ -368,7 +368,7 @@
     }
   }
 
-  &.background-color-secondary {
+  &.bg-color-secondary {
     .iq-teasercard__row.square-image {
       .iq-teasercard__column--image {
         &:before {
@@ -378,7 +378,7 @@
     }
   }
 
-  &.background-color-tertiary {
+  &.bg-color-tertiary {
     .iq-teasercard__row.square-image {
       .iq-teasercard__column--image {
         &:before {
@@ -388,7 +388,7 @@
     }
   }
 
-  &.background-color-quaternary {
+  &.bg-color-quaternary {
     .iq-teasercard__row.square-image {
       .iq-teasercard__column--image {
         &:before {
@@ -398,7 +398,7 @@
     }
   }
 
-  &.background-color-grey1 {
+  &.bg-color-grey1 {
     .iq-teasercard__row.square-image {
       .iq-teasercard__column--image {
         &:before {
@@ -408,7 +408,7 @@
     }
   }
 
-  &.background-color-grey2 {
+  &.bg-color-grey2 {
     .iq-teasercard__row.square-image {
       .iq-teasercard__column--image {
         &:before {
@@ -418,7 +418,7 @@
     }
   }
 
-  &.background-color-grey3 {
+  &.bg-color-grey3 {
     .iq-teasercard__row.square-image {
       .iq-teasercard__column--image {
         &:before {
@@ -428,7 +428,7 @@
     }
   }
 
-  &.background-color-grey4 {
+  &.bg-color-grey4 {
     .iq-teasercard__row.square-image {
       .iq-teasercard__column--image {
         &:before {
@@ -438,7 +438,7 @@
     }
   }
 
-  &.background-color-grey5 {
+  &.bg-color-grey5 {
     .iq-teasercard__row.square-image {
       .iq-teasercard__column--image {
         &:before {
@@ -448,7 +448,7 @@
     }
   }
 
-  &.background-color-black {
+  &.bg-color-black {
     .iq-teasercard__row.square-image {
       .iq-teasercard__column--image {
         &:before {
@@ -458,7 +458,7 @@
     }
   }
 
-  &.background-color-white {
+  &.bg-color-white {
     .iq-teasercard__row.square-image {
       .iq-teasercard__column--image {
         &:before {

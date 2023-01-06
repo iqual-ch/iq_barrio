@@ -119,17 +119,17 @@ herobanner:
     overlay_background_color:
       label: "Overlay: Background Color"
       options:
-        background-color-primary: "Primary color"
-        background-color-secondary: "Secondary color"
-        background-color-tertiary: "Tertiary color"
-        background-color-quaternary: "Quaternary color"
-        background-color-grey1: "Grey 1"
-        background-color-grey2: "Grey 2"
-        background-color-grey3: "Grey 3"
-        background-color-grey4: "Grey 4"
-        background-color-grey5: "Grey 5"
-        background-color-black: "Black"
-        background-color-white: "White"
+        bg-color-primary: "Primary color"
+        bg-color-secondary: "Secondary color"
+        bg-color-tertiary: "Tertiary color"
+        bg-color-quaternary: "Quaternary color"
+        bg-color-grey1: "Grey 1"
+        bg-color-grey2: "Grey 2"
+        bg-color-grey3: "Grey 3"
+        bg-color-grey4: "Grey 4"
+        bg-color-grey5: "Grey 5"
+        bg-color-black: "Black"
+        bg-color-white: "White"
     overlay_style:
       label: "Overlay: Style"
       options:
