@@ -18,14 +18,17 @@
 
     // Teaser styles
     &.vertical {
-      display: block;
       height: 100%;
 
       .iq-teasercard {
 
         &__column {
+          flex: none;
           &--image {
             margin-bottom: 30px;
+          }
+          &--content{
+            flex-grow: 1;
           }
         }
       }
@@ -171,7 +174,8 @@
   }
 
   .iq-button {
-    margin-top: 30px;
+    margin-top: auto;
+    padding-top: 30px;
     margin-bottom: 0;
     text-align: left;
 
