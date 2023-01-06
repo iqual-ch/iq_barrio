@@ -60,12 +60,6 @@
       }
 
       .title{
-        line-height: $line-height-h1;
-        font-weight: $font-weight-h1;
-        font-style: $font-style-h1;
-        font-family: $font-family-h1;
-        color: $color-h1;
-        @include fluid-type(320px, 991px, $font-size-min-h1, $font-size-h1);
         margin: 0;
       }
 
