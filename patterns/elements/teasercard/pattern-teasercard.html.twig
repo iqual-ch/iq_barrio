@@ -4,7 +4,7 @@
 
     {# First column - Image column #}
     {% if image_img|render is not empty %}
-      <div class="iq-column col-12 iq-teasercard__column iq-teasercard__column--image {% if teaser_style|render == "image-left" or teaser_style|render == "image-right"%} col-md-6{% endif %}">
+      <div class="col-12 iq-teasercard__column iq-teasercard__column--image {% if teaser_style|render == "image-left" or teaser_style|render == "image-right"%} col-md-6{% endif %}">
 
         <a {% if link_href|render is not empty %} href="{{ link_href }}" {% endif %} title="{{ link_title }}" target="{{ link_target }}" {% if link_target|render == '_blank' %} rel="nofollow noopener" {% endif %}>
 
@@ -35,7 +35,7 @@
     {% endif %}
 
     {# Second column - Content column #}
-    <div class="iq-column col-12 iq-teasercard__column iq-teasercard__column--content{% if image_img|render is not empty and teaser_style|render == "image-left" or teaser_style|render == "image-right" and image_img|render is not empty %} col-md-6{% endif %}">
+    <div class="col-12 iq-teasercard__column iq-teasercard__column--content{% if image_img|render is not empty and teaser_style|render == "image-left" or teaser_style|render == "image-right" and image_img|render is not empty %} col-md-6{% endif %}">
       {# Pretitle #}
       {% if pretitle|render is not empty %}
         <div class="iq-text iq-teasercard__pretitle small">
