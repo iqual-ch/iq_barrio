@@ -14,11 +14,15 @@
         {% endif %}
 
             {# Responsive image #}
+            {% set image_template = image_template|render %}
+            {% if teaser_style|render == "square-image" %}
+            {% set image_template = 'image_standard' %}
+            {% endif %}
             <div class="iq-teasercard__image">
               {% include '@iq_barrio/includes/responsive-image.html.twig' with {
                 'image' : image_img,
-                'template' : 'image_standard',
-                'sizes': {'1200px': '50vw','768px':'50vw','300px':'100vw'},
+                'template' : image_template,
+                'sizes': sizes,
                 'attributes' : {
                   title: image_title,
                   alt: image_alt,

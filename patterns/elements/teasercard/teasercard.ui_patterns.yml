@@ -27,6 +27,13 @@ teasercard:
       type: text
       label: Image alt text
       description: The alt attribute provides alternative information if an image is unavailable.
+    image_template:
+      type: image_style_template
+      label: Template
+      preview: image_standard
+    sizes:
+      type: component_sizes
+      label: Size
 
     pretitle:
       type: text
@@ -166,6 +173,11 @@ teasercard:
         overlay-style-multiply: Multiply colors
         overlay-style-blur: Blur background image
         overlay-style-darken: Darken background image
+
+  responsive_images:
+    template_fields:
+      image_img: image_template
+    component_sizes_field: sizes
 
   classes:
     hidden:
