@@ -40,6 +40,7 @@ herobanner:
     title_font_style:
       type: select
       label: Title font style
+      preview: h1
       options:
         h1: Heading 1
         h2: Heading 2
