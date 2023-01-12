@@ -3,8 +3,8 @@
   <div class="iq-herobanner__background">
     {% include '@iq_barrio/includes/responsive-image.html.twig' with {
       'image' : image_img,
-      'template' : 'image_standard',
-      'sizes': '{"300px":"100vw","768px":"100vw","1200px":"100vw"}',
+      'template' : image_template|render,
+      'sizes': sizes,
         'attributes' : {
           title: image_title,
           alt: image_alt

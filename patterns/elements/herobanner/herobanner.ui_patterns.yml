@@ -18,6 +18,13 @@ herobanner:
       type: text
       label: Background image alt text
       description: Alternate text for an image, if the image cannot be displayed.
+    image_template:
+      type: image_style_template
+      label: Template
+      preview: image_standard
+    sizes:
+      type: component_sizes
+      label: Size
 
     pretitle:
       type: text
@@ -159,6 +166,11 @@ herobanner:
         text-shadow-medium: Medium
         text-shadow-dark: Dark
         text-shadow-darker: Darker
+
+  responsive_images:
+    template_fields:
+      image_img: image_template
+    component_sizes_field: sizes
 
   classes:
     hidden:
