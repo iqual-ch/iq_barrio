@@ -101,7 +101,7 @@
   }
 
   // Overlay: alignment
-  &[class*="align-"]{
+  &[class*="overlay-align-"]{
     &[class*="center"]{
       .iq-herobanner__inner__content{
         text-align: center;
@@ -141,6 +141,76 @@
         margin-top: auto;
       }
     }
+  }
+
+  // Image: alignment
+  &[class*="image-align-"]{
+    &[class*="center-top"]{
+      .iq-herobanner__background{
+        img{
+          object-position: center top;
+        }
+      }
+    }
+    &[class*="left-top"]{
+      .iq-herobanner__background{
+        img{
+          object-position: left top;
+        }
+      }
+    }
+    &[class*="right-top"]{
+      .iq-herobanner__background{
+        img{
+          object-position: right top;
+        }
+      }
+    }
+
+    &[class*="center-middle"]{
+      .iq-herobanner__background{
+        img{
+          object-position: center center;
+        }
+      }
+    }
+    &[class*="left-middle"]{
+      .iq-herobanner__background{
+        img{
+          object-position: left center;
+        }
+      }
+    }
+    &[class*="right-middle"]{
+      .iq-herobanner__background{
+        img{
+          object-position: right center;
+        }
+      }
+    }
+
+    &[class*="center-bottom"]{
+      .iq-herobanner__background{
+        img{
+          object-position: center bottom;
+        }
+      }
+    }
+    &[class*="left-bottom"]{
+      .iq-herobanner__background{
+        img{
+          object-position: left bottom;
+        }
+      }
+    }
+    &[class*="right-bottom"]{
+      .iq-herobanner__background{
+        img{
+          object-position: right bottom;
+        }
+      }
+    }
+
   }
 
   &.full-height-overlay-small{
