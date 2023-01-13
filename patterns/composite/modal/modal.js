@@ -26,6 +26,7 @@
         $modalContent.children().wrapAll('<div class="wrapper" />')
         $modalContent.append($btnModalClose);
         $modalOverlay.append($modalContent);
+        $('body').append($modalOverlay);
 
         $btnModalClose.click(function(){
           $modalOverlay.removeClass('active');
