@@ -12,6 +12,8 @@
           return;
         }
 
+        let modalId = $(this).attr('id');
+
         $(this).find('[data-pd-editmode-toggle-modal]').remove();
         let $self = $(this);
         let action = $(this).data('modal-open-action');
@@ -36,8 +38,19 @@
               $modalOverlay.addClass('active');
             });
             break;
+
           case 'load':
+            let triggeredModals = [];
+            if (sessionStorage.getItem('iq_modal_opened')) {
+              triggeredModals = sessionStorage.getItem('iq_modal_opened').split(';');
+            }
+
+            if (triggeredModals.includes(modalId)) {
+              break;
+            }
             $modalOverlay.addClass('active');
+            triggeredModals.push(modalId);
+            sessionStorage.setItem('iq_modal_opened', triggeredModals.join(';'));
             break;
         }
 
