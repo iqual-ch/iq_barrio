@@ -22,19 +22,21 @@
 
       .iq-teasercard {
 
-        &__column {
+        &__col {
           flex: none;
+
           &--image {
             margin-bottom: 30px;
           }
-          &--content{
+
+          &--content {
             flex-grow: 1;
           }
         }
       }
     }
 
-    &.square-image {
+    &.image-in-background {
       display: grid;
 
       @media screen and (min-width: 768px) {
@@ -42,7 +44,7 @@
       }
 
       .iq-teasercard {
-        &__column {
+        &__col {
           grid-row: 1 / -1;
           grid-column: 1 / -1;
 
@@ -102,7 +104,7 @@
       }
 
       .iq-teasercard {
-        &__column {
+        &__col {
           &--image {
             margin-bottom: 30px;
 
@@ -126,7 +128,7 @@
     }
   }
 
-  &__column {
+  &__col {
     width: 100%;
 
     &--content {
@@ -134,7 +136,8 @@
       display: flex;
       flex-direction: column;
       z-index: 2;
-      a{
+
+      a {
         text-decoration: none;
       }
     }
@@ -341,7 +344,7 @@
     .image-left,
     .image-right {
       .iq-teasercard {
-        &__column {
+        &__col {
           &--content {
             padding: 30px;
 
@@ -359,7 +362,7 @@
   }
 
   &.bg-color-primary {
-    .iq-teasercard__row.square-image {
+    .iq-teasercard__row.image-in-background {
       .iq-teasercard__column--image {
         &:before {
           background-color: $color-primary;
@@ -369,7 +372,7 @@
   }
 
   &.bg-color-secondary {
-    .iq-teasercard__row.square-image {
+    .iq-teasercard__row.image-in-background {
       .iq-teasercard__column--image {
         &:before {
           background-color: $color-secondary;
@@ -379,7 +382,7 @@
   }
 
   &.bg-color-tertiary {
-    .iq-teasercard__row.square-image {
+    .iq-teasercard__row.image-in-background {
       .iq-teasercard__column--image {
         &:before {
           background-color: $color-tertiary;
@@ -389,7 +392,7 @@
   }
 
   &.bg-color-quaternary {
-    .iq-teasercard__row.square-image {
+    .iq-teasercard__row.image-in-background {
       .iq-teasercard__column--image {
         &:before {
           background-color: $color-quaternary;
@@ -399,7 +402,7 @@
   }
 
   &.bg-color-grey1 {
-    .iq-teasercard__row.square-image {
+    .iq-teasercard__row.image-in-background {
       .iq-teasercard__column--image {
         &:before {
           background-color: $color-grey1;
@@ -409,7 +412,7 @@
   }
 
   &.bg-color-grey2 {
-    .iq-teasercard__row.square-image {
+    .iq-teasercard__row.image-in-background {
       .iq-teasercard__column--image {
         &:before {
           background-color: $color-grey2;
@@ -419,7 +422,7 @@
   }
 
   &.bg-color-grey3 {
-    .iq-teasercard__row.square-image {
+    .iq-teasercard__row.image-in-background {
       .iq-teasercard__column--image {
         &:before {
           background-color: $color-grey3;
@@ -429,7 +432,7 @@
   }
 
   &.bg-color-grey4 {
-    .iq-teasercard__row.square-image {
+    .iq-teasercard__row.image-in-background {
       .iq-teasercard__column--image {
         &:before {
           background-color: $color-grey4;
@@ -439,7 +442,7 @@
   }
 
   &.bg-color-grey5 {
-    .iq-teasercard__row.square-image {
+    .iq-teasercard__row.image-in-background {
       .iq-teasercard__column--image {
         &:before {
           background-color: $color-grey5;
@@ -449,7 +452,7 @@
   }
 
   &.bg-color-black {
-    .iq-teasercard__row.square-image {
+    .iq-teasercard__row.image-in-background {
       .iq-teasercard__column--image {
         &:before {
           background-color: $color-black;
@@ -459,7 +462,7 @@
   }
 
   &.bg-color-white {
-    .iq-teasercard__row.square-image {
+    .iq-teasercard__row.image-in-background {
       .iq-teasercard__column--image {
         &:before {
           background-color: $color-white;
@@ -473,7 +476,7 @@
   // &.overlay-style-solid {}
 
   &.overlay-style-transparent {
-    .iq-teasercard__row.square-image {
+    .iq-teasercard__row.image-in-background {
       .iq-teasercard__column--image {
         &:before {
           opacity: 0.75;
@@ -483,7 +486,7 @@
   }
 
   &.overlay-style-multiply {
-    .iq-teasercard__row.square-image {
+    .iq-teasercard__row.image-in-background {
       .iq-teasercard__column--image {
         &:before {
           mix-blend-mode: multiply;
@@ -493,7 +496,7 @@
   }
 
   &.overlay-style-blur {
-    .iq-teasercard__row.square-image {
+    .iq-teasercard__row.image-in-background {
       .iq-teasercard__column--image {
         &:before {
           mix-blend-mode: multiply;
@@ -504,7 +507,7 @@
   }
 
   &.overlay-style-darken {
-    .iq-teasercard__row.square-image {
+    .iq-teasercard__row.image-in-background {
       .iq-teasercard__column--image {
         &:before {
           mix-blend-mode: multiply;

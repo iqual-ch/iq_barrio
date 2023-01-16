@@ -2,15 +2,15 @@
 
   $(document).ready(function () {
 
-    // Set Teaser card margin-bottom if the Teaser Style is not Square image
-    $('.iq-teasercard .iq-teasercard__row:not(.square-image)')
+    // Set Teaser card margin-bottom if the Teaser Style is not Image in background
+    $('.iq-teasercard:not([data-gjs-type]) .iq-teasercard__row:not(.image-in-background)')
       .closest('.iq-column')
       .css('margin-bottom', 50);
 
-    // This code finds all Square Image Teaser Cards and sets the margin-bottom
+    // This code finds all Image in background Teaser Cards and sets the margin-bottom
     // if they are NOT in a row that has nogutter properties selected.
-    // Find Teasercards with the Square Image teaser style
-    $('.iq-teasercard .square-image')
+    // Find Teasercards with the Image in background teaser style
+    $('.iq-teasercard:not([data-gjs-type]) .image-in-background')
 
       // Find the closest column traversing up through its ancestors
       .closest('.iq-column')

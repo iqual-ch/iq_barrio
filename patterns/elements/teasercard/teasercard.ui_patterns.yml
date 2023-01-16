@@ -13,7 +13,7 @@ teasercard:
       preview: vertical
       options:
         vertical: Vertical
-        square-image: Square image
+        image-in-background: Image in background
         image-left: Image left
         image-right: Image right
 
