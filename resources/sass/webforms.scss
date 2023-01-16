@@ -171,15 +171,28 @@
         color: $color-grey1;
       }
 
+      .progress-marker{
+        &::before{
+          padding-bottom: 0;
+          line-height: 24px;
+          text-align: center;
+          font-size: 14px;
+        }
+      }
+
       &.is-active {
         .progress-marker {
-          background-color: $color-primary;
+          &::before{
+            background-color: $color-primary;
+          }
         }
       }
 
       &.is-complete:hover {
         .progress-marker {
-          background-color: $color-primary;
+          &::before{
+            background-color: $color-primary;
+          }
         }
       }
 
