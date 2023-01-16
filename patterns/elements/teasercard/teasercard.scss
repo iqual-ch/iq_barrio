@@ -202,92 +202,92 @@
 
   // Font Color
   &.font-color-primary {
-    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
+    .iq-teasercard__col--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-primary;
     }
   }
 
   &.font-color-secondary {
-    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
+    .iq-teasercard__col--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-secondary;
     }
   }
 
   &.font-color-tertiary {
-    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
+    .iq-teasercard__col--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-tertiary;
     }
   }
 
   &.font-color-quaternary {
-    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
+    .iq-teasercard__col--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-quaternary;
     }
   }
 
   &.font-color-grey1 {
-    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
+    .iq-teasercard__col--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-grey1;
     }
   }
 
   &.font-color-grey2 {
-    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
+    .iq-teasercard__col--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-grey2;
     }
   }
 
   &.font-color-grey3 {
-    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
+    .iq-teasercard__col--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-grey3;
     }
   }
 
   &.font-color-grey4 {
-    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
+    .iq-teasercard__col--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-grey4;
     }
   }
 
   &.font-color-grey5 {
-    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
+    .iq-teasercard__col--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-grey5;
     }
   }
 
   &.font-color-black {
-    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
+    .iq-teasercard__col--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-black;
     }
   }
 
   &.font-color-white {
-    .iq-teasercard__column--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
+    .iq-teasercard__col--content *:not(.iq-button>a>span, .iq-button>a>span>i) {
       color: $color-white;
     }
   }
 
   // Text shadow
   &.text-shadow-light {
-    .iq-teasercard__column--content *:not(.iq-button>a>span) {
+    .iq-teasercard__col--content *:not(.iq-button>a>span) {
       text-shadow: 0 0 10px rgba($color-black, 30%);
     }
   }
 
   &.text-shadow-medium {
-    .iq-teasercard__column--content *:not(.iq-button>a>span) {
+    .iq-teasercard__col--content *:not(.iq-button>a>span) {
       text-shadow: 0 0 15px rgba($color-black, 50%);
     }
   }
 
   &.text-shadow-dark {
-    .iq-teasercard__column--content *:not(.iq-button>a>span) {
+    .iq-teasercard__col--content *:not(.iq-button>a>span) {
       text-shadow: 0 0 20px rgba($color-black, 70%);
     }
   }
 
   &.text-shadow-darker {
-    .iq-teasercard__column--content *:not(.iq-button>a>span) {
+    .iq-teasercard__col--content *:not(.iq-button>a>span) {
       text-shadow: 0 0 30px rgba($color-black, 90%);
     }
   }
@@ -295,7 +295,7 @@
   // Text alignment
   &[class*="align-"] {
     &[class*="center-"] {
-      .iq-teasercard__column--content {
+      .iq-teasercard__col--content {
         text-align: center;
         align-items: center;
       }
@@ -307,7 +307,7 @@
 
     &[class*="right-"] {
 
-      .iq-teasercard__column--content {
+      .iq-teasercard__col--content {
         text-align: right;
         align-items: flex-end;
       }
@@ -318,7 +318,7 @@
     }
 
     &[class*="-middle"] {
-      .iq-teasercard__column--content {
+      .iq-teasercard__col--content {
         justify-content: center;
       }
 
@@ -328,7 +328,7 @@
     }
 
     &[class*="-bottom"] {
-      .iq-teasercard__column--content {
+      .iq-teasercard__col--content {
         justify-content: flex-end;
       }
     }
@@ -363,7 +363,7 @@
 
   &.bg-color-primary {
     .iq-teasercard__row.image-in-background {
-      .iq-teasercard__column--image {
+      .iq-teasercard__col--image {
         &:before {
           background-color: $color-primary;
         }
@@ -373,7 +373,7 @@
 
   &.bg-color-secondary {
     .iq-teasercard__row.image-in-background {
-      .iq-teasercard__column--image {
+      .iq-teasercard__col--image {
         &:before {
           background-color: $color-secondary;
         }
@@ -383,7 +383,7 @@
 
   &.bg-color-tertiary {
     .iq-teasercard__row.image-in-background {
-      .iq-teasercard__column--image {
+      .iq-teasercard__col--image {
         &:before {
           background-color: $color-tertiary;
         }
@@ -393,7 +393,7 @@
 
   &.bg-color-quaternary {
     .iq-teasercard__row.image-in-background {
-      .iq-teasercard__column--image {
+      .iq-teasercard__col--image {
         &:before {
           background-color: $color-quaternary;
         }
@@ -403,7 +403,7 @@
 
   &.bg-color-grey1 {
     .iq-teasercard__row.image-in-background {
-      .iq-teasercard__column--image {
+      .iq-teasercard__col--image {
         &:before {
           background-color: $color-grey1;
         }
@@ -413,7 +413,7 @@
 
   &.bg-color-grey2 {
     .iq-teasercard__row.image-in-background {
-      .iq-teasercard__column--image {
+      .iq-teasercard__col--image {
         &:before {
           background-color: $color-grey2;
         }
@@ -423,7 +423,7 @@
 
   &.bg-color-grey3 {
     .iq-teasercard__row.image-in-background {
-      .iq-teasercard__column--image {
+      .iq-teasercard__col--image {
         &:before {
           background-color: $color-grey3;
         }
@@ -433,7 +433,7 @@
 
   &.bg-color-grey4 {
     .iq-teasercard__row.image-in-background {
-      .iq-teasercard__column--image {
+      .iq-teasercard__col--image {
         &:before {
           background-color: $color-grey4;
         }
@@ -443,7 +443,7 @@
 
   &.bg-color-grey5 {
     .iq-teasercard__row.image-in-background {
-      .iq-teasercard__column--image {
+      .iq-teasercard__col--image {
         &:before {
           background-color: $color-grey5;
         }
@@ -453,7 +453,7 @@
 
   &.bg-color-black {
     .iq-teasercard__row.image-in-background {
-      .iq-teasercard__column--image {
+      .iq-teasercard__col--image {
         &:before {
           background-color: $color-black;
         }
@@ -463,7 +463,7 @@
 
   &.bg-color-white {
     .iq-teasercard__row.image-in-background {
-      .iq-teasercard__column--image {
+      .iq-teasercard__col--image {
         &:before {
           background-color: $color-white;
         }
@@ -477,7 +477,7 @@
 
   &.overlay-style-transparent {
     .iq-teasercard__row.image-in-background {
-      .iq-teasercard__column--image {
+      .iq-teasercard__col--image {
         &:before {
           opacity: 0.75;
         }
@@ -487,7 +487,7 @@
 
   &.overlay-style-multiply {
     .iq-teasercard__row.image-in-background {
-      .iq-teasercard__column--image {
+      .iq-teasercard__col--image {
         &:before {
           mix-blend-mode: multiply;
         }
@@ -497,7 +497,7 @@
 
   &.overlay-style-blur {
     .iq-teasercard__row.image-in-background {
-      .iq-teasercard__column--image {
+      .iq-teasercard__col--image {
         &:before {
           mix-blend-mode: multiply;
           backdrop-filter: blur(10px);
@@ -508,7 +508,7 @@
 
   &.overlay-style-darken {
     .iq-teasercard__row.image-in-background {
-      .iq-teasercard__column--image {
+      .iq-teasercard__col--image {
         &:before {
           mix-blend-mode: multiply;
           backdrop-filter: brightness(60%);
@@ -523,7 +523,7 @@
 
   // On mobile: Force left text align
   &.mobile-align-left {
-    .iq-teasercard__column--content {
+    .iq-teasercard__col--content {
       @media screen and (max-width: 767px) {
         text-align: left;
         align-items: flex-start;
