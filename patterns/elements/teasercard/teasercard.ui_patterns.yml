@@ -88,6 +88,14 @@ teasercard:
     button_text:
       type: text
       label: Button text
+    button_alignment:
+      type: select
+      label: Button alignment
+      preview: left
+      options:
+        left: Left
+        center: Center
+        right: Right
     button_style:
       type: select
       label: Button style

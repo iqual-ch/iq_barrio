@@ -65,12 +65,13 @@
             }
 
             a {
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              z-index: 3;
+              display: none;
+              // position: absolute;
+              // top: 0;
+              // left: 0;
+              // right: 0;
+              // bottom: 0;
+              // z-index: 3;
             }
 
             img {
@@ -91,7 +92,9 @@
           }
 
           .iq-button {
-            display: none;
+            position: relative;
+            margin: 0;
+            z-index: 2;
           }
         }
       }
@@ -180,7 +183,6 @@
     margin-top: auto;
     padding-top: 30px;
     margin-bottom: 0;
-    text-align: left;
 
     a {
       margin: 0;

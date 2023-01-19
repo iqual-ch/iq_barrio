@@ -78,7 +78,7 @@
 
       {# Button #}
       {% if button_text|render is not empty %}
-        <div class="iq-button {{ button_style }} {{ button_color_scheme }}" data-icon-position="{{ button_icon_position }}">
+        <div class="iq-button {{ button_style }} {{ button_color_scheme }}" data-icon-position="{{ button_icon_position }}" data-align="{{ button_alignment }}">
 
           <a {% if link_href|render is not empty %} href="{{ link_href }}" {% endif %} title="{{ link_title }}" target="{{ link_target }}" {% if link_target|render == '_blank' %} rel="nofollow noopener" {% endif %}>
 
