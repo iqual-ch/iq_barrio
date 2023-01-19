@@ -31,6 +31,11 @@
 
           &--content {
             flex-grow: 1;
+
+            .iq-button {
+              margin-top: auto;
+              margin-bottom: 0;
+            }
           }
         }
       }
@@ -181,20 +186,9 @@
   }
 
   .iq-button {
-    margin-top: auto;
-    padding-top: 30px;
-    margin-bottom: 0;
-
     a {
+      padding-top: 30px;
       margin: 0;
-    }
-
-    &.inverted,
-    &.alternate,
-    &.inverted.alternate {
-      a {
-        margin: 0;
-      }
     }
   }
 }
