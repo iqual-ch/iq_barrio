@@ -301,10 +301,6 @@
         text-align: center;
         align-items: center;
       }
-
-      .iq-button {
-        text-align: center;
-      }
     }
 
     &[class*="right-"] {
@@ -313,19 +309,11 @@
         text-align: right;
         align-items: flex-end;
       }
-
-      .iq-button {
-        text-align: right;
-      }
     }
 
     &[class*="-middle"] {
       .iq-teasercard__col--content {
         justify-content: center;
-      }
-
-      .iq-button {
-        text-align: center;
       }
     }
 
