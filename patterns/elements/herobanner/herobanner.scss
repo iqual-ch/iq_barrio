@@ -99,6 +99,17 @@
       height: var(--fullscreen-height);
     }
   }
+  &.height-image{
+    .iq-herobanner__background{
+      position: relative;
+    }
+    .iq-herobanner__inner{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
 
   // Overlay: alignment
   &.overlay-align-center-top{

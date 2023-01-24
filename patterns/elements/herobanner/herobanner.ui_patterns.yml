@@ -109,6 +109,7 @@ herobanner:
       options:
         height-100vh: "Full height"
         height-50vh: "50% Viewport"
+        height-image: "Image height"
 
     overlay_alignment:
       label: "Overlay alignment"
