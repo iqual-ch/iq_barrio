@@ -63,3 +63,8 @@ jquery.ui:
       vendor/jquery.ui/themes/base/theme.css: {}
   dependencies:
     - core/jquery
+
+scrolloffset:
+   js:
+    vendor/jquery.visible.min.js : {minified: true}
+    resources/js/scrolloffset.js: {}

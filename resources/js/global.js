@@ -4,7 +4,7 @@
  *
  */
 
-(function ($, Drupal) {
+ (function ($, Drupal) {
   $('.nav-mobile, .nav-sidebar, .nav-main').find('[data-toggle="dropdown"]').click(function(e){
     location.href = $(this).attr('href');
   });

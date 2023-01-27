@@ -50,3 +50,4 @@ collapsible:
         dependencies:
           - core/drupal
           - iq_barrio/jquery.ui
+          - iq_barrio/scrolloffset
