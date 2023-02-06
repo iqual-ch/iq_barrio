@@ -99,147 +99,227 @@
       height: var(--fullscreen-height);
     }
   }
+  &.height-image{
+    .iq-herobanner__background{
+      position: relative;
+    }
+    .iq-herobanner__inner{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
 
   // Overlay: alignment
-  &[class*="overlay-align-"]{
-    &[class*="center"]{
-      .iq-herobanner__inner__content{
+  &.overlay-align-center-top{
+    .iq-herobanner__inner__content{
+      text-align: center;
+      .content{
+        @media only screen and (min-width: 768px) {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      .iq-button{
         text-align: center;
-        .content{
-          @media only screen and (min-width: 768px) {
-            margin-left: auto;
-            margin-right: auto;
-          }
-        }
-        .iq-button{
-          text-align: center;
-        }
       }
     }
-    &[class*="right"]{
-      .iq-herobanner__inner__content{
-        text-align: right;
-        .content{
-          @media only screen and (min-width: 768px) {
-            margin-left: auto;
-          }
-        }
-        .iq-button{
-          text-align: right;
-        }
-      }
-    }
+  }
+  &.overlay-align-left-top{
 
-    &[class*="middle"]{
-      .iq-herobanner__inner__content{
-        margin-top: auto;
-        margin-bottom: auto;
+  }
+  &.overlay-align-right-top{
+    .iq-herobanner__inner__content{
+      text-align: right;
+      .content{
+        @media only screen and (min-width: 768px) {
+          margin-left: auto;
+        }
+      }
+      .iq-button{
+        text-align: right;
       }
     }
-    &[class*="bottom"]{
-      .iq-herobanner__inner__content{
-        margin-top: auto;
+  }
+  &.overlay-align-center-middle{
+    .iq-herobanner__inner__content{
+      text-align: center;
+      .content{
+        @media only screen and (min-width: 768px) {
+          margin-left: auto;
+          margin-right: auto;
+        }
       }
+      .iq-button{
+        text-align: center;
+      }
+    }
+    .iq-herobanner__inner__content{
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+  &.overlay-align-left-middle{
+    .iq-herobanner__inner__content{
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+  &.overlay-align-right-middle{
+    .iq-herobanner__inner__content{
+      text-align: right;
+      .content{
+        @media only screen and (min-width: 768px) {
+          margin-left: auto;
+        }
+      }
+      .iq-button{
+        text-align: right;
+      }
+    }
+    .iq-herobanner__inner__content{
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+  &.overlay-align-center-bottom{
+    .iq-herobanner__inner__content{
+      text-align: center;
+      .content{
+        @media only screen and (min-width: 768px) {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      .iq-button{
+        text-align: center;
+      }
+    }
+    .iq-herobanner__inner__content{
+      margin-top: auto;
+    }
+  }
+  &.overlay-align-left-bottom{
+    .iq-herobanner__inner__content{
+      margin-top: auto;
+    }
+  }
+  &.overlay-align-right-bottom{
+    .iq-herobanner__inner__content{
+      text-align: right;
+      .content{
+        @media only screen and (min-width: 768px) {
+          margin-left: auto;
+        }
+      }
+      .iq-button{
+        text-align: right;
+      }
+    }
+    .iq-herobanner__inner__content{
+      margin-top: auto;
     }
   }
 
   // Image: alignment
-  &[class*="image-align-"]{
-    &[class*="center-top"]{
-      .iq-herobanner__background{
-        img{
-          object-position: center top;
-        }
+  &.image-align-center-top{
+    .iq-herobanner__background{
+      img{
+        object-position: center top;
       }
     }
-    &[class*="left-top"]{
-      .iq-herobanner__background{
-        img{
-          object-position: left top;
-        }
+  }
+  &.image-align-left-top{
+    .iq-herobanner__background{
+      img{
+        object-position: left top;
       }
     }
-    &[class*="right-top"]{
-      .iq-herobanner__background{
-        img{
-          object-position: right top;
-        }
+  }
+  &.image-align-right-top{
+    .iq-herobanner__background{
+      img{
+        object-position: right top;
       }
     }
-
-    &[class*="center-middle"]{
-      .iq-herobanner__background{
-        img{
-          object-position: center center;
-        }
-      }
-    }
-    &[class*="left-middle"]{
-      .iq-herobanner__background{
-        img{
-          object-position: left center;
-        }
-      }
-    }
-    &[class*="right-middle"]{
-      .iq-herobanner__background{
-        img{
-          object-position: right center;
-        }
-      }
-    }
-
-    &[class*="center-bottom"]{
-      .iq-herobanner__background{
-        img{
-          object-position: center bottom;
-        }
-      }
-    }
-    &[class*="left-bottom"]{
-      .iq-herobanner__background{
-        img{
-          object-position: left bottom;
-        }
-      }
-    }
-    &[class*="right-bottom"]{
-      .iq-herobanner__background{
-        img{
-          object-position: right bottom;
-        }
-      }
-    }
-
   }
 
+  &.image-align-center-middle{
+    .iq-herobanner__background{
+      img{
+        object-position: center center;
+      }
+    }
+  }
+  &.image-align-left-middle{
+    .iq-herobanner__background{
+      img{
+        object-position: left center;
+      }
+    }
+  }
+  &.image-align-right-middle{
+    .iq-herobanner__background{
+      img{
+        object-position: right center;
+      }
+    }
+  }
+
+  &.image-align-center-bottom{
+    .iq-herobanner__background{
+      img{
+        object-position: center bottom;
+      }
+    }
+  }
+  &.image-align-left-bottom{
+    .iq-herobanner__background{
+      img{
+        object-position: left bottom;
+      }
+    }
+  }
+  &.image-align-right-bottom{
+    .iq-herobanner__background{
+      img{
+        object-position: right bottom;
+      }
+    }
+  }
+
+  // Overlay full height
   &.full-height-overlay-small{
     @media only screen and (max-width: 767px) {
       .iq-herobanner__inner__content{
         height: 100%;
         flex-grow: 1;
       }
-      &[class*="align-"]{
-        &[class*="middle"]{
-          .iq-herobanner__inner__content{
-            > .col{
-              display: flex;
-              flex-direction: column;
-              > .row{
-                margin-top: auto;
-                margin-bottom: auto;
-              }
+      &.overlay-align-center-middle,
+      &.overlay-align-left-middle,
+      &.overlay-align-right-middle{
+        .iq-herobanner__inner__content{
+          > .col{
+            display: flex;
+            flex-direction: column;
+            > .row{
+              margin-top: auto;
+              margin-bottom: auto;
             }
           }
         }
-        &[class*="bottom"]{
-          .iq-herobanner__inner__content{
-            > .col{
-              display: flex;
-              flex-direction: column;
-              > .row{
-                margin-top: auto;
-              }
+      }
+
+      &.overlay-align-center-bottom,
+      &.overlay-align-left-bottom,
+      &.overlay-align-right-bottom{
+        .iq-herobanner__inner__content{
+          > .col{
+            display: flex;
+            flex-direction: column;
+            > .row{
+              margin-top: auto;
             }
           }
         }
@@ -253,27 +333,31 @@
         height: 100%;
         flex-grow: 1;
       }
-      &[class*="align-"]{
-        &[class*="middle"]{
-          .iq-herobanner__inner__content{
-            > .col{
-              display: flex;
-              flex-direction: column;
-              > .row{
-                margin-top: auto;
-                margin-bottom: auto;
-              }
+
+      &.overlay-align-center-middle,
+      &.overlay-align-left-middle,
+      &.overlay-align-right-middle{
+        .iq-herobanner__inner__content{
+          > .col{
+            display: flex;
+            flex-direction: column;
+            > .row{
+              margin-top: auto;
+              margin-bottom: auto;
             }
           }
         }
-        &[class*="bottom"]{
-          .iq-herobanner__inner__content{
-            > .col{
-              display: flex;
-              flex-direction: column;
-              > .row{
-                margin-top: auto;
-              }
+      }
+
+      &.overlay-align-center-bottom,
+      &.overlay-align-left-bottom,
+      &.overlay-align-right-bottom{
+        .iq-herobanner__inner__content{
+          > .col{
+            display: flex;
+            flex-direction: column;
+            > .row{
+              margin-top: auto;
             }
           }
         }
@@ -287,34 +371,37 @@
         height: 100%;
         flex-grow: 1;
       }
-      &[class*="align-"]{
-        &[class*="middle"]{
-          .iq-herobanner__inner__content{
-            > .col{
-              display: flex;
-              flex-direction: column;
-              > .row{
-                margin-top: auto;
-                margin-bottom: auto;
-              }
+
+      &.overlay-align-center-middle,
+      &.overlay-align-left-middle,
+      &.overlay-align-right-middle{
+        .iq-herobanner__inner__content{
+          > .col{
+            display: flex;
+            flex-direction: column;
+            > .row{
+              margin-top: auto;
+              margin-bottom: auto;
             }
           }
         }
-        &[class*="bottom"]{
-          .iq-herobanner__inner__content{
-            > .col{
-              display: flex;
-              flex-direction: column;
-              > .row{
-                margin-top: auto;
-              }
+      }
+
+      &.overlay-align-center-bottom,
+      &.overlay-align-left-bottom,
+      &.overlay-align-right-bottom{
+        .iq-herobanner__inner__content{
+          > .col{
+            display: flex;
+            flex-direction: column;
+            > .row{
+              margin-top: auto;
             }
           }
         }
       }
     }
   }
-
 
   // Overlay: Background Color
   &[class*="bg-color"]{
