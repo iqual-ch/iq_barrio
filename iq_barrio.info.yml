@@ -16,6 +16,10 @@ libraries:
   - iq_barrio/global-styling
   - iq_barrio/admin-style
 
+libraries-extend:
+  webform/webform.form:
+    - bootstrap_barrio/form
+
 ckeditor_stylesheets:
   - resources/css/ckeditor.css
 
