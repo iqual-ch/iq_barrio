@@ -15,12 +15,12 @@ modal:
     open_action:
       type: select
       label: Action to open modal
-      description: How the modal should be opened. Use «No predefind action» to create a custom action with JS.
+      description: How the modal should be opened. Use «No predefined action» to create a custom action with JS.
       preview: standard
       options:
         button: On Button Click
         load: On Page load
-        custom: No predefind action (custom implementation)
+        custom: No predefined action (custom implementation)
 
     close_icon:
       type: fontawesome
