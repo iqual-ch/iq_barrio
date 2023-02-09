@@ -15,15 +15,17 @@ modal:
     open_action:
       type: select
       label: Action to open modal
+      description: How the modal should be opened. Use «No predefind action» to create a custom action with JS.
       preview: standard
       options:
         button: On Button Click
         load: On Page load
-        cutsom: Custom
+        custom: No predefind action (custom implementation)
 
     close_icon:
       type: fontawesome
       label: "Close button: Icon"
+      description: By default, an X is used as the button. Selecting an icon will override this default.
     close_text:
       type: text
       label: "Close button: tooltip"
