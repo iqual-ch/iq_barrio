@@ -15,6 +15,10 @@
         let modalId = $(this).attr('id');
 
         $(this).find('[data-pd-editmode-toggle-modal]').remove();
+
+        let $btnModalOpen = $(this).find('[data-open-modal]');
+        $btnModalOpen.insertAfter(this);
+
         let $self = $(this);
         let action = $(this).data('modal-open-action');
         let removeButton = true;
@@ -26,16 +30,18 @@
         $modalContent.children().wrapAll('<div class="wrapper" />')
         $modalContent.append($btnModalClose);
         $modalOverlay.append($modalContent);
-        $('body').append($modalOverlay);
+        $(this).append($modalOverlay);
+
+        $('body').append(this);
 
         $btnModalClose.click(function(){
           $modalOverlay.removeClass('active');
-        })
+        });
 
         switch (action) {
           case 'button':
             removeButton = false;
-            $self.find('[data-open-modal]').click(function(){
+            $btnModalOpen.click(function(){
               $modalOverlay.addClass('active');
             });
             break;
