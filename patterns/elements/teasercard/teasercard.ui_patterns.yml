@@ -157,6 +157,19 @@ teasercard:
         align-center-bottom: Bottom Center
         align-left-bottom: Bottom Left
         align-right-bottom: Bottom Right
+    
+    image_alignment:
+      label: "Image Alignment"
+      options:
+        image-align-center-top: "Center Top"
+        image-align-left-top: "Left Top"
+        image-align-right-top: "Right Top"
+        image-align-center-middle: "Center Middle"
+        image-align-left-middle: "Left Middle"
+        image-align-right-middle: "Right Middle"
+        image-align-center-bottom: "Center Bottom"
+        image-align-left-bottom: "Left Bottom"
+        image-align-right-bottom: "Right Bottom"
 
     overlay_background_color:
       label: "Overlay: Background Color (Only for Square image)"

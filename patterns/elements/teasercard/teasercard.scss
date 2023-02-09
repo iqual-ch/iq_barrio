@@ -187,7 +187,8 @@
 
   .iq-button {
     padding-top: 30px;
-    
+    margin-bottom: 0;
+
     a {
       margin: 0;
     }
@@ -316,6 +317,73 @@
     &[class*="-bottom"] {
       .iq-teasercard__col--content {
         justify-content: flex-end;
+      }
+    }
+  }
+
+  // Image: alignment
+  &.image-align-center-top {
+    .iq-teasercard__col--image {
+      img {
+        object-position: center top;
+      }
+    }
+  }
+  &.image-align-left-top {
+    .iq-teasercard__col--image {
+      img {
+        object-position: left top;
+      }
+    }
+  }
+  &.image-align-right-top {
+    .iq-teasercard__col--image {
+      img {
+        object-position: right top;
+      }
+    }
+  }
+
+  &.image-align-center-middle {
+    .iq-teasercard__col--image {
+      img {
+        object-position: center center;
+      }
+    }
+  }
+  &.image-align-left-middle {
+    .iq-teasercard__col--image {
+      img {
+        object-position: left center;
+      }
+    }
+  }
+  &.image-align-right-middle {
+    .iq-teasercard__col--image {
+      img {
+        object-position: right center;
+      }
+    }
+  }
+
+  &.image-align-center-bottom {
+    .iq-teasercard__col--image {
+      img {
+        object-position: center bottom;
+      }
+    }
+  }
+  &.image-align-left-bottom {
+    .iq-teasercard__col--image {
+      img {
+        object-position: left bottom;
+      }
+    }
+  }
+  &.image-align-right-bottom {
+    .iq-teasercard__col--image {
+      img {
+        object-position: right bottom;
       }
     }
   }
