@@ -38,6 +38,13 @@
           $modalOverlay.removeClass('active');
         });
 
+        $(this).on('start-animation', function (ev, data) {
+          $(ev.currentTarget).removeClass(data.effects);
+          $modalOverlay.addClass('active');
+          $modalOverlay.addClass(data.effects);
+          console.log(data.effects);
+        });
+
         switch (action) {
           case 'button':
             removeButton = false;
