@@ -49,6 +49,7 @@
     border-radius: $border-radius-buttons;
     background: $background-color-buttons;
     transition: $transition-default;
+    cursor: pointer;
     &:hover,
     &:focus  {
       background-color: $background-color-hover-buttons;

@@ -1,0 +1,20 @@
+<div class="iq-modal" data-modal-open-action="{{ open_action }}" data-initialized="false">
+  {% set random_id = random(0, 10000000) %}
+  <input type="checkbox" data-pd-editmode-toggle-modal id="modal-{{ random_id }}" />
+  <label for="modal-{{ random_id }}" data-pd-editmode-toggle-modal></label>
+  <div class="iq-modal__overlay" data-modal-overlay></div>
+  <div class="iq-modal__overlay__content col iq-column" data-modal-content>{{column0}}</div>
+  <button class="iq-modal__overlay__close" title="{{ close_text }}" data-modal-close><i class="{{ close_icon }}"></i></button>
+
+  {% if open_action|render == "button" %}
+  <div class="iq-button {{button_style}} {{button_color_scheme}}" data-open-modal data-align="{{ button_alignment }}"  data-icon-position="{{ button_icon_position }}">
+    <a title="{{ button_title }}" target="{{ button_target }}" {% if button_target|render == '_blank' %}rel="noopener"{% endif %}>
+      <span>
+        {% if button_icon_position|render == 'left' and button_icon|render is not empty %}<i class="{{ button_icon }}"></i>{% endif %}
+        {{ button_text }}
+        {% if button_icon_position|render == 'right' and button_icon|render is not empty %}<i class="{{ button_icon }}"></i>{% endif %}
+      </span>
+    </a>
+  </div>
+  {% endif %}
+</div>

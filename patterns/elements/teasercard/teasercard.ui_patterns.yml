@@ -1,0 +1,224 @@
+teasercard:
+  label: Teaser Card
+  description: A Teaser Card component with multiple styling options.
+  category: Element
+  icon: fas fa-image
+  pagedesigner: 1
+  type: component
+  styles: 1
+  fields:
+    teaser_style:
+      type: select
+      label: "Teaser style"
+      preview: vertical
+      options:
+        vertical: Vertical
+        image-in-background: Image in background
+        image-left: Image left
+        image-right: Image right
+
+    image_img:
+      type: image
+      label: Image
+    image_title:
+      type: text
+      label: "Image: Title"
+    image_alt:
+      type: text
+      label: "Image: Alt text"
+      description: The alt attribute provides alternative information if an image is unavailable.
+    image_template:
+      type: image_style_template
+      label: Template
+      preview: image_standard
+    sizes:
+      type: component_sizes
+      label: Size
+
+    pretitle:
+      type: text
+      label: Pretitle
+    title:
+      type: textarea
+      label: Title
+    title_weight:
+      type: select
+      label: "Title: Weight"
+      preview: span
+      options:
+        h1: Heading 1 (&lt;h1&gt;)
+        h2: Heading 2 (&lt;h2&gt;)
+        h3: Heading 3 (&lt;h3&gt;)
+        h4: Heading 4 (&lt;h4&gt;)
+        h5: Heading 5 (&lt;h5&gt;)
+        h6: Heading 6 (&lt;h6&gt;)
+        span: None (&lt;span&gt;)
+    title_font_style:
+      type: select
+      label: "Title: Font style"
+      preview: h3
+      options:
+        h1: Heading 1
+        h2: Heading 2
+        h3: Heading 3
+        h4: Heading 4
+        h5: Heading 5
+        h6: Heading 6
+        deco-font-1: Deco font 1
+        deco-font-2: Deco font 2
+        deco-font-3: Deco font 3
+    subtitle:
+      type: text
+      label: Subtitle
+    content:
+      type: html
+      label: Content
+
+    link_href:
+      type: link
+      label: Link
+    link_title:
+      type: text
+      label: "Link: Title"
+    link_target:
+      type: target
+      label: Open link in new window
+      description: Should the link be opened in the same window or in a new one?
+
+    button_text:
+      type: text
+      label: "Button: Text"
+    button_alignment:
+      type: select
+      label: "Button: Alignment"
+      preview: left
+      options:
+        left: Left
+        center: Center
+        right: Right
+    button_icon:
+      type: fontawesome
+      label: "Button: Icon"
+    button_icon_position:
+      type: select
+      label: "Button: Icon position"
+      preview: right
+      options:
+        left: Left
+        right: Right
+    button_style:
+      type: select
+      label: "Button: Style"
+      preview: standard
+      options:
+        standard: Standard
+        alternate: Alternate
+    button_color_scheme:
+      type: select
+      label: "Button: Color scheme"
+      preview: standard
+      options:
+        standard: Standard
+        inverted: Inverted
+
+  styling_options:
+    font_color:
+      label: Font color
+      options:
+        font-color-primary: Primary color
+        font-color-secondary: Secondary color
+        font-color-tertiary: Tertiary color
+        font-color-quaternary: Quaternary color
+        font-color-grey1: Grey 1
+        font-color-grey2: Grey 2
+        font-color-grey3: Grey 3
+        font-color-grey4: Grey 4
+        font-color-grey5: Grey 5
+        font-color-black: Black
+        font-color-white: White
+
+    text-shadow:
+      label: "Text shadow"
+      options:
+        text-shadow-light: Light
+        text-shadow-medium: Medium
+        text-shadow-dark: Dark
+        text-shadow-darker: Darker
+
+    text_alignment:
+      label: Text alignment
+      options:
+        align-center-top: Top Center
+        align-left-top: Top Left
+        align-right-top: Top Right
+        align-center-middle: Middle Center
+        align-left-middle: Middle Left
+        align-right-middle: Middle Right
+        align-center-bottom: Bottom Center
+        align-left-bottom: Bottom Left
+        align-right-bottom: Bottom Right
+
+    image_alignment:
+      label: "Image Alignment"
+      options:
+        image-align-center-top: "Center Top"
+        image-align-left-top: "Left Top"
+        image-align-right-top: "Right Top"
+        image-align-center-middle: "Center Middle"
+        image-align-left-middle: "Left Middle"
+        image-align-right-middle: "Right Middle"
+        image-align-center-bottom: "Center Bottom"
+        image-align-left-bottom: "Left Bottom"
+        image-align-right-bottom: "Right Bottom"
+
+    overlay_background_color:
+      label: "Overlay: Background Color (Only for Style «Image in background»)"
+      options:
+        bg-color-primary: Primary color
+        bg-color-secondary: Secondary color
+        bg-color-tertiary: Tertiary color
+        bg-color-quaternary: Quaternary color
+        bg-color-grey1: Grey 1
+        bg-color-grey2: Grey 2
+        bg-color-grey3: Grey 3
+        bg-color-grey4: Grey 4
+        bg-color-grey5: Grey 5
+        bg-color-black: Black
+        bg-color-white: White
+
+    overlay_style:
+      label: "Overlay: Style (Only for Style «Image in background»)"
+      options:
+        overlay-style-solid: Solid color
+        overlay-style-transparent: Transparent color
+        overlay-style-multiply: Multiply colors
+        overlay-style-blur: Blur background image
+        overlay-style-darken: Darken background image
+
+  responsive_images:
+    template_fields:
+      image_img: image_template
+    component_sizes_field: sizes
+
+  classes:
+    hidden:
+      label: Hide component
+      description: Hide component
+      responsive: true
+    hidden-print:
+      label: Hide on print
+      description: Hide on print
+    mobile-align-left:
+      label: "On mobile: Force left text align"
+      description: "On mobile: Force left text align"
+
+  libraries:
+    - teasercard:
+        css:
+          component:
+            teasercard.css: {}
+        js:
+          teasercard.js: {}
+        dependencies:
+          - ui_patterns/text.text
+          - ui_patterns/button.button
