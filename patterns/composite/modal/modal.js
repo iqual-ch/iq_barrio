@@ -27,7 +27,8 @@
         let $modalContent = $('[data-modal-content]');
         let $modalOverlay = $('[data-modal-overlay]');
 
-        $modalContent.children().wrapAll('<div class="wrapper" />')
+        $modalContent.children().wrapAll('<div class="inner" />');
+        $modalContent.children().wrapAll('<div class="wrapper" />');
         $modalContent.append($btnModalClose);
         $modalOverlay.append($modalContent);
         $(this).append($modalOverlay);
