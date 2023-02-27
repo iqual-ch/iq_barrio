@@ -9,7 +9,7 @@ teasercard:
   fields:
     teaser_style:
       type: select
-      label: Teaser style
+      label: "Teaser style"
       preview: vertical
       options:
         vertical: Vertical
@@ -22,10 +22,10 @@ teasercard:
       label: Image
     image_title:
       type: text
-      label: Image title
+      label: "Image: Title"
     image_alt:
       type: text
-      label: Image alt text
+      label: "Image: Alt text"
       description: The alt attribute provides alternative information if an image is unavailable.
     image_template:
       type: image_style_template
@@ -33,7 +33,6 @@ teasercard:
       preview: image_standard
     sizes:
       type: component_sizes
-      label: Size
 
     pretitle:
       type: text
@@ -43,7 +42,7 @@ teasercard:
       label: Title
     title_weight:
       type: select
-      label: Title weight
+      label: "Title: Weight"
       preview: span
       options:
         h1: Heading 1 (&lt;h1&gt;)
@@ -55,7 +54,7 @@ teasercard:
         span: None (&lt;span&gt;)
     title_font_style:
       type: select
-      label: Title font style
+      label: "Title: Font style"
       preview: h3
       options:
         h1: Heading 1
@@ -79,7 +78,7 @@ teasercard:
       label: Link
     link_title:
       type: text
-      label: Link title
+      label: "Link: Title"
     link_target:
       type: target
       label: Open link in new window
@@ -87,39 +86,39 @@ teasercard:
 
     button_text:
       type: text
-      label: Button text
+      label: "Button: Text"
     button_alignment:
       type: select
-      label: Button alignment
+      label: "Button: Alignment"
       preview: left
       options:
         left: Left
         center: Center
         right: Right
+    button_icon:
+      type: fontawesome
+      label: "Button: Icon"
+    button_icon_position:
+      type: select
+      label: "Button: Icon position"
+      preview: right
+      options:
+        left: Left
+        right: Right
     button_style:
       type: select
-      label: Button style
+      label: "Button: Style"
       preview: standard
       options:
         standard: Standard
         alternate: Alternate
     button_color_scheme:
       type: select
-      label: Button color scheme
+      label: "Button: Color scheme"
       preview: standard
       options:
         standard: Standard
         inverted: Inverted
-    button_icon:
-      type: fontawesome
-      label: Button icon
-    button_icon_position:
-      type: select
-      label: Button icon position
-      preview: right
-      options:
-        left: Left
-        right: Right
 
   styling_options:
     font_color:
@@ -157,7 +156,7 @@ teasercard:
         align-center-bottom: Bottom Center
         align-left-bottom: Bottom Left
         align-right-bottom: Bottom Right
-    
+
     image_alignment:
       label: "Image Alignment"
       options:
@@ -172,7 +171,7 @@ teasercard:
         image-align-right-bottom: "Right Bottom"
 
     overlay_background_color:
-      label: "Overlay: Background Color (Only for Square image)"
+      label: "Overlay: Background Color (Only for Style «Image in background»)"
       options:
         bg-color-primary: Primary color
         bg-color-secondary: Secondary color
@@ -187,7 +186,7 @@ teasercard:
         bg-color-white: White
 
     overlay_style:
-      label: "Overlay: Style (Only for Square image)"
+      label: "Overlay: Style (Only for Style «Image in background»)"
       options:
         overlay-style-solid: Solid color
         overlay-style-transparent: Transparent color

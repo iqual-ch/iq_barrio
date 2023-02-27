@@ -13,11 +13,11 @@ herobanner:
       label: Background image
     image_title:
       type: text
-      label: Background image title text
+      label: "Background image: Title"
     image_alt:
       type: text
-      label: Background image alt text
-      description: Alternate text for an image, if the image cannot be displayed.
+      label: "Background image: Alt text"
+      description: The alt attribute provides alternative information if an image is unavailable.
     image_template:
       type: image_style_template
       label: Template
@@ -34,7 +34,7 @@ herobanner:
       label: Title
     title_weight:
       type: select
-      label: Title weight
+      label: "Title: Weight"
       preview: span
       options:
         h1: Heading 1 (&lt;h1&gt;)
@@ -46,7 +46,7 @@ herobanner:
         span: None (&lt;span&gt;)
     title_font_style:
       type: select
-      label: Title font style
+      label: "Title: Font style"
       preview: h1
       options:
         h1: Heading 1
@@ -67,37 +67,37 @@ herobanner:
 
     button_href:
       type: link
-      label: Button Link
+      label: "Button: Link"
     button_text:
       type: text
-      label: Button text
+      label: "Button: Text"
     button_title:
       type: text
-      label: Button title
+      label: "Button: Tooltip"
     button_target:
       type: target
       label: Open button link in new window
       description: Should the link be opened in the same window or in a new one?
     button_icon:
       type: fontawesome
-      label: Button icon
+      label: "Button: Icon"
     button_icon_position:
       type: select
-      label: Button icon position
+      label: "Button: Icon position"
       preview: left
       options:
         left: Left
         right: Right
     button_style:
       type: select
-      label: Button style
+      label: "Button: Style"
       preview: standard
       options:
         standard: Standard
         alternate: Alternate
     button_color_scheme:
       type: select
-      label: Button color scheme
+      label: "Button: Color scheme"
       preview: standard
       options:
         standard: Standard
@@ -112,7 +112,7 @@ herobanner:
         height-image: "Image height"
 
     overlay_alignment:
-      label: "Overlay alignment"
+      label: "Overlay Alignment"
       options:
         overlay-align-center-top: "Center Top"
         overlay-align-left-top: "Left Top"
