@@ -1,1 +1,3 @@
 # iqual barrio subtheme
+
+Provides subtheme patterns, styles, templates... 

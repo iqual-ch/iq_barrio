@@ -1240,3 +1240,365 @@ msgstr "Layouts"
 msgctxt "pd_pattern"
 msgid "Forms"
 msgstr "Formulare"
+
+# /patterns/composite/modal
+
+msgctxt "pd_pattern"
+msgid "A Modal with custom content."
+msgstr "Modal mit benutzerdefiniertem Inhalt."
+
+msgctxt "pd_pattern"
+msgid "Action to open modal"
+msgstr "Aktion zum Öffnen des Modal"
+
+msgctxt "pd_pattern"
+msgid "How the modal should be opened. Use «No predefined action» to create a custom action with JS."
+msgstr "Wie das Modal geöffnet werden soll. «Keine definierte Aktion» kann benutzt werden, um eine individuelle JS-Implementation zu erstellen."
+
+msgctxt "pd_pattern"
+msgid "On Button Click"
+msgstr "Klick auf Button"
+
+msgctxt "pd_pattern"
+msgid "On Page load"
+msgstr "Beim Laden der Seite"
+
+msgctxt "pd_pattern"
+msgid "No predefined action (custom implementation)"
+msgstr "Keine definierte Aktion (Custom Implementation)"
+
+msgctxt "pd_pattern"
+msgid "Close button: Icon"
+msgstr "«Schliessen» Button: Icon"
+
+msgctxt "pd_pattern"
+msgid "By default, an X is used as the button. Selecting an icon will override this default."
+msgstr "Als Standard wird ein «X» dargestellt. Die Auswahl eines Icons wird dies überschreiben."
+
+msgctxt "pd_pattern"
+msgid "Close button: Tooltip"
+msgstr "«Schliessen» Button: Tooltip"
+
+msgctxt "pd_pattern"
+msgid "Button: Text"
+msgstr "Button: Text"
+
+msgctxt "pd_pattern"
+msgid "Button: Tooltip"
+msgstr "Button: Tooltip"
+
+msgctxt "pd_pattern"
+msgid "Button: Alignment"
+msgstr "Button: Ausrichtung"
+
+msgctxt "pd_pattern"
+msgid "Button: Icon"
+msgstr "Button: Icon"
+
+msgctxt "pd_pattern"
+msgid "Button: Icon position"
+msgstr "Button: Icon Position"
+
+msgctxt "pd_pattern"
+msgid "Button: Style"
+msgstr "Button: Stil"
+
+msgctxt "pd_pattern"
+msgid "Button: Color scheme"
+msgstr "Button: Farbschema"
+
+msgctxt "pd_pattern"
+msgid "Overlay: Background Color"
+msgstr "Overlay: Hintergrundfarbe"
+
+msgctxt "pd_pattern"
+msgid "Content: Width"
+msgstr "Content: Breite"
+
+msgctxt "pd_pattern"
+msgid "Full screen"
+msgstr "Volle Bildschirmbreite"
+
+msgctxt "pd_pattern"
+msgid "Content width"
+msgstr "Breite des Seiteninhalts"
+
+msgctxt "pd_pattern"
+msgid "Small"
+msgstr "Schmal"
+
+msgctxt "pd_pattern"
+msgid "Content: Background Color"
+msgstr "Content: Hintergrundfarbe"
+
+msgctxt "pd_pattern"
+msgid "Content: Font Color"
+msgstr "Content: Schriftfarbe"
+
+# /patterns/elements/teasercard
+
+msgctxt "pd_pattern"
+msgid "Teaser Card"
+msgstr "Teaser Card"
+
+msgctxt "pd_pattern"
+msgid "A Teaser Card component with multiple styling options."
+msgstr "Teaser Card Komponente mit diversen Styling-Möglichkeiten"
+
+msgctxt "pd_pattern"
+msgid "Teaser style"
+msgstr "Teaser Stil"
+
+msgctxt "pd_pattern"
+msgid "Vertical"
+msgstr "Vertikal"
+
+msgctxt "pd_pattern"
+msgid "Image in background"
+msgstr "Bild im Hintergrund"
+
+msgctxt "pd_pattern"
+msgid "Image left"
+msgstr "Bild links"
+
+msgctxt "pd_pattern"
+msgid "Image right
+msgstr "Bild rechts"
+
+msgctxt "pd_pattern"
+msgid "Image: Title"
+msgstr "Bild: Titel"
+
+msgctxt "pd_pattern"
+msgid "Image: Alt text"
+msgstr "Bild: Alternative Bildtext"
+
+msgctxt "pd_pattern"
+msgid "The alt attribute provides alternative information if an image is unavailable."
+msgstr "Das alt-Attribut liefert alternative Informationen, wenn ein Bild nicht verfügbar ist."
+
+msgctxt "pd_pattern"
+msgid "Pretitle"
+msgstr "Vortitel"
+
+msgctxt "pd_pattern"
+msgid "Title"
+msgstr "Titel"
+
+msgctxt "pd_pattern"
+msgid "Title: Weight"
+msgstr "Titel: Gewichtung"
+
+msgctxt "pd_pattern"
+msgid "Heading 1 (&lt;h1&gt;)"
+msgstr "Überschrift 1 (&lt;h1&gt;)"
+
+msgctxt "pd_pattern"
+msgid "Heading 2 (&lt;h2&gt;)"
+msgstr "Überschrift 2 (&lt;h2&gt;)"
+
+msgctxt "pd_pattern"
+msgid "Heading 3 (&lt;h3&gt;)"
+msgstr "Überschrift 3 (&lt;h3&gt;)"
+
+msgctxt "pd_pattern"
+msgid "Heading 4 (&lt;h4&gt;)"
+msgstr "Überschrift 4 (&lt;h4&gt;)"
+
+msgctxt "pd_pattern"
+msgid "Heading 5 (&lt;h5&gt;)"
+msgstr "Überschrift 5 (&lt;h5&gt;)"
+
+msgctxt "pd_pattern"
+msgid "Heading 6 (&lt;h6&gt;)"
+msgstr "Überschrift 6 (&lt;h6&gt;)"
+
+msgctxt "pd_pattern"
+msgid "None (&lt;span&gt;)"
+msgstr "Keine (&lt;span&gt;)"
+
+msgctxt "pd_pattern"T
+msgid "Title: Font style"
+msgstr "Titel: Schriftstil"
+
+msgctxt "pd_pattern"
+msgid "Heading 1"
+msgstr "Überschrift 1"
+
+msgctxt "pd_pattern"
+msgid "Heading 2"
+msgstr "Überschrift 2"
+
+msgctxt "pd_pattern"
+msgid "Heading 3"
+msgstr "Überschrift 3"
+
+msgctxt "pd_pattern"
+msgid "Heading 4"
+msgstr "Überschrift 4"
+
+msgctxt "pd_pattern"
+msgid "Heading 5"
+msgstr "Überschrift 5"
+
+msgctxt "pd_pattern"
+msgid "Heading 6"
+msgstr "Überschrift 6"
+
+msgctxt "pd_pattern"
+msgid "Deco font 1"
+msgstr "Deko-Schrift 1"
+
+msgctxt "pd_pattern"
+msgid "Deco font 2"
+msgstr "Deko-Schrift 2"
+
+msgctxt "pd_pattern"
+msgid "Deco font 3"
+msgstr "Deko-Schrift 3"
+
+msgctxt "pd_pattern"
+msgid "Subtitle"
+msgstr "Untertitel"
+
+msgctxt "pd_pattern"
+msgid "Content"
+msgstr "Inhalt"
+
+msgctxt "pd_pattern"
+msgid "Link"
+msgstr "Link"
+
+msgctxt "pd_pattern"
+msgid "Link: Title"
+msgstr "Link: Titel"
+
+msgctxt "pd_pattern"
+msgid "Font color"
+msgstr "Schriftfarbe"
+
+msgctxt "pd_pattern"
+msgid "Text shadow"
+msgstr "Text-Schatten"
+
+msgctxt "pd_pattern"
+msgid "Light"
+msgstr "Leicht"
+
+msgctxt "pd_pattern"
+msgid "Medium"
+msgstr "Mittel"
+
+msgctxt "pd_pattern"
+msgid "Dark"
+msgstr "Stark"
+
+msgctxt "pd_pattern"
+msgid "Darker"
+msgstr "Stärker"
+
+msgctxt "pd_pattern"
+msgid "Text alignment"
+msgstr "Textausrichtung"
+
+msgctxt "pd_pattern"
+msgid "Top Center"
+msgstr "Oben Zentriert"
+
+msgctxt "pd_pattern"
+msgid "Top Left"
+msgstr "Oben Links"
+
+msgctxt "pd_pattern"
+msgid "Top Right"
+msgstr "Oben Rechts"
+
+msgctxt "pd_pattern"
+msgid "Middle Center"
+msgstr "Mitte Zentriert"
+
+msgctxt "pd_pattern"
+msgid "Middle Left"
+msgstr "Mitte Links"
+
+msgctxt "pd_pattern"
+msgid "Middle Right"
+msgstr "Mitte Rechts"
+
+msgctxt "pd_pattern"
+msgid "Bottom Center"
+msgstr "Unten Zentriert"
+
+msgctxt "pd_pattern"
+msgid "Bottom Left"
+msgstr "Unten Links"
+
+msgctxt "pd_pattern"
+msgid "Bottom Right"
+msgstr "Unten Rechts"
+
+msgctxt "pd_pattern"
+msgid "Image Alignment"
+msgstr "Bildausrichtung"
+
+msgctxt "pd_pattern"
+msgid "Overlay: Background Color (Only for Style «Image in background»)"
+msgstr "Overlay: Hintergrundfarbe (Nur für Stil «Bild im Hintergrund»)"
+
+msgctxt "pd_pattern"
+msgid "Overlay: Style (Only for Style «Image in background»)"
+msgstr "Overlay: Stil (Nur für Stil «Bild im Hintergrund»)"
+
+# /patterns/elements/herobanner
+
+msgctxt "pd_pattern"
+msgid "Hero Banner"
+msgstr "Hero Banner"
+
+msgctxt "pd_pattern"
+msgid "A Fullscreen hero banner."
+msgstr "Hero Banner Komponente."
+
+msgctxt "pd_pattern"
+msgid "Background image"
+msgstr "Hintergrundbild: Titel"
+
+msgctxt "pd_pattern"
+msgid "Background image: Title"
+msgstr "Hintergrundbild: Titel"
+
+msgctxt "pd_pattern"
+msgid "Background image: Alt text"
+msgstr "Hintergrundbild: Alternative Bildtext"
+
+msgctxt "pd_pattern"
+msgid "Button: Link"
+msgstr "Button: Link"
+
+msgctxt "pd_pattern"
+msgid "Banner height"
+msgstr "Höhe des Banners"
+
+msgctxt "pd_pattern"
+msgid "Full height"
+msgstr "Volle Bildschirmhöhe"
+
+msgctxt "pd_pattern"
+msgid "50% Viewport"
+msgstr "Halbe Bildschirmhöhe"
+
+msgctxt "pd_pattern"
+msgid "Image height"
+msgstr "Höhe des Bildes"
+
+msgctxt "pd_pattern"
+msgid "Overlay: Alignment"
+msgstr "Overlay-Ausrichtung"
+
+msgctxt "pd_pattern"
+msgid "Overlay: Style"
+msgstr "Overlay: Stil"
+
+msgctxt "pd_pattern"
+msgid "Overlay: Font color"
+msgstr "Overlay: Schriftfarbe"
