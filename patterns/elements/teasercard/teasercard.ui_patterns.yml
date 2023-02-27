@@ -33,6 +33,7 @@ teasercard:
       preview: image_standard
     sizes:
       type: component_sizes
+      label: Size
 
     pretitle:
       type: text
