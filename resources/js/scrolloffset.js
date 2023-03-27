@@ -4,11 +4,12 @@
  *
  */
 
+ window.scrollOffset = 0;
+
  (function ($, Drupal) {
 
   // Define scroll offset, based on fixed elements.
   window.setDefaultScrollOffset = function() {
-    window.scrollOffset = 0;
     $('header *').filter(function () {
       if (!$(this).visible()) {
         return false;

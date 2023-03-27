@@ -16,6 +16,10 @@
     let hash = window.location.hash;
     let $target = $(hash);
 
+    if (!$target.length) {
+      return;
+    }
+
     if (!$target.is(':visible')) {
       let collapsibleId = $target.closest('[aria-labelledby]').attr('aria-labelledby');
       if (collapsibleId) {
