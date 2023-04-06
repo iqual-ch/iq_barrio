@@ -40,11 +40,13 @@ nav.navbar .dropdown-menu * {
   color: #999999;
 }
 /* line 20, ../sass/navigation-header.scss */
-nav.navbar .dropdown-menu .dropdown-item:focus, nav.navbar .dropdown-menu .dropdown-item:hover {
+nav.navbar .dropdown-menu .dropdown-item:focus,
+nav.navbar .dropdown-menu .dropdown-item:hover {
   background-color: #eeeeee;
 }
 /* line 22, ../sass/navigation-header.scss */
-nav.navbar .dropdown-menu .dropdown-item:focus *, nav.navbar .dropdown-menu .dropdown-item:hover * {
+nav.navbar .dropdown-menu .dropdown-item:focus *,
+nav.navbar .dropdown-menu .dropdown-item:hover * {
   color: #666666;
 }
 /* line 29, ../sass/navigation-header.scss */
