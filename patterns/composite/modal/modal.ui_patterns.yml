@@ -1,0 +1,135 @@
+modal:
+  label: Modal
+  description: A Modal with custom content.
+  category: Composite
+  icon: far fa-window-restore
+  pagedesigner: 1
+  type: row
+  styles: 1
+  fields:
+
+    column0:
+      type: cell
+      label: column0
+
+    open_action:
+      type: select
+      label: "Action to open modal"
+      description: "How the modal should be opened. Use «No predefined action» to create a custom action with JS."
+      preview: standard
+      options:
+        button: "On Button Click"
+        load: "On Page load"
+        custom: "No predefined action (custom implementation)"
+
+    close_icon:
+      type: fontawesome
+      label: "Close button: Icon"
+      description: "By default, an X is used as the button. Selecting an icon will override this default."
+    close_text:
+      type: text
+      label: "Close button: Tooltip"
+
+    button_text:
+      type: text
+      label: "Button: Text"
+    button_title:
+      type: text
+      label: "Button: Title"
+    button_alignment:
+      type: select
+      label: "Button: Alignment"
+      preview: center
+      options:
+        center: Center
+        left: Left
+        right: Right
+    button_icon:
+      type: fontawesome
+      label: "Button: Icon"
+    button_icon_position:
+      type: select
+      label: "Button: Icon position"
+      preview: left
+      options:
+        left: Left
+        right: Right
+    button_style:
+      type: select
+      label: "Button: Style"
+      preview: standard
+      options:
+        standard: Standard
+        alternate: Alternate
+    button_color:
+      type: select
+      label: "Button: Color scheme"
+      preview: standard
+      options:
+        standard: Standard
+        inverted: Inverted
+
+
+  styling_options:
+    overlay_background_color:
+      label: "Overlay: Background Color"
+      options:
+        overlay-background-color-primary: "Primary color"
+        overlay-background-color-secondary: "Secondary color"
+        overlay-background-color-tertiary: "Tertiary color"
+        overlay-background-color-quaternary: "Quaternary color"
+        overlay-background-color-grey1: "Grey 1"
+        overlay-background-color-grey2: "Grey 2"
+        overlay-background-color-grey3: "Grey 3"
+        overlay-background-color-grey4: "Grey 4"
+        overlay-background-color-grey5: "Grey 5"
+        overlay-background-color-black: "Black"
+        overlay-background-color-white: "White"
+
+    overlay_width:
+      label: "Content: Width"
+      options:
+        overlay-content-width-full: "Full screen"
+        overlay-content-width-content: "Content width"
+        overlay-content-width-small: "Small"
+
+    content_background_color:
+      label: "Content: Background Color"
+      options:
+        overlay-content-background-color-primary: "Primary color"
+        overlay-content-background-color-secondary: "Secondary color"
+        overlay-content-background-color-tertiary: "Tertiary color"
+        overlay-content-background-color-quaternary: "Quaternary color"
+        overlay-content-background-color-grey1: "Grey 1"
+        overlay-content-background-color-grey2: "Grey 2"
+        overlay-content-background-color-grey3: "Grey 3"
+        overlay-content-background-color-grey4: "Grey 4"
+        overlay-content-background-color-grey5: "Grey 5"
+        overlay-content-background-color-black: "Black"
+        overlay-content-background-color-white: "White"
+
+    content_font_color:
+      label: "Content: Font Color"
+      options:
+        overlay-content-font-color-primary: "Primary color"
+        overlay-content-font-color-secondary: "Secondary color"
+        overlay-content-font-color-tertiary: "Tertiary color"
+        overlay-content-font-color-quaternary: "Quaternary color"
+        overlay-content-font-color-grey1: "Grey 1"
+        overlay-content-font-color-grey2: "Grey 2"
+        overlay-content-font-color-grey3: "Grey 3"
+        overlay-content-font-color-grey4: "Grey 4"
+        overlay-content-font-color-grey5: "Grey 5"
+        overlay-content-font-color-black: "Black"
+        overlay-content-font-color-white: "White"
+
+  libraries:
+    - modal:
+        css:
+          component:
+            modal.css: {}
+        js:
+          modal.js: {}
+        dependencies:
+          - ui_patterns/text.text
+          - ui_patterns/button.button

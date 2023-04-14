@@ -34,5 +34,6 @@ anchor:
             anchor.css: {}
         js:
           anchor.js: {}
-      dependencies:
-        - core/drupal
+        dependencies:
+          - core/drupal
+          - iq_barrio/scrolloffset
