@@ -1,7 +1,7 @@
 @import '../../../resources/sass/definitions';
 
 .iq-anchornavigation{
-  z-index: 100;
+  z-index: 10;
 
   @media print {
     display: none;
