@@ -2,6 +2,15 @@
 
 (function ($) {
 
+  $(document).on('pagedesigner-before-setup', function(){
+    Twig.extendFilter('clean_id', function (value) {
+      if (value) {
+        return value.replace(/[\W_]+/g, "-").toLowerCase();
+      }
+      return value;
+    });
+  });
+
   $(document).ready(function () {
     setTimeout(function(){
       anchorScroll();
