@@ -235,11 +235,15 @@
   text-decoration: none;
 }
 /* line 223, ../sass/layout.scss */
-.nav-main > ul > li.active, .nav-main > ul > li:active, .nav-main > ul > li:hover {
+.nav-main > ul > li.active,
+.nav-main > ul > li:active,
+.nav-main > ul > li:hover {
   background-color: #fff;
 }
 /* line 227, ../sass/layout.scss */
-.nav-main > ul > li.active a, .nav-main > ul > li:active a, .nav-main > ul > li:hover a {
+.nav-main > ul > li.active a,
+.nav-main > ul > li:active a,
+.nav-main > ul > li:hover a {
   color: #1a1a1a;
   text-decoration: none;
 }
@@ -260,11 +264,15 @@
   text-decoration: none;
 }
 /* line 247, ../sass/layout.scss */
-.nav-main .dropdown-menu > li.active, .nav-main .dropdown-menu > li:active, .nav-main .dropdown-menu > li:hover {
+.nav-main .dropdown-menu > li.active,
+.nav-main .dropdown-menu > li:active,
+.nav-main .dropdown-menu > li:hover {
   background-color: #eeeeee;
 }
 /* line 251, ../sass/layout.scss */
-.nav-main .dropdown-menu > li.active > a, .nav-main .dropdown-menu > li:active > a, .nav-main .dropdown-menu > li:hover > a {
+.nav-main .dropdown-menu > li.active > a,
+.nav-main .dropdown-menu > li:active > a,
+.nav-main .dropdown-menu > li:hover > a {
   color: #666666;
   text-decoration: none;
 }
@@ -323,7 +331,10 @@
   border: none;
 }
 /* line 327, ../sass/layout.scss */
-.nav-sub .navbar-nav .dropdown-menu .dropdown-item:hover, .nav-sub .navbar-nav .dropdown-menu .dropdown-item:focus, .nav-sub .navbar-nav .dropdown-menu .dropdown-item:active, .nav-sub .navbar-nav .dropdown-menu .dropdown-item.active {
+.nav-sub .navbar-nav .dropdown-menu .dropdown-item:hover,
+.nav-sub .navbar-nav .dropdown-menu .dropdown-item:focus,
+.nav-sub .navbar-nav .dropdown-menu .dropdown-item:active,
+.nav-sub .navbar-nav .dropdown-menu .dropdown-item.active {
   background: transparent;
   font-weight: inherit;
 }
@@ -353,7 +364,10 @@
   border: none;
 }
 /* line 372, ../sass/layout.scss */
-.nav-mobile .navbar-nav .dropdown-menu .dropdown-item:hover, .nav-mobile .navbar-nav .dropdown-menu .dropdown-item:focus, .nav-mobile .navbar-nav .dropdown-menu .dropdown-item:active, .nav-mobile .navbar-nav .dropdown-menu .dropdown-item.active {
+.nav-mobile .navbar-nav .dropdown-menu .dropdown-item:hover,
+.nav-mobile .navbar-nav .dropdown-menu .dropdown-item:focus,
+.nav-mobile .navbar-nav .dropdown-menu .dropdown-item:active,
+.nav-mobile .navbar-nav .dropdown-menu .dropdown-item.active {
   background: transparent;
   font-weight: inherit;
 }
