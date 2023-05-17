@@ -130,7 +130,8 @@ p {
 }
 
 /* line 105, ../sass/style.scss */
-.small, small {
+.small,
+small {
   font-size: 0.75rem;
   line-height: 1.2;
   font-weight: 300;
@@ -146,7 +147,9 @@ a {
   text-decoration: underline;
 }
 /* line 120, ../sass/style.scss */
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
   color: #ffd1c4;
   text-decoration: underline dotted;
 }
