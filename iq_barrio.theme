@@ -62,6 +62,6 @@ function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &
   \Drupal::moduleHandler()->invokeAll('iq_theme_settings', [$styles, $service]);
 
   if ($form_state->getValue('reset_css')) {
-    $service->resetCSS();
+    $service->resetCss();
   }
 }
