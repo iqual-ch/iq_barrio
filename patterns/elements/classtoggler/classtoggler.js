@@ -1,6 +1,6 @@
 (function ($) {
   $(document).ready(function() {
-    $('[data-toggle-class]').on('click', function () {
+    $('.iq-classtoggler [data-toggle-class]').on('click', function () {
       if( $(this).data('scroll-lock') == 'yes' ){
         $('body').toggleClass('scroll-lock');
       }
