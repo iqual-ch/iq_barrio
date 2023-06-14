@@ -1362,7 +1362,7 @@ msgid "Image left"
 msgstr "Bild links"
 
 msgctxt "pd_pattern"
-msgid "Image right
+msgid "Image right"
 msgstr "Bild rechts"
 
 msgctxt "pd_pattern"
@@ -1417,7 +1417,7 @@ msgctxt "pd_pattern"
 msgid "None (&lt;span&gt;)"
 msgstr "Keine (&lt;span&gt;)"
 
-msgctxt "pd_pattern"T
+msgctxt "pd_pattern"
 msgid "Title: Font style"
 msgstr "Titel: Schriftstil"
 
