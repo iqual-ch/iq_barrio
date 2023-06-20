@@ -1362,7 +1362,7 @@ msgid "Image left"
 msgstr "Bild links"
 
 msgctxt "pd_pattern"
-msgid "Image right
+msgid "Image right"
 msgstr "Bild rechts"
 
 msgctxt "pd_pattern"
