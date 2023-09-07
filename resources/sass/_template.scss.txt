@@ -520,7 +520,6 @@ $font-family-content:                 $font-family-base;
 
 @import "../../../iq_custom/resources/sass/definitions";
 
+@import "abstracts/_abstracts_dir";
 @import "mixins/_mixins_dir";
-@import "mixins/_icons_dir";
-
-
+@import "icons/_icons_dir";
