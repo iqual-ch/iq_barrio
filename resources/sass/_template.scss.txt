@@ -518,8 +518,8 @@ $font-family-base:                    $font-family-standard;
 $font-family-titles:                  $font-family-h1;
 $font-family-content:                 $font-family-base;
 
+@import "icons/_icons_dir";
 @import "../../../iq_custom/resources/sass/definitions";
 
 @import "abstracts/_abstracts_dir";
 @import "mixins/_mixins_dir";
-@import "icons/_icons_dir";
