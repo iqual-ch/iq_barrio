@@ -1,6 +1,7 @@
 name: iqual Barrio Subtheme
 type: theme
 description: 'iqual Bootstrap Barrio SubTheme.'
+
 core_version_requirement: ^9.5 || ^10
 base theme: bootstrap_barrio
 'interface translation project': iq_barrio
