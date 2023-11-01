@@ -149,6 +149,8 @@ form.system-theme-settings[action*="iq_barrio"] {
   #edit-theme-settings,
   #edit-logo,
   #edit-favicon,
+  > .js-form-item-.form-item--no-label,
+  > .js-form-item-bootstrap-barrio-source,
   > .js-form-item.form-no-label {
     display: none !important;
   }

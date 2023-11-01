@@ -47,7 +47,7 @@ function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $
 function iq_barrio_form_system_theme_settings_submit($form, FormStateInterface &$form_state) {
   $styles = $form_state->getValues();
   foreach ($styles as $stylingKey => $stylingValaue) {
-    if ((strpos($stylingKey, 'opacity') !== FALSE) && !isset($stylingValaue)) {
+    if ((str_contains($stylingKey, 'opacity')) && !isset($stylingValaue)) {
       $styles[$stylingKey] = 1;
     }
   }
