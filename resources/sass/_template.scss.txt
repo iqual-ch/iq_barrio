@@ -518,15 +518,8 @@ $font-family-base:                    $font-family-standard;
 $font-family-titles:                  $font-family-h1;
 $font-family-content:                 $font-family-base;
 
+@import "icons/_icons_dir";
 @import "../../../iq_custom/resources/sass/definitions";
 
-// mixins
-@mixin font-standard {
-  font-size: $font-size-standard;
-  line-height: $line-height-standard;
-  font-weight: $font-weight-standard;
-  font-style: $font-style-standard;
-  font-family: $font-family-standard;
-  color: $color-standard;
-  @include fluid-type(320px, 991px, $font-size-min-standard, $font-size-standard);
-}
+@import "abstracts/_abstracts_dir";
+@import "mixins/_mixins_dir";
