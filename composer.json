@@ -16,6 +16,6 @@
     "drupal/bootstrap_barrio": "~5.1.0",
     "iqual/iq_barrio_composer_update": "^3.0",
     "iqual/iq_barrio_helper": "^4.0",
-    "drupal/pagedesigner_responsive_images": "^3.0"
+    "drupal/pagedesigner_responsive_images": "^3.0 || ^4.0"
   }
 }
