@@ -17,5 +17,12 @@
     "iqual/iq_barrio_composer_update": "^3.0",
     "iqual/iq_barrio_helper": "^4.0",
     "drupal/pagedesigner_responsive_images": "^3.0 || ^4.0"
+  },
+  "extra": {
+    "patches": {
+      "drupal/linkit": {
+        "[https://dgo.to/3105061]: Link attributes missing with bootstrap theme": "https://www.drupal.org/files/issues/2024-01-05/linkit-selector-6.1.x-3105061-8.diff"
+      }
+    }
   }
 }
