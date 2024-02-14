@@ -22,6 +22,9 @@
     "patches": {
       "drupal/linkit": {
         "[https://dgo.to/3105061]: Link attributes missing with bootstrap theme": "https://www.drupal.org/files/issues/2024-01-05/linkit-selector-6.1.x-3105061-8.diff"
+      },
+      "drupal/bootstrap_barrio": {
+        "[https://dgo.to/3421337]: Unexpected token \"name\" of value \"if\"": "https://git.drupalcode.org/project/bootstrap_barrio/-/merge_requests/75/diffs.diff?diff_id=758849"
       }
     }
   }
