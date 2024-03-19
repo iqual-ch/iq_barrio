@@ -200,7 +200,7 @@ $border-color-active-buttons:         rgba($color-{{button_border_color_active}}
 
 $font-color-buttons-inverted:                  rgba($color-{{button_font_color_inverted}},{{button_font_opacity_inverted}});
 $background-color-buttons-inverted:            rgba($color-{{button_background_color_inverted}},{{button_background_opacity_inverted}});
-$border-color-buttons-inverted:                rgba($color-{{button_border_color_inverted}},{{button_border_opacity_standard}});
+$border-color-buttons-inverted:                rgba($color-{{button_border_color_inverted}},{{button_border_opacity_inverted}});
 $font-color-hover-buttons-inverted:            rgba($color-{{button_font_color_inverted_hover}},{{button_font_opacity_inverted_hover}});
 $background-color-hover-buttons-inverted:      rgba($color-{{button_background_color_inverted_hover}},{{button_background_opacity_inverted_hover}});
 $border-color-hover-buttons-inverted:          rgba($color-{{button_border_color_inverted_hover}},{{button_border_opacity_inverted_hover}});
@@ -230,7 +230,7 @@ $border-color-active-buttons-alternate:         rgba($color-{{button_alternate_b
 
 $font-color-buttons-alternate-inverted:                  rgba($color-{{button_alternate_font_color_inverted}},{{button_alternate_font_opacity_inverted}});
 $background-color-buttons-alternate-inverted:            rgba($color-{{button_alternate_background_color_inverted}},{{button_alternate_background_opacity_inverted}});
-$border-color-buttons-alternate-inverted:                rgba($color-{{button_alternate_border_color_inverted}},{{button_alternate_border_opacity_standard}});
+$border-color-buttons-alternate-inverted:                rgba($color-{{button_alternate_border_color_inverted}},{{button_alternate_border_opacity_inverted}});
 $font-color-hover-buttons-alternate-inverted:            rgba($color-{{button_alternate_font_color_inverted_hover}},{{button_alternate_font_opacity_inverted_hover}});
 $background-color-hover-buttons-alternate-inverted:      rgba($color-{{button_alternate_background_color_inverted_hover}},{{button_alternate_background_opacity_inverted_hover}});
 $border-color-hover-buttons-alternate-inverted:          rgba($color-{{button_alternate_border_color_inverted_hover}},{{button_alternate_border_opacity_inverted_hover}});
