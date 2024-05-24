@@ -1,5 +1,13 @@
 @import '../../../resources/sass/definitions';
 
+@function encodecolor($string) {
+	@if type-of($string) == 'color' {
+        $hex: str-slice(ie-hex-str($string), 4);
+        $string:unquote("#{$hex}");
+    }
+    $string: '%23' + $string;
+	@return $string;
+}
 
 .iq-social-icons{
   font-size: 0;
@@ -33,6 +41,11 @@
       i{
         line-height: 32px;
       }
+
+      &.icon-twitter{
+        background-size: 50%;
+        background-image: url('data:image/svg+xml,<svg width="1200" height="1227" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="white"/></svg>');
+      }
     }
   }
   &.default-colors{
@@ -40,7 +53,10 @@
       color: #3b5999;
     }
     .icon-twitter{
-      color: #55acee;
+      background-image: url('data:image/svg+xml,<svg width="1200" height="1227" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="black"/></svg>');
+      &:hover{
+        background-image: url('data:image/svg+xml,<svg width="1200" height="1227" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="black"/></svg>');
+      }
     }
     .icon-linkedin{
       color: #0077B5;
@@ -60,10 +76,8 @@
         }
       }
       .icon-twitter{
-        background-color: #55acee;
-        *{
-          color: $color-white;
-        }
+        background-color: #000;
+        background-image: url('data:image/svg+xml,<svg width="1200" height="1227" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="#{encodecolor($color-text-inverted)}"/></svg>');
       }
       .icon-linkedin{
         background-color: #0077B5;
@@ -92,6 +106,24 @@
     font-size: 16px;
     margin-right: $margin-right-base * 0.5;
   }
+
+  .icon-twitter{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    background-image: url('data:image/svg+xml,<svg width="1200" height="1227" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="#{encodecolor($social-icons-color)}"/></svg>');
+    width: 26px;
+    display: inline-block;
+    &:hover{
+      background-image: url('data:image/svg+xml,<svg width="1200" height="1227" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="#{encodecolor($color-link-hover)}"/></svg>');
+    }
+    .fa-twitter{
+      &::before {
+        content: "";
+      }
+    }
+  }
+
 }
 
 
