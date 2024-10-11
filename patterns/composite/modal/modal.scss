@@ -102,6 +102,9 @@
           overflow: hidden;
         }
       }
+      &[data-gjs-type=cell]:empty{
+        background-color: #FDEFEA
+      }
     }
     &__close{
       position: absolute;
