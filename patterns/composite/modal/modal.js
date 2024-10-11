@@ -70,7 +70,7 @@
         }
 
         if (removeButton) {
-          $('[data-open-modal]').remove();
+          $(this).find('[data-open-modal]').remove();
         }
 
         $(this).removeAttr('data-initialized')
