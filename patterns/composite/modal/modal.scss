@@ -43,7 +43,7 @@
         }
       }
     }
-    label{
+    > label{
       padding: 7px 15px;
       border: 2px solid #000;
       color: #000;
@@ -60,7 +60,7 @@
         content: "Modal\00A0";
       }
       &::after{
-        content: "anzeigen"
+        content: "Inhalt bearbeiten"
       }
     }
     [data-open-modal],
@@ -101,6 +101,9 @@
         .inner{
           overflow: hidden;
         }
+      }
+      &[data-gjs-type=cell]:empty{
+        background-color: #FDEFEA
       }
     }
     &__close{

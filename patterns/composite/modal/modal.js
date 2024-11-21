@@ -3,7 +3,7 @@
  *
  */
 
- (function ($, Drupal) {
+(function ($, Drupal) {
   Drupal.behaviors.iqual_pattern_modal = {
     attach: function (context, settings) {
       $('[data-modal-open-action]').each(function(){
@@ -23,9 +23,9 @@
         let action = $(this).data('modal-open-action');
         let removeButton = true;
 
-        let $btnModalClose = $('[data-modal-close]');
-        let $modalContent = $('[data-modal-content]');
-        let $modalOverlay = $('[data-modal-overlay]');
+        let $btnModalClose = $self.find('[data-modal-close]');
+        let $modalContent = $self.find('[data-modal-content]');
+        let $modalOverlay = $self.find('[data-modal-overlay]');
 
         $modalContent.children().wrapAll('<div class="inner" />');
         $modalContent.children().wrapAll('<div class="wrapper" />');
@@ -70,7 +70,7 @@
         }
 
         if (removeButton) {
-          $('[data-open-modal]').remove();
+          $(this).find('[data-open-modal]').remove();
         }
 
         $(this).removeAttr('data-initialized')
