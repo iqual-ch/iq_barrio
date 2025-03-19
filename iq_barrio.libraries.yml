@@ -69,7 +69,7 @@ jquery.ui:
     - core/jquery
 
 scrolloffset:
-   js:
+  js:
     vendor/jquery.visible.min.js : { minified: true, preprocess: false }
     resources/js/scrolloffset.js: {}
   dependencies:
