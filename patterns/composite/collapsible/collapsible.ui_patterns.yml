@@ -39,8 +39,8 @@ collapsible:
   libraries:
     - collapsible:
         js:
-          jquery.ui/accordion-min.js: {minified: true, preprocess: false}
-          jquery.ui/tabs-min.js: {minified: true, preprocess: false}
+          jquery.ui/accordion-min.js: {minified: true}
+          jquery.ui/tabs-min.js: {minified: true}
           collapsible.js: {}
         css:
           component:

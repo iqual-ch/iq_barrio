@@ -33,7 +33,7 @@ anchor:
           component:
             anchor.css: {}
         js:
-          //cdnjs.cloudflare.com/ajax/libs/twig.js/0.8.9/twig.min.js: { external: true, minified: true }
+          //cdnjs.cloudflare.com/ajax/libs/twig.js/0.8.9/twig.min.js: { type: external, minified: true }
           anchor.js: {}
         dependencies:
           - core/jquery
