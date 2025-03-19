@@ -25,7 +25,7 @@
       },
       "drupal/bootstrap_barrio": {
         "[https://dgo.to/3421337]: Unexpected token \"name\" of value \"if\"": "https://git.drupalcode.org/project/bootstrap_barrio/-/merge_requests/75/diffs.diff?diff_id=758849",
-        "[https://dgo.to/3222326]: Libraries should be improved": ".patches/test.patch"
+        "[https://dgo.to/3222326]: Libraries should be improved": "./patches/test.patch"
       }
     }
   }
