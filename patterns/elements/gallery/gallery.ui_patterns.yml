@@ -45,6 +45,7 @@ gallery:
             //cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css: { minified: true, type: external }
             gallery.css: {}
         dependencies:
+          - core/jquery
           - ui_patterns/img.img
   classes:
     hidden:

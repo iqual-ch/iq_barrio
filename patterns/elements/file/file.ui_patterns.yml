@@ -46,3 +46,5 @@ file:
             file.css: {}
         js:
           file.js: {}
+        dependencies:
+          - core/jquery

@@ -3,8 +3,8 @@ global-styling:
     resources/js/global.js: {}
   css:
     layout:
-      //use.fontawesome.com/releases/v5.15.2/css/all.css: {external: true}
-      //use.fontawesome.com/releases/v5.15.2/css/v4-shims.css: {external: true}
+      //use.fontawesome.com/releases/v5.15.2/css/all.css: { type: external }
+      //use.fontawesome.com/releases/v5.15.2/css/v4-shims.css: { type: external }
       resources/css/layout.css: {}
     component:
       resources/css/colors.css: {}
@@ -19,15 +19,17 @@ global-styling:
       resources/css/breadcrumbs.css: {}
       resources/css/base.css: {}
   dependencies:
+    - core/jquery
+    - core/drupal
     - iq_barrio/bootstrap_cdn
 
 bootstrap_cdn:
   js:
-    //cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js: {}
-    //stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js: {}
+    //cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js: { type: external, minified: true }
+    //stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js: { type: external, minified: true }
   css:
     layout:
-      //stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css: {weight: 0}
+      //stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css: { type: external, minified: true }
 
 admin-style:
   js:
@@ -35,26 +37,29 @@ admin-style:
   css:
     layout:
       resources/css/admin.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
 
 jquery.ui:
   js:
-    vendor/jquery.ui/ui/data-min.js: { weight: -11, minified: true }
-    vendor/jquery.ui/ui/disable-selection-min.js: { weight: -11, minified: true }
-    vendor/jquery.ui/ui/form-min.js: { weight: -11, minified: true }
-    vendor/jquery.ui/ui/labels-min.js: { weight: -11, minified: true }
-    vendor/jquery.ui/ui/jquery-1-7-min.js: { weight: -11, minified: true }
-    vendor/jquery.ui/ui/scroll-parent-min.js: { weight: -11, minified: true }
-    vendor/jquery.ui/ui/tabbable-min.js: { weight: -11, minified: true }
-    vendor/jquery.ui/ui/unique-id-min.js: { weight: -11, minified: true }
-    vendor/jquery.ui/ui/version-min.js: { weight: -11, minified: true }
-    vendor/jquery.ui/ui/escape-selector-min.js: { weight: -11, minified: true }
-    vendor/jquery.ui/ui/focusable-min.js: { weight: -11, minified: true }
-    vendor/jquery.ui/ui/ie-min.js: { weight: -11, minified: true }
-    vendor/jquery.ui/ui/keycode-min.js: { weight: -11, minified: true }
-    vendor/jquery.ui/ui/plugin-min.js: { weight: -11, minified: true }
-    vendor/jquery.ui/ui/safe-active-element-min.js: { weight: -11, minified: true }
-    vendor/jquery.ui/ui/safe-blur-min.js: { weight: -11, minified: true }
-    vendor/jquery.ui/ui/widget-min.js: { weight: -10, minified: true }
+    vendor/jquery.ui/ui/data-min.js: { weight: -11, minified: true, preprocess: false }
+    vendor/jquery.ui/ui/disable-selection-min.js: { weight: -11, minified: true, preprocess: false  }
+    vendor/jquery.ui/ui/form-min.js: { weight: -11, minified: true, preprocess: false  }
+    vendor/jquery.ui/ui/labels-min.js: { weight: -11, minified: true, preprocess: false  }
+    vendor/jquery.ui/ui/jquery-1-7-min.js: { weight: -11, minified: true, preprocess: false  }
+    vendor/jquery.ui/ui/scroll-parent-min.js: { weight: -11, minified: true, preprocess: false  }
+    vendor/jquery.ui/ui/tabbable-min.js: { weight: -11, minified: true, preprocess: false  }
+    vendor/jquery.ui/ui/unique-id-min.js: { weight: -11, minified: true, preprocess: false  }
+    vendor/jquery.ui/ui/version-min.js: { weight: -11, minified: true, preprocess: false  }
+    vendor/jquery.ui/ui/escape-selector-min.js: { weight: -11, minified: true, preprocess: false  }
+    vendor/jquery.ui/ui/focusable-min.js: { weight: -11, minified: true, preprocess: false  }
+    vendor/jquery.ui/ui/ie-min.js: { weight: -11, minified: true, preprocess: false  }
+    vendor/jquery.ui/ui/keycode-min.js: { weight: -11, minified: true, preprocess: false  }
+    vendor/jquery.ui/ui/plugin-min.js: { weight: -11, minified: true, preprocess: false  }
+    vendor/jquery.ui/ui/safe-active-element-min.js: { weight: -11, minified: true, preprocess: false  }
+    vendor/jquery.ui/ui/safe-blur-min.js: { weight: -11, minified: true, preprocess: false  }
+    vendor/jquery.ui/ui/widget-min.js: { weight: -10, minified: true, preprocess: false  }
   css:
     component:
       vendor/jquery.ui/themes/base/core.css: {}
@@ -65,5 +70,8 @@ jquery.ui:
 
 scrolloffset:
    js:
-    vendor/jquery.visible.min.js : {minified: true}
+    vendor/jquery.visible.min.js : { minified: true, preprocess: false }
     resources/js/scrolloffset.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

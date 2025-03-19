@@ -49,3 +49,7 @@ icon:
         css:
           component:
             icon.css: {}
+        js:
+          icon.js: {}
+        dependencies:
+          - core/jquery

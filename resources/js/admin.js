@@ -5,7 +5,7 @@
  */
 
 (function ($, Drupal) {
-  jQuery('[data-style]').each(function(){jQuery(this).attr('style', jQuery(this).data('style') )});
+  $('[data-style]').each(function(){$(this).attr('style', $(this).data('style') )});
 
   var colors = {
     'primary' : $('[name="color_primary"]').val(),
@@ -23,24 +23,24 @@
 
 
 
-  var style = jQuery('#iq-barrio-source').html();
-  jQuery('[data-drupal-selector="edit-iq-theme"]').find('input, select').each(function(){
-    var find = '{{' + jQuery(this).attr('name') + '}}';
+  var style = $('#iq-barrio-source').html();
+  $('[data-drupal-selector="edit-iq-theme"]').find('input, select').each(function(){
+    var find = '{{' + $(this).attr('name') + '}}';
     var re = new RegExp(find, 'g');
 
-    if( colors.hasOwnProperty( jQuery(this).val() ) ){
-      style = style.replace(re, hexToRGB(colors[jQuery(this).val()]) );
+    if( colors.hasOwnProperty( $(this).val() ) ){
+      style = style.replace(re, hexToRGB(colors[$(this).val()]) );
     }else{
-      style = style.replace(re, jQuery(this).val() );
+      style = style.replace(re, $(this).val() );
     }
 
   });
 
-  jQuery('#iq-barrio-target').html( '<style>' + style + '</style>' ) ;
+  $('#iq-barrio-target').html( '<style>' + style + '</style>' ) ;
 
 
 
-  jQuery('[data-drupal-selector="edit-iq-theme"]').find('input, select').change(function(){
+  $('[data-drupal-selector="edit-iq-theme"]').find('input, select').change(function(){
 
     var colors = {
       'primary' : $('[name="color_primary"]').val(),
@@ -56,20 +56,20 @@
       'white' : $('[name="color_white"]').val(),
     }
 
-    var style = jQuery('#iq-barrio-source').html();
-    jQuery('[data-drupal-selector="edit-iq-theme"]').find('input, select').each(function(){
-      var find = '{{' + jQuery(this).attr('name') + '}}';
+    var style = $('#iq-barrio-source').html();
+    $('[data-drupal-selector="edit-iq-theme"]').find('input, select').each(function(){
+      var find = '{{' + $(this).attr('name') + '}}';
       var re = new RegExp(find, 'g');
 
-      if( colors.hasOwnProperty( jQuery(this).val() ) ){
-        style = style.replace(re, hexToRGB(colors[jQuery(this).val()]) );
+      if( colors.hasOwnProperty( $(this).val() ) ){
+        style = style.replace(re, hexToRGB(colors[$(this).val()]) );
       }else{
-        style = style.replace(re, jQuery(this).val() );
+        style = style.replace(re, $(this).val() );
       }
 
     });
 
-    jQuery('#iq-barrio-target').html( '<style>' + style + '</style>' ) ;
+    $('#iq-barrio-target').html( '<style>' + style + '</style>' ) ;
   })
 
 })(jQuery, Drupal);

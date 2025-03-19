@@ -40,6 +40,8 @@ classtoggler:
             classtoggler.css: {}
         js:
           classtoggler.js: {}
+        dependencies:
+          - core/jquery
   styles: 1
   classes:
     hidden:
