@@ -220,5 +220,7 @@ teasercard:
         js:
           teasercard.js: {}
         dependencies:
+          - core/jquery
           - ui_patterns/text.text
           - ui_patterns/button.button
+          

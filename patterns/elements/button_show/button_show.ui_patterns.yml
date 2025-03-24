@@ -78,3 +78,5 @@ button_show:
             button-show.css: {}
         js:
           button-show.js: {}
+        dependencies:
+          - core/jquery

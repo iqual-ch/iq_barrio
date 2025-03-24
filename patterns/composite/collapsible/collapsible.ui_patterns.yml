@@ -44,8 +44,8 @@ collapsible:
           collapsible.js: {}
         css:
           component:
-            jquery.ui/accordion.css: {minified: true}
-            jquery.ui/tabs.css: {minified: true}
+            jquery.ui/accordion.css: {}
+            jquery.ui/tabs.css: {}
             collapsible.css: {}
         dependencies:
           - core/drupal

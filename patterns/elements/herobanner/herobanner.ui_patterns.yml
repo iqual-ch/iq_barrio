@@ -210,5 +210,7 @@ herobanner:
         js:
           herobanner.js: {}
         dependencies:
+          - core/drupal
+          - core/jquery
           - ui_patterns/text.text
           - ui_patterns/button.button

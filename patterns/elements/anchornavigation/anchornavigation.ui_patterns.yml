@@ -58,3 +58,5 @@ anchornavigation:
             anchornavigation.css: {}
         js:
           anchornavigation.js: {}
+        dependencies:
+          - core/jquery

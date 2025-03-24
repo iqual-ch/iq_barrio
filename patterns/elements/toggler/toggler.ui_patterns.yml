@@ -36,6 +36,8 @@ toggler:
             toggler.css: {}
         js:
           toggler.js: {}
+        dependencies:
+          - core/jquery
   styles: 1
   classes:
     hidden:
