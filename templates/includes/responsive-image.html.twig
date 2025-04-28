@@ -8,16 +8,24 @@
     {% set template = "image_standard" %}
   {% endif %}
 
+  {% if loading is empty %}
+    {% set loading = "lazy" %}
+  {% endif %}
+
   {% if sizes is not empty and template|render is not empty %}
     <picture>
       {% for key, value in image_style(sizes, template) %}
         <source media="(min-width: {{ key }})" sizes="{{ value.size }}" srcset="{% for image_style_name, size in value.templates %}{{ styled_image_url(image|render, image_style_name) }} {{ size }}{% if not loop.last %},{% endif %}{% endfor %}" ></source>
       {% endfor %}
-      <img src="{{file_url(image|render)}}" loading="lazy" {% for key, value in attributes %}{{key}}="{{value}}" {% endfor %} />
+      {% if fallback_style is empty %}
+        <img src="{{file_url(image|render)}}" loading="{{ loading }}" {% for key, value in attributes %}{{key}}="{{value}}" {% endfor %} />
+      {% else %}
+        <img src="{{ styled_image_url(image_img|render, fallback_style) }}" loading="{{ loading }}" {% for key, value in attributes %}{{key}}="{{value}}" {% endfor %} />
+      {% endif %}
     </picture>
   {% else %}
-    <img src="{{file_url(image|render)}}" loading="lazy" {% for key, value in attributes %}{{key}}="{{value}}" {% endfor %} />
+    <img src="{{file_url(image|render)}}" loading="{{ loading }}" {% for key, value in attributes %}{{key}}="{{value}}" {% endfor %} />
   {% endif %}
 {% else %}
-  <img src="{{image}}" loading="lazy" {% for key, value in attributes %}{{key}}="{{value}}" {% endfor %} />
+  <img src="{{image}}" loading="{{ loading }}" {% for key, value in attributes %}{{key}}="{{value}}" {% endfor %} />
 {% endif %}
