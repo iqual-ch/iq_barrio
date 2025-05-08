@@ -52,6 +52,7 @@ gallery_slider:
             slidegallery.css: {}
 
         dependencies:
+          - core/jquery
           - ui_patterns/img.img
   classes:
     hidden:
