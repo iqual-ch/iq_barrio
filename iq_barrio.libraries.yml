@@ -3,8 +3,8 @@ global-styling:
     resources/js/global.js: {}
   css:
     layout:
-      //use.fontawesome.com/releases/v5.15.2/css/all.css: { type: external }
-      //use.fontawesome.com/releases/v5.15.2/css/v4-shims.css: { type: external }
+      /libraries/fontawesome/css/all.css: { }
+      /libraries/fontawesome/css/v4-shims.css: { }
       resources/css/layout.css: {}
     component:
       resources/css/colors.css: {}
@@ -25,11 +25,26 @@ global-styling:
 
 bootstrap_cdn:
   js:
-    //cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js: { type: external, minified: true }
-    //stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js: { type: external, minified: true }
+    /libraries/popper.js/dist/umd/popper.min.js: { minified: true }
+    /libraries/bootstrap/dist/js/bootstrap.min.js: { minified: true }
   css:
     layout:
-      //stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css: { type: external, minified: true }
+      /libraries/bootstrap/dist/css/bootstrap.min.css: { minified: true }
+
+lightbox:
+  js:
+    /libraries/ekko-lightbox/dist/ekko-lightbox.js: { minified: true }
+  css:
+    component:
+      /libraries/ekko-lightbox/dist/ekko-lightbox.css: { minified: true }
+
+owlcarousel:
+  js:
+    /libraries/owl-carousel2/dist/owl.carousel.min.js: { minified: true }
+  css:
+    component:
+      /libraries/owl-carousel2/dist/assets/owl.carousel.min.css: { minified: true }
+      /libraries/owl-carousel2/dist/assets/owl.theme.default.min.css: { minified: true }
 
 admin-style:
   js:
