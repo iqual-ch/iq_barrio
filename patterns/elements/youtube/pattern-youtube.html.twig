@@ -1,5 +1,13 @@
 <div class="iq-youtube" data-align="{{alignment}}">
-    <div class="wrapper" data-aspect-ratio="{{ratio}}">
-        <iframe class="videoplayer" src="{{url}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
+  {% set youtubeId = url|render|split('/')|last %}
+  <div class="wrapper" data-aspect-ratio="{{ratio}}">
+    <img
+      class="placeholder"
+      data-youtbe-id="{{ youtubeId }}"
+      alt=""
+      src="https://i.ytimg.com/vi/{{ youtubeId }}/hqdefault.jpg"
+      srcset="https://i.ytimg.com/vi/{{ youtubeId }}/hqdefault.jpg 480w, https://i.ytimg.com/vi/{{ youtubeId }}/maxresdefault.jpg 1280w"
+      sizes="(max-width: 600px) 480px, 1280px"
+    />
+  </div>
 </div>

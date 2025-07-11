@@ -74,11 +74,10 @@ img:
     - img:
         css:
           component:
-            //cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css: { minified: true, type: external }
             img.css: {}
         js:
-          //cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js: { minified: true, type: external }
           img.js: {}
         dependencies:
           - core/drupal
           - core/jquery
+          - iq_barrio/lightbox

@@ -45,6 +45,10 @@ youtube: # The id of the pattern. Must match the name of the file.
       description: "Hide on print"
   libraries:
     - youtube:
-       css:
-         component:
-           youtube.css: {}
+        css:
+          component:
+            youtube.css: {}
+        js:
+          youtube.js: {}
+        dependencies:
+          - core/jquery
