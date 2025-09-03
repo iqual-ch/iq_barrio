@@ -30,7 +30,8 @@
       },
       "drupal/bootstrap_barrio": {
         "[https://dgo.to/3421337]: Unexpected token \"name\" of value \"if\"": "https://git.drupalcode.org/project/bootstrap_barrio/-/merge_requests/75/diffs.diff?diff_id=758849",
-        "[https://dgo.to/3222326]: Libraries should be improved": "https://www.drupal.org/files/issues/2025-03-19/library_improvements_and_fix_3222326_6.patch"
+        "[https://dgo.to/3222326]: Libraries should be improved": "https://www.drupal.org/files/issues/2025-03-19/library_improvements_and_fix_3222326_6.patch",
+        "DUP-74: Upgrade to CkEditor5": "public/themes/custom/iq_barrio/patches/bootstrap_barrio_ckeditor5_upgrade.patch"
       }
     }
   }

@@ -19,7 +19,7 @@ libraries-extend:
   webform/webform.form:
     - bootstrap_barrio/form
 
-ckeditor_stylesheets:
+ckeditor5-stylesheets:
   - resources/css/ckeditor.css
 
 regions:
