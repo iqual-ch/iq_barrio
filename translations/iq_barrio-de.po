@@ -1417,7 +1417,7 @@ msgctxt "pd_pattern"
 msgid "None (&lt;span&gt;)"
 msgstr "Keine (&lt;span&gt;)"
 
-msgctxt "pd_pattern"T
+msgctxt "pd_pattern"
 msgid "Title: Font style"
 msgstr "Titel: Schriftstil"
 
