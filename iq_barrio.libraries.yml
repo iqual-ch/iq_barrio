@@ -23,6 +23,10 @@ global-styling:
     - core/drupal
     - iq_barrio/bootstrap_cdn
 
+jquery:
+  js:
+    vendor/jquery.min.js: { minified: true }
+
 bootstrap_cdn:
   js:
     /libraries/popper.js/dist/umd/popper.min.js: { minified: true }
@@ -30,6 +34,8 @@ bootstrap_cdn:
   css:
     layout:
       /libraries/bootstrap/dist/css/bootstrap.min.css: { minified: true }
+  dependencies:
+    - iq_barrio/jquery
 
 lightbox:
   js:
@@ -37,6 +43,8 @@ lightbox:
   css:
     component:
       /libraries/ekko-lightbox/dist/ekko-lightbox.css: { minified: true }
+  dependencies:
+    - iq_barrio/jquery
 
 owlcarousel:
   js:
@@ -45,6 +53,8 @@ owlcarousel:
     component:
       /libraries/owl-carousel2/dist/assets/owl.carousel.min.css: { minified: true }
       /libraries/owl-carousel2/dist/assets/owl.theme.default.min.css: { minified: true }
+  dependencies:
+    - iq_barrio/jquery
 
 admin-style:
   js:
@@ -81,7 +91,7 @@ jquery.ui:
     theme:
       vendor/jquery.ui/themes/base/theme.css: {}
   dependencies:
-    - core/jquery
+    - iq_barrio/jquery
 
 scrolloffset:
   js:
