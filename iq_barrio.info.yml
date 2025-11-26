@@ -19,11 +19,6 @@ libraries-extend:
   webform/webform.form:
     - bootstrap_barrio/form
 
-libraries-override:
-  core/jquery:
-    js:
-      assets/vendor/jquery/jquery.min.js: 'https://code.jquery.com/jquery-3.7.1.min.js'
-
 ckeditor5-stylesheets:
   - resources/css/ckeditor.css
 
