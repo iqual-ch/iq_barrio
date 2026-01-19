@@ -15,21 +15,6 @@ function iq_barrio_theme($existing, $type, $theme, $path) {
 }
 
 /**
- * Implements hook_form_FORM_ID_alter().
- */
-function iq_barrio_form_user_login_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  // Alter login form and add own custom submit handler.
-  $form['#submit'][] = '_iq_barrio_user_login_form_submit';
-}
-
-/**
- * Custom submit handler for login form.
- */
-function _iq_barrio_user_login_form_submit($form, FormStateInterface $form_state) {
-  $form_state->setRedirect('<front>');
-}
-
-/**
  * Implements hook_form_system_theme_settings_alter().
  */
 function iq_barrio_form_system_theme_settings_alter(&$form, FormStateInterface $form_state, $form_id = NULL) {
