@@ -80,8 +80,6 @@ jquery.ui:
       vendor/jquery.ui/themes/base/core.css: {}
     theme:
       vendor/jquery.ui/themes/base/theme.css: {}
-  dependencies:
-    - core/jquery
 
 scrolloffset:
   js:
