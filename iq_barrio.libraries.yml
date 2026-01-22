@@ -26,7 +26,7 @@ global-styling:
 bootstrap_cdn:
   js:
     /libraries/popper.js/dist/umd/popper.min.js: { minified: true }
-    /libraries/bootstrap/dist/js/bootstrap.min.js: { minified: true }
+    vendor/bootstrap.min.js: { minified: true }
   css:
     layout:
       /libraries/bootstrap/dist/css/bootstrap.min.css: { minified: true }
