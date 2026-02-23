@@ -1,13 +1,9 @@
 @import 'definitions';
 
-.gjs-editor.gjs-editor {
-  .ck-editor .ck-content {
-    * {
-      color: $color-standard;
-    }
-    a {
-      font-size: inherit;
-    }
-    @import 'style.scss';
+.gjs-editor.gjs-editor .ck-editor .ck-content {
+  * {
+    all: revert;
+    @include font-standard;
   }
+  @import 'style.scss';
 }
