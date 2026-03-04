@@ -15,7 +15,11 @@
   {% if sizes is not empty and template|render is not empty %}
     <picture>
       {% for key, value in image_style(sizes, template) %}
-        <source media="(min-width: {{ key }})" sizes="{{ value.size }}" srcset="{% for image_style_name, size in value.templates %}{{ styled_image_url(image|render, image_style_name) }} {{ size }}{% if not loop.last %},{% endif %}{% endfor %}" ></source>
+        {% set webp_srcset = styled_image_srcset(image|render, value.templates, 'image/webp') %}
+        {% if webp_srcset is not empty %}
+          <source type="image/webp" media="(min-width: {{ key }})" sizes="{{ value.size }}" srcset="{{ webp_srcset }}" ></source>
+        {% endif %}
+        <source media="(min-width: {{ key }})" sizes="{{ value.size }}" srcset="{{ styled_image_srcset(image|render, value.templates) }}" ></source>
       {% endfor %}
       {% if fallback_style is empty %}
         <img src="{{file_url(image|render)}}" loading="{{ loading }}" {% for key, value in attributes %}{{key}}="{{value}}" {% endfor %} />
