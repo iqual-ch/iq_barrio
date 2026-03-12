@@ -1,5 +1,6 @@
 (function ($, Drupal) {
   function slider(sliders) {
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     sliders.each(function (i, slider) {
       $slider = $(slider);
@@ -17,7 +18,7 @@
         config.margin = parseInt($slider.data('margin'));
       }
 
-      if ($slider.data('autoplay')) {
+      if ($slider.data('autoplay') && !prefersReducedMotion) {
         config.autoplay = true;
 //        config.autoplayHoverPause = true;
         if ($slider.data('duration')) {
