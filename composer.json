@@ -15,7 +15,7 @@
     "drupal/core": "^10 || ^11",
     "drupal/bootstrap_barrio": "~5.1.0",
     "drupal/jquery_deprecated_functions": "^1.0",
-    "drupal/linkit": "^7.0",
+    "drupal/linkit": "^7.0.13",
     "iqual/iq_barrio_composer_update": "^3.1",
     "iqual/iq_barrio_helper": "^4.2",
     "drupal/pagedesigner_responsive_images": "^4.1",
