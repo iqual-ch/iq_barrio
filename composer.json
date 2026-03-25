@@ -18,7 +18,7 @@
     "drupal/linkit": "^7.0.13",
     "iqual/iq_barrio_composer_update": "^3.1",
     "iqual/iq_barrio_helper": "^4.2",
-    "drupal/pagedesigner_responsive_images": "^4.1",
+    "drupal/pagedesigner_responsive_images": "^4.2",
     "bower-asset/fontawesome": "5.15.2",
     "bower-asset/bootstrap": "4.1.1",
     "bower-asset/owl-carousel2": "2.3.4",
