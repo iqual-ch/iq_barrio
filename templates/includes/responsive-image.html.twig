@@ -17,19 +17,16 @@
       {% for key, value in image_style(sizes, template) %}
         {% set webp_srcset = styled_image_srcset(image|render, value.templates, 'image/webp') %}
         {% if webp_srcset is not empty %}
-          <source type="image/webp" media="(min-width: {{ key }})" sizes="{{ value.size }}" srcset="{{ webp_srcset }}" ></source>
+          <source type="image/webp" media="(min-width: {{ key }})" sizes="{{ value.size }}" srcset="{{ webp_srcset }}"></source>
         {% endif %}
-        <source media="(min-width: {{ key }})" sizes="{{ value.size }}" srcset="{{ styled_image_srcset(image|render, value.templates) }}" ></source>
+        <source media="(min-width: {{ key }})" sizes="{{ value.size }}" srcset="{{ styled_image_srcset(image|render, value.templates) }}"></source>
       {% endfor %}
-      {% if fallback_style is empty %}
-        <img src="{{file_url(image|render)}}" loading="{{ loading }}" {% for key, value in attributes %}{{key}}="{{value}}" {% endfor %} />
-      {% else %}
-        <img src="{{ styled_image_url(image_img|render, fallback_style) }}" loading="{{ loading }}" {% for key, value in attributes %}{{key}}="{{value}}" {% endfor %} />
-      {% endif %}
+      {% set fallback = fallback_style is empty ? 'pdri__100' : fallback_style %}
+      <img src="{{ styled_image_url(image|render, fallback) }}" loading="{{ loading }}" {% for key, value in attributes %}{{ key }}="{{ value }}" {% endfor %} />
     </picture>
   {% else %}
-    <img src="{{file_url(image|render)}}" loading="{{ loading }}" {% for key, value in attributes %}{{key}}="{{value}}" {% endfor %} />
+    <img src="{{ file_url(image|render) }}" loading="{{ loading }}" {% for key, value in attributes %}{{ key }}="{{ value }}" {% endfor %} />
   {% endif %}
 {% else %}
-  <img src="{{image}}" loading="{{ loading }}" {% for key, value in attributes %}{{key}}="{{value}}" {% endfor %} />
+  <img src="{{ image }}" loading="{{ loading }}" {% for key, value in attributes %}{{ key }}="{{ value }}" {% endfor %} />
 {% endif %}
