@@ -15,10 +15,10 @@
     "drupal/core": "^10 || ^11",
     "drupal/bootstrap_barrio": "~5.1.0",
     "drupal/jquery_deprecated_functions": "^1.0",
-    "drupal/linkit": "^7.0",
+    "drupal/linkit": "^7.0.13",
     "iqual/iq_barrio_composer_update": "^3.1",
     "iqual/iq_barrio_helper": "^4.2",
-    "drupal/pagedesigner_responsive_images": "^4.1",
+    "drupal/pagedesigner_responsive_images": "^4.2",
     "bower-asset/fontawesome": "5.15.2",
     "bower-asset/bootstrap": "4.1.1",
     "bower-asset/owl-carousel2": "2.3.4",
@@ -27,16 +27,10 @@
   },
   "extra": {
     "patches": {
-      "drupal/linkit": {
-        "[https://dgo.to/3105061]: Link attributes missing with bootstrap theme": "https://git.drupalcode.org/project/linkit/-/merge_requests/140.diff"
-      },
       "drupal/bootstrap_barrio": {
         "[https://dgo.to/3421337]: Unexpected token \"name\" of value \"if\"": "https://git.drupalcode.org/project/bootstrap_barrio/-/merge_requests/75/diffs.diff?diff_id=758849",
         "[https://dgo.to/3222326]: Libraries should be improved": "https://www.drupal.org/files/issues/2025-03-19/library_improvements_and_fix_3222326_6.patch",
         "[https://dgo.to/3549772]: Support for CkEditor5": "https://git.drupalcode.org/project/bootstrap_barrio/-/merge_requests/113.diff"
-      },
-      "drupal/jquery_deprecated_functions": {
-        "[https://dgo.to/3567201]: Add other deprecated functions": "https://git.drupalcode.org/project/jquery_deprecated_functions/-/merge_requests/19/diffs.diff?diff_id=1933057"
       }
     }
   }
