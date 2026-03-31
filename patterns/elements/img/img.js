@@ -1,7 +1,6 @@
 (function ($, Drupal) {
   function image($images) {
     $images.each(function (i, a) {
-      $(a).attr('href', $(a).find('img').attr('src'));
       $(a).on('click', function (e) {
         e.preventDefault();
         $(this).ekkoLightbox();
