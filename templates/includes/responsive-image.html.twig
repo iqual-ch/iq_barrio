@@ -31,7 +31,7 @@
 
       {# Media query fallback #}
       {% set fallback = fallback_style is empty ? 'pdri__100' : fallback_style %}
-      <img src="{{ styled_image_url(image|render, fallback) }}" loading="{{ loading }}" {% for key, value in attributes %} {{ key }}="{{ value }}" {% endfor %}/>
+      <img src="{{ styled_image_url(image|render, fallback) }}" loading="{{ loading }}" {% for key, value in attributes %} {{ key }}="{{ value }}" {% endfor %} />
     </picture>
   {% else %}
     <img src="{{ file_url(image|render) }}" loading="{{ loading }}" {% for key, value in attributes %}{{ key }}="{{ value }}" {% endfor %} />
