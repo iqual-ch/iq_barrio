@@ -13,12 +13,29 @@
   {% endif %}
 
   {% if sizes is not empty and template|render is not empty %}
+    {# Compute once and reuse #}
+    {% set image_uri = image|render %}
+    {% set styles = image_style(sizes, template) %}
+
     <picture>
-      {% for key, value in image_style(sizes, template) %}
-        <source media="(min-width: {{ key }})" sizes="{{ value.size }}" srcset="{% for image_style_name, size in value.templates %}{{ styled_image_url(image|render, image_style_name) }} {{ size }}{% if not loop.last %},{% endif %}{% endfor %}"></source>
+      {# WebP sources (output first for browser priority) #}
+      {% for key, value in styles %}
+        <source media="(min-width: {{ key }})"
+                sizes="{{ value.size }}"
+                type="image/webp"
+                srcset="{% for image_style_name, size in value.templates %}{{ styled_image_url(image_uri, image_style_name, 'image/webp') }} {{ size }}{% if not loop.last %},{% endif %}{% endfor %}">
       {% endfor %}
+
+      {# Fallback sources (JPEG/PNG) #}
+      {% for key, value in styles %}
+        <source media="(min-width: {{ key }})"
+                sizes="{{ value.size }}"
+                srcset="{% for image_style_name, size in value.templates %}{{ styled_image_url(image_uri, image_style_name) }} {{ size }}{% if not loop.last %},{% endif %}{% endfor %}">
+      {% endfor %}
+
+      {# Media query fallback #}
       {% set fallback = fallback_style is empty ? 'pdri__100' : fallback_style %}
-      <img src="{{ styled_image_url(image|render, fallback) }}" loading="{{ loading }}" {% for key, value in attributes %}{{ key }}="{{ value }}" {% endfor %} />
+      <img src="{{ styled_image_url(image_uri, fallback) }}" loading="{{ loading }}" {% for key, value in attributes %} {{ key }}="{{ value }}" {% endfor %}/>
     </picture>
   {% else %}
     <img src="{{ file_url(image|render) }}" loading="{{ loading }}" {% for key, value in attributes %}{{ key }}="{{ value }}" {% endfor %} />
