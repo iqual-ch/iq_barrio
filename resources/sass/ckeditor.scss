@@ -2,7 +2,6 @@
 
 .gjs-editor.gjs-editor .ck-editor .ck-content {
   * {
-    all: revert;
     @include font-standard;
   }
   @import 'style.scss';
