@@ -1,7 +1,8 @@
 @import 'definitions';
 
-.gjs-editor.gjs-editor .ck-editor .ck-content {
+.gjs-editor.gjs-editor .ck-editor .ck-content > :not(.ck-widget) {
   * {
+    all: revert;
     @include font-standard;
   }
   @import 'style.scss';
