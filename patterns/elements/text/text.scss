@@ -1,6 +1,11 @@
 @import '../../../resources/sass/definitions';
 
 .iq-text {
+  
+  * {
+    color: inherit;
+  }
+  
   &.inverted {
     * {
       color: $color-standard-inverted;
